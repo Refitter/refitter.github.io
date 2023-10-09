@@ -1,0 +1,663 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Using the generated code </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Using the generated code ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/christianhelle/refitter/blob/main/docs/docfx_project/articles/using-the-generated-code.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="using-the-generated-code">Using the generated code</h1>
+
+<p>Here's an example generated output from the <a href="https://petstore3.swagger.io">Swagger Petstore example</a> using the default settings</p>
+<p><strong>CLI Tool</strong></p>
+<pre><code class="lang-bash">$ refitter ./openapi.json --namespace &quot;Your.Namespace.Of.Choice.GeneratedCode&quot;
+</code></pre>
+<p><strong>Source Generator <em><strong>.refitter</strong></em> file</strong></p>
+<pre><code class="lang-json">{
+  &quot;openApiPath&quot;: &quot;./openapi.json&quot;,
+  &quot;namespace&quot;: &quot;Your.Namespace.Of.Choice.GeneratedCode&quot;
+}
+</code></pre>
+<p><strong>Output</strong></p>
+<pre><code class="lang-cs">using Refit;
+using System.Threading.Tasks;
+using System.Collections.Generic;
+
+namespace Your.Namespace.Of.Choice.GeneratedCode
+{
+    public partial interface ISwaggerPetstore
+    {
+        /// &lt;summary&gt;
+        /// Update an existing pet by Id
+        /// &lt;/summary&gt;
+        [Put(&quot;/pet&quot;)]
+        Task&lt;Pet&gt; UpdatePet([Body] Pet body);
+
+        /// &lt;summary&gt;
+        /// Add a new pet to the store
+        /// &lt;/summary&gt;
+        [Post(&quot;/pet&quot;)]
+        Task&lt;Pet&gt; AddPet([Body] Pet body);
+
+        /// &lt;summary&gt;
+        /// Multiple status values can be provided with comma separated strings
+        /// &lt;/summary&gt;
+        [Get(&quot;/pet/findByStatus&quot;)]
+        Task&lt;ICollection&lt;Pet&gt;&gt; FindPetsByStatus([Query] Status? status);
+
+        /// &lt;summary&gt;
+        /// Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.
+        /// &lt;/summary&gt;
+        [Get(&quot;/pet/findByTags&quot;)]
+        Task&lt;ICollection&lt;Pet&gt;&gt; FindPetsByTags([Query(CollectionFormat.Multi)] IEnumerable&lt;string&gt; tags);
+
+        /// &lt;summary&gt;
+        /// Returns a single pet
+        /// &lt;/summary&gt;
+        [Get(&quot;/pet/{petId}&quot;)]
+        Task&lt;Pet&gt; GetPetById(long petId);
+
+        [Post(&quot;/pet/{petId}&quot;)]
+        Task UpdatePetWithForm(long petId, [Query] string name, [Query] string status);
+
+        [Delete(&quot;/pet/{petId}&quot;)]
+        Task DeletePet(long petId, [Header(&quot;api_key&quot;)] string api_key);
+
+        [Post(&quot;/pet/{petId}/uploadImage&quot;)]
+        Task&lt;ApiResponse&gt; UploadFile(long petId, [Query] string additionalMetadata, StreamPart body);
+
+        /// &lt;summary&gt;
+        /// Returns a map of status codes to quantities
+        /// &lt;/summary&gt;
+        [Get(&quot;/store/inventory&quot;)]
+        Task&lt;IDictionary&lt;string, int&gt;&gt; GetInventory();
+
+        /// &lt;summary&gt;
+        /// Place a new order in the store
+        /// &lt;/summary&gt;
+        [Post(&quot;/store/order&quot;)]
+        Task&lt;Order&gt; PlaceOrder([Body] Order body);
+
+        /// &lt;summary&gt;
+        /// For valid response try integer IDs with value &lt;= 5 or &gt; 10. Other values will generated exceptions
+        /// &lt;/summary&gt;
+        [Get(&quot;/store/order/{orderId}&quot;)]
+        Task&lt;Order&gt; GetOrderById(long orderId);
+
+        /// &lt;summary&gt;
+        /// For valid response try integer IDs with value &lt; 1000. Anything above 1000 or nonintegers will generate API errors
+        /// &lt;/summary&gt;
+        [Delete(&quot;/store/order/{orderId}&quot;)]
+        Task DeleteOrder(long orderId);
+
+        /// &lt;summary&gt;
+        /// This can only be done by the logged in user.
+        /// &lt;/summary&gt;
+        [Post(&quot;/user&quot;)]
+        Task CreateUser([Body] User body);
+
+        /// &lt;summary&gt;
+        /// Creates list of users with given input array
+        /// &lt;/summary&gt;
+        [Post(&quot;/user/createWithList&quot;)]
+        Task&lt;User&gt; CreateUsersWithListInput([Body] IEnumerable&lt;User&gt; body);
+
+        [Get(&quot;/user/login&quot;)]
+        Task&lt;string&gt; LoginUser([Query] string username, [Query] string password);
+
+        [Get(&quot;/user/logout&quot;)]
+        Task LogoutUser();
+
+        [Get(&quot;/user/{username}&quot;)]
+        Task&lt;User&gt; GetUserByName(string username);
+
+        /// &lt;summary&gt;
+        /// This can only be done by the logged in user.
+        /// &lt;/summary&gt;
+        [Put(&quot;/user/{username}&quot;)]
+        Task UpdateUser(string username, [Body] User body);
+
+        /// &lt;summary&gt;
+        /// This can only be done by the logged in user.
+        /// &lt;/summary&gt;
+        [Delete(&quot;/user/{username}&quot;)]
+        Task DeleteUser(string username);
+    }
+}
+</code></pre>
+<p>Here's an example generated output from the <a href="https://petstore3.swagger.io">Swagger Petstore example</a> configured to wrap the return type in <code>IApiResponse&lt;T&gt;</code></p>
+<p><strong>CLI Tool</strong></p>
+<pre><code class="lang-bash">$ refitter ./openapi.json --namespace &quot;Your.Namespace.Of.Choice.GeneratedCode&quot; --use-api-response
+</code></pre>
+<p><strong>Source Generator <em><strong>.refitter</strong></em> file</strong></p>
+<pre><code class="lang-json">{
+  &quot;openApiPath&quot;: &quot;./openapi.json&quot;,
+  &quot;namespace&quot;: &quot;Your.Namespace.Of.Choice.GeneratedCode&quot;,
+  &quot;returnIApiResponse&quot;: true
+}
+</code></pre>
+<p><strong>Output</strong></p>
+<pre><code class="lang-cs">using Refit;
+using System.Threading.Tasks;
+using System.Collections.Generic;
+
+namespace Your.Namespace.Of.Choice.GeneratedCode.WithApiResponse
+{
+    public partial interface ISwaggerPetstore
+    {
+        /// &lt;summary&gt;
+        /// Update an existing pet by Id
+        /// &lt;/summary&gt;
+        [Put(&quot;/pet&quot;)]
+        Task&lt;IApiResponse&lt;Pet&gt;&gt; UpdatePet([Body] Pet body);
+
+        /// &lt;summary&gt;
+        /// Add a new pet to the store
+        /// &lt;/summary&gt;
+        [Post(&quot;/pet&quot;)]
+        Task&lt;IApiResponse&lt;Pet&gt;&gt; AddPet([Body] Pet body);
+
+        /// &lt;summary&gt;
+        /// Multiple status values can be provided with comma separated strings
+        /// &lt;/summary&gt;
+        [Get(&quot;/pet/findByStatus&quot;)]
+        Task&lt;IApiResponse&lt;ICollection&lt;Pet&gt;&gt;&gt; FindPetsByStatus([Query] Status? status);
+
+        /// &lt;summary&gt;
+        /// Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.
+        /// &lt;/summary&gt;
+        [Get(&quot;/pet/findByTags&quot;)]
+        Task&lt;IApiResponse&lt;ICollection&lt;Pet&gt;&gt;&gt; FindPetsByTags([Query(CollectionFormat.Multi)] IEnumerable&lt;string&gt; tags);
+
+        /// &lt;summary&gt;
+        /// Returns a single pet
+        /// &lt;/summary&gt;
+        [Get(&quot;/pet/{petId}&quot;)]
+        Task&lt;IApiResponse&lt;Pet&gt;&gt; GetPetById(long petId);
+
+        [Post(&quot;/pet/{petId}&quot;)]
+        Task UpdatePetWithForm(long petId, [Query] string name, [Query] string status);
+
+        [Delete(&quot;/pet/{petId}&quot;)]
+        Task DeletePet(long petId, [Header(&quot;api_key&quot;)] string api_key);
+
+        [Post(&quot;/pet/{petId}/uploadImage&quot;)]
+        Task&lt;IApiResponse&lt;ApiResponse&gt;&gt; UploadFile(long petId, [Query] string additionalMetadata, StreamPart body);
+
+        /// &lt;summary&gt;
+        /// Returns a map of status codes to quantities
+        /// &lt;/summary&gt;
+        [Get(&quot;/store/inventory&quot;)]
+        Task&lt;IApiResponse&lt;IDictionary&lt;string, int&gt;&gt;&gt; GetInventory();
+
+        /// &lt;summary&gt;
+        /// Place a new order in the store
+        /// &lt;/summary&gt;
+        [Post(&quot;/store/order&quot;)]
+        Task&lt;IApiResponse&lt;Order&gt;&gt; PlaceOrder([Body] Order body);
+
+        /// &lt;summary&gt;
+        /// For valid response try integer IDs with value &lt;= 5 or &gt; 10. Other values will generated exceptions
+        /// &lt;/summary&gt;
+        [Get(&quot;/store/order/{orderId}&quot;)]
+        Task&lt;IApiResponse&lt;Order&gt;&gt; GetOrderById(long orderId);
+
+        /// &lt;summary&gt;
+        /// For valid response try integer IDs with value &lt; 1000. Anything above 1000 or nonintegers will generate API errors
+        /// &lt;/summary&gt;
+        [Delete(&quot;/store/order/{orderId}&quot;)]
+        Task DeleteOrder(long orderId);
+
+        /// &lt;summary&gt;
+        /// This can only be done by the logged in user.
+        /// &lt;/summary&gt;
+        [Post(&quot;/user&quot;)]
+        Task CreateUser([Body] User body);
+
+        /// &lt;summary&gt;
+        /// Creates list of users with given input array
+        /// &lt;/summary&gt;
+        [Post(&quot;/user/createWithList&quot;)]
+        Task&lt;IApiResponse&lt;User&gt;&gt; CreateUsersWithListInput([Body] IEnumerable&lt;User&gt; body);
+
+        [Get(&quot;/user/login&quot;)]
+        Task&lt;IApiResponse&lt;string&gt;&gt; LoginUser([Query] string username, [Query] string password);
+
+        [Get(&quot;/user/logout&quot;)]
+        Task LogoutUser();
+
+        [Get(&quot;/user/{username}&quot;)]
+        Task&lt;IApiResponse&lt;User&gt;&gt; GetUserByName(string username);
+
+        /// &lt;summary&gt;
+        /// This can only be done by the logged in user.
+        /// &lt;/summary&gt;
+        [Put(&quot;/user/{username}&quot;)]
+        Task UpdateUser(string username, [Body] User body);
+
+        /// &lt;summary&gt;
+        /// This can only be done by the logged in user.
+        /// &lt;/summary&gt;
+        [Delete(&quot;/user/{username}&quot;)]
+        Task DeleteUser(string username);
+    }
+}
+</code></pre>
+<p>Here's an example generated output from the <a href="https://petstore3.swagger.io">Swagger Petstore example</a> configured to generate an interface for each endpoint</p>
+<p><strong>CLI Tool</strong></p>
+<pre><code class="lang-bash">$ refitter ./openapi.json --namespace &quot;Your.Namespace.Of.Choice.GeneratedCode&quot; --multiple-interfaces ByEndpoint
+</code></pre>
+<p><strong>Source Generator <em><strong>.refitter</strong></em> file</strong></p>
+<pre><code class="lang-json">{
+  &quot;openApiPath&quot;: &quot;./openapi.json&quot;,
+  &quot;namespace&quot;: &quot;Your.Namespace.Of.Choice.GeneratedCode&quot;,
+  &quot;multipleInterfaces&quot;: &quot;ByEndpoint&quot;
+}
+</code></pre>
+<p><strong>Output</strong></p>
+<pre><code class="lang-cs">/// &lt;summary&gt;
+/// Update an existing pet
+/// &lt;/summary&gt;
+public partial interface IUpdatePetEndpoint
+{
+    /// &lt;summary&gt;
+    /// Update an existing pet by Id
+    /// &lt;/summary&gt;
+    [Put(&quot;/pet&quot;)]
+    Task&lt;Pet&gt; Execute([Body] Pet body);
+}
+
+/// &lt;summary&gt;
+/// Add a new pet to the store
+/// &lt;/summary&gt;
+public partial interface IAddPetEndpoint
+{
+    /// &lt;summary&gt;
+    /// Add a new pet to the store
+    /// &lt;/summary&gt;
+    [Post(&quot;/pet&quot;)]
+    Task&lt;Pet&gt; Execute([Body] Pet body);
+}
+
+/// &lt;summary&gt;
+/// Finds Pets by status
+/// &lt;/summary&gt;
+public partial interface IFindPetsByStatusEndpoint
+{
+    /// &lt;summary&gt;
+    /// Multiple status values can be provided with comma separated strings
+    /// &lt;/summary&gt;
+    [Get(&quot;/pet/findByStatus&quot;)]
+    Task&lt;ICollection&lt;Pet&gt;&gt; Execute([Query] Status? status);
+}
+
+/// &lt;summary&gt;
+/// Finds Pets by tags
+/// &lt;/summary&gt;
+public partial interface IFindPetsByTagsEndpoint
+{
+    /// &lt;summary&gt;
+    /// Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.
+    /// &lt;/summary&gt;
+    [Get(&quot;/pet/findByTags&quot;)]
+    Task&lt;ICollection&lt;Pet&gt;&gt; Execute([Query(CollectionFormat.Multi)] IEnumerable&lt;string&gt; tags);
+}
+
+/// &lt;summary&gt;
+/// Find pet by ID
+/// &lt;/summary&gt;
+public partial interface IGetPetByIdEndpoint
+{
+    /// &lt;summary&gt;
+    /// Returns a single pet
+    /// &lt;/summary&gt;
+    [Get(&quot;/pet/{petId}&quot;)]
+    Task&lt;Pet&gt; Execute(long petId);
+}
+
+/// &lt;summary&gt;
+/// Updates a pet in the store with form data
+/// &lt;/summary&gt;
+public partial interface IUpdatePetWithFormEndpoint
+{
+    [Post(&quot;/pet/{petId}&quot;)]
+    Task Execute(long petId, [Query] string name, [Query] string status);
+}
+
+/// &lt;summary&gt;
+/// Deletes a pet
+/// &lt;/summary&gt;
+public partial interface IDeletePetEndpoint
+{
+    [Delete(&quot;/pet/{petId}&quot;)]
+    Task Execute(long petId, [Header(&quot;api_key&quot;)] string api_key);
+}
+
+/// &lt;summary&gt;
+/// uploads an image
+/// &lt;/summary&gt;
+public partial interface IUploadFileEndpoint
+{
+    [Post(&quot;/pet/{petId}/uploadImage&quot;)]
+    Task&lt;ApiResponse&gt; Execute(long petId, [Query] string additionalMetadata, StreamPart body);
+}
+
+/// &lt;summary&gt;
+/// Returns pet inventories by status
+/// &lt;/summary&gt;
+public partial interface IGetInventoryEndpoint
+{
+    /// &lt;summary&gt;
+    /// Returns a map of status codes to quantities
+    /// &lt;/summary&gt;
+    [Get(&quot;/store/inventory&quot;)]
+    Task&lt;IDictionary&lt;string, int&gt;&gt; Execute();
+}
+
+/// &lt;summary&gt;
+/// Place an order for a pet
+/// &lt;/summary&gt;
+public partial interface IPlaceOrderEndpoint
+{
+    /// &lt;summary&gt;
+    /// Place a new order in the store
+    /// &lt;/summary&gt;
+    [Post(&quot;/store/order&quot;)]
+    Task&lt;Order&gt; Execute([Body] Order body);
+}
+
+/// &lt;summary&gt;
+/// Find purchase order by ID
+/// &lt;/summary&gt;
+public partial interface IGetOrderByIdEndpoint
+{
+    /// &lt;summary&gt;
+    /// For valid response try integer IDs with value &lt;= 5 or &gt; 10. Other values will generated exceptions
+    /// &lt;/summary&gt;
+    [Get(&quot;/store/order/{orderId}&quot;)]
+    Task&lt;Order&gt; Execute(long orderId);
+}
+
+/// &lt;summary&gt;
+/// Delete purchase order by ID
+/// &lt;/summary&gt;
+public partial interface IDeleteOrderEndpoint
+{
+    /// &lt;summary&gt;
+    /// For valid response try integer IDs with value &lt; 1000. Anything above 1000 or nonintegers will generate API errors
+    /// &lt;/summary&gt;
+    [Delete(&quot;/store/order/{orderId}&quot;)]
+    Task Execute(long orderId);
+}
+
+/// &lt;summary&gt;
+/// Create user
+/// &lt;/summary&gt;
+public partial interface ICreateUserEndpoint
+{
+    /// &lt;summary&gt;
+    /// This can only be done by the logged in user.
+    /// &lt;/summary&gt;
+    [Post(&quot;/user&quot;)]
+    Task Execute([Body] User body);
+}
+
+/// &lt;summary&gt;
+/// Creates list of users with given input array
+/// &lt;/summary&gt;
+public partial interface ICreateUsersWithListInputEndpoint
+{
+    /// &lt;summary&gt;
+    /// Creates list of users with given input array
+    /// &lt;/summary&gt;
+    [Post(&quot;/user/createWithList&quot;)]
+    Task&lt;User&gt; Execute([Body] IEnumerable&lt;User&gt; body);
+}
+
+/// &lt;summary&gt;
+/// Logs user into the system
+/// &lt;/summary&gt;
+public partial interface ILoginUserEndpoint
+{
+    [Get(&quot;/user/login&quot;)]
+    Task&lt;string&gt; Execute([Query] string username, [Query] string password);
+}
+
+/// &lt;summary&gt;
+/// Logs out current logged in user session
+/// &lt;/summary&gt;
+public partial interface ILogoutUserEndpoint
+{
+    [Get(&quot;/user/logout&quot;)]
+    Task Execute();
+}
+
+/// &lt;summary&gt;
+/// Get user by user name
+/// &lt;/summary&gt;
+public partial interface IGetUserByNameEndpoint
+{
+    [Get(&quot;/user/{username}&quot;)]
+    Task&lt;User&gt; Execute(string username);
+}
+
+/// &lt;summary&gt;
+/// Update user
+/// &lt;/summary&gt;
+public partial interface IUpdateUserEndpoint
+{
+    /// &lt;summary&gt;
+    /// This can only be done by the logged in user.
+    /// &lt;/summary&gt;
+    [Put(&quot;/user/{username}&quot;)]
+    Task Execute(string username, [Body] User body);
+}
+
+/// &lt;summary&gt;
+/// Delete user
+/// &lt;/summary&gt;
+public partial interface IDeleteUserEndpoint
+{
+    /// &lt;summary&gt;
+    /// This can only be done by the logged in user.
+    /// &lt;/summary&gt;
+    [Delete(&quot;/user/{username}&quot;)]
+    Task Execute(string username);
+}
+</code></pre>
+<h2 id="restservice">RestService</h2>
+<p>Here's an example usage of the generated code above</p>
+<pre><code class="lang-cs">using Refit;
+using System;
+using System.Threading.Tasks;
+
+namespace Your.Namespace.Of.Choice.GeneratedCode;
+
+internal class Program
+{
+    private static async Task Main(string[] args)
+    {
+        var client = RestService.For&lt;ISwaggerPetstore&gt;(&quot;https://petstore3.swagger.io/api/v3&quot;);
+        var pet = await client.GetPetById(1);
+
+        Console.WriteLine(&quot;## Using Task&lt;T&gt; as return type ##&quot;);
+        Console.WriteLine($&quot;Name: {pet.Name}&quot;);
+        Console.WriteLine($&quot;Category: {pet.Category.Name}&quot;);
+        Console.WriteLine($&quot;Status: {pet.Status}&quot;);
+        Console.WriteLine();
+
+        var client2 = RestService.For&lt;WithApiResponse.ISwaggerPetstore&gt;(&quot;https://petstore3.swagger.io/api/v3&quot;);
+        var response = await client2.GetPetById(2);
+
+        Console.WriteLine(&quot;## Using Task&lt;IApiResponse&lt;T&gt;&gt; as return type ##&quot;);
+        Console.WriteLine($&quot;HTTP Status Code: {response.StatusCode}&quot;);
+        Console.WriteLine($&quot;Name: {response.Content.Name}&quot;);
+        Console.WriteLine($&quot;Category: {response.Content.Category.Name}&quot;);
+        Console.WriteLine($&quot;Status: {response.Content.Status}&quot;);
+    }
+}
+</code></pre>
+<p>The <code>RestService</code> class generates an implementation of <code>ISwaggerPetstore</code> that uses <code>HttpClient</code> to make its calls.</p>
+<p>The code above when run will output something like this:</p>
+<pre><code>## Using Task&lt;T&gt; as return type ##
+Name: Gatitotototo
+Category: Chaucito
+Status: Sold
+
+## Using Task&lt;IApiResponse&lt;T&gt;&gt; as return type ##
+HTTP Status Code: OK
+Name: Gatitotototo
+Category: Chaucito
+Status: Sold
+</code></pre>
+<h2 id="httpclientfactory">HttpClientFactory</h2>
+<p>Here's an example Minimal API with the <a href="https://www.nuget.org/packages/Refit.HttpClientFactory"><code>Refit.HttpClientFactory</code></a> library:</p>
+<pre><code class="lang-cs">using Refit;
+using Your.Namespace.Of.Choice.GeneratedCode;
+
+var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+builder.Services
+    .AddRefitClient&lt;ISwaggerPetstore&gt;()
+    .ConfigureHttpClient(c =&gt; c.BaseAddress = new Uri(&quot;https://petstore3.swagger.io/api/v3&quot;));
+
+var app = builder.Build();
+app.MapGet(
+        &quot;/pet/{id:long}&quot;,
+        async (ISwaggerPetstore petstore, long id) =&gt;
+        {
+            try
+            {
+                return Results.Ok(await petstore.GetPetById(id));
+            }
+            catch (Refit.ApiException e)
+            {
+                return Results.StatusCode((int)e.StatusCode);
+            }
+        })
+    .WithName(&quot;GetPetById&quot;)
+    .WithOpenApi();
+
+app.UseHttpsRedirection();
+app.UseSwaggerUI();
+app.UseSwagger();
+app.Run();
+</code></pre>
+<p>.NET Core supports registering the generated <code>ISwaggerPetstore</code> interface via <code>HttpClientFactory</code></p>
+<p>The following request to the API above</p>
+<pre><code class="lang-shell">$ curl -X 'GET' 'https://localhost:5001/pet/1' -H 'accept: application/json'
+</code></pre>
+<p>Returns a response that looks something like this:</p>
+<pre><code class="lang-json">{
+  &quot;id&quot;: 1,
+  &quot;name&quot;: &quot;Special_char_owner_!@#$^&amp;()`.testing&quot;,
+  &quot;photoUrls&quot;: [
+    &quot;https://petstore3.swagger.io/resources/photos/623389095.jpg&quot;
+  ],
+  &quot;tags&quot;: [],
+  &quot;status&quot;: &quot;Sold&quot;
+}
+</code></pre>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/christianhelle/refitter/blob/main/docs/docfx_project/articles/using-the-generated-code.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

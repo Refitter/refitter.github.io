@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>CLI Tool </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="CLI Tool ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/christianhelle/refitter/blob/main/docs/docfx_project/articles/cli-tool.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="cli-tool">CLI Tool</h1>
+
+<h3 id="installation">Installation:</h3>
+<p>The tool is packaged as a .NET Tool and is published to nuget.org. You can install the latest version of this tool like this:</p>
+<pre><code class="lang-shell">dotnet tool install --global Refitter
+</code></pre>
+<h3 id="usage">Usage:</h3>
+<pre><code class="lang-shell">$ refitter --help
+</code></pre>
+<pre><code>USAGE:
+    refitter [URL or input file] [OPTIONS]
+
+EXAMPLES:
+    refitter ./openapi.json
+    refitter https://petstore3.swagger.io/api/v3/openapi.yaml
+    refitter ./openapi.json --settings-file ./openapi.refitter --output ./GeneratedCode.cs
+    refitter ./openapi.json --namespace &quot;Your.Namespace.Of.Choice.GeneratedCode&quot; --output ./GeneratedCode.cs
+    refitter ./openapi.json --namespace &quot;Your.Namespace.Of.Choice.GeneratedCode&quot; --internal
+    refitter ./openapi.json --output ./IGeneratedCode.cs --interface-only
+    refitter ./openapi.json --use-api-response
+    refitter ./openapi.json --cancellation-tokens
+    refitter ./openapi.json --no-operation-headers
+    refitter ./openapi.json --no-accept-headers
+    refitter ./openapi.json --use-iso-date-format
+    refitter ./openapi.json --additional-namespace &quot;Your.Additional.Namespace&quot; --additional-namespace &quot;Your.Other.Additional.Namespace&quot;
+    refitter ./openapi.json --multiple-interfaces ByEndpoint
+    refitter ./openapi.json --tag Pet --tag Store --tag User
+    refitter ./openapi.json --match-path '^/pet/.*'
+    refitter ./openapi.json --no-deprecated-operations
+    refitter ./openapi.json --operation-name-template '{operationName}Async'
+    refitter ./openapi.json --optional-nullable-parameters
+
+ARGUMENTS:
+    [URL or input file]    URL or file path to OpenAPI Specification file
+
+OPTIONS:
+                                          DEFAULT                                                                                                                                                    
+    -h, --help                                             Prints help information                                                                                                                   
+    -s, --settings-file                                    Path to .refitter settings file. Specifying this will ignore all other settings (except for --output)                                     
+    -n, --namespace                       GeneratedCode    Default namespace to use for generated types                                                                                              
+    -o, --output                          Output.cs        Path to Output file                                                                                                                       
+        --no-auto-generated-header                         Don't add &lt;auto-generated&gt; header to output file                                                                                          
+        --no-accept-headers                                Don't add &lt;Accept&gt; header to output file                                                                                                  
+        --interface-only                                   Don't generate contract types                                                                                                             
+        --use-api-response                                 Return Task&lt;IApiResponse&lt;T&gt;&gt; instead of Task&lt;T&gt;                                                                                           
+        --internal                                         Set the accessibility of the generated types to 'internal'                                                                                
+        --cancellation-tokens                              Use cancellation tokens                                                                                                                   
+        --no-operation-headers                             Don't generate operation headers                                                                                                          
+        --no-logging                                       Don't log errors or collect telemetry                                                                                                     
+        --additional-namespace                             Add additional namespace to generated types                                                                                               
+        --use-iso-date-format                              Explicitly format date query string parameters in ISO 8601 standard date format using delimiters (2023-06-15)                             
+        --multiple-interfaces                              Generate a Refit interface for each endpoint. May be one of ByEndpoint, ByTag                                                             
+        --match-path                                       Only include Paths that match the provided regular expression. May be set multiple times                                                  
+        --tag                                              Only include Endpoints that contain this tag. May be set multiple times and result in OR'ed evaluation                                    
+        --skip-validation                                  Skip validation of the OpenAPI specification                                                                                              
+        --no-deprecated-operations                         Don't generate deprecated operations                                                                                                      
+        --operation-name-template                          Generate operation names using pattern. When using --multiple-interfaces ByEndpoint, this is name of the Execute() method in the interface
+        --optional-nullable-parameters                     Generate nullable parameters as optional parameters                                                                                       
+</code></pre>
+<p>To generate code from an OpenAPI specifications file, run the following:</p>
+<pre><code class="lang-shell">$ refitter [path to OpenAPI spec file] --namespace &quot;[Your.Namespace.Of.Choice.GeneratedCode]&quot;
+</code></pre>
+<p>This will generate a file called <code>Output.cs</code> which contains the Refit interface and contract classes generated using <a href="https://github.com/RicoSuter/NSwag">NSwag</a></p>
+<p>The settings file uses the <a href="refitter-file-format.html">.refitter file format</a></p>
+<h2 id="system-requirements">System requirements</h2>
+<p>.NET 6.0 (LTS)</p>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/christianhelle/refitter/blob/main/docs/docfx_project/articles/cli-tool.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

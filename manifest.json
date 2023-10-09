@@ -1,0 +1,240 @@
+{
+  "source_base_path": "/home/runner/work/refitter/refitter/docs/docfx_project",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.DependencyInjectionGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.DependencyInjectionGenerator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.DependencyInjectionSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.DependencyInjectionSettings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.MultipleInterfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.MultipleInterfaces.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.NamingSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.NamingSettings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.OpenApiDocumentFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.OpenApiDocumentFactory.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.RefitGeneratedCode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.RefitGeneratedCode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.RefitGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.RefitGenerator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.RefitGeneratorSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.RefitGeneratorSettings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.RefitInterfaceImports.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.RefitInterfaceImports.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.StringCasingExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.StringCasingExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.TypeAccessibility.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.TypeAccessibility.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/cli-tool.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/cli-tool.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/refitter-file-format.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/refitter-file-format.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/source-generator.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/source-generator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html"
+        },
+        ".json": {
+          "relative_path": "articles/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/using-the-generated-code.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/using-the-generated-code.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/logo.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

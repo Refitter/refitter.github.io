@@ -1,0 +1,898 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class RefitGeneratorSettings
+ </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class RefitGeneratorSettings
+ ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/christianhelle/refitter/new/main/apiSpec/new?filename=Refitter_Core_RefitGeneratorSettings.md&amp;value=---%0Auid%3A%20Refitter.Core.RefitGeneratorSettings%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Refitter.Core.RefitGeneratorSettings">
+
+
+
+  <h1 id="Refitter_Core_RefitGeneratorSettings" data-uid="Refitter.Core.RefitGeneratorSettings" class="text-break">
+    Class RefitGeneratorSettings
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/RefitGeneratorSettings.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Refitter.html">Refitter</a>.<a class="xref" href="Refitter.Core.html">Core</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Refitter.Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Provide settings for Refit generator.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class RefitGeneratorSettings</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">RefitGeneratorSettings</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Refitter_Core_RefitGeneratorSettings_AddAcceptHeaders_" data-uid="Refitter.Core.RefitGeneratorSettings.AddAcceptHeaders*"></a>
+
+  <h3 id="Refitter_Core_RefitGeneratorSettings_AddAcceptHeaders" data-uid="Refitter.Core.RefitGeneratorSettings.AddAcceptHeaders">
+  AddAcceptHeaders
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/RefitGeneratorSettings.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether to add accept headers [Headers(&quot;Accept: application/json&quot;)].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;addAcceptHeaders&quot;)]
+[JsonProperty(&quot;addAcceptHeaders&quot;)]
+public bool AddAcceptHeaders { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Refitter_Core_RefitGeneratorSettings_AddAutoGeneratedHeader_" data-uid="Refitter.Core.RefitGeneratorSettings.AddAutoGeneratedHeader*"></a>
+
+  <h3 id="Refitter_Core_RefitGeneratorSettings_AddAutoGeneratedHeader" data-uid="Refitter.Core.RefitGeneratorSettings.AddAutoGeneratedHeader">
+  AddAutoGeneratedHeader
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/RefitGeneratorSettings.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether to add auto-generated header.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;addAutoGeneratedHeader&quot;)]
+[JsonProperty(&quot;addAutoGeneratedHeader&quot;)]
+public bool AddAutoGeneratedHeader { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Refitter_Core_RefitGeneratorSettings_AdditionalNamespaces_" data-uid="Refitter.Core.RefitGeneratorSettings.AdditionalNamespaces*"></a>
+
+  <h3 id="Refitter_Core_RefitGeneratorSettings_AdditionalNamespaces" data-uid="Refitter.Core.RefitGeneratorSettings.AdditionalNamespaces">
+  AdditionalNamespaces
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/RefitGeneratorSettings.cs/#L103"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Add additional namespace to generated types</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;additionalNamespaces&quot;)]
+[JsonProperty(&quot;additionalNamespaces&quot;)]
+public string[] AdditionalNamespaces { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Refitter_Core_RefitGeneratorSettings_DependencyInjectionSettings_" data-uid="Refitter.Core.RefitGeneratorSettings.DependencyInjectionSettings*"></a>
+
+  <h3 id="Refitter_Core_RefitGeneratorSettings_DependencyInjectionSettings" data-uid="Refitter.Core.RefitGeneratorSettings.DependencyInjectionSettings">
+  DependencyInjectionSettings
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/RefitGeneratorSettings.cs/#L161"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the settings describing how to register generated interface to the .NET Core DI container</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;dependencyInjectionSettings&quot;)]
+[JsonProperty(&quot;dependencyInjectionSettings&quot;)]
+public DependencyInjectionSettings? DependencyInjectionSettings { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Refitter.Core.DependencyInjectionSettings.html">DependencyInjectionSettings</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Refitter_Core_RefitGeneratorSettings_GenerateContracts_" data-uid="Refitter.Core.RefitGeneratorSettings.GenerateContracts*"></a>
+
+  <h3 id="Refitter_Core_RefitGeneratorSettings_GenerateContracts" data-uid="Refitter.Core.RefitGeneratorSettings.GenerateContracts">
+  GenerateContracts
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/RefitGeneratorSettings.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether contracts should be generated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;generateContracts&quot;)]
+[JsonProperty(&quot;generateContracts&quot;)]
+public bool GenerateContracts { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Refitter_Core_RefitGeneratorSettings_GenerateDeprecatedOperations_" data-uid="Refitter.Core.RefitGeneratorSettings.GenerateDeprecatedOperations*"></a>
+
+  <h3 id="Refitter_Core_RefitGeneratorSettings_GenerateDeprecatedOperations" data-uid="Refitter.Core.RefitGeneratorSettings.GenerateDeprecatedOperations">
+  GenerateDeprecatedOperations
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/RefitGeneratorSettings.cs/#L132"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set to <code>true</code> to generate deprecated operations, otherwise <code>false</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;generateDeprecatedOperations&quot;)]
+[JsonProperty(&quot;generateDeprecatedOperations&quot;)]
+public bool GenerateDeprecatedOperations { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Refitter_Core_RefitGeneratorSettings_GenerateOperationHeaders_" data-uid="Refitter.Core.RefitGeneratorSettings.GenerateOperationHeaders*"></a>
+
+  <h3 id="Refitter_Core_RefitGeneratorSettings_GenerateOperationHeaders" data-uid="Refitter.Core.RefitGeneratorSettings.GenerateOperationHeaders">
+  GenerateOperationHeaders
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/RefitGeneratorSettings.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether to generate operation headers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;generateOperationHeaders&quot;)]
+[JsonProperty(&quot;generateOperationHeaders&quot;)]
+public bool GenerateOperationHeaders { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Refitter_Core_RefitGeneratorSettings_GenerateXmlDocCodeComments_" data-uid="Refitter.Core.RefitGeneratorSettings.GenerateXmlDocCodeComments*"></a>
+
+  <h3 id="Refitter_Core_RefitGeneratorSettings_GenerateXmlDocCodeComments" data-uid="Refitter.Core.RefitGeneratorSettings.GenerateXmlDocCodeComments">
+  GenerateXmlDocCodeComments
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/RefitGeneratorSettings.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether XML doc comments should be generated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;generateXmlDocCodeComments&quot;)]
+[JsonProperty(&quot;generateXmlDocCodeComments&quot;)]
+public bool GenerateXmlDocCodeComments { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Refitter_Core_RefitGeneratorSettings_IncludePathMatches_" data-uid="Refitter.Core.RefitGeneratorSettings.IncludePathMatches*"></a>
+
+  <h3 id="Refitter_Core_RefitGeneratorSettings_IncludePathMatches" data-uid="Refitter.Core.RefitGeneratorSettings.IncludePathMatches">
+  IncludePathMatches
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/RefitGeneratorSettings.cs/#L118"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set to <code>true</code> to Generate a Refit interface for each endpoint</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;includePathMatches&quot;)]
+[JsonProperty(&quot;includePathMatches&quot;)]
+public string[] IncludePathMatches { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Refitter_Core_RefitGeneratorSettings_IncludeTags_" data-uid="Refitter.Core.RefitGeneratorSettings.IncludeTags*"></a>
+
+  <h3 id="Refitter_Core_RefitGeneratorSettings_IncludeTags" data-uid="Refitter.Core.RefitGeneratorSettings.IncludeTags">
+  IncludeTags
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/RefitGeneratorSettings.cs/#L125"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set to <code>true</code> to Generate a Refit interface for each endpoint</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;includeTags&quot;)]
+[JsonProperty(&quot;includeTags&quot;)]
+public string[] IncludeTags { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Refitter_Core_RefitGeneratorSettings_MultipleInterfaces_" data-uid="Refitter.Core.RefitGeneratorSettings.MultipleInterfaces*"></a>
+
+  <h3 id="Refitter_Core_RefitGeneratorSettings_MultipleInterfaces" data-uid="Refitter.Core.RefitGeneratorSettings.MultipleInterfaces">
+  MultipleInterfaces
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/RefitGeneratorSettings.cs/#L110"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set to <code>true</code> to Generate a Refit interface for each endpoint</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;multipleInterfaces&quot;)]
+[JsonProperty(&quot;multipleInterfaces&quot;)]
+[JsonConverter(typeof(StringEnumConverter))]
+public MultipleInterfaces MultipleInterfaces { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Refitter.Core.MultipleInterfaces.html">MultipleInterfaces</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Refitter_Core_RefitGeneratorSettings_Namespace_" data-uid="Refitter.Core.RefitGeneratorSettings.Namespace*"></a>
+
+  <h3 id="Refitter_Core_RefitGeneratorSettings_Namespace" data-uid="Refitter.Core.RefitGeneratorSettings.Namespace">
+  Namespace
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/RefitGeneratorSettings.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the namespace for the generated code. (default: GeneratedCode)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;namespace&quot;)]
+[JsonProperty(&quot;namespace&quot;)]
+public string Namespace { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Refitter_Core_RefitGeneratorSettings_Naming_" data-uid="Refitter.Core.RefitGeneratorSettings.Naming*"></a>
+
+  <h3 id="Refitter_Core_RefitGeneratorSettings_Naming" data-uid="Refitter.Core.RefitGeneratorSettings.Naming">
+  Naming
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/RefitGeneratorSettings.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the naming settings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;naming&quot;)]
+[JsonProperty(&quot;naming&quot;)]
+public NamingSettings Naming { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Refitter.Core.NamingSettings.html">NamingSettings</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Refitter_Core_RefitGeneratorSettings_OpenApiPath_" data-uid="Refitter.Core.RefitGeneratorSettings.OpenApiPath*"></a>
+
+  <h3 id="Refitter_Core_RefitGeneratorSettings_OpenApiPath" data-uid="Refitter.Core.RefitGeneratorSettings.OpenApiPath">
+  OpenApiPath
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/RefitGeneratorSettings.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the path to the Open API.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;openApiPath&quot;)]
+[JsonProperty(&quot;openApiPath&quot;)]
+public string OpenApiPath { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Refitter_Core_RefitGeneratorSettings_OperationNameTemplate_" data-uid="Refitter.Core.RefitGeneratorSettings.OperationNameTemplate*"></a>
+
+  <h3 id="Refitter_Core_RefitGeneratorSettings_OperationNameTemplate" data-uid="Refitter.Core.RefitGeneratorSettings.OperationNameTemplate">
+  OperationNameTemplate
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/RefitGeneratorSettings.cs/#L140"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Generate operation names using pattern.
+When using --multiple-interfaces ByEndpoint, this is name of the Execute() method in the interface.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;operationNameTemplate&quot;)]
+[JsonProperty(&quot;operationNameTemplate&quot;)]
+public string? OperationNameTemplate { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Refitter_Core_RefitGeneratorSettings_OptionalParameters_" data-uid="Refitter.Core.RefitGeneratorSettings.OptionalParameters*"></a>
+
+  <h3 id="Refitter_Core_RefitGeneratorSettings_OptionalParameters" data-uid="Refitter.Core.RefitGeneratorSettings.OptionalParameters">
+  OptionalParameters
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/RefitGeneratorSettings.cs/#L147"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set to <code>true</code> to re-order optional parameters to the end of the parameter list</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;optionalParameters&quot;)]
+[JsonProperty(&quot;optionalParameters&quot;)]
+public bool OptionalParameters { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Refitter_Core_RefitGeneratorSettings_OutputFolder_" data-uid="Refitter.Core.RefitGeneratorSettings.OutputFolder*"></a>
+
+  <h3 id="Refitter_Core_RefitGeneratorSettings_OutputFolder" data-uid="Refitter.Core.RefitGeneratorSettings.OutputFolder">
+  OutputFolder
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/RefitGeneratorSettings.cs/#L154"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the relative path to a folder in which the output files are generated. (default: ./Generated)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;outputFolder&quot;)]
+[JsonProperty(&quot;outputFolder&quot;)]
+public string OutputFolder { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Refitter_Core_RefitGeneratorSettings_ReturnIApiResponse_" data-uid="Refitter.Core.RefitGeneratorSettings.ReturnIApiResponse*"></a>
+
+  <h3 id="Refitter_Core_RefitGeneratorSettings_ReturnIApiResponse" data-uid="Refitter.Core.RefitGeneratorSettings.ReturnIApiResponse">
+  ReturnIApiResponse
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/RefitGeneratorSettings.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether to return <code>IApiResponse</code> objects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;returnIApiResponse&quot;)]
+[JsonProperty(&quot;returnIApiResponse&quot;)]
+public bool ReturnIApiResponse { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Refitter_Core_RefitGeneratorSettings_TypeAccessibility_" data-uid="Refitter.Core.RefitGeneratorSettings.TypeAccessibility*"></a>
+
+  <h3 id="Refitter_Core_RefitGeneratorSettings_TypeAccessibility" data-uid="Refitter.Core.RefitGeneratorSettings.TypeAccessibility">
+  TypeAccessibility
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/RefitGeneratorSettings.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the generated type accessibility. (default: Public)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;typeAccessibility&quot;)]
+[JsonProperty(&quot;typeAccessibility&quot;)]
+public TypeAccessibility TypeAccessibility { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Refitter.Core.TypeAccessibility.html">TypeAccessibility</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Refitter_Core_RefitGeneratorSettings_UseCancellationTokens_" data-uid="Refitter.Core.RefitGeneratorSettings.UseCancellationTokens*"></a>
+
+  <h3 id="Refitter_Core_RefitGeneratorSettings_UseCancellationTokens" data-uid="Refitter.Core.RefitGeneratorSettings.UseCancellationTokens">
+  UseCancellationTokens
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/RefitGeneratorSettings.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enable or disable the use of cancellation tokens.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;useCancellationTokens&quot;)]
+[JsonProperty(&quot;useCancellationTokens&quot;)]
+public bool UseCancellationTokens { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Refitter_Core_RefitGeneratorSettings_UseIsoDateFormat_" data-uid="Refitter.Core.RefitGeneratorSettings.UseIsoDateFormat*"></a>
+
+  <h3 id="Refitter_Core_RefitGeneratorSettings_UseIsoDateFormat" data-uid="Refitter.Core.RefitGeneratorSettings.UseIsoDateFormat">
+  UseIsoDateFormat
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/RefitGeneratorSettings.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set to <code>true</code> to explicitly format date query string parameters
+in ISO 8601 standard date format using delimiters (for example: 2023-06-15)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;useIsoDateFormat&quot;)]
+[JsonProperty(&quot;useIsoDateFormat&quot;)]
+public bool UseIsoDateFormat { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/RefitGeneratorSettings.cs/#L12" class="edit-link">Edit this page</a>
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
