@@ -157,6 +157,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/examples.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/examples.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/refitter-file-format.md",
       "output": {
         ".html": {
