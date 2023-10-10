@@ -4,16 +4,6 @@
   "files": [
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Refitter.Core.DependencyInjectionGenerator.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Refitter.Core.DependencyInjectionGenerator.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Refitter.Core.DependencyInjectionSettings.yml",
       "output": {
         ".html": {
@@ -54,16 +44,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Refitter.Core.RefitGeneratedCode.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Refitter.Core.RefitGeneratedCode.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Refitter.Core.RefitGenerator.yml",
       "output": {
         ".html": {
@@ -78,26 +58,6 @@
       "output": {
         ".html": {
           "relative_path": "api/Refitter.Core.RefitGeneratorSettings.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Refitter.Core.RefitInterfaceImports.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Refitter.Core.RefitInterfaceImports.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Refitter.Core.StringCasingExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Refitter.Core.StringCasingExtensions.html"
         }
       },
       "version": ""
