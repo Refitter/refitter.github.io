@@ -85,6 +85,7 @@
         <article data-uid="">
 <h2 id="refitter-file-format">.Refitter File format</h2>
 
+<p>The <code>.refitter</code> file is a JSON serialized version of the <a href="/api/Refitter.Core.RefitGeneratorSettings.html">RefitGeneratorSettings</a></p>
 <p>The following is an example <code>.refitter</code> file</p>
 <pre><code class="lang-js">{
   &quot;openApiPath&quot;: &quot;/path/to/your/openAPI&quot;, // Required
@@ -129,9 +130,45 @@
     &quot;usePolly&quot;: true, // Optional. Set this to true, to configure Polly with a retry policy that uses a jittered backoff. Default=false
     &quot;pollyMaxRetryCount&quot;: 3, // Optional. Default=6
     &quot;firstBackoffRetryInSeconds&quot;: 0.5 // Optional. Default=1.0
+  },
+  &quot;codeGeneratorSettings&quot;: { // Optional. Default settings are the values set in this example
+    &quot;namespace&quot;: &quot;GeneratedCode&quot;,
+    &quot;requiredPropertiesMustBeDefined&quot;: true,
+    &quot;generateDataAnnotations&quot;: true,
+    &quot;anyType&quot;: &quot;object&quot;,
+    &quot;dateType&quot;: &quot;System.DateTimeOffset&quot;,
+    &quot;dateTimeType&quot;: &quot;System.DateTimeOffset&quot;,
+    &quot;timeType&quot;: &quot;System.TimeSpan&quot;,
+    &quot;timeSpanType&quot;: &quot;System.TimeSpan&quot;,
+    &quot;arrayType&quot;: &quot;System.Collections.Generic.ICollection&quot;,
+    &quot;dictionaryType&quot;: &quot;System.Collections.Generic.IDictionary&quot;,
+    &quot;arrayInstanceType&quot;: &quot;System.Collections.ObjectModel.Collection&quot;,
+    &quot;dictionaryInstanceType&quot;: &quot;System.Collections.Generic.Dictionary&quot;,
+    &quot;arrayBaseType&quot;: &quot;System.Collections.ObjectModel.Collection&quot;,
+    &quot;dictionaryBaseType&quot;: &quot;System.Collections.Generic.Dictionary&quot;,
+    &quot;propertySetterAccessModifier&quot;: &quot;&quot;,
+    &quot;generateImmutableArrayProperties&quot;: false,
+    &quot;generateImmutableDictionaryProperties&quot;: false,
+    &quot;handleReferences&quot;: false,
+    &quot;jsonSerializerSettingsTransformationMethod&quot;: null,
+    &quot;generateJsonMethods&quot;: false,
+    &quot;enforceFlagEnums&quot;: false,
+    &quot;inlineNamedDictionaries&quot;: false,
+    &quot;inlineNamedTuples&quot;: true,
+    &quot;inlineNamedArrays&quot;: false,
+    &quot;generateOptionalPropertiesAsNullable&quot;: false,
+    &quot;generateNullableReferenceTypes&quot;: false,
+    &quot;generateNativeRecords&quot;: false,
+    &quot;generateDefaultValues&quot;: true,
+    &quot;inlineNamedAny&quot;: false,
+    &quot;excludedTypeNames&quot;: [
+      &quot;ExcludedTypeFoo&quot;,
+      &quot;ExcludedTypeBar&quot;
+    ]
   }
 }
 </code></pre>
+<p>Here are some basic explanations of each property:</p>
 <ul>
 <li><code>openApiPath</code> - points to the OpenAPI Specifications file. This can be the path to a file stored on disk, relative to the <code>.refitter</code> file. This can also be a URL to a remote file that will be downloaded over HTTP/HTTPS</li>
 <li><code>namespace</code> - the namespace used in the generated code. If not specified, this defaults to <code>GeneratedCode</code></li>
@@ -161,6 +198,40 @@
 <li><code>usePolly</code> - Set this to true to configure the HttpClient to use Polly using a retry policy with a jittered backoff</li>
 <li><code>pollyMaxRetryCount</code> - This is the max retry count used in the Polly retry policy. Default is 6</li>
 <li><code>firstBackoffRetryInSeconds</code> - This is the duration of the initial retry backoff. Default is 1 second</li>
+</ul>
+</li>
+<li><code>codeGeneratorSettings</code> - Setting this allows customization of the NSwag generated types and contracts
+<ul>
+<li><code>namespace</code> - Default is <code>GeneratedCode</code>,</li>
+<li><code>requiredPropertiesMustBeDefined</code> - Default is true,</li>
+<li><code>generateDataAnnotations</code> - Default is true,</li>
+<li><code>anyType</code> - Default is <code>object</code>,</li>
+<li><code>dateType</code> - Default is <code>System.DateTimeOffset</code>,</li>
+<li><code>dateTimeType</code> - Default is <code>System.DateTimeOffset</code>,</li>
+<li><code>timeType</code> - Default is <code>System.TimeSpan</code>,</li>
+<li><code>timeSpanType</code> - Default is <code>System.TimeSpan</code>,</li>
+<li><code>arrayType</code> - Default is <code>System.Collections.Generic.ICollection</code>,</li>
+<li><code>dictionaryType</code> - Default is <code>System.Collections.Generic.IDictionary</code>,</li>
+<li><code>arrayInstanceType</code> - Default is <code>System.Collections.ObjectModel.Collection</code>,</li>
+<li><code>dictionaryInstanceType</code> - Default is <code>System.Collections.Generic.Dictionary</code>,</li>
+<li><code>arrayBaseType</code> - Default is <code>System.Collections.ObjectModel.Collection</code>,</li>
+<li><code>dictionaryBaseType</code> - Default is <code>System.Collections.Generic.Dictionary</code>,</li>
+<li><code>propertySetterAccessModifier</code> - Default is ``,</li>
+<li><code>generateImmutableArrayProperties</code> - Default is false,</li>
+<li><code>generateImmutableDictionaryProperties</code> - Default is false,</li>
+<li><code>handleReferences</code> - Default is false,</li>
+<li><code>jsonSerializerSettingsTransformationMethod</code> - Default is null,</li>
+<li><code>generateJsonMethods</code> - Default is false,</li>
+<li><code>enforceFlagEnums</code> - Default is false,</li>
+<li><code>inlineNamedDictionaries</code> - Default is false,</li>
+<li><code>inlineNamedTuples</code> - Default is true,</li>
+<li><code>inlineNamedArrays</code> - Default is false,</li>
+<li><code>generateOptionalPropertiesAsNullable</code> - Default is false,</li>
+<li><code>generateNullableReferenceTypes</code> - Default is false,</li>
+<li><code>generateNativeRecords</code> - Default is false</li>
+<li><code>generateDefaultValues</code> - Default is true</li>
+<li><code>inlineNamedAny</code> - Default is false</li>
+<li><code>excludedTypeNames</code> - Default is empty</li>
 </ul>
 </li>
 </ul>

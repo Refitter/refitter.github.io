@@ -4,6 +4,16 @@
   "files": [
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.CodeGeneratorSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.CodeGeneratorSettings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Refitter.Core.DependencyInjectionSettings.yml",
       "output": {
         ".html": {
@@ -58,6 +68,16 @@
       "output": {
         ".html": {
           "relative_path": "api/Refitter.Core.RefitGeneratorSettings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.Serializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.Serializer.html"
         }
       },
       "version": ""
