@@ -351,19 +351,6 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.CodeGeneratorSettings.JsonSerializerSettingsTransformationMethod
   nameWithType: CodeGeneratorSettings.JsonSerializerSettingsTransformationMethod
-- uid: Refitter.Core.CodeGeneratorSettings.Namespace
-  name: Namespace
-  href: api/Refitter.Core.CodeGeneratorSettings.html#Refitter_Core_CodeGeneratorSettings_Namespace
-  commentId: P:Refitter.Core.CodeGeneratorSettings.Namespace
-  fullName: Refitter.Core.CodeGeneratorSettings.Namespace
-  nameWithType: CodeGeneratorSettings.Namespace
-- uid: Refitter.Core.CodeGeneratorSettings.Namespace*
-  name: Namespace
-  href: api/Refitter.Core.CodeGeneratorSettings.html#Refitter_Core_CodeGeneratorSettings_Namespace_
-  commentId: Overload:Refitter.Core.CodeGeneratorSettings.Namespace
-  isSpec: "True"
-  fullName: Refitter.Core.CodeGeneratorSettings.Namespace
-  nameWithType: CodeGeneratorSettings.Namespace
 - uid: Refitter.Core.CodeGeneratorSettings.PropertySetterAccessModifier
   name: PropertySetterAccessModifier
   href: api/Refitter.Core.CodeGeneratorSettings.html#Refitter_Core_CodeGeneratorSettings_PropertySetterAccessModifier
