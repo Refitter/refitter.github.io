@@ -29,11 +29,7 @@
       <meta name="loc:copy" content="Copy">
   </head>
 
-  <script type="module">
-    import options from './../public/main.js'
-    import { init } from './../public/docfx.min.js'
-    init(options)
-  </script>
+  <script type="module" src="./../public/docfx.min.js"></script>
 
   <script>
     const theme = localStorage.getItem('theme') || 'auto'
@@ -95,6 +91,7 @@
 <h4 id="usage">Usage</h4>
 <p>This source generator generates code based on any <a href="refitter-file-format.html">.refitter</a> file included to the project as <code>AdditionalFiles</code>.</p>
 <p>The generator can automatically detect all <a href="refitter-file-format.html">.refitter</a> files inside the project that referenced the <code>Refitter.SourceGenerator</code> package and there is no need to include them manually as <code>AdditionalFiles</code></p>
+
 </article>
 
         <div class="contribution d-print-none">
@@ -102,7 +99,7 @@
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
-        
+
       </div>
 
       <div class="affix">

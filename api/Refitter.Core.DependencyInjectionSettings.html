@@ -31,11 +31,7 @@
       <meta name="loc:copy" content="Copy">
   </head>
 
-  <script type="module">
-    import options from './../public/main.js'
-    import { init } from './../public/docfx.min.js'
-    init(options)
-  </script>
+  <script type="module" src="./../public/docfx.min.js"></script>
 
   <script>
     const theme = localStorage.getItem('theme') || 'auto'
@@ -90,7 +86,7 @@
 
   <h1 id="Refitter_Core_DependencyInjectionSettings" data-uid="Refitter.Core.DependencyInjectionSettings" class="text-break">
     Class DependencyInjectionSettings
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/DependencyInjectionSettings.cs/#L9"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/DependencyInjectionSettings.cs/#L7"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -159,7 +155,7 @@ This can be used to configure the HttpClient pipeline with additional handlers</
 
   <h3 id="Refitter_Core_DependencyInjectionSettings_BaseUrl" data-uid="Refitter.Core.DependencyInjectionSettings.BaseUrl">
   BaseUrl
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/DependencyInjectionSettings.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/DependencyInjectionSettings.cs/#L12"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Base Address for the HttpClient</p>
@@ -167,8 +163,7 @@ This can be used to configure the HttpClient pipeline with additional handlers</
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;baseUrl&quot;)]
-public string? BaseUrl { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string? BaseUrl { get; set; }</code></pre>
   </div>
 
 
@@ -192,7 +187,7 @@ public string? BaseUrl { get; set; }</code></pre>
 
   <h3 id="Refitter_Core_DependencyInjectionSettings_FirstBackoffRetryInSeconds" data-uid="Refitter.Core.DependencyInjectionSettings.FirstBackoffRetryInSeconds">
   FirstBackoffRetryInSeconds
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/DependencyInjectionSettings.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/DependencyInjectionSettings.cs/#L33"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The median delay to target before the first retry in seconds. Default is 1 second</p>
@@ -200,8 +195,7 @@ public string? BaseUrl { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;firstBackoffRetryInSeconds&quot;)]
-public double FirstBackoffRetryInSeconds { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public double FirstBackoffRetryInSeconds { get; set; }</code></pre>
   </div>
 
 
@@ -225,7 +219,7 @@ public double FirstBackoffRetryInSeconds { get; set; }</code></pre>
 
   <h3 id="Refitter_Core_DependencyInjectionSettings_HttpMessageHandlers" data-uid="Refitter.Core.DependencyInjectionSettings.HttpMessageHandlers">
   HttpMessageHandlers
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/DependencyInjectionSettings.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/DependencyInjectionSettings.cs/#L18"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>A collection of HttpMessageHandlers to be added to the HttpClient pipeline.
@@ -234,8 +228,7 @@ This can be for telemetry logging, authorization, etc.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;httpMessageHandlers&quot;)]
-public string[] HttpMessageHandlers { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string[] HttpMessageHandlers { get; set; }</code></pre>
   </div>
 
 
@@ -259,7 +252,7 @@ public string[] HttpMessageHandlers { get; set; }</code></pre>
 
   <h3 id="Refitter_Core_DependencyInjectionSettings_PollyMaxRetryCount" data-uid="Refitter.Core.DependencyInjectionSettings.PollyMaxRetryCount">
   PollyMaxRetryCount
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/DependencyInjectionSettings.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/DependencyInjectionSettings.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default max retry count for Polly. Default is 6.</p>
@@ -267,8 +260,7 @@ public string[] HttpMessageHandlers { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;pollyMaxRetryCount&quot;)]
-public int PollyMaxRetryCount { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int PollyMaxRetryCount { get; set; }</code></pre>
   </div>
 
 
@@ -292,7 +284,7 @@ public int PollyMaxRetryCount { get; set; }</code></pre>
 
   <h3 id="Refitter_Core_DependencyInjectionSettings_UsePolly" data-uid="Refitter.Core.DependencyInjectionSettings.UsePolly">
   UsePolly
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/DependencyInjectionSettings.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/DependencyInjectionSettings.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Set this to true to use Polly for transient fault handling.</p>
@@ -300,8 +292,7 @@ public int PollyMaxRetryCount { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;usePolly&quot;)]
-public bool UsePolly { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool UsePolly { get; set; }</code></pre>
   </div>
 
 
@@ -325,10 +316,10 @@ public bool UsePolly { get; set; }</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/DependencyInjectionSettings.cs/#L9" class="edit-link">Edit this page</a>
+          <a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/DependencyInjectionSettings.cs/#L7" class="edit-link">Edit this page</a>
         </div>
 
-        
+
       </div>
 
       <div class="affix">

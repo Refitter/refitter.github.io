@@ -29,11 +29,7 @@
       <meta name="loc:copy" content="Copy">
   </head>
 
-  <script type="module">
-    import options from './../public/main.js'
-    import { init } from './../public/docfx.min.js'
-    init(options)
-  </script>
+  <script type="module" src="./../public/docfx.min.js"></script>
 
   <script>
     const theme = localStorage.getItem('theme') || 'auto'
@@ -105,9 +101,10 @@
   &quot;useIsoDateFormat&quot;: false, // Optional. Default=false
   &quot;multipleInterfaces&quot;: &quot;ByEndpoint&quot;, // Optional. May be one of &quot;ByEndpoint&quot; or &quot;ByTag&quot;
   &quot;generateDeprecatedOperations&quot;: false, // Optional. Default=true
-  &quot;operationNameTemplate&quot;: &quot;{operationName}Async&quot;, // Optional. Must contain {operationName}
+  &quot;operationNameTemplate&quot;: &quot;{operationName}Async&quot;, // Optional. Must contain {operationName} when multipleInterfaces != ByEndpoint
   &quot;optionalParameters&quot;: false, // Optional. Default=false
   &quot;outputFolder&quot;: &quot;../CustomOutput&quot; // Optional. Default=./Generated
+  &quot;outputFilename&quot;: &quot;RefitInterface.cs&quot;, // Optional. Default=Output.cs for CLI tool
   &quot;additionalNamespaces&quot;: [ // Optional
     &quot;Namespace1&quot;,
     &quot;Namespace2&quot;
@@ -121,7 +118,7 @@
     &quot;^/pet/.*&quot;,
     &quot;^/store/.*&quot;
   ],
-  &quot;dependencyInjectionSettings&quot;: {
+  &quot;dependencyInjectionSettings&quot;: { // Optional
     &quot;baseUrl&quot;: &quot;https://petstore3.swagger.io/api/v3&quot;, // Optional. Leave this blank to set the base address manually
     &quot;httpMessageHandlers&quot;: [ // Optional
         &quot;AuthorizationMessageHandler&quot;, 
@@ -167,7 +164,6 @@
   }
 }
 </code></pre>
-<p>Here are some basic explanations of each property:</p>
 <ul>
 <li><code>openApiPath</code> - points to the OpenAPI Specifications file. This can be the path to a file stored on disk, relative to the <code>.refitter</code> file. This can also be a URL to a remote file that will be downloaded over HTTP/HTTPS</li>
 <li><code>naming.useOpenApiTitle</code> - a boolean indicating whether the OpenApi title should be used. Default is <code>true</code></li>
@@ -183,6 +179,7 @@
 <li><code>useIsoDateFormat</code> - Set to <code>true</code> to explicitly format date query string parameters in ISO 8601 standard date format using delimiters (for example: 2023-06-15). Default is <code>false</code></li>
 <li><code>multipleInterfaces</code> - Set to <code>ByEndpoint</code> to generate an interface for each endpoint, or <code>ByTag</code> to group Endpoints by their Tag (like SwaggerUI groups them).</li>
 <li><code>outputFolder</code> - a string describing a relative path to a desired output folder. Default is <code>./Generated</code></li>
+<li><code>outputFilename</code> - Output filename. Default is <code>Output.cs</code> when used from the CLI tool, otherwise its the .refitter filename. So <code>Petstore.refitter</code> becomes <code>Petstore.cs</code>.</li>
 <li><code>additionalNamespaces</code> - A collection of additional namespaces to include in the generated file. A use case for this is when you want to reuse contracts from a different namespace than the generated code. Default is empty</li>
 <li><code>includeTags</code> - A collection of tags to use a filter for including endpoints that contain this tag.</li>
 <li><code>includePathMatches</code> - A collection of regular expressions used to filter paths.</li>
@@ -232,6 +229,7 @@
 </ul>
 </li>
 </ul>
+
 </article>
 
         <div class="contribution d-print-none">
@@ -239,7 +237,7 @@
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
-        
+
       </div>
 
       <div class="affix">

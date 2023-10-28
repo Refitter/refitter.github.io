@@ -658,6 +658,12 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.RefitGeneratorSettings.CodeGeneratorSettings
   nameWithType: RefitGeneratorSettings.CodeGeneratorSettings
+- uid: Refitter.Core.RefitGeneratorSettings.DefaultOutputFolder
+  name: DefaultOutputFolder
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_DefaultOutputFolder
+  commentId: F:Refitter.Core.RefitGeneratorSettings.DefaultOutputFolder
+  fullName: Refitter.Core.RefitGeneratorSettings.DefaultOutputFolder
+  nameWithType: RefitGeneratorSettings.DefaultOutputFolder
 - uid: Refitter.Core.RefitGeneratorSettings.DependencyInjectionSettings
   name: DependencyInjectionSettings
   href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_DependencyInjectionSettings
@@ -827,6 +833,19 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.RefitGeneratorSettings.OptionalParameters
   nameWithType: RefitGeneratorSettings.OptionalParameters
+- uid: Refitter.Core.RefitGeneratorSettings.OutputFilename
+  name: OutputFilename
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_OutputFilename
+  commentId: P:Refitter.Core.RefitGeneratorSettings.OutputFilename
+  fullName: Refitter.Core.RefitGeneratorSettings.OutputFilename
+  nameWithType: RefitGeneratorSettings.OutputFilename
+- uid: Refitter.Core.RefitGeneratorSettings.OutputFilename*
+  name: OutputFilename
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_OutputFilename_
+  commentId: Overload:Refitter.Core.RefitGeneratorSettings.OutputFilename
+  isSpec: "True"
+  fullName: Refitter.Core.RefitGeneratorSettings.OutputFilename
+  nameWithType: RefitGeneratorSettings.OutputFilename
 - uid: Refitter.Core.RefitGeneratorSettings.OutputFolder
   name: OutputFolder
   href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_OutputFolder

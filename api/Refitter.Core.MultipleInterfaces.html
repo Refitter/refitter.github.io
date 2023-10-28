@@ -31,11 +31,7 @@
       <meta name="loc:copy" content="Copy">
   </head>
 
-  <script type="module">
-    import options from './../public/main.js'
-    import { init } from './../public/docfx.min.js'
-    init(options)
-  </script>
+  <script type="module" src="./../public/docfx.min.js"></script>
 
   <script>
     const theme = localStorage.getItem('theme') || 'auto'
@@ -91,7 +87,7 @@
 
   <h1 id="Refitter_Core_MultipleInterfaces" data-uid="Refitter.Core.MultipleInterfaces" class="text-break">
     Enum MultipleInterfaces
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/MultipleInterfaces.cs/#L8"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/MultipleInterfaces.cs/#L6"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -118,18 +114,14 @@
   <h2 id="fields">Fields
 </h2>
   <dl class="parameters">
-    <dt id="Refitter_Core_MultipleInterfaces_ByEndpoint"><code>[JsonPropertyName(&quot;byEndpoint&quot;)]
-ByEndpoint = 1</code></dt>
+    <dt id="Refitter_Core_MultipleInterfaces_ByEndpoint"><code>ByEndpoint = 1</code></dt>
     <dd><p>Generate a Refit interface for each endpoint with a single Execute() method.
-The method name can be customized using the --operation-name-template command line option,
-or the operationNameTemplate property in the settings file.</p>
+The method name can be customized using the <a class="xref" href="Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_OperationNameTemplate">OperationNameTemplate</a> setting.</p>
 </dd>
-    <dt id="Refitter_Core_MultipleInterfaces_ByTag"><code>[JsonPropertyName(&quot;byTag&quot;)]
-ByTag = 2</code></dt>
+    <dt id="Refitter_Core_MultipleInterfaces_ByTag"><code>ByTag = 2</code></dt>
     <dd><p>Generate a Refit interface for each tag</p>
 </dd>
-    <dt id="Refitter_Core_MultipleInterfaces_Unset"><code>[JsonPropertyName(&quot;unset&quot;)]
-Unset = 0</code></dt>
+    <dt id="Refitter_Core_MultipleInterfaces_Unset"><code>Unset = 0</code></dt>
     <dd><p>Do not generate multiple interfaces</p>
 </dd>
   </dl>
@@ -139,10 +131,10 @@ Unset = 0</code></dt>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/MultipleInterfaces.cs/#L8" class="edit-link">Edit this page</a>
+          <a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/MultipleInterfaces.cs/#L6" class="edit-link">Edit this page</a>
         </div>
 
-        
+
       </div>
 
       <div class="affix">
