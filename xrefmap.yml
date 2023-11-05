@@ -755,6 +755,19 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.RefitGeneratorSettings.IncludeTags
   nameWithType: RefitGeneratorSettings.IncludeTags
+- uid: Refitter.Core.RefitGeneratorSettings.KeepSchemaPatterns
+  name: KeepSchemaPatterns
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_KeepSchemaPatterns
+  commentId: P:Refitter.Core.RefitGeneratorSettings.KeepSchemaPatterns
+  fullName: Refitter.Core.RefitGeneratorSettings.KeepSchemaPatterns
+  nameWithType: RefitGeneratorSettings.KeepSchemaPatterns
+- uid: Refitter.Core.RefitGeneratorSettings.KeepSchemaPatterns*
+  name: KeepSchemaPatterns
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_KeepSchemaPatterns_
+  commentId: Overload:Refitter.Core.RefitGeneratorSettings.KeepSchemaPatterns
+  isSpec: "True"
+  fullName: Refitter.Core.RefitGeneratorSettings.KeepSchemaPatterns
+  nameWithType: RefitGeneratorSettings.KeepSchemaPatterns
 - uid: Refitter.Core.RefitGeneratorSettings.MultipleInterfaces
   name: MultipleInterfaces
   href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_MultipleInterfaces
@@ -872,6 +885,19 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.RefitGeneratorSettings.ReturnIApiResponse
   nameWithType: RefitGeneratorSettings.ReturnIApiResponse
+- uid: Refitter.Core.RefitGeneratorSettings.TrimUnusedSchema
+  name: TrimUnusedSchema
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_TrimUnusedSchema
+  commentId: P:Refitter.Core.RefitGeneratorSettings.TrimUnusedSchema
+  fullName: Refitter.Core.RefitGeneratorSettings.TrimUnusedSchema
+  nameWithType: RefitGeneratorSettings.TrimUnusedSchema
+- uid: Refitter.Core.RefitGeneratorSettings.TrimUnusedSchema*
+  name: TrimUnusedSchema
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_TrimUnusedSchema_
+  commentId: Overload:Refitter.Core.RefitGeneratorSettings.TrimUnusedSchema
+  isSpec: "True"
+  fullName: Refitter.Core.RefitGeneratorSettings.TrimUnusedSchema
+  nameWithType: RefitGeneratorSettings.TrimUnusedSchema
 - uid: Refitter.Core.RefitGeneratorSettings.TypeAccessibility
   name: TypeAccessibility
   href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_TypeAccessibility
@@ -911,6 +937,44 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.RefitGeneratorSettings.UseIsoDateFormat
   nameWithType: RefitGeneratorSettings.UseIsoDateFormat
+- uid: Refitter.Core.SchemaCleaner
+  name: SchemaCleaner
+  href: api/Refitter.Core.SchemaCleaner.html
+  commentId: T:Refitter.Core.SchemaCleaner
+  fullName: Refitter.Core.SchemaCleaner
+  nameWithType: SchemaCleaner
+- uid: Refitter.Core.SchemaCleaner.#ctor(NSwag.OpenApiDocument,System.String[])
+  name: SchemaCleaner(OpenApiDocument, string[])
+  href: api/Refitter.Core.SchemaCleaner.html#Refitter_Core_SchemaCleaner__ctor_NSwag_OpenApiDocument_System_String___
+  commentId: M:Refitter.Core.SchemaCleaner.#ctor(NSwag.OpenApiDocument,System.String[])
+  name.vb: New(OpenApiDocument, String())
+  fullName: Refitter.Core.SchemaCleaner.SchemaCleaner(NSwag.OpenApiDocument, string[])
+  fullName.vb: Refitter.Core.SchemaCleaner.New(NSwag.OpenApiDocument, String())
+  nameWithType: SchemaCleaner.SchemaCleaner(OpenApiDocument, string[])
+  nameWithType.vb: SchemaCleaner.New(OpenApiDocument, String())
+- uid: Refitter.Core.SchemaCleaner.#ctor*
+  name: SchemaCleaner
+  href: api/Refitter.Core.SchemaCleaner.html#Refitter_Core_SchemaCleaner__ctor_
+  commentId: Overload:Refitter.Core.SchemaCleaner.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Refitter.Core.SchemaCleaner.SchemaCleaner
+  fullName.vb: Refitter.Core.SchemaCleaner.New
+  nameWithType: SchemaCleaner.SchemaCleaner
+  nameWithType.vb: SchemaCleaner.New
+- uid: Refitter.Core.SchemaCleaner.RemoveUnreferencedSchema
+  name: RemoveUnreferencedSchema()
+  href: api/Refitter.Core.SchemaCleaner.html#Refitter_Core_SchemaCleaner_RemoveUnreferencedSchema
+  commentId: M:Refitter.Core.SchemaCleaner.RemoveUnreferencedSchema
+  fullName: Refitter.Core.SchemaCleaner.RemoveUnreferencedSchema()
+  nameWithType: SchemaCleaner.RemoveUnreferencedSchema()
+- uid: Refitter.Core.SchemaCleaner.RemoveUnreferencedSchema*
+  name: RemoveUnreferencedSchema
+  href: api/Refitter.Core.SchemaCleaner.html#Refitter_Core_SchemaCleaner_RemoveUnreferencedSchema_
+  commentId: Overload:Refitter.Core.SchemaCleaner.RemoveUnreferencedSchema
+  isSpec: "True"
+  fullName: Refitter.Core.SchemaCleaner.RemoveUnreferencedSchema
+  nameWithType: SchemaCleaner.RemoveUnreferencedSchema
 - uid: Refitter.Core.Serializer
   name: Serializer
   href: api/Refitter.Core.Serializer.html

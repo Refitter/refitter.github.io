@@ -537,6 +537,39 @@
 
 
 
+  <a id="Refitter_Core_RefitGeneratorSettings_KeepSchemaPatterns_" data-uid="Refitter.Core.RefitGeneratorSettings.KeepSchemaPatterns*"></a>
+
+  <h3 id="Refitter_Core_RefitGeneratorSettings_KeepSchemaPatterns" data-uid="Refitter.Core.RefitGeneratorSettings.KeepSchemaPatterns">
+  KeepSchemaPatterns
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L144"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Array of regular expressions that determine if a schema needs to be kept.
+This works in conjunction with <a class="xref" href="Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_TrimUnusedSchema">TrimUnusedSchema</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string[] KeepSchemaPatterns { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Refitter_Core_RefitGeneratorSettings_MultipleInterfaces_" data-uid="Refitter.Core.RefitGeneratorSettings.MultipleInterfaces*"></a>
 
   <h3 id="Refitter_Core_RefitGeneratorSettings_MultipleInterfaces" data-uid="Refitter.Core.RefitGeneratorSettings.MultipleInterfaces">
@@ -810,6 +843,39 @@ For the Source Generator, this is the name of the generated class and the defaul
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool ReturnIApiResponse { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Refitter_Core_RefitGeneratorSettings_TrimUnusedSchema_" data-uid="Refitter.Core.RefitGeneratorSettings.TrimUnusedSchema*"></a>
+
+  <h3 id="Refitter_Core_RefitGeneratorSettings_TrimUnusedSchema" data-uid="Refitter.Core.RefitGeneratorSettings.TrimUnusedSchema">
+  TrimUnusedSchema
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L138"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set to <code>true</code> to apply tree-shaking to the OpenApi schema.
+This works in conjunction with <a class="xref" href="Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_IncludeTags">IncludeTags</a> and <a class="xref" href="Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_IncludePathMatches">IncludePathMatches</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TrimUnusedSchema { get; set; }</code></pre>
   </div>
 
 
