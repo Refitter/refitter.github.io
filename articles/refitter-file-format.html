@@ -119,6 +119,11 @@
     &quot;^/pet/.*&quot;,
     &quot;^/store/.*&quot;
   ],
+  &quot;trimUnusedSchema&quot;: false, // Optional. Default=false
+  &quot;keepSchemaPatterns&quot;: [ // Optional. Force to keep matching schema, uses regular expressions. Use together with trimUnusedSchema=true
+    &quot;^Model$&quot;,
+    &quot;^Person.+&quot;
+  ],
   &quot;dependencyInjectionSettings&quot;: { // Optional
     &quot;baseUrl&quot;: &quot;https://petstore3.swagger.io/api/v3&quot;, // Optional. Leave this blank to set the base address manually
     &quot;httpMessageHandlers&quot;: [ // Optional
@@ -167,6 +172,7 @@
 </code></pre>
 <ul>
 <li><code>openApiPath</code> - points to the OpenAPI Specifications file. This can be the path to a file stored on disk, relative to the <code>.refitter</code> file. This can also be a URL to a remote file that will be downloaded over HTTP/HTTPS</li>
+<li><code>namespace</code> - the namespace used in the generated code. If not specified, this defaults to <code>GeneratedCode</code></li>
 <li><code>naming.useOpenApiTitle</code> - a boolean indicating whether the OpenApi title should be used. Default is <code>true</code></li>
 <li><code>naming.interfaceName</code> - the name of the generated interface. The generated code will automatically prefix this with <code>I</code> so if this set to <code>MyApiClient</code> then the generated interface is called <code>IMyApiClient</code>. Default is <code>ApiClient</code></li>
 <li><code>generateContracts</code> - a boolean indicating whether contracts should be generated. A use case for this is several API clients use the same contracts. Default is <code>true</code></li>
@@ -185,8 +191,10 @@
 <li><code>includeTags</code> - A collection of tags to use a filter for including endpoints that contain this tag.</li>
 <li><code>includePathMatches</code> - A collection of regular expressions used to filter paths.</li>
 <li><code>generateDeprecatedOperations</code> - a boolean indicating whether deprecated operations should be generated or skipped. Default is <code>true</code></li>
-<li><code>operationNameTemplate</code> - Generate operation names using pattern. This must contain the string {operationName}. An example usage of this could be <code>{operationName}Async</code> to suffix all method names with Async. When using <code>&quot;multipleIinterfaces&quot;: &quot;ByEndpoint&quot;</code>, This is name of the Execute() method in the interface</li>
+<li><code>operationNameTemplate</code> - Generate operation names using pattern. This must contain the string {operationName}. An example usage of this could be <code>{operationName}Async</code> to suffix all method names with Async</li>
 <li><code>optionalParameters</code> - Generate non-required parameters as nullable optional parameters</li>
+<li><code>trimUnusedSchema</code> - Removes unreferenced components schema to keep the generated output to a minimum</li>
+<li><code>keepSchemaPatterns</code>: A collection of regular expressions to force to keep matching schema. This is used together with <code>trimUnusedSchema</code></li>
 <li><code>dependencyInjectionSettings</code> - Setting this will generated extension methods to <code>IServiceCollection</code> for configuring Refit clients
 <ul>
 <li><code>baseUrl</code> - Used as the HttpClient base address. Leave this blank to manually set the base URL</li>
