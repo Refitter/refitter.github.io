@@ -2,15 +2,15 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Source Generator </title>
+      <title> </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Source Generator ">
+      <meta name="title" content=" ">
       
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
-      <meta name="docfx:navrel" content="../toc.json">
-      <meta name="docfx:tocrel" content="toc.json">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
       
       
       
@@ -80,8 +80,8 @@
         </div>
 
         <article data-uid="">
-<h2 id="source-generator">Source Generator</h2>
 
+<h2 id="source-generator">Source Generator</h2>
 <p>Refitter is available as a C# Source Generator that uses the <a href="/api/Refitter.Core.html">Refitter.Core</a> library for generating a REST API Client using the <a href="https://github.com/reactiveui/refit">Refit</a> library. Refitter can generate the Refit interface from OpenAPI specifications</p>
 <p>The Refitter source generator is a bit untraditional in a sense that it creates a folder called <code>Generated</code> in the same location as the <code>.refitter</code> file and generates files to disk under the <code>Generated</code> folder (can be changed with <code>--outputFolder</code>). The source generator output should be included in the project and committed to source control. This is done because there is no other way to trigger the Refit source generator to pickup the Refitter generated code</p>
 <p><em><strong>(Translation: I couldn't for the life of me figure how to get that to work, sorry)</strong></em></p>
