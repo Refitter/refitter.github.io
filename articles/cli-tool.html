@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title> </title>
+      <title>CLI Tool </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content=" ">
+      <meta name="title" content="CLI Tool ">
       
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
@@ -80,15 +80,15 @@
         </div>
 
         <article data-uid="">
+<h1 id="cli-tool">CLI Tool</h1>
 
-<h2 id="cli-tool">CLI Tool</h2>
 <p>The tool is packaged as a .NET Tool and is published to nuget.org. You can install the latest version of this tool like this:</p>
 <pre><code class="lang-shell">dotnet tool install --global Refitter
 </code></pre>
-<h4 id="usage">Usage:</h4>
-<pre><code class="lang-shell">$ refitter --help
+<h2 id="usage">Usage</h2>
+<pre><code class="lang-shell">refitter --help
 </code></pre>
-<pre><code>USAGE:
+<pre><code class="lang-shell">USAGE:
     refitter [URL or input file] [OPTIONS]
 
 EXAMPLES:
@@ -107,6 +107,8 @@ EXAMPLES:
     refitter ./openapi.json --multiple-interfaces ByEndpoint
     refitter ./openapi.json --tag Pet --tag Store --tag User
     refitter ./openapi.json --match-path '^/pet/.*'
+    refitter ./openapi.json --trim-unused-schema
+    refitter ./openapi.json --trim-unused-schema  --keep-schema '^Model$' --keep-schema '^Person.+'
     refitter ./openapi.json --no-deprecated-operations
     refitter ./openapi.json --operation-name-template '{operationName}Async'
     refitter ./openapi.json --optional-nullable-parameters
@@ -117,6 +119,7 @@ ARGUMENTS:
 OPTIONS:
                                           DEFAULT                                                                                                                                                    
     -h, --help                                             Prints help information                                                                                                                   
+    -v, --version                                          Prints version information                                                                                                                
     -s, --settings-file                                    Path to .refitter settings file. Specifying this will ignore all other settings (except for --output)                                     
     -n, --namespace                       GeneratedCode    Default namespace to use for generated types                                                                                              
     -o, --output                          Output.cs        Path to Output file                                                                                                                       
@@ -137,13 +140,16 @@ OPTIONS:
         --no-deprecated-operations                         Don't generate deprecated operations                                                                                                      
         --operation-name-template                          Generate operation names using pattern. When using --multiple-interfaces ByEndpoint, this is name of the Execute() method in the interface
         --optional-nullable-parameters                     Generate nullable parameters as optional parameters                                                                                       
+        --trim-unused-schema                               Removes unreferenced components schema to keep the generated output to a minimum                                                          
+        --keep-schema                                      Force to keep matching schema, uses regular expressions. Use together with &quot;--trim-unused-schema&quot;. Can be set multiple times              
+        --no-banner                                        Don't show donation banner                                                                                                                           
 </code></pre>
 <p>To generate code from an OpenAPI specifications file, run the following:</p>
-<pre><code class="lang-shell">$ refitter [path to OpenAPI spec file] --namespace &quot;[Your.Namespace.Of.Choice.GeneratedCode]&quot;
+<pre><code class="lang-shell">refitter [path to OpenAPI spec file] --namespace &quot;[Your.Namespace.Of.Choice.GeneratedCode]&quot;
 </code></pre>
 <p>This will generate a file called <code>Output.cs</code> which contains the Refit interface and contract classes generated using <a href="https://github.com/RicoSuter/NSwag">NSwag</a></p>
 <p>The settings file uses the <a href="refitter-file-format.html">.refitter file format</a></p>
-<h4 id="system-requirements">System requirements</h4>
+<h2 id="system-requirements">System requirements</h2>
 <p>.NET 6.0 (LTS)</p>
 
 </article>
