@@ -536,12 +536,15 @@ references:
   commentId: T:Refitter.Core.OpenApiDocumentFactory
   fullName: Refitter.Core.OpenApiDocumentFactory
   nameWithType: OpenApiDocumentFactory
-- uid: Refitter.Core.OpenApiDocumentFactory.CreateAsync(Refitter.Core.RefitGeneratorSettings)
-  name: CreateAsync(RefitGeneratorSettings)
-  href: api/Refitter.Core.OpenApiDocumentFactory.html#Refitter_Core_OpenApiDocumentFactory_CreateAsync_Refitter_Core_RefitGeneratorSettings_
-  commentId: M:Refitter.Core.OpenApiDocumentFactory.CreateAsync(Refitter.Core.RefitGeneratorSettings)
-  fullName: Refitter.Core.OpenApiDocumentFactory.CreateAsync(Refitter.Core.RefitGeneratorSettings)
-  nameWithType: OpenApiDocumentFactory.CreateAsync(RefitGeneratorSettings)
+- uid: Refitter.Core.OpenApiDocumentFactory.CreateAsync(System.String)
+  name: CreateAsync(string)
+  href: api/Refitter.Core.OpenApiDocumentFactory.html#Refitter_Core_OpenApiDocumentFactory_CreateAsync_System_String_
+  commentId: M:Refitter.Core.OpenApiDocumentFactory.CreateAsync(System.String)
+  name.vb: CreateAsync(String)
+  fullName: Refitter.Core.OpenApiDocumentFactory.CreateAsync(string)
+  fullName.vb: Refitter.Core.OpenApiDocumentFactory.CreateAsync(String)
+  nameWithType: OpenApiDocumentFactory.CreateAsync(string)
+  nameWithType.vb: OpenApiDocumentFactory.CreateAsync(String)
 - uid: Refitter.Core.OpenApiDocumentFactory.CreateAsync*
   name: CreateAsync
   href: api/Refitter.Core.OpenApiDocumentFactory.html#Refitter_Core_OpenApiDocumentFactory_CreateAsync_
