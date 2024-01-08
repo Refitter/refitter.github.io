@@ -552,6 +552,60 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.OpenApiDocumentFactory.CreateAsync
   nameWithType: OpenApiDocumentFactory.CreateAsync
+- uid: Refitter.Core.OperationNameGeneratorTypes
+  name: OperationNameGeneratorTypes
+  href: api/Refitter.Core.OperationNameGeneratorTypes.html
+  commentId: T:Refitter.Core.OperationNameGeneratorTypes
+  fullName: Refitter.Core.OperationNameGeneratorTypes
+  nameWithType: OperationNameGeneratorTypes
+- uid: Refitter.Core.OperationNameGeneratorTypes.Default
+  name: Default
+  href: api/Refitter.Core.OperationNameGeneratorTypes.html#Refitter_Core_OperationNameGeneratorTypes_Default
+  commentId: F:Refitter.Core.OperationNameGeneratorTypes.Default
+  fullName: Refitter.Core.OperationNameGeneratorTypes.Default
+  nameWithType: OperationNameGeneratorTypes.Default
+- uid: Refitter.Core.OperationNameGeneratorTypes.MultipleClientsFromFirstTagAndOperationId
+  name: MultipleClientsFromFirstTagAndOperationId
+  href: api/Refitter.Core.OperationNameGeneratorTypes.html#Refitter_Core_OperationNameGeneratorTypes_MultipleClientsFromFirstTagAndOperationId
+  commentId: F:Refitter.Core.OperationNameGeneratorTypes.MultipleClientsFromFirstTagAndOperationId
+  fullName: Refitter.Core.OperationNameGeneratorTypes.MultipleClientsFromFirstTagAndOperationId
+  nameWithType: OperationNameGeneratorTypes.MultipleClientsFromFirstTagAndOperationId
+- uid: Refitter.Core.OperationNameGeneratorTypes.MultipleClientsFromFirstTagAndOperationName
+  name: MultipleClientsFromFirstTagAndOperationName
+  href: api/Refitter.Core.OperationNameGeneratorTypes.html#Refitter_Core_OperationNameGeneratorTypes_MultipleClientsFromFirstTagAndOperationName
+  commentId: F:Refitter.Core.OperationNameGeneratorTypes.MultipleClientsFromFirstTagAndOperationName
+  fullName: Refitter.Core.OperationNameGeneratorTypes.MultipleClientsFromFirstTagAndOperationName
+  nameWithType: OperationNameGeneratorTypes.MultipleClientsFromFirstTagAndOperationName
+- uid: Refitter.Core.OperationNameGeneratorTypes.MultipleClientsFromFirstTagAndPathSegments
+  name: MultipleClientsFromFirstTagAndPathSegments
+  href: api/Refitter.Core.OperationNameGeneratorTypes.html#Refitter_Core_OperationNameGeneratorTypes_MultipleClientsFromFirstTagAndPathSegments
+  commentId: F:Refitter.Core.OperationNameGeneratorTypes.MultipleClientsFromFirstTagAndPathSegments
+  fullName: Refitter.Core.OperationNameGeneratorTypes.MultipleClientsFromFirstTagAndPathSegments
+  nameWithType: OperationNameGeneratorTypes.MultipleClientsFromFirstTagAndPathSegments
+- uid: Refitter.Core.OperationNameGeneratorTypes.MultipleClientsFromOperationId
+  name: MultipleClientsFromOperationId
+  href: api/Refitter.Core.OperationNameGeneratorTypes.html#Refitter_Core_OperationNameGeneratorTypes_MultipleClientsFromOperationId
+  commentId: F:Refitter.Core.OperationNameGeneratorTypes.MultipleClientsFromOperationId
+  fullName: Refitter.Core.OperationNameGeneratorTypes.MultipleClientsFromOperationId
+  nameWithType: OperationNameGeneratorTypes.MultipleClientsFromOperationId
+- uid: Refitter.Core.OperationNameGeneratorTypes.MultipleClientsFromPathSegments
+  name: MultipleClientsFromPathSegments
+  href: api/Refitter.Core.OperationNameGeneratorTypes.html#Refitter_Core_OperationNameGeneratorTypes_MultipleClientsFromPathSegments
+  commentId: F:Refitter.Core.OperationNameGeneratorTypes.MultipleClientsFromPathSegments
+  fullName: Refitter.Core.OperationNameGeneratorTypes.MultipleClientsFromPathSegments
+  nameWithType: OperationNameGeneratorTypes.MultipleClientsFromPathSegments
+- uid: Refitter.Core.OperationNameGeneratorTypes.SingleClientFromOperationId
+  name: SingleClientFromOperationId
+  href: api/Refitter.Core.OperationNameGeneratorTypes.html#Refitter_Core_OperationNameGeneratorTypes_SingleClientFromOperationId
+  commentId: F:Refitter.Core.OperationNameGeneratorTypes.SingleClientFromOperationId
+  fullName: Refitter.Core.OperationNameGeneratorTypes.SingleClientFromOperationId
+  nameWithType: OperationNameGeneratorTypes.SingleClientFromOperationId
+- uid: Refitter.Core.OperationNameGeneratorTypes.SingleClientFromPathSegments
+  name: SingleClientFromPathSegments
+  href: api/Refitter.Core.OperationNameGeneratorTypes.html#Refitter_Core_OperationNameGeneratorTypes_SingleClientFromPathSegments
+  commentId: F:Refitter.Core.OperationNameGeneratorTypes.SingleClientFromPathSegments
+  fullName: Refitter.Core.OperationNameGeneratorTypes.SingleClientFromPathSegments
+  nameWithType: OperationNameGeneratorTypes.SingleClientFromPathSegments
 - uid: Refitter.Core.RefitGenerator
   name: RefitGenerator
   href: api/Refitter.Core.RefitGenerator.html
@@ -693,6 +747,19 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.RefitGeneratorSettings.GenerateContracts
   nameWithType: RefitGeneratorSettings.GenerateContracts
+- uid: Refitter.Core.RefitGeneratorSettings.GenerateDefaultAdditionalProperties
+  name: GenerateDefaultAdditionalProperties
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_GenerateDefaultAdditionalProperties
+  commentId: P:Refitter.Core.RefitGeneratorSettings.GenerateDefaultAdditionalProperties
+  fullName: Refitter.Core.RefitGeneratorSettings.GenerateDefaultAdditionalProperties
+  nameWithType: RefitGeneratorSettings.GenerateDefaultAdditionalProperties
+- uid: Refitter.Core.RefitGeneratorSettings.GenerateDefaultAdditionalProperties*
+  name: GenerateDefaultAdditionalProperties
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_GenerateDefaultAdditionalProperties_
+  commentId: Overload:Refitter.Core.RefitGeneratorSettings.GenerateDefaultAdditionalProperties
+  isSpec: "True"
+  fullName: Refitter.Core.RefitGeneratorSettings.GenerateDefaultAdditionalProperties
+  nameWithType: RefitGeneratorSettings.GenerateDefaultAdditionalProperties
 - uid: Refitter.Core.RefitGeneratorSettings.GenerateDeprecatedOperations
   name: GenerateDeprecatedOperations
   href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_GenerateDeprecatedOperations
@@ -823,6 +890,19 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.RefitGeneratorSettings.OpenApiPath
   nameWithType: RefitGeneratorSettings.OpenApiPath
+- uid: Refitter.Core.RefitGeneratorSettings.OperationNameGenerator
+  name: OperationNameGenerator
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_OperationNameGenerator
+  commentId: P:Refitter.Core.RefitGeneratorSettings.OperationNameGenerator
+  fullName: Refitter.Core.RefitGeneratorSettings.OperationNameGenerator
+  nameWithType: RefitGeneratorSettings.OperationNameGenerator
+- uid: Refitter.Core.RefitGeneratorSettings.OperationNameGenerator*
+  name: OperationNameGenerator
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_OperationNameGenerator_
+  commentId: Overload:Refitter.Core.RefitGeneratorSettings.OperationNameGenerator
+  isSpec: "True"
+  fullName: Refitter.Core.RefitGeneratorSettings.OperationNameGenerator
+  nameWithType: RefitGeneratorSettings.OperationNameGenerator
 - uid: Refitter.Core.RefitGeneratorSettings.OperationNameTemplate
   name: OperationNameTemplate
   href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_OperationNameTemplate
