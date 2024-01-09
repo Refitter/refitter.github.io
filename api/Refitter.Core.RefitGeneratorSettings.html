@@ -381,7 +381,7 @@
 
   <h3 id="Refitter_Core_RefitGeneratorSettings_GenerateDefaultAdditionalProperties" data-uid="Refitter.Core.RefitGeneratorSettings.GenerateDefaultAdditionalProperties">
   GenerateDefaultAdditionalProperties
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L154"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L155"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Set to <code>false</code> to skip default additional properties. Default is <code>true</code></p>
@@ -743,7 +743,8 @@ public MultipleInterfaces MultipleInterfaces { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public OperationNameGeneratorTypes OperationNameGenerator { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(JsonStringEnumConverter))]
+public OperationNameGeneratorTypes OperationNameGenerator { get; set; }</code></pre>
   </div>
 
 
