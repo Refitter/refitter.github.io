@@ -968,6 +968,19 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.RefitGeneratorSettings.OutputFolder
   nameWithType: RefitGeneratorSettings.OutputFolder
+- uid: Refitter.Core.RefitGeneratorSettings.ResponseTypeOverride
+  name: ResponseTypeOverride
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_ResponseTypeOverride
+  commentId: P:Refitter.Core.RefitGeneratorSettings.ResponseTypeOverride
+  fullName: Refitter.Core.RefitGeneratorSettings.ResponseTypeOverride
+  nameWithType: RefitGeneratorSettings.ResponseTypeOverride
+- uid: Refitter.Core.RefitGeneratorSettings.ResponseTypeOverride*
+  name: ResponseTypeOverride
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_ResponseTypeOverride_
+  commentId: Overload:Refitter.Core.RefitGeneratorSettings.ResponseTypeOverride
+  isSpec: "True"
+  fullName: Refitter.Core.RefitGeneratorSettings.ResponseTypeOverride
+  nameWithType: RefitGeneratorSettings.ResponseTypeOverride
 - uid: Refitter.Core.RefitGeneratorSettings.ReturnIApiResponse
   name: ReturnIApiResponse
   href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_ReturnIApiResponse
@@ -1146,12 +1159,15 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentation
   nameWithType: XmlDocumentationGenerator.AppendInterfaceDocumentation
-- uid: Refitter.Core.XmlDocumentationGenerator.AppendMethodDocumentation(NSwag.CodeGeneration.CSharp.Models.CSharpOperationModel,System.Text.StringBuilder)
-  name: AppendMethodDocumentation(CSharpOperationModel, StringBuilder)
-  href: api/Refitter.Core.XmlDocumentationGenerator.html#Refitter_Core_XmlDocumentationGenerator_AppendMethodDocumentation_NSwag_CodeGeneration_CSharp_Models_CSharpOperationModel_System_Text_StringBuilder_
-  commentId: M:Refitter.Core.XmlDocumentationGenerator.AppendMethodDocumentation(NSwag.CodeGeneration.CSharp.Models.CSharpOperationModel,System.Text.StringBuilder)
-  fullName: Refitter.Core.XmlDocumentationGenerator.AppendMethodDocumentation(NSwag.CodeGeneration.CSharp.Models.CSharpOperationModel, System.Text.StringBuilder)
-  nameWithType: XmlDocumentationGenerator.AppendMethodDocumentation(CSharpOperationModel, StringBuilder)
+- uid: Refitter.Core.XmlDocumentationGenerator.AppendMethodDocumentation(NSwag.CodeGeneration.CSharp.Models.CSharpOperationModel,System.Boolean,System.Text.StringBuilder)
+  name: AppendMethodDocumentation(CSharpOperationModel, bool, StringBuilder)
+  href: api/Refitter.Core.XmlDocumentationGenerator.html#Refitter_Core_XmlDocumentationGenerator_AppendMethodDocumentation_NSwag_CodeGeneration_CSharp_Models_CSharpOperationModel_System_Boolean_System_Text_StringBuilder_
+  commentId: M:Refitter.Core.XmlDocumentationGenerator.AppendMethodDocumentation(NSwag.CodeGeneration.CSharp.Models.CSharpOperationModel,System.Boolean,System.Text.StringBuilder)
+  name.vb: AppendMethodDocumentation(CSharpOperationModel, Boolean, StringBuilder)
+  fullName: Refitter.Core.XmlDocumentationGenerator.AppendMethodDocumentation(NSwag.CodeGeneration.CSharp.Models.CSharpOperationModel, bool, System.Text.StringBuilder)
+  fullName.vb: Refitter.Core.XmlDocumentationGenerator.AppendMethodDocumentation(NSwag.CodeGeneration.CSharp.Models.CSharpOperationModel, Boolean, System.Text.StringBuilder)
+  nameWithType: XmlDocumentationGenerator.AppendMethodDocumentation(CSharpOperationModel, bool, StringBuilder)
+  nameWithType.vb: XmlDocumentationGenerator.AppendMethodDocumentation(CSharpOperationModel, Boolean, StringBuilder)
 - uid: Refitter.Core.XmlDocumentationGenerator.AppendMethodDocumentation*
   name: AppendMethodDocumentation
   href: api/Refitter.Core.XmlDocumentationGenerator.html#Refitter_Core_XmlDocumentationGenerator_AppendMethodDocumentation_
