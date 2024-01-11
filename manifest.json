@@ -114,6 +114,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.XmlDocumentationGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.XmlDocumentationGenerator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Refitter.Core.yml",
       "output": {
         ".html": {

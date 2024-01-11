@@ -786,6 +786,19 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.RefitGeneratorSettings.GenerateOperationHeaders
   nameWithType: RefitGeneratorSettings.GenerateOperationHeaders
+- uid: Refitter.Core.RefitGeneratorSettings.GenerateStatusCodeComments
+  name: GenerateStatusCodeComments
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_GenerateStatusCodeComments
+  commentId: P:Refitter.Core.RefitGeneratorSettings.GenerateStatusCodeComments
+  fullName: Refitter.Core.RefitGeneratorSettings.GenerateStatusCodeComments
+  nameWithType: RefitGeneratorSettings.GenerateStatusCodeComments
+- uid: Refitter.Core.RefitGeneratorSettings.GenerateStatusCodeComments*
+  name: GenerateStatusCodeComments
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_GenerateStatusCodeComments_
+  commentId: Overload:Refitter.Core.RefitGeneratorSettings.GenerateStatusCodeComments
+  isSpec: "True"
+  fullName: Refitter.Core.RefitGeneratorSettings.GenerateStatusCodeComments
+  nameWithType: RefitGeneratorSettings.GenerateStatusCodeComments
 - uid: Refitter.Core.RefitGeneratorSettings.GenerateXmlDocCodeComments
   name: GenerateXmlDocCodeComments
   href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_GenerateXmlDocCodeComments
@@ -1114,3 +1127,35 @@ references:
   commentId: F:Refitter.Core.TypeAccessibility.Public
   fullName: Refitter.Core.TypeAccessibility.Public
   nameWithType: TypeAccessibility.Public
+- uid: Refitter.Core.XmlDocumentationGenerator
+  name: XmlDocumentationGenerator
+  href: api/Refitter.Core.XmlDocumentationGenerator.html
+  commentId: T:Refitter.Core.XmlDocumentationGenerator
+  fullName: Refitter.Core.XmlDocumentationGenerator
+  nameWithType: XmlDocumentationGenerator
+- uid: Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentation(NSwag.OpenApiOperation,System.Text.StringBuilder)
+  name: AppendInterfaceDocumentation(OpenApiOperation, StringBuilder)
+  href: api/Refitter.Core.XmlDocumentationGenerator.html#Refitter_Core_XmlDocumentationGenerator_AppendInterfaceDocumentation_NSwag_OpenApiOperation_System_Text_StringBuilder_
+  commentId: M:Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentation(NSwag.OpenApiOperation,System.Text.StringBuilder)
+  fullName: Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentation(NSwag.OpenApiOperation, System.Text.StringBuilder)
+  nameWithType: XmlDocumentationGenerator.AppendInterfaceDocumentation(OpenApiOperation, StringBuilder)
+- uid: Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentation*
+  name: AppendInterfaceDocumentation
+  href: api/Refitter.Core.XmlDocumentationGenerator.html#Refitter_Core_XmlDocumentationGenerator_AppendInterfaceDocumentation_
+  commentId: Overload:Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentation
+  isSpec: "True"
+  fullName: Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentation
+  nameWithType: XmlDocumentationGenerator.AppendInterfaceDocumentation
+- uid: Refitter.Core.XmlDocumentationGenerator.AppendMethodDocumentation(NSwag.CodeGeneration.CSharp.Models.CSharpOperationModel,System.Text.StringBuilder)
+  name: AppendMethodDocumentation(CSharpOperationModel, StringBuilder)
+  href: api/Refitter.Core.XmlDocumentationGenerator.html#Refitter_Core_XmlDocumentationGenerator_AppendMethodDocumentation_NSwag_CodeGeneration_CSharp_Models_CSharpOperationModel_System_Text_StringBuilder_
+  commentId: M:Refitter.Core.XmlDocumentationGenerator.AppendMethodDocumentation(NSwag.CodeGeneration.CSharp.Models.CSharpOperationModel,System.Text.StringBuilder)
+  fullName: Refitter.Core.XmlDocumentationGenerator.AppendMethodDocumentation(NSwag.CodeGeneration.CSharp.Models.CSharpOperationModel, System.Text.StringBuilder)
+  nameWithType: XmlDocumentationGenerator.AppendMethodDocumentation(CSharpOperationModel, StringBuilder)
+- uid: Refitter.Core.XmlDocumentationGenerator.AppendMethodDocumentation*
+  name: AppendMethodDocumentation
+  href: api/Refitter.Core.XmlDocumentationGenerator.html#Refitter_Core_XmlDocumentationGenerator_AppendMethodDocumentation_
+  commentId: Overload:Refitter.Core.XmlDocumentationGenerator.AppendMethodDocumentation
+  isSpec: "True"
+  fullName: Refitter.Core.XmlDocumentationGenerator.AppendMethodDocumentation
+  nameWithType: XmlDocumentationGenerator.AppendMethodDocumentation
