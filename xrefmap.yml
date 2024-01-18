@@ -422,6 +422,19 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.DependencyInjectionSettings.BaseUrl
   nameWithType: DependencyInjectionSettings.BaseUrl
+- uid: Refitter.Core.DependencyInjectionSettings.ExtensionMethodName
+  name: ExtensionMethodName
+  href: api/Refitter.Core.DependencyInjectionSettings.html#Refitter_Core_DependencyInjectionSettings_ExtensionMethodName
+  commentId: P:Refitter.Core.DependencyInjectionSettings.ExtensionMethodName
+  fullName: Refitter.Core.DependencyInjectionSettings.ExtensionMethodName
+  nameWithType: DependencyInjectionSettings.ExtensionMethodName
+- uid: Refitter.Core.DependencyInjectionSettings.ExtensionMethodName*
+  name: ExtensionMethodName
+  href: api/Refitter.Core.DependencyInjectionSettings.html#Refitter_Core_DependencyInjectionSettings_ExtensionMethodName_
+  commentId: Overload:Refitter.Core.DependencyInjectionSettings.ExtensionMethodName
+  isSpec: "True"
+  fullName: Refitter.Core.DependencyInjectionSettings.ExtensionMethodName
+  nameWithType: DependencyInjectionSettings.ExtensionMethodName
 - uid: Refitter.Core.DependencyInjectionSettings.FirstBackoffRetryInSeconds
   name: FirstBackoffRetryInSeconds
   href: api/Refitter.Core.DependencyInjectionSettings.html#Refitter_Core_DependencyInjectionSettings_FirstBackoffRetryInSeconds
