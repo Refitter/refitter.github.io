@@ -1007,6 +1007,19 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.RefitGeneratorSettings.ReturnIApiResponse
   nameWithType: RefitGeneratorSettings.ReturnIApiResponse
+- uid: Refitter.Core.RefitGeneratorSettings.ReturnIObservable
+  name: ReturnIObservable
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_ReturnIObservable
+  commentId: P:Refitter.Core.RefitGeneratorSettings.ReturnIObservable
+  fullName: Refitter.Core.RefitGeneratorSettings.ReturnIObservable
+  nameWithType: RefitGeneratorSettings.ReturnIObservable
+- uid: Refitter.Core.RefitGeneratorSettings.ReturnIObservable*
+  name: ReturnIObservable
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_ReturnIObservable_
+  commentId: Overload:Refitter.Core.RefitGeneratorSettings.ReturnIObservable
+  isSpec: "True"
+  fullName: Refitter.Core.RefitGeneratorSettings.ReturnIObservable
+  nameWithType: RefitGeneratorSettings.ReturnIObservable
 - uid: Refitter.Core.RefitGeneratorSettings.TrimUnusedSchema
   name: TrimUnusedSchema
   href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_TrimUnusedSchema
