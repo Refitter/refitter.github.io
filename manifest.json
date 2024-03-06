@@ -219,6 +219,16 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "articles/xml-code-docs.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/xml-code-docs.html"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Resource",
       "source_relative_path": "images/logo.png",
       "output": {
