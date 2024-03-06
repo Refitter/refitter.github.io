@@ -95,24 +95,40 @@
 </code></pre>
 <p><strong>Output</strong></p>
 <pre><code class="lang-cs">using Refit;
-using System.Threading.Tasks;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
+using System.Threading.Tasks;
 
 namespace Your.Namespace.Of.Choice.GeneratedCode
 {
-    [System.CodeDom.Compiler.GeneratedCode(&quot;Refitter&quot;, &quot;0.9.7.0&quot;)]
+    [System.CodeDom.Compiler.GeneratedCode(&quot;Refitter&quot;, &quot;1.0.0.0&quot;)]
     public partial interface ISwaggerPetstore
     {
         /// &lt;summary&gt;Update an existing pet&lt;/summary&gt;
         /// &lt;remarks&gt;Update an existing pet by Id&lt;/remarks&gt;
         /// &lt;param name=&quot;body&quot;&gt;Update an existent pet in the store&lt;/param&gt;
         /// &lt;returns&gt;Successful operation&lt;/returns&gt;
-        /// &lt;throws cref=&quot;ApiException&quot;&gt;
+        /// &lt;exception cref=&quot;ApiException&quot;&gt;
         /// Thrown when the request returns a non-success status code:
-        /// 400: Invalid ID supplied
-        /// 404: Pet not found
-        /// 405: Validation exception
-        /// &lt;/throws&gt;
+        /// &lt;list type=&quot;table&quot;&gt;
+        /// &lt;listheader&gt;
+        /// &lt;term&gt;Status&lt;/term&gt;
+        /// &lt;description&gt;Description&lt;/description&gt;
+        /// &lt;/listheader&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;400&lt;/term&gt;
+        /// &lt;description&gt;Invalid ID supplied&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;404&lt;/term&gt;
+        /// &lt;description&gt;Pet not found&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;405&lt;/term&gt;
+        /// &lt;description&gt;Validation exception&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;/list&gt;
+        /// &lt;/exception&gt;
         [Headers(&quot;Accept: application/xml, application/json&quot;)]
         [Put(&quot;/pet&quot;)]
         Task&lt;Pet&gt; UpdatePet([Body] Pet body);
@@ -121,10 +137,19 @@ namespace Your.Namespace.Of.Choice.GeneratedCode
         /// &lt;remarks&gt;Add a new pet to the store&lt;/remarks&gt;
         /// &lt;param name=&quot;body&quot;&gt;Create a new pet in the store&lt;/param&gt;
         /// &lt;returns&gt;Successful operation&lt;/returns&gt;
-        /// &lt;throws cref=&quot;ApiException&quot;&gt;
+        /// &lt;exception cref=&quot;ApiException&quot;&gt;
         /// Thrown when the request returns a non-success status code:
-        /// 405: Invalid input
-        /// &lt;/throws&gt;
+        /// &lt;list type=&quot;table&quot;&gt;
+        /// &lt;listheader&gt;
+        /// &lt;term&gt;Status&lt;/term&gt;
+        /// &lt;description&gt;Description&lt;/description&gt;
+        /// &lt;/listheader&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;405&lt;/term&gt;
+        /// &lt;description&gt;Invalid input&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;/list&gt;
+        /// &lt;/exception&gt;
         [Headers(&quot;Accept: application/xml, application/json&quot;)]
         [Post(&quot;/pet&quot;)]
         Task&lt;Pet&gt; AddPet([Body] Pet body);
@@ -133,35 +158,65 @@ namespace Your.Namespace.Of.Choice.GeneratedCode
         /// &lt;remarks&gt;Multiple status values can be provided with comma separated strings&lt;/remarks&gt;
         /// &lt;param name=&quot;status&quot;&gt;Status values that need to be considered for filter&lt;/param&gt;
         /// &lt;returns&gt;successful operation&lt;/returns&gt;
-        /// &lt;throws cref=&quot;ApiException&quot;&gt;
+        /// &lt;exception cref=&quot;ApiException&quot;&gt;
         /// Thrown when the request returns a non-success status code:
-        /// 400: Invalid status value
-        /// &lt;/throws&gt;
+        /// &lt;list type=&quot;table&quot;&gt;
+        /// &lt;listheader&gt;
+        /// &lt;term&gt;Status&lt;/term&gt;
+        /// &lt;description&gt;Description&lt;/description&gt;
+        /// &lt;/listheader&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;400&lt;/term&gt;
+        /// &lt;description&gt;Invalid status value&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;/list&gt;
+        /// &lt;/exception&gt;
         [Headers(&quot;Accept: application/json&quot;)]
         [Get(&quot;/pet/findByStatus&quot;)]
-        Task&lt;IList&lt;Pet&gt;&gt; FindPetsByStatus([Query] Status? status);
+        Task&lt;ICollection&lt;Pet&gt;&gt; FindPetsByStatus([Query] Status? status);
 
         /// &lt;summary&gt;Finds Pets by tags&lt;/summary&gt;
         /// &lt;remarks&gt;Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.&lt;/remarks&gt;
         /// &lt;param name=&quot;tags&quot;&gt;Tags to filter by&lt;/param&gt;
         /// &lt;returns&gt;successful operation&lt;/returns&gt;
-        /// &lt;throws cref=&quot;ApiException&quot;&gt;
+        /// &lt;exception cref=&quot;ApiException&quot;&gt;
         /// Thrown when the request returns a non-success status code:
-        /// 400: Invalid tag value
-        /// &lt;/throws&gt;
+        /// &lt;list type=&quot;table&quot;&gt;
+        /// &lt;listheader&gt;
+        /// &lt;term&gt;Status&lt;/term&gt;
+        /// &lt;description&gt;Description&lt;/description&gt;
+        /// &lt;/listheader&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;400&lt;/term&gt;
+        /// &lt;description&gt;Invalid tag value&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;/list&gt;
+        /// &lt;/exception&gt;
         [Headers(&quot;Accept: application/json&quot;)]
         [Get(&quot;/pet/findByTags&quot;)]
-        Task&lt;IList&lt;Pet&gt;&gt; FindPetsByTags([Query(CollectionFormat.Multi)] IEnumerable&lt;string&gt; tags);
+        Task&lt;ICollection&lt;Pet&gt;&gt; FindPetsByTags([Query(CollectionFormat.Multi)] IEnumerable&lt;string&gt; tags);
 
         /// &lt;summary&gt;Find pet by ID&lt;/summary&gt;
         /// &lt;remarks&gt;Returns a single pet&lt;/remarks&gt;
         /// &lt;param name=&quot;petId&quot;&gt;ID of pet to return&lt;/param&gt;
         /// &lt;returns&gt;successful operation&lt;/returns&gt;
-        /// &lt;throws cref=&quot;ApiException&quot;&gt;
+        /// &lt;exception cref=&quot;ApiException&quot;&gt;
         /// Thrown when the request returns a non-success status code:
-        /// 400: Invalid ID supplied
-        /// 404: Pet not found
-        /// &lt;/throws&gt;
+        /// &lt;list type=&quot;table&quot;&gt;
+        /// &lt;listheader&gt;
+        /// &lt;term&gt;Status&lt;/term&gt;
+        /// &lt;description&gt;Description&lt;/description&gt;
+        /// &lt;/listheader&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;400&lt;/term&gt;
+        /// &lt;description&gt;Invalid ID supplied&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;404&lt;/term&gt;
+        /// &lt;description&gt;Pet not found&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;/list&gt;
+        /// &lt;/exception&gt;
         [Headers(&quot;Accept: application/xml, application/json&quot;)]
         [Get(&quot;/pet/{petId}&quot;)]
         Task&lt;Pet&gt; GetPetById(long petId);
@@ -171,36 +226,65 @@ namespace Your.Namespace.Of.Choice.GeneratedCode
         /// &lt;param name=&quot;name&quot;&gt;Name of pet that needs to be updated&lt;/param&gt;
         /// &lt;param name=&quot;status&quot;&gt;Status of pet that needs to be updated&lt;/param&gt;
         /// &lt;returns&gt;A &lt;see cref=&quot;Task&quot;/&gt; that completes when the request is finished.&lt;/returns&gt;
-        /// &lt;throws cref=&quot;ApiException&quot;&gt;
+        /// &lt;exception cref=&quot;ApiException&quot;&gt;
         /// Thrown when the request returns a non-success status code:
-        /// 405: Invalid input
-        /// &lt;/throws&gt;
+        /// &lt;list type=&quot;table&quot;&gt;
+        /// &lt;listheader&gt;
+        /// &lt;term&gt;Status&lt;/term&gt;
+        /// &lt;description&gt;Description&lt;/description&gt;
+        /// &lt;/listheader&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;405&lt;/term&gt;
+        /// &lt;description&gt;Invalid input&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;/list&gt;
+        /// &lt;/exception&gt;
         [Post(&quot;/pet/{petId}&quot;)]
         Task UpdatePetWithForm(long petId, [Query] string name, [Query] string status);
 
         /// &lt;summary&gt;Deletes a pet&lt;/summary&gt;
         /// &lt;param name=&quot;petId&quot;&gt;Pet id to delete&lt;/param&gt;
         /// &lt;returns&gt;A &lt;see cref=&quot;Task&quot;/&gt; that completes when the request is finished.&lt;/returns&gt;
-        /// &lt;throws cref=&quot;ApiException&quot;&gt;
+        /// &lt;exception cref=&quot;ApiException&quot;&gt;
         /// Thrown when the request returns a non-success status code:
-        /// 400: Invalid pet value
-        /// &lt;/throws&gt;
+        /// &lt;list type=&quot;table&quot;&gt;
+        /// &lt;listheader&gt;
+        /// &lt;term&gt;Status&lt;/term&gt;
+        /// &lt;description&gt;Description&lt;/description&gt;
+        /// &lt;/listheader&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;400&lt;/term&gt;
+        /// &lt;description&gt;Invalid pet value&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;/list&gt;
+        /// &lt;/exception&gt;
         [Delete(&quot;/pet/{petId}&quot;)]
         Task DeletePet(long petId, [Header(&quot;api_key&quot;)] string api_key);
 
         /// &lt;summary&gt;uploads an image&lt;/summary&gt;
         /// &lt;param name=&quot;petId&quot;&gt;ID of pet to update&lt;/param&gt;
         /// &lt;param name=&quot;additionalMetadata&quot;&gt;Additional Metadata&lt;/param&gt;
-        /// &lt;returns&gt;successful operation&lt;/returns&gt;
-        /// &lt;throws cref=&quot;ApiException&quot;&gt;Thrown when the request returns a non-success status code.&lt;/throws&gt;
+        /// &lt;returns&gt;
+        /// A &lt;see cref=&quot;Task&quot;/&gt; representing the &lt;see cref=&quot;IApiResponse&quot;/&gt; instance containing the result:
+        /// &lt;list type=&quot;table&quot;&gt;
+        /// &lt;listheader&gt;
+        /// &lt;term&gt;Status&lt;/term&gt;
+        /// &lt;description&gt;Description&lt;/description&gt;
+        /// &lt;/listheader&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;200&lt;/term&gt;
+        /// &lt;description&gt;successful operation&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;/list&gt;
+        /// &lt;/returns&gt;
         [Headers(&quot;Accept: application/json&quot;)]
         [Post(&quot;/pet/{petId}/uploadImage&quot;)]
-        Task&lt;ApiResponse&gt; UploadFile(long petId, [Query] string additionalMetadata, StreamPart body);
+        Task&lt;ApiResponse&gt; UploadFile(long petId, [Query] string additionalMetadata,  StreamPart body);
 
         /// &lt;summary&gt;Returns pet inventories by status&lt;/summary&gt;
         /// &lt;remarks&gt;Returns a map of status codes to quantities&lt;/remarks&gt;
         /// &lt;returns&gt;successful operation&lt;/returns&gt;
-        /// &lt;throws cref=&quot;ApiException&quot;&gt;Thrown when the request returns a non-success status code.&lt;/throws&gt;
+        /// &lt;exception cref=&quot;ApiException&quot;&gt;Thrown when the request returns a non-success status code.&lt;/exception&gt;
         [Headers(&quot;Accept: application/json&quot;)]
         [Get(&quot;/store/inventory&quot;)]
         Task&lt;IDictionary&lt;string, int&gt;&gt; GetInventory();
@@ -208,10 +292,19 @@ namespace Your.Namespace.Of.Choice.GeneratedCode
         /// &lt;summary&gt;Place an order for a pet&lt;/summary&gt;
         /// &lt;remarks&gt;Place a new order in the store&lt;/remarks&gt;
         /// &lt;returns&gt;successful operation&lt;/returns&gt;
-        /// &lt;throws cref=&quot;ApiException&quot;&gt;
+        /// &lt;exception cref=&quot;ApiException&quot;&gt;
         /// Thrown when the request returns a non-success status code:
-        /// 405: Invalid input
-        /// &lt;/throws&gt;
+        /// &lt;list type=&quot;table&quot;&gt;
+        /// &lt;listheader&gt;
+        /// &lt;term&gt;Status&lt;/term&gt;
+        /// &lt;description&gt;Description&lt;/description&gt;
+        /// &lt;/listheader&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;405&lt;/term&gt;
+        /// &lt;description&gt;Invalid input&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;/list&gt;
+        /// &lt;/exception&gt;
         [Headers(&quot;Accept: application/json&quot;)]
         [Post(&quot;/store/order&quot;)]
         Task&lt;Order&gt; PlaceOrder([Body] Order body);
@@ -220,11 +313,23 @@ namespace Your.Namespace.Of.Choice.GeneratedCode
         /// &lt;remarks&gt;For valid response try integer IDs with value &lt;= 5 or &gt; 10. Other values will generated exceptions&lt;/remarks&gt;
         /// &lt;param name=&quot;orderId&quot;&gt;ID of order that needs to be fetched&lt;/param&gt;
         /// &lt;returns&gt;successful operation&lt;/returns&gt;
-        /// &lt;throws cref=&quot;ApiException&quot;&gt;
+        /// &lt;exception cref=&quot;ApiException&quot;&gt;
         /// Thrown when the request returns a non-success status code:
-        /// 400: Invalid ID supplied
-        /// 404: Order not found
-        /// &lt;/throws&gt;
+        /// &lt;list type=&quot;table&quot;&gt;
+        /// &lt;listheader&gt;
+        /// &lt;term&gt;Status&lt;/term&gt;
+        /// &lt;description&gt;Description&lt;/description&gt;
+        /// &lt;/listheader&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;400&lt;/term&gt;
+        /// &lt;description&gt;Invalid ID supplied&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;404&lt;/term&gt;
+        /// &lt;description&gt;Order not found&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;/list&gt;
+        /// &lt;/exception&gt;
         [Headers(&quot;Accept: application/json&quot;)]
         [Get(&quot;/store/order/{orderId}&quot;)]
         Task&lt;Order&gt; GetOrderById(long orderId);
@@ -233,11 +338,23 @@ namespace Your.Namespace.Of.Choice.GeneratedCode
         /// &lt;remarks&gt;For valid response try integer IDs with value &lt; 1000. Anything above 1000 or nonintegers will generate API errors&lt;/remarks&gt;
         /// &lt;param name=&quot;orderId&quot;&gt;ID of the order that needs to be deleted&lt;/param&gt;
         /// &lt;returns&gt;A &lt;see cref=&quot;Task&quot;/&gt; that completes when the request is finished.&lt;/returns&gt;
-        /// &lt;throws cref=&quot;ApiException&quot;&gt;
+        /// &lt;exception cref=&quot;ApiException&quot;&gt;
         /// Thrown when the request returns a non-success status code:
-        /// 400: Invalid ID supplied
-        /// 404: Order not found
-        /// &lt;/throws&gt;
+        /// &lt;list type=&quot;table&quot;&gt;
+        /// &lt;listheader&gt;
+        /// &lt;term&gt;Status&lt;/term&gt;
+        /// &lt;description&gt;Description&lt;/description&gt;
+        /// &lt;/listheader&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;400&lt;/term&gt;
+        /// &lt;description&gt;Invalid ID supplied&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;404&lt;/term&gt;
+        /// &lt;description&gt;Order not found&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;/list&gt;
+        /// &lt;/exception&gt;
         [Delete(&quot;/store/order/{orderId}&quot;)]
         Task DeleteOrder(long orderId);
 
@@ -245,7 +362,7 @@ namespace Your.Namespace.Of.Choice.GeneratedCode
         /// &lt;remarks&gt;This can only be done by the logged in user.&lt;/remarks&gt;
         /// &lt;param name=&quot;body&quot;&gt;Created user object&lt;/param&gt;
         /// &lt;returns&gt;successful operation&lt;/returns&gt;
-        /// &lt;throws cref=&quot;ApiException&quot;&gt;Thrown when the request returns a non-success status code.&lt;/throws&gt;
+        /// &lt;exception cref=&quot;ApiException&quot;&gt;Thrown when the request returns a non-success status code.&lt;/exception&gt;
         [Headers(&quot;Accept: application/json, application/xml&quot;)]
         [Post(&quot;/user&quot;)]
         Task CreateUser([Body] User body);
@@ -253,7 +370,7 @@ namespace Your.Namespace.Of.Choice.GeneratedCode
         /// &lt;summary&gt;Creates list of users with given input array&lt;/summary&gt;
         /// &lt;remarks&gt;Creates list of users with given input array&lt;/remarks&gt;
         /// &lt;returns&gt;Successful operation&lt;/returns&gt;
-        /// &lt;throws cref=&quot;ApiException&quot;&gt;Thrown when the request returns a non-success status code.&lt;/throws&gt;
+        /// &lt;exception cref=&quot;ApiException&quot;&gt;Thrown when the request returns a non-success status code.&lt;/exception&gt;
         [Headers(&quot;Accept: application/xml, application/json&quot;)]
         [Post(&quot;/user/createWithList&quot;)]
         Task&lt;User&gt; CreateUsersWithListInput([Body] IEnumerable&lt;User&gt; body);
@@ -262,28 +379,49 @@ namespace Your.Namespace.Of.Choice.GeneratedCode
         /// &lt;param name=&quot;username&quot;&gt;The user name for login&lt;/param&gt;
         /// &lt;param name=&quot;password&quot;&gt;The password for login in clear text&lt;/param&gt;
         /// &lt;returns&gt;successful operation&lt;/returns&gt;
-        /// &lt;throws cref=&quot;ApiException&quot;&gt;
+        /// &lt;exception cref=&quot;ApiException&quot;&gt;
         /// Thrown when the request returns a non-success status code:
-        /// 400: Invalid username/password supplied
-        /// &lt;/throws&gt;
+        /// &lt;list type=&quot;table&quot;&gt;
+        /// &lt;listheader&gt;
+        /// &lt;term&gt;Status&lt;/term&gt;
+        /// &lt;description&gt;Description&lt;/description&gt;
+        /// &lt;/listheader&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;400&lt;/term&gt;
+        /// &lt;description&gt;Invalid username/password supplied&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;/list&gt;
+        /// &lt;/exception&gt;
         [Headers(&quot;Accept: application/json&quot;)]
         [Get(&quot;/user/login&quot;)]
         Task&lt;string&gt; LoginUser([Query] string username, [Query] string password);
 
         /// &lt;summary&gt;Logs out current logged in user session&lt;/summary&gt;
         /// &lt;returns&gt;A &lt;see cref=&quot;Task&quot;/&gt; that completes when the request is finished.&lt;/returns&gt;
-        /// &lt;throws cref=&quot;ApiException&quot;&gt;Thrown when the request returns a non-success status code.&lt;/throws&gt;
+        /// &lt;exception cref=&quot;ApiException&quot;&gt;Thrown when the request returns a non-success status code.&lt;/exception&gt;
         [Get(&quot;/user/logout&quot;)]
         Task LogoutUser();
 
         /// &lt;summary&gt;Get user by user name&lt;/summary&gt;
         /// &lt;param name=&quot;username&quot;&gt;The name that needs to be fetched. Use user1 for testing.&lt;/param&gt;
         /// &lt;returns&gt;successful operation&lt;/returns&gt;
-        /// &lt;throws cref=&quot;ApiException&quot;&gt;
+        /// &lt;exception cref=&quot;ApiException&quot;&gt;
         /// Thrown when the request returns a non-success status code:
-        /// 400: Invalid username supplied
-        /// 404: User not found
-        /// &lt;/throws&gt;
+        /// &lt;list type=&quot;table&quot;&gt;
+        /// &lt;listheader&gt;
+        /// &lt;term&gt;Status&lt;/term&gt;
+        /// &lt;description&gt;Description&lt;/description&gt;
+        /// &lt;/listheader&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;400&lt;/term&gt;
+        /// &lt;description&gt;Invalid username supplied&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;404&lt;/term&gt;
+        /// &lt;description&gt;User not found&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;/list&gt;
+        /// &lt;/exception&gt;
         [Headers(&quot;Accept: application/json&quot;)]
         [Get(&quot;/user/{username}&quot;)]
         Task&lt;User&gt; GetUserByName(string username);
@@ -293,7 +431,7 @@ namespace Your.Namespace.Of.Choice.GeneratedCode
         /// &lt;param name=&quot;username&quot;&gt;name that need to be deleted&lt;/param&gt;
         /// &lt;param name=&quot;body&quot;&gt;Update an existent user in the store&lt;/param&gt;
         /// &lt;returns&gt;A &lt;see cref=&quot;Task&quot;/&gt; that completes when the request is finished.&lt;/returns&gt;
-        /// &lt;throws cref=&quot;ApiException&quot;&gt;Thrown when the request returns a non-success status code.&lt;/throws&gt;
+        /// &lt;exception cref=&quot;ApiException&quot;&gt;Thrown when the request returns a non-success status code.&lt;/exception&gt;
         [Put(&quot;/user/{username}&quot;)]
         Task UpdateUser(string username, [Body] User body);
 
@@ -301,11 +439,23 @@ namespace Your.Namespace.Of.Choice.GeneratedCode
         /// &lt;remarks&gt;This can only be done by the logged in user.&lt;/remarks&gt;
         /// &lt;param name=&quot;username&quot;&gt;The name that needs to be deleted&lt;/param&gt;
         /// &lt;returns&gt;A &lt;see cref=&quot;Task&quot;/&gt; that completes when the request is finished.&lt;/returns&gt;
-        /// &lt;throws cref=&quot;ApiException&quot;&gt;
+        /// &lt;exception cref=&quot;ApiException&quot;&gt;
         /// Thrown when the request returns a non-success status code:
-        /// 400: Invalid username supplied
-        /// 404: User not found
-        /// &lt;/throws&gt;
+        /// &lt;list type=&quot;table&quot;&gt;
+        /// &lt;listheader&gt;
+        /// &lt;term&gt;Status&lt;/term&gt;
+        /// &lt;description&gt;Description&lt;/description&gt;
+        /// &lt;/listheader&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;400&lt;/term&gt;
+        /// &lt;description&gt;Invalid username supplied&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;404&lt;/term&gt;
+        /// &lt;description&gt;User not found&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;/list&gt;
+        /// &lt;/exception&gt;
         [Delete(&quot;/user/{username}&quot;)]
         Task DeleteUser(string username);
     }
@@ -324,12 +474,13 @@ namespace Your.Namespace.Of.Choice.GeneratedCode
 </code></pre>
 <p><strong>Output</strong></p>
 <pre><code class="lang-cs">using Refit;
-using System.Threading.Tasks;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
+using System.Threading.Tasks;
 
-namespace Your.Namespace.Of.Choice.GeneratedCode.WithApiResponse
+namespace Your.Namespace.Of.Choice.GeneratedCode
 {
-    [System.CodeDom.Compiler.GeneratedCode(&quot;Refitter&quot;, &quot;0.9.7.0&quot;)]
+    [System.CodeDom.Compiler.GeneratedCode(&quot;Refitter&quot;, &quot;1.0.0.0&quot;)]
     public partial interface ISwaggerPetstore
     {
         /// &lt;summary&gt;Update an existing pet&lt;/summary&gt;
@@ -337,10 +488,28 @@ namespace Your.Namespace.Of.Choice.GeneratedCode.WithApiResponse
         /// &lt;param name=&quot;body&quot;&gt;Update an existent pet in the store&lt;/param&gt;
         /// &lt;returns&gt;
         /// A &lt;see cref=&quot;Task&quot;/&gt; representing the &lt;see cref=&quot;IApiResponse&quot;/&gt; instance containing the result:
-        /// 200: Successful operation
-        /// 400: Invalid ID supplied
-        /// 404: Pet not found
-        /// 405: Validation exception
+        /// &lt;list type=&quot;table&quot;&gt;
+        /// &lt;listheader&gt;
+        /// &lt;term&gt;Status&lt;/term&gt;
+        /// &lt;description&gt;Description&lt;/description&gt;
+        /// &lt;/listheader&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;200&lt;/term&gt;
+        /// &lt;description&gt;Successful operation&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;400&lt;/term&gt;
+        /// &lt;description&gt;Invalid ID supplied&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;404&lt;/term&gt;
+        /// &lt;description&gt;Pet not found&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;405&lt;/term&gt;
+        /// &lt;description&gt;Validation exception&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;/list&gt;
         /// &lt;/returns&gt;
         [Headers(&quot;Accept: application/xml, application/json&quot;)]
         [Put(&quot;/pet&quot;)]
@@ -351,8 +520,20 @@ namespace Your.Namespace.Of.Choice.GeneratedCode.WithApiResponse
         /// &lt;param name=&quot;body&quot;&gt;Create a new pet in the store&lt;/param&gt;
         /// &lt;returns&gt;
         /// A &lt;see cref=&quot;Task&quot;/&gt; representing the &lt;see cref=&quot;IApiResponse&quot;/&gt; instance containing the result:
-        /// 200: Successful operation
-        /// 405: Invalid input
+        /// &lt;list type=&quot;table&quot;&gt;
+        /// &lt;listheader&gt;
+        /// &lt;term&gt;Status&lt;/term&gt;
+        /// &lt;description&gt;Description&lt;/description&gt;
+        /// &lt;/listheader&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;200&lt;/term&gt;
+        /// &lt;description&gt;Successful operation&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;405&lt;/term&gt;
+        /// &lt;description&gt;Invalid input&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;/list&gt;
         /// &lt;/returns&gt;
         [Headers(&quot;Accept: application/xml, application/json&quot;)]
         [Post(&quot;/pet&quot;)]
@@ -363,33 +544,72 @@ namespace Your.Namespace.Of.Choice.GeneratedCode.WithApiResponse
         /// &lt;param name=&quot;status&quot;&gt;Status values that need to be considered for filter&lt;/param&gt;
         /// &lt;returns&gt;
         /// A &lt;see cref=&quot;Task&quot;/&gt; representing the &lt;see cref=&quot;IApiResponse&quot;/&gt; instance containing the result:
-        /// 200: successful operation
-        /// 400: Invalid status value
+        /// &lt;list type=&quot;table&quot;&gt;
+        /// &lt;listheader&gt;
+        /// &lt;term&gt;Status&lt;/term&gt;
+        /// &lt;description&gt;Description&lt;/description&gt;
+        /// &lt;/listheader&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;200&lt;/term&gt;
+        /// &lt;description&gt;successful operation&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;400&lt;/term&gt;
+        /// &lt;description&gt;Invalid status value&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;/list&gt;
         /// &lt;/returns&gt;
         [Headers(&quot;Accept: application/json&quot;)]
         [Get(&quot;/pet/findByStatus&quot;)]
-        Task&lt;IApiResponse&lt;IList&lt;Pet&gt;&gt;&gt; FindPetsByStatus([Query] Status? status);
+        Task&lt;IApiResponse&lt;ICollection&lt;Pet&gt;&gt;&gt; FindPetsByStatus([Query] Status? status);
 
         /// &lt;summary&gt;Finds Pets by tags&lt;/summary&gt;
         /// &lt;remarks&gt;Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.&lt;/remarks&gt;
         /// &lt;param name=&quot;tags&quot;&gt;Tags to filter by&lt;/param&gt;
         /// &lt;returns&gt;
         /// A &lt;see cref=&quot;Task&quot;/&gt; representing the &lt;see cref=&quot;IApiResponse&quot;/&gt; instance containing the result:
-        /// 200: successful operation
-        /// 400: Invalid tag value
+        /// &lt;list type=&quot;table&quot;&gt;
+        /// &lt;listheader&gt;
+        /// &lt;term&gt;Status&lt;/term&gt;
+        /// &lt;description&gt;Description&lt;/description&gt;
+        /// &lt;/listheader&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;200&lt;/term&gt;
+        /// &lt;description&gt;successful operation&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;400&lt;/term&gt;
+        /// &lt;description&gt;Invalid tag value&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;/list&gt;
         /// &lt;/returns&gt;
         [Headers(&quot;Accept: application/json&quot;)]
         [Get(&quot;/pet/findByTags&quot;)]
-        Task&lt;IApiResponse&lt;IList&lt;Pet&gt;&gt;&gt; FindPetsByTags([Query(CollectionFormat.Multi)] IEnumerable&lt;string&gt; tags);
+        Task&lt;IApiResponse&lt;ICollection&lt;Pet&gt;&gt;&gt; FindPetsByTags([Query(CollectionFormat.Multi)] IEnumerable&lt;string&gt; tags);
 
         /// &lt;summary&gt;Find pet by ID&lt;/summary&gt;
         /// &lt;remarks&gt;Returns a single pet&lt;/remarks&gt;
         /// &lt;param name=&quot;petId&quot;&gt;ID of pet to return&lt;/param&gt;
         /// &lt;returns&gt;
         /// A &lt;see cref=&quot;Task&quot;/&gt; representing the &lt;see cref=&quot;IApiResponse&quot;/&gt; instance containing the result:
-        /// 200: successful operation
-        /// 400: Invalid ID supplied
-        /// 404: Pet not found
+        /// &lt;list type=&quot;table&quot;&gt;
+        /// &lt;listheader&gt;
+        /// &lt;term&gt;Status&lt;/term&gt;
+        /// &lt;description&gt;Description&lt;/description&gt;
+        /// &lt;/listheader&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;200&lt;/term&gt;
+        /// &lt;description&gt;successful operation&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;400&lt;/term&gt;
+        /// &lt;description&gt;Invalid ID supplied&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;404&lt;/term&gt;
+        /// &lt;description&gt;Pet not found&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;/list&gt;
         /// &lt;/returns&gt;
         [Headers(&quot;Accept: application/xml, application/json&quot;)]
         [Get(&quot;/pet/{petId}&quot;)]
@@ -401,7 +621,16 @@ namespace Your.Namespace.Of.Choice.GeneratedCode.WithApiResponse
         /// &lt;param name=&quot;status&quot;&gt;Status of pet that needs to be updated&lt;/param&gt;
         /// &lt;returns&gt;
         /// A &lt;see cref=&quot;Task&quot;/&gt; representing the &lt;see cref=&quot;IApiResponse&quot;/&gt; instance containing the result:
-        /// 405: Invalid input
+        /// &lt;list type=&quot;table&quot;&gt;
+        /// &lt;listheader&gt;
+        /// &lt;term&gt;Status&lt;/term&gt;
+        /// &lt;description&gt;Description&lt;/description&gt;
+        /// &lt;/listheader&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;405&lt;/term&gt;
+        /// &lt;description&gt;Invalid input&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;/list&gt;
         /// &lt;/returns&gt;
         [Post(&quot;/pet/{petId}&quot;)]
         Task&lt;IApiResponse&gt; UpdatePetWithForm(long petId, [Query] string name, [Query] string status);
@@ -410,7 +639,16 @@ namespace Your.Namespace.Of.Choice.GeneratedCode.WithApiResponse
         /// &lt;param name=&quot;petId&quot;&gt;Pet id to delete&lt;/param&gt;
         /// &lt;returns&gt;
         /// A &lt;see cref=&quot;Task&quot;/&gt; representing the &lt;see cref=&quot;IApiResponse&quot;/&gt; instance containing the result:
-        /// 400: Invalid pet value
+        /// &lt;list type=&quot;table&quot;&gt;
+        /// &lt;listheader&gt;
+        /// &lt;term&gt;Status&lt;/term&gt;
+        /// &lt;description&gt;Description&lt;/description&gt;
+        /// &lt;/listheader&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;400&lt;/term&gt;
+        /// &lt;description&gt;Invalid pet value&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;/list&gt;
         /// &lt;/returns&gt;
         [Delete(&quot;/pet/{petId}&quot;)]
         Task&lt;IApiResponse&gt; DeletePet(long petId, [Header(&quot;api_key&quot;)] string api_key);
@@ -420,18 +658,25 @@ namespace Your.Namespace.Of.Choice.GeneratedCode.WithApiResponse
         /// &lt;param name=&quot;additionalMetadata&quot;&gt;Additional Metadata&lt;/param&gt;
         /// &lt;returns&gt;
         /// A &lt;see cref=&quot;Task&quot;/&gt; representing the &lt;see cref=&quot;IApiResponse&quot;/&gt; instance containing the result:
-        /// 200: successful operation
+        /// &lt;list type=&quot;table&quot;&gt;
+        /// &lt;listheader&gt;
+        /// &lt;term&gt;Status&lt;/term&gt;
+        /// &lt;description&gt;Description&lt;/description&gt;
+        /// &lt;/listheader&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;200&lt;/term&gt;
+        /// &lt;description&gt;successful operation&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;/list&gt;
         /// &lt;/returns&gt;
         [Headers(&quot;Accept: application/json&quot;)]
         [Post(&quot;/pet/{petId}/uploadImage&quot;)]
-        Task&lt;IApiResponse&lt;ApiResponse&gt;&gt; UploadFile(long petId, [Query] string additionalMetadata, StreamPart body);
+        Task&lt;IApiResponse&lt;ApiResponse&gt;&gt; UploadFile(long petId, [Query] string additionalMetadata,  StreamPart body);
 
         /// &lt;summary&gt;Returns pet inventories by status&lt;/summary&gt;
         /// &lt;remarks&gt;Returns a map of status codes to quantities&lt;/remarks&gt;
-        /// &lt;returns&gt;
-        /// A &lt;see cref=&quot;Task&quot;/&gt; representing the &lt;see cref=&quot;IApiResponse&quot;/&gt; instance containing the result:
-        /// 200: successful operation
-        /// &lt;/returns&gt;
+        /// &lt;returns&gt;successful operation&lt;/returns&gt;
+        /// &lt;exception cref=&quot;ApiException&quot;&gt;Thrown when the request returns a non-success status code.&lt;/exception&gt;
         [Headers(&quot;Accept: application/json&quot;)]
         [Get(&quot;/store/inventory&quot;)]
         Task&lt;IApiResponse&lt;IDictionary&lt;string, int&gt;&gt;&gt; GetInventory();
@@ -440,8 +685,20 @@ namespace Your.Namespace.Of.Choice.GeneratedCode.WithApiResponse
         /// &lt;remarks&gt;Place a new order in the store&lt;/remarks&gt;
         /// &lt;returns&gt;
         /// A &lt;see cref=&quot;Task&quot;/&gt; representing the &lt;see cref=&quot;IApiResponse&quot;/&gt; instance containing the result:
-        /// 200: successful operation
-        /// 405: Invalid input
+        /// &lt;list type=&quot;table&quot;&gt;
+        /// &lt;listheader&gt;
+        /// &lt;term&gt;Status&lt;/term&gt;
+        /// &lt;description&gt;Description&lt;/description&gt;
+        /// &lt;/listheader&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;200&lt;/term&gt;
+        /// &lt;description&gt;successful operation&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;405&lt;/term&gt;
+        /// &lt;description&gt;Invalid input&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;/list&gt;
         /// &lt;/returns&gt;
         [Headers(&quot;Accept: application/json&quot;)]
         [Post(&quot;/store/order&quot;)]
@@ -452,9 +709,24 @@ namespace Your.Namespace.Of.Choice.GeneratedCode.WithApiResponse
         /// &lt;param name=&quot;orderId&quot;&gt;ID of order that needs to be fetched&lt;/param&gt;
         /// &lt;returns&gt;
         /// A &lt;see cref=&quot;Task&quot;/&gt; representing the &lt;see cref=&quot;IApiResponse&quot;/&gt; instance containing the result:
-        /// 200: successful operation
-        /// 400: Invalid ID supplied
-        /// 404: Order not found
+        /// &lt;list type=&quot;table&quot;&gt;
+        /// &lt;listheader&gt;
+        /// &lt;term&gt;Status&lt;/term&gt;
+        /// &lt;description&gt;Description&lt;/description&gt;
+        /// &lt;/listheader&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;200&lt;/term&gt;
+        /// &lt;description&gt;successful operation&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;400&lt;/term&gt;
+        /// &lt;description&gt;Invalid ID supplied&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;404&lt;/term&gt;
+        /// &lt;description&gt;Order not found&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;/list&gt;
         /// &lt;/returns&gt;
         [Headers(&quot;Accept: application/json&quot;)]
         [Get(&quot;/store/order/{orderId}&quot;)]
@@ -465,8 +737,20 @@ namespace Your.Namespace.Of.Choice.GeneratedCode.WithApiResponse
         /// &lt;param name=&quot;orderId&quot;&gt;ID of the order that needs to be deleted&lt;/param&gt;
         /// &lt;returns&gt;
         /// A &lt;see cref=&quot;Task&quot;/&gt; representing the &lt;see cref=&quot;IApiResponse&quot;/&gt; instance containing the result:
-        /// 400: Invalid ID supplied
-        /// 404: Order not found
+        /// &lt;list type=&quot;table&quot;&gt;
+        /// &lt;listheader&gt;
+        /// &lt;term&gt;Status&lt;/term&gt;
+        /// &lt;description&gt;Description&lt;/description&gt;
+        /// &lt;/listheader&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;400&lt;/term&gt;
+        /// &lt;description&gt;Invalid ID supplied&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;404&lt;/term&gt;
+        /// &lt;description&gt;Order not found&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;/list&gt;
         /// &lt;/returns&gt;
         [Delete(&quot;/store/order/{orderId}&quot;)]
         Task&lt;IApiResponse&gt; DeleteOrder(long orderId);
@@ -483,7 +767,16 @@ namespace Your.Namespace.Of.Choice.GeneratedCode.WithApiResponse
         /// &lt;remarks&gt;Creates list of users with given input array&lt;/remarks&gt;
         /// &lt;returns&gt;
         /// A &lt;see cref=&quot;Task&quot;/&gt; representing the &lt;see cref=&quot;IApiResponse&quot;/&gt; instance containing the result:
-        /// 200: Successful operation
+        /// &lt;list type=&quot;table&quot;&gt;
+        /// &lt;listheader&gt;
+        /// &lt;term&gt;Status&lt;/term&gt;
+        /// &lt;description&gt;Description&lt;/description&gt;
+        /// &lt;/listheader&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;200&lt;/term&gt;
+        /// &lt;description&gt;Successful operation&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;/list&gt;
         /// &lt;/returns&gt;
         [Headers(&quot;Accept: application/xml, application/json&quot;)]
         [Post(&quot;/user/createWithList&quot;)]
@@ -494,8 +787,20 @@ namespace Your.Namespace.Of.Choice.GeneratedCode.WithApiResponse
         /// &lt;param name=&quot;password&quot;&gt;The password for login in clear text&lt;/param&gt;
         /// &lt;returns&gt;
         /// A &lt;see cref=&quot;Task&quot;/&gt; representing the &lt;see cref=&quot;IApiResponse&quot;/&gt; instance containing the result:
-        /// 200: successful operation
-        /// 400: Invalid username/password supplied
+        /// &lt;list type=&quot;table&quot;&gt;
+        /// &lt;listheader&gt;
+        /// &lt;term&gt;Status&lt;/term&gt;
+        /// &lt;description&gt;Description&lt;/description&gt;
+        /// &lt;/listheader&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;200&lt;/term&gt;
+        /// &lt;description&gt;successful operation&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;400&lt;/term&gt;
+        /// &lt;description&gt;Invalid username/password supplied&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;/list&gt;
         /// &lt;/returns&gt;
         [Headers(&quot;Accept: application/json&quot;)]
         [Get(&quot;/user/login&quot;)]
@@ -510,9 +815,24 @@ namespace Your.Namespace.Of.Choice.GeneratedCode.WithApiResponse
         /// &lt;param name=&quot;username&quot;&gt;The name that needs to be fetched. Use user1 for testing.&lt;/param&gt;
         /// &lt;returns&gt;
         /// A &lt;see cref=&quot;Task&quot;/&gt; representing the &lt;see cref=&quot;IApiResponse&quot;/&gt; instance containing the result:
-        /// 200: successful operation
-        /// 400: Invalid username supplied
-        /// 404: User not found
+        /// &lt;list type=&quot;table&quot;&gt;
+        /// &lt;listheader&gt;
+        /// &lt;term&gt;Status&lt;/term&gt;
+        /// &lt;description&gt;Description&lt;/description&gt;
+        /// &lt;/listheader&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;200&lt;/term&gt;
+        /// &lt;description&gt;successful operation&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;400&lt;/term&gt;
+        /// &lt;description&gt;Invalid username supplied&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;404&lt;/term&gt;
+        /// &lt;description&gt;User not found&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;/list&gt;
         /// &lt;/returns&gt;
         [Headers(&quot;Accept: application/json&quot;)]
         [Get(&quot;/user/{username}&quot;)]
@@ -531,8 +851,20 @@ namespace Your.Namespace.Of.Choice.GeneratedCode.WithApiResponse
         /// &lt;param name=&quot;username&quot;&gt;The name that needs to be deleted&lt;/param&gt;
         /// &lt;returns&gt;
         /// A &lt;see cref=&quot;Task&quot;/&gt; representing the &lt;see cref=&quot;IApiResponse&quot;/&gt; instance containing the result:
-        /// 400: Invalid username supplied
-        /// 404: User not found
+        /// &lt;list type=&quot;table&quot;&gt;
+        /// &lt;listheader&gt;
+        /// &lt;term&gt;Status&lt;/term&gt;
+        /// &lt;description&gt;Description&lt;/description&gt;
+        /// &lt;/listheader&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;400&lt;/term&gt;
+        /// &lt;description&gt;Invalid username supplied&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;404&lt;/term&gt;
+        /// &lt;description&gt;User not found&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;/list&gt;
         /// &lt;/returns&gt;
         [Delete(&quot;/user/{username}&quot;)]
         Task&lt;IApiResponse&gt; DeleteUser(string username);
@@ -552,95 +884,149 @@ namespace Your.Namespace.Of.Choice.GeneratedCode.WithApiResponse
 </code></pre>
 <p><strong>Output</strong></p>
 <pre><code class="lang-cs">/// &lt;summary&gt;Update an existing pet&lt;/summary&gt;
-[System.CodeDom.Compiler.GeneratedCode(&quot;Refitter&quot;, &quot;0.9.7.0&quot;)]
+[System.CodeDom.Compiler.GeneratedCode(&quot;Refitter&quot;, &quot;1.0.0.0&quot;)]
 public partial interface IUpdatePetEndpoint
 {
     /// &lt;summary&gt;Update an existing pet&lt;/summary&gt;
     /// &lt;remarks&gt;Update an existing pet by Id&lt;/remarks&gt;
     /// &lt;param name=&quot;body&quot;&gt;Update an existent pet in the store&lt;/param&gt;
     /// &lt;returns&gt;Successful operation&lt;/returns&gt;
-    /// &lt;throws cref=&quot;ApiException&quot;&gt;
+    /// &lt;exception cref=&quot;ApiException&quot;&gt;
     /// Thrown when the request returns a non-success status code:
-    /// 400: Invalid ID supplied
-    /// 404: Pet not found
-    /// 405: Validation exception
-    /// &lt;/throws&gt;
+    /// &lt;list type=&quot;table&quot;&gt;
+    /// &lt;listheader&gt;
+    /// &lt;term&gt;Status&lt;/term&gt;
+    /// &lt;description&gt;Description&lt;/description&gt;
+    /// &lt;/listheader&gt;
+    /// &lt;item&gt;
+    /// &lt;term&gt;400&lt;/term&gt;
+    /// &lt;description&gt;Invalid ID supplied&lt;/description&gt;
+    /// &lt;/item&gt;
+    /// &lt;item&gt;
+    /// &lt;term&gt;404&lt;/term&gt;
+    /// &lt;description&gt;Pet not found&lt;/description&gt;
+    /// &lt;/item&gt;
+    /// &lt;item&gt;
+    /// &lt;term&gt;405&lt;/term&gt;
+    /// &lt;description&gt;Validation exception&lt;/description&gt;
+    /// &lt;/item&gt;
+    /// &lt;/list&gt;
+    /// &lt;/exception&gt;
     [Headers(&quot;Accept: application/xml, application/json&quot;)]
     [Put(&quot;/pet&quot;)]
     Task&lt;Pet&gt; Execute([Body] Pet body);
 }
 
 /// &lt;summary&gt;Add a new pet to the store&lt;/summary&gt;
-[System.CodeDom.Compiler.GeneratedCode(&quot;Refitter&quot;, &quot;0.9.7.0&quot;)]
+[System.CodeDom.Compiler.GeneratedCode(&quot;Refitter&quot;, &quot;1.0.0.0&quot;)]
 public partial interface IAddPetEndpoint
 {
     /// &lt;summary&gt;Add a new pet to the store&lt;/summary&gt;
     /// &lt;remarks&gt;Add a new pet to the store&lt;/remarks&gt;
     /// &lt;param name=&quot;body&quot;&gt;Create a new pet in the store&lt;/param&gt;
     /// &lt;returns&gt;Successful operation&lt;/returns&gt;
-    /// &lt;throws cref=&quot;ApiException&quot;&gt;
+    /// &lt;exception cref=&quot;ApiException&quot;&gt;
     /// Thrown when the request returns a non-success status code:
-    /// 405: Invalid input
-    /// &lt;/throws&gt;
+    /// &lt;list type=&quot;table&quot;&gt;
+    /// &lt;listheader&gt;
+    /// &lt;term&gt;Status&lt;/term&gt;
+    /// &lt;description&gt;Description&lt;/description&gt;
+    /// &lt;/listheader&gt;
+    /// &lt;item&gt;
+    /// &lt;term&gt;405&lt;/term&gt;
+    /// &lt;description&gt;Invalid input&lt;/description&gt;
+    /// &lt;/item&gt;
+    /// &lt;/list&gt;
+    /// &lt;/exception&gt;
     [Headers(&quot;Accept: application/xml, application/json&quot;)]
     [Post(&quot;/pet&quot;)]
     Task&lt;Pet&gt; Execute([Body] Pet body);
 }
 
 /// &lt;summary&gt;Finds Pets by status&lt;/summary&gt;
-[System.CodeDom.Compiler.GeneratedCode(&quot;Refitter&quot;, &quot;0.9.7.0&quot;)]
+[System.CodeDom.Compiler.GeneratedCode(&quot;Refitter&quot;, &quot;1.0.0.0&quot;)]
 public partial interface IFindPetsByStatusEndpoint
 {
     /// &lt;summary&gt;Finds Pets by status&lt;/summary&gt;
     /// &lt;remarks&gt;Multiple status values can be provided with comma separated strings&lt;/remarks&gt;
     /// &lt;param name=&quot;status&quot;&gt;Status values that need to be considered for filter&lt;/param&gt;
     /// &lt;returns&gt;successful operation&lt;/returns&gt;
-    /// &lt;throws cref=&quot;ApiException&quot;&gt;
+    /// &lt;exception cref=&quot;ApiException&quot;&gt;
     /// Thrown when the request returns a non-success status code:
-    /// 400: Invalid status value
-    /// &lt;/throws&gt;
+    /// &lt;list type=&quot;table&quot;&gt;
+    /// &lt;listheader&gt;
+    /// &lt;term&gt;Status&lt;/term&gt;
+    /// &lt;description&gt;Description&lt;/description&gt;
+    /// &lt;/listheader&gt;
+    /// &lt;item&gt;
+    /// &lt;term&gt;400&lt;/term&gt;
+    /// &lt;description&gt;Invalid status value&lt;/description&gt;
+    /// &lt;/item&gt;
+    /// &lt;/list&gt;
+    /// &lt;/exception&gt;
     [Headers(&quot;Accept: application/json&quot;)]
     [Get(&quot;/pet/findByStatus&quot;)]
     Task&lt;ICollection&lt;Pet&gt;&gt; Execute([Query] Status? status);
 }
 
 /// &lt;summary&gt;Finds Pets by tags&lt;/summary&gt;
-[System.CodeDom.Compiler.GeneratedCode(&quot;Refitter&quot;, &quot;0.9.7.0&quot;)]
+[System.CodeDom.Compiler.GeneratedCode(&quot;Refitter&quot;, &quot;1.0.0.0&quot;)]
 public partial interface IFindPetsByTagsEndpoint
 {
     /// &lt;summary&gt;Finds Pets by tags&lt;/summary&gt;
     /// &lt;remarks&gt;Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.&lt;/remarks&gt;
     /// &lt;param name=&quot;tags&quot;&gt;Tags to filter by&lt;/param&gt;
     /// &lt;returns&gt;successful operation&lt;/returns&gt;
-    /// &lt;throws cref=&quot;ApiException&quot;&gt;
+    /// &lt;exception cref=&quot;ApiException&quot;&gt;
     /// Thrown when the request returns a non-success status code:
-    /// 400: Invalid tag value
-    /// &lt;/throws&gt;
+    /// &lt;list type=&quot;table&quot;&gt;
+    /// &lt;listheader&gt;
+    /// &lt;term&gt;Status&lt;/term&gt;
+    /// &lt;description&gt;Description&lt;/description&gt;
+    /// &lt;/listheader&gt;
+    /// &lt;item&gt;
+    /// &lt;term&gt;400&lt;/term&gt;
+    /// &lt;description&gt;Invalid tag value&lt;/description&gt;
+    /// &lt;/item&gt;
+    /// &lt;/list&gt;
+    /// &lt;/exception&gt;
     [Headers(&quot;Accept: application/json&quot;)]
     [Get(&quot;/pet/findByTags&quot;)]
     Task&lt;ICollection&lt;Pet&gt;&gt; Execute([Query(CollectionFormat.Multi)] IEnumerable&lt;string&gt; tags);
 }
 
 /// &lt;summary&gt;Find pet by ID&lt;/summary&gt;
-[System.CodeDom.Compiler.GeneratedCode(&quot;Refitter&quot;, &quot;0.9.7.0&quot;)]
+[System.CodeDom.Compiler.GeneratedCode(&quot;Refitter&quot;, &quot;1.0.0.0&quot;)]
 public partial interface IGetPetByIdEndpoint
 {
     /// &lt;summary&gt;Find pet by ID&lt;/summary&gt;
     /// &lt;remarks&gt;Returns a single pet&lt;/remarks&gt;
     /// &lt;param name=&quot;petId&quot;&gt;ID of pet to return&lt;/param&gt;
     /// &lt;returns&gt;successful operation&lt;/returns&gt;
-    /// &lt;throws cref=&quot;ApiException&quot;&gt;
+    /// &lt;exception cref=&quot;ApiException&quot;&gt;
     /// Thrown when the request returns a non-success status code:
-    /// 400: Invalid ID supplied
-    /// 404: Pet not found
-    /// &lt;/throws&gt;
+    /// &lt;list type=&quot;table&quot;&gt;
+    /// &lt;listheader&gt;
+    /// &lt;term&gt;Status&lt;/term&gt;
+    /// &lt;description&gt;Description&lt;/description&gt;
+    /// &lt;/listheader&gt;
+    /// &lt;item&gt;
+    /// &lt;term&gt;400&lt;/term&gt;
+    /// &lt;description&gt;Invalid ID supplied&lt;/description&gt;
+    /// &lt;/item&gt;
+    /// &lt;item&gt;
+    /// &lt;term&gt;404&lt;/term&gt;
+    /// &lt;description&gt;Pet not found&lt;/description&gt;
+    /// &lt;/item&gt;
+    /// &lt;/list&gt;
+    /// &lt;/exception&gt;
     [Headers(&quot;Accept: application/xml, application/json&quot;)]
     [Get(&quot;/pet/{petId}&quot;)]
     Task&lt;Pet&gt; Execute(long petId);
 }
 
 /// &lt;summary&gt;Updates a pet in the store with form data&lt;/summary&gt;
-[System.CodeDom.Compiler.GeneratedCode(&quot;Refitter&quot;, &quot;0.9.7.0&quot;)]
+[System.CodeDom.Compiler.GeneratedCode(&quot;Refitter&quot;, &quot;1.0.0.0&quot;)]
 public partial interface IUpdatePetWithFormEndpoint
 {
     /// &lt;summary&gt;Updates a pet in the store with form data&lt;/summary&gt;
@@ -648,31 +1034,49 @@ public partial interface IUpdatePetWithFormEndpoint
     /// &lt;param name=&quot;name&quot;&gt;Name of pet that needs to be updated&lt;/param&gt;
     /// &lt;param name=&quot;status&quot;&gt;Status of pet that needs to be updated&lt;/param&gt;
     /// &lt;returns&gt;A &lt;see cref=&quot;Task&quot;/&gt; that completes when the request is finished.&lt;/returns&gt;
-    /// &lt;throws cref=&quot;ApiException&quot;&gt;
+    /// &lt;exception cref=&quot;ApiException&quot;&gt;
     /// Thrown when the request returns a non-success status code:
-    /// 405: Invalid input
-    /// &lt;/throws&gt;
+    /// &lt;list type=&quot;table&quot;&gt;
+    /// &lt;listheader&gt;
+    /// &lt;term&gt;Status&lt;/term&gt;
+    /// &lt;description&gt;Description&lt;/description&gt;
+    /// &lt;/listheader&gt;
+    /// &lt;item&gt;
+    /// &lt;term&gt;405&lt;/term&gt;
+    /// &lt;description&gt;Invalid input&lt;/description&gt;
+    /// &lt;/item&gt;
+    /// &lt;/list&gt;
+    /// &lt;/exception&gt;
     [Post(&quot;/pet/{petId}&quot;)]
     Task Execute(long petId, [Query] string name, [Query] string status);
 }
 
 /// &lt;summary&gt;Deletes a pet&lt;/summary&gt;
-[System.CodeDom.Compiler.GeneratedCode(&quot;Refitter&quot;, &quot;0.9.7.0&quot;)]
+[System.CodeDom.Compiler.GeneratedCode(&quot;Refitter&quot;, &quot;1.0.0.0&quot;)]
 public partial interface IDeletePetEndpoint
 {
     /// &lt;summary&gt;Deletes a pet&lt;/summary&gt;
     /// &lt;param name=&quot;petId&quot;&gt;Pet id to delete&lt;/param&gt;
     /// &lt;returns&gt;A &lt;see cref=&quot;Task&quot;/&gt; that completes when the request is finished.&lt;/returns&gt;
-    /// &lt;throws cref=&quot;ApiException&quot;&gt;
+    /// &lt;exception cref=&quot;ApiException&quot;&gt;
     /// Thrown when the request returns a non-success status code:
-    /// 400: Invalid pet value
-    /// &lt;/throws&gt;
+    /// &lt;list type=&quot;table&quot;&gt;
+    /// &lt;listheader&gt;
+    /// &lt;term&gt;Status&lt;/term&gt;
+    /// &lt;description&gt;Description&lt;/description&gt;
+    /// &lt;/listheader&gt;
+    /// &lt;item&gt;
+    /// &lt;term&gt;400&lt;/term&gt;
+    /// &lt;description&gt;Invalid pet value&lt;/description&gt;
+    /// &lt;/item&gt;
+    /// &lt;/list&gt;
+    /// &lt;/exception&gt;
     [Delete(&quot;/pet/{petId}&quot;)]
     Task Execute(long petId, [Header(&quot;api_key&quot;)] string api_key);
 }
 
 /// &lt;summary&gt;uploads an image&lt;/summary&gt;
-[System.CodeDom.Compiler.GeneratedCode(&quot;Refitter&quot;, &quot;0.9.7.0&quot;)]
+[System.CodeDom.Compiler.GeneratedCode(&quot;Refitter&quot;, &quot;1.0.0.0&quot;)]
 public partial interface IUploadFileEndpoint
 {
     /// &lt;summary&gt;uploads an image&lt;/summary&gt;
@@ -680,7 +1084,16 @@ public partial interface IUploadFileEndpoint
     /// &lt;param name=&quot;additionalMetadata&quot;&gt;Additional Metadata&lt;/param&gt;
     /// &lt;returns&gt;
     /// A &lt;see cref=&quot;Task&quot;/&gt; representing the &lt;see cref=&quot;IApiResponse&quot;/&gt; instance containing the result:
-    /// 200: successful operation
+    /// &lt;list type=&quot;table&quot;&gt;
+    /// &lt;listheader&gt;
+    /// &lt;term&gt;Status&lt;/term&gt;
+    /// &lt;description&gt;Description&lt;/description&gt;
+    /// &lt;/listheader&gt;
+    /// &lt;item&gt;
+    /// &lt;term&gt;200&lt;/term&gt;
+    /// &lt;description&gt;successful operation&lt;/description&gt;
+    /// &lt;/item&gt;
+    /// &lt;/list&gt;
     /// &lt;/returns&gt;
     [Headers(&quot;Accept: application/json&quot;)]
     [Post(&quot;/pet/{petId}/uploadImage&quot;)]
@@ -688,143 +1101,197 @@ public partial interface IUploadFileEndpoint
 }
 
 /// &lt;summary&gt;Returns pet inventories by status&lt;/summary&gt;
-[System.CodeDom.Compiler.GeneratedCode(&quot;Refitter&quot;, &quot;0.9.7.0&quot;)]
+[System.CodeDom.Compiler.GeneratedCode(&quot;Refitter&quot;, &quot;1.0.0.0&quot;)]
 public partial interface IGetInventoryEndpoint
 {
     /// &lt;summary&gt;Returns pet inventories by status&lt;/summary&gt;
     /// &lt;remarks&gt;Returns a map of status codes to quantities&lt;/remarks&gt;
     /// &lt;returns&gt;successful operation&lt;/returns&gt;
-    /// &lt;throws cref=&quot;ApiException&quot;&gt;Thrown when the request returns a non-success status code.&lt;/throws&gt;
+    /// &lt;exception cref=&quot;ApiException&quot;&gt;Thrown when the request returns a non-success status code.&lt;/exception&gt;
     [Headers(&quot;Accept: application/json&quot;)]
     [Get(&quot;/store/inventory&quot;)]
     Task&lt;IDictionary&lt;string, int&gt;&gt; Execute();
 }
 
 /// &lt;summary&gt;Place an order for a pet&lt;/summary&gt;
-[System.CodeDom.Compiler.GeneratedCode(&quot;Refitter&quot;, &quot;0.9.7.0&quot;)]
+[System.CodeDom.Compiler.GeneratedCode(&quot;Refitter&quot;, &quot;1.0.0.0&quot;)]
 public partial interface IPlaceOrderEndpoint
 {
     /// &lt;summary&gt;Place an order for a pet&lt;/summary&gt;
     /// &lt;remarks&gt;Place a new order in the store&lt;/remarks&gt;
     /// &lt;returns&gt;successful operation&lt;/returns&gt;
-    /// &lt;throws cref=&quot;ApiException&quot;&gt;
+    /// &lt;exception cref=&quot;ApiException&quot;&gt;
     /// Thrown when the request returns a non-success status code:
-    /// 405: Invalid input
-    /// &lt;/throws&gt;
+    /// &lt;list type=&quot;table&quot;&gt;
+    /// &lt;listheader&gt;
+    /// &lt;term&gt;Status&lt;/term&gt;
+    /// &lt;description&gt;Description&lt;/description&gt;
+    /// &lt;/listheader&gt;
+    /// &lt;item&gt;
+    /// &lt;term&gt;405&lt;/term&gt;
+    /// &lt;description&gt;Invalid input&lt;/description&gt;
+    /// &lt;/item&gt;
+    /// &lt;/list&gt;
+    /// &lt;/exception&gt;
     [Headers(&quot;Accept: application/json&quot;)]
     [Post(&quot;/store/order&quot;)]
     Task&lt;Order&gt; Execute([Body] Order body);
 }
 
 /// &lt;summary&gt;Find purchase order by ID&lt;/summary&gt;
-[System.CodeDom.Compiler.GeneratedCode(&quot;Refitter&quot;, &quot;0.9.7.0&quot;)]
+[System.CodeDom.Compiler.GeneratedCode(&quot;Refitter&quot;, &quot;1.0.0.0&quot;)]
 public partial interface IGetOrderByIdEndpoint
 {
     /// &lt;summary&gt;Find purchase order by ID&lt;/summary&gt;
     /// &lt;remarks&gt;For valid response try integer IDs with value &lt;= 5 or &gt; 10. Other values will generated exceptions&lt;/remarks&gt;
     /// &lt;param name=&quot;orderId&quot;&gt;ID of order that needs to be fetched&lt;/param&gt;
     /// &lt;returns&gt;successful operation&lt;/returns&gt;
-    /// &lt;throws cref=&quot;ApiException&quot;&gt;
+    /// &lt;exception cref=&quot;ApiException&quot;&gt;
     /// Thrown when the request returns a non-success status code:
-    /// 400: Invalid ID supplied
-    /// 404: Order not found
-    /// &lt;/throws&gt;
+    /// &lt;list type=&quot;table&quot;&gt;
+    /// &lt;listheader&gt;
+    /// &lt;term&gt;Status&lt;/term&gt;
+    /// &lt;description&gt;Description&lt;/description&gt;
+    /// &lt;/listheader&gt;
+    /// &lt;item&gt;
+    /// &lt;term&gt;400&lt;/term&gt;
+    /// &lt;description&gt;Invalid ID supplied&lt;/description&gt;
+    /// &lt;/item&gt;
+    /// &lt;item&gt;
+    /// &lt;term&gt;404&lt;/term&gt;
+    /// &lt;description&gt;Order not found&lt;/description&gt;
+    /// &lt;/item&gt;
+    /// &lt;/list&gt;
+    /// &lt;/exception&gt;
     [Headers(&quot;Accept: application/json&quot;)]
     [Get(&quot;/store/order/{orderId}&quot;)]
     Task&lt;Order&gt; Execute(long orderId);
 }
 
 /// &lt;summary&gt;Delete purchase order by ID&lt;/summary&gt;
-[System.CodeDom.Compiler.GeneratedCode(&quot;Refitter&quot;, &quot;0.9.7.0&quot;)]
+[System.CodeDom.Compiler.GeneratedCode(&quot;Refitter&quot;, &quot;1.0.0.0&quot;)]
 public partial interface IDeleteOrderEndpoint
 {
     /// &lt;summary&gt;Delete purchase order by ID&lt;/summary&gt;
     /// &lt;remarks&gt;For valid response try integer IDs with value &lt; 1000. Anything above 1000 or nonintegers will generate API errors&lt;/remarks&gt;
     /// &lt;param name=&quot;orderId&quot;&gt;ID of the order that needs to be deleted&lt;/param&gt;
     /// &lt;returns&gt;A &lt;see cref=&quot;Task&quot;/&gt; that completes when the request is finished.&lt;/returns&gt;
-    /// &lt;throws cref=&quot;ApiException&quot;&gt;
+    /// &lt;exception cref=&quot;ApiException&quot;&gt;
     /// Thrown when the request returns a non-success status code:
-    /// 400: Invalid ID supplied
-    /// 404: Order not found
-    /// &lt;/throws&gt;
+    /// &lt;list type=&quot;table&quot;&gt;
+    /// &lt;listheader&gt;
+    /// &lt;term&gt;Status&lt;/term&gt;
+    /// &lt;description&gt;Description&lt;/description&gt;
+    /// &lt;/listheader&gt;
+    /// &lt;item&gt;
+    /// &lt;term&gt;400&lt;/term&gt;
+    /// &lt;description&gt;Invalid ID supplied&lt;/description&gt;
+    /// &lt;/item&gt;
+    /// &lt;item&gt;
+    /// &lt;term&gt;404&lt;/term&gt;
+    /// &lt;description&gt;Order not found&lt;/description&gt;
+    /// &lt;/item&gt;
+    /// &lt;/list&gt;
+    /// &lt;/exception&gt;
     [Delete(&quot;/store/order/{orderId}&quot;)]
     Task Execute(long orderId);
 }
 
 /// &lt;summary&gt;Create user&lt;/summary&gt;
-[System.CodeDom.Compiler.GeneratedCode(&quot;Refitter&quot;, &quot;0.9.7.0&quot;)]
+[System.CodeDom.Compiler.GeneratedCode(&quot;Refitter&quot;, &quot;1.0.0.0&quot;)]
 public partial interface ICreateUserEndpoint
 {
     /// &lt;summary&gt;Create user&lt;/summary&gt;
     /// &lt;remarks&gt;This can only be done by the logged in user.&lt;/remarks&gt;
     /// &lt;param name=&quot;body&quot;&gt;Created user object&lt;/param&gt;
     /// &lt;returns&gt;successful operation&lt;/returns&gt;
-    /// &lt;throws cref=&quot;ApiException&quot;&gt;Thrown when the request returns a non-success status code.&lt;/throws&gt;
+    /// &lt;exception cref=&quot;ApiException&quot;&gt;Thrown when the request returns a non-success status code.&lt;/exception&gt;
     [Headers(&quot;Accept: application/json, application/xml&quot;)]
     [Post(&quot;/user&quot;)]
     Task Execute([Body] User body);
 }
 
 /// &lt;summary&gt;Creates list of users with given input array&lt;/summary&gt;
-[System.CodeDom.Compiler.GeneratedCode(&quot;Refitter&quot;, &quot;0.9.7.0&quot;)]
+[System.CodeDom.Compiler.GeneratedCode(&quot;Refitter&quot;, &quot;1.0.0.0&quot;)]
 public partial interface ICreateUsersWithListInputEndpoint
 {
     /// &lt;summary&gt;Creates list of users with given input array&lt;/summary&gt;
     /// &lt;remarks&gt;Creates list of users with given input array&lt;/remarks&gt;
     /// &lt;returns&gt;Successful operation&lt;/returns&gt;
-    /// &lt;throws cref=&quot;ApiException&quot;&gt;Thrown when the request returns a non-success status code.&lt;/throws&gt;
+    /// &lt;exception cref=&quot;ApiException&quot;&gt;Thrown when the request returns a non-success status code.&lt;/exception&gt;
     [Headers(&quot;Accept: application/xml, application/json&quot;)]
     [Post(&quot;/user/createWithList&quot;)]
     Task&lt;User&gt; Execute([Body] IEnumerable&lt;User&gt; body);
 }
 
 /// &lt;summary&gt;Logs user into the system&lt;/summary&gt;
-[System.CodeDom.Compiler.GeneratedCode(&quot;Refitter&quot;, &quot;0.9.7.0&quot;)]
+[System.CodeDom.Compiler.GeneratedCode(&quot;Refitter&quot;, &quot;1.0.0.0&quot;)]
 public partial interface ILoginUserEndpoint
 {
     /// &lt;summary&gt;Logs user into the system&lt;/summary&gt;
     /// &lt;param name=&quot;username&quot;&gt;The user name for login&lt;/param&gt;
     /// &lt;param name=&quot;password&quot;&gt;The password for login in clear text&lt;/param&gt;
     /// &lt;returns&gt;successful operation&lt;/returns&gt;
-    /// &lt;throws cref=&quot;ApiException&quot;&gt;
+    /// &lt;exception cref=&quot;ApiException&quot;&gt;
     /// Thrown when the request returns a non-success status code:
-    /// 400: Invalid username/password supplied
-    /// &lt;/throws&gt;
+    /// &lt;list type=&quot;table&quot;&gt;
+    /// &lt;listheader&gt;
+    /// &lt;term&gt;Status&lt;/term&gt;
+    /// &lt;description&gt;Description&lt;/description&gt;
+    /// &lt;/listheader&gt;
+    /// &lt;item&gt;
+    /// &lt;term&gt;400&lt;/term&gt;
+    /// &lt;description&gt;Invalid username/password supplied&lt;/description&gt;
+    /// &lt;/item&gt;
+    /// &lt;/list&gt;
+    /// &lt;/exception&gt;
     [Headers(&quot;Accept: application/json&quot;)]
     [Get(&quot;/user/login&quot;)]
     Task&lt;string&gt; Execute([Query] string username, [Query] string password);
 }
 
 /// &lt;summary&gt;Logs out current logged in user session&lt;/summary&gt;
-[System.CodeDom.Compiler.GeneratedCode(&quot;Refitter&quot;, &quot;0.9.7.0&quot;)]
+[System.CodeDom.Compiler.GeneratedCode(&quot;Refitter&quot;, &quot;1.0.0.0&quot;)]
 public partial interface ILogoutUserEndpoint
 {
     /// &lt;summary&gt;Logs out current logged in user session&lt;/summary&gt;
     /// &lt;returns&gt;A &lt;see cref=&quot;Task&quot;/&gt; that completes when the request is finished.&lt;/returns&gt;
-    /// &lt;throws cref=&quot;ApiException&quot;&gt;Thrown when the request returns a non-success status code.&lt;/throws&gt;
+    /// &lt;exception cref=&quot;ApiException&quot;&gt;Thrown when the request returns a non-success status code.&lt;/exception&gt;
     [Get(&quot;/user/logout&quot;)]
     Task Execute();
 }
 
 /// &lt;summary&gt;Get user by user name&lt;/summary&gt;
-[System.CodeDom.Compiler.GeneratedCode(&quot;Refitter&quot;, &quot;0.9.7.0&quot;)]
+[System.CodeDom.Compiler.GeneratedCode(&quot;Refitter&quot;, &quot;1.0.0.0&quot;)]
 public partial interface IGetUserByNameEndpoint
 {
     /// &lt;summary&gt;Get user by user name&lt;/summary&gt;
     /// &lt;param name=&quot;username&quot;&gt;The name that needs to be fetched. Use user1 for testing.&lt;/param&gt;
     /// &lt;returns&gt;successful operation&lt;/returns&gt;
-    /// &lt;throws cref=&quot;ApiException&quot;&gt;
+    /// &lt;exception cref=&quot;ApiException&quot;&gt;
     /// Thrown when the request returns a non-success status code:
-    /// 400: Invalid username supplied
-    /// 404: User not found
-    /// &lt;/throws&gt;
+    /// &lt;list type=&quot;table&quot;&gt;
+    /// &lt;listheader&gt;
+    /// &lt;term&gt;Status&lt;/term&gt;
+    /// &lt;description&gt;Description&lt;/description&gt;
+    /// &lt;/listheader&gt;
+    /// &lt;item&gt;
+    /// &lt;term&gt;400&lt;/term&gt;
+    /// &lt;description&gt;Invalid username supplied&lt;/description&gt;
+    /// &lt;/item&gt;
+    /// &lt;item&gt;
+    /// &lt;term&gt;404&lt;/term&gt;
+    /// &lt;description&gt;User not found&lt;/description&gt;
+    /// &lt;/item&gt;
+    /// &lt;/list&gt;
+    /// &lt;/exception&gt;
     [Headers(&quot;Accept: application/json&quot;)]
     [Get(&quot;/user/{username}&quot;)]
     Task&lt;User&gt; Execute(string username);
 }
 
 /// &lt;summary&gt;Update user&lt;/summary&gt;
-[System.CodeDom.Compiler.GeneratedCode(&quot;Refitter&quot;, &quot;0.9.7.0&quot;)]
+[System.CodeDom.Compiler.GeneratedCode(&quot;Refitter&quot;, &quot;1.0.0.0&quot;)]
 public partial interface IUpdateUserEndpoint
 {
     /// &lt;summary&gt;Update user&lt;/summary&gt;
@@ -832,28 +1299,46 @@ public partial interface IUpdateUserEndpoint
     /// &lt;param name=&quot;username&quot;&gt;name that need to be deleted&lt;/param&gt;
     /// &lt;param name=&quot;body&quot;&gt;Update an existent user in the store&lt;/param&gt;
     /// &lt;returns&gt;A &lt;see cref=&quot;Task&quot;/&gt; that completes when the request is finished.&lt;/returns&gt;
-    /// &lt;throws cref=&quot;ApiException&quot;&gt;Thrown when the request returns a non-success status code.&lt;/throws&gt;
+    /// &lt;exception cref=&quot;ApiException&quot;&gt;Thrown when the request returns a non-success status code.&lt;/exception&gt;
     [Put(&quot;/user/{username}&quot;)]
     Task Execute(string username, [Body] User body);
 }
 
 /// &lt;summary&gt;Delete user&lt;/summary&gt;
-[System.CodeDom.Compiler.GeneratedCode(&quot;Refitter&quot;, &quot;0.9.7.0&quot;)]
+[System.CodeDom.Compiler.GeneratedCode(&quot;Refitter&quot;, &quot;1.0.0.0&quot;)]
 public partial interface IDeleteUserEndpoint
 {
     /// &lt;summary&gt;Delete user&lt;/summary&gt;
     /// &lt;remarks&gt;This can only be done by the logged in user.&lt;/remarks&gt;
     /// &lt;param name=&quot;username&quot;&gt;The name that needs to be deleted&lt;/param&gt;
     /// &lt;returns&gt;A &lt;see cref=&quot;Task&quot;/&gt; that completes when the request is finished.&lt;/returns&gt;
-    /// &lt;throws cref=&quot;ApiException&quot;&gt;
+    /// &lt;exception cref=&quot;ApiException&quot;&gt;
     /// Thrown when the request returns a non-success status code:
-    /// 400: Invalid username supplied
-    /// 404: User not found
-    /// &lt;/throws&gt;
+    /// &lt;list type=&quot;table&quot;&gt;
+    /// &lt;listheader&gt;
+    /// &lt;term&gt;Status&lt;/term&gt;
+    /// &lt;description&gt;Description&lt;/description&gt;
+    /// &lt;/listheader&gt;
+    /// &lt;item&gt;
+    /// &lt;term&gt;400&lt;/term&gt;
+    /// &lt;description&gt;Invalid username supplied&lt;/description&gt;
+    /// &lt;/item&gt;
+    /// &lt;item&gt;
+    /// &lt;term&gt;404&lt;/term&gt;
+    /// &lt;description&gt;User not found&lt;/description&gt;
+    /// &lt;/item&gt;
+    /// &lt;/list&gt;
+    /// &lt;/exception&gt;
     [Delete(&quot;/user/{username}&quot;)]
     Task Execute(string username);
 }
 </code></pre>
+<h2 id="code-documentation">Code Documentation</h2>
+<p>Refitter uses the descriptions and responses in the OpenAPI specifications to generate XML code documentation</p>
+<h3 id="jetbrains-rider">JetBrains Rider</h3>
+<p><img src="/images/rider-code-docs.png" alt="alt-text"></p>
+<h3 id="visual-studio-2022">Visual Studio 2022</h3>
+<p><img src="/images/vs-code-docs.png" alt="alt-text"></p>
 
 </article>
 
