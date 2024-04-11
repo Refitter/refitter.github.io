@@ -747,6 +747,19 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.RefitGeneratorSettings.DependencyInjectionSettings
   nameWithType: RefitGeneratorSettings.DependencyInjectionSettings
+- uid: Refitter.Core.RefitGeneratorSettings.ExcludeNamespaces
+  name: ExcludeNamespaces
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_ExcludeNamespaces
+  commentId: P:Refitter.Core.RefitGeneratorSettings.ExcludeNamespaces
+  fullName: Refitter.Core.RefitGeneratorSettings.ExcludeNamespaces
+  nameWithType: RefitGeneratorSettings.ExcludeNamespaces
+- uid: Refitter.Core.RefitGeneratorSettings.ExcludeNamespaces*
+  name: ExcludeNamespaces
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_ExcludeNamespaces_
+  commentId: Overload:Refitter.Core.RefitGeneratorSettings.ExcludeNamespaces
+  isSpec: "True"
+  fullName: Refitter.Core.RefitGeneratorSettings.ExcludeNamespaces
+  nameWithType: RefitGeneratorSettings.ExcludeNamespaces
 - uid: Refitter.Core.RefitGeneratorSettings.GenerateContracts
   name: GenerateContracts
   href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_GenerateContracts

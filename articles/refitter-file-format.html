@@ -116,6 +116,10 @@
     &quot;Namespace1&quot;,
     &quot;Namespace2&quot;
   ],
+  &quot;excludeNamespaces&quot;: [ // Optional. Exclude namespaces that match the provided regular expressions
+    &quot;^Namespace[.].*&quot;,
+    &quot;^Namespace$&quot;
+  ],
   &quot;includeTags&quot;: [ // Optional. OpenAPI Tag to include when generating code
     &quot;Pet&quot;,
     &quot;Store&quot;,
@@ -198,6 +202,7 @@
 <li><code>outputFolder</code> - a string describing a relative path to a desired output folder. Default is <code>./Generated</code></li>
 <li><code>outputFilename</code> - Output filename. Default is <code>Output.cs</code> when used from the CLI tool, otherwise its the .refitter filename. So <code>Petstore.refitter</code> becomes <code>Petstore.cs</code>.</li>
 <li><code>additionalNamespaces</code> - A collection of additional namespaces to include in the generated file. A use case for this is when you want to reuse contracts from a different namespace than the generated code. Default is empty</li>
+<li><code>excludeNamespaces</code> - A collection of regular expressions to exclude namespaces from the generated file. A use case for this is when your project has global usings where these namepsaces would be redundant. Default is empty</li>
 <li><code>includeTags</code> - A collection of tags to use a filter for including endpoints that contain this tag.</li>
 <li><code>includePathMatches</code> - A collection of regular expressions used to filter paths.</li>
 <li><code>generateDeprecatedOperations</code> - a boolean indicating whether deprecated operations should be generated or skipped. Default is <code>true</code></li>
@@ -345,6 +350,13 @@
                 &quot;type&quot;: &quot;string&quot;
             },
             &quot;description&quot;: &quot;Additional namespaces to include in the generated code.&quot;
+        },
+        &quot;excludeNamespaces&quot;: {
+          &quot;type&quot;: &quot;array&quot;,
+          &quot;items&quot;: {
+              &quot;type&quot;: &quot;string&quot;
+          },
+          &quot;description&quot;: &quot;Exclude namespaces that match the provided regular expressions.&quot;
         },
         &quot;includeTags&quot;: {
             &quot;type&quot;: &quot;array&quot;,
