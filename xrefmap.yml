@@ -1136,24 +1136,24 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.Serializer.Deserialize
   nameWithType: Serializer.Deserialize
-- uid: Refitter.Core.Serializer.Deserialize``1(System.String)
-  name: Deserialize<T>(string)
-  href: api/Refitter.Core.Serializer.html#Refitter_Core_Serializer_Deserialize__1_System_String_
-  commentId: M:Refitter.Core.Serializer.Deserialize``1(System.String)
-  name.vb: Deserialize(Of T)(String)
-  fullName: Refitter.Core.Serializer.Deserialize<T>(string)
-  fullName.vb: Refitter.Core.Serializer.Deserialize(Of T)(String)
-  nameWithType: Serializer.Deserialize<T>(string)
-  nameWithType.vb: Serializer.Deserialize(Of T)(String)
-- uid: Refitter.Core.Serializer.Serialize(System.Object)
-  name: Serialize(object)
-  href: api/Refitter.Core.Serializer.html#Refitter_Core_Serializer_Serialize_System_Object_
-  commentId: M:Refitter.Core.Serializer.Serialize(System.Object)
-  name.vb: Serialize(Object)
-  fullName: Refitter.Core.Serializer.Serialize(object)
-  fullName.vb: Refitter.Core.Serializer.Serialize(Object)
-  nameWithType: Serializer.Serialize(object)
-  nameWithType.vb: Serializer.Serialize(Object)
+- uid: Refitter.Core.Serializer.Deserialize``1(System.String,System.Text.Json.JsonSerializerOptions)
+  name: Deserialize<T>(string, JsonSerializerOptions?)
+  href: api/Refitter.Core.Serializer.html#Refitter_Core_Serializer_Deserialize__1_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Refitter.Core.Serializer.Deserialize``1(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: Deserialize(Of T)(String, JsonSerializerOptions)
+  fullName: Refitter.Core.Serializer.Deserialize<T>(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Refitter.Core.Serializer.Deserialize(Of T)(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: Serializer.Deserialize<T>(string, JsonSerializerOptions?)
+  nameWithType.vb: Serializer.Deserialize(Of T)(String, JsonSerializerOptions)
+- uid: Refitter.Core.Serializer.Serialize(System.Object,System.Text.Json.JsonSerializerOptions)
+  name: Serialize(object, JsonSerializerOptions?)
+  href: api/Refitter.Core.Serializer.html#Refitter_Core_Serializer_Serialize_System_Object_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Refitter.Core.Serializer.Serialize(System.Object,System.Text.Json.JsonSerializerOptions)
+  name.vb: Serialize(Object, JsonSerializerOptions)
+  fullName: Refitter.Core.Serializer.Serialize(object, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Refitter.Core.Serializer.Serialize(Object, System.Text.Json.JsonSerializerOptions)
+  nameWithType: Serializer.Serialize(object, JsonSerializerOptions?)
+  nameWithType.vb: Serializer.Serialize(Object, JsonSerializerOptions)
 - uid: Refitter.Core.Serializer.Serialize*
   name: Serialize
   href: api/Refitter.Core.Serializer.html#Refitter_Core_Serializer_Serialize_

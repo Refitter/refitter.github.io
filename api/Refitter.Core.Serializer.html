@@ -152,9 +152,9 @@ This serializer is configured to be case-insensitive.</p>
 
   <a id="Refitter_Core_Serializer_Deserialize_" data-uid="Refitter.Core.Serializer.Deserialize*"></a>
 
-  <h3 id="Refitter_Core_Serializer_Deserialize__1_System_String_" data-uid="Refitter.Core.Serializer.Deserialize``1(System.String)">
-  Deserialize&lt;T&gt;(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Serializer.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Refitter_Core_Serializer_Deserialize__1_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Refitter.Core.Serializer.Deserialize``1(System.String,System.Text.Json.JsonSerializerOptions)">
+  Deserialize&lt;T&gt;(string, JsonSerializerOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Serializer.cs/#L27"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes the JSON string to the specified type.</p>
@@ -162,13 +162,16 @@ This serializer is configured to be case-insensitive.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T Deserialize&lt;T&gt;(string json)</code></pre>
+    <pre><code class="lang-csharp hljs">public static T Deserialize&lt;T&gt;(string json, JsonSerializerOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>json</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>The JSON string to deserialize.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions">JsonSerializerOptions</a></dt>
+    <dd><p>Optional custom serialization options</p>
 </dd>
   </dl>
 
@@ -197,9 +200,9 @@ This serializer is configured to be case-insensitive.</p>
 
   <a id="Refitter_Core_Serializer_Serialize_" data-uid="Refitter.Core.Serializer.Serialize*"></a>
 
-  <h3 id="Refitter_Core_Serializer_Serialize_System_Object_" data-uid="Refitter.Core.Serializer.Serialize(System.Object)">
-  Serialize(object)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Serializer.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Refitter_Core_Serializer_Serialize_System_Object_System_Text_Json_JsonSerializerOptions_" data-uid="Refitter.Core.Serializer.Serialize(System.Object,System.Text.Json.JsonSerializerOptions)">
+  Serialize(object, JsonSerializerOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Serializer.cs/#L36"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Serializes the specified object to a JSON string.</p>
@@ -207,13 +210,16 @@ This serializer is configured to be case-insensitive.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string Serialize(object any)</code></pre>
+    <pre><code class="lang-csharp hljs">public static string Serialize(object any, JsonSerializerOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>any</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
     <dd><p>The object to serialize.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions">JsonSerializerOptions</a></dt>
+    <dd><p>Optional custom serialization options</p>
 </dd>
   </dl>
 
