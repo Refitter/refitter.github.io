@@ -85,7 +85,7 @@
 
 
   <h1 id="Refitter_Core_DependencyInjectionSettings" data-uid="Refitter.Core.DependencyInjectionSettings" class="text-break">
-Class DependencyInjectionSettings  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/DependencyInjectionSettings.cs/#L7"><i class="bi bi-code-slash"></i></a>
+Class DependencyInjectionSettings  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/DependencyInjectionSettings.cs/#L9"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -154,7 +154,7 @@ This can be used to configure the HttpClient pipeline with additional handlers</
 
   <h3 id="Refitter_Core_DependencyInjectionSettings_BaseUrl" data-uid="Refitter.Core.DependencyInjectionSettings.BaseUrl">
   BaseUrl
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/DependencyInjectionSettings.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/DependencyInjectionSettings.cs/#L14"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Base Address for the HttpClient</p>
@@ -186,7 +186,7 @@ This can be used to configure the HttpClient pipeline with additional handlers</
 
   <h3 id="Refitter_Core_DependencyInjectionSettings_ExtensionMethodName" data-uid="Refitter.Core.DependencyInjectionSettings.ExtensionMethodName">
   ExtensionMethodName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/DependencyInjectionSettings.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/DependencyInjectionSettings.cs/#L51"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Name of IServiceCollection Extension Method. Default is ConfigureRefitClients</p>
@@ -218,7 +218,7 @@ This can be used to configure the HttpClient pipeline with additional handlers</
 
   <h3 id="Refitter_Core_DependencyInjectionSettings_FirstBackoffRetryInSeconds" data-uid="Refitter.Core.DependencyInjectionSettings.FirstBackoffRetryInSeconds">
   FirstBackoffRetryInSeconds
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/DependencyInjectionSettings.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/DependencyInjectionSettings.cs/#L46"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The median delay to target before the first retry in seconds. Default is 1 second</p>
@@ -250,7 +250,7 @@ This can be used to configure the HttpClient pipeline with additional handlers</
 
   <h3 id="Refitter_Core_DependencyInjectionSettings_HttpMessageHandlers" data-uid="Refitter.Core.DependencyInjectionSettings.HttpMessageHandlers">
   HttpMessageHandlers
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/DependencyInjectionSettings.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/DependencyInjectionSettings.cs/#L20"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>A collection of HttpMessageHandlers to be added to the HttpClient pipeline.
@@ -279,19 +279,19 @@ This can be for telemetry logging, authorization, etc.</p>
 
 
 
-  <a id="Refitter_Core_DependencyInjectionSettings_PollyMaxRetryCount_" data-uid="Refitter.Core.DependencyInjectionSettings.PollyMaxRetryCount*"></a>
+  <a id="Refitter_Core_DependencyInjectionSettings_MaxRetryCount_" data-uid="Refitter.Core.DependencyInjectionSettings.MaxRetryCount*"></a>
 
-  <h3 id="Refitter_Core_DependencyInjectionSettings_PollyMaxRetryCount" data-uid="Refitter.Core.DependencyInjectionSettings.PollyMaxRetryCount">
-  PollyMaxRetryCount
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/DependencyInjectionSettings.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Refitter_Core_DependencyInjectionSettings_MaxRetryCount" data-uid="Refitter.Core.DependencyInjectionSettings.MaxRetryCount">
+  MaxRetryCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/DependencyInjectionSettings.cs/#L41"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Default max retry count for Polly. Default is 6.</p>
+  <div class="markdown level1 summary"><p>Default max retry count for transient error handling. Default is 6.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int PollyMaxRetryCount { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int MaxRetryCount { get; set; }</code></pre>
   </div>
 
 
@@ -311,11 +311,50 @@ This can be for telemetry logging, authorization, etc.</p>
 
 
 
+  <a id="Refitter_Core_DependencyInjectionSettings_TransientErrorHandler_" data-uid="Refitter.Core.DependencyInjectionSettings.TransientErrorHandler*"></a>
+
+  <h3 id="Refitter_Core_DependencyInjectionSettings_TransientErrorHandler" data-uid="Refitter.Core.DependencyInjectionSettings.TransientErrorHandler">
+  TransientErrorHandler
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/DependencyInjectionSettings.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Library to use for transient error handling
+Options:</p>
+<ul>
+<li>None</li>
+<li>Polly - Polly Framework and HTTP Extensions</li>
+<li>HttpResilience - Microsoft HTTP Resilience Library</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(JsonStringEnumConverter))]
+public TransientErrorHandler TransientErrorHandler { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Refitter.Core.TransientErrorHandler.html">TransientErrorHandler</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Refitter_Core_DependencyInjectionSettings_UsePolly_" data-uid="Refitter.Core.DependencyInjectionSettings.UsePolly*"></a>
 
   <h3 id="Refitter_Core_DependencyInjectionSettings_UsePolly" data-uid="Refitter.Core.DependencyInjectionSettings.UsePolly">
   UsePolly
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/DependencyInjectionSettings.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/DependencyInjectionSettings.cs/#L25"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Set this to true to use Polly for transient fault handling.</p>
@@ -323,7 +362,8 @@ This can be for telemetry logging, authorization, etc.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool UsePolly { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use TransientErrorHandler instead&quot;)]
+public bool UsePolly { get; set; }</code></pre>
   </div>
 
 
@@ -347,7 +387,7 @@ This can be for telemetry logging, authorization, etc.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/DependencyInjectionSettings.cs/#L7" class="edit-link">Edit this page</a>
+          <a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/DependencyInjectionSettings.cs/#L9" class="edit-link">Edit this page</a>
         </div>
 
 

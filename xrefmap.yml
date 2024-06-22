@@ -461,19 +461,32 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.DependencyInjectionSettings.HttpMessageHandlers
   nameWithType: DependencyInjectionSettings.HttpMessageHandlers
-- uid: Refitter.Core.DependencyInjectionSettings.PollyMaxRetryCount
-  name: PollyMaxRetryCount
-  href: api/Refitter.Core.DependencyInjectionSettings.html#Refitter_Core_DependencyInjectionSettings_PollyMaxRetryCount
-  commentId: P:Refitter.Core.DependencyInjectionSettings.PollyMaxRetryCount
-  fullName: Refitter.Core.DependencyInjectionSettings.PollyMaxRetryCount
-  nameWithType: DependencyInjectionSettings.PollyMaxRetryCount
-- uid: Refitter.Core.DependencyInjectionSettings.PollyMaxRetryCount*
-  name: PollyMaxRetryCount
-  href: api/Refitter.Core.DependencyInjectionSettings.html#Refitter_Core_DependencyInjectionSettings_PollyMaxRetryCount_
-  commentId: Overload:Refitter.Core.DependencyInjectionSettings.PollyMaxRetryCount
+- uid: Refitter.Core.DependencyInjectionSettings.MaxRetryCount
+  name: MaxRetryCount
+  href: api/Refitter.Core.DependencyInjectionSettings.html#Refitter_Core_DependencyInjectionSettings_MaxRetryCount
+  commentId: P:Refitter.Core.DependencyInjectionSettings.MaxRetryCount
+  fullName: Refitter.Core.DependencyInjectionSettings.MaxRetryCount
+  nameWithType: DependencyInjectionSettings.MaxRetryCount
+- uid: Refitter.Core.DependencyInjectionSettings.MaxRetryCount*
+  name: MaxRetryCount
+  href: api/Refitter.Core.DependencyInjectionSettings.html#Refitter_Core_DependencyInjectionSettings_MaxRetryCount_
+  commentId: Overload:Refitter.Core.DependencyInjectionSettings.MaxRetryCount
   isSpec: "True"
-  fullName: Refitter.Core.DependencyInjectionSettings.PollyMaxRetryCount
-  nameWithType: DependencyInjectionSettings.PollyMaxRetryCount
+  fullName: Refitter.Core.DependencyInjectionSettings.MaxRetryCount
+  nameWithType: DependencyInjectionSettings.MaxRetryCount
+- uid: Refitter.Core.DependencyInjectionSettings.TransientErrorHandler
+  name: TransientErrorHandler
+  href: api/Refitter.Core.DependencyInjectionSettings.html#Refitter_Core_DependencyInjectionSettings_TransientErrorHandler
+  commentId: P:Refitter.Core.DependencyInjectionSettings.TransientErrorHandler
+  fullName: Refitter.Core.DependencyInjectionSettings.TransientErrorHandler
+  nameWithType: DependencyInjectionSettings.TransientErrorHandler
+- uid: Refitter.Core.DependencyInjectionSettings.TransientErrorHandler*
+  name: TransientErrorHandler
+  href: api/Refitter.Core.DependencyInjectionSettings.html#Refitter_Core_DependencyInjectionSettings_TransientErrorHandler_
+  commentId: Overload:Refitter.Core.DependencyInjectionSettings.TransientErrorHandler
+  isSpec: "True"
+  fullName: Refitter.Core.DependencyInjectionSettings.TransientErrorHandler
+  nameWithType: DependencyInjectionSettings.TransientErrorHandler
 - uid: Refitter.Core.DependencyInjectionSettings.UsePolly
   name: UsePolly
   href: api/Refitter.Core.DependencyInjectionSettings.html#Refitter_Core_DependencyInjectionSettings_UsePolly
@@ -1161,6 +1174,30 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.Serializer.Serialize
   nameWithType: Serializer.Serialize
+- uid: Refitter.Core.TransientErrorHandler
+  name: TransientErrorHandler
+  href: api/Refitter.Core.TransientErrorHandler.html
+  commentId: T:Refitter.Core.TransientErrorHandler
+  fullName: Refitter.Core.TransientErrorHandler
+  nameWithType: TransientErrorHandler
+- uid: Refitter.Core.TransientErrorHandler.HttpResilience
+  name: HttpResilience
+  href: api/Refitter.Core.TransientErrorHandler.html#Refitter_Core_TransientErrorHandler_HttpResilience
+  commentId: F:Refitter.Core.TransientErrorHandler.HttpResilience
+  fullName: Refitter.Core.TransientErrorHandler.HttpResilience
+  nameWithType: TransientErrorHandler.HttpResilience
+- uid: Refitter.Core.TransientErrorHandler.None
+  name: None
+  href: api/Refitter.Core.TransientErrorHandler.html#Refitter_Core_TransientErrorHandler_None
+  commentId: F:Refitter.Core.TransientErrorHandler.None
+  fullName: Refitter.Core.TransientErrorHandler.None
+  nameWithType: TransientErrorHandler.None
+- uid: Refitter.Core.TransientErrorHandler.Polly
+  name: Polly
+  href: api/Refitter.Core.TransientErrorHandler.html#Refitter_Core_TransientErrorHandler_Polly
+  commentId: F:Refitter.Core.TransientErrorHandler.Polly
+  fullName: Refitter.Core.TransientErrorHandler.Polly
+  nameWithType: TransientErrorHandler.Polly
 - uid: Refitter.Core.TypeAccessibility
   name: TypeAccessibility
   href: api/Refitter.Core.TypeAccessibility.html

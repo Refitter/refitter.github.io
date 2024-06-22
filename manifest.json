@@ -104,6 +104,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.TransientErrorHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.TransientErrorHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Refitter.Core.TypeAccessibility.yml",
       "output": {
         ".html": {

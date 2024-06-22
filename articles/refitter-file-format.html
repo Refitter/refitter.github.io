@@ -143,7 +143,7 @@
         &quot;TelemetryMessageHandler&quot; 
     ],
     &quot;usePolly&quot;: true, // Optional. Set this to true, to configure Polly with a retry policy that uses a jittered backoff. Default=false
-    &quot;pollyMaxRetryCount&quot;: 3, // Optional. Default=6
+    &quot;maxRetryCount&quot;: 3, // Optional. Default=6
     &quot;firstBackoffRetryInSeconds&quot;: 0.5 // Optional. Default=1.0
   },
   &quot;codeGeneratorSettings&quot;: { // Optional. Default settings are the values set in this example
@@ -217,7 +217,7 @@
 <li><code>baseUrl</code> - Used as the HttpClient base address. Leave this blank to manually set the base URL</li>
 <li><code>httpMessageHandlers</code> - A collection of <code>HttpMessageHandler</code> that is added to the HttpClient pipeline</li>
 <li><code>usePolly</code> - Set this to true to configure the HttpClient to use Polly using a retry policy with a jittered backoff</li>
-<li><code>pollyMaxRetryCount</code> - This is the max retry count used in the Polly retry policy. Default is 6</li>
+<li><code>maxRetryCount</code> - This is the max retry count used in the Polly retry policy. Default is 6</li>
 <li><code>firstBackoffRetryInSeconds</code> - This is the duration of the initial retry backoff. Default is 1 second</li>
 </ul>
 </li>
@@ -421,7 +421,7 @@
                     &quot;type&quot;: &quot;boolean&quot;,
                     &quot;description&quot;: &quot;Indicates whether to use Polly for the dependency injection settings.&quot;
                 },
-                &quot;pollyMaxRetryCount&quot;: {
+                &quot;maxRetryCount&quot;: {
                     &quot;type&quot;: &quot;integer&quot;,
                     &quot;description&quot;: &quot;The maximum retry count for Polly in the dependency injection settings.&quot;
                 },
