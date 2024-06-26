@@ -474,6 +474,19 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.DependencyInjectionSettings.MaxRetryCount
   nameWithType: DependencyInjectionSettings.MaxRetryCount
+- uid: Refitter.Core.DependencyInjectionSettings.PollyMaxRetryCount
+  name: PollyMaxRetryCount
+  href: api/Refitter.Core.DependencyInjectionSettings.html#Refitter_Core_DependencyInjectionSettings_PollyMaxRetryCount
+  commentId: P:Refitter.Core.DependencyInjectionSettings.PollyMaxRetryCount
+  fullName: Refitter.Core.DependencyInjectionSettings.PollyMaxRetryCount
+  nameWithType: DependencyInjectionSettings.PollyMaxRetryCount
+- uid: Refitter.Core.DependencyInjectionSettings.PollyMaxRetryCount*
+  name: PollyMaxRetryCount
+  href: api/Refitter.Core.DependencyInjectionSettings.html#Refitter_Core_DependencyInjectionSettings_PollyMaxRetryCount_
+  commentId: Overload:Refitter.Core.DependencyInjectionSettings.PollyMaxRetryCount
+  isSpec: "True"
+  fullName: Refitter.Core.DependencyInjectionSettings.PollyMaxRetryCount
+  nameWithType: DependencyInjectionSettings.PollyMaxRetryCount
 - uid: Refitter.Core.DependencyInjectionSettings.TransientErrorHandler
   name: TransientErrorHandler
   href: api/Refitter.Core.DependencyInjectionSettings.html#Refitter_Core_DependencyInjectionSettings_TransientErrorHandler
