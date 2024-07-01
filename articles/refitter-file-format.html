@@ -142,7 +142,8 @@
         &quot;AuthorizationMessageHandler&quot;, 
         &quot;TelemetryMessageHandler&quot; 
     ],
-    &quot;usePolly&quot;: true, // Optional. Set this to true, to configure Polly with a retry policy that uses a jittered backoff. Default=false
+    &quot;usePolly&quot;: true, // DEPRECATED - Use &quot;transientErrorHandler&quot;: &quot;None|Polly|HttpResilience&quot; instead
+    &quot;transientErrorHandler&quot;: &quot;HttpResilience&quot;, // Optional. Set this to configure transient error handling with a retry policy that uses a jittered backoff. May be one of None, Polly, HttpResilience
     &quot;maxRetryCount&quot;: 3, // Optional. Default=6
     &quot;firstBackoffRetryInSeconds&quot;: 0.5 // Optional. Default=1.0
   },
@@ -216,7 +217,8 @@
 <ul>
 <li><code>baseUrl</code> - Used as the HttpClient base address. Leave this blank to manually set the base URL</li>
 <li><code>httpMessageHandlers</code> - A collection of <code>HttpMessageHandler</code> that is added to the HttpClient pipeline</li>
-<li><code>usePolly</code> - Set this to true to configure the HttpClient to use Polly using a retry policy with a jittered backoff</li>
+<li><code>usePolly</code> - (DEPRECATED) Set this to true to configure the HttpClient to use Polly using a retry policy with a jittered backoff</li>
+<li><code>transientErrorHandler</code>: Set this to configure transient error handling with a retry policy that uses a jittered backoff. See <a href="https://refitter.github.io/api/Refitter.Core.TransientErrorHandler.html">https://refitter.github.io/api/Refitter.Core.TransientErrorHandler.html</a></li>
 <li><code>maxRetryCount</code> - This is the max retry count used in the Polly retry policy. Default is 6</li>
 <li><code>firstBackoffRetryInSeconds</code> - This is the duration of the initial retry backoff. Default is 1 second</li>
 </ul>
