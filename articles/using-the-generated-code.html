@@ -176,6 +176,118 @@ app.Run();
   &quot;status&quot;: &quot;Sold&quot;
 }
 </code></pre>
+<h2 id="dependency-injection">Dependency Injection</h2>
+<p>Refitter supports generating bootstrapping code that allows the user to conveniently configure all generated Refit interfaces by calling a single extension method to <code>IServiceCollection</code>.</p>
+<p>This is enabled through the <code>.refitter</code> settings file like this:</p>
+<pre><code class="lang-json">{
+  &quot;openApiPath&quot;: &quot;../OpenAPI/v3.0/petstore.json&quot;,
+  &quot;namespace&quot;: &quot;Petstore&quot;,
+  &quot;dependencyInjectionSettings&quot;: {
+    &quot;baseUrl&quot;: &quot;https://petstore3.swagger.io/api/v3&quot;,
+    &quot;httpMessageHandlers&quot;: [ &quot;TelemetryDelegatingHandler&quot; ],
+    &quot;transientErrorHandler&quot;: &quot;Polly&quot;,
+    &quot;maxRetryCount&quot;: 3,
+    &quot;firstBackoffRetryInSeconds&quot;: 0.5
+  }
+}
+</code></pre>
+<p>which will generate an extension method to <code>IServiceCollection</code> called <code>ConfigureRefitClients()</code>. The generated extension method depends on <a href="https://www.nuget.org/packages/Refit.HttpClientFactory"><code>Refit.HttpClientFactory</code></a> library and looks like this:</p>
+<pre><code class="lang-cs">public static IServiceCollection ConfigureRefitClients(
+    this IServiceCollection services, 
+    Action&lt;IHttpClientBuilder&gt;? builder = default, 
+    RefitSettings? settings = default)
+{
+    var clientBuilderISwaggerPetstore = services
+        .AddRefitClient&lt;ISwaggerPetstore&gt;(settings)
+        .ConfigureHttpClient(c =&gt; c.BaseAddress = new Uri(&quot;https://petstore3.swagger.io/api/v3&quot;))
+        .AddHttpMessageHandler&lt;TelemetryDelegatingHandler&gt;();
+
+    clientBuilderISwaggerPetstore
+        .AddPolicyHandler(
+            HttpPolicyExtensions
+                .HandleTransientHttpError()
+                .WaitAndRetryAsync(
+                    Backoff.DecorrelatedJitterBackoffV2(
+                        TimeSpan.FromSeconds(0.5),
+                        3)));
+
+    builder?.Invoke(clientBuilderISwaggerPetstore);
+
+    return services;
+}
+</code></pre>
+<p>This comes in handy especially when generating multiple interfaces, by tag or endpoint. For example, the following <code>.refitter</code> settings file</p>
+<pre><code class="lang-json">{
+  &quot;openApiPath&quot;: &quot;../OpenAPI/v3.0/petstore.json&quot;,
+  &quot;namespace&quot;: &quot;Petstore&quot;,
+  &quot;multipleInterfaces&quot;: &quot;ByTag&quot;,
+  &quot;dependencyInjectionSettings&quot;: {
+    &quot;baseUrl&quot;: &quot;https://petstore3.swagger.io/api/v3&quot;,
+    &quot;httpMessageHandlers&quot;: [ &quot;TelemetryDelegatingHandler&quot; ],
+    &quot;transientErrorHandler&quot;: &quot;Polly&quot;,
+    &quot;maxRetryCount&quot;: 3,
+    &quot;firstBackoffRetryInSeconds&quot;: 0.5
+  }
+}
+</code></pre>
+<p>Will generate a single <code>ConfigureRefitClients()</code> extension methods that may contain dependency injection configuration code for multiple interfaces like this</p>
+<pre><code class="lang-csharp">public static IServiceCollection ConfigureRefitClients(
+    this IServiceCollection services, 
+    Action&lt;IHttpClientBuilder&gt;? builder = default, 
+    RefitSettings? settings = default)
+{
+    var clientBuilderIPetApi = services
+        .AddRefitClient&lt;IPetApi&gt;(settings)
+        .ConfigureHttpClient(c =&gt; c.BaseAddress = new Uri(&quot;https://petstore3.swagger.io/api/v3&quot;))
+        .AddHttpMessageHandler&lt;TelemetryDelegatingHandler&gt;();
+
+    clientBuilderIPetApi
+        .AddPolicyHandler(
+            HttpPolicyExtensions
+                .HandleTransientHttpError()
+                .WaitAndRetryAsync(
+                    Backoff.DecorrelatedJitterBackoffV2(
+                        TimeSpan.FromSeconds(0.5),
+                        3)));
+
+    builder?.Invoke(clientBuilderIPetApi);
+
+    var clientBuilderIStoreApi = services
+        .AddRefitClient&lt;IStoreApi&gt;(settings)
+        .ConfigureHttpClient(c =&gt; c.BaseAddress = new Uri(&quot;https://petstore3.swagger.io/api/v3&quot;))
+        .AddHttpMessageHandler&lt;TelemetryDelegatingHandler&gt;();
+
+    clientBuilderIStoreApi
+        .AddPolicyHandler(
+            HttpPolicyExtensions
+                .HandleTransientHttpError()
+                .WaitAndRetryAsync(
+                    Backoff.DecorrelatedJitterBackoffV2(
+                        TimeSpan.FromSeconds(0.5),
+                        3)));
+
+    builder?.Invoke(clientBuilderIStoreApi);
+
+    var clientBuilderIUserApi = services
+        .AddRefitClient&lt;IUserApi&gt;(settings)
+        .ConfigureHttpClient(c =&gt; c.BaseAddress = new Uri(&quot;https://petstore3.swagger.io/api/v3&quot;))
+        .AddHttpMessageHandler&lt;TelemetryDelegatingHandler&gt;();
+
+    clientBuilderIUserApi
+        .AddPolicyHandler(
+            HttpPolicyExtensions
+                .HandleTransientHttpError()
+                .WaitAndRetryAsync(
+                    Backoff.DecorrelatedJitterBackoffV2(
+                        TimeSpan.FromSeconds(0.5),
+                        3)));
+
+    builder?.Invoke(clientBuilderIUserApi);
+
+    return services;
+}
+</code></pre>
+<p>Personally, they I use Refitter is to generate an interface per endpoint, so when generating code for a large and complex API, I might have several interfaces.</p>
 
 </article>
 
