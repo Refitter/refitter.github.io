@@ -864,6 +864,19 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.RefitGeneratorSettings.GenerateXmlDocCodeComments
   nameWithType: RefitGeneratorSettings.GenerateXmlDocCodeComments
+- uid: Refitter.Core.RefitGeneratorSettings.ImmutableRecords
+  name: ImmutableRecords
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_ImmutableRecords
+  commentId: P:Refitter.Core.RefitGeneratorSettings.ImmutableRecords
+  fullName: Refitter.Core.RefitGeneratorSettings.ImmutableRecords
+  nameWithType: RefitGeneratorSettings.ImmutableRecords
+- uid: Refitter.Core.RefitGeneratorSettings.ImmutableRecords*
+  name: ImmutableRecords
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_ImmutableRecords_
+  commentId: Overload:Refitter.Core.RefitGeneratorSettings.ImmutableRecords
+  isSpec: "True"
+  fullName: Refitter.Core.RefitGeneratorSettings.ImmutableRecords
+  nameWithType: RefitGeneratorSettings.ImmutableRecords
 - uid: Refitter.Core.RefitGeneratorSettings.IncludePathMatches
   name: IncludePathMatches
   href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_IncludePathMatches

@@ -136,6 +136,7 @@
   ],
   &quot;generateDefaultAdditionalProperties&quot;: true, // Optional. default=true
   &quot;operationNameGenerator&quot;: &quot;Default&quot;, // Optional. May be one of Default, MultipleClientsFromOperationId, MultipleClientsFromPathSegments, MultipleClientsFromFirstTagAndOperationId, MultipleClientsFromFirstTagAndOperationName, MultipleClientsFromFirstTagAndPathSegments, SingleClientFromOperationId, SingleClientFromPathSegments
+  &quot;immutableRecords&quot;: false,
   &quot;dependencyInjectionSettings&quot;: { // Optional
     &quot;baseUrl&quot;: &quot;https://petstore3.swagger.io/api/v3&quot;, // Optional. Leave this blank to set the base address manually
     &quot;httpMessageHandlers&quot;: [ // Optional
@@ -213,6 +214,7 @@
 <li><code>keepSchemaPatterns</code>: A collection of regular expressions to force to keep matching schema. This is used together with <code>trimUnusedSchema</code></li>
 <li><code>generateDefaultAdditionalProperties</code>: Set to <code>false</code> to skip default additional properties. Default is <code>true</code></li>
 <li><code>operationNameGenerator</code>: The NSwag <code>IOperationNameGenerator</code> implementation to use. See <a href="https://refitter.github.io/api/Refitter.Core.OperationNameGeneratorTypes.html">https://refitter.github.io/api/Refitter.Core.OperationNameGeneratorTypes.html</a></li>
+<li><code>immutableRecords</code>: Set to <code>true</code> to generate contracts as immutable records instead of classes. Default is <code>false</code></li>
 <li><code>dependencyInjectionSettings</code> - Setting this will generated extension methods to <code>IServiceCollection</code> for configuring Refit clients
 <ul>
 <li><code>baseUrl</code> - Used as the HttpClient base address. Leave this blank to manually set the base URL</li>
@@ -404,6 +406,10 @@
         &quot;operationNameGenerator&quot;: {
             &quot;type&quot;: &quot;string&quot;,
             &quot;description&quot;: &quot;The generator used to generate operation names.&quot;
+        },
+        &quot;immutableRecords&quot;: {
+            &quot;type&quot;: &quot;boolean&quot;,
+            &quot;description&quot;: &quot;Set to true to generate contracts as immutable records instead of classes&quot;
         },
         &quot;dependencyInjectionSettings&quot;: {
             &quot;type&quot;: &quot;object&quot;,
