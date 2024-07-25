@@ -4,6 +4,26 @@
   "files": [
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.ApizrSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.ApizrSettings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.CacheProviderType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.CacheProviderType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Refitter.Core.CodeGeneratorSettings.yml",
       "output": {
         ".html": {
@@ -18,6 +38,16 @@
       "output": {
         ".html": {
           "relative_path": "api/Refitter.Core.DependencyInjectionSettings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.MappingProviderType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.MappingProviderType.html"
         }
       },
       "version": ""
@@ -104,6 +134,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.Settings.ApizrPackages.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.Settings.ApizrPackages.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.Settings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.Settings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Refitter.Core.TransientErrorHandler.yml",
       "output": {
         ".html": {
@@ -156,11 +206,11 @@
       "type": "Toc",
       "source_relative_path": "api/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "api/toc.html"
-        },
         ".json": {
           "relative_path": "api/toc.json"
+        },
+        ".html": {
+          "relative_path": "api/toc.html"
         }
       },
       "version": ""
@@ -209,11 +259,11 @@
       "type": "Toc",
       "source_relative_path": "articles/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "articles/toc.html"
-        },
         ".json": {
           "relative_path": "articles/toc.json"
+        },
+        ".html": {
+          "relative_path": "articles/toc.html"
         }
       },
       "version": ""
@@ -282,11 +332,11 @@
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "toc.html"
-        },
         ".json": {
           "relative_path": "toc.json"
+        },
+        ".html": {
+          "relative_path": "toc.html"
         }
       },
       "version": ""

@@ -7,6 +7,158 @@ references:
   commentId: N:Refitter.Core
   fullName: Refitter.Core
   nameWithType: Refitter.Core
+- uid: Refitter.Core.ApizrSettings
+  name: ApizrSettings
+  href: api/Refitter.Core.ApizrSettings.html
+  commentId: T:Refitter.Core.ApizrSettings
+  fullName: Refitter.Core.ApizrSettings
+  nameWithType: ApizrSettings
+- uid: Refitter.Core.ApizrSettings.WithCacheProvider
+  name: WithCacheProvider
+  href: api/Refitter.Core.ApizrSettings.html#Refitter_Core_ApizrSettings_WithCacheProvider
+  commentId: P:Refitter.Core.ApizrSettings.WithCacheProvider
+  fullName: Refitter.Core.ApizrSettings.WithCacheProvider
+  nameWithType: ApizrSettings.WithCacheProvider
+- uid: Refitter.Core.ApizrSettings.WithCacheProvider*
+  name: WithCacheProvider
+  href: api/Refitter.Core.ApizrSettings.html#Refitter_Core_ApizrSettings_WithCacheProvider_
+  commentId: Overload:Refitter.Core.ApizrSettings.WithCacheProvider
+  isSpec: "True"
+  fullName: Refitter.Core.ApizrSettings.WithCacheProvider
+  nameWithType: ApizrSettings.WithCacheProvider
+- uid: Refitter.Core.ApizrSettings.WithFileTransfer
+  name: WithFileTransfer
+  href: api/Refitter.Core.ApizrSettings.html#Refitter_Core_ApizrSettings_WithFileTransfer
+  commentId: P:Refitter.Core.ApizrSettings.WithFileTransfer
+  fullName: Refitter.Core.ApizrSettings.WithFileTransfer
+  nameWithType: ApizrSettings.WithFileTransfer
+- uid: Refitter.Core.ApizrSettings.WithFileTransfer*
+  name: WithFileTransfer
+  href: api/Refitter.Core.ApizrSettings.html#Refitter_Core_ApizrSettings_WithFileTransfer_
+  commentId: Overload:Refitter.Core.ApizrSettings.WithFileTransfer
+  isSpec: "True"
+  fullName: Refitter.Core.ApizrSettings.WithFileTransfer
+  nameWithType: ApizrSettings.WithFileTransfer
+- uid: Refitter.Core.ApizrSettings.WithMappingProvider
+  name: WithMappingProvider
+  href: api/Refitter.Core.ApizrSettings.html#Refitter_Core_ApizrSettings_WithMappingProvider
+  commentId: P:Refitter.Core.ApizrSettings.WithMappingProvider
+  fullName: Refitter.Core.ApizrSettings.WithMappingProvider
+  nameWithType: ApizrSettings.WithMappingProvider
+- uid: Refitter.Core.ApizrSettings.WithMappingProvider*
+  name: WithMappingProvider
+  href: api/Refitter.Core.ApizrSettings.html#Refitter_Core_ApizrSettings_WithMappingProvider_
+  commentId: Overload:Refitter.Core.ApizrSettings.WithMappingProvider
+  isSpec: "True"
+  fullName: Refitter.Core.ApizrSettings.WithMappingProvider
+  nameWithType: ApizrSettings.WithMappingProvider
+- uid: Refitter.Core.ApizrSettings.WithMediation
+  name: WithMediation
+  href: api/Refitter.Core.ApizrSettings.html#Refitter_Core_ApizrSettings_WithMediation
+  commentId: P:Refitter.Core.ApizrSettings.WithMediation
+  fullName: Refitter.Core.ApizrSettings.WithMediation
+  nameWithType: ApizrSettings.WithMediation
+- uid: Refitter.Core.ApizrSettings.WithMediation*
+  name: WithMediation
+  href: api/Refitter.Core.ApizrSettings.html#Refitter_Core_ApizrSettings_WithMediation_
+  commentId: Overload:Refitter.Core.ApizrSettings.WithMediation
+  isSpec: "True"
+  fullName: Refitter.Core.ApizrSettings.WithMediation
+  nameWithType: ApizrSettings.WithMediation
+- uid: Refitter.Core.ApizrSettings.WithOptionalMediation
+  name: WithOptionalMediation
+  href: api/Refitter.Core.ApizrSettings.html#Refitter_Core_ApizrSettings_WithOptionalMediation
+  commentId: P:Refitter.Core.ApizrSettings.WithOptionalMediation
+  fullName: Refitter.Core.ApizrSettings.WithOptionalMediation
+  nameWithType: ApizrSettings.WithOptionalMediation
+- uid: Refitter.Core.ApizrSettings.WithOptionalMediation*
+  name: WithOptionalMediation
+  href: api/Refitter.Core.ApizrSettings.html#Refitter_Core_ApizrSettings_WithOptionalMediation_
+  commentId: Overload:Refitter.Core.ApizrSettings.WithOptionalMediation
+  isSpec: "True"
+  fullName: Refitter.Core.ApizrSettings.WithOptionalMediation
+  nameWithType: ApizrSettings.WithOptionalMediation
+- uid: Refitter.Core.ApizrSettings.WithPriority
+  name: WithPriority
+  href: api/Refitter.Core.ApizrSettings.html#Refitter_Core_ApizrSettings_WithPriority
+  commentId: P:Refitter.Core.ApizrSettings.WithPriority
+  fullName: Refitter.Core.ApizrSettings.WithPriority
+  nameWithType: ApizrSettings.WithPriority
+- uid: Refitter.Core.ApizrSettings.WithPriority*
+  name: WithPriority
+  href: api/Refitter.Core.ApizrSettings.html#Refitter_Core_ApizrSettings_WithPriority_
+  commentId: Overload:Refitter.Core.ApizrSettings.WithPriority
+  isSpec: "True"
+  fullName: Refitter.Core.ApizrSettings.WithPriority
+  nameWithType: ApizrSettings.WithPriority
+- uid: Refitter.Core.ApizrSettings.WithRegistrationHelper
+  name: WithRegistrationHelper
+  href: api/Refitter.Core.ApizrSettings.html#Refitter_Core_ApizrSettings_WithRegistrationHelper
+  commentId: P:Refitter.Core.ApizrSettings.WithRegistrationHelper
+  fullName: Refitter.Core.ApizrSettings.WithRegistrationHelper
+  nameWithType: ApizrSettings.WithRegistrationHelper
+- uid: Refitter.Core.ApizrSettings.WithRegistrationHelper*
+  name: WithRegistrationHelper
+  href: api/Refitter.Core.ApizrSettings.html#Refitter_Core_ApizrSettings_WithRegistrationHelper_
+  commentId: Overload:Refitter.Core.ApizrSettings.WithRegistrationHelper
+  isSpec: "True"
+  fullName: Refitter.Core.ApizrSettings.WithRegistrationHelper
+  nameWithType: ApizrSettings.WithRegistrationHelper
+- uid: Refitter.Core.ApizrSettings.WithRequestOptions
+  name: WithRequestOptions
+  href: api/Refitter.Core.ApizrSettings.html#Refitter_Core_ApizrSettings_WithRequestOptions
+  commentId: P:Refitter.Core.ApizrSettings.WithRequestOptions
+  fullName: Refitter.Core.ApizrSettings.WithRequestOptions
+  nameWithType: ApizrSettings.WithRequestOptions
+- uid: Refitter.Core.ApizrSettings.WithRequestOptions*
+  name: WithRequestOptions
+  href: api/Refitter.Core.ApizrSettings.html#Refitter_Core_ApizrSettings_WithRequestOptions_
+  commentId: Overload:Refitter.Core.ApizrSettings.WithRequestOptions
+  isSpec: "True"
+  fullName: Refitter.Core.ApizrSettings.WithRequestOptions
+  nameWithType: ApizrSettings.WithRequestOptions
+- uid: Refitter.Core.CacheProviderType
+  name: CacheProviderType
+  href: api/Refitter.Core.CacheProviderType.html
+  commentId: T:Refitter.Core.CacheProviderType
+  fullName: Refitter.Core.CacheProviderType
+  nameWithType: CacheProviderType
+- uid: Refitter.Core.CacheProviderType.Akavache
+  name: Akavache
+  href: api/Refitter.Core.CacheProviderType.html#Refitter_Core_CacheProviderType_Akavache
+  commentId: F:Refitter.Core.CacheProviderType.Akavache
+  fullName: Refitter.Core.CacheProviderType.Akavache
+  nameWithType: CacheProviderType.Akavache
+- uid: Refitter.Core.CacheProviderType.DistributedAsByteArray
+  name: DistributedAsByteArray
+  href: api/Refitter.Core.CacheProviderType.html#Refitter_Core_CacheProviderType_DistributedAsByteArray
+  commentId: F:Refitter.Core.CacheProviderType.DistributedAsByteArray
+  fullName: Refitter.Core.CacheProviderType.DistributedAsByteArray
+  nameWithType: CacheProviderType.DistributedAsByteArray
+- uid: Refitter.Core.CacheProviderType.DistributedAsString
+  name: DistributedAsString
+  href: api/Refitter.Core.CacheProviderType.html#Refitter_Core_CacheProviderType_DistributedAsString
+  commentId: F:Refitter.Core.CacheProviderType.DistributedAsString
+  fullName: Refitter.Core.CacheProviderType.DistributedAsString
+  nameWithType: CacheProviderType.DistributedAsString
+- uid: Refitter.Core.CacheProviderType.InMemory
+  name: InMemory
+  href: api/Refitter.Core.CacheProviderType.html#Refitter_Core_CacheProviderType_InMemory
+  commentId: F:Refitter.Core.CacheProviderType.InMemory
+  fullName: Refitter.Core.CacheProviderType.InMemory
+  nameWithType: CacheProviderType.InMemory
+- uid: Refitter.Core.CacheProviderType.MonkeyCache
+  name: MonkeyCache
+  href: api/Refitter.Core.CacheProviderType.html#Refitter_Core_CacheProviderType_MonkeyCache
+  commentId: F:Refitter.Core.CacheProviderType.MonkeyCache
+  fullName: Refitter.Core.CacheProviderType.MonkeyCache
+  nameWithType: CacheProviderType.MonkeyCache
+- uid: Refitter.Core.CacheProviderType.None
+  name: None
+  href: api/Refitter.Core.CacheProviderType.html#Refitter_Core_CacheProviderType_None
+  commentId: F:Refitter.Core.CacheProviderType.None
+  fullName: Refitter.Core.CacheProviderType.None
+  nameWithType: CacheProviderType.None
 - uid: Refitter.Core.CodeGeneratorSettings
   name: CodeGeneratorSettings
   href: api/Refitter.Core.CodeGeneratorSettings.html
@@ -422,6 +574,12 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.DependencyInjectionSettings.BaseUrl
   nameWithType: DependencyInjectionSettings.BaseUrl
+- uid: Refitter.Core.DependencyInjectionSettings.DefaultExtensionMethodName
+  name: DefaultExtensionMethodName
+  href: api/Refitter.Core.DependencyInjectionSettings.html#Refitter_Core_DependencyInjectionSettings_DefaultExtensionMethodName
+  commentId: F:Refitter.Core.DependencyInjectionSettings.DefaultExtensionMethodName
+  fullName: Refitter.Core.DependencyInjectionSettings.DefaultExtensionMethodName
+  nameWithType: DependencyInjectionSettings.DefaultExtensionMethodName
 - uid: Refitter.Core.DependencyInjectionSettings.ExtensionMethodName
   name: ExtensionMethodName
   href: api/Refitter.Core.DependencyInjectionSettings.html#Refitter_Core_DependencyInjectionSettings_ExtensionMethodName
@@ -513,6 +671,30 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.DependencyInjectionSettings.UsePolly
   nameWithType: DependencyInjectionSettings.UsePolly
+- uid: Refitter.Core.MappingProviderType
+  name: MappingProviderType
+  href: api/Refitter.Core.MappingProviderType.html
+  commentId: T:Refitter.Core.MappingProviderType
+  fullName: Refitter.Core.MappingProviderType
+  nameWithType: MappingProviderType
+- uid: Refitter.Core.MappingProviderType.AutoMapper
+  name: AutoMapper
+  href: api/Refitter.Core.MappingProviderType.html#Refitter_Core_MappingProviderType_AutoMapper
+  commentId: F:Refitter.Core.MappingProviderType.AutoMapper
+  fullName: Refitter.Core.MappingProviderType.AutoMapper
+  nameWithType: MappingProviderType.AutoMapper
+- uid: Refitter.Core.MappingProviderType.Mapster
+  name: Mapster
+  href: api/Refitter.Core.MappingProviderType.html#Refitter_Core_MappingProviderType_Mapster
+  commentId: F:Refitter.Core.MappingProviderType.Mapster
+  fullName: Refitter.Core.MappingProviderType.Mapster
+  nameWithType: MappingProviderType.Mapster
+- uid: Refitter.Core.MappingProviderType.None
+  name: None
+  href: api/Refitter.Core.MappingProviderType.html#Refitter_Core_MappingProviderType_None
+  commentId: F:Refitter.Core.MappingProviderType.None
+  fullName: Refitter.Core.MappingProviderType.None
+  nameWithType: MappingProviderType.None
 - uid: Refitter.Core.MultipleInterfaces
   name: MultipleInterfaces
   href: api/Refitter.Core.MultipleInterfaces.html
@@ -543,6 +725,12 @@ references:
   commentId: T:Refitter.Core.NamingSettings
   fullName: Refitter.Core.NamingSettings
   nameWithType: NamingSettings
+- uid: Refitter.Core.NamingSettings.DefaultInterfaceName
+  name: DefaultInterfaceName
+  href: api/Refitter.Core.NamingSettings.html#Refitter_Core_NamingSettings_DefaultInterfaceName
+  commentId: F:Refitter.Core.NamingSettings.DefaultInterfaceName
+  fullName: Refitter.Core.NamingSettings.DefaultInterfaceName
+  nameWithType: NamingSettings.DefaultInterfaceName
 - uid: Refitter.Core.NamingSettings.InterfaceName
   name: InterfaceName
   href: api/Refitter.Core.NamingSettings.html#Refitter_Core_NamingSettings_InterfaceName
@@ -741,6 +929,19 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.RefitGeneratorSettings.AdditionalNamespaces
   nameWithType: RefitGeneratorSettings.AdditionalNamespaces
+- uid: Refitter.Core.RefitGeneratorSettings.ApizrSettings
+  name: ApizrSettings
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_ApizrSettings
+  commentId: P:Refitter.Core.RefitGeneratorSettings.ApizrSettings
+  fullName: Refitter.Core.RefitGeneratorSettings.ApizrSettings
+  nameWithType: RefitGeneratorSettings.ApizrSettings
+- uid: Refitter.Core.RefitGeneratorSettings.ApizrSettings*
+  name: ApizrSettings
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_ApizrSettings_
+  commentId: Overload:Refitter.Core.RefitGeneratorSettings.ApizrSettings
+  isSpec: "True"
+  fullName: Refitter.Core.RefitGeneratorSettings.ApizrSettings
+  nameWithType: RefitGeneratorSettings.ApizrSettings
 - uid: Refitter.Core.RefitGeneratorSettings.CodeGeneratorSettings
   name: CodeGeneratorSettings
   href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_CodeGeneratorSettings
@@ -1200,6 +1401,102 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.Serializer.Serialize
   nameWithType: Serializer.Serialize
+- uid: Refitter.Core.Settings
+  name: Refitter.Core.Settings
+  href: api/Refitter.Core.Settings.html
+  commentId: N:Refitter.Core.Settings
+  fullName: Refitter.Core.Settings
+  nameWithType: Refitter.Core.Settings
+- uid: Refitter.Core.Settings.ApizrPackages
+  name: ApizrPackages
+  href: api/Refitter.Core.Settings.ApizrPackages.html
+  commentId: T:Refitter.Core.Settings.ApizrPackages
+  fullName: Refitter.Core.Settings.ApizrPackages
+  nameWithType: ApizrPackages
+- uid: Refitter.Core.Settings.ApizrPackages.Apizr
+  name: Apizr
+  href: api/Refitter.Core.Settings.ApizrPackages.html#Refitter_Core_Settings_ApizrPackages_Apizr
+  commentId: F:Refitter.Core.Settings.ApizrPackages.Apizr
+  fullName: Refitter.Core.Settings.ApizrPackages.Apizr
+  nameWithType: ApizrPackages.Apizr
+- uid: Refitter.Core.Settings.ApizrPackages.Apizr_Extensions_Microsoft_Caching
+  name: Apizr_Extensions_Microsoft_Caching
+  href: api/Refitter.Core.Settings.ApizrPackages.html#Refitter_Core_Settings_ApizrPackages_Apizr_Extensions_Microsoft_Caching
+  commentId: F:Refitter.Core.Settings.ApizrPackages.Apizr_Extensions_Microsoft_Caching
+  fullName: Refitter.Core.Settings.ApizrPackages.Apizr_Extensions_Microsoft_Caching
+  nameWithType: ApizrPackages.Apizr_Extensions_Microsoft_Caching
+- uid: Refitter.Core.Settings.ApizrPackages.Apizr_Extensions_Microsoft_DependencyInjection
+  name: Apizr_Extensions_Microsoft_DependencyInjection
+  href: api/Refitter.Core.Settings.ApizrPackages.html#Refitter_Core_Settings_ApizrPackages_Apizr_Extensions_Microsoft_DependencyInjection
+  commentId: F:Refitter.Core.Settings.ApizrPackages.Apizr_Extensions_Microsoft_DependencyInjection
+  fullName: Refitter.Core.Settings.ApizrPackages.Apizr_Extensions_Microsoft_DependencyInjection
+  nameWithType: ApizrPackages.Apizr_Extensions_Microsoft_DependencyInjection
+- uid: Refitter.Core.Settings.ApizrPackages.Apizr_Extensions_Microsoft_FileTransfer
+  name: Apizr_Extensions_Microsoft_FileTransfer
+  href: api/Refitter.Core.Settings.ApizrPackages.html#Refitter_Core_Settings_ApizrPackages_Apizr_Extensions_Microsoft_FileTransfer
+  commentId: F:Refitter.Core.Settings.ApizrPackages.Apizr_Extensions_Microsoft_FileTransfer
+  fullName: Refitter.Core.Settings.ApizrPackages.Apizr_Extensions_Microsoft_FileTransfer
+  nameWithType: ApizrPackages.Apizr_Extensions_Microsoft_FileTransfer
+- uid: Refitter.Core.Settings.ApizrPackages.Apizr_Integrations_Akavache
+  name: Apizr_Integrations_Akavache
+  href: api/Refitter.Core.Settings.ApizrPackages.html#Refitter_Core_Settings_ApizrPackages_Apizr_Integrations_Akavache
+  commentId: F:Refitter.Core.Settings.ApizrPackages.Apizr_Integrations_Akavache
+  fullName: Refitter.Core.Settings.ApizrPackages.Apizr_Integrations_Akavache
+  nameWithType: ApizrPackages.Apizr_Integrations_Akavache
+- uid: Refitter.Core.Settings.ApizrPackages.Apizr_Integrations_AutoMapper
+  name: Apizr_Integrations_AutoMapper
+  href: api/Refitter.Core.Settings.ApizrPackages.html#Refitter_Core_Settings_ApizrPackages_Apizr_Integrations_AutoMapper
+  commentId: F:Refitter.Core.Settings.ApizrPackages.Apizr_Integrations_AutoMapper
+  fullName: Refitter.Core.Settings.ApizrPackages.Apizr_Integrations_AutoMapper
+  nameWithType: ApizrPackages.Apizr_Integrations_AutoMapper
+- uid: Refitter.Core.Settings.ApizrPackages.Apizr_Integrations_FileTransfer
+  name: Apizr_Integrations_FileTransfer
+  href: api/Refitter.Core.Settings.ApizrPackages.html#Refitter_Core_Settings_ApizrPackages_Apizr_Integrations_FileTransfer
+  commentId: F:Refitter.Core.Settings.ApizrPackages.Apizr_Integrations_FileTransfer
+  fullName: Refitter.Core.Settings.ApizrPackages.Apizr_Integrations_FileTransfer
+  nameWithType: ApizrPackages.Apizr_Integrations_FileTransfer
+- uid: Refitter.Core.Settings.ApizrPackages.Apizr_Integrations_FileTransfer_MediatR
+  name: Apizr_Integrations_FileTransfer_MediatR
+  href: api/Refitter.Core.Settings.ApizrPackages.html#Refitter_Core_Settings_ApizrPackages_Apizr_Integrations_FileTransfer_MediatR
+  commentId: F:Refitter.Core.Settings.ApizrPackages.Apizr_Integrations_FileTransfer_MediatR
+  fullName: Refitter.Core.Settings.ApizrPackages.Apizr_Integrations_FileTransfer_MediatR
+  nameWithType: ApizrPackages.Apizr_Integrations_FileTransfer_MediatR
+- uid: Refitter.Core.Settings.ApizrPackages.Apizr_Integrations_FileTransfer_Optional
+  name: Apizr_Integrations_FileTransfer_Optional
+  href: api/Refitter.Core.Settings.ApizrPackages.html#Refitter_Core_Settings_ApizrPackages_Apizr_Integrations_FileTransfer_Optional
+  commentId: F:Refitter.Core.Settings.ApizrPackages.Apizr_Integrations_FileTransfer_Optional
+  fullName: Refitter.Core.Settings.ApizrPackages.Apizr_Integrations_FileTransfer_Optional
+  nameWithType: ApizrPackages.Apizr_Integrations_FileTransfer_Optional
+- uid: Refitter.Core.Settings.ApizrPackages.Apizr_Integrations_Fusillade
+  name: Apizr_Integrations_Fusillade
+  href: api/Refitter.Core.Settings.ApizrPackages.html#Refitter_Core_Settings_ApizrPackages_Apizr_Integrations_Fusillade
+  commentId: F:Refitter.Core.Settings.ApizrPackages.Apizr_Integrations_Fusillade
+  fullName: Refitter.Core.Settings.ApizrPackages.Apizr_Integrations_Fusillade
+  nameWithType: ApizrPackages.Apizr_Integrations_Fusillade
+- uid: Refitter.Core.Settings.ApizrPackages.Apizr_Integrations_Mapster
+  name: Apizr_Integrations_Mapster
+  href: api/Refitter.Core.Settings.ApizrPackages.html#Refitter_Core_Settings_ApizrPackages_Apizr_Integrations_Mapster
+  commentId: F:Refitter.Core.Settings.ApizrPackages.Apizr_Integrations_Mapster
+  fullName: Refitter.Core.Settings.ApizrPackages.Apizr_Integrations_Mapster
+  nameWithType: ApizrPackages.Apizr_Integrations_Mapster
+- uid: Refitter.Core.Settings.ApizrPackages.Apizr_Integrations_MediatR
+  name: Apizr_Integrations_MediatR
+  href: api/Refitter.Core.Settings.ApizrPackages.html#Refitter_Core_Settings_ApizrPackages_Apizr_Integrations_MediatR
+  commentId: F:Refitter.Core.Settings.ApizrPackages.Apizr_Integrations_MediatR
+  fullName: Refitter.Core.Settings.ApizrPackages.Apizr_Integrations_MediatR
+  nameWithType: ApizrPackages.Apizr_Integrations_MediatR
+- uid: Refitter.Core.Settings.ApizrPackages.Apizr_Integrations_MonkeyCache
+  name: Apizr_Integrations_MonkeyCache
+  href: api/Refitter.Core.Settings.ApizrPackages.html#Refitter_Core_Settings_ApizrPackages_Apizr_Integrations_MonkeyCache
+  commentId: F:Refitter.Core.Settings.ApizrPackages.Apizr_Integrations_MonkeyCache
+  fullName: Refitter.Core.Settings.ApizrPackages.Apizr_Integrations_MonkeyCache
+  nameWithType: ApizrPackages.Apizr_Integrations_MonkeyCache
+- uid: Refitter.Core.Settings.ApizrPackages.Apizr_Integrations_Optional
+  name: Apizr_Integrations_Optional
+  href: api/Refitter.Core.Settings.ApizrPackages.html#Refitter_Core_Settings_ApizrPackages_Apizr_Integrations_Optional
+  commentId: F:Refitter.Core.Settings.ApizrPackages.Apizr_Integrations_Optional
+  fullName: Refitter.Core.Settings.ApizrPackages.Apizr_Integrations_Optional
+  nameWithType: ApizrPackages.Apizr_Integrations_Optional
 - uid: Refitter.Core.TransientErrorHandler
   name: TransientErrorHandler
   href: api/Refitter.Core.TransientErrorHandler.html
