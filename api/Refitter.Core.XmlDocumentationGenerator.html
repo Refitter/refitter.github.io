@@ -187,9 +187,9 @@ Class XmlDocumentationGenerator  <a class="header-action link-secondary" title="
 
   <a id="Refitter_Core_XmlDocumentationGenerator_AppendMethodDocumentation_" data-uid="Refitter.Core.XmlDocumentationGenerator.AppendMethodDocumentation*"></a>
 
-  <h3 id="Refitter_Core_XmlDocumentationGenerator_AppendMethodDocumentation_NSwag_CodeGeneration_CSharp_Models_CSharpOperationModel_System_Boolean_System_Text_StringBuilder_" data-uid="Refitter.Core.XmlDocumentationGenerator.AppendMethodDocumentation(NSwag.CodeGeneration.CSharp.Models.CSharpOperationModel,System.Boolean,System.Text.StringBuilder)">
-  AppendMethodDocumentation(CSharpOperationModel, bool, StringBuilder)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/XmlDocumentationGenerator.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Refitter_Core_XmlDocumentationGenerator_AppendMethodDocumentation_NSwag_CodeGeneration_CSharp_Models_CSharpOperationModel_System_Boolean_System_Boolean_System_Text_StringBuilder_" data-uid="Refitter.Core.XmlDocumentationGenerator.AppendMethodDocumentation(NSwag.CodeGeneration.CSharp.Models.CSharpOperationModel,System.Boolean,System.Boolean,System.Text.StringBuilder)">
+  AppendMethodDocumentation(CSharpOperationModel, bool, bool, StringBuilder)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/XmlDocumentationGenerator.cs/#L52"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Appends XML docs for the given method to the given code builder.</p>
@@ -197,7 +197,7 @@ Class XmlDocumentationGenerator  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void AppendMethodDocumentation(CSharpOperationModel method, bool hasApiResponse, StringBuilder code)</code></pre>
+    <pre><code class="lang-csharp hljs">public void AppendMethodDocumentation(CSharpOperationModel method, bool hasApiResponse, bool hasApizrRequestOptionsParameter, StringBuilder code)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -207,6 +207,9 @@ Class XmlDocumentationGenerator  <a class="header-action link-secondary" title="
 </dd>
     <dt><code>hasApiResponse</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd><p>Indicates whether the method returns an <code>ApiResponse</code>.</p>
+</dd>
+    <dt><code>hasApizrRequestOptionsParameter</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Indicates whether the method get an IApizrRequestOptions options final parameter</p>
 </dd>
     <dt><code>code</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.stringbuilder">StringBuilder</a></dt>
     <dd><p>The builder to append the documentation to.</p>
