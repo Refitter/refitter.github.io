@@ -148,6 +148,16 @@
     &quot;maxRetryCount&quot;: 3, // Optional. Default=6
     &quot;firstBackoffRetryInSeconds&quot;: 0.5 // Optional. Default=1.0
   },
+  &quot;apizrSettings&quot;: { // Optional
+    &quot;withRequestOptions&quot;: true, // Optional. Default=true
+    &quot;withRegistrationHelper&quot;: true, // Optional. Default=false
+    &quot;withCacheProvider&quot;: &quot;InMemory&quot;, // Optional. Values=None|Akavache|MonkeyCache|InMemory|DistributedAsString|DistributedAsByteArray. Default=None
+    &quot;withPriority&quot;: true, // Optional. Default=false
+    &quot;withMediation&quot;: true, // Optional. Default=false
+    &quot;withOptionalMediation&quot;: true, // Optional. Default=false
+    &quot;withMappingProvider&quot;: &quot;AutoMapper&quot;, // Optional. Values=None|AutoMapper|Mapster. Default=None
+    &quot;withFileTransfer&quot;: true // Optional. Default=false
+  },
   &quot;codeGeneratorSettings&quot;: { // Optional. Default settings are the values set in this example
     &quot;requiredPropertiesMustBeDefined&quot;: true,
     &quot;generateDataAnnotations&quot;: true,
@@ -223,6 +233,18 @@
 <li><code>transientErrorHandler</code>: Set this to configure transient error handling with a retry policy that uses a jittered backoff. See <a href="https://refitter.github.io/api/Refitter.Core.TransientErrorHandler.html">https://refitter.github.io/api/Refitter.Core.TransientErrorHandler.html</a></li>
 <li><code>maxRetryCount</code> - This is the max retry count used in the Polly retry policy. Default is 6</li>
 <li><code>firstBackoffRetryInSeconds</code> - This is the duration of the initial retry backoff. Default is 1 second</li>
+</ul>
+</li>
+<li><code>apizrSettings</code> - Setting this will format Refit interface to be managed by Apizr. See <a href="https://www.apizr.net">https://www.apizr.net</a> for more information
+<ul>
+<li><code>withRequestOptions</code> - Tells if the Refit interface methods should have a final IApizrRequestOptions options parameter</li>
+<li><code>withRegistrationHelper</code> - Tells if Refitter should generate Apizr registration helpers (extended with dependencyInjectionSettings set, otherwise static)</li>
+<li><code>withCacheProvider</code> - Set the cache provider to be used</li>
+<li><code>withPriority</code> - Tells if Apizr should handle request priority</li>
+<li><code>withMediation</code> - Tells if Apizr should handle request mediation (extended only)</li>
+<li><code>withOptionalMediation</code> - Tells if Apizr should handle optional request mediation (extended only)</li>
+<li><code>withMappingProvider</code> - Set the mapping provider to be used</li>
+<li><code>withFileTransfer</code> - Tells if Apizr should handle file transfer</li>
 </ul>
 </li>
 <li><code>codeGeneratorSettings</code> - Setting this allows customization of the NSwag generated types and contracts
@@ -439,6 +461,57 @@
                 }
             },
             &quot;description&quot;: &quot;Settings for dependency injection.&quot;
+        },
+        &quot;apizrSettings&quot;: {
+            &quot;type&quot;: &quot;object&quot;,
+            &quot;properties&quot;: {
+                &quot;withRequestOptions&quot;: {
+                    &quot;type&quot;: &quot;boolean&quot;,
+                    &quot;description&quot;: &quot;Tells if the Refit interface methods should have a final IApizrRequestOptions options parameter.&quot;
+                },
+                &quot;withRegistrationHelper&quot;: {
+                    &quot;type&quot;: &quot;boolean&quot;,
+                    &quot;description&quot;: &quot;Tells if Refitter should generate Apizr registration helpers (extended with dependencyInjectionSettings set, otherwise static).&quot;
+                },
+                &quot;withCacheProvider&quot;: {
+                    &quot;type&quot;: &quot;string&quot;,
+                    &quot;enum&quot;: [
+                        &quot;None&quot;,
+                        &quot;Akavache&quot;,
+                        &quot;MonkeyCache&quot;,
+                        &quot;InMemory&quot;,
+                        &quot;DistributedAsString&quot;,
+                        &quot;DistributedAsByteArray&quot;
+                    ],
+                    &quot;description&quot;: &quot;Set the cache provider to be used.&quot;
+                },
+                &quot;withPriority&quot;: {
+                    &quot;type&quot;: &quot;boolean&quot;,
+                    &quot;description&quot;: &quot;Tells if Apizr should handle request priority.&quot;
+                },
+                &quot;withMediation&quot;: {
+                    &quot;type&quot;: &quot;boolean&quot;,
+                    &quot;description&quot;: &quot;Tells if Apizr should handle request mediation (extended only).&quot;
+                },
+                &quot;withOptionalMediation&quot;: {
+                    &quot;type&quot;: &quot;boolean&quot;,
+                    &quot;description&quot;: &quot;Tells if Apizr should handle optional request mediation (extended only).&quot;
+                },
+                &quot;withMappingProvider&quot;: {
+                    &quot;type&quot;: &quot;string&quot;,
+                    &quot;enum&quot;: [
+                        &quot;None&quot;,
+                        &quot;AutoMapper&quot;,
+                        &quot;Mapster&quot;
+                    ],
+                    &quot;description&quot;: &quot;Set the mapping provider to be used.&quot;
+                },
+                &quot;withFileTransfer&quot;: {
+                    &quot;type&quot;: &quot;boolean&quot;,
+                    &quot;description&quot;: &quot;Tells if Apizr should handle file transfer.&quot;
+                }
+            },
+            &quot;description&quot;: &quot;Settings for Apizr.&quot;
         },
         &quot;codeGeneratorSettings&quot;: {
             &quot;type&quot;: &quot;object&quot;,

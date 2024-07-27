@@ -1333,6 +1333,407 @@ public partial interface IDeleteUserEndpoint
     Task Execute(string username);
 }
 </code></pre>
+<p>Here's an example generated output from the <a href="https://petstore3.swagger.io">Swagger Petstore example</a> configured to generate an interface with <a href="https://www.apizr.net">Apizr</a> (v6+)</p>
+<p><strong>CLI Tool</strong></p>
+<pre><code class="lang-bash">$ refitter ./openapi.json --namespace &quot;Your.Namespace.Of.Choice.GeneratedCode&quot; --use-apizr
+</code></pre>
+<p><strong>Source Generator <em><strong>.refitter</strong></em> file</strong></p>
+<pre><code class="lang-json">{
+  &quot;openApiPath&quot;: &quot;./openapi.json&quot;,
+  &quot;namespace&quot;: &quot;Your.Namespace.Of.Choice.GeneratedCode&quot;,
+  &quot;apizrSettings&quot;: {
+    &quot;withRequestOptions&quot;: true
+  }
+}
+</code></pre>
+<p><strong>Output</strong></p>
+<pre><code class="lang-cs">using Refit;
+using System.Collections.Generic;
+using System.Text.Json.Serialization;
+using Apizr.Configuring.Request;
+using System.Threading.Tasks;
+
+namespace Your.Namespace.Of.Choice.GeneratedCode
+{
+    [System.CodeDom.Compiler.GeneratedCode(&quot;Refitter&quot;, &quot;1.0.0.0&quot;)]
+    public partial interface ISwaggerPetstore
+    {
+        /// &lt;summary&gt;Update an existing pet&lt;/summary&gt;
+        /// &lt;remarks&gt;Update an existing pet by Id&lt;/remarks&gt;
+        /// &lt;param name=&quot;body&quot;&gt;Update an existent pet in the store&lt;/param&gt;
+        /// &lt;param name=&quot;options&quot;&gt;The &lt;see cref=\&quot;IApizrRequestOptions\&quot;/&gt; instance to pass through the request.&lt;/param&gt;
+        /// &lt;returns&gt;Successful operation&lt;/returns&gt;
+        /// &lt;exception cref=&quot;ApiException&quot;&gt;
+        /// Thrown when the request returns a non-success status code:
+        /// &lt;list type=&quot;table&quot;&gt;
+        /// &lt;listheader&gt;
+        /// &lt;term&gt;Status&lt;/term&gt;
+        /// &lt;description&gt;Description&lt;/description&gt;
+        /// &lt;/listheader&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;400&lt;/term&gt;
+        /// &lt;description&gt;Invalid ID supplied&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;404&lt;/term&gt;
+        /// &lt;description&gt;Pet not found&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;405&lt;/term&gt;
+        /// &lt;description&gt;Validation exception&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;/list&gt;
+        /// &lt;/exception&gt;
+        [Headers(&quot;Accept: application/xml, application/json&quot;)]
+        [Put(&quot;/pet&quot;)]
+        Task&lt;Pet&gt; UpdatePet([Body] Pet body, [RequestOptions] IApizrRequestOptions options));
+
+        /// &lt;summary&gt;Add a new pet to the store&lt;/summary&gt;
+        /// &lt;remarks&gt;Add a new pet to the store&lt;/remarks&gt;
+        /// &lt;param name=&quot;body&quot;&gt;Create a new pet in the store&lt;/param&gt;
+        /// &lt;param name=&quot;options&quot;&gt;The &lt;see cref=\&quot;IApizrRequestOptions\&quot;/&gt; instance to pass through the request.&lt;/param&gt;
+        /// &lt;returns&gt;Successful operation&lt;/returns&gt;
+        /// &lt;exception cref=&quot;ApiException&quot;&gt;
+        /// Thrown when the request returns a non-success status code:
+        /// &lt;list type=&quot;table&quot;&gt;
+        /// &lt;listheader&gt;
+        /// &lt;term&gt;Status&lt;/term&gt;
+        /// &lt;description&gt;Description&lt;/description&gt;
+        /// &lt;/listheader&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;405&lt;/term&gt;
+        /// &lt;description&gt;Invalid input&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;/list&gt;
+        /// &lt;/exception&gt;
+        [Headers(&quot;Accept: application/xml, application/json&quot;)]
+        [Post(&quot;/pet&quot;)]
+        Task&lt;Pet&gt; AddPet([Body] Pet body, [RequestOptions] IApizrRequestOptions options));
+
+        /// &lt;summary&gt;Finds Pets by status&lt;/summary&gt;
+        /// &lt;remarks&gt;Multiple status values can be provided with comma separated strings&lt;/remarks&gt;
+        /// &lt;param name=&quot;status&quot;&gt;Status values that need to be considered for filter&lt;/param&gt;
+        /// &lt;param name=&quot;options&quot;&gt;The &lt;see cref=\&quot;IApizrRequestOptions\&quot;/&gt; instance to pass through the request.&lt;/param&gt;
+        /// &lt;returns&gt;successful operation&lt;/returns&gt;
+        /// &lt;exception cref=&quot;ApiException&quot;&gt;
+        /// Thrown when the request returns a non-success status code:
+        /// &lt;list type=&quot;table&quot;&gt;
+        /// &lt;listheader&gt;
+        /// &lt;term&gt;Status&lt;/term&gt;
+        /// &lt;description&gt;Description&lt;/description&gt;
+        /// &lt;/listheader&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;400&lt;/term&gt;
+        /// &lt;description&gt;Invalid status value&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;/list&gt;
+        /// &lt;/exception&gt;
+        [Headers(&quot;Accept: application/json&quot;)]
+        [Get(&quot;/pet/findByStatus&quot;)]
+        Task&lt;ICollection&lt;Pet&gt;&gt; FindPetsByStatus([Query] Status? status, [RequestOptions] IApizrRequestOptions options));
+
+        /// &lt;summary&gt;Finds Pets by tags&lt;/summary&gt;
+        /// &lt;remarks&gt;Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.&lt;/remarks&gt;
+        /// &lt;param name=&quot;tags&quot;&gt;Tags to filter by&lt;/param&gt;
+        /// &lt;param name=&quot;options&quot;&gt;The &lt;see cref=\&quot;IApizrRequestOptions\&quot;/&gt; instance to pass through the request.&lt;/param&gt;
+        /// &lt;returns&gt;successful operation&lt;/returns&gt;
+        /// &lt;exception cref=&quot;ApiException&quot;&gt;
+        /// Thrown when the request returns a non-success status code:
+        /// &lt;list type=&quot;table&quot;&gt;
+        /// &lt;listheader&gt;
+        /// &lt;term&gt;Status&lt;/term&gt;
+        /// &lt;description&gt;Description&lt;/description&gt;
+        /// &lt;/listheader&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;400&lt;/term&gt;
+        /// &lt;description&gt;Invalid tag value&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;/list&gt;
+        /// &lt;/exception&gt;
+        [Headers(&quot;Accept: application/json&quot;)]
+        [Get(&quot;/pet/findByTags&quot;)]
+        Task&lt;ICollection&lt;Pet&gt;&gt; FindPetsByTags([Query(CollectionFormat.Multi)] IEnumerable&lt;string&gt; tags, [RequestOptions] IApizrRequestOptions options));
+
+        /// &lt;summary&gt;Find pet by ID&lt;/summary&gt;
+        /// &lt;remarks&gt;Returns a single pet&lt;/remarks&gt;
+        /// &lt;param name=&quot;petId&quot;&gt;ID of pet to return&lt;/param&gt;
+        /// &lt;param name=&quot;options&quot;&gt;The &lt;see cref=\&quot;IApizrRequestOptions\&quot;/&gt; instance to pass through the request.&lt;/param&gt;
+        /// &lt;returns&gt;successful operation&lt;/returns&gt;
+        /// &lt;exception cref=&quot;ApiException&quot;&gt;
+        /// Thrown when the request returns a non-success status code:
+        /// &lt;list type=&quot;table&quot;&gt;
+        /// &lt;listheader&gt;
+        /// &lt;term&gt;Status&lt;/term&gt;
+        /// &lt;description&gt;Description&lt;/description&gt;
+        /// &lt;/listheader&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;400&lt;/term&gt;
+        /// &lt;description&gt;Invalid ID supplied&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;404&lt;/term&gt;
+        /// &lt;description&gt;Pet not found&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;/list&gt;
+        /// &lt;/exception&gt;
+        [Headers(&quot;Accept: application/xml, application/json&quot;)]
+        [Get(&quot;/pet/{petId}&quot;)]
+        Task&lt;Pet&gt; GetPetById(long petId, [RequestOptions] IApizrRequestOptions options));
+
+        /// &lt;summary&gt;Updates a pet in the store with form data&lt;/summary&gt;
+        /// &lt;param name=&quot;petId&quot;&gt;ID of pet that needs to be updated&lt;/param&gt;
+        /// &lt;param name=&quot;name&quot;&gt;Name of pet that needs to be updated&lt;/param&gt;
+        /// &lt;param name=&quot;status&quot;&gt;Status of pet that needs to be updated&lt;/param&gt;
+        /// &lt;param name=&quot;options&quot;&gt;The &lt;see cref=\&quot;IApizrRequestOptions\&quot;/&gt; instance to pass through the request.&lt;/param&gt;
+        /// &lt;returns&gt;A &lt;see cref=&quot;Task&quot;/&gt; that completes when the request is finished.&lt;/returns&gt;
+        /// &lt;exception cref=&quot;ApiException&quot;&gt;
+        /// Thrown when the request returns a non-success status code:
+        /// &lt;list type=&quot;table&quot;&gt;
+        /// &lt;listheader&gt;
+        /// &lt;term&gt;Status&lt;/term&gt;
+        /// &lt;description&gt;Description&lt;/description&gt;
+        /// &lt;/listheader&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;405&lt;/term&gt;
+        /// &lt;description&gt;Invalid input&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;/list&gt;
+        /// &lt;/exception&gt;
+        [Post(&quot;/pet/{petId}&quot;)]
+        Task UpdatePetWithForm(long petId, [Query] string name, [Query] string status, [RequestOptions] IApizrRequestOptions options));
+
+        /// &lt;summary&gt;Deletes a pet&lt;/summary&gt;
+        /// &lt;param name=&quot;petId&quot;&gt;Pet id to delete&lt;/param&gt;
+        /// &lt;param name=&quot;options&quot;&gt;The &lt;see cref=\&quot;IApizrRequestOptions\&quot;/&gt; instance to pass through the request.&lt;/param&gt;
+        /// &lt;returns&gt;A &lt;see cref=&quot;Task&quot;/&gt; that completes when the request is finished.&lt;/returns&gt;
+        /// &lt;exception cref=&quot;ApiException&quot;&gt;
+        /// Thrown when the request returns a non-success status code:
+        /// &lt;list type=&quot;table&quot;&gt;
+        /// &lt;listheader&gt;
+        /// &lt;term&gt;Status&lt;/term&gt;
+        /// &lt;description&gt;Description&lt;/description&gt;
+        /// &lt;/listheader&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;400&lt;/term&gt;
+        /// &lt;description&gt;Invalid pet value&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;/list&gt;
+        /// &lt;/exception&gt;
+        [Delete(&quot;/pet/{petId}&quot;)]
+        Task DeletePet(long petId, [Header(&quot;api_key&quot;)] string api_key, [RequestOptions] IApizrRequestOptions options));
+
+        /// &lt;summary&gt;uploads an image&lt;/summary&gt;
+        /// &lt;param name=&quot;petId&quot;&gt;ID of pet to update&lt;/param&gt;
+        /// &lt;param name=&quot;additionalMetadata&quot;&gt;Additional Metadata&lt;/param&gt;
+        /// &lt;param name=&quot;options&quot;&gt;The &lt;see cref=\&quot;IApizrRequestOptions\&quot;/&gt; instance to pass through the request.&lt;/param&gt;
+        /// &lt;returns&gt;
+        /// A &lt;see cref=&quot;Task&quot;/&gt; representing the &lt;see cref=&quot;IApiResponse&quot;/&gt; instance containing the result:
+        /// &lt;list type=&quot;table&quot;&gt;
+        /// &lt;listheader&gt;
+        /// &lt;term&gt;Status&lt;/term&gt;
+        /// &lt;description&gt;Description&lt;/description&gt;
+        /// &lt;/listheader&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;200&lt;/term&gt;
+        /// &lt;description&gt;successful operation&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;/list&gt;
+        /// &lt;/returns&gt;
+        [Headers(&quot;Accept: application/json&quot;)]
+        [Post(&quot;/pet/{petId}/uploadImage&quot;)]
+        Task&lt;ApiResponse&gt; UploadFile(long petId, [Query] string additionalMetadata,  StreamPart body, [RequestOptions] IApizrRequestOptions options));
+
+        /// &lt;summary&gt;Returns pet inventories by status&lt;/summary&gt;
+        /// &lt;remarks&gt;Returns a map of status codes to quantities&lt;/remarks&gt;
+        /// &lt;param name=&quot;options&quot;&gt;The &lt;see cref=\&quot;IApizrRequestOptions\&quot;/&gt; instance to pass through the request.&lt;/param&gt;
+        /// &lt;returns&gt;successful operation&lt;/returns&gt;
+        /// &lt;exception cref=&quot;ApiException&quot;&gt;Thrown when the request returns a non-success status code.&lt;/exception&gt;
+        [Headers(&quot;Accept: application/json&quot;)]
+        [Get(&quot;/store/inventory&quot;)]
+        Task&lt;IDictionary&lt;string, int&gt;&gt; GetInventory([RequestOptions] IApizrRequestOptions options);
+
+        /// &lt;summary&gt;Place an order for a pet&lt;/summary&gt;
+        /// &lt;remarks&gt;Place a new order in the store&lt;/remarks&gt;
+        /// &lt;param name=&quot;options&quot;&gt;The &lt;see cref=\&quot;IApizrRequestOptions\&quot;/&gt; instance to pass through the request.&lt;/param&gt;
+        /// &lt;returns&gt;successful operation&lt;/returns&gt;
+        /// &lt;exception cref=&quot;ApiException&quot;&gt;
+        /// Thrown when the request returns a non-success status code:
+        /// &lt;list type=&quot;table&quot;&gt;
+        /// &lt;listheader&gt;
+        /// &lt;term&gt;Status&lt;/term&gt;
+        /// &lt;description&gt;Description&lt;/description&gt;
+        /// &lt;/listheader&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;405&lt;/term&gt;
+        /// &lt;description&gt;Invalid input&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;/list&gt;
+        /// &lt;/exception&gt;
+        [Headers(&quot;Accept: application/json&quot;)]
+        [Post(&quot;/store/order&quot;)]
+        Task&lt;Order&gt; PlaceOrder([Body] Order body, [RequestOptions] IApizrRequestOptions options));
+
+        /// &lt;summary&gt;Find purchase order by ID&lt;/summary&gt;
+        /// &lt;remarks&gt;For valid response try integer IDs with value &lt;= 5 or &gt; 10. Other values will generated exceptions&lt;/remarks&gt;
+        /// &lt;param name=&quot;orderId&quot;&gt;ID of order that needs to be fetched&lt;/param&gt;
+        /// &lt;param name=&quot;options&quot;&gt;The &lt;see cref=\&quot;IApizrRequestOptions\&quot;/&gt; instance to pass through the request.&lt;/param&gt;
+        /// &lt;returns&gt;successful operation&lt;/returns&gt;
+        /// &lt;exception cref=&quot;ApiException&quot;&gt;
+        /// Thrown when the request returns a non-success status code:
+        /// &lt;list type=&quot;table&quot;&gt;
+        /// &lt;listheader&gt;
+        /// &lt;term&gt;Status&lt;/term&gt;
+        /// &lt;description&gt;Description&lt;/description&gt;
+        /// &lt;/listheader&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;400&lt;/term&gt;
+        /// &lt;description&gt;Invalid ID supplied&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;404&lt;/term&gt;
+        /// &lt;description&gt;Order not found&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;/list&gt;
+        /// &lt;/exception&gt;
+        [Headers(&quot;Accept: application/json&quot;)]
+        [Get(&quot;/store/order/{orderId}&quot;)]
+        Task&lt;Order&gt; GetOrderById(long orderId, [RequestOptions] IApizrRequestOptions options));
+
+        /// &lt;summary&gt;Delete purchase order by ID&lt;/summary&gt;
+        /// &lt;remarks&gt;For valid response try integer IDs with value &lt; 1000. Anything above 1000 or nonintegers will generate API errors&lt;/remarks&gt;
+        /// &lt;param name=&quot;orderId&quot;&gt;ID of the order that needs to be deleted&lt;/param&gt;
+        /// &lt;param name=&quot;options&quot;&gt;The &lt;see cref=\&quot;IApizrRequestOptions\&quot;/&gt; instance to pass through the request.&lt;/param&gt;
+        /// &lt;returns&gt;A &lt;see cref=&quot;Task&quot;/&gt; that completes when the request is finished.&lt;/returns&gt;
+        /// &lt;exception cref=&quot;ApiException&quot;&gt;
+        /// Thrown when the request returns a non-success status code:
+        /// &lt;list type=&quot;table&quot;&gt;
+        /// &lt;listheader&gt;
+        /// &lt;term&gt;Status&lt;/term&gt;
+        /// &lt;description&gt;Description&lt;/description&gt;
+        /// &lt;/listheader&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;400&lt;/term&gt;
+        /// &lt;description&gt;Invalid ID supplied&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;404&lt;/term&gt;
+        /// &lt;description&gt;Order not found&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;/list&gt;
+        /// &lt;/exception&gt;
+        [Delete(&quot;/store/order/{orderId}&quot;)]
+        Task DeleteOrder(long orderId, [RequestOptions] IApizrRequestOptions options));
+
+        /// &lt;summary&gt;Create user&lt;/summary&gt;
+        /// &lt;remarks&gt;This can only be done by the logged in user.&lt;/remarks&gt;
+        /// &lt;param name=&quot;body&quot;&gt;Created user object&lt;/param&gt;
+        /// &lt;param name=&quot;options&quot;&gt;The &lt;see cref=\&quot;IApizrRequestOptions\&quot;/&gt; instance to pass through the request.&lt;/param&gt;
+        /// &lt;returns&gt;successful operation&lt;/returns&gt;
+        /// &lt;exception cref=&quot;ApiException&quot;&gt;Thrown when the request returns a non-success status code.&lt;/exception&gt;
+        [Headers(&quot;Accept: application/json, application/xml&quot;)]
+        [Post(&quot;/user&quot;)]
+        Task CreateUser([Body] User body, [RequestOptions] IApizrRequestOptions options));
+
+        /// &lt;summary&gt;Creates list of users with given input array&lt;/summary&gt;
+        /// &lt;remarks&gt;Creates list of users with given input array&lt;/remarks&gt;
+        /// &lt;param name=&quot;options&quot;&gt;The &lt;see cref=\&quot;IApizrRequestOptions\&quot;/&gt; instance to pass through the request.&lt;/param&gt;
+        /// &lt;returns&gt;Successful operation&lt;/returns&gt;
+        /// &lt;exception cref=&quot;ApiException&quot;&gt;Thrown when the request returns a non-success status code.&lt;/exception&gt;
+        [Headers(&quot;Accept: application/xml, application/json&quot;)]
+        [Post(&quot;/user/createWithList&quot;)]
+        Task&lt;User&gt; CreateUsersWithListInput([Body] IEnumerable&lt;User&gt; body, [RequestOptions] IApizrRequestOptions options));
+
+        /// &lt;summary&gt;Logs user into the system&lt;/summary&gt;
+        /// &lt;param name=&quot;username&quot;&gt;The user name for login&lt;/param&gt;
+        /// &lt;param name=&quot;password&quot;&gt;The password for login in clear text&lt;/param&gt;
+        /// &lt;param name=&quot;options&quot;&gt;The &lt;see cref=\&quot;IApizrRequestOptions\&quot;/&gt; instance to pass through the request.&lt;/param&gt;
+        /// &lt;returns&gt;successful operation&lt;/returns&gt;
+        /// &lt;exception cref=&quot;ApiException&quot;&gt;
+        /// Thrown when the request returns a non-success status code:
+        /// &lt;list type=&quot;table&quot;&gt;
+        /// &lt;listheader&gt;
+        /// &lt;term&gt;Status&lt;/term&gt;
+        /// &lt;description&gt;Description&lt;/description&gt;
+        /// &lt;/listheader&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;400&lt;/term&gt;
+        /// &lt;description&gt;Invalid username/password supplied&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;/list&gt;
+        /// &lt;/exception&gt;
+        [Headers(&quot;Accept: application/json&quot;)]
+        [Get(&quot;/user/login&quot;)]
+        Task&lt;string&gt; LoginUser([Query] string username, [Query] string password, [RequestOptions] IApizrRequestOptions options));
+
+        /// &lt;summary&gt;Logs out current logged in user session&lt;/summary&gt;
+        /// &lt;param name=&quot;options&quot;&gt;The &lt;see cref=\&quot;IApizrRequestOptions\&quot;/&gt; instance to pass through the request.&lt;/param&gt;
+        /// &lt;returns&gt;A &lt;see cref=&quot;Task&quot;/&gt; that completes when the request is finished.&lt;/returns&gt;
+        /// &lt;exception cref=&quot;ApiException&quot;&gt;Thrown when the request returns a non-success status code.&lt;/exception&gt;
+        [Get(&quot;/user/logout&quot;)]
+        Task LogoutUser([RequestOptions] IApizrRequestOptions options));
+
+        /// &lt;summary&gt;Get user by user name&lt;/summary&gt;
+        /// &lt;param name=&quot;username&quot;&gt;The name that needs to be fetched. Use user1 for testing.&lt;/param&gt;
+        /// &lt;param name=&quot;options&quot;&gt;The &lt;see cref=\&quot;IApizrRequestOptions\&quot;/&gt; instance to pass through the request.&lt;/param&gt;
+        /// &lt;returns&gt;successful operation&lt;/returns&gt;
+        /// &lt;exception cref=&quot;ApiException&quot;&gt;
+        /// Thrown when the request returns a non-success status code:
+        /// &lt;list type=&quot;table&quot;&gt;
+        /// &lt;listheader&gt;
+        /// &lt;term&gt;Status&lt;/term&gt;
+        /// &lt;description&gt;Description&lt;/description&gt;
+        /// &lt;/listheader&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;400&lt;/term&gt;
+        /// &lt;description&gt;Invalid username supplied&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;404&lt;/term&gt;
+        /// &lt;description&gt;User not found&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;/list&gt;
+        /// &lt;/exception&gt;
+        [Headers(&quot;Accept: application/json&quot;)]
+        [Get(&quot;/user/{username}&quot;)]
+        Task&lt;User&gt; GetUserByName(string username, [RequestOptions] IApizrRequestOptions options));
+
+        /// &lt;summary&gt;Update user&lt;/summary&gt;
+        /// &lt;remarks&gt;This can only be done by the logged in user.&lt;/remarks&gt;
+        /// &lt;param name=&quot;username&quot;&gt;name that need to be deleted&lt;/param&gt;
+        /// &lt;param name=&quot;body&quot;&gt;Update an existent user in the store&lt;/param&gt;
+        /// &lt;param name=&quot;options&quot;&gt;The &lt;see cref=\&quot;IApizrRequestOptions\&quot;/&gt; instance to pass through the request.&lt;/param&gt;
+        /// &lt;returns&gt;A &lt;see cref=&quot;Task&quot;/&gt; that completes when the request is finished.&lt;/returns&gt;
+        /// &lt;exception cref=&quot;ApiException&quot;&gt;Thrown when the request returns a non-success status code.&lt;/exception&gt;
+        [Put(&quot;/user/{username}&quot;)]
+        Task UpdateUser(string username, [Body] User body, [RequestOptions] IApizrRequestOptions options));
+
+        /// &lt;summary&gt;Delete user&lt;/summary&gt;
+        /// &lt;remarks&gt;This can only be done by the logged in user.&lt;/remarks&gt;
+        /// &lt;param name=&quot;username&quot;&gt;The name that needs to be deleted&lt;/param&gt;
+        /// &lt;param name=&quot;options&quot;&gt;The &lt;see cref=\&quot;IApizrRequestOptions\&quot;/&gt; instance to pass through the request.&lt;/param&gt;
+        /// &lt;returns&gt;A &lt;see cref=&quot;Task&quot;/&gt; that completes when the request is finished.&lt;/returns&gt;
+        /// &lt;exception cref=&quot;ApiException&quot;&gt;
+        /// Thrown when the request returns a non-success status code:
+        /// &lt;list type=&quot;table&quot;&gt;
+        /// &lt;listheader&gt;
+        /// &lt;term&gt;Status&lt;/term&gt;
+        /// &lt;description&gt;Description&lt;/description&gt;
+        /// &lt;/listheader&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;400&lt;/term&gt;
+        /// &lt;description&gt;Invalid username supplied&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;item&gt;
+        /// &lt;term&gt;404&lt;/term&gt;
+        /// &lt;description&gt;User not found&lt;/description&gt;
+        /// &lt;/item&gt;
+        /// &lt;/list&gt;
+        /// &lt;/exception&gt;
+        [Delete(&quot;/user/{username}&quot;)]
+        Task DeleteUser(string username, [RequestOptions] IApizrRequestOptions options));
+    }
+}
+</code></pre>
 
 </article>
 
