@@ -302,7 +302,7 @@ app.Run();
 <ul>
 <li>Adding a final IApizrRequestOptions options parameter to all generated methods (if <code>withRequestOptions</code> is set to <code>true</code>)</li>
 <li>Providing cancellation tokens by Apizr request options instead of a dedicated parameter (if <code>withRequestOptions</code> is set to <code>true</code>)</li>
-<li>Using method overloads instead of optional parameters</li>
+<li>Using method overloads instead of optional parameters (note that setting <code>useDynamicQuerystringParameters</code> to true improve overloading experience)</li>
 </ul>
 <p>From here, you're definitly free to use the formatted interface with Apizr by registering, configuring and using it following the <a href="https://www.apizr.net">Apizr documentation</a>. But Refitter can go further by generating some helpers to make the configuration easier.</p>
 <h3 id="generating-the-helpers">Generating the helpers</h3>
@@ -324,6 +324,7 @@ This is what the <code>.refitter</code> settings file may look like, depending o
 <pre><code class="lang-json">{
   &quot;openApiPath&quot;: &quot;../OpenAPI/v3.0/petstore.json&quot;,
   &quot;namespace&quot;: &quot;Petstore&quot;,
+  &quot;useDynamicQuerystringParameters&quot;: true,
   &quot;dependencyInjectionSettings&quot;: {
     &quot;baseUrl&quot;: &quot;https://petstore3.swagger.io/api/v3&quot;,
     &quot;httpMessageHandlers&quot;: [ &quot;MyDelegatingHandler&quot; ],
@@ -375,6 +376,7 @@ This is what the <code>.refitter</code> settings file may look like, depending o
 <pre><code class="lang-json">{
   &quot;openApiPath&quot;: &quot;../OpenAPI/v3.0/petstore.json&quot;,
   &quot;namespace&quot;: &quot;Petstore&quot;,
+  &quot;useDynamicQuerystringParameters&quot;: true,
   &quot;multipleInterfaces&quot;: &quot;ByTag&quot;,
   &quot;naming&quot;: {    
     &quot;useOpenApiTitle&quot;: false,
@@ -442,6 +444,7 @@ This is what the <code>.refitter</code> settings file may look like, depending o
 <pre><code class="lang-json">{
   &quot;openApiPath&quot;: &quot;../OpenAPI/v3.0/petstore.json&quot;,
   &quot;namespace&quot;: &quot;Petstore&quot;,
+  &quot;useDynamicQuerystringParameters&quot;: true,
   &quot;apizrSettings&quot;: {
     &quot;withRequestOptions&quot;: true, // Recommended to include an Apizr request options parameter to Refit interface methods
     &quot;withRegistrationHelper&quot;: true, // Mandatory to actually generate the Apizr registration extended method

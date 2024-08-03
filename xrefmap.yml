@@ -1312,6 +1312,19 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.RefitGeneratorSettings.UseCancellationTokens
   nameWithType: RefitGeneratorSettings.UseCancellationTokens
+- uid: Refitter.Core.RefitGeneratorSettings.UseDynamicQuerystringParameters
+  name: UseDynamicQuerystringParameters
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_UseDynamicQuerystringParameters
+  commentId: P:Refitter.Core.RefitGeneratorSettings.UseDynamicQuerystringParameters
+  fullName: Refitter.Core.RefitGeneratorSettings.UseDynamicQuerystringParameters
+  nameWithType: RefitGeneratorSettings.UseDynamicQuerystringParameters
+- uid: Refitter.Core.RefitGeneratorSettings.UseDynamicQuerystringParameters*
+  name: UseDynamicQuerystringParameters
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_UseDynamicQuerystringParameters_
+  commentId: Overload:Refitter.Core.RefitGeneratorSettings.UseDynamicQuerystringParameters
+  isSpec: "True"
+  fullName: Refitter.Core.RefitGeneratorSettings.UseDynamicQuerystringParameters
+  nameWithType: RefitGeneratorSettings.UseDynamicQuerystringParameters
 - uid: Refitter.Core.RefitGeneratorSettings.UseIsoDateFormat
   name: UseIsoDateFormat
   href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_UseIsoDateFormat
@@ -1558,15 +1571,15 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentation
   nameWithType: XmlDocumentationGenerator.AppendInterfaceDocumentation
-- uid: Refitter.Core.XmlDocumentationGenerator.AppendMethodDocumentation(NSwag.CodeGeneration.CSharp.Models.CSharpOperationModel,System.Boolean,System.Boolean,System.Text.StringBuilder)
-  name: AppendMethodDocumentation(CSharpOperationModel, bool, bool, StringBuilder)
-  href: api/Refitter.Core.XmlDocumentationGenerator.html#Refitter_Core_XmlDocumentationGenerator_AppendMethodDocumentation_NSwag_CodeGeneration_CSharp_Models_CSharpOperationModel_System_Boolean_System_Boolean_System_Text_StringBuilder_
-  commentId: M:Refitter.Core.XmlDocumentationGenerator.AppendMethodDocumentation(NSwag.CodeGeneration.CSharp.Models.CSharpOperationModel,System.Boolean,System.Boolean,System.Text.StringBuilder)
-  name.vb: AppendMethodDocumentation(CSharpOperationModel, Boolean, Boolean, StringBuilder)
-  fullName: Refitter.Core.XmlDocumentationGenerator.AppendMethodDocumentation(NSwag.CodeGeneration.CSharp.Models.CSharpOperationModel, bool, bool, System.Text.StringBuilder)
-  fullName.vb: Refitter.Core.XmlDocumentationGenerator.AppendMethodDocumentation(NSwag.CodeGeneration.CSharp.Models.CSharpOperationModel, Boolean, Boolean, System.Text.StringBuilder)
-  nameWithType: XmlDocumentationGenerator.AppendMethodDocumentation(CSharpOperationModel, bool, bool, StringBuilder)
-  nameWithType.vb: XmlDocumentationGenerator.AppendMethodDocumentation(CSharpOperationModel, Boolean, Boolean, StringBuilder)
+- uid: Refitter.Core.XmlDocumentationGenerator.AppendMethodDocumentation(NSwag.CodeGeneration.CSharp.Models.CSharpOperationModel,System.Boolean,System.Boolean,System.Boolean,System.Text.StringBuilder)
+  name: AppendMethodDocumentation(CSharpOperationModel, bool, bool, bool, StringBuilder)
+  href: api/Refitter.Core.XmlDocumentationGenerator.html#Refitter_Core_XmlDocumentationGenerator_AppendMethodDocumentation_NSwag_CodeGeneration_CSharp_Models_CSharpOperationModel_System_Boolean_System_Boolean_System_Boolean_System_Text_StringBuilder_
+  commentId: M:Refitter.Core.XmlDocumentationGenerator.AppendMethodDocumentation(NSwag.CodeGeneration.CSharp.Models.CSharpOperationModel,System.Boolean,System.Boolean,System.Boolean,System.Text.StringBuilder)
+  name.vb: AppendMethodDocumentation(CSharpOperationModel, Boolean, Boolean, Boolean, StringBuilder)
+  fullName: Refitter.Core.XmlDocumentationGenerator.AppendMethodDocumentation(NSwag.CodeGeneration.CSharp.Models.CSharpOperationModel, bool, bool, bool, System.Text.StringBuilder)
+  fullName.vb: Refitter.Core.XmlDocumentationGenerator.AppendMethodDocumentation(NSwag.CodeGeneration.CSharp.Models.CSharpOperationModel, Boolean, Boolean, Boolean, System.Text.StringBuilder)
+  nameWithType: XmlDocumentationGenerator.AppendMethodDocumentation(CSharpOperationModel, bool, bool, bool, StringBuilder)
+  nameWithType.vb: XmlDocumentationGenerator.AppendMethodDocumentation(CSharpOperationModel, Boolean, Boolean, Boolean, StringBuilder)
 - uid: Refitter.Core.XmlDocumentationGenerator.AppendMethodDocumentation*
   name: AppendMethodDocumentation
   href: api/Refitter.Core.XmlDocumentationGenerator.html#Refitter_Core_XmlDocumentationGenerator_AppendMethodDocumentation_

@@ -137,6 +137,7 @@
   &quot;generateDefaultAdditionalProperties&quot;: true, // Optional. default=true
   &quot;operationNameGenerator&quot;: &quot;Default&quot;, // Optional. May be one of Default, MultipleClientsFromOperationId, MultipleClientsFromPathSegments, MultipleClientsFromFirstTagAndOperationId, MultipleClientsFromFirstTagAndOperationName, MultipleClientsFromFirstTagAndPathSegments, SingleClientFromOperationId, SingleClientFromPathSegments
   &quot;immutableRecords&quot;: false,
+  &quot;useDynamicQuerystringParameters&quot;: false, // Optional. Default=false
   &quot;dependencyInjectionSettings&quot;: { // Optional
     &quot;baseUrl&quot;: &quot;https://petstore3.swagger.io/api/v3&quot;, // Optional. Leave this blank to set the base address manually
     &quot;httpMessageHandlers&quot;: [ // Optional
@@ -150,13 +151,13 @@
   },
   &quot;apizrSettings&quot;: { // Optional
     &quot;withRequestOptions&quot;: true, // Optional. Default=true
-    &quot;withRegistrationHelper&quot;: true, // Optional. Default=false
-    &quot;withCacheProvider&quot;: &quot;InMemory&quot;, // Optional. Values=None|Akavache|MonkeyCache|InMemory|DistributedAsString|DistributedAsByteArray. Default=None
-    &quot;withPriority&quot;: true, // Optional. Default=false
-    &quot;withMediation&quot;: true, // Optional. Default=false
-    &quot;withOptionalMediation&quot;: true, // Optional. Default=false
-    &quot;withMappingProvider&quot;: &quot;AutoMapper&quot;, // Optional. Values=None|AutoMapper|Mapster. Default=None
-    &quot;withFileTransfer&quot;: true // Optional. Default=false
+    &quot;withRegistrationHelper&quot;: false, // Optional. Default=false
+    &quot;withCacheProvider&quot;: &quot;None&quot;, // Optional. Values=None|Akavache|MonkeyCache|InMemory|DistributedAsString|DistributedAsByteArray. Default=None
+    &quot;withPriority&quot;: false, // Optional. Default=false
+    &quot;withMediation&quot;: false, // Optional. Default=false
+    &quot;withOptionalMediation&quot;: false, // Optional. Default=false
+    &quot;withMappingProvider&quot;: &quot;None&quot;, // Optional. Values=None|AutoMapper|Mapster. Default=None
+    &quot;withFileTransfer&quot;: false // Optional. Default=false
   },
   &quot;codeGeneratorSettings&quot;: { // Optional. Default settings are the values set in this example
     &quot;requiredPropertiesMustBeDefined&quot;: true,
@@ -225,6 +226,7 @@
 <li><code>generateDefaultAdditionalProperties</code>: Set to <code>false</code> to skip default additional properties. Default is <code>true</code></li>
 <li><code>operationNameGenerator</code>: The NSwag <code>IOperationNameGenerator</code> implementation to use. See <a href="https://refitter.github.io/api/Refitter.Core.OperationNameGeneratorTypes.html">https://refitter.github.io/api/Refitter.Core.OperationNameGeneratorTypes.html</a></li>
 <li><code>immutableRecords</code>: Set to <code>true</code> to generate contracts as immutable records instead of classes. Default is <code>false</code></li>
+<li><code>useDynamicQuerystringParameters</code>: Set to <code>true</code> to wrap multiple query parameters into a single complex one. Default is <code>false</code> (no wrapping). See <a href="https://github.com/reactiveui/refit?tab=readme-ov-file#dynamic-querystring-parameters">https://github.com/reactiveui/refit?tab=readme-ov-file#dynamic-querystring-parameters</a> for more information.</li>
 <li><code>dependencyInjectionSettings</code> - Setting this will generated extension methods to <code>IServiceCollection</code> for configuring Refit clients
 <ul>
 <li><code>baseUrl</code> - Used as the HttpClient base address. Leave this blank to manually set the base URL</li>
@@ -432,6 +434,10 @@
         &quot;immutableRecords&quot;: {
             &quot;type&quot;: &quot;boolean&quot;,
             &quot;description&quot;: &quot;Set to true to generate contracts as immutable records instead of classes&quot;
+        },
+        &quot;useDynamicQuerystringParameters&quot;: {
+            &quot;type&quot;: &quot;boolean&quot;,
+            &quot;description&quot;: &quot;Set to true to wrap multiple query parameters into a single complex one.&quot;
         },
         &quot;dependencyInjectionSettings&quot;: {
             &quot;type&quot;: &quot;object&quot;,
