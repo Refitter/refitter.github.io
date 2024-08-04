@@ -987,6 +987,19 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.RefitGeneratorSettings.ExcludeNamespaces
   nameWithType: RefitGeneratorSettings.ExcludeNamespaces
+- uid: Refitter.Core.RefitGeneratorSettings.GenerateClients
+  name: GenerateClients
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_GenerateClients
+  commentId: P:Refitter.Core.RefitGeneratorSettings.GenerateClients
+  fullName: Refitter.Core.RefitGeneratorSettings.GenerateClients
+  nameWithType: RefitGeneratorSettings.GenerateClients
+- uid: Refitter.Core.RefitGeneratorSettings.GenerateClients*
+  name: GenerateClients
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_GenerateClients_
+  commentId: Overload:Refitter.Core.RefitGeneratorSettings.GenerateClients
+  isSpec: "True"
+  fullName: Refitter.Core.RefitGeneratorSettings.GenerateClients
+  nameWithType: RefitGeneratorSettings.GenerateClients
 - uid: Refitter.Core.RefitGeneratorSettings.GenerateContracts
   name: GenerateContracts
   href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_GenerateContracts
