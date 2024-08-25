@@ -44,6 +44,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.GeneratedCode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.GeneratedCode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.GeneratorOutput.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.GeneratorOutput.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Refitter.Core.MappingProviderType.yml",
       "output": {
         ".html": {

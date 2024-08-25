@@ -671,6 +671,95 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.DependencyInjectionSettings.UsePolly
   nameWithType: DependencyInjectionSettings.UsePolly
+- uid: Refitter.Core.GeneratedCode
+  name: GeneratedCode
+  href: api/Refitter.Core.GeneratedCode.html
+  commentId: T:Refitter.Core.GeneratedCode
+  fullName: Refitter.Core.GeneratedCode
+  nameWithType: GeneratedCode
+- uid: Refitter.Core.GeneratedCode.#ctor(System.String,System.String)
+  name: GeneratedCode(string, string)
+  href: api/Refitter.Core.GeneratedCode.html#Refitter_Core_GeneratedCode__ctor_System_String_System_String_
+  commentId: M:Refitter.Core.GeneratedCode.#ctor(System.String,System.String)
+  name.vb: New(String, String)
+  fullName: Refitter.Core.GeneratedCode.GeneratedCode(string, string)
+  fullName.vb: Refitter.Core.GeneratedCode.New(String, String)
+  nameWithType: GeneratedCode.GeneratedCode(string, string)
+  nameWithType.vb: GeneratedCode.New(String, String)
+- uid: Refitter.Core.GeneratedCode.#ctor*
+  name: GeneratedCode
+  href: api/Refitter.Core.GeneratedCode.html#Refitter_Core_GeneratedCode__ctor_
+  commentId: Overload:Refitter.Core.GeneratedCode.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Refitter.Core.GeneratedCode.GeneratedCode
+  fullName.vb: Refitter.Core.GeneratedCode.New
+  nameWithType: GeneratedCode.GeneratedCode
+  nameWithType.vb: GeneratedCode.New
+- uid: Refitter.Core.GeneratedCode.Content
+  name: Content
+  href: api/Refitter.Core.GeneratedCode.html#Refitter_Core_GeneratedCode_Content
+  commentId: P:Refitter.Core.GeneratedCode.Content
+  fullName: Refitter.Core.GeneratedCode.Content
+  nameWithType: GeneratedCode.Content
+- uid: Refitter.Core.GeneratedCode.Content*
+  name: Content
+  href: api/Refitter.Core.GeneratedCode.html#Refitter_Core_GeneratedCode_Content_
+  commentId: Overload:Refitter.Core.GeneratedCode.Content
+  isSpec: "True"
+  fullName: Refitter.Core.GeneratedCode.Content
+  nameWithType: GeneratedCode.Content
+- uid: Refitter.Core.GeneratedCode.Filename
+  name: Filename
+  href: api/Refitter.Core.GeneratedCode.html#Refitter_Core_GeneratedCode_Filename
+  commentId: P:Refitter.Core.GeneratedCode.Filename
+  fullName: Refitter.Core.GeneratedCode.Filename
+  nameWithType: GeneratedCode.Filename
+- uid: Refitter.Core.GeneratedCode.Filename*
+  name: Filename
+  href: api/Refitter.Core.GeneratedCode.html#Refitter_Core_GeneratedCode_Filename_
+  commentId: Overload:Refitter.Core.GeneratedCode.Filename
+  isSpec: "True"
+  fullName: Refitter.Core.GeneratedCode.Filename
+  nameWithType: GeneratedCode.Filename
+- uid: Refitter.Core.GeneratorOutput
+  name: GeneratorOutput
+  href: api/Refitter.Core.GeneratorOutput.html
+  commentId: T:Refitter.Core.GeneratorOutput
+  fullName: Refitter.Core.GeneratorOutput
+  nameWithType: GeneratorOutput
+- uid: Refitter.Core.GeneratorOutput.#ctor(System.Collections.Generic.IReadOnlyList{Refitter.Core.GeneratedCode})
+  name: GeneratorOutput(IReadOnlyList<GeneratedCode>)
+  href: api/Refitter.Core.GeneratorOutput.html#Refitter_Core_GeneratorOutput__ctor_System_Collections_Generic_IReadOnlyList_Refitter_Core_GeneratedCode__
+  commentId: M:Refitter.Core.GeneratorOutput.#ctor(System.Collections.Generic.IReadOnlyList{Refitter.Core.GeneratedCode})
+  name.vb: New(IReadOnlyList(Of GeneratedCode))
+  fullName: Refitter.Core.GeneratorOutput.GeneratorOutput(System.Collections.Generic.IReadOnlyList<Refitter.Core.GeneratedCode>)
+  fullName.vb: Refitter.Core.GeneratorOutput.New(System.Collections.Generic.IReadOnlyList(Of Refitter.Core.GeneratedCode))
+  nameWithType: GeneratorOutput.GeneratorOutput(IReadOnlyList<GeneratedCode>)
+  nameWithType.vb: GeneratorOutput.New(IReadOnlyList(Of GeneratedCode))
+- uid: Refitter.Core.GeneratorOutput.#ctor*
+  name: GeneratorOutput
+  href: api/Refitter.Core.GeneratorOutput.html#Refitter_Core_GeneratorOutput__ctor_
+  commentId: Overload:Refitter.Core.GeneratorOutput.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Refitter.Core.GeneratorOutput.GeneratorOutput
+  fullName.vb: Refitter.Core.GeneratorOutput.New
+  nameWithType: GeneratorOutput.GeneratorOutput
+  nameWithType.vb: GeneratorOutput.New
+- uid: Refitter.Core.GeneratorOutput.Files
+  name: Files
+  href: api/Refitter.Core.GeneratorOutput.html#Refitter_Core_GeneratorOutput_Files
+  commentId: P:Refitter.Core.GeneratorOutput.Files
+  fullName: Refitter.Core.GeneratorOutput.Files
+  nameWithType: GeneratorOutput.Files
+- uid: Refitter.Core.GeneratorOutput.Files*
+  name: Files
+  href: api/Refitter.Core.GeneratorOutput.html#Refitter_Core_GeneratorOutput_Files_
+  commentId: Overload:Refitter.Core.GeneratorOutput.Files
+  isSpec: "True"
+  fullName: Refitter.Core.GeneratorOutput.Files
+  nameWithType: GeneratorOutput.Files
 - uid: Refitter.Core.MappingProviderType
   name: MappingProviderType
   href: api/Refitter.Core.MappingProviderType.html
@@ -884,6 +973,19 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.RefitGenerator.Generate
   nameWithType: RefitGenerator.Generate
+- uid: Refitter.Core.RefitGenerator.GenerateMultipleFiles
+  name: GenerateMultipleFiles()
+  href: api/Refitter.Core.RefitGenerator.html#Refitter_Core_RefitGenerator_GenerateMultipleFiles
+  commentId: M:Refitter.Core.RefitGenerator.GenerateMultipleFiles
+  fullName: Refitter.Core.RefitGenerator.GenerateMultipleFiles()
+  nameWithType: RefitGenerator.GenerateMultipleFiles()
+- uid: Refitter.Core.RefitGenerator.GenerateMultipleFiles*
+  name: GenerateMultipleFiles
+  href: api/Refitter.Core.RefitGenerator.html#Refitter_Core_RefitGenerator_GenerateMultipleFiles_
+  commentId: Overload:Refitter.Core.RefitGenerator.GenerateMultipleFiles
+  isSpec: "True"
+  fullName: Refitter.Core.RefitGenerator.GenerateMultipleFiles
+  nameWithType: RefitGenerator.GenerateMultipleFiles
 - uid: Refitter.Core.RefitGeneratorSettings
   name: RefitGeneratorSettings
   href: api/Refitter.Core.RefitGeneratorSettings.html
@@ -1039,6 +1141,19 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.RefitGeneratorSettings.GenerateDeprecatedOperations
   nameWithType: RefitGeneratorSettings.GenerateDeprecatedOperations
+- uid: Refitter.Core.RefitGeneratorSettings.GenerateMultipleFiles
+  name: GenerateMultipleFiles
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_GenerateMultipleFiles
+  commentId: P:Refitter.Core.RefitGeneratorSettings.GenerateMultipleFiles
+  fullName: Refitter.Core.RefitGeneratorSettings.GenerateMultipleFiles
+  nameWithType: RefitGeneratorSettings.GenerateMultipleFiles
+- uid: Refitter.Core.RefitGeneratorSettings.GenerateMultipleFiles*
+  name: GenerateMultipleFiles
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_GenerateMultipleFiles_
+  commentId: Overload:Refitter.Core.RefitGeneratorSettings.GenerateMultipleFiles
+  isSpec: "True"
+  fullName: Refitter.Core.RefitGeneratorSettings.GenerateMultipleFiles
+  nameWithType: RefitGeneratorSettings.GenerateMultipleFiles
 - uid: Refitter.Core.RefitGeneratorSettings.GenerateOperationHeaders
   name: GenerateOperationHeaders
   href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_GenerateOperationHeaders
