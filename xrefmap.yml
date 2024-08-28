@@ -671,6 +671,30 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.DependencyInjectionSettings.UsePolly
   nameWithType: DependencyInjectionSettings.UsePolly
+- uid: Refitter.Core.FilenameConstants
+  name: FilenameConstants
+  href: api/Refitter.Core.FilenameConstants.html
+  commentId: T:Refitter.Core.FilenameConstants
+  fullName: Refitter.Core.FilenameConstants
+  nameWithType: FilenameConstants
+- uid: Refitter.Core.FilenameConstants.Contracts
+  name: Contracts
+  href: api/Refitter.Core.FilenameConstants.html#Refitter_Core_FilenameConstants_Contracts
+  commentId: F:Refitter.Core.FilenameConstants.Contracts
+  fullName: Refitter.Core.FilenameConstants.Contracts
+  nameWithType: FilenameConstants.Contracts
+- uid: Refitter.Core.FilenameConstants.DependencyInjection
+  name: DependencyInjection
+  href: api/Refitter.Core.FilenameConstants.html#Refitter_Core_FilenameConstants_DependencyInjection
+  commentId: F:Refitter.Core.FilenameConstants.DependencyInjection
+  fullName: Refitter.Core.FilenameConstants.DependencyInjection
+  nameWithType: FilenameConstants.DependencyInjection
+- uid: Refitter.Core.FilenameConstants.RefitInterfaces
+  name: RefitInterfaces
+  href: api/Refitter.Core.FilenameConstants.html#Refitter_Core_FilenameConstants_RefitInterfaces
+  commentId: F:Refitter.Core.FilenameConstants.RefitInterfaces
+  fullName: Refitter.Core.FilenameConstants.RefitInterfaces
+  nameWithType: FilenameConstants.RefitInterfaces
 - uid: Refitter.Core.GeneratedCode
   name: GeneratedCode
   href: api/Refitter.Core.GeneratedCode.html
@@ -1057,6 +1081,38 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.RefitGeneratorSettings.CodeGeneratorSettings
   nameWithType: RefitGeneratorSettings.CodeGeneratorSettings
+- uid: Refitter.Core.RefitGeneratorSettings.ContractsNamespace
+  name: ContractsNamespace
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_ContractsNamespace
+  commentId: P:Refitter.Core.RefitGeneratorSettings.ContractsNamespace
+  fullName: Refitter.Core.RefitGeneratorSettings.ContractsNamespace
+  nameWithType: RefitGeneratorSettings.ContractsNamespace
+- uid: Refitter.Core.RefitGeneratorSettings.ContractsNamespace*
+  name: ContractsNamespace
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_ContractsNamespace_
+  commentId: Overload:Refitter.Core.RefitGeneratorSettings.ContractsNamespace
+  isSpec: "True"
+  fullName: Refitter.Core.RefitGeneratorSettings.ContractsNamespace
+  nameWithType: RefitGeneratorSettings.ContractsNamespace
+- uid: Refitter.Core.RefitGeneratorSettings.ContractsOutputFolder
+  name: ContractsOutputFolder
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_ContractsOutputFolder
+  commentId: P:Refitter.Core.RefitGeneratorSettings.ContractsOutputFolder
+  fullName: Refitter.Core.RefitGeneratorSettings.ContractsOutputFolder
+  nameWithType: RefitGeneratorSettings.ContractsOutputFolder
+- uid: Refitter.Core.RefitGeneratorSettings.ContractsOutputFolder*
+  name: ContractsOutputFolder
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_ContractsOutputFolder_
+  commentId: Overload:Refitter.Core.RefitGeneratorSettings.ContractsOutputFolder
+  isSpec: "True"
+  fullName: Refitter.Core.RefitGeneratorSettings.ContractsOutputFolder
+  nameWithType: RefitGeneratorSettings.ContractsOutputFolder
+- uid: Refitter.Core.RefitGeneratorSettings.DefaultNamespace
+  name: DefaultNamespace
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_DefaultNamespace
+  commentId: F:Refitter.Core.RefitGeneratorSettings.DefaultNamespace
+  fullName: Refitter.Core.RefitGeneratorSettings.DefaultNamespace
+  nameWithType: RefitGeneratorSettings.DefaultNamespace
 - uid: Refitter.Core.RefitGeneratorSettings.DefaultOutputFolder
   name: DefaultOutputFolder
   href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_DefaultOutputFolder
