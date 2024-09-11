@@ -1522,6 +1522,19 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.RefitGeneratorSettings.UseIsoDateFormat
   nameWithType: RefitGeneratorSettings.UseIsoDateFormat
+- uid: Refitter.Core.RefitGeneratorSettings.UsePolymorphicSerialization
+  name: UsePolymorphicSerialization
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_UsePolymorphicSerialization
+  commentId: P:Refitter.Core.RefitGeneratorSettings.UsePolymorphicSerialization
+  fullName: Refitter.Core.RefitGeneratorSettings.UsePolymorphicSerialization
+  nameWithType: RefitGeneratorSettings.UsePolymorphicSerialization
+- uid: Refitter.Core.RefitGeneratorSettings.UsePolymorphicSerialization*
+  name: UsePolymorphicSerialization
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_UsePolymorphicSerialization_
+  commentId: Overload:Refitter.Core.RefitGeneratorSettings.UsePolymorphicSerialization
+  isSpec: "True"
+  fullName: Refitter.Core.RefitGeneratorSettings.UsePolymorphicSerialization
+  nameWithType: RefitGeneratorSettings.UsePolymorphicSerialization
 - uid: Refitter.Core.SchemaCleaner
   name: SchemaCleaner
   href: api/Refitter.Core.SchemaCleaner.html
