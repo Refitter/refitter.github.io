@@ -141,6 +141,7 @@
   &quot;operationNameGenerator&quot;: &quot;Default&quot;, // Optional. May be one of Default, MultipleClientsFromOperationId, MultipleClientsFromPathSegments, MultipleClientsFromFirstTagAndOperationId, MultipleClientsFromFirstTagAndOperationName, MultipleClientsFromFirstTagAndPathSegments, SingleClientFromOperationId, SingleClientFromPathSegments
   &quot;immutableRecords&quot;: false,
   &quot;useDynamicQuerystringParameters&quot;: false, // Optional. Default=false
+  &quot;usePolymorphicSerialization&quot;, false, // Optional. Default=false
   &quot;dependencyInjectionSettings&quot;: { // Optional
     &quot;baseUrl&quot;: &quot;https://petstore3.swagger.io/api/v3&quot;, // Optional. Leave this blank to set the base address manually
     &quot;httpMessageHandlers&quot;: [ // Optional
@@ -232,6 +233,7 @@
 <li><code>operationNameGenerator</code>: The NSwag <code>IOperationNameGenerator</code> implementation to use. See <a href="https://refitter.github.io/api/Refitter.Core.OperationNameGeneratorTypes.html">https://refitter.github.io/api/Refitter.Core.OperationNameGeneratorTypes.html</a></li>
 <li><code>immutableRecords</code>: Set to <code>true</code> to generate contracts as immutable records instead of classes. Default is <code>false</code></li>
 <li><code>useDynamicQuerystringParameters</code>: Set to <code>true</code> to wrap multiple query parameters into a single complex one. Default is <code>false</code> (no wrapping). See <a href="https://github.com/reactiveui/refit?tab=readme-ov-file#dynamic-querystring-parameters">https://github.com/reactiveui/refit?tab=readme-ov-file#dynamic-querystring-parameters</a> for more information.</li>
+<li><code>usePolymorphicSerialization</code>: Set to <code>true</code> to use <code>System.Text.Json</code> polymorphic serialization.</li>
 <li><code>generateMultipleFiles</code>: Set to <code>true</code> to generate multiple files. This is automatically set to <code>true</code> when <code>ContractsOutputFolder</code> is specified. Refit interface(s) are written to a file called <code>RefitInterfaces.cs</code>, Contracts are written to a file called <code>Contracts.cs</code>, and Dependency Injection is written to a file called <code>DependencyInjection.cs</code></li>
 <li><code>dependencyInjectionSettings</code> - Setting this will generated extension methods to <code>IServiceCollection</code> for configuring Refit clients
 <ul>
@@ -452,6 +454,10 @@
         &quot;useDynamicQuerystringParameters&quot;: {
             &quot;type&quot;: &quot;boolean&quot;,
             &quot;description&quot;: &quot;Set to true to wrap multiple query parameters into a single complex one.&quot;
+        },
+        &quot;usePolymorphicSerialization&quot;: {
+            &quot;type&quot;: &quot;boolean&quot;,
+            &quot;description&quot;: &quot;Set to true to use System.Text.Json polymorphic serialization&quot;
         },
         &quot;generateMultipleFiles&quot;: {
             &quot;type&quot;: &quot;boolean&quot;,
