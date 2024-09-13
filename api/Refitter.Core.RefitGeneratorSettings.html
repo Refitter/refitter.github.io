@@ -1448,11 +1448,15 @@ in ISO 8601 standard date format using delimiters (for example: 2023-06-15)</p>
 
   <h3 id="Refitter_Core_RefitGeneratorSettings_UsePolymorphicSerialization" data-uid="Refitter.Core.RefitGeneratorSettings.UsePolymorphicSerialization">
   UsePolymorphicSerialization
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L224"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L228"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Set to <code>true</code> to use System.Text.Json polymorphic serialization. Default is <code>false</code>
-Gets a value indicating whether to use System.Text.Json polymorphic serialization</p>
+Gets a value indicating whether to use System.Text.Json polymorphic serialization
+Replaces NSwag JsonInheritanceConverter attributes with System.Text.Json JsonPolymorphicAttributes.
+To have the native support of inheritance (de)serialization and fallback to base types when
+payloads with (yet) unknown types are offered by newer versions of an API
+See <a href="https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/polymorphism">https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/polymorphism</a> for more information</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
