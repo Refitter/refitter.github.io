@@ -528,6 +528,33 @@ To know how to make Apizr fit your needs, please refer to the <a href="https://w
         .WithCancellation(cts.Token));
 </code></pre>
 <p>Please head to the <a href="https://www.apizr.net">Apizr documentation</a> to get more.</p>
+<h3 id="using-the-polymorphic-serialization">Using the polymorphic serialization</h3>
+<p>NSwag provides built-in support for inheritance serialization, which is enabled by default. To leverage the native inheritance serialization support from System.Text.Json, enable the <code>use-polymorphic-serialization</code> setting. This enhances serialization and deserialization performance while maintaining compatibility by falling back to base types when needed.</p>
+<p>Below are code examples with and without this setting enabled. The generated code is nearly identical, but with <code>use-polymorphic-serialization</code> enabled, deserialization attempts to instantiate the correct derived type wherever Tool instances are exposed. If an unknown type is encountered in the <code>$type</code> field, it will safely default to the base type.</p>
+<p>Additionally, this setting addresses a known issue in NSwag, preventing a <code>StackOverflowException</code> when unknown types are encountered.</p>
+<pre><code class="lang-csharp">[JsonPolymorphic(TypeDiscriminatorPropertyName = &quot;$type&quot;, UnknownDerivedTypeHandling = JsonUnknownDerivedTypeHandling.FallBackToBaseType, IgnoreUnrecognizedTypeDiscriminators = true)]
+[JsonDerivedType(typeof(TextTool), typeDiscriminator: &quot;TextTool&quot;)]
+[JsonDerivedType(typeof(BrushTool), typeDiscriminator: &quot;BrushTool&quot;)]
+[System.CodeDom.Compiler.GeneratedCode(&quot;NJsonSchema&quot;, &quot;14.1.0.0 (NJsonSchema v11.0.2.0 (Newtonsoft.Json v13.0.0.0))&quot;)]
+public partial class Tool
+{
+}
+</code></pre>
+<pre><code class="lang-csharp">[JsonInheritanceConverter(typeof(SomeComponent), &quot;$type&quot;)]
+[JsonInheritanceAttribute(&quot;TextTool&quot;, typeof(TextTool))]
+[JsonInheritanceAttribute(&quot;BrushTool&quot;, typeof(BrushTool))]
+[System.CodeDom.Compiler.GeneratedCode(&quot;NJsonSchema&quot;, &quot;14.1.0.0 (NJsonSchema v11.0.2.0 (Newtonsoft.Json v13.0.0.0))&quot;)]
+public partial class Tool
+{
+}
+</code></pre>
+<p>See</p>
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/polymorphism">System.Text.Json.Serialization documentation</a></li>
+<li><a href="https://github.com/RicoSuter/NJsonSchema/pull/1675">Add support for STJ-native C# code gen</a></li>
+<li><a href="https://github.com/RicoSuter/NJsonSchema/issues/1728">Stackoverflow Exception</a>
+for more information</li>
+</ul>
 
 </article>
 
