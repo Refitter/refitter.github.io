@@ -44,16 +44,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Refitter.Core.FilenameConstants.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Refitter.Core.FilenameConstants.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Refitter.Core.GeneratedCode.yml",
       "output": {
         ".html": {
@@ -198,6 +188,16 @@
       "output": {
         ".html": {
           "relative_path": "api/Refitter.Core.TypeAccessibility.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.TypenameConstants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.TypenameConstants.html"
         }
       },
       "version": ""

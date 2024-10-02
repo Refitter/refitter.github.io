@@ -671,30 +671,6 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.DependencyInjectionSettings.UsePolly
   nameWithType: DependencyInjectionSettings.UsePolly
-- uid: Refitter.Core.FilenameConstants
-  name: FilenameConstants
-  href: api/Refitter.Core.FilenameConstants.html
-  commentId: T:Refitter.Core.FilenameConstants
-  fullName: Refitter.Core.FilenameConstants
-  nameWithType: FilenameConstants
-- uid: Refitter.Core.FilenameConstants.Contracts
-  name: Contracts
-  href: api/Refitter.Core.FilenameConstants.html#Refitter_Core_FilenameConstants_Contracts
-  commentId: F:Refitter.Core.FilenameConstants.Contracts
-  fullName: Refitter.Core.FilenameConstants.Contracts
-  nameWithType: FilenameConstants.Contracts
-- uid: Refitter.Core.FilenameConstants.DependencyInjection
-  name: DependencyInjection
-  href: api/Refitter.Core.FilenameConstants.html#Refitter_Core_FilenameConstants_DependencyInjection
-  commentId: F:Refitter.Core.FilenameConstants.DependencyInjection
-  fullName: Refitter.Core.FilenameConstants.DependencyInjection
-  nameWithType: FilenameConstants.DependencyInjection
-- uid: Refitter.Core.FilenameConstants.RefitInterfaces
-  name: RefitInterfaces
-  href: api/Refitter.Core.FilenameConstants.html#Refitter_Core_FilenameConstants_RefitInterfaces
-  commentId: F:Refitter.Core.FilenameConstants.RefitInterfaces
-  fullName: Refitter.Core.FilenameConstants.RefitInterfaces
-  nameWithType: FilenameConstants.RefitInterfaces
 - uid: Refitter.Core.GeneratedCode
   name: GeneratedCode
   href: api/Refitter.Core.GeneratedCode.html
@@ -746,6 +722,19 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.GeneratedCode.Filename
   nameWithType: GeneratedCode.Filename
+- uid: Refitter.Core.GeneratedCode.TypeName
+  name: TypeName
+  href: api/Refitter.Core.GeneratedCode.html#Refitter_Core_GeneratedCode_TypeName
+  commentId: P:Refitter.Core.GeneratedCode.TypeName
+  fullName: Refitter.Core.GeneratedCode.TypeName
+  nameWithType: GeneratedCode.TypeName
+- uid: Refitter.Core.GeneratedCode.TypeName*
+  name: TypeName
+  href: api/Refitter.Core.GeneratedCode.html#Refitter_Core_GeneratedCode_TypeName_
+  commentId: Overload:Refitter.Core.GeneratedCode.TypeName
+  isSpec: "True"
+  fullName: Refitter.Core.GeneratedCode.TypeName
+  nameWithType: GeneratedCode.TypeName
 - uid: Refitter.Core.GeneratorOutput
   name: GeneratorOutput
   href: api/Refitter.Core.GeneratorOutput.html
@@ -1749,6 +1738,30 @@ references:
   commentId: F:Refitter.Core.TypeAccessibility.Public
   fullName: Refitter.Core.TypeAccessibility.Public
   nameWithType: TypeAccessibility.Public
+- uid: Refitter.Core.TypenameConstants
+  name: TypenameConstants
+  href: api/Refitter.Core.TypenameConstants.html
+  commentId: T:Refitter.Core.TypenameConstants
+  fullName: Refitter.Core.TypenameConstants
+  nameWithType: TypenameConstants
+- uid: Refitter.Core.TypenameConstants.Contracts
+  name: Contracts
+  href: api/Refitter.Core.TypenameConstants.html#Refitter_Core_TypenameConstants_Contracts
+  commentId: F:Refitter.Core.TypenameConstants.Contracts
+  fullName: Refitter.Core.TypenameConstants.Contracts
+  nameWithType: TypenameConstants.Contracts
+- uid: Refitter.Core.TypenameConstants.DependencyInjection
+  name: DependencyInjection
+  href: api/Refitter.Core.TypenameConstants.html#Refitter_Core_TypenameConstants_DependencyInjection
+  commentId: F:Refitter.Core.TypenameConstants.DependencyInjection
+  fullName: Refitter.Core.TypenameConstants.DependencyInjection
+  nameWithType: TypenameConstants.DependencyInjection
+- uid: Refitter.Core.TypenameConstants.RefitInterfaces
+  name: RefitInterfaces
+  href: api/Refitter.Core.TypenameConstants.html#Refitter_Core_TypenameConstants_RefitInterfaces
+  commentId: F:Refitter.Core.TypenameConstants.RefitInterfaces
+  fullName: Refitter.Core.TypenameConstants.RefitInterfaces
+  nameWithType: TypenameConstants.RefitInterfaces
 - uid: Refitter.Core.XmlDocumentationGenerator
   name: XmlDocumentationGenerator
   href: api/Refitter.Core.XmlDocumentationGenerator.html
