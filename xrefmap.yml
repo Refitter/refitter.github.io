@@ -503,6 +503,19 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.CodeGeneratorSettings.JsonSerializerSettingsTransformationMethod
   nameWithType: CodeGeneratorSettings.JsonSerializerSettingsTransformationMethod
+- uid: Refitter.Core.CodeGeneratorSettings.PropertyNameGenerator
+  name: PropertyNameGenerator
+  href: api/Refitter.Core.CodeGeneratorSettings.html#Refitter_Core_CodeGeneratorSettings_PropertyNameGenerator
+  commentId: P:Refitter.Core.CodeGeneratorSettings.PropertyNameGenerator
+  fullName: Refitter.Core.CodeGeneratorSettings.PropertyNameGenerator
+  nameWithType: CodeGeneratorSettings.PropertyNameGenerator
+- uid: Refitter.Core.CodeGeneratorSettings.PropertyNameGenerator*
+  name: PropertyNameGenerator
+  href: api/Refitter.Core.CodeGeneratorSettings.html#Refitter_Core_CodeGeneratorSettings_PropertyNameGenerator_
+  commentId: Overload:Refitter.Core.CodeGeneratorSettings.PropertyNameGenerator
+  isSpec: "True"
+  fullName: Refitter.Core.CodeGeneratorSettings.PropertyNameGenerator
+  nameWithType: CodeGeneratorSettings.PropertyNameGenerator
 - uid: Refitter.Core.CodeGeneratorSettings.PropertySetterAccessModifier
   name: PropertySetterAccessModifier
   href: api/Refitter.Core.CodeGeneratorSettings.html#Refitter_Core_CodeGeneratorSettings_PropertySetterAccessModifier
@@ -1407,6 +1420,19 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.RefitGeneratorSettings.OutputFolder
   nameWithType: RefitGeneratorSettings.OutputFolder
+- uid: Refitter.Core.RefitGeneratorSettings.ParameterNameGenerator
+  name: ParameterNameGenerator
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_ParameterNameGenerator
+  commentId: P:Refitter.Core.RefitGeneratorSettings.ParameterNameGenerator
+  fullName: Refitter.Core.RefitGeneratorSettings.ParameterNameGenerator
+  nameWithType: RefitGeneratorSettings.ParameterNameGenerator
+- uid: Refitter.Core.RefitGeneratorSettings.ParameterNameGenerator*
+  name: ParameterNameGenerator
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_ParameterNameGenerator_
+  commentId: Overload:Refitter.Core.RefitGeneratorSettings.ParameterNameGenerator
+  isSpec: "True"
+  fullName: Refitter.Core.RefitGeneratorSettings.ParameterNameGenerator
+  nameWithType: RefitGeneratorSettings.ParameterNameGenerator
 - uid: Refitter.Core.RefitGeneratorSettings.ResponseTypeOverride
   name: ResponseTypeOverride
   href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_ResponseTypeOverride
