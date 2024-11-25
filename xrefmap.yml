@@ -65,19 +65,6 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.ApizrSettings.WithMediation
   nameWithType: ApizrSettings.WithMediation
-- uid: Refitter.Core.ApizrSettings.WithOptionalMediation
-  name: WithOptionalMediation
-  href: api/Refitter.Core.ApizrSettings.html#Refitter_Core_ApizrSettings_WithOptionalMediation
-  commentId: P:Refitter.Core.ApizrSettings.WithOptionalMediation
-  fullName: Refitter.Core.ApizrSettings.WithOptionalMediation
-  nameWithType: ApizrSettings.WithOptionalMediation
-- uid: Refitter.Core.ApizrSettings.WithOptionalMediation*
-  name: WithOptionalMediation
-  href: api/Refitter.Core.ApizrSettings.html#Refitter_Core_ApizrSettings_WithOptionalMediation_
-  commentId: Overload:Refitter.Core.ApizrSettings.WithOptionalMediation
-  isSpec: "True"
-  fullName: Refitter.Core.ApizrSettings.WithOptionalMediation
-  nameWithType: ApizrSettings.WithOptionalMediation
 - uid: Refitter.Core.ApizrSettings.WithPriority
   name: WithPriority
   href: api/Refitter.Core.ApizrSettings.html#Refitter_Core_ApizrSettings_WithPriority
@@ -1686,12 +1673,6 @@ references:
   commentId: F:Refitter.Core.Settings.ApizrPackages.Apizr_Integrations_FileTransfer_MediatR
   fullName: Refitter.Core.Settings.ApizrPackages.Apizr_Integrations_FileTransfer_MediatR
   nameWithType: ApizrPackages.Apizr_Integrations_FileTransfer_MediatR
-- uid: Refitter.Core.Settings.ApizrPackages.Apizr_Integrations_FileTransfer_Optional
-  name: Apizr_Integrations_FileTransfer_Optional
-  href: api/Refitter.Core.Settings.ApizrPackages.html#Refitter_Core_Settings_ApizrPackages_Apizr_Integrations_FileTransfer_Optional
-  commentId: F:Refitter.Core.Settings.ApizrPackages.Apizr_Integrations_FileTransfer_Optional
-  fullName: Refitter.Core.Settings.ApizrPackages.Apizr_Integrations_FileTransfer_Optional
-  nameWithType: ApizrPackages.Apizr_Integrations_FileTransfer_Optional
 - uid: Refitter.Core.Settings.ApizrPackages.Apizr_Integrations_Fusillade
   name: Apizr_Integrations_Fusillade
   href: api/Refitter.Core.Settings.ApizrPackages.html#Refitter_Core_Settings_ApizrPackages_Apizr_Integrations_Fusillade
@@ -1716,12 +1697,6 @@ references:
   commentId: F:Refitter.Core.Settings.ApizrPackages.Apizr_Integrations_MonkeyCache
   fullName: Refitter.Core.Settings.ApizrPackages.Apizr_Integrations_MonkeyCache
   nameWithType: ApizrPackages.Apizr_Integrations_MonkeyCache
-- uid: Refitter.Core.Settings.ApizrPackages.Apizr_Integrations_Optional
-  name: Apizr_Integrations_Optional
-  href: api/Refitter.Core.Settings.ApizrPackages.html#Refitter_Core_Settings_ApizrPackages_Apizr_Integrations_Optional
-  commentId: F:Refitter.Core.Settings.ApizrPackages.Apizr_Integrations_Optional
-  fullName: Refitter.Core.Settings.ApizrPackages.Apizr_Integrations_Optional
-  nameWithType: ApizrPackages.Apizr_Integrations_Optional
 - uid: Refitter.Core.TransientErrorHandler
   name: TransientErrorHandler
   href: api/Refitter.Core.TransientErrorHandler.html
