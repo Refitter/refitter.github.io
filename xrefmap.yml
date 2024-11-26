@@ -1186,6 +1186,19 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.RefitGeneratorSettings.GenerateDeprecatedOperations
   nameWithType: RefitGeneratorSettings.GenerateDeprecatedOperations
+- uid: Refitter.Core.RefitGeneratorSettings.GenerateDisposableClients
+  name: GenerateDisposableClients
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_GenerateDisposableClients
+  commentId: P:Refitter.Core.RefitGeneratorSettings.GenerateDisposableClients
+  fullName: Refitter.Core.RefitGeneratorSettings.GenerateDisposableClients
+  nameWithType: RefitGeneratorSettings.GenerateDisposableClients
+- uid: Refitter.Core.RefitGeneratorSettings.GenerateDisposableClients*
+  name: GenerateDisposableClients
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_GenerateDisposableClients_
+  commentId: Overload:Refitter.Core.RefitGeneratorSettings.GenerateDisposableClients
+  isSpec: "True"
+  fullName: Refitter.Core.RefitGeneratorSettings.GenerateDisposableClients
+  nameWithType: RefitGeneratorSettings.GenerateDisposableClients
 - uid: Refitter.Core.RefitGeneratorSettings.GenerateMultipleFiles
   name: GenerateMultipleFiles
   href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_GenerateMultipleFiles
