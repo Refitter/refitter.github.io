@@ -267,6 +267,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/msbuild.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/msbuild.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/refitter-file-format.md",
       "output": {
         ".html": {
