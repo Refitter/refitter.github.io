@@ -1277,6 +1277,19 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.RefitGeneratorSettings.ImmutableRecords
   nameWithType: RefitGeneratorSettings.ImmutableRecords
+- uid: Refitter.Core.RefitGeneratorSettings.IncludeInheritanceHierarchy
+  name: IncludeInheritanceHierarchy
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_IncludeInheritanceHierarchy
+  commentId: P:Refitter.Core.RefitGeneratorSettings.IncludeInheritanceHierarchy
+  fullName: Refitter.Core.RefitGeneratorSettings.IncludeInheritanceHierarchy
+  nameWithType: RefitGeneratorSettings.IncludeInheritanceHierarchy
+- uid: Refitter.Core.RefitGeneratorSettings.IncludeInheritanceHierarchy*
+  name: IncludeInheritanceHierarchy
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_IncludeInheritanceHierarchy_
+  commentId: Overload:Refitter.Core.RefitGeneratorSettings.IncludeInheritanceHierarchy
+  isSpec: "True"
+  fullName: Refitter.Core.RefitGeneratorSettings.IncludeInheritanceHierarchy
+  nameWithType: RefitGeneratorSettings.IncludeInheritanceHierarchy
 - uid: Refitter.Core.RefitGeneratorSettings.IncludePathMatches
   name: IncludePathMatches
   href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_IncludePathMatches
@@ -1588,6 +1601,19 @@ references:
   fullName.vb: Refitter.Core.SchemaCleaner.New
   nameWithType: SchemaCleaner.SchemaCleaner
   nameWithType.vb: SchemaCleaner.New
+- uid: Refitter.Core.SchemaCleaner.IncludeInheritanceHierarchy
+  name: IncludeInheritanceHierarchy
+  href: api/Refitter.Core.SchemaCleaner.html#Refitter_Core_SchemaCleaner_IncludeInheritanceHierarchy
+  commentId: P:Refitter.Core.SchemaCleaner.IncludeInheritanceHierarchy
+  fullName: Refitter.Core.SchemaCleaner.IncludeInheritanceHierarchy
+  nameWithType: SchemaCleaner.IncludeInheritanceHierarchy
+- uid: Refitter.Core.SchemaCleaner.IncludeInheritanceHierarchy*
+  name: IncludeInheritanceHierarchy
+  href: api/Refitter.Core.SchemaCleaner.html#Refitter_Core_SchemaCleaner_IncludeInheritanceHierarchy_
+  commentId: Overload:Refitter.Core.SchemaCleaner.IncludeInheritanceHierarchy
+  isSpec: "True"
+  fullName: Refitter.Core.SchemaCleaner.IncludeInheritanceHierarchy
+  nameWithType: SchemaCleaner.IncludeInheritanceHierarchy
 - uid: Refitter.Core.SchemaCleaner.RemoveUnreferencedSchema
   name: RemoveUnreferencedSchema()
   href: api/Refitter.Core.SchemaCleaner.html#Refitter_Core_SchemaCleaner_RemoveUnreferencedSchema

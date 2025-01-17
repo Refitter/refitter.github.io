@@ -313,7 +313,7 @@ Class RefitGeneratorSettings  <a class="header-action link-secondary" title="Vie
 
   <h3 id="Refitter_Core_RefitGeneratorSettings_ApizrSettings" data-uid="Refitter.Core.RefitGeneratorSettings.ApizrSettings">
   ApizrSettings
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L209"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L216"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Get ot set the settings describing how to configure Apizr</p>
@@ -568,7 +568,7 @@ Class RefitGeneratorSettings  <a class="header-action link-secondary" title="Vie
 
   <h3 id="Refitter_Core_RefitGeneratorSettings_GenerateDefaultAdditionalProperties" data-uid="Refitter.Core.RefitGeneratorSettings.GenerateDefaultAdditionalProperties">
   GenerateDefaultAdditionalProperties
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L199"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L206"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Set to <code>false</code> to skip default additional properties. Default is <code>true</code></p>
@@ -664,7 +664,7 @@ Class RefitGeneratorSettings  <a class="header-action link-secondary" title="Vie
 
   <h3 id="Refitter_Core_RefitGeneratorSettings_GenerateMultipleFiles" data-uid="Refitter.Core.RefitGeneratorSettings.GenerateMultipleFiles">
   GenerateMultipleFiles
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L224"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L231"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Set to <code>true</code> to generate multiple files. Default is <code>false</code>
@@ -797,7 +797,7 @@ the relevant status codes specified in the OpenAPI document.</p>
 
   <h3 id="Refitter_Core_RefitGeneratorSettings_ImmutableRecords" data-uid="Refitter.Core.RefitGeneratorSettings.ImmutableRecords">
   ImmutableRecords
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L204"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L211"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Set to <code>true</code> to generate contracts as immutable records instead of classes</p>
@@ -806,6 +806,40 @@ the relevant status codes specified in the OpenAPI document.</p>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool ImmutableRecords { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Refitter_Core_RefitGeneratorSettings_IncludeInheritanceHierarchy_" data-uid="Refitter.Core.RefitGeneratorSettings.IncludeInheritanceHierarchy*"></a>
+
+  <h3 id="Refitter_Core_RefitGeneratorSettings_IncludeInheritanceHierarchy" data-uid="Refitter.Core.RefitGeneratorSettings.IncludeInheritanceHierarchy">
+  IncludeInheritanceHierarchy
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L195"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set to <code>true</code> to keep all possible type-instances of inheritance/union types.
+If this is <code>false</code> only directly referenced types will be kept.
+This works in conjunction with <a class="xref" href="Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_TrimUnusedSchema">TrimUnusedSchema</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IncludeInheritanceHierarchy { get; set; }</code></pre>
   </div>
 
 
@@ -1055,7 +1089,7 @@ public MultipleInterfaces MultipleInterfaces { get; set; }</code></pre>
 
   <h3 id="Refitter_Core_RefitGeneratorSettings_OperationNameGenerator" data-uid="Refitter.Core.RefitGeneratorSettings.OperationNameGenerator">
   OperationNameGenerator
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L193"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L200"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The NSwag IOperationNameGenerator implementation to use</p>
@@ -1219,7 +1253,7 @@ For the Source Generator, this is the name of the generated class and the defaul
 
   <h3 id="Refitter_Core_RefitGeneratorSettings_ParameterNameGenerator" data-uid="Refitter.Core.RefitGeneratorSettings.ParameterNameGenerator">
   ParameterNameGenerator
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L236"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L243"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -1446,7 +1480,7 @@ public TypeAccessibility TypeAccessibility { get; set; }</code></pre>
 
   <h3 id="Refitter_Core_RefitGeneratorSettings_UseDynamicQuerystringParameters" data-uid="Refitter.Core.RefitGeneratorSettings.UseDynamicQuerystringParameters">
   UseDynamicQuerystringParameters
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L215"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L222"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Set to <code>true</code> to wrap multiple query parameters into a single complex one. Default is <code>false</code> (no wrapping).
@@ -1512,7 +1546,7 @@ in ISO 8601 standard date format using delimiters (for example: 2023-06-15)</p>
 
   <h3 id="Refitter_Core_RefitGeneratorSettings_UsePolymorphicSerialization" data-uid="Refitter.Core.RefitGeneratorSettings.UsePolymorphicSerialization">
   UsePolymorphicSerialization
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L234"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L241"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Set to <code>true</code> to use System.Text.Json polymorphic serialization. Default is <code>false</code>
