@@ -217,6 +217,19 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.CodeGeneratorSettings.DateFormat
   nameWithType: CodeGeneratorSettings.DateFormat
+- uid: Refitter.Core.CodeGeneratorSettings.DateTimeFormat
+  name: DateTimeFormat
+  href: api/Refitter.Core.CodeGeneratorSettings.html#Refitter_Core_CodeGeneratorSettings_DateTimeFormat
+  commentId: P:Refitter.Core.CodeGeneratorSettings.DateTimeFormat
+  fullName: Refitter.Core.CodeGeneratorSettings.DateTimeFormat
+  nameWithType: CodeGeneratorSettings.DateTimeFormat
+- uid: Refitter.Core.CodeGeneratorSettings.DateTimeFormat*
+  name: DateTimeFormat
+  href: api/Refitter.Core.CodeGeneratorSettings.html#Refitter_Core_CodeGeneratorSettings_DateTimeFormat_
+  commentId: Overload:Refitter.Core.CodeGeneratorSettings.DateTimeFormat
+  isSpec: "True"
+  fullName: Refitter.Core.CodeGeneratorSettings.DateTimeFormat
+  nameWithType: CodeGeneratorSettings.DateTimeFormat
 - uid: Refitter.Core.CodeGeneratorSettings.DateTimeType
   name: DateTimeType
   href: api/Refitter.Core.CodeGeneratorSettings.html#Refitter_Core_CodeGeneratorSettings_DateTimeType
