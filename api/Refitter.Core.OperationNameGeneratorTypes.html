@@ -114,38 +114,46 @@ Enum OperationNameGeneratorTypes  <a class="header-action link-secondary" title=
 </h2>
   <dl class="parameters">
     <dt id="Refitter_Core_OperationNameGeneratorTypes_Default"><code>Default = 0</code></dt>
-    <dd><p>Use the Refitter IOperationNameGenerator implementation
+  
+  <dd><p>Use the Refitter IOperationNameGenerator implementation
 This uses <a class="xref" href="Refitter.Core.OperationNameGeneratorTypes.html#Refitter_Core_OperationNameGeneratorTypes_MultipleClientsFromOperationId">MultipleClientsFromOperationId</a> by default but
 if there are duplicate operation ID's it is changed to
 <a class="xref" href="Refitter.Core.OperationNameGeneratorTypes.html#Refitter_Core_OperationNameGeneratorTypes_MultipleClientsFromFirstTagAndPathSegments">MultipleClientsFromFirstTagAndPathSegments</a></p>
 </dd>
     <dt id="Refitter_Core_OperationNameGeneratorTypes_MultipleClientsFromFirstTagAndOperationId"><code>MultipleClientsFromFirstTagAndOperationId = 3</code></dt>
-    <dd><p>Generates the client name based on the first tag and
+  
+  <dd><p>Generates the client name based on the first tag and
 operation name based on the operation id
 (operation name = operationId, client name = first tag).</p>
 </dd>
     <dt id="Refitter_Core_OperationNameGeneratorTypes_MultipleClientsFromFirstTagAndOperationName"><code>MultipleClientsFromFirstTagAndOperationName = 4</code></dt>
-    <dd><p>Generates the client name based on the first tag and operation names
+  
+  <dd><p>Generates the client name based on the first tag and operation names
 based on the Swagger operation ID (underscore separated).</p>
 </dd>
     <dt id="Refitter_Core_OperationNameGeneratorTypes_MultipleClientsFromFirstTagAndPathSegments"><code>MultipleClientsFromFirstTagAndPathSegments = 5</code></dt>
-    <dd><p>Generates the client name based on the first tag and operation name
+  
+  <dd><p>Generates the client name based on the first tag and operation name
 based on the path segments (operation name = last segment, client name = first tag).</p>
 </dd>
     <dt id="Refitter_Core_OperationNameGeneratorTypes_MultipleClientsFromOperationId"><code>MultipleClientsFromOperationId = 1</code></dt>
-    <dd><p>Generates multiple clients and operation names based
+  
+  <dd><p>Generates multiple clients and operation names based
 on the Swagger operation ID (underscore separated).</p>
 </dd>
     <dt id="Refitter_Core_OperationNameGeneratorTypes_MultipleClientsFromPathSegments"><code>MultipleClientsFromPathSegments = 2</code></dt>
-    <dd><p>Generates the client and operation name based on the path segments
+  
+  <dd><p>Generates the client and operation name based on the path segments
 (operation name = last segment, client name = second to last segment).</p>
 </dd>
     <dt id="Refitter_Core_OperationNameGeneratorTypes_SingleClientFromOperationId"><code>SingleClientFromOperationId = 6</code></dt>
-    <dd><p>Generates the client and operation name
+  
+  <dd><p>Generates the client and operation name
 based on the Swagger operation ID.</p>
 </dd>
     <dt id="Refitter_Core_OperationNameGeneratorTypes_SingleClientFromPathSegments"><code>SingleClientFromPathSegments = 7</code></dt>
-    <dd><p>Generates the operation name from path segments
+  
+  <dd><p>Generates the operation name from path segments
 (suffixed by HTTP operation name if need be)</p>
 </dd>
   </dl>

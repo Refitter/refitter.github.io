@@ -10,7 +10,11 @@
           "relative_path": "api/Refitter.Core.ApizrSettings.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.ApizrSettings",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.ApizrSettings.yml\" sourcestartlinenumber=\"1\">Describing how Apizr should be configured.\nHere are only the common configurations.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -20,7 +24,11 @@
           "relative_path": "api/Refitter.Core.CacheProviderType.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.CacheProviderType",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -30,7 +38,11 @@
           "relative_path": "api/Refitter.Core.CodeGeneratorSettings.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.CodeGeneratorSettings",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.CodeGeneratorSettings.yml\" sourcestartlinenumber=\"1\">CSharp code generator settings</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -40,7 +52,11 @@
           "relative_path": "api/Refitter.Core.DependencyInjectionSettings.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.DependencyInjectionSettings",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.DependencyInjectionSettings.yml\" sourcestartlinenumber=\"1\">Dependency Injection settings describing how the Refit client should be configured.\nThis can be used to configure the HttpClient pipeline with additional handlers</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -50,7 +66,11 @@
           "relative_path": "api/Refitter.Core.GeneratedCode.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.GeneratedCode",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -60,7 +80,11 @@
           "relative_path": "api/Refitter.Core.GeneratorOutput.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.GeneratorOutput",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -70,7 +94,11 @@
           "relative_path": "api/Refitter.Core.MappingProviderType.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.MappingProviderType",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -80,7 +108,11 @@
           "relative_path": "api/Refitter.Core.MultipleInterfaces.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.MultipleInterfaces",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.MultipleInterfaces.yml\" sourcestartlinenumber=\"1\">Enum representing the different options for generating multiple Refit interfaces.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -90,7 +122,11 @@
           "relative_path": "api/Refitter.Core.NamingSettings.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.NamingSettings",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.NamingSettings.yml\" sourcestartlinenumber=\"1\">Configurable settings for naming in the client API</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -100,7 +136,11 @@
           "relative_path": "api/Refitter.Core.OpenApiDocumentFactory.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.OpenApiDocumentFactory",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.OpenApiDocumentFactory.yml\" sourcestartlinenumber=\"1\">Creates an <xref href=\"NSwag.OpenApiDocument\" data-throw-if-not-resolved=\"false\"></xref> from a specified path or URL.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -110,7 +150,11 @@
           "relative_path": "api/Refitter.Core.OperationNameGeneratorTypes.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.OperationNameGeneratorTypes",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.OperationNameGeneratorTypes.yml\" sourcestartlinenumber=\"1\">The NSwag IOperationNameGenerator implementation to use</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -120,7 +164,11 @@
           "relative_path": "api/Refitter.Core.RefitGenerator.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.RefitGenerator",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.RefitGenerator.yml\" sourcestartlinenumber=\"1\">Generates Refit clients and interfaces based on an OpenAPI specification.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -130,7 +178,11 @@
           "relative_path": "api/Refitter.Core.RefitGeneratorSettings.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.RefitGeneratorSettings",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.RefitGeneratorSettings.yml\" sourcestartlinenumber=\"1\">Provide settings for Refit generator.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -140,7 +192,11 @@
           "relative_path": "api/Refitter.Core.SchemaCleaner.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.SchemaCleaner",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -150,7 +206,11 @@
           "relative_path": "api/Refitter.Core.Serializer.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.Serializer",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.Serializer.yml\" sourcestartlinenumber=\"1\">Provides methods for serializing and deserializing objects to and from JSON.\nThis serializer is configured to be case-insensitive.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -160,7 +220,11 @@
           "relative_path": "api/Refitter.Core.Settings.ApizrPackages.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.Settings.ApizrPackages",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -170,7 +234,11 @@
           "relative_path": "api/Refitter.Core.Settings.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.Settings",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -180,7 +248,11 @@
           "relative_path": "api/Refitter.Core.TransientErrorHandler.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.TransientErrorHandler",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.TransientErrorHandler.yml\" sourcestartlinenumber=\"1\">Libraries for handling transient errors</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -190,7 +262,11 @@
           "relative_path": "api/Refitter.Core.TypeAccessibility.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.TypeAccessibility",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.TypeAccessibility.yml\" sourcestartlinenumber=\"1\">Specifies the accessibility of a type.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -200,7 +276,11 @@
           "relative_path": "api/Refitter.Core.TypenameConstants.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.TypenameConstants",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -210,7 +290,11 @@
           "relative_path": "api/Refitter.Core.XmlDocumentationGenerator.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.XmlDocumentationGenerator",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.XmlDocumentationGenerator.yml\" sourcestartlinenumber=\"1\">Generator class for creating XML documentation.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -220,7 +304,11 @@
           "relative_path": "api/Refitter.Core.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core",
+      "Summary": null
     },
     {
       "type": "Conceptual",
@@ -236,11 +324,11 @@
       "type": "Toc",
       "source_relative_path": "api/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "api/toc.html"
-        },
         ".json": {
           "relative_path": "api/toc.json"
+        },
+        ".html": {
+          "relative_path": "api/toc.html"
         }
       },
       "version": ""
@@ -299,11 +387,11 @@
       "type": "Toc",
       "source_relative_path": "articles/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "articles/toc.html"
-        },
         ".json": {
           "relative_path": "articles/toc.json"
+        },
+        ".html": {
+          "relative_path": "articles/toc.html"
         }
       },
       "version": ""
@@ -372,11 +460,11 @@
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "toc.html"
-        },
         ".json": {
           "relative_path": "toc.json"
+        },
+        ".html": {
+          "relative_path": "toc.html"
         }
       },
       "version": ""
