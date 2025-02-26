@@ -146,8 +146,8 @@
   &quot;dependencyInjectionSettings&quot;: { // Optional
     &quot;baseUrl&quot;: &quot;https://petstore3.swagger.io/api/v3&quot;, // Optional. Leave this blank to set the base address manually
     &quot;httpMessageHandlers&quot;: [ // Optional
-        &quot;AuthorizationMessageHandler&quot;, 
-        &quot;TelemetryMessageHandler&quot; 
+        &quot;AuthorizationMessageHandler&quot;,
+        &quot;TelemetryMessageHandler&quot;
     ],
     &quot;usePolly&quot;: true, // DEPRECATED - Use &quot;transientErrorHandler&quot;: &quot;None|Polly|HttpResilience&quot; instead
     &quot;transientErrorHandler&quot;: &quot;HttpResilience&quot;, // Optional. Set this to configure transient error handling with a retry policy that uses a jittered backoff. May be one of None, Polly, HttpResilience
@@ -193,6 +193,8 @@
     &quot;generateNativeRecords&quot;: false,
     &quot;generateDefaultValues&quot;: true,
     &quot;inlineNamedAny&quot;: false,
+    &quot;dateFormat&quot;: &quot;string&quot;,
+    &quot;dateTimeFormat&quot;: &quot;string&quot;,
     &quot;excludedTypeNames&quot;: [
       &quot;ExcludedTypeFoo&quot;,
       &quot;ExcludedTypeBar&quot;
@@ -290,6 +292,8 @@
 <li><code>generateDefaultValues</code> - Default is true</li>
 <li><code>inlineNamedAny</code> - Default is false</li>
 <li><code>excludedTypeNames</code> - Default is empty</li>
+<li><code>dateFormat</code> - Default is null</li>
+<li><code>dateTimeFormat</code> - Default is null</li>
 </ul>
 </li>
 </ul>
@@ -338,6 +342,10 @@
         &quot;addAcceptHeaders&quot;: {
             &quot;type&quot;: &quot;boolean&quot;,
             &quot;description&quot;: &quot;Indicates whether to add accept headers.&quot;
+        },
+        &quot;addContentTypeHeaders&quot;: {
+            &quot;type&quot;: &quot;boolean&quot;,
+            &quot;description&quot;: &quot;Indicates whether to add content-type headers.&quot;
         },
         &quot;returnIApiResponse&quot;: {
             &quot;type&quot;: &quot;boolean&quot;,
@@ -547,6 +555,7 @@
         },
         &quot;codeGeneratorSettings&quot;: {
             &quot;type&quot;: &quot;object&quot;,
+            &quot;description&quot;: &quot;Settings for the code generator.&quot;
             &quot;properties&quot;: {
                 &quot;requiredPropertiesMustBeDefined&quot;: {
                     &quot;type&quot;: &quot;boolean&quot;,
@@ -559,9 +568,104 @@
                 &quot;anyType&quot;: {
                     &quot;type&quot;: &quot;string&quot;,
                     &quot;description&quot;: &quot;The type used for 'any' in the code generator settings.&quot;
+                },
+                &quot;dateType&quot;: {
+                    &quot;type&quot;: &quot;string&quot;
+                },
+                &quot;dateTimeType&quot;: {
+                    &quot;type&quot;: &quot;string&quot;
+                },
+                &quot;timeType&quot;: {
+                    &quot;type&quot;: &quot;string&quot;
+                },
+                &quot;timeSpanType&quot;: {
+                    &quot;type&quot;: &quot;string&quot;
+                },
+                &quot;arrayType&quot;: {
+                    &quot;type&quot;: &quot;string&quot;
+                },
+                &quot;dictionaryType&quot;: {
+                    &quot;type&quot;: &quot;string&quot;
+                },
+                &quot;arrayInstanceType&quot;: {
+                    &quot;type&quot;: &quot;string&quot;
+                },
+                &quot;dictionaryInstanceType&quot;: {
+                    &quot;type&quot;: &quot;string&quot;
+                },
+                &quot;arrayBaseType&quot;: {
+                    &quot;type&quot;: &quot;string&quot;
+                },
+                &quot;dictionaryBaseType&quot;: {
+                    &quot;type&quot;: &quot;string&quot;
+                },
+                &quot;propertySetterAccessModifier&quot;: {
+                    &quot;type&quot;: &quot;string&quot;
+                },
+                &quot;jsonConverters&quot;: {
+                    &quot;type&quot;: &quot;array&quot;,
+                    &quot;items&quot;: {
+                        &quot;type&quot;: &quot;string&quot;
+                    }
+                },
+                &quot;generateImmutableArrayProperties&quot;: {
+                    &quot;type&quot;: &quot;boolean&quot;
+                },
+                &quot;generateImmutableDictionaryProperties&quot;: {
+                    &quot;type&quot;: &quot;boolean&quot;
+                },
+                &quot;handleReferences&quot;: {
+                    &quot;type&quot;: &quot;boolean&quot;
+                },
+                &quot;jsonSerializerSettingsTransformationMethod&quot;: {
+                    &quot;type&quot;: &quot;string&quot;
+                },
+                &quot;generateJsonMethods&quot;: {
+                    &quot;type&quot;: &quot;boolean&quot;
+                },
+                &quot;enforceFlagEnums&quot;: {
+                    &quot;type&quot;: &quot;boolean&quot;
+                },
+                &quot;inlineNamedDictionaries&quot;: {
+                    &quot;type&quot;: &quot;boolean&quot;
+                },
+                &quot;inlineNamedTuples&quot;: {
+                    &quot;type&quot;: &quot;boolean&quot;
+                },
+                &quot;inlineNamedArrays&quot;: {
+                    &quot;type&quot;: &quot;boolean&quot;
+                },
+                &quot;generateOptionalPropertiesAsNullable&quot;: {
+                    &quot;type&quot;: &quot;boolean&quot;
+                },
+                &quot;generateNullableReferenceTypes&quot;: {
+                    &quot;type&quot;: &quot;boolean&quot;
+                },
+                &quot;generateNativeRecords&quot;: {
+                    &quot;type&quot;: &quot;boolean&quot;
+                },
+                &quot;generateDefaultValues&quot;: {
+                    &quot;type&quot;: &quot;boolean&quot;
+                },
+                &quot;inlineNamedAny&quot;: {
+                    &quot;type&quot;: &quot;boolean&quot;
+                },
+                &quot;excludedTypeNames&quot;: {
+                    &quot;type&quot;: &quot;array&quot;,
+                    &quot;items&quot;: {
+                        &quot;type&quot;: &quot;string&quot;
+                    }
+                },
+                &quot;dateFormat&quot;: {
+                    &quot;type&quot;: &quot;string&quot;
+                },
+                &quot;dateTimeFormat&quot;: {
+                    &quot;type&quot;: &quot;string&quot;
+                },
+                &quot;propertyNameGenerator&quot;: {
+                    &quot;type&quot;: &quot;object&quot;
                 }
             },
-            &quot;description&quot;: &quot;Settings for the code generator.&quot;
         }
     }
 }
