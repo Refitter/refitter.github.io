@@ -1173,6 +1173,19 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.RefitGeneratorSettings.ExcludeNamespaces
   nameWithType: RefitGeneratorSettings.ExcludeNamespaces
+- uid: Refitter.Core.RefitGeneratorSettings.GenerateAuthenticationHeader
+  name: GenerateAuthenticationHeader
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_GenerateAuthenticationHeader
+  commentId: P:Refitter.Core.RefitGeneratorSettings.GenerateAuthenticationHeader
+  fullName: Refitter.Core.RefitGeneratorSettings.GenerateAuthenticationHeader
+  nameWithType: RefitGeneratorSettings.GenerateAuthenticationHeader
+- uid: Refitter.Core.RefitGeneratorSettings.GenerateAuthenticationHeader*
+  name: GenerateAuthenticationHeader
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_GenerateAuthenticationHeader_
+  commentId: Overload:Refitter.Core.RefitGeneratorSettings.GenerateAuthenticationHeader
+  isSpec: "True"
+  fullName: Refitter.Core.RefitGeneratorSettings.GenerateAuthenticationHeader
+  nameWithType: RefitGeneratorSettings.GenerateAuthenticationHeader
 - uid: Refitter.Core.RefitGeneratorSettings.GenerateClients
   name: GenerateClients
   href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_GenerateClients
