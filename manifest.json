@@ -46,6 +46,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.CollectionFormat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.CollectionFormat.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.CollectionFormat",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.CollectionFormat.yml\" sourcestartlinenumber=\"1\">Collection format defined in <a href=\"https://swagger.io/docs/specification/v2_0/describing-parameters/#array-and-multi-value-parameters\" sourcefile=\"api/Refitter.Core.CollectionFormat.yml\" sourcestartlinenumber=\"1\">https://swagger.io/docs/specification/v2_0/describing-parameters/#array-and-multi-value-parameters</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Refitter.Core.DependencyInjectionSettings.yml",
       "output": {
         ".html": {

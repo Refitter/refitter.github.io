@@ -581,6 +581,42 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.CodeGeneratorSettings.TimeType
   nameWithType: CodeGeneratorSettings.TimeType
+- uid: Refitter.Core.CollectionFormat
+  name: CollectionFormat
+  href: api/Refitter.Core.CollectionFormat.html
+  commentId: T:Refitter.Core.CollectionFormat
+  fullName: Refitter.Core.CollectionFormat
+  nameWithType: CollectionFormat
+- uid: Refitter.Core.CollectionFormat.Csv
+  name: Csv
+  href: api/Refitter.Core.CollectionFormat.html#Refitter_Core_CollectionFormat_Csv
+  commentId: F:Refitter.Core.CollectionFormat.Csv
+  fullName: Refitter.Core.CollectionFormat.Csv
+  nameWithType: CollectionFormat.Csv
+- uid: Refitter.Core.CollectionFormat.Multi
+  name: Multi
+  href: api/Refitter.Core.CollectionFormat.html#Refitter_Core_CollectionFormat_Multi
+  commentId: F:Refitter.Core.CollectionFormat.Multi
+  fullName: Refitter.Core.CollectionFormat.Multi
+  nameWithType: CollectionFormat.Multi
+- uid: Refitter.Core.CollectionFormat.Pipes
+  name: Pipes
+  href: api/Refitter.Core.CollectionFormat.html#Refitter_Core_CollectionFormat_Pipes
+  commentId: F:Refitter.Core.CollectionFormat.Pipes
+  fullName: Refitter.Core.CollectionFormat.Pipes
+  nameWithType: CollectionFormat.Pipes
+- uid: Refitter.Core.CollectionFormat.Ssv
+  name: Ssv
+  href: api/Refitter.Core.CollectionFormat.html#Refitter_Core_CollectionFormat_Ssv
+  commentId: F:Refitter.Core.CollectionFormat.Ssv
+  fullName: Refitter.Core.CollectionFormat.Ssv
+  nameWithType: CollectionFormat.Ssv
+- uid: Refitter.Core.CollectionFormat.Tsv
+  name: Tsv
+  href: api/Refitter.Core.CollectionFormat.html#Refitter_Core_CollectionFormat_Tsv
+  commentId: F:Refitter.Core.CollectionFormat.Tsv
+  fullName: Refitter.Core.CollectionFormat.Tsv
+  nameWithType: CollectionFormat.Tsv
 - uid: Refitter.Core.DependencyInjectionSettings
   name: DependencyInjectionSettings
   href: api/Refitter.Core.DependencyInjectionSettings.html
@@ -1109,6 +1145,19 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.RefitGeneratorSettings.CodeGeneratorSettings
   nameWithType: RefitGeneratorSettings.CodeGeneratorSettings
+- uid: Refitter.Core.RefitGeneratorSettings.CollectionFormat
+  name: CollectionFormat
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_CollectionFormat
+  commentId: P:Refitter.Core.RefitGeneratorSettings.CollectionFormat
+  fullName: Refitter.Core.RefitGeneratorSettings.CollectionFormat
+  nameWithType: RefitGeneratorSettings.CollectionFormat
+- uid: Refitter.Core.RefitGeneratorSettings.CollectionFormat*
+  name: CollectionFormat
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_CollectionFormat_
+  commentId: Overload:Refitter.Core.RefitGeneratorSettings.CollectionFormat
+  isSpec: "True"
+  fullName: Refitter.Core.RefitGeneratorSettings.CollectionFormat
+  nameWithType: RefitGeneratorSettings.CollectionFormat
 - uid: Refitter.Core.RefitGeneratorSettings.ContractsNamespace
   name: ContractsNamespace
   href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_ContractsNamespace
