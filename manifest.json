@@ -28,7 +28,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Refitter.Core.CacheProviderType",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/Refitter.Core.CacheProviderType.yml\" sourcestartlinenumber=\"1\">Enumeration of cache provider types.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -84,7 +84,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Refitter.Core.GeneratedCode",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/Refitter.Core.GeneratedCode.yml\" sourcestartlinenumber=\"1\">Represents generated code with a type name and content.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -98,7 +98,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Refitter.Core.GeneratorOutput",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/Refitter.Core.GeneratorOutput.yml\" sourcestartlinenumber=\"1\">Represents the output of the code generator containing generated files.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -112,7 +112,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Refitter.Core.MappingProviderType",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/Refitter.Core.MappingProviderType.yml\" sourcestartlinenumber=\"1\">Enumeration of mapping provider types.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -210,7 +210,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Refitter.Core.SchemaCleaner",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/Refitter.Core.SchemaCleaner.yml\" sourcestartlinenumber=\"1\">Cleans up OpenAPI schema by removing unreferenced schemas and handling inheritance hierarchies.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -238,7 +238,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Refitter.Core.Settings.ApizrPackages",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/Refitter.Core.Settings.ApizrPackages.yml\" sourcestartlinenumber=\"1\">Enumeration of available Apizr packages.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -294,7 +294,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Refitter.Core.TypenameConstants",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/Refitter.Core.TypenameConstants.yml\" sourcestartlinenumber=\"1\">Constants for type names used in code generation.</p>\n"
     },
     {
       "type": "ManagedReference",
