@@ -151,12 +151,50 @@ Class XmlDocumentationGenerator  <a class="header-action link-secondary" title="
 
   <a id="Refitter_Core_XmlDocumentationGenerator_AppendInterfaceDocumentation_" data-uid="Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentation*"></a>
 
-  <h3 id="Refitter_Core_XmlDocumentationGenerator_AppendInterfaceDocumentation_NSwag_OpenApiOperation_System_Text_StringBuilder_" data-uid="Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentation(NSwag.OpenApiOperation,System.Text.StringBuilder)">
-  AppendInterfaceDocumentation(OpenApiOperation, StringBuilder)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/XmlDocumentationGenerator.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Refitter_Core_XmlDocumentationGenerator_AppendInterfaceDocumentation_NSwag_OpenApiDocument_System_Text_StringBuilder_" data-uid="Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentation(NSwag.OpenApiDocument,System.Text.StringBuilder)">
+  AppendInterfaceDocumentation(OpenApiDocument, StringBuilder)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/XmlDocumentationGenerator.cs/#L53"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Appends XML docs for the given interface definition to the given code builder.</p>
+  <div class="markdown level1 summary"><p>Appends XML docs for the given interface definition to the given code builder.
+This uses the OpenAPI document's info description as the summary.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AppendInterfaceDocumentation(OpenApiDocument document, StringBuilder code)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <span class="xref">OpenApiDocument</span></dt>
+    <dd><p>The OpenAPI definition of the interface.</p>
+</dd>
+    <dt><code>code</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.stringbuilder">StringBuilder</a></dt>
+    <dd><p>The builder to append the documentation to.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Refitter_Core_XmlDocumentationGenerator_AppendInterfaceDocumentation_" data-uid="Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentation*"></a>
+
+  <h3 id="Refitter_Core_XmlDocumentationGenerator_AppendInterfaceDocumentation_NSwag_OpenApiOperation_System_Text_StringBuilder_" data-uid="Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentation(NSwag.OpenApiOperation,System.Text.StringBuilder)">
+  AppendInterfaceDocumentation(OpenApiOperation, StringBuilder)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/XmlDocumentationGenerator.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends XML docs for the given interface definition to the given code builder.
+This uses the OpenAPI operation info to generate the summary and remarks.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -189,7 +227,7 @@ Class XmlDocumentationGenerator  <a class="header-action link-secondary" title="
 
   <h3 id="Refitter_Core_XmlDocumentationGenerator_AppendMethodDocumentation_NSwag_CodeGeneration_CSharp_Models_CSharpOperationModel_System_Boolean_System_Boolean_System_Boolean_System_Text_StringBuilder_" data-uid="Refitter.Core.XmlDocumentationGenerator.AppendMethodDocumentation(NSwag.CodeGeneration.CSharp.Models.CSharpOperationModel,System.Boolean,System.Boolean,System.Boolean,System.Text.StringBuilder)">
   AppendMethodDocumentation(CSharpOperationModel, bool, bool, bool, StringBuilder)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/XmlDocumentationGenerator.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/XmlDocumentationGenerator.cs/#L75"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Appends XML docs for the given method to the given code builder.</p>

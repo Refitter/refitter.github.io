@@ -1909,6 +1909,12 @@ references:
   commentId: T:Refitter.Core.XmlDocumentationGenerator
   fullName: Refitter.Core.XmlDocumentationGenerator
   nameWithType: XmlDocumentationGenerator
+- uid: Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentation(NSwag.OpenApiDocument,System.Text.StringBuilder)
+  name: AppendInterfaceDocumentation(OpenApiDocument, StringBuilder)
+  href: api/Refitter.Core.XmlDocumentationGenerator.html#Refitter_Core_XmlDocumentationGenerator_AppendInterfaceDocumentation_NSwag_OpenApiDocument_System_Text_StringBuilder_
+  commentId: M:Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentation(NSwag.OpenApiDocument,System.Text.StringBuilder)
+  fullName: Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentation(NSwag.OpenApiDocument, System.Text.StringBuilder)
+  nameWithType: XmlDocumentationGenerator.AppendInterfaceDocumentation(OpenApiDocument, StringBuilder)
 - uid: Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentation(NSwag.OpenApiOperation,System.Text.StringBuilder)
   name: AppendInterfaceDocumentation(OpenApiOperation, StringBuilder)
   href: api/Refitter.Core.XmlDocumentationGenerator.html#Refitter_Core_XmlDocumentationGenerator_AppendInterfaceDocumentation_NSwag_OpenApiOperation_System_Text_StringBuilder_
