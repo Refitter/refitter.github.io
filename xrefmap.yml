@@ -1061,6 +1061,19 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.RefitGenerator.GenerateMultipleFiles
   nameWithType: RefitGenerator.GenerateMultipleFiles
+- uid: Refitter.Core.RefitGenerator.OpenApiDocument
+  name: OpenApiDocument
+  href: api/Refitter.Core.RefitGenerator.html#Refitter_Core_RefitGenerator_OpenApiDocument
+  commentId: P:Refitter.Core.RefitGenerator.OpenApiDocument
+  fullName: Refitter.Core.RefitGenerator.OpenApiDocument
+  nameWithType: RefitGenerator.OpenApiDocument
+- uid: Refitter.Core.RefitGenerator.OpenApiDocument*
+  name: OpenApiDocument
+  href: api/Refitter.Core.RefitGenerator.html#Refitter_Core_RefitGenerator_OpenApiDocument_
+  commentId: Overload:Refitter.Core.RefitGenerator.OpenApiDocument
+  isSpec: "True"
+  fullName: Refitter.Core.RefitGenerator.OpenApiDocument
+  nameWithType: RefitGenerator.OpenApiDocument
 - uid: Refitter.Core.RefitGeneratorSettings
   name: RefitGeneratorSettings
   href: api/Refitter.Core.RefitGeneratorSettings.html
