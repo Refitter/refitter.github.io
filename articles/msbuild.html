@@ -115,17 +115,22 @@
 <p>Refitter ships with an MSBuild custom task that is distributed as a NuGet package and includes the Refitter CLI binary. This will simplify generating code from OpenAPI specifications at build time.</p>
 <p>To use the package, install <code>Refitter.MSBuild</code></p>
 <pre><code class="lang-xml">&lt;ItemGroup&gt;
-    &lt;PackageReference Include=&quot;Refitter.MSBuild&quot; Version=&quot;1.5.0&quot; /&gt;
+    &lt;PackageReference Include=&quot;Refitter.MSBuild&quot; Version=&quot;1.6.3&quot; /&gt;
 &lt;/ItemGroup&gt;
 </code></pre>
 <p>The MSBuild package includes a custom <code>.target</code> file which executes the <code>RefitterGenerateTask</code> custom task and looks something like this:</p>
-<pre><code class="lang-xml">&lt;Target Name=&quot;Refitter&quot; BeforeTargets=&quot;BeforeBuild&quot;&gt;
+<pre><code class="lang-xml">&lt;UsingTask TaskName=&quot;RefitterGenerateTask&quot; 
+           AssemblyFile=&quot;$(MSBuildThisFileDirectory)Refitter.MSBuild.dll&quot; 
+           Condition=&quot;Exists('$(MSBuildThisFileDirectory)Refitter.MSBuild.dll')&quot; /&gt;
+&lt;Target Name=&quot;RefitterGenerate&quot; BeforeTargets=&quot;BeforeCompile&quot;&gt;
     &lt;RefitterGenerateTask ProjectFileDirectory=&quot;$(MSBuildProjectDirectory)&quot;
-                          DisableLogging=&quot;$(RefitterNoLogging)&quot;/&gt;
+                          DisableLogging=&quot;$(RefitterNoLogging)&quot;&gt;
+        &lt;Output TaskParameter=&quot;GeneratedFiles&quot; ItemName=&quot;RefitterGeneratedFiles&quot; /&gt;
+    &lt;/RefitterGenerateTask&gt;
     &lt;ItemGroup&gt;
-        &lt;Compile Include=&quot;**/*.cs&quot; /&gt;
+        &lt;Compile Include=&quot;@(RefitterGeneratedFiles)&quot; /&gt;
     &lt;/ItemGroup&gt;
-  &lt;/Target&gt;
+&lt;/Target&gt;
 </code></pre>
 <p>The <code>RefitterGenerateTask</code> task will scan the project folder for <code>.refitter</code> files and executes them all. By default, telemetry collection is enabled, and to opt-out of it you must specify <code>&lt;RefitterNoLogging&gt;true&lt;/RefitterNoLogging&gt;</code> in the <code>.csproj</code> <code>&lt;PropertyGroup&gt;</code></p>
 
