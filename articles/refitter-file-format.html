@@ -109,7 +109,7 @@
   &quot;useIsoDateFormat&quot;: false, // Optional. Default=false
   &quot;multipleInterfaces&quot;: &quot;ByEndpoint&quot;, // Optional. May be one of &quot;ByEndpoint&quot; or &quot;ByTag&quot;
   &quot;generateDeprecatedOperations&quot;: false, // Optional. Default=true
-  &quot;operationNameTemplate&quot;: &quot;{operationName}Async&quot;, // Optional. Must contain {operationName} when multipleInterfaces != ByEndpoint
+  &quot;operationNameTemplate&quot;: &quot;{operationName}Async&quot;, // Optional. Must contain {operationName}. When multipleInterfaces == &quot;ByEndpoint&quot;, this is name of the Execute() method in the interface where all instances of the string '{operationName}' is replaced with 'Execute'
   &quot;optionalParameters&quot;: false, // Optional. Default=false
   &quot;outputFolder&quot;: &quot;../CustomOutput&quot;, // Optional. Default=./Generated
   &quot;outputFilename&quot;: &quot;RefitInterface.cs&quot;, // Optional. Default=Output.cs for CLI tool
@@ -229,7 +229,7 @@
 <li><code>includeTags</code> - A collection of tags to use a filter for including endpoints that contain this tag.</li>
 <li><code>includePathMatches</code> - A collection of regular expressions used to filter paths.</li>
 <li><code>generateDeprecatedOperations</code> - a boolean indicating whether deprecated operations should be generated or skipped. Default is <code>true</code></li>
-<li><code>operationNameTemplate</code> - Generate operation names using pattern. This must contain the string {operationName}. An example usage of this could be <code>{operationName}Async</code> to suffix all method names with Async</li>
+<li><code>operationNameTemplate</code> - Generate operation names using pattern. This must contain the string {operationName}. An example usage of this could be <code>{operationName}Async</code> to suffix all method names with Async. When using multiple interfaces with <code>ByEndpoint</code>, this is name of the Execute() method in the interface where all instances of the string '{operationName}' is replaced with 'Execute'</li>
 <li><code>optionalParameters</code> - Generate non-required parameters as nullable optional parameters</li>
 <li><code>trimUnusedSchema</code> - Removes unreferenced components schema to keep the generated output to a minimum</li>
 <li><code>keepSchemaPatterns</code>: A collection of regular expressions to force to keep matching schema. This is used together with <code>trimUnusedSchema</code></li>

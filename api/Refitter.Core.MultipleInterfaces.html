@@ -116,7 +116,7 @@ Enum MultipleInterfaces  <a class="header-action link-secondary" title="View sou
     <dt id="Refitter_Core_MultipleInterfaces_ByEndpoint"><code>ByEndpoint = 1</code></dt>
   
   <dd><p>Generate a Refit interface for each endpoint with a single Execute() method.
-The method name can be customized using the <a class="xref" href="Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_OperationNameTemplate">OperationNameTemplate</a> setting.</p>
+The method name can be customized using <a class="xref" href="Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_OperationNameTemplate">OperationNameTemplate</a>, where this is name of the Execute() method in the interface where all instances of the string '{operationName}' is replaced with 'Execute'.</p>
 </dd>
     <dt id="Refitter_Core_MultipleInterfaces_ByTag"><code>ByTag = 2</code></dt>
   
