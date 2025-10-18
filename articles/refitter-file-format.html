@@ -194,6 +194,7 @@
     &quot;generateNativeRecords&quot;: false,
     &quot;generateDefaultValues&quot;: true,
     &quot;inlineNamedAny&quot;: false,
+    &quot;inlineJsonConverters&quot;: true, // Optional. Default=true. Set to false to not generate JsonConverter attributes for enum properties
     &quot;dateFormat&quot;: &quot;string&quot;,
     &quot;dateTimeFormat&quot;: &quot;string&quot;,
     &quot;excludedTypeNames&quot;: [
@@ -292,6 +293,7 @@
 <li><code>generateNativeRecords</code> - Default is false</li>
 <li><code>generateDefaultValues</code> - Default is true</li>
 <li><code>inlineNamedAny</code> - Default is false</li>
+<li><code>inlineJsonConverters</code> - Default is true. When set to false, enum properties will not have <code>[JsonConverter(typeof(JsonStringEnumConverter))]</code> attributes</li>
 <li><code>excludedTypeNames</code> - Default is empty</li>
 <li><code>dateFormat</code> - Default is null</li>
 <li><code>dateTimeFormat</code> - Default is null</li>

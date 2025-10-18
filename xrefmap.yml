@@ -438,6 +438,19 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.CodeGeneratorSettings.HandleReferences
   nameWithType: CodeGeneratorSettings.HandleReferences
+- uid: Refitter.Core.CodeGeneratorSettings.InlineJsonConverters
+  name: InlineJsonConverters
+  href: api/Refitter.Core.CodeGeneratorSettings.html#Refitter_Core_CodeGeneratorSettings_InlineJsonConverters
+  commentId: P:Refitter.Core.CodeGeneratorSettings.InlineJsonConverters
+  fullName: Refitter.Core.CodeGeneratorSettings.InlineJsonConverters
+  nameWithType: CodeGeneratorSettings.InlineJsonConverters
+- uid: Refitter.Core.CodeGeneratorSettings.InlineJsonConverters*
+  name: InlineJsonConverters
+  href: api/Refitter.Core.CodeGeneratorSettings.html#Refitter_Core_CodeGeneratorSettings_InlineJsonConverters_
+  commentId: Overload:Refitter.Core.CodeGeneratorSettings.InlineJsonConverters
+  isSpec: "True"
+  fullName: Refitter.Core.CodeGeneratorSettings.InlineJsonConverters
+  nameWithType: CodeGeneratorSettings.InlineJsonConverters
 - uid: Refitter.Core.CodeGeneratorSettings.InlineNamedAny
   name: InlineNamedAny
   href: api/Refitter.Core.CodeGeneratorSettings.html#Refitter_Core_CodeGeneratorSettings_InlineNamedAny
