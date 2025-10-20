@@ -503,6 +503,19 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.CodeGeneratorSettings.InlineNamedTuples
   nameWithType: CodeGeneratorSettings.InlineNamedTuples
+- uid: Refitter.Core.CodeGeneratorSettings.IntegerType
+  name: IntegerType
+  href: api/Refitter.Core.CodeGeneratorSettings.html#Refitter_Core_CodeGeneratorSettings_IntegerType
+  commentId: P:Refitter.Core.CodeGeneratorSettings.IntegerType
+  fullName: Refitter.Core.CodeGeneratorSettings.IntegerType
+  nameWithType: CodeGeneratorSettings.IntegerType
+- uid: Refitter.Core.CodeGeneratorSettings.IntegerType*
+  name: IntegerType
+  href: api/Refitter.Core.CodeGeneratorSettings.html#Refitter_Core_CodeGeneratorSettings_IntegerType_
+  commentId: Overload:Refitter.Core.CodeGeneratorSettings.IntegerType
+  isSpec: "True"
+  fullName: Refitter.Core.CodeGeneratorSettings.IntegerType
+  nameWithType: CodeGeneratorSettings.IntegerType
 - uid: Refitter.Core.CodeGeneratorSettings.JsonConverters
   name: JsonConverters
   href: api/Refitter.Core.CodeGeneratorSettings.html#Refitter_Core_CodeGeneratorSettings_JsonConverters
@@ -848,6 +861,24 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.GeneratorOutput.Files
   nameWithType: GeneratorOutput.Files
+- uid: Refitter.Core.IntegerType
+  name: IntegerType
+  href: api/Refitter.Core.IntegerType.html
+  commentId: T:Refitter.Core.IntegerType
+  fullName: Refitter.Core.IntegerType
+  nameWithType: IntegerType
+- uid: Refitter.Core.IntegerType.Int32
+  name: Int32
+  href: api/Refitter.Core.IntegerType.html#Refitter_Core_IntegerType_Int32
+  commentId: F:Refitter.Core.IntegerType.Int32
+  fullName: Refitter.Core.IntegerType.Int32
+  nameWithType: IntegerType.Int32
+- uid: Refitter.Core.IntegerType.Int64
+  name: Int64
+  href: api/Refitter.Core.IntegerType.html#Refitter_Core_IntegerType_Int64
+  commentId: F:Refitter.Core.IntegerType.Int64
+  fullName: Refitter.Core.IntegerType.Int64
+  nameWithType: IntegerType.Int64
 - uid: Refitter.Core.MappingProviderType
   name: MappingProviderType
   href: api/Refitter.Core.MappingProviderType.html

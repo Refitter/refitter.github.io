@@ -102,6 +102,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.IntegerType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.IntegerType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.IntegerType",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.IntegerType.yml\" sourcestartlinenumber=\"1\">Specifies the .NET type to use for OpenAPI integer types\nwithout a format specifier</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Refitter.Core.MappingProviderType.yml",
       "output": {
         ".html": {
