@@ -1409,6 +1409,19 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.RefitGeneratorSettings.GenerateXmlDocCodeComments
   nameWithType: RefitGeneratorSettings.GenerateXmlDocCodeComments
+- uid: Refitter.Core.RefitGeneratorSettings.IgnoredOperationHeaders
+  name: IgnoredOperationHeaders
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_IgnoredOperationHeaders
+  commentId: P:Refitter.Core.RefitGeneratorSettings.IgnoredOperationHeaders
+  fullName: Refitter.Core.RefitGeneratorSettings.IgnoredOperationHeaders
+  nameWithType: RefitGeneratorSettings.IgnoredOperationHeaders
+- uid: Refitter.Core.RefitGeneratorSettings.IgnoredOperationHeaders*
+  name: IgnoredOperationHeaders
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_IgnoredOperationHeaders_
+  commentId: Overload:Refitter.Core.RefitGeneratorSettings.IgnoredOperationHeaders
+  isSpec: "True"
+  fullName: Refitter.Core.RefitGeneratorSettings.IgnoredOperationHeaders
+  nameWithType: RefitGeneratorSettings.IgnoredOperationHeaders
 - uid: Refitter.Core.RefitGeneratorSettings.ImmutableRecords
   name: ImmutableRecords
   href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_ImmutableRecords
