@@ -204,6 +204,19 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.CodeGeneratorSettings.ArrayType
   nameWithType: CodeGeneratorSettings.ArrayType
+- uid: Refitter.Core.CodeGeneratorSettings.CustomTemplateDirectory
+  name: CustomTemplateDirectory
+  href: api/Refitter.Core.CodeGeneratorSettings.html#Refitter_Core_CodeGeneratorSettings_CustomTemplateDirectory
+  commentId: P:Refitter.Core.CodeGeneratorSettings.CustomTemplateDirectory
+  fullName: Refitter.Core.CodeGeneratorSettings.CustomTemplateDirectory
+  nameWithType: CodeGeneratorSettings.CustomTemplateDirectory
+- uid: Refitter.Core.CodeGeneratorSettings.CustomTemplateDirectory*
+  name: CustomTemplateDirectory
+  href: api/Refitter.Core.CodeGeneratorSettings.html#Refitter_Core_CodeGeneratorSettings_CustomTemplateDirectory_
+  commentId: Overload:Refitter.Core.CodeGeneratorSettings.CustomTemplateDirectory
+  isSpec: "True"
+  fullName: Refitter.Core.CodeGeneratorSettings.CustomTemplateDirectory
+  nameWithType: CodeGeneratorSettings.CustomTemplateDirectory
 - uid: Refitter.Core.CodeGeneratorSettings.DateFormat
   name: DateFormat
   href: api/Refitter.Core.CodeGeneratorSettings.html#Refitter_Core_CodeGeneratorSettings_DateFormat
@@ -1241,6 +1254,19 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.RefitGeneratorSettings.ContractsOutputFolder
   nameWithType: RefitGeneratorSettings.ContractsOutputFolder
+- uid: Refitter.Core.RefitGeneratorSettings.CustomTemplateDirectory
+  name: CustomTemplateDirectory
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_CustomTemplateDirectory
+  commentId: P:Refitter.Core.RefitGeneratorSettings.CustomTemplateDirectory
+  fullName: Refitter.Core.RefitGeneratorSettings.CustomTemplateDirectory
+  nameWithType: RefitGeneratorSettings.CustomTemplateDirectory
+- uid: Refitter.Core.RefitGeneratorSettings.CustomTemplateDirectory*
+  name: CustomTemplateDirectory
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_CustomTemplateDirectory_
+  commentId: Overload:Refitter.Core.RefitGeneratorSettings.CustomTemplateDirectory
+  isSpec: "True"
+  fullName: Refitter.Core.RefitGeneratorSettings.CustomTemplateDirectory
+  nameWithType: RefitGeneratorSettings.CustomTemplateDirectory
 - uid: Refitter.Core.RefitGeneratorSettings.DefaultNamespace
   name: DefaultNamespace
   href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_DefaultNamespace
