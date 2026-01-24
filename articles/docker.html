@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Docker Usage </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Docker Usage ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/christianhelle/refitter/blob/main/docs/docfx_project/articles/docker.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="docker-usage">Docker Usage</h1>
+
+<p>Refitter is a CLI tool for generating a C# REST API Client using the <a href="https://github.com/reactiveui/refit">Refit</a> library. Refitter can generate the Refit interface from OpenAPI specifications. Refitter can format the generated Refit interface to be managed by <a href="https://www.apizr.net">Apizr</a> (v6+) and generate some registration helpers too.</p>
+<p>This guide covers how to use Refitter using Docker, which provides a consistent environment without requiring .NET installation on your machine.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#understanding-docker-run-arguments">Understanding Docker Run Arguments</a></li>
+<li><a href="#basic-usage">Basic Usage</a></li>
+<li><a href="#volume-mounting-explained">Volume Mounting Explained</a></li>
+<li><a href="#advanced-usage-examples">Advanced Usage Examples</a></li>
+<li><a href="#creating-shell-aliases">Creating Shell Aliases</a></li>
+<li><a href="#all-cli-options">All CLI Options</a></li>
+<li><a href="#troubleshooting">Troubleshooting</a></li>
+</ul>
+<h2 id="installation">Installation</h2>
+<h3 id="pulling-the-docker-image">Pulling the Docker Image</h3>
+<p>To download the latest Refitter Docker image from Docker Hub:</p>
+<pre><code class="lang-shell">docker pull christianhelle/refitter
+</code></pre>
+<p>To pull a specific version:</p>
+<pre><code class="lang-shell">docker pull christianhelle/refitter:1.0.0
+</code></pre>
+<p>To verify the image is installed:</p>
+<pre><code class="lang-shell">docker images | grep refitter
+</code></pre>
+<p>You don't need to pull the image explicitly - Docker will automatically download it the first time you run it. However, pulling it in advance can be useful to ensure you have the latest version or to avoid delays during first use.</p>
+<h2 id="understanding-docker-run-arguments">Understanding Docker Run Arguments</h2>
+<p>When running Refitter with Docker, you'll use the <code>docker run</code> command. Here's a breakdown of each Docker argument you'll encounter:</p>
+<h3 id="basic-docker-run-command-structure">Basic Docker Run Command Structure</h3>
+<pre><code class="lang-shell">docker run [DOCKER_OPTIONS] IMAGE_NAME [REFITTER_ARGUMENTS]
+</code></pre>
+<h3 id="common-docker-options-explained">Common Docker Options Explained</h3>
+<ul>
+<li><p><strong><code>docker run</code></strong> - The Docker command to create and start a new container from an image</p>
+</li>
+<li><p><strong><code>--rm</code></strong> - Automatically removes the container when it exits. This keeps your system clean by not leaving stopped containers behind. Highly recommended for CLI tools.</p>
+</li>
+<li><p><strong><code>-v</code> or <code>--volume</code></strong> - Mounts a directory or file from your host machine into the container</p>
+<ul>
+<li>Format: <code>-v HOST_PATH:CONTAINER_PATH</code></li>
+<li>Example: <code>-v $(pwd):/src</code> mounts your current directory to <code>/src</code> in the container</li>
+<li><strong>Windows (PowerShell)</strong>: Use <code>${PWD}</code> instead of <code>$(pwd)</code></li>
+<li><strong>Windows (CMD)</strong>: Use <code>%cd%</code> instead of <code>$(pwd)</code></li>
+</ul>
+</li>
+<li><p><strong><code>-w</code> or <code>--workdir</code></strong> - Sets the working directory inside the container where commands will execute</p>
+<ul>
+<li>Example: <code>-w /src</code> sets <code>/src</code> as the working directory</li>
+</ul>
+</li>
+<li><p><strong><code>-e</code> or <code>--env</code></strong> - Sets environment variables in the container</p>
+<ul>
+<li>Example: <code>-e &quot;MY_VAR=value&quot;</code></li>
+</ul>
+</li>
+<li><p><strong><code>-u</code> or <code>--user</code></strong> - Runs the container as a specific user (useful for file permissions)</p>
+<ul>
+<li>Example: <code>-u $(id -u):$(id -g)</code> runs as your current user on Linux/macOS</li>
+</ul>
+</li>
+<li><p><strong><code>-i</code> or <code>--interactive</code></strong> - Keeps STDIN open (useful for interactive applications)</p>
+</li>
+<li><p><strong><code>-t</code> or <code>--tty</code></strong> - Allocates a pseudo-TTY (terminal)</p>
+</li>
+<li><p><strong><code>--name</code></strong> - Assigns a name to the container for easy reference</p>
+</li>
+<li><p><strong><code>--network</code></strong> - Connects the container to a specific network</p>
+<ul>
+<li>Example: <code>--network host</code> uses the host network (useful for accessing local services)</li>
+</ul>
+</li>
+</ul>
+<h3 id="image-name">Image Name</h3>
+<ul>
+<li><strong><code>christianhelle/refitter</code></strong> - The Docker image name (repository/image)</li>
+<li><strong><code>christianhelle/refitter:latest</code></strong> - Specifies the latest version tag</li>
+<li><strong><code>christianhelle/refitter:1.0.0</code></strong> - Specifies a specific version tag</li>
+</ul>
+<h3 id="refitter-arguments">Refitter Arguments</h3>
+<p>Everything after the image name is passed to the Refitter CLI tool itself. These are the same arguments you would use if running Refitter directly on your machine.</p>
+<h2 id="basic-usage">Basic Usage</h2>
+<h3 id="minimal-example">Minimal Example</h3>
+<p>Generate code from a local OpenAPI specification file:</p>
+<pre><code class="lang-shell">docker run --rm -v $(pwd):/src christianhelle/refitter ./openapi.json
+</code></pre>
+<p><strong>What this does:</strong></p>
+<ul>
+<li><code>docker run</code> - Creates and runs a new container</li>
+<li><code>--rm</code> - Removes the container after it finishes</li>
+<li><code>-v $(pwd):/src</code> - Mounts your current directory to <code>/src</code> in the container</li>
+<li><code>christianhelle/refitter</code> - The Docker image to use</li>
+<li><code>./openapi.json</code> - The OpenAPI spec file path (relative to the mounted volume)</li>
+</ul>
+<p>This will generate <code>Output.cs</code> in your current directory.</p>
+<h3 id="specify-output-file">Specify Output File</h3>
+<pre><code class="lang-shell">docker run --rm -v $(pwd):/src christianhelle/refitter ./openapi.json --output ./GeneratedClient.cs
+</code></pre>
+<h3 id="specify-namespace">Specify Namespace</h3>
+<pre><code class="lang-shell">docker run --rm -v $(pwd):/src christianhelle/refitter ./openapi.json --namespace &quot;MyCompany.Api.Client&quot; --output ./ApiClient.cs
+</code></pre>
+<h3 id="generate-from-url">Generate from URL</h3>
+<pre><code class="lang-shell">docker run --rm christianhelle/refitter https://petstore3.swagger.io/api/v3/openapi.yaml --output ./PetStoreClient.cs
+</code></pre>
+<p><strong>Note:</strong> When generating from a URL, you still need to mount a volume if you want the output file saved to your host machine:</p>
+<pre><code class="lang-shell">docker run --rm -v $(pwd):/src christianhelle/refitter https://petstore3.swagger.io/api/v3/openapi.yaml --output /src/PetStoreClient.cs
+</code></pre>
+<h3 id="using-a-settings-file">Using a Settings File</h3>
+<pre><code class="lang-shell">docker run --rm -v $(pwd):/src christianhelle/refitter ./openapi.json --settings-file ./petstore.refitter
+</code></pre>
+<h2 id="volume-mounting-explained">Volume Mounting Explained</h2>
+<p>Volume mounting (<code>-v</code> or <code>--volume</code>) is crucial for Docker-based CLI tools because containers are isolated from your file system by default.</p>
+<h3 id="why-volume-mounting-is-necessary">Why Volume Mounting is Necessary</h3>
+<ol>
+<li><strong>Reading Input Files</strong>: The container needs access to your OpenAPI specification files</li>
+<li><strong>Writing Output Files</strong>: Generated code needs to be saved to your host machine, not just inside the container</li>
+<li><strong>Accessing Settings Files</strong>: Configuration files (<code>.refitter</code> files) need to be accessible</li>
+</ol>
+<h3 id="volume-mounting-patterns">Volume Mounting Patterns</h3>
+<h4 id="mount-current-directory-most-common">Mount Current Directory (Most Common)</h4>
+<pre><code class="lang-shell"># Linux/macOS
+docker run --rm -v $(pwd):/src christianhelle/refitter ./openapi.json
+
+# Windows PowerShell
+docker run --rm -v ${PWD}:/src christianhelle/refitter ./openapi.json
+
+# Windows CMD
+docker run --rm -v %cd%:/src christianhelle/refitter ./openapi.json
+</code></pre>
+<h4 id="mount-specific-directory">Mount Specific Directory</h4>
+<pre><code class="lang-shell">docker run --rm -v /path/to/your/project:/src christianhelle/refitter /src/specs/openapi.json --output /src/generated/Client.cs
+</code></pre>
+<h4 id="mount-multiple-directories">Mount Multiple Directories</h4>
+<pre><code class="lang-shell">docker run --rm \
+  -v /path/to/specs:/specs \
+  -v /path/to/output:/output \
+  christianhelle/refitter /specs/openapi.json --output /output/Client.cs
+</code></pre>
+<h4 id="read-only-mounts">Read-Only Mounts</h4>
+<p>For security, you can mount directories as read-only:</p>
+<pre><code class="lang-shell">docker run --rm \
+  -v $(pwd)/specs:/specs:ro \
+  -v $(pwd)/output:/output \
+  christianhelle/refitter /specs/openapi.json --output /output/Client.cs
+</code></pre>
+<h3 id="file-permission-considerations">File Permission Considerations</h3>
+<p>On Linux and macOS, files created by Docker containers are owned by the root user by default. To create files with your user ownership:</p>
+<pre><code class="lang-shell">docker run --rm \
+  -v $(pwd):/src \
+  -u $(id -u):$(id -g) \
+  christianhelle/refitter ./openapi.json --output ./Client.cs
+</code></pre>
+<h2 id="advanced-usage-examples">Advanced Usage Examples</h2>
+<h3 id="generate-interface-only">Generate Interface Only</h3>
+<pre><code class="lang-shell">docker run --rm -v $(pwd):/src christianhelle/refitter ./openapi.json --interface-only --output ./IApiClient.cs
+</code></pre>
+<h3 id="generate-contracts-only">Generate Contracts Only</h3>
+<pre><code class="lang-shell">docker run --rm -v $(pwd):/src christianhelle/refitter ./openapi.json --contract-only --output ./Contracts.cs
+</code></pre>
+<h3 id="use-api-response-wrappers">Use API Response Wrappers</h3>
+<pre><code class="lang-shell">docker run --rm -v $(pwd):/src christianhelle/refitter ./openapi.json --use-api-response --output ./Client.cs
+</code></pre>
+<h3 id="generate-with-cancellation-tokens">Generate with Cancellation Tokens</h3>
+<pre><code class="lang-shell">docker run --rm -v $(pwd):/src christianhelle/refitter ./openapi.json --cancellation-tokens --output ./Client.cs
+</code></pre>
+<h3 id="multiple-interfaces-by-endpoint">Multiple Interfaces by Endpoint</h3>
+<pre><code class="lang-shell">docker run --rm -v $(pwd):/src christianhelle/refitter ./openapi.json --multiple-interfaces ByEndpoint --output ./Client.cs
+</code></pre>
+<h3 id="multiple-interfaces-by-tag">Multiple Interfaces by Tag</h3>
+<pre><code class="lang-shell">docker run --rm -v $(pwd):/src christianhelle/refitter ./openapi.json --multiple-interfaces ByTag --output ./Client.cs
+</code></pre>
+<h3 id="filter-by-tags">Filter by Tags</h3>
+<pre><code class="lang-shell">docker run --rm -v $(pwd):/src christianhelle/refitter ./openapi.json --tag Pet --tag Store --output ./Client.cs
+</code></pre>
+<h3 id="filter-by-path-pattern">Filter by Path Pattern</h3>
+<pre><code class="lang-shell">docker run --rm -v $(pwd):/src christianhelle/refitter ./openapi.json --match-path '^/pet/.*' --output ./Client.cs
+</code></pre>
+<h3 id="internal-type-accessibility">Internal Type Accessibility</h3>
+<pre><code class="lang-shell">docker run --rm -v $(pwd):/src christianhelle/refitter ./openapi.json --internal --output ./Client.cs
+</code></pre>
+<h3 id="iso-date-format">ISO Date Format</h3>
+<pre><code class="lang-shell">docker run --rm -v $(pwd):/src christianhelle/refitter ./openapi.json --use-iso-date-format --output ./Client.cs
+</code></pre>
+<h3 id="additional-namespaces">Additional Namespaces</h3>
+<pre><code class="lang-shell">docker run --rm -v $(pwd):/src christianhelle/refitter ./openapi.json \
+  --additional-namespace &quot;System.Text.Json&quot; \
+  --additional-namespace &quot;MyCompany.SharedModels&quot; \
+  --output ./Client.cs
+</code></pre>
+<h3 id="trim-unused-schema">Trim Unused Schema</h3>
+<pre><code class="lang-shell">docker run --rm -v $(pwd):/src christianhelle/refitter ./openapi.json \
+  --trim-unused-schema \
+  --keep-schema '^Model$' \
+  --keep-schema '^Person.+' \
+  --output ./Client.cs
+</code></pre>
+<h3 id="skip-deprecated-operations">Skip Deprecated Operations</h3>
+<pre><code class="lang-shell">docker run --rm -v $(pwd):/src christianhelle/refitter ./openapi.json --no-deprecated-operations --output ./Client.cs
+</code></pre>
+<h3 id="custom-operation-name-template">Custom Operation Name Template</h3>
+<pre><code class="lang-shell">docker run --rm -v $(pwd):/src christianhelle/refitter ./openapi.json \
+  --operation-name-template '{operationName}Async' \
+  --output ./Client.cs
+</code></pre>
+<h3 id="optional-nullable-parameters">Optional Nullable Parameters</h3>
+<pre><code class="lang-shell">docker run --rm -v $(pwd):/src christianhelle/refitter ./openapi.json --optional-nullable-parameters --output ./Client.cs
+</code></pre>
+<h3 id="use-apizr-integration">Use Apizr Integration</h3>
+<pre><code class="lang-shell">docker run --rm -v $(pwd):/src christianhelle/refitter ./openapi.json --use-apizr --output ./Client.cs
+</code></pre>
+<h3 id="dynamic-query-string-parameters">Dynamic Query String Parameters</h3>
+<pre><code class="lang-shell">docker run --rm -v $(pwd):/src christianhelle/refitter ./openapi.json --use-dynamic-querystring-parameters --output ./Client.cs
+</code></pre>
+<h3 id="polymorphic-serialization">Polymorphic Serialization</h3>
+<pre><code class="lang-shell">docker run --rm -v $(pwd):/src christianhelle/refitter ./openapi.json --use-polymorphic-serialization --output ./Client.cs
+</code></pre>
+<h3 id="disposable-clients">Disposable Clients</h3>
+<pre><code class="lang-shell">docker run --rm -v $(pwd):/src christianhelle/refitter ./openapi.json --disposable --output ./Client.cs
+</code></pre>
+<h3 id="immutable-records">Immutable Records</h3>
+<pre><code class="lang-shell">docker run --rm -v $(pwd):/src christianhelle/refitter ./openapi.json --immutable-records --output ./Client.cs
+</code></pre>
+<h3 id="collection-format">Collection Format</h3>
+<pre><code class="lang-shell">docker run --rm -v $(pwd):/src christianhelle/refitter ./openapi.json --collection-format Csv --output ./Client.cs
+</code></pre>
+<h3 id="custom-integer-type">Custom Integer Type</h3>
+<pre><code class="lang-shell">docker run --rm -v $(pwd):/src christianhelle/refitter ./openapi.json --integer-type long --output ./Client.cs
+</code></pre>
+<h3 id="no-auto-generated-header">No Auto-Generated Header</h3>
+<pre><code class="lang-shell">docker run --rm -v $(pwd):/src christianhelle/refitter ./openapi.json --no-auto-generated-header --output ./Client.cs
+</code></pre>
+<h3 id="no-banner-quiet-mode">No Banner (Quiet Mode)</h3>
+<pre><code class="lang-shell">docker run --rm -v $(pwd):/src christianhelle/refitter ./openapi.json --no-banner --output ./Client.cs
+</code></pre>
+<h3 id="multiple-files-output">Multiple Files Output</h3>
+<pre><code class="lang-shell">docker run --rm -v $(pwd):/src christianhelle/refitter ./openapi.json \
+  --multiple-files \
+  --output ./generated/ \
+  --namespace &quot;MyApi.Client&quot;
+</code></pre>
+<p>This generates multiple files:</p>
+<ul>
+<li><code>RefitInterfaces.cs</code></li>
+<li><code>DependencyInjection.cs</code></li>
+<li><code>Contracts.cs</code></li>
+</ul>
+<h3 id="separate-contracts-namespace-and-output">Separate Contracts Namespace and Output</h3>
+<pre><code class="lang-shell">docker run --rm -v $(pwd):/src christianhelle/refitter ./openapi.json \
+  --namespace &quot;MyApi.Client&quot; \
+  --contracts-namespace &quot;MyApi.Contracts&quot; \
+  --contracts-output ./contracts/ \
+  --output ./clients/
+</code></pre>
+<h3 id="custom-operation-name-generator">Custom Operation Name Generator</h3>
+<pre><code class="lang-shell">docker run --rm -v $(pwd):/src christianhelle/refitter ./openapi.json \
+  --operation-name-generator MultipleClientsFromOperationId \
+  --output ./Client.cs
+</code></pre>
+<p>Available operation name generators:</p>
+<ul>
+<li><code>Default</code></li>
+<li><code>MultipleClientsFromOperationId</code></li>
+<li><code>MultipleClientsFromPathSegments</code></li>
+<li><code>MultipleClientsFromFirstTagAndOperationId</code></li>
+<li><code>MultipleClientsFromFirstTagAndOperationName</code></li>
+<li><code>MultipleClientsFromFirstTagAndPathSegments</code></li>
+<li><code>SingleClientFromOperationId</code></li>
+<li><code>SingleClientFromPathSegments</code></li>
+</ul>
+<h3 id="combining-multiple-options">Combining Multiple Options</h3>
+<pre><code class="lang-shell">docker run --rm -v $(pwd):/src christianhelle/refitter ./openapi.json \
+  --namespace &quot;PetStore.Api.Client&quot; \
+  --use-api-response \
+  --cancellation-tokens \
+  --internal \
+  --multiple-interfaces ByTag \
+  --tag Pet \
+  --tag Store \
+  --no-deprecated-operations \
+  --operation-name-template '{operationName}Async' \
+  --trim-unused-schema \
+  --immutable-records \
+  --output ./PetStoreClient.cs
+</code></pre>
+<h2 id="creating-shell-aliases">Creating Shell Aliases</h2>
+<p>To avoid typing the full <code>docker run</code> command every time, you can create shell aliases.</p>
+<h3 id="bashzsh-linuxmacos">Bash/Zsh (Linux/macOS)</h3>
+<p>Add to your <code>~/.bashrc</code>, <code>~/.zshrc</code>, or <code>~/.bash_profile</code>:</p>
+<pre><code class="lang-bash"># Basic alias
+alias refitter='docker run --rm -v $(pwd):/src christianhelle/refitter'
+
+# With user permissions (Linux/macOS)
+alias refitter='docker run --rm -v $(pwd):/src -u $(id -u):$(id -g) christianhelle/refitter'
+
+# More explicit alias that changes to /src working directory
+alias refitter='docker run --rm -v $(pwd):/src -w /src christianhelle/refitter'
+</code></pre>
+<p>After adding the alias, reload your shell configuration:</p>
+<pre><code class="lang-bash">source ~/.bashrc  # or ~/.zshrc
+</code></pre>
+<p>Now you can use Refitter as if it were installed locally:</p>
+<pre><code class="lang-bash">refitter ./openapi.json --output ./Client.cs
+refitter https://petstore3.swagger.io/api/v3/openapi.yaml --namespace &quot;PetStore&quot; --output ./PetStoreClient.cs
+</code></pre>
+<h3 id="powershell-windows">PowerShell (Windows)</h3>
+<p>Add to your PowerShell profile (<code>$PROFILE</code>):</p>
+<pre><code class="lang-powershell"># Basic alias
+function refitter {
+    docker run --rm -v ${PWD}:/src christianhelle/refitter $args
+}
+
+# Or as a more explicit function
+function Invoke-Refitter {
+    [CmdletBinding()]
+    param(
+        [Parameter(ValueFromRemainingArguments)]
+        [string[]]$Arguments
+    )
+
+    docker run --rm -v ${PWD}:/src -w /src christianhelle/refitter $Arguments
+}
+
+Set-Alias refitter Invoke-Refitter
+</code></pre>
+<p>To edit your PowerShell profile:</p>
+<pre><code class="lang-powershell">notepad $PROFILE
+</code></pre>
+<p>If the profile doesn't exist, create it:</p>
+<pre><code class="lang-powershell">New-Item -Path $PROFILE -Type File -Force
+</code></pre>
+<p>After saving, reload your profile:</p>
+<pre><code class="lang-powershell">. $PROFILE
+</code></pre>
+<p>Usage:</p>
+<pre><code class="lang-powershell">refitter ./openapi.json --output ./Client.cs
+refitter https://petstore3.swagger.io/api/v3/openapi.yaml --namespace &quot;PetStore&quot; --output ./PetStoreClient.cs
+</code></pre>
+<h3 id="windows-cmd">Windows CMD</h3>
+<p>Create a batch file named <code>refitter.bat</code> in a directory that's in your PATH (e.g., <code>C:\Windows</code> or <code>C:\bin</code>):</p>
+<pre><code class="lang-batch">@echo off
+docker run --rm -v %cd%:/src christianhelle/refitter %*
+</code></pre>
+<p>Usage:</p>
+<pre><code class="lang-cmd">refitter .\openapi.json --output .\Client.cs
+</code></pre>
+<h3 id="fish-shell-linuxmacos">Fish Shell (Linux/macOS)</h3>
+<p>Add to your <code>~/.config/fish/config.fish</code>:</p>
+<pre><code class="lang-fish">function refitter
+    docker run --rm -v (pwd):/src christianhelle/refitter $argv
+end
+</code></pre>
+<p>Reload the configuration:</p>
+<pre><code class="lang-fish">source ~/.config/fish/config.fish
+</code></pre>
+<h3 id="advanced-alias-with-custom-options">Advanced Alias with Custom Options</h3>
+<p>Create a more sophisticated alias that includes common options:</p>
+<p><strong>Bash/Zsh:</strong></p>
+<pre><code class="lang-bash"># Function with default options
+refitter() {
+    local volume=&quot;${REFITTER_VOLUME:-$(pwd)}&quot;
+    docker run --rm \
+      -v &quot;$volume:/src&quot; \
+      -u $(id -u):$(id -g) \
+      -w /src \
+      christianhelle/refitter &quot;$@&quot;
+}
+
+# Custom version selection
+refitter-dev() {
+    docker run --rm -v $(pwd):/src christianhelle/refitter:dev &quot;$@&quot;
+}
+
+# With network access to local services
+refitter-local() {
+    docker run --rm -v $(pwd):/src --network host christianhelle/refitter &quot;$@&quot;
+}
+</code></pre>
+<p><strong>PowerShell:</strong></p>
+<pre><code class="lang-powershell">function refitter {
+    $volume = if ($env:REFITTER_VOLUME) { $env:REFITTER_VOLUME } else { $PWD }
+    docker run --rm -v &quot;${volume}:/src&quot; -w /src christianhelle/refitter $args
+}
+
+function refitter-dev {
+    docker run --rm -v ${PWD}:/src christianhelle/refitter:dev $args
+}
+</code></pre>
+<h2 id="all-cli-options">All CLI Options</h2>
+<p>Here's a complete reference of all Refitter CLI options:</p>
+<pre><code class="lang-text">USAGE:
+    refitter [URL or input file] [OPTIONS]
+
+ARGUMENTS:
+    [URL or input file]    URL or file path to OpenAPI Specification file
+
+OPTIONS:
+                                                DEFAULT
+    -h, --help                                                   Prints help information
+    -v, --version                                                Prints version information
+    -s, --settings-file                                          Path to .refitter settings file. Specifying this will ignore all other settings (except for --output)
+    -n, --namespace                             GeneratedCode    Default namespace to use for generated types
+        --contracts-namespace                                    Default namespace to use for generated contracts
+    -o, --output                                Output.cs        Path to Output file or folder (if multiple files are generated)
+        --contracts-output                                       Output path for generated contracts. Enabling this automatically enables generating multiple files
+        --no-auto-generated-header                               Don't add &lt;auto-generated&gt; header to output file
+        --no-xml-doc-comments                                    Don't generate XML doc comments for interfaces and operations
+        --no-accept-headers                                      Don't add &lt;Accept&gt; header to output file
+        --interface-only                                         Don't generate contract types
+        --contract-only                                          Don't generate clients
+        --use-api-response                                       Return Task&lt;IApiResponse&lt;T&gt;&gt; instead of Task&lt;T&gt;
+        --use-observable-response                                Return IObservable instead of Task
+        --internal                                               Set the accessibility of the generated types to 'internal'
+        --cancellation-tokens                                    Use cancellation tokens
+        --no-operation-headers                                   Don't generate operation headers
+        --ignored-operation-headers                              A collection of headers to omit from operation signatures
+        --no-logging                                             Don't log errors or collect telemetry
+        --additional-namespace                                   Add additional namespace to generated types
+        --exclude-namespace                                      Exclude namespace on generated types
+        --use-iso-date-format                                    Explicitly format date query string parameters in ISO 8601 standard date format using delimiters (2023-06-15)
+        --multiple-interfaces                                    Generate a Refit interface for each endpoint. May be one of ByEndpoint, ByTag
+        --multiple-files                                         Generate multiple files instead of a single large file.
+                                                                 The output files can be the following:
+                                                                 - RefitInterfaces.cs
+                                                                 - DependencyInjection.cs
+                                                                 - Contracts.cs
+        --match-path                                             Only include Paths that match the provided regular expression. May be set multiple times
+        --tag                                                    Only include Endpoints that contain this tag. May be set multiple times and result in OR'ed evaluation
+        --skip-validation                                        Skip validation of the OpenAPI specification
+        --no-deprecated-operations                               Don't generate deprecated operations
+        --operation-name-template                                Generate operation names using pattern. When using --multiple-interfaces ByEndpoint, this is name of the Execute() method in the interface where all instances of the string '{operationName}' is replaced with 'Execute'
+        --optional-nullable-parameters                           Generate nullable parameters as optional parameters
+        --trim-unused-schema                                     Removes unreferenced components schema to keep the generated output to a minimum
+        --keep-schema                                            Force to keep matching schema, uses regular expressions. Use together with &quot;--trim-unused-schema&quot;. Can be set multiple times
+        --include-inheritance-hierarchy                          Keep all possible inherited types/union types even if they are not directly used
+        --no-banner                                              Don't show donation banner
+        --skip-default-additional-properties                     Set to true to skip default additional properties
+        --simple-output                                          Generate simple, plain-text console output without ASCII art, tables, emojis, or color formatting
+        --collection-format                      Multi           Determines the format of collection parameters. May be one of:
+                                                                 - Multi (separate parameter instances for each array item)
+                                                                 - Csv (comma separated values)
+                                                                 - Ssv (space separated values)
+                                                                 - Tsv (tab separated values)
+                                                                 - Pipes (pipe separated values)
+        --operation-name-generator              Default          The NSwag IOperationNameGenerator implementation to use.
+                                                                 May be one of:
+                                                                 - Default
+                                                                 - MultipleClientsFromOperationId
+                                                                 - MultipleClientsFromPathSegments
+                                                                 - MultipleClientsFromFirstTagAndOperationId
+                                                                 - MultipleClientsFromFirstTagAndOperationName
+                                                                 - MultipleClientsFromFirstTagAndPathSegments
+                                                                 - SingleClientFromOperationId
+                                                                 - SingleClientFromPathSegments
+                                                                 See https://refitter.github.io/api/Refitter.Core.OperationNameGeneratorTypes.html for more information
+        --immutable-records                                      Generate contracts as immutable records instead of classes
+        --use-apizr                                              Use Apizr by:
+                                                                 - Adding a final IApizrRequestOptions options parameter to all generated methods
+                                                                 - Providing cancellation tokens by Apizr request options instead of a dedicated parameter
+                                                                 - Using method overloads instead of optional parameters
+                                                                 See https://refitter.github.io for more information and https://www.apizr.net to get started with Apizr
+        --use-dynamic-querystring-parameters                     Enable wrapping multiple query parameters into a single complex one. Default is no wrapping.
+                                                                 See https://github.com/reactiveui/refit?tab=readme-ov-file#dynamic-querystring-parameters for more information
+        --use-polymorphic-serialization                          Use System.Text.Json polymorphic serialization.
+                                                                 Replaces NSwag JsonInheritanceConverter attributes with System.Text.Json JsonPolymorphicAttributes.
+                                                                 To have the native support of inheritance (de)serialization and fallback to base types when
+                                                                 payloads with (yet) unknown types are offered by newer versions of an API
+                                                                 See https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/polymorphism for more information
+        --disposable                                             Generate refit clients that implement IDisposable
+        --no-inline-json-converters                              Don't inline JsonConverter attributes for enum properties. When disabled, enum properties will not have [JsonConverter(typeof(JsonStringEnumConverter))] attributes
+        --integer-type                           int             The .NET type to use for OpenAPI integer types without a format specifier. Common values: 'int' (default), 'long'
+        --custom-template-directory                              Custom directory with NSwag fluid templates for code generation. Default is null which uses the default NSwag templates. See https://github.com/RicoSuter/NSwag/wiki/Templates
+</code></pre>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="common-issues-and-solutions">Common Issues and Solutions</h3>
+<h4 id="issue-no-such-file-or-directory-when-reading-openapi-spec">Issue: &quot;No such file or directory&quot; when reading OpenAPI spec</h4>
+<p><strong>Problem:</strong> The container can't access your OpenAPI specification file.</p>
+<p><strong>Solution:</strong> Ensure you've mounted the directory containing the file:</p>
+<pre><code class="lang-shell"># Wrong - file not accessible
+docker run --rm christianhelle/refitter ./openapi.json
+
+# Correct - mount current directory
+docker run --rm -v $(pwd):/src christianhelle/refitter /src/openapi.json
+# or
+docker run --rm -v $(pwd):/src christianhelle/refitter ./openapi.json
+</code></pre>
+<h4 id="issue-generated-files-are-not-visible-on-host">Issue: Generated files are not visible on host</h4>
+<p><strong>Problem:</strong> Files are created inside the container but not on your host machine.</p>
+<p><strong>Solution:</strong> Mount a volume for the output location:</p>
+<pre><code class="lang-shell"># Ensure output directory is within mounted volume
+docker run --rm -v $(pwd):/src christianhelle/refitter ./openapi.json --output /src/Client.cs
+</code></pre>
+<h4 id="issue-permission-denied-when-writing-files-linuxmacos">Issue: Permission denied when writing files (Linux/macOS)</h4>
+<p><strong>Problem:</strong> Files created by Docker are owned by root.</p>
+<p><strong>Solution:</strong> Run the container with your user ID:</p>
+<pre><code class="lang-shell">docker run --rm -v $(pwd):/src -u $(id -u):$(id -g) christianhelle/refitter ./openapi.json
+</code></pre>
+<h4 id="issue-cannot-access-urls-from-container">Issue: Cannot access URLs from container</h4>
+<p><strong>Problem:</strong> The container can't download OpenAPI specs from URLs.</p>
+<p><strong>Solution:</strong> Most URLs should work out of the box. For local URLs (localhost), use host networking:</p>
+<pre><code class="lang-shell">docker run --rm --network host -v $(pwd):/src christianhelle/refitter http://localhost:5000/swagger/v1/swagger.json
+</code></pre>
+<h4 id="issue-volume-mounting-not-working-on-windows">Issue: Volume mounting not working on Windows</h4>
+<p><strong>Problem:</strong> Docker can't mount Windows paths correctly.</p>
+<p><strong>Solution:</strong> Use the appropriate path syntax for your shell:</p>
+<pre><code class="lang-powershell"># PowerShell
+docker run --rm -v ${PWD}:/src christianhelle/refitter ./openapi.json
+
+# CMD
+docker run --rm -v %cd%:/src christianhelle/refitter ./openapi.json
+</code></pre>
+<p>For paths with spaces, use quotes:</p>
+<pre><code class="lang-powershell">docker run --rm -v &quot;${PWD}:/src&quot; christianhelle/refitter ./openapi.json
+</code></pre>
+<h4 id="issue-docker-command-not-found">Issue: &quot;docker: command not found&quot;</h4>
+<p><strong>Problem:</strong> Docker is not installed or not in PATH.</p>
+<p><strong>Solution:</strong> Install Docker Desktop from <a href="https://www.docker.com/products/docker-desktop">docker.com</a> and ensure it's running.</p>
+<h4 id="issue-settings-file-not-found">Issue: Settings file not found</h4>
+<p><strong>Problem:</strong> The <code>.refitter</code> settings file can't be located.</p>
+<p><strong>Solution:</strong> Ensure the settings file is in the mounted volume:</p>
+<pre><code class="lang-shell"># If settings file is in current directory
+docker run --rm -v $(pwd):/src christianhelle/refitter ./openapi.json --settings-file /src/petstore.refitter
+</code></pre>
+<h4 id="issue-custom-template-directory-not-accessible">Issue: Custom template directory not accessible</h4>
+<p><strong>Problem:</strong> Custom NSwag templates can't be found.</p>
+<p><strong>Solution:</strong> Mount the template directory:</p>
+<pre><code class="lang-shell">docker run --rm \
+  -v $(pwd):/src \
+  -v $(pwd)/templates:/templates:ro \
+  christianhelle/refitter ./openapi.json --custom-template-directory /templates
+</code></pre>
+<h3 id="getting-help">Getting Help</h3>
+<ul>
+<li><strong>GitHub Issues:</strong> <a href="https://github.com/christianhelle/refitter/issues">https://github.com/christianhelle/refitter/issues</a></li>
+<li><strong>Documentation:</strong> <a href="https://refitter.github.io">https://refitter.github.io</a></li>
+<li><strong>Docker Hub:</strong> <a href="https://hub.docker.com/r/christianhelle/refitter">https://hub.docker.com/r/christianhelle/refitter</a></li>
+</ul>
+<h3 id="viewing-container-logs">Viewing Container Logs</h3>
+<p>To see detailed logs if something goes wrong:</p>
+<pre><code class="lang-shell">docker run --rm -v $(pwd):/src christianhelle/refitter ./openapi.json --output ./Client.cs
+</code></pre>
+<p>The <code>--no-logging</code> flag disables telemetry collection but not console output. To see minimal output, use:</p>
+<pre><code class="lang-shell">docker run --rm -v $(pwd):/src christianhelle/refitter ./openapi.json --no-banner --output ./Client.cs
+</code></pre>
+<h3 id="verifying-the-image">Verifying the Image</h3>
+<p>To check the image details:</p>
+<pre><code class="lang-shell">docker inspect christianhelle/refitter
+</code></pre>
+<p>To see the image version:</p>
+<pre><code class="lang-shell">docker run --rm christianhelle/refitter --version
+</code></pre>
+<h3 id="updating-the-image">Updating the Image</h3>
+<p>To ensure you have the latest version:</p>
+<pre><code class="lang-shell">docker pull christianhelle/refitter:latest
+</code></pre>
+<p>To clean up old versions:</p>
+<pre><code class="lang-shell">docker images | grep refitter
+docker rmi christianhelle/refitter:old-version
+</code></pre>
+<h2 id="additional-resources">Additional Resources</h2>
+<ul>
+<li><strong>Refitter Documentation:</strong> <a href="https://refitter.github.io">https://refitter.github.io</a></li>
+<li><strong>Refit Documentation:</strong> <a href="https://github.com/reactiveui/refit">https://github.com/reactiveui/refit</a></li>
+<li><strong>Apizr Documentation:</strong> <a href="https://www.apizr.net">https://www.apizr.net</a></li>
+<li><strong>Docker Documentation:</strong> <a href="https://docs.docker.com">https://docs.docker.com</a></li>
+<li><strong>OpenAPI Specification:</strong> <a href="https://swagger.io/specification/">https://swagger.io/specification/</a></li>
+</ul>
+<h2 id="contributing">Contributing</h2>
+<p>If you find issues with the Docker image or have suggestions for improvement, please open an issue or pull request at <a href="https://github.com/christianhelle/refitter">https://github.com/christianhelle/refitter</a>.</p>
+<h2 id="license">License</h2>
+<p>Refitter is licensed under the MIT License. See the <a href="https://github.com/christianhelle/refitter/blob/main/LICENSE">LICENSE</a> file for details.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/christianhelle/refitter/blob/main/docs/docfx_project/articles/docker.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
