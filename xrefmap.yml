@@ -656,6 +656,24 @@ references:
   commentId: F:Refitter.Core.CollectionFormat.Tsv
   fullName: Refitter.Core.CollectionFormat.Tsv
   nameWithType: CollectionFormat.Tsv
+- uid: Refitter.Core.ContentTypeConstants
+  name: ContentTypeConstants
+  href: api/Refitter.Core.ContentTypeConstants.html
+  commentId: T:Refitter.Core.ContentTypeConstants
+  fullName: Refitter.Core.ContentTypeConstants
+  nameWithType: ContentTypeConstants
+- uid: Refitter.Core.ContentTypeConstants.Json
+  name: Json
+  href: api/Refitter.Core.ContentTypeConstants.html#Refitter_Core_ContentTypeConstants_Json
+  commentId: F:Refitter.Core.ContentTypeConstants.Json
+  fullName: Refitter.Core.ContentTypeConstants.Json
+  nameWithType: ContentTypeConstants.Json
+- uid: Refitter.Core.ContentTypeConstants.Xml
+  name: Xml
+  href: api/Refitter.Core.ContentTypeConstants.html#Refitter_Core_ContentTypeConstants_Xml
+  commentId: F:Refitter.Core.ContentTypeConstants.Xml
+  fullName: Refitter.Core.ContentTypeConstants.Xml
+  nameWithType: ContentTypeConstants.Xml
 - uid: Refitter.Core.DependencyInjectionSettings
   name: DependencyInjectionSettings
   href: api/Refitter.Core.DependencyInjectionSettings.html
@@ -772,6 +790,72 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.DependencyInjectionSettings.UsePolly
   nameWithType: DependencyInjectionSettings.UsePolly
+- uid: Refitter.Core.DotNetTypeConstants
+  name: DotNetTypeConstants
+  href: api/Refitter.Core.DotNetTypeConstants.html
+  commentId: T:Refitter.Core.DotNetTypeConstants
+  fullName: Refitter.Core.DotNetTypeConstants
+  nameWithType: DotNetTypeConstants
+- uid: Refitter.Core.DotNetTypeConstants.DateTimeOffset
+  name: DateTimeOffset
+  href: api/Refitter.Core.DotNetTypeConstants.html#Refitter_Core_DotNetTypeConstants_DateTimeOffset
+  commentId: F:Refitter.Core.DotNetTypeConstants.DateTimeOffset
+  fullName: Refitter.Core.DotNetTypeConstants.DateTimeOffset
+  nameWithType: DotNetTypeConstants.DateTimeOffset
+- uid: Refitter.Core.DotNetTypeConstants.Dictionary
+  name: Dictionary
+  href: api/Refitter.Core.DotNetTypeConstants.html#Refitter_Core_DotNetTypeConstants_Dictionary
+  commentId: F:Refitter.Core.DotNetTypeConstants.Dictionary
+  fullName: Refitter.Core.DotNetTypeConstants.Dictionary
+  nameWithType: DotNetTypeConstants.Dictionary
+- uid: Refitter.Core.DotNetTypeConstants.TimeSpan
+  name: TimeSpan
+  href: api/Refitter.Core.DotNetTypeConstants.html#Refitter_Core_DotNetTypeConstants_TimeSpan
+  commentId: F:Refitter.Core.DotNetTypeConstants.TimeSpan
+  fullName: Refitter.Core.DotNetTypeConstants.TimeSpan
+  nameWithType: DotNetTypeConstants.TimeSpan
+- uid: Refitter.Core.FileExtensionConstants
+  name: FileExtensionConstants
+  href: api/Refitter.Core.FileExtensionConstants.html
+  commentId: T:Refitter.Core.FileExtensionConstants
+  fullName: Refitter.Core.FileExtensionConstants
+  nameWithType: FileExtensionConstants
+- uid: Refitter.Core.FileExtensionConstants.CSharp
+  name: CSharp
+  href: api/Refitter.Core.FileExtensionConstants.html#Refitter_Core_FileExtensionConstants_CSharp
+  commentId: F:Refitter.Core.FileExtensionConstants.CSharp
+  fullName: Refitter.Core.FileExtensionConstants.CSharp
+  nameWithType: FileExtensionConstants.CSharp
+- uid: Refitter.Core.FileExtensionConstants.GeneratedCSharp
+  name: GeneratedCSharp
+  href: api/Refitter.Core.FileExtensionConstants.html#Refitter_Core_FileExtensionConstants_GeneratedCSharp
+  commentId: F:Refitter.Core.FileExtensionConstants.GeneratedCSharp
+  fullName: Refitter.Core.FileExtensionConstants.GeneratedCSharp
+  nameWithType: FileExtensionConstants.GeneratedCSharp
+- uid: Refitter.Core.FileExtensionConstants.Refitter
+  name: Refitter
+  href: api/Refitter.Core.FileExtensionConstants.html#Refitter_Core_FileExtensionConstants_Refitter
+  commentId: F:Refitter.Core.FileExtensionConstants.Refitter
+  fullName: Refitter.Core.FileExtensionConstants.Refitter
+  nameWithType: FileExtensionConstants.Refitter
+- uid: Refitter.Core.FilenameConstants
+  name: FilenameConstants
+  href: api/Refitter.Core.FilenameConstants.html
+  commentId: T:Refitter.Core.FilenameConstants
+  fullName: Refitter.Core.FilenameConstants
+  nameWithType: FilenameConstants
+- uid: Refitter.Core.FilenameConstants.DefaultOutput
+  name: DefaultOutput
+  href: api/Refitter.Core.FilenameConstants.html#Refitter_Core_FilenameConstants_DefaultOutput
+  commentId: F:Refitter.Core.FilenameConstants.DefaultOutput
+  fullName: Refitter.Core.FilenameConstants.DefaultOutput
+  nameWithType: FilenameConstants.DefaultOutput
+- uid: Refitter.Core.FilenameConstants.DefaultSettingsFile
+  name: DefaultSettingsFile
+  href: api/Refitter.Core.FilenameConstants.html#Refitter_Core_FilenameConstants_DefaultSettingsFile
+  commentId: F:Refitter.Core.FilenameConstants.DefaultSettingsFile
+  fullName: Refitter.Core.FilenameConstants.DefaultSettingsFile
+  nameWithType: FilenameConstants.DefaultSettingsFile
 - uid: Refitter.Core.GeneratedCode
   name: GeneratedCode
   href: api/Refitter.Core.GeneratedCode.html
@@ -1054,6 +1138,48 @@ references:
   commentId: F:Refitter.Core.OperationNameGeneratorTypes.SingleClientFromPathSegments
   fullName: Refitter.Core.OperationNameGeneratorTypes.SingleClientFromPathSegments
   nameWithType: OperationNameGeneratorTypes.SingleClientFromPathSegments
+- uid: Refitter.Core.PackageConstants
+  name: PackageConstants
+  href: api/Refitter.Core.PackageConstants.html
+  commentId: T:Refitter.Core.PackageConstants
+  fullName: Refitter.Core.PackageConstants
+  nameWithType: PackageConstants
+- uid: Refitter.Core.PackageConstants.Akavache
+  name: Akavache
+  href: api/Refitter.Core.PackageConstants.html#Refitter_Core_PackageConstants_Akavache
+  commentId: F:Refitter.Core.PackageConstants.Akavache
+  fullName: Refitter.Core.PackageConstants.Akavache
+  nameWithType: PackageConstants.Akavache
+- uid: Refitter.Core.PackageConstants.AutoMapper
+  name: AutoMapper
+  href: api/Refitter.Core.PackageConstants.html#Refitter_Core_PackageConstants_AutoMapper
+  commentId: F:Refitter.Core.PackageConstants.AutoMapper
+  fullName: Refitter.Core.PackageConstants.AutoMapper
+  nameWithType: PackageConstants.AutoMapper
+- uid: Refitter.Core.PackageConstants.Mapster
+  name: Mapster
+  href: api/Refitter.Core.PackageConstants.html#Refitter_Core_PackageConstants_Mapster
+  commentId: F:Refitter.Core.PackageConstants.Mapster
+  fullName: Refitter.Core.PackageConstants.Mapster
+  nameWithType: PackageConstants.Mapster
+- uid: Refitter.Core.PackageConstants.MediatR
+  name: MediatR
+  href: api/Refitter.Core.PackageConstants.html#Refitter_Core_PackageConstants_MediatR
+  commentId: F:Refitter.Core.PackageConstants.MediatR
+  fullName: Refitter.Core.PackageConstants.MediatR
+  nameWithType: PackageConstants.MediatR
+- uid: Refitter.Core.PackageConstants.MonkeyCache
+  name: MonkeyCache
+  href: api/Refitter.Core.PackageConstants.html#Refitter_Core_PackageConstants_MonkeyCache
+  commentId: F:Refitter.Core.PackageConstants.MonkeyCache
+  fullName: Refitter.Core.PackageConstants.MonkeyCache
+  nameWithType: PackageConstants.MonkeyCache
+- uid: Refitter.Core.PackageConstants.Polly
+  name: Polly
+  href: api/Refitter.Core.PackageConstants.html#Refitter_Core_PackageConstants_Polly
+  commentId: F:Refitter.Core.PackageConstants.Polly
+  fullName: Refitter.Core.PackageConstants.Polly
+  nameWithType: PackageConstants.Polly
 - uid: Refitter.Core.RefitGenerator
   name: RefitGenerator
   href: api/Refitter.Core.RefitGenerator.html

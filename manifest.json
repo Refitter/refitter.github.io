@@ -60,6 +60,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.ContentTypeConstants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.ContentTypeConstants.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.ContentTypeConstants",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.ContentTypeConstants.yml\" sourcestartlinenumber=\"1\">Constants for content types and HTTP headers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Refitter.Core.DependencyInjectionSettings.yml",
       "output": {
         ".html": {
@@ -71,6 +85,48 @@
       "IsMRef": true,
       "Title": "Refitter.Core.DependencyInjectionSettings",
       "Summary": "<p sourcefile=\"api/Refitter.Core.DependencyInjectionSettings.yml\" sourcestartlinenumber=\"1\">Dependency Injection settings describing how the Refit client should be configured.\nThis can be used to configure the HttpClient pipeline with additional handlers</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.DotNetTypeConstants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.DotNetTypeConstants.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.DotNetTypeConstants",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.DotNetTypeConstants.yml\" sourcestartlinenumber=\"1\">Constants for .NET type names used in code generation.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.FileExtensionConstants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.FileExtensionConstants.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.FileExtensionConstants",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.FileExtensionConstants.yml\" sourcestartlinenumber=\"1\">Constants for file extensions used throughout the application.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.FilenameConstants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.FilenameConstants.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.FilenameConstants",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.FilenameConstants.yml\" sourcestartlinenumber=\"1\">Constants for default file names.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -183,6 +239,20 @@
       "IsMRef": true,
       "Title": "Refitter.Core.OperationNameGeneratorTypes",
       "Summary": "<p sourcefile=\"api/Refitter.Core.OperationNameGeneratorTypes.yml\" sourcestartlinenumber=\"1\">The NSwag IOperationNameGenerator implementation to use</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.PackageConstants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.PackageConstants.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.PackageConstants",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.PackageConstants.yml\" sourcestartlinenumber=\"1\">Constants for package and library names.</p>\n"
     },
     {
       "type": "ManagedReference",
