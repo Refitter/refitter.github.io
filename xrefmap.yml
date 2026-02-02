@@ -2131,25 +2131,35 @@ references:
   commentId: T:Refitter.Core.XmlDocumentationGenerator
   fullName: Refitter.Core.XmlDocumentationGenerator
   nameWithType: XmlDocumentationGenerator
-- uid: Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentation(NSwag.OpenApiDocument,System.Text.StringBuilder)
-  name: AppendInterfaceDocumentation(OpenApiDocument, StringBuilder)
-  href: api/Refitter.Core.XmlDocumentationGenerator.html#Refitter_Core_XmlDocumentationGenerator_AppendInterfaceDocumentation_NSwag_OpenApiDocument_System_Text_StringBuilder_
-  commentId: M:Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentation(NSwag.OpenApiDocument,System.Text.StringBuilder)
-  fullName: Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentation(NSwag.OpenApiDocument, System.Text.StringBuilder)
-  nameWithType: XmlDocumentationGenerator.AppendInterfaceDocumentation(OpenApiDocument, StringBuilder)
-- uid: Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentation(NSwag.OpenApiOperation,System.Text.StringBuilder)
-  name: AppendInterfaceDocumentation(OpenApiOperation, StringBuilder)
-  href: api/Refitter.Core.XmlDocumentationGenerator.html#Refitter_Core_XmlDocumentationGenerator_AppendInterfaceDocumentation_NSwag_OpenApiOperation_System_Text_StringBuilder_
-  commentId: M:Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentation(NSwag.OpenApiOperation,System.Text.StringBuilder)
-  fullName: Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentation(NSwag.OpenApiOperation, System.Text.StringBuilder)
-  nameWithType: XmlDocumentationGenerator.AppendInterfaceDocumentation(OpenApiOperation, StringBuilder)
-- uid: Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentation*
-  name: AppendInterfaceDocumentation
-  href: api/Refitter.Core.XmlDocumentationGenerator.html#Refitter_Core_XmlDocumentationGenerator_AppendInterfaceDocumentation_
-  commentId: Overload:Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentation
+- uid: Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentationByEndpoint(NSwag.OpenApiOperation,System.Text.StringBuilder)
+  name: AppendInterfaceDocumentationByEndpoint(OpenApiOperation, StringBuilder)
+  href: api/Refitter.Core.XmlDocumentationGenerator.html#Refitter_Core_XmlDocumentationGenerator_AppendInterfaceDocumentationByEndpoint_NSwag_OpenApiOperation_System_Text_StringBuilder_
+  commentId: M:Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentationByEndpoint(NSwag.OpenApiOperation,System.Text.StringBuilder)
+  fullName: Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentationByEndpoint(NSwag.OpenApiOperation, System.Text.StringBuilder)
+  nameWithType: XmlDocumentationGenerator.AppendInterfaceDocumentationByEndpoint(OpenApiOperation, StringBuilder)
+- uid: Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentationByEndpoint*
+  name: AppendInterfaceDocumentationByEndpoint
+  href: api/Refitter.Core.XmlDocumentationGenerator.html#Refitter_Core_XmlDocumentationGenerator_AppendInterfaceDocumentationByEndpoint_
+  commentId: Overload:Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentationByEndpoint
   isSpec: "True"
-  fullName: Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentation
-  nameWithType: XmlDocumentationGenerator.AppendInterfaceDocumentation
+  fullName: Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentationByEndpoint
+  nameWithType: XmlDocumentationGenerator.AppendInterfaceDocumentationByEndpoint
+- uid: Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentationByTag(NSwag.OpenApiDocument,System.String,System.Text.StringBuilder)
+  name: AppendInterfaceDocumentationByTag(OpenApiDocument, string, StringBuilder)
+  href: api/Refitter.Core.XmlDocumentationGenerator.html#Refitter_Core_XmlDocumentationGenerator_AppendInterfaceDocumentationByTag_NSwag_OpenApiDocument_System_String_System_Text_StringBuilder_
+  commentId: M:Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentationByTag(NSwag.OpenApiDocument,System.String,System.Text.StringBuilder)
+  name.vb: AppendInterfaceDocumentationByTag(OpenApiDocument, String, StringBuilder)
+  fullName: Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentationByTag(NSwag.OpenApiDocument, string, System.Text.StringBuilder)
+  fullName.vb: Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentationByTag(NSwag.OpenApiDocument, String, System.Text.StringBuilder)
+  nameWithType: XmlDocumentationGenerator.AppendInterfaceDocumentationByTag(OpenApiDocument, string, StringBuilder)
+  nameWithType.vb: XmlDocumentationGenerator.AppendInterfaceDocumentationByTag(OpenApiDocument, String, StringBuilder)
+- uid: Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentationByTag*
+  name: AppendInterfaceDocumentationByTag
+  href: api/Refitter.Core.XmlDocumentationGenerator.html#Refitter_Core_XmlDocumentationGenerator_AppendInterfaceDocumentationByTag_
+  commentId: Overload:Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentationByTag
+  isSpec: "True"
+  fullName: Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentationByTag
+  nameWithType: XmlDocumentationGenerator.AppendInterfaceDocumentationByTag
 - uid: Refitter.Core.XmlDocumentationGenerator.AppendMethodDocumentation(NSwag.CodeGeneration.CSharp.Models.CSharpOperationModel,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Text.StringBuilder)
   name: AppendMethodDocumentation(CSharpOperationModel, bool, bool, bool, bool, StringBuilder)
   href: api/Refitter.Core.XmlDocumentationGenerator.html#Refitter_Core_XmlDocumentationGenerator_AppendMethodDocumentation_NSwag_CodeGeneration_CSharp_Models_CSharpOperationModel_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Text_StringBuilder_
@@ -2166,3 +2176,16 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.XmlDocumentationGenerator.AppendMethodDocumentation
   nameWithType: XmlDocumentationGenerator.AppendMethodDocumentation
+- uid: Refitter.Core.XmlDocumentationGenerator.AppendSingleInterfaceDocumentation(NSwag.OpenApiDocument,System.Text.StringBuilder)
+  name: AppendSingleInterfaceDocumentation(OpenApiDocument, StringBuilder)
+  href: api/Refitter.Core.XmlDocumentationGenerator.html#Refitter_Core_XmlDocumentationGenerator_AppendSingleInterfaceDocumentation_NSwag_OpenApiDocument_System_Text_StringBuilder_
+  commentId: M:Refitter.Core.XmlDocumentationGenerator.AppendSingleInterfaceDocumentation(NSwag.OpenApiDocument,System.Text.StringBuilder)
+  fullName: Refitter.Core.XmlDocumentationGenerator.AppendSingleInterfaceDocumentation(NSwag.OpenApiDocument, System.Text.StringBuilder)
+  nameWithType: XmlDocumentationGenerator.AppendSingleInterfaceDocumentation(OpenApiDocument, StringBuilder)
+- uid: Refitter.Core.XmlDocumentationGenerator.AppendSingleInterfaceDocumentation*
+  name: AppendSingleInterfaceDocumentation
+  href: api/Refitter.Core.XmlDocumentationGenerator.html#Refitter_Core_XmlDocumentationGenerator_AppendSingleInterfaceDocumentation_
+  commentId: Overload:Refitter.Core.XmlDocumentationGenerator.AppendSingleInterfaceDocumentation
+  isSpec: "True"
+  fullName: Refitter.Core.XmlDocumentationGenerator.AppendSingleInterfaceDocumentation
+  nameWithType: XmlDocumentationGenerator.AppendSingleInterfaceDocumentation

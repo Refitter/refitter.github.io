@@ -149,26 +149,25 @@ Class XmlDocumentationGenerator  <a class="header-action link-secondary" title="
 </h2>
 
 
-  <a id="Refitter_Core_XmlDocumentationGenerator_AppendInterfaceDocumentation_" data-uid="Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentation*"></a>
+  <a id="Refitter_Core_XmlDocumentationGenerator_AppendInterfaceDocumentationByEndpoint_" data-uid="Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentationByEndpoint*"></a>
 
-  <h3 id="Refitter_Core_XmlDocumentationGenerator_AppendInterfaceDocumentation_NSwag_OpenApiDocument_System_Text_StringBuilder_" data-uid="Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentation(NSwag.OpenApiDocument,System.Text.StringBuilder)">
-  AppendInterfaceDocumentation(OpenApiDocument, StringBuilder)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/XmlDocumentationGenerator.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Refitter_Core_XmlDocumentationGenerator_AppendInterfaceDocumentationByEndpoint_NSwag_OpenApiOperation_System_Text_StringBuilder_" data-uid="Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentationByEndpoint(NSwag.OpenApiOperation,System.Text.StringBuilder)">
+  AppendInterfaceDocumentationByEndpoint(OpenApiOperation, StringBuilder)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/XmlDocumentationGenerator.cs/#L62"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Appends XML docs for the given interface definition to the given code builder.
-This uses the OpenAPI document's info description as the summary.</p>
+  <div class="markdown level1 summary"><p>Generates an interface description from the summary of the given endpoint and appends it to the builder.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void AppendInterfaceDocumentation(OpenApiDocument document, StringBuilder code)</code></pre>
+    <pre><code class="lang-csharp hljs">public void AppendInterfaceDocumentationByEndpoint(OpenApiOperation endpoint, StringBuilder code)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>document</code> <span class="xref">OpenApiDocument</span></dt>
-    <dd><p>The OpenAPI definition of the interface.</p>
+    <dt><code>endpoint</code> <span class="xref">OpenApiOperation</span></dt>
+    <dd><p>The OpenAPI definition of the endpoint.</p>
 </dd>
     <dt><code>code</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.stringbuilder">StringBuilder</a></dt>
     <dd><p>The builder to append the documentation to.</p>
@@ -186,26 +185,28 @@ This uses the OpenAPI document's info description as the summary.</p>
 
 
 
-  <a id="Refitter_Core_XmlDocumentationGenerator_AppendInterfaceDocumentation_" data-uid="Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentation*"></a>
+  <a id="Refitter_Core_XmlDocumentationGenerator_AppendInterfaceDocumentationByTag_" data-uid="Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentationByTag*"></a>
 
-  <h3 id="Refitter_Core_XmlDocumentationGenerator_AppendInterfaceDocumentation_NSwag_OpenApiOperation_System_Text_StringBuilder_" data-uid="Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentation(NSwag.OpenApiOperation,System.Text.StringBuilder)">
-  AppendInterfaceDocumentation(OpenApiOperation, StringBuilder)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/XmlDocumentationGenerator.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Refitter_Core_XmlDocumentationGenerator_AppendInterfaceDocumentationByTag_NSwag_OpenApiDocument_System_String_System_Text_StringBuilder_" data-uid="Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentationByTag(NSwag.OpenApiDocument,System.String,System.Text.StringBuilder)">
+  AppendInterfaceDocumentationByTag(OpenApiDocument, string, StringBuilder)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/XmlDocumentationGenerator.cs/#L42"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Appends XML docs for the given interface definition to the given code builder.
-This uses the OpenAPI operation info to generate the summary and remarks.</p>
+  <div class="markdown level1 summary"><p>Generates an interface description from the tags of the given OpenAPI document and appends it to the builder.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void AppendInterfaceDocumentation(OpenApiOperation group, StringBuilder code)</code></pre>
+    <pre><code class="lang-csharp hljs">public void AppendInterfaceDocumentationByTag(OpenApiDocument document, string tag, StringBuilder code)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>group</code> <span class="xref">OpenApiOperation</span></dt>
-    <dd><p>The OpenAPI definition of the interface.</p>
+    <dt><code>document</code> <span class="xref">OpenApiDocument</span></dt>
+    <dd><p>The parent document of the controller.</p>
+</dd>
+    <dt><code>tag</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The controller tag that the endpoints were grouped by.</p>
 </dd>
     <dt><code>code</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.stringbuilder">StringBuilder</a></dt>
     <dd><p>The builder to append the documentation to.</p>
@@ -227,7 +228,7 @@ This uses the OpenAPI operation info to generate the summary and remarks.</p>
 
   <h3 id="Refitter_Core_XmlDocumentationGenerator_AppendMethodDocumentation_NSwag_CodeGeneration_CSharp_Models_CSharpOperationModel_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Text_StringBuilder_" data-uid="Refitter.Core.XmlDocumentationGenerator.AppendMethodDocumentation(NSwag.CodeGeneration.CSharp.Models.CSharpOperationModel,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Text.StringBuilder)">
   AppendMethodDocumentation(CSharpOperationModel, bool, bool, bool, bool, StringBuilder)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/XmlDocumentationGenerator.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/XmlDocumentationGenerator.cs/#L104"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Appends XML docs for the given method to the given code builder.</p>
@@ -254,6 +255,42 @@ This uses the OpenAPI operation info to generate the summary and remarks.</p>
 </dd>
     <dt><code>hasCancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd><p>Indicates whether the method gets a cancellation token parameter</p>
+</dd>
+    <dt><code>code</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.stringbuilder">StringBuilder</a></dt>
+    <dd><p>The builder to append the documentation to.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Refitter_Core_XmlDocumentationGenerator_AppendSingleInterfaceDocumentation_" data-uid="Refitter.Core.XmlDocumentationGenerator.AppendSingleInterfaceDocumentation*"></a>
+
+  <h3 id="Refitter_Core_XmlDocumentationGenerator_AppendSingleInterfaceDocumentation_NSwag_OpenApiDocument_System_Text_StringBuilder_" data-uid="Refitter.Core.XmlDocumentationGenerator.AppendSingleInterfaceDocumentation(NSwag.OpenApiDocument,System.Text.StringBuilder)">
+  AppendSingleInterfaceDocumentation(OpenApiDocument, StringBuilder)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/XmlDocumentationGenerator.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Generates an interface description from the title of the given document and appends it to the builder.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AppendSingleInterfaceDocumentation(OpenApiDocument document, StringBuilder code)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <span class="xref">OpenApiDocument</span></dt>
+    <dd><p>The OpenAPI definition of the document.</p>
 </dd>
     <dt><code>code</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.stringbuilder">StringBuilder</a></dt>
     <dd><p>The builder to append the documentation to.</p>
