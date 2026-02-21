@@ -1068,6 +1068,15 @@ references:
   commentId: T:Refitter.Core.OpenApiDocumentFactory
   fullName: Refitter.Core.OpenApiDocumentFactory
   nameWithType: OpenApiDocumentFactory
+- uid: Refitter.Core.OpenApiDocumentFactory.CreateAsync(System.Collections.Generic.IEnumerable{System.String})
+  name: CreateAsync(IEnumerable<string>)
+  href: api/Refitter.Core.OpenApiDocumentFactory.html#Refitter_Core_OpenApiDocumentFactory_CreateAsync_System_Collections_Generic_IEnumerable_System_String__
+  commentId: M:Refitter.Core.OpenApiDocumentFactory.CreateAsync(System.Collections.Generic.IEnumerable{System.String})
+  name.vb: CreateAsync(IEnumerable(Of String))
+  fullName: Refitter.Core.OpenApiDocumentFactory.CreateAsync(System.Collections.Generic.IEnumerable<string>)
+  fullName.vb: Refitter.Core.OpenApiDocumentFactory.CreateAsync(System.Collections.Generic.IEnumerable(Of String))
+  nameWithType: OpenApiDocumentFactory.CreateAsync(IEnumerable<string>)
+  nameWithType.vb: OpenApiDocumentFactory.CreateAsync(IEnumerable(Of String))
 - uid: Refitter.Core.OpenApiDocumentFactory.CreateAsync(System.String)
   name: CreateAsync(string)
   href: api/Refitter.Core.OpenApiDocumentFactory.html#Refitter_Core_OpenApiDocumentFactory_CreateAsync_System_String_
@@ -1691,6 +1700,19 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.RefitGeneratorSettings.OpenApiPath
   nameWithType: RefitGeneratorSettings.OpenApiPath
+- uid: Refitter.Core.RefitGeneratorSettings.OpenApiPaths
+  name: OpenApiPaths
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_OpenApiPaths
+  commentId: P:Refitter.Core.RefitGeneratorSettings.OpenApiPaths
+  fullName: Refitter.Core.RefitGeneratorSettings.OpenApiPaths
+  nameWithType: RefitGeneratorSettings.OpenApiPaths
+- uid: Refitter.Core.RefitGeneratorSettings.OpenApiPaths*
+  name: OpenApiPaths
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_OpenApiPaths_
+  commentId: Overload:Refitter.Core.RefitGeneratorSettings.OpenApiPaths
+  isSpec: "True"
+  fullName: Refitter.Core.RefitGeneratorSettings.OpenApiPaths
+  nameWithType: RefitGeneratorSettings.OpenApiPaths
 - uid: Refitter.Core.RefitGeneratorSettings.OperationNameGenerator
   name: OperationNameGenerator
   href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_OperationNameGenerator

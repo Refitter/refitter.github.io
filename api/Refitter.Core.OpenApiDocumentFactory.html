@@ -151,9 +151,55 @@ Class OpenApiDocumentFactory  <a class="header-action link-secondary" title="Vie
 
   <a id="Refitter_Core_OpenApiDocumentFactory_CreateAsync_" data-uid="Refitter.Core.OpenApiDocumentFactory.CreateAsync*"></a>
 
+  <h3 id="Refitter_Core_OpenApiDocumentFactory_CreateAsync_System_Collections_Generic_IEnumerable_System_String__" data-uid="Refitter.Core.OpenApiDocumentFactory.CreateAsync(System.Collections.Generic.IEnumerable{System.String})">
+  CreateAsync(IEnumerable&lt;string&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/OpenApiDocumentFactory.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a merged <span class="xref">NSwag.OpenApiDocument</span> from multiple paths or URLs.
+The first document serves as the base; paths and schemas from subsequent documents are merged in.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;OpenApiDocument&gt; CreateAsync(IEnumerable&lt;string&gt; openApiPaths)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>openApiPaths</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>The paths or URLs to the OpenAPI specifications.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<span class="xref">OpenApiDocument</span>&gt;</dt>
+    <dd><p>A merged <span class="xref">NSwag.OpenApiDocument</span>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown when <code class="paramref">openApiPaths</code> is null or empty.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Refitter_Core_OpenApiDocumentFactory_CreateAsync_" data-uid="Refitter.Core.OpenApiDocumentFactory.CreateAsync*"></a>
+
   <h3 id="Refitter_Core_OpenApiDocumentFactory_CreateAsync_System_String_" data-uid="Refitter.Core.OpenApiDocumentFactory.CreateAsync(System.String)">
   CreateAsync(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/OpenApiDocumentFactory.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/OpenApiDocumentFactory.cs/#L86"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new instance of the <span class="xref">NSwag.OpenApiDocument</span> class asynchronously.</p>
