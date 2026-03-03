@@ -1363,6 +1363,19 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.RefitGeneratorSettings.CollectionFormat
   nameWithType: RefitGeneratorSettings.CollectionFormat
+- uid: Refitter.Core.RefitGeneratorSettings.ContractTypeSuffix
+  name: ContractTypeSuffix
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_ContractTypeSuffix
+  commentId: P:Refitter.Core.RefitGeneratorSettings.ContractTypeSuffix
+  fullName: Refitter.Core.RefitGeneratorSettings.ContractTypeSuffix
+  nameWithType: RefitGeneratorSettings.ContractTypeSuffix
+- uid: Refitter.Core.RefitGeneratorSettings.ContractTypeSuffix*
+  name: ContractTypeSuffix
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_ContractTypeSuffix_
+  commentId: Overload:Refitter.Core.RefitGeneratorSettings.ContractTypeSuffix
+  isSpec: "True"
+  fullName: Refitter.Core.RefitGeneratorSettings.ContractTypeSuffix
+  nameWithType: RefitGeneratorSettings.ContractTypeSuffix
 - uid: Refitter.Core.RefitGeneratorSettings.ContractsNamespace
   name: ContractsNamespace
   href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_ContractsNamespace
