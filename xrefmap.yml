@@ -1518,6 +1518,19 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.RefitGeneratorSettings.GenerateDisposableClients
   nameWithType: RefitGeneratorSettings.GenerateDisposableClients
+- uid: Refitter.Core.RefitGeneratorSettings.GenerateJsonSerializerContext
+  name: GenerateJsonSerializerContext
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_GenerateJsonSerializerContext
+  commentId: P:Refitter.Core.RefitGeneratorSettings.GenerateJsonSerializerContext
+  fullName: Refitter.Core.RefitGeneratorSettings.GenerateJsonSerializerContext
+  nameWithType: RefitGeneratorSettings.GenerateJsonSerializerContext
+- uid: Refitter.Core.RefitGeneratorSettings.GenerateJsonSerializerContext*
+  name: GenerateJsonSerializerContext
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_GenerateJsonSerializerContext_
+  commentId: Overload:Refitter.Core.RefitGeneratorSettings.GenerateJsonSerializerContext
+  isSpec: "True"
+  fullName: Refitter.Core.RefitGeneratorSettings.GenerateJsonSerializerContext
+  nameWithType: RefitGeneratorSettings.GenerateJsonSerializerContext
 - uid: Refitter.Core.RefitGeneratorSettings.GenerateMultipleFiles
   name: GenerateMultipleFiles
   href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_GenerateMultipleFiles
