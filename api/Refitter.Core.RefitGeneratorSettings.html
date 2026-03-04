@@ -388,7 +388,8 @@ public class RefitGeneratorSettings</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AuthenticationHeaderStyle AuthenticationHeaderStyle { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(JsonStringEnumConverter))]
+public AuthenticationHeaderStyle AuthenticationHeaderStyle { get; set; }</code></pre>
   </div>
 
 
@@ -444,7 +445,7 @@ public class RefitGeneratorSettings</code></pre>
 
   <h3 id="Refitter_Core_RefitGeneratorSettings_CollectionFormat" data-uid="Refitter.Core.RefitGeneratorSettings.CollectionFormat">
   CollectionFormat
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L394"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L395"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets or sets the collection format to use for array query parameters.
@@ -478,7 +479,7 @@ public CollectionFormat CollectionFormat { get; set; }</code></pre>
 
   <h3 id="Refitter_Core_RefitGeneratorSettings_ContractTypeSuffix" data-uid="Refitter.Core.RefitGeneratorSettings.ContractTypeSuffix">
   ContractTypeSuffix
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L416"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L422"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets or sets a suffix to append to all generated contract type names.</p>
@@ -574,7 +575,7 @@ public CollectionFormat CollectionFormat { get; set; }</code></pre>
 
   <h3 id="Refitter_Core_RefitGeneratorSettings_CustomTemplateDirectory" data-uid="Refitter.Core.RefitGeneratorSettings.CustomTemplateDirectory">
   CustomTemplateDirectory
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L402"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L403"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets or sets a directory path which contains liquid templates for NSwag. If null or empty, uses default
@@ -831,7 +832,7 @@ templates.</p>
 
   <h3 id="Refitter_Core_RefitGeneratorSettings_GenerateJsonSerializerContext" data-uid="Refitter.Core.RefitGeneratorSettings.GenerateJsonSerializerContext">
   GenerateJsonSerializerContext
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L410"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L416"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets or sets a value indicating whether to generate JsonSerializerContext for AOT compilation support.</p>
@@ -1649,10 +1650,12 @@ wrapped in a task, but otherwise unmodified (so make sure that the namespaces ar
 
   <h3 id="Refitter_Core_RefitGeneratorSettings_SecurityScheme" data-uid="Refitter.Core.RefitGeneratorSettings.SecurityScheme">
   SecurityScheme
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L405"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L410"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets or sets the security scheme name for which to generate authentication headers.
+When specified, only endpoints using this security scheme will have authentication headers generated.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
