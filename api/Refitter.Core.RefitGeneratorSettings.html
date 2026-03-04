@@ -376,6 +376,38 @@ public class RefitGeneratorSettings</code></pre>
 
 
 
+  <a id="Refitter_Core_RefitGeneratorSettings_AuthenticationHeaderStyle_" data-uid="Refitter.Core.RefitGeneratorSettings.AuthenticationHeaderStyle*"></a>
+
+  <h3 id="Refitter_Core_RefitGeneratorSettings_AuthenticationHeaderStyle" data-uid="Refitter.Core.RefitGeneratorSettings.AuthenticationHeaderStyle">
+  AuthenticationHeaderStyle
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L387"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether to generate Security Schema Authentication headers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AuthenticationHeaderStyle AuthenticationHeaderStyle { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Refitter.Core.AuthenticationHeaderStyle.html">AuthenticationHeaderStyle</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Refitter_Core_RefitGeneratorSettings_CodeGeneratorSettings_" data-uid="Refitter.Core.RefitGeneratorSettings.CodeGeneratorSettings*"></a>
 
   <h3 id="Refitter_Core_RefitGeneratorSettings_CodeGeneratorSettings" data-uid="Refitter.Core.RefitGeneratorSettings.CodeGeneratorSettings">
@@ -446,7 +478,7 @@ public CollectionFormat CollectionFormat { get; set; }</code></pre>
 
   <h3 id="Refitter_Core_RefitGeneratorSettings_ContractTypeSuffix" data-uid="Refitter.Core.RefitGeneratorSettings.ContractTypeSuffix">
   ContractTypeSuffix
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L414"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L416"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets or sets a suffix to append to all generated contract type names.</p>
@@ -635,38 +667,6 @@ templates.</p>
 
 
 
-  <a id="Refitter_Core_RefitGeneratorSettings_GenerateAuthenticationHeader_" data-uid="Refitter.Core.RefitGeneratorSettings.GenerateAuthenticationHeader*"></a>
-
-  <h3 id="Refitter_Core_RefitGeneratorSettings_GenerateAuthenticationHeader" data-uid="Refitter.Core.RefitGeneratorSettings.GenerateAuthenticationHeader">
-  GenerateAuthenticationHeader
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L387"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether to generate Security Schema Authentication headers.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool GenerateAuthenticationHeader { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
   <a id="Refitter_Core_RefitGeneratorSettings_GenerateClients_" data-uid="Refitter.Core.RefitGeneratorSettings.GenerateClients*"></a>
 
   <h3 id="Refitter_Core_RefitGeneratorSettings_GenerateClients" data-uid="Refitter.Core.RefitGeneratorSettings.GenerateClients">
@@ -831,7 +831,7 @@ templates.</p>
 
   <h3 id="Refitter_Core_RefitGeneratorSettings_GenerateJsonSerializerContext" data-uid="Refitter.Core.RefitGeneratorSettings.GenerateJsonSerializerContext">
   GenerateJsonSerializerContext
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L408"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L410"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets or sets a value indicating whether to generate JsonSerializerContext for AOT compilation support.</p>
@@ -1635,6 +1635,37 @@ wrapped in a task, but otherwise unmodified (so make sure that the namespaces ar
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Refitter_Core_RefitGeneratorSettings_SecurityScheme_" data-uid="Refitter.Core.RefitGeneratorSettings.SecurityScheme*"></a>
+
+  <h3 id="Refitter_Core_RefitGeneratorSettings_SecurityScheme" data-uid="Refitter.Core.RefitGeneratorSettings.SecurityScheme">
+  SecurityScheme
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L405"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? SecurityScheme { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
   </dl>
 

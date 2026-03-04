@@ -104,6 +104,30 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.ApizrSettings.WithRequestOptions
   nameWithType: ApizrSettings.WithRequestOptions
+- uid: Refitter.Core.AuthenticationHeaderStyle
+  name: AuthenticationHeaderStyle
+  href: api/Refitter.Core.AuthenticationHeaderStyle.html
+  commentId: T:Refitter.Core.AuthenticationHeaderStyle
+  fullName: Refitter.Core.AuthenticationHeaderStyle
+  nameWithType: AuthenticationHeaderStyle
+- uid: Refitter.Core.AuthenticationHeaderStyle.Method
+  name: Method
+  href: api/Refitter.Core.AuthenticationHeaderStyle.html#Refitter_Core_AuthenticationHeaderStyle_Method
+  commentId: F:Refitter.Core.AuthenticationHeaderStyle.Method
+  fullName: Refitter.Core.AuthenticationHeaderStyle.Method
+  nameWithType: AuthenticationHeaderStyle.Method
+- uid: Refitter.Core.AuthenticationHeaderStyle.None
+  name: None
+  href: api/Refitter.Core.AuthenticationHeaderStyle.html#Refitter_Core_AuthenticationHeaderStyle_None
+  commentId: F:Refitter.Core.AuthenticationHeaderStyle.None
+  fullName: Refitter.Core.AuthenticationHeaderStyle.None
+  nameWithType: AuthenticationHeaderStyle.None
+- uid: Refitter.Core.AuthenticationHeaderStyle.Parameter
+  name: Parameter
+  href: api/Refitter.Core.AuthenticationHeaderStyle.html#Refitter_Core_AuthenticationHeaderStyle_Parameter
+  commentId: F:Refitter.Core.AuthenticationHeaderStyle.Parameter
+  fullName: Refitter.Core.AuthenticationHeaderStyle.Parameter
+  nameWithType: AuthenticationHeaderStyle.Parameter
 - uid: Refitter.Core.CacheProviderType
   name: CacheProviderType
   href: api/Refitter.Core.CacheProviderType.html
@@ -1337,6 +1361,19 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.RefitGeneratorSettings.ApizrSettings
   nameWithType: RefitGeneratorSettings.ApizrSettings
+- uid: Refitter.Core.RefitGeneratorSettings.AuthenticationHeaderStyle
+  name: AuthenticationHeaderStyle
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_AuthenticationHeaderStyle
+  commentId: P:Refitter.Core.RefitGeneratorSettings.AuthenticationHeaderStyle
+  fullName: Refitter.Core.RefitGeneratorSettings.AuthenticationHeaderStyle
+  nameWithType: RefitGeneratorSettings.AuthenticationHeaderStyle
+- uid: Refitter.Core.RefitGeneratorSettings.AuthenticationHeaderStyle*
+  name: AuthenticationHeaderStyle
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_AuthenticationHeaderStyle_
+  commentId: Overload:Refitter.Core.RefitGeneratorSettings.AuthenticationHeaderStyle
+  isSpec: "True"
+  fullName: Refitter.Core.RefitGeneratorSettings.AuthenticationHeaderStyle
+  nameWithType: RefitGeneratorSettings.AuthenticationHeaderStyle
 - uid: Refitter.Core.RefitGeneratorSettings.CodeGeneratorSettings
   name: CodeGeneratorSettings
   href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_CodeGeneratorSettings
@@ -1453,19 +1490,6 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.RefitGeneratorSettings.ExcludeNamespaces
   nameWithType: RefitGeneratorSettings.ExcludeNamespaces
-- uid: Refitter.Core.RefitGeneratorSettings.GenerateAuthenticationHeader
-  name: GenerateAuthenticationHeader
-  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_GenerateAuthenticationHeader
-  commentId: P:Refitter.Core.RefitGeneratorSettings.GenerateAuthenticationHeader
-  fullName: Refitter.Core.RefitGeneratorSettings.GenerateAuthenticationHeader
-  nameWithType: RefitGeneratorSettings.GenerateAuthenticationHeader
-- uid: Refitter.Core.RefitGeneratorSettings.GenerateAuthenticationHeader*
-  name: GenerateAuthenticationHeader
-  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_GenerateAuthenticationHeader_
-  commentId: Overload:Refitter.Core.RefitGeneratorSettings.GenerateAuthenticationHeader
-  isSpec: "True"
-  fullName: Refitter.Core.RefitGeneratorSettings.GenerateAuthenticationHeader
-  nameWithType: RefitGeneratorSettings.GenerateAuthenticationHeader
 - uid: Refitter.Core.RefitGeneratorSettings.GenerateClients
   name: GenerateClients
   href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_GenerateClients
@@ -1856,6 +1880,19 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.RefitGeneratorSettings.ReturnIObservable
   nameWithType: RefitGeneratorSettings.ReturnIObservable
+- uid: Refitter.Core.RefitGeneratorSettings.SecurityScheme
+  name: SecurityScheme
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_SecurityScheme
+  commentId: P:Refitter.Core.RefitGeneratorSettings.SecurityScheme
+  fullName: Refitter.Core.RefitGeneratorSettings.SecurityScheme
+  nameWithType: RefitGeneratorSettings.SecurityScheme
+- uid: Refitter.Core.RefitGeneratorSettings.SecurityScheme*
+  name: SecurityScheme
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_SecurityScheme_
+  commentId: Overload:Refitter.Core.RefitGeneratorSettings.SecurityScheme
+  isSpec: "True"
+  fullName: Refitter.Core.RefitGeneratorSettings.SecurityScheme
+  nameWithType: RefitGeneratorSettings.SecurityScheme
 - uid: Refitter.Core.RefitGeneratorSettings.TrimUnusedSchema
   name: TrimUnusedSchema
   href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_TrimUnusedSchema

@@ -18,6 +18,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.AuthenticationHeaderStyle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.AuthenticationHeaderStyle.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.AuthenticationHeaderStyle",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.AuthenticationHeaderStyle.yml\" sourcestartlinenumber=\"1\">The Authentication header style to use.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Refitter.Core.CacheProviderType.yml",
       "output": {
         ".html": {
