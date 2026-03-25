@@ -270,6 +270,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.PropertyNamingPolicy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.PropertyNamingPolicy.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.PropertyNamingPolicy",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.PropertyNamingPolicy.yml\" sourcestartlinenumber=\"1\">Controls how generated contract property names are emitted.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Refitter.Core.RefitGenerator.yml",
       "output": {
         ".html": {

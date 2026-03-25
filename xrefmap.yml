@@ -1213,6 +1213,24 @@ references:
   commentId: F:Refitter.Core.PackageConstants.Polly
   fullName: Refitter.Core.PackageConstants.Polly
   nameWithType: PackageConstants.Polly
+- uid: Refitter.Core.PropertyNamingPolicy
+  name: PropertyNamingPolicy
+  href: api/Refitter.Core.PropertyNamingPolicy.html
+  commentId: T:Refitter.Core.PropertyNamingPolicy
+  fullName: Refitter.Core.PropertyNamingPolicy
+  nameWithType: PropertyNamingPolicy
+- uid: Refitter.Core.PropertyNamingPolicy.PascalCase
+  name: PascalCase
+  href: api/Refitter.Core.PropertyNamingPolicy.html#Refitter_Core_PropertyNamingPolicy_PascalCase
+  commentId: F:Refitter.Core.PropertyNamingPolicy.PascalCase
+  fullName: Refitter.Core.PropertyNamingPolicy.PascalCase
+  nameWithType: PropertyNamingPolicy.PascalCase
+- uid: Refitter.Core.PropertyNamingPolicy.PreserveOriginal
+  name: PreserveOriginal
+  href: api/Refitter.Core.PropertyNamingPolicy.html#Refitter_Core_PropertyNamingPolicy_PreserveOriginal
+  commentId: F:Refitter.Core.PropertyNamingPolicy.PreserveOriginal
+  fullName: Refitter.Core.PropertyNamingPolicy.PreserveOriginal
+  nameWithType: PropertyNamingPolicy.PreserveOriginal
 - uid: Refitter.Core.RefitGenerator
   name: RefitGenerator
   href: api/Refitter.Core.RefitGenerator.html
@@ -1841,6 +1859,19 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.RefitGeneratorSettings.ParameterNameGenerator
   nameWithType: RefitGeneratorSettings.ParameterNameGenerator
+- uid: Refitter.Core.RefitGeneratorSettings.PropertyNamingPolicy
+  name: PropertyNamingPolicy
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_PropertyNamingPolicy
+  commentId: P:Refitter.Core.RefitGeneratorSettings.PropertyNamingPolicy
+  fullName: Refitter.Core.RefitGeneratorSettings.PropertyNamingPolicy
+  nameWithType: RefitGeneratorSettings.PropertyNamingPolicy
+- uid: Refitter.Core.RefitGeneratorSettings.PropertyNamingPolicy*
+  name: PropertyNamingPolicy
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_PropertyNamingPolicy_
+  commentId: Overload:Refitter.Core.RefitGeneratorSettings.PropertyNamingPolicy
+  isSpec: "True"
+  fullName: Refitter.Core.RefitGeneratorSettings.PropertyNamingPolicy
+  nameWithType: RefitGeneratorSettings.PropertyNamingPolicy
 - uid: Refitter.Core.RefitGeneratorSettings.ResponseTypeOverride
   name: ResponseTypeOverride
   href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_ResponseTypeOverride

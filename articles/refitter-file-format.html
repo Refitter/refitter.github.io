@@ -89,6 +89,7 @@
   &quot;openApiPath&quot;: &quot;/path/to/your/openAPI&quot;, // Required if openApiPaths is not specified
   &quot;namespace&quot;: &quot;Org.System.Service.Api.GeneratedCode&quot;, // Optional. Default=GeneratedCode
   &quot;contractsNamespace&quot;: &quot;Org.System.Service.Api.GeneratedCode.Contracts&quot;, // Optional. Default=GeneratedCode
+  &quot;propertyNamingPolicy&quot;: &quot;PascalCase&quot;, // Optional. Values=PascalCase|PreserveOriginal. Default=PascalCase
   &quot;naming&quot;: {
     &quot;useOpenApiTitle&quot;: false, // Optional. Default=true
     &quot;interfaceName&quot;: &quot;MyApiClient&quot; // Optional. Default=ApiClient
@@ -225,6 +226,7 @@
 <li><code>openApiPaths</code> - a collection of paths to multiple OpenAPI Specifications files. When specified, the documents are merged into a single generated client. The first document wins on schema conflicts. Required if <code>openApiPath</code> is not specified</li>
 <li><code>namespace</code> - the namespace used in the generated code. If not specified, this defaults to <code>GeneratedCode</code></li>
 <li><code>contractsNamespace</code> - the namespace used in the generated contracts. If not specified, this defaults to what <code>namespace</code> is set to</li>
+<li><code>propertyNamingPolicy</code> - controls how generated contract properties are named. Possible values are <code>PascalCase</code> (default) and <code>PreserveOriginal</code>. <code>PreserveOriginal</code> keeps valid identifiers as-is, escapes reserved C# keywords with <code>@</code>, and minimally sanitizes invalid names into compilable identifiers while still emitting <code>[JsonPropertyName]</code></li>
 <li><code>naming.useOpenApiTitle</code> - a boolean indicating whether the OpenApi title should be used. Default is <code>true</code></li>
 <li><code>naming.interfaceName</code> - the name of the generated interface. The generated code will automatically prefix this with <code>I</code> so if this set to <code>MyApiClient</code> then the generated interface is called <code>IMyApiClient</code>. Default is <code>ApiClient</code></li>
 <li><code>generateContracts</code> - a boolean indicating whether contracts should be generated. A use case for this is several API clients use the same contracts. Default is <code>true</code></li>
@@ -696,9 +698,6 @@
                 },
                 &quot;dateTimeFormat&quot;: {
                     &quot;type&quot;: &quot;string&quot;
-                },
-                &quot;propertyNameGenerator&quot;: {
-                    &quot;type&quot;: &quot;object&quot;
                 }
             },
         }
