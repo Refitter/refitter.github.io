@@ -461,6 +461,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/breaking-changes-v2-0-0.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/breaking-changes-v2-0-0.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/cli-tool.md",
       "output": {
         ".html": {
