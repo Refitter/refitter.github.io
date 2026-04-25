@@ -140,6 +140,7 @@
 <li>Version-control generated <code>.g.cs</code> files</li>
 <li>Reference generated files directly in build scripts</li>
 <li>Expect physical files in the <code>./Generated</code> folder</li>
+<li>Relied on <code>Refit</code> flowing transitively from <code>Refitter.SourceGenerator</code></li>
 </ul>
 <p>will need to adjust their workflow.</p>
 <h3 id="why-this-change">Why This Change</h3>
@@ -158,6 +159,15 @@
 <li><strong>Rider:</strong> Right-click <code>.refitter</code> file → Select <strong>&quot;View Generated Files&quot;</strong></li>
 </ul>
 <p>This is the recommended approach for most users.</p>
+<h4 id="package-references-for-source-generator-consumers">Package References for Source Generator Consumers</h4>
+<p><code>Refitter.SourceGenerator</code> keeps its <code>Refit</code> dependency private. Add a direct package reference to <code>Refit</code> in every consuming project, and add <code>Refit.HttpClientFactory</code> separately if you use generated dependency-injection helpers such as <code>ConfigureRefitClients()</code>.</p>
+<pre><code class="lang-xml">&lt;ItemGroup&gt;
+  &lt;PackageReference Include=&quot;Refitter.SourceGenerator&quot; Version=&quot;2.0.0&quot; /&gt;
+  &lt;PackageReference Include=&quot;Refit&quot; Version=&quot;10.1.6&quot; /&gt;
+  &lt;PackageReference Include=&quot;Refit.HttpClientFactory&quot; Version=&quot;10.1.6&quot; /&gt;
+&lt;/ItemGroup&gt;
+</code></pre>
+<p>If you do not use the generated DI helpers, omit <code>Refit.HttpClientFactory</code>.</p>
 <h4 id="option-b-generate-physical-files-with-cli-or-msbuild">Option B: Generate Physical Files with CLI or MSBuild</h4>
 <p>If you need disk files for version control, inspection, or custom build processes:</p>
 <p><strong>Using Refitter CLI:</strong></p>
@@ -181,10 +191,59 @@ refitter ./swagger.json --output ./GeneratedClient.cs --namespace &quot;MyApi&qu
 <li><a href="https://github.com/christianhelle/refitter/pull/923">PR #923: Use Roslyn context.AddSource() instead of writing files to disk</a></li>
 </ul>
 <hr>
+<h2 id="silent-behavioral-change-openapi-parser-upgrade">Silent Behavioral Change: OpenAPI Parser Upgrade</h2>
+<h3 id="summary-2">Summary</h3>
+<p>Refitter v2.0.0 upgrades the OpenAPI parser from <strong>Microsoft.OpenApi.Readers 1.x to 3.x</strong> (<code>OasReader 3.5.0.19</code>). This is a <strong>major version upgrade</strong> with materially different schema interpretation.</p>
+<h3 id="impact-2">Impact</h3>
+<p>Users upgrading from v1.7.3 may see <strong>different generated C# code</strong> even without changing their OpenAPI specifications. This is not a breaking change in the Refitter API, but a <strong>behavioral change in code generation</strong> caused by the parser upgrade. The branch proves the parser changed and documents how to migrate; it does <strong>not</strong> prove full 1.7.3-vs-v2.0 behavioral equivalence across a broad real-world corpus.</p>
+<h3 id="what-changed-in-the-parser">What Changed in the Parser</h3>
+<p>Microsoft.OpenApi 3.x interprets these schema aspects differently than 1.x:</p>
+<ul>
+<li><strong>Nullability handling:</strong> More strict <code>null</code> type interpretation</li>
+<li><strong>Discriminator support:</strong> Improved <code>oneOf</code>/<code>anyOf</code> discriminator resolution</li>
+<li><strong>Reference resolution:</strong> Safer <code>$ref</code> path handling</li>
+<li><strong>Examples:</strong> Better handling of embedded schema examples</li>
+<li><strong>Swagger 2.0 edge cases:</strong> More robust handling of specs without <code>components</code> section</li>
+</ul>
+<h3 id="migration-1">Migration</h3>
+<p><strong>Action required:</strong> After upgrading Refitter to v2.0.0:</p>
+<ol>
+<li>Regenerate your client code from your OpenAPI specification</li>
+<li>Review the generated code diff carefully</li>
+<li>Run your test suite to ensure the new client works correctly</li>
+<li>Commit the updated generated code</li>
+</ol>
+<p>Treat these steps as the recommended mitigation for the parser upgrade: regenerate, inspect the diff, and validate your client with tests before shipping.</p>
+<h3 id="example">Example</h3>
+<p>If you're using the CLI:</p>
+<pre><code class="lang-bash"># Regenerate with new parser
+refitter ./swagger.json --output ./GeneratedClient.cs --namespace &quot;MyApi&quot;
+
+# Review the diff
+git diff GeneratedClient.cs
+
+# Run tests
+dotnet test
+
+# Commit
+git add GeneratedClient.cs &amp;&amp; git commit -m &quot;Regenerate client with OpenAPI parser v3.x&quot;
+</code></pre>
+<p>If you're using Source Generator or MSBuild, rebuild your project and review the generated changes the same way.</p>
+<h3 id="related-evidence-2">Related Evidence</h3>
+<ul>
+<li><a href="https://github.com/christianhelle/refitter/pull/907">PR #907: Migrate from Microsoft.OpenApi.Readers 1.x to Microsoft.OpenApi 3.x</a></li>
+<li><a href="https://github.com/christianhelle/refitter/pull/945">PR #945: Upgrade Microsoft.OpenApi v3.4</a></li>
+</ul>
+<hr>
 <h2 id="migration-checklist">Migration Checklist</h2>
 <ul>
+<li>[ ] Upgrade Refitter to v2.0.0</li>
+<li>[ ] <strong>Regenerate client code</strong> from your OpenAPI specification</li>
+<li>[ ] <strong>Review generated code diff</strong> for changes caused by the OpenAPI parser upgrade</li>
 <li>[ ] Update <code>.refitter</code> files: replace <code>generateAuthenticationHeader</code> with <code>authenticationHeaderStyle</code></li>
+<li>[ ] If using <code>Refitter.SourceGenerator</code>: add a direct <code>Refit</code> package reference (and <code>Refit.HttpClientFactory</code> if using generated DI helpers)</li>
 <li>[ ] If using Source Generator: choose IDE viewing or switch to CLI/MSBuild</li>
+<li>[ ] Run test suite to verify new client behavior</li>
 <li>[ ] Rebuild and test code generation</li>
 <li>[ ] Update CI/CD pipelines and build scripts as needed</li>
 <li>[ ] Remove generated <code>.g.cs</code> files from version control (if using Source Generator)</li>
