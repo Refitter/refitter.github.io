@@ -92,8 +92,8 @@ dotnet add package Refit
 </code></pre>
 <p><code>Refitter.SourceGenerator</code> keeps its <code>Refit</code> dependency private, so consuming projects must add their own direct package reference to <code>Refit</code>. If you use generated dependency-injection helpers such as <code>ConfigureRefitClients()</code>, also add <code>Refit.HttpClientFactory</code> explicitly.</p>
 <h4 id="usage">Usage</h4>
-<p>This source generator generates code based on any <a href="refitter-file-format.html">.refitter</a> file included to the project as <code>AdditionalFiles</code>.</p>
-<p>The generator can automatically detect all <a href="refitter-file-format.html">.refitter</a> files inside the project that referenced the <code>Refitter.SourceGenerator</code> package and there is no need to include them manually as <code>AdditionalFiles</code></p>
+<p>After installing the package, add one or more <a href="refitter-file-format.html">.refitter</a> files to your project.</p>
+<p><code>Refitter.SourceGenerator</code> automatically includes <code>**/*.refitter</code> as Roslyn <code>AdditionalFiles</code> via its package props, so you do not need to add manual <code>&lt;AdditionalFiles Include=&quot;...&quot; /&gt;</code> entries unless you intentionally override that default behavior.</p>
 
 </article>
 
