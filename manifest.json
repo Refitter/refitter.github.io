@@ -312,6 +312,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.RefitterSettingsLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.RefitterSettingsLoader.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.RefitterSettingsLoader",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.RefitterSettingsLoader.yml\" sourcestartlinenumber=\"1\">Loads <xref href=\"Refitter.Core.RefitGeneratorSettings\" data-throw-if-not-resolved=\"false\"></xref> from the contents of a <code>.refitter</code> settings file.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Refitter.Core.SchemaCleaner.yml",
       "output": {
         ".html": {

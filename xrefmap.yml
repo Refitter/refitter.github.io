@@ -2002,6 +2002,60 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.RefitGeneratorSettings.UsePolymorphicSerialization
   nameWithType: RefitGeneratorSettings.UsePolymorphicSerialization
+- uid: Refitter.Core.RefitterSettingsLoader
+  name: RefitterSettingsLoader
+  href: api/Refitter.Core.RefitterSettingsLoader.html
+  commentId: T:Refitter.Core.RefitterSettingsLoader
+  fullName: Refitter.Core.RefitterSettingsLoader
+  nameWithType: RefitterSettingsLoader
+- uid: Refitter.Core.RefitterSettingsLoader.IsUrl(System.String)
+  name: IsUrl(string)
+  href: api/Refitter.Core.RefitterSettingsLoader.html#Refitter_Core_RefitterSettingsLoader_IsUrl_System_String_
+  commentId: M:Refitter.Core.RefitterSettingsLoader.IsUrl(System.String)
+  name.vb: IsUrl(String)
+  fullName: Refitter.Core.RefitterSettingsLoader.IsUrl(string)
+  fullName.vb: Refitter.Core.RefitterSettingsLoader.IsUrl(String)
+  nameWithType: RefitterSettingsLoader.IsUrl(string)
+  nameWithType.vb: RefitterSettingsLoader.IsUrl(String)
+- uid: Refitter.Core.RefitterSettingsLoader.IsUrl*
+  name: IsUrl
+  href: api/Refitter.Core.RefitterSettingsLoader.html#Refitter_Core_RefitterSettingsLoader_IsUrl_
+  commentId: Overload:Refitter.Core.RefitterSettingsLoader.IsUrl
+  isSpec: "True"
+  fullName: Refitter.Core.RefitterSettingsLoader.IsUrl
+  nameWithType: RefitterSettingsLoader.IsUrl
+- uid: Refitter.Core.RefitterSettingsLoader.Load(System.String,System.String)
+  name: Load(string, string)
+  href: api/Refitter.Core.RefitterSettingsLoader.html#Refitter_Core_RefitterSettingsLoader_Load_System_String_System_String_
+  commentId: M:Refitter.Core.RefitterSettingsLoader.Load(System.String,System.String)
+  name.vb: Load(String, String)
+  fullName: Refitter.Core.RefitterSettingsLoader.Load(string, string)
+  fullName.vb: Refitter.Core.RefitterSettingsLoader.Load(String, String)
+  nameWithType: RefitterSettingsLoader.Load(string, string)
+  nameWithType.vb: RefitterSettingsLoader.Load(String, String)
+- uid: Refitter.Core.RefitterSettingsLoader.Load*
+  name: Load
+  href: api/Refitter.Core.RefitterSettingsLoader.html#Refitter_Core_RefitterSettingsLoader_Load_
+  commentId: Overload:Refitter.Core.RefitterSettingsLoader.Load
+  isSpec: "True"
+  fullName: Refitter.Core.RefitterSettingsLoader.Load
+  nameWithType: RefitterSettingsLoader.Load
+- uid: Refitter.Core.RefitterSettingsLoader.ResolveRelativeSpecPaths(Refitter.Core.RefitGeneratorSettings,System.String)
+  name: ResolveRelativeSpecPaths(RefitGeneratorSettings, string)
+  href: api/Refitter.Core.RefitterSettingsLoader.html#Refitter_Core_RefitterSettingsLoader_ResolveRelativeSpecPaths_Refitter_Core_RefitGeneratorSettings_System_String_
+  commentId: M:Refitter.Core.RefitterSettingsLoader.ResolveRelativeSpecPaths(Refitter.Core.RefitGeneratorSettings,System.String)
+  name.vb: ResolveRelativeSpecPaths(RefitGeneratorSettings, String)
+  fullName: Refitter.Core.RefitterSettingsLoader.ResolveRelativeSpecPaths(Refitter.Core.RefitGeneratorSettings, string)
+  fullName.vb: Refitter.Core.RefitterSettingsLoader.ResolveRelativeSpecPaths(Refitter.Core.RefitGeneratorSettings, String)
+  nameWithType: RefitterSettingsLoader.ResolveRelativeSpecPaths(RefitGeneratorSettings, string)
+  nameWithType.vb: RefitterSettingsLoader.ResolveRelativeSpecPaths(RefitGeneratorSettings, String)
+- uid: Refitter.Core.RefitterSettingsLoader.ResolveRelativeSpecPaths*
+  name: ResolveRelativeSpecPaths
+  href: api/Refitter.Core.RefitterSettingsLoader.html#Refitter_Core_RefitterSettingsLoader_ResolveRelativeSpecPaths_
+  commentId: Overload:Refitter.Core.RefitterSettingsLoader.ResolveRelativeSpecPaths
+  isSpec: "True"
+  fullName: Refitter.Core.RefitterSettingsLoader.ResolveRelativeSpecPaths
+  nameWithType: RefitterSettingsLoader.ResolveRelativeSpecPaths
 - uid: Refitter.Core.SchemaCleaner
   name: SchemaCleaner
   href: api/Refitter.Core.SchemaCleaner.html
