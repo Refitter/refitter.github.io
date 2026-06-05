@@ -207,6 +207,7 @@
       &quot;ExcludedTypeBar&quot;
     ],
     &quot;customTemplateDirectory&quot;: &quot;./path/to/directory/&quot; //Optional. See &lt;https://github.com/RicoSuter/NSwag/wiki/Templates&gt;
+    &quot;jsonLibraryVersion&quot;: 8.0 // Optional. Default=8.0. JSON library version for System.Text.Json. When set to 9.0 or higher, enables .NET 9+ JsonStringEnumMemberName support for custom enum value names
   }
 }
 </code></pre>
@@ -320,6 +321,7 @@
 <li><code>excludedTypeNames</code> - Default is empty</li>
 <li><code>dateFormat</code> - Default is null</li>
 <li><code>dateTimeFormat</code> - Default is null</li>
+<li><code>jsonLibraryVersion</code> - Default is <code>8.0</code>. JSON library version for System.Text.Json. When set to <code>9.0</code> or higher, enables .NET 9+ <code>JsonStringEnumMemberName</code> support for custom enum value names</li>
 </ul>
 </li>
 </ul>
@@ -698,6 +700,10 @@
                 },
                 &quot;dateTimeFormat&quot;: {
                     &quot;type&quot;: &quot;string&quot;
+                },
+                &quot;jsonLibraryVersion&quot;: {
+                    &quot;type&quot;: &quot;number&quot;,
+                    &quot;description&quot;: &quot;JSON library version for System.Text.Json. Default is 8.0. When set to 9.0 or higher, enables .NET 9+ JsonStringEnumMemberName support.&quot;
                 }
             },
         }

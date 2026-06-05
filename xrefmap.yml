@@ -566,6 +566,19 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.CodeGeneratorSettings.JsonConverters
   nameWithType: CodeGeneratorSettings.JsonConverters
+- uid: Refitter.Core.CodeGeneratorSettings.JsonLibraryVersion
+  name: JsonLibraryVersion
+  href: api/Refitter.Core.CodeGeneratorSettings.html#Refitter_Core_CodeGeneratorSettings_JsonLibraryVersion
+  commentId: P:Refitter.Core.CodeGeneratorSettings.JsonLibraryVersion
+  fullName: Refitter.Core.CodeGeneratorSettings.JsonLibraryVersion
+  nameWithType: CodeGeneratorSettings.JsonLibraryVersion
+- uid: Refitter.Core.CodeGeneratorSettings.JsonLibraryVersion*
+  name: JsonLibraryVersion
+  href: api/Refitter.Core.CodeGeneratorSettings.html#Refitter_Core_CodeGeneratorSettings_JsonLibraryVersion_
+  commentId: Overload:Refitter.Core.CodeGeneratorSettings.JsonLibraryVersion
+  isSpec: "True"
+  fullName: Refitter.Core.CodeGeneratorSettings.JsonLibraryVersion
+  nameWithType: CodeGeneratorSettings.JsonLibraryVersion
 - uid: Refitter.Core.CodeGeneratorSettings.JsonSerializerSettingsTransformationMethod
   name: JsonSerializerSettingsTransformationMethod
   href: api/Refitter.Core.CodeGeneratorSettings.html#Refitter_Core_CodeGeneratorSettings_JsonSerializerSettingsTransformationMethod
