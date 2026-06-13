@@ -223,11 +223,54 @@ Class RefitGenerator  <a class="header-action link-secondary" title="View source
 </h2>
 
 
+  <a id="Refitter_Core_RefitGenerator_Create_" data-uid="Refitter.Core.RefitGenerator.Create*"></a>
+
+  <h3 id="Refitter_Core_RefitGenerator_Create_NSwag_OpenApiDocument_Refitter_Core_RefitGeneratorSettings_" data-uid="Refitter.Core.RefitGenerator.Create(NSwag.OpenApiDocument,Refitter.Core.RefitGeneratorSettings)">
+  Create(OpenApiDocument, RefitGeneratorSettings)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/RefitGenerator.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new instance of the <a class="xref" href="Refitter.Core.RefitGenerator.html">RefitGenerator</a> class synchronously
+from a pre-loaded <a class="xref" href="Refitter.Core.RefitGenerator.html#Refitter_Core_RefitGenerator_OpenApiDocument">OpenApiDocument</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RefitGenerator Create(OpenApiDocument document, RefitGeneratorSettings settings)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <span class="xref">OpenApiDocument</span></dt>
+    <dd><p>The pre-loaded OpenAPI document.</p>
+</dd>
+    <dt><code>settings</code> <a class="xref" href="Refitter.Core.RefitGeneratorSettings.html">RefitGeneratorSettings</a></dt>
+    <dd><p>The settings used to configure the generator.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Refitter.Core.RefitGenerator.html">RefitGenerator</a></dt>
+    <dd><p>A new instance of the <a class="xref" href="Refitter.Core.RefitGenerator.html">RefitGenerator</a> class.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Refitter_Core_RefitGenerator_CreateAsync_" data-uid="Refitter.Core.RefitGenerator.CreateAsync*"></a>
 
   <h3 id="Refitter_Core_RefitGenerator_CreateAsync_Refitter_Core_RefitGeneratorSettings_" data-uid="Refitter.Core.RefitGenerator.CreateAsync(Refitter.Core.RefitGeneratorSettings)">
   CreateAsync(RefitGeneratorSettings)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/RefitGenerator.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/RefitGenerator.cs/#L43"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new instance of the <a class="xref" href="Refitter.Core.RefitGenerator.html">RefitGenerator</a> class asynchronously.</p>
@@ -266,7 +309,7 @@ Class RefitGenerator  <a class="header-action link-secondary" title="View source
 
   <h3 id="Refitter_Core_RefitGenerator_Generate" data-uid="Refitter.Core.RefitGenerator.Generate">
   Generate()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/RefitGenerator.cs/#L134"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/RefitGenerator.cs/#L148"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generates Refit clients and interfaces based on an OpenAPI specification and returns the generated code as a string.</p>
@@ -299,7 +342,7 @@ Class RefitGenerator  <a class="header-action link-secondary" title="View source
 
   <h3 id="Refitter_Core_RefitGenerator_GenerateMultipleFiles" data-uid="Refitter.Core.RefitGenerator.GenerateMultipleFiles">
   GenerateMultipleFiles()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/RefitGenerator.cs/#L140"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/RefitGenerator.cs/#L154"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generates multiple files containing Refit interfaces and contracts.</p>

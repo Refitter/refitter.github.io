@@ -1269,6 +1269,19 @@ references:
   fullName.vb: Refitter.Core.RefitGenerator.New
   nameWithType: RefitGenerator.RefitGenerator
   nameWithType.vb: RefitGenerator.New
+- uid: Refitter.Core.RefitGenerator.Create(NSwag.OpenApiDocument,Refitter.Core.RefitGeneratorSettings)
+  name: Create(OpenApiDocument, RefitGeneratorSettings)
+  href: api/Refitter.Core.RefitGenerator.html#Refitter_Core_RefitGenerator_Create_NSwag_OpenApiDocument_Refitter_Core_RefitGeneratorSettings_
+  commentId: M:Refitter.Core.RefitGenerator.Create(NSwag.OpenApiDocument,Refitter.Core.RefitGeneratorSettings)
+  fullName: Refitter.Core.RefitGenerator.Create(NSwag.OpenApiDocument, Refitter.Core.RefitGeneratorSettings)
+  nameWithType: RefitGenerator.Create(OpenApiDocument, RefitGeneratorSettings)
+- uid: Refitter.Core.RefitGenerator.Create*
+  name: Create
+  href: api/Refitter.Core.RefitGenerator.html#Refitter_Core_RefitGenerator_Create_
+  commentId: Overload:Refitter.Core.RefitGenerator.Create
+  isSpec: "True"
+  fullName: Refitter.Core.RefitGenerator.Create
+  nameWithType: RefitGenerator.Create
 - uid: Refitter.Core.RefitGenerator.CreateAsync(Refitter.Core.RefitGeneratorSettings)
   name: CreateAsync(RefitGeneratorSettings)
   href: api/Refitter.Core.RefitGenerator.html#Refitter_Core_RefitGenerator_CreateAsync_Refitter_Core_RefitGeneratorSettings_
