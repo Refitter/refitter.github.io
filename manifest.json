@@ -172,6 +172,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.IRefitCodeGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.IRefitCodeGenerator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.IRefitCodeGenerator",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.IRefitCodeGenerator.yml\" sourcestartlinenumber=\"1\">Generates Refit client code from a cleaned OpenAPI document.\nProduces single-file or multi-file output.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.IRefitSchemaCleaner.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.IRefitSchemaCleaner.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.IRefitSchemaCleaner",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.IRefitSchemaCleaner.yml\" sourcestartlinenumber=\"1\">Cleans an OpenAPI document by removing unreferenced schemas.\nReturns a new document without mutating the input.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Refitter.Core.IntegerType.yml",
       "output": {
         ".html": {
@@ -284,6 +312,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.RefitCodeGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.RefitCodeGenerator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.RefitCodeGenerator",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.RefitCodeGenerator.yml\" sourcestartlinenumber=\"1\">Generates Refit client and interface code from an OpenAPI document.\nHandles both single-file and multi-file output modes.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.RefitDocumentFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.RefitDocumentFilter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.RefitDocumentFilter",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.RefitDocumentFilter.yml\" sourcestartlinenumber=\"1\">Filters an OpenAPI document by tags and path patterns.\nEach filter operation returns a new document without mutating the input.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Refitter.Core.RefitGenerator.yml",
       "output": {
         ".html": {
@@ -294,7 +350,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Refitter.Core.RefitGenerator",
-      "Summary": "<p sourcefile=\"api/Refitter.Core.RefitGenerator.yml\" sourcestartlinenumber=\"1\">Generates Refit clients and interfaces based on an OpenAPI specification.</p>\n"
+      "Summary": "<p sourcefile=\"api/Refitter.Core.RefitGenerator.yml\" sourcestartlinenumber=\"1\">Generates Refit clients and interfaces based on an OpenAPI specification.\nThis is a thin facade that delegates to <xref href=\"Refitter.Core.RefitPipeline\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"Refitter.Core.RefitCodeGenerator\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -309,6 +365,34 @@
       "IsMRef": true,
       "Title": "Refitter.Core.RefitGeneratorSettings",
       "Summary": "<p sourcefile=\"api/Refitter.Core.RefitGeneratorSettings.yml\" sourcestartlinenumber=\"1\">Provide settings for Refit generator.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.RefitPipeline.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.RefitPipeline.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.RefitPipeline",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.RefitPipeline.yml\" sourcestartlinenumber=\"1\">Orchestrates the code generation pipeline: load -&gt; filter -&gt; clean -&gt; generate.\nReplaces the document mutation logic that was previously inside <xref href=\"Refitter.Core.RefitGenerator.Create(NSwag.OpenApiDocument%2cRefitter.Core.RefitGeneratorSettings)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.RefitSchemaCleaner.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.RefitSchemaCleaner.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.RefitSchemaCleaner",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.RefitSchemaCleaner.yml\" sourcestartlinenumber=\"1\">Cleans an OpenAPI document by removing unreferenced schemas.\nWraps <xref href=\"Refitter.Core.SchemaCleaner\" data-throw-if-not-resolved=\"false\"></xref> and returns a new document without mutating the input.</p>\n"
     },
     {
       "type": "ManagedReference",
