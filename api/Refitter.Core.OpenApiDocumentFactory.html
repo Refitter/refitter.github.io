@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class OpenApiDocumentFactory ">
       
-      <meta name="description" content="Creates an  from a specified path or URL.">
+      
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -85,7 +85,7 @@
 
 
   <h1 id="Refitter_Core_OpenApiDocumentFactory" data-uid="Refitter.Core.OpenApiDocumentFactory" class="text-break">
-Class OpenApiDocumentFactory  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/OpenApiDocumentFactory.cs/#L17"><i class="bi bi-code-slash"></i></a>
+Class OpenApiDocumentFactory  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/OpenApiDocumentFactory.cs/#L6"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -93,8 +93,7 @@ Class OpenApiDocumentFactory  <a class="header-action link-secondary" title="Vie
   <dl><dt>Assembly</dt><dd>Refitter.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Creates an <span class="xref">NSwag.OpenApiDocument</span> from a specified path or URL.</p>
-</div>
+  <div class="markdown summary"></div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -153,7 +152,7 @@ Class OpenApiDocumentFactory  <a class="header-action link-secondary" title="Vie
 
   <h3 id="Refitter_Core_OpenApiDocumentFactory_CreateAsync_System_Collections_Generic_IEnumerable_System_String__" data-uid="Refitter.Core.OpenApiDocumentFactory.CreateAsync(System.Collections.Generic.IEnumerable{System.String})">
   CreateAsync(IEnumerable&lt;string&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/OpenApiDocumentFactory.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/OpenApiDocumentFactory.cs/#L19"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a merged <span class="xref">NSwag.OpenApiDocument</span> from multiple paths or URLs.
@@ -188,8 +187,11 @@ The first document serves as the base; paths and schemas from subsequent documen
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown when <code class="paramref">openApiPaths</code> is null.</p>
+</dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p>Thrown when <code class="paramref">openApiPaths</code> is null or empty.</p>
+    <dd><p>Thrown when <code class="paramref">openApiPaths</code> is empty.</p>
 </dd>
   </dl>
 
@@ -199,7 +201,7 @@ The first document serves as the base; paths and schemas from subsequent documen
 
   <h3 id="Refitter_Core_OpenApiDocumentFactory_CreateAsync_System_String_" data-uid="Refitter.Core.OpenApiDocumentFactory.CreateAsync(System.String)">
   CreateAsync(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/OpenApiDocumentFactory.cs/#L395"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/OpenApiDocumentFactory.cs/#L43"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new instance of the <span class="xref">NSwag.OpenApiDocument</span> class asynchronously.</p>
@@ -238,7 +240,7 @@ The first document serves as the base; paths and schemas from subsequent documen
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/OpenApiDocumentFactory.cs/#L17" class="edit-link">Edit this page</a>
+          <a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/OpenApiDocumentFactory.cs/#L6" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -238,7 +238,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Refitter.Core.OpenApiDocumentFactory",
-      "Summary": "<p sourcefile=\"api/Refitter.Core.OpenApiDocumentFactory.yml\" sourcestartlinenumber=\"1\">Creates an <xref href=\"NSwag.OpenApiDocument\" data-throw-if-not-resolved=\"false\"></xref> from a specified path or URL.</p>\n"
+      "Summary": null
     },
     {
       "type": "ManagedReference",
