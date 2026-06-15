@@ -46,6 +46,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.CodeGenerationConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.CodeGenerationConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.CodeGenerationConfig",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.CodeGenerationConfig.yml\" sourcestartlinenumber=\"1\">Configuration for what code generation features are enabled.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Refitter.Core.CodeGeneratorSettings.yml",
       "output": {
         ".html": {
@@ -116,6 +130,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.FeatureConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.FeatureConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.FeatureConfig",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.FeatureConfig.yml\" sourcestartlinenumber=\"1\">Configuration for optional features including Apizr, polymorphic serialization,\nauthentication headers, and AOT compilation support.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Refitter.Core.FileExtensionConstants.yml",
       "output": {
         ".html": {
@@ -141,6 +169,20 @@
       "IsMRef": true,
       "Title": "Refitter.Core.FilenameConstants",
       "Summary": "<p sourcefile=\"api/Refitter.Core.FilenameConstants.yml\" sourcestartlinenumber=\"1\">Constants for default file names.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.FilterConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.FilterConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.FilterConfig",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.FilterConfig.yml\" sourcestartlinenumber=\"1\">Configuration for filtering which endpoints and schemas to include in generated code.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -270,6 +312,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.OpenApiSourceConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.OpenApiSourceConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.OpenApiSourceConfig",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.OpenApiSourceConfig.yml\" sourcestartlinenumber=\"1\">Configuration for the OpenAPI document source paths.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Refitter.Core.OperationNameGeneratorTypes.yml",
       "output": {
         ".html": {
@@ -284,6 +340,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.OutputConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.OutputConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.OutputConfig",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.OutputConfig.yml\" sourcestartlinenumber=\"1\">Configuration for generated output paths, filenames, and namespaces.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Refitter.Core.PackageConstants.yml",
       "output": {
         ".html": {
@@ -295,6 +365,20 @@
       "IsMRef": true,
       "Title": "Refitter.Core.PackageConstants",
       "Summary": "<p sourcefile=\"api/Refitter.Core.PackageConstants.yml\" sourcestartlinenumber=\"1\">Constants for package and library names.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.ParameterConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.ParameterConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.ParameterConfig",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.ParameterConfig.yml\" sourcestartlinenumber=\"1\">Configuration for method parameter code generation options.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -424,6 +508,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.SchemaConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.SchemaConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.SchemaConfig",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.SchemaConfig.yml\" sourcestartlinenumber=\"1\">Configuration for OpenAPI schema tree-shaking and unused schema trimming.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Refitter.Core.Serializer.yml",
       "output": {
         ".html": {
@@ -491,6 +589,20 @@
       "IsMRef": true,
       "Title": "Refitter.Core.TypeAccessibility",
       "Summary": "<p sourcefile=\"api/Refitter.Core.TypeAccessibility.yml\" sourcestartlinenumber=\"1\">Specifies the accessibility of a type.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.TypeConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.TypeConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.TypeConfig",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.TypeConfig.yml\" sourcestartlinenumber=\"1\">Configuration for generated type visibility, naming conventions, and immutability.</p>\n"
     },
     {
       "type": "ManagedReference",
