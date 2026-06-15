@@ -1377,60 +1377,6 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.GeneratorOutput.Files
   nameWithType: GeneratorOutput.Files
-- uid: Refitter.Core.IRefitCodeGenerator
-  name: IRefitCodeGenerator
-  href: api/Refitter.Core.IRefitCodeGenerator.html
-  commentId: T:Refitter.Core.IRefitCodeGenerator
-  fullName: Refitter.Core.IRefitCodeGenerator
-  nameWithType: IRefitCodeGenerator
-- uid: Refitter.Core.IRefitCodeGenerator.Generate(NSwag.OpenApiDocument,Refitter.Core.RefitGeneratorSettings)
-  name: Generate(OpenApiDocument, RefitGeneratorSettings)
-  href: api/Refitter.Core.IRefitCodeGenerator.html#Refitter_Core_IRefitCodeGenerator_Generate_NSwag_OpenApiDocument_Refitter_Core_RefitGeneratorSettings_
-  commentId: M:Refitter.Core.IRefitCodeGenerator.Generate(NSwag.OpenApiDocument,Refitter.Core.RefitGeneratorSettings)
-  fullName: Refitter.Core.IRefitCodeGenerator.Generate(NSwag.OpenApiDocument, Refitter.Core.RefitGeneratorSettings)
-  nameWithType: IRefitCodeGenerator.Generate(OpenApiDocument, RefitGeneratorSettings)
-- uid: Refitter.Core.IRefitCodeGenerator.Generate*
-  name: Generate
-  href: api/Refitter.Core.IRefitCodeGenerator.html#Refitter_Core_IRefitCodeGenerator_Generate_
-  commentId: Overload:Refitter.Core.IRefitCodeGenerator.Generate
-  isSpec: "True"
-  fullName: Refitter.Core.IRefitCodeGenerator.Generate
-  nameWithType: IRefitCodeGenerator.Generate
-- uid: Refitter.Core.IRefitCodeGenerator.GenerateMultipleFiles(NSwag.OpenApiDocument,Refitter.Core.RefitGeneratorSettings)
-  name: GenerateMultipleFiles(OpenApiDocument, RefitGeneratorSettings)
-  href: api/Refitter.Core.IRefitCodeGenerator.html#Refitter_Core_IRefitCodeGenerator_GenerateMultipleFiles_NSwag_OpenApiDocument_Refitter_Core_RefitGeneratorSettings_
-  commentId: M:Refitter.Core.IRefitCodeGenerator.GenerateMultipleFiles(NSwag.OpenApiDocument,Refitter.Core.RefitGeneratorSettings)
-  fullName: Refitter.Core.IRefitCodeGenerator.GenerateMultipleFiles(NSwag.OpenApiDocument, Refitter.Core.RefitGeneratorSettings)
-  nameWithType: IRefitCodeGenerator.GenerateMultipleFiles(OpenApiDocument, RefitGeneratorSettings)
-- uid: Refitter.Core.IRefitCodeGenerator.GenerateMultipleFiles*
-  name: GenerateMultipleFiles
-  href: api/Refitter.Core.IRefitCodeGenerator.html#Refitter_Core_IRefitCodeGenerator_GenerateMultipleFiles_
-  commentId: Overload:Refitter.Core.IRefitCodeGenerator.GenerateMultipleFiles
-  isSpec: "True"
-  fullName: Refitter.Core.IRefitCodeGenerator.GenerateMultipleFiles
-  nameWithType: IRefitCodeGenerator.GenerateMultipleFiles
-- uid: Refitter.Core.IRefitSchemaCleaner
-  name: IRefitSchemaCleaner
-  href: api/Refitter.Core.IRefitSchemaCleaner.html
-  commentId: T:Refitter.Core.IRefitSchemaCleaner
-  fullName: Refitter.Core.IRefitSchemaCleaner
-  nameWithType: IRefitSchemaCleaner
-- uid: Refitter.Core.IRefitSchemaCleaner.Clean(NSwag.OpenApiDocument,System.Boolean,System.String[],System.Boolean)
-  name: Clean(OpenApiDocument, bool, string[], bool)
-  href: api/Refitter.Core.IRefitSchemaCleaner.html#Refitter_Core_IRefitSchemaCleaner_Clean_NSwag_OpenApiDocument_System_Boolean_System_String___System_Boolean_
-  commentId: M:Refitter.Core.IRefitSchemaCleaner.Clean(NSwag.OpenApiDocument,System.Boolean,System.String[],System.Boolean)
-  name.vb: Clean(OpenApiDocument, Boolean, String(), Boolean)
-  fullName: Refitter.Core.IRefitSchemaCleaner.Clean(NSwag.OpenApiDocument, bool, string[], bool)
-  fullName.vb: Refitter.Core.IRefitSchemaCleaner.Clean(NSwag.OpenApiDocument, Boolean, String(), Boolean)
-  nameWithType: IRefitSchemaCleaner.Clean(OpenApiDocument, bool, string[], bool)
-  nameWithType.vb: IRefitSchemaCleaner.Clean(OpenApiDocument, Boolean, String(), Boolean)
-- uid: Refitter.Core.IRefitSchemaCleaner.Clean*
-  name: Clean
-  href: api/Refitter.Core.IRefitSchemaCleaner.html#Refitter_Core_IRefitSchemaCleaner_Clean_
-  commentId: Overload:Refitter.Core.IRefitSchemaCleaner.Clean
-  isSpec: "True"
-  fullName: Refitter.Core.IRefitSchemaCleaner.Clean
-  nameWithType: IRefitSchemaCleaner.Clean
 - uid: Refitter.Core.IntegerType
   name: IntegerType
   href: api/Refitter.Core.IntegerType.html
@@ -1892,38 +1838,6 @@ references:
   commentId: F:Refitter.Core.PropertyNamingPolicy.PreserveOriginal
   fullName: Refitter.Core.PropertyNamingPolicy.PreserveOriginal
   nameWithType: PropertyNamingPolicy.PreserveOriginal
-- uid: Refitter.Core.RefitCodeGenerator
-  name: RefitCodeGenerator
-  href: api/Refitter.Core.RefitCodeGenerator.html
-  commentId: T:Refitter.Core.RefitCodeGenerator
-  fullName: Refitter.Core.RefitCodeGenerator
-  nameWithType: RefitCodeGenerator
-- uid: Refitter.Core.RefitCodeGenerator.Generate(NSwag.OpenApiDocument,Refitter.Core.RefitGeneratorSettings)
-  name: Generate(OpenApiDocument, RefitGeneratorSettings)
-  href: api/Refitter.Core.RefitCodeGenerator.html#Refitter_Core_RefitCodeGenerator_Generate_NSwag_OpenApiDocument_Refitter_Core_RefitGeneratorSettings_
-  commentId: M:Refitter.Core.RefitCodeGenerator.Generate(NSwag.OpenApiDocument,Refitter.Core.RefitGeneratorSettings)
-  fullName: Refitter.Core.RefitCodeGenerator.Generate(NSwag.OpenApiDocument, Refitter.Core.RefitGeneratorSettings)
-  nameWithType: RefitCodeGenerator.Generate(OpenApiDocument, RefitGeneratorSettings)
-- uid: Refitter.Core.RefitCodeGenerator.Generate*
-  name: Generate
-  href: api/Refitter.Core.RefitCodeGenerator.html#Refitter_Core_RefitCodeGenerator_Generate_
-  commentId: Overload:Refitter.Core.RefitCodeGenerator.Generate
-  isSpec: "True"
-  fullName: Refitter.Core.RefitCodeGenerator.Generate
-  nameWithType: RefitCodeGenerator.Generate
-- uid: Refitter.Core.RefitCodeGenerator.GenerateMultipleFiles(NSwag.OpenApiDocument,Refitter.Core.RefitGeneratorSettings)
-  name: GenerateMultipleFiles(OpenApiDocument, RefitGeneratorSettings)
-  href: api/Refitter.Core.RefitCodeGenerator.html#Refitter_Core_RefitCodeGenerator_GenerateMultipleFiles_NSwag_OpenApiDocument_Refitter_Core_RefitGeneratorSettings_
-  commentId: M:Refitter.Core.RefitCodeGenerator.GenerateMultipleFiles(NSwag.OpenApiDocument,Refitter.Core.RefitGeneratorSettings)
-  fullName: Refitter.Core.RefitCodeGenerator.GenerateMultipleFiles(NSwag.OpenApiDocument, Refitter.Core.RefitGeneratorSettings)
-  nameWithType: RefitCodeGenerator.GenerateMultipleFiles(OpenApiDocument, RefitGeneratorSettings)
-- uid: Refitter.Core.RefitCodeGenerator.GenerateMultipleFiles*
-  name: GenerateMultipleFiles
-  href: api/Refitter.Core.RefitCodeGenerator.html#Refitter_Core_RefitCodeGenerator_GenerateMultipleFiles_
-  commentId: Overload:Refitter.Core.RefitCodeGenerator.GenerateMultipleFiles
-  isSpec: "True"
-  fullName: Refitter.Core.RefitCodeGenerator.GenerateMultipleFiles
-  nameWithType: RefitCodeGenerator.GenerateMultipleFiles
 - uid: Refitter.Core.RefitDocumentFilter
   name: RefitDocumentFilter
   href: api/Refitter.Core.RefitDocumentFilter.html
@@ -1987,19 +1901,6 @@ references:
   fullName.vb: Refitter.Core.RefitGenerator.New
   nameWithType: RefitGenerator.RefitGenerator
   nameWithType.vb: RefitGenerator.New
-- uid: Refitter.Core.RefitGenerator.Create(NSwag.OpenApiDocument,Refitter.Core.RefitGeneratorSettings)
-  name: Create(OpenApiDocument, RefitGeneratorSettings)
-  href: api/Refitter.Core.RefitGenerator.html#Refitter_Core_RefitGenerator_Create_NSwag_OpenApiDocument_Refitter_Core_RefitGeneratorSettings_
-  commentId: M:Refitter.Core.RefitGenerator.Create(NSwag.OpenApiDocument,Refitter.Core.RefitGeneratorSettings)
-  fullName: Refitter.Core.RefitGenerator.Create(NSwag.OpenApiDocument, Refitter.Core.RefitGeneratorSettings)
-  nameWithType: RefitGenerator.Create(OpenApiDocument, RefitGeneratorSettings)
-- uid: Refitter.Core.RefitGenerator.Create*
-  name: Create
-  href: api/Refitter.Core.RefitGenerator.html#Refitter_Core_RefitGenerator_Create_
-  commentId: Overload:Refitter.Core.RefitGenerator.Create
-  isSpec: "True"
-  fullName: Refitter.Core.RefitGenerator.Create
-  nameWithType: RefitGenerator.Create
 - uid: Refitter.Core.RefitGenerator.CreateAsync(Refitter.Core.RefitGeneratorSettings)
   name: CreateAsync(RefitGeneratorSettings)
   href: api/Refitter.Core.RefitGenerator.html#Refitter_Core_RefitGenerator_CreateAsync_Refitter_Core_RefitGeneratorSettings_
@@ -2746,60 +2647,6 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.RefitGeneratorSettings.UsePolymorphicSerialization
   nameWithType: RefitGeneratorSettings.UsePolymorphicSerialization
-- uid: Refitter.Core.RefitPipeline
-  name: RefitPipeline
-  href: api/Refitter.Core.RefitPipeline.html
-  commentId: T:Refitter.Core.RefitPipeline
-  fullName: Refitter.Core.RefitPipeline
-  nameWithType: RefitPipeline
-- uid: Refitter.Core.RefitPipeline.Create(NSwag.OpenApiDocument,Refitter.Core.RefitGeneratorSettings)
-  name: Create(OpenApiDocument, RefitGeneratorSettings)
-  href: api/Refitter.Core.RefitPipeline.html#Refitter_Core_RefitPipeline_Create_NSwag_OpenApiDocument_Refitter_Core_RefitGeneratorSettings_
-  commentId: M:Refitter.Core.RefitPipeline.Create(NSwag.OpenApiDocument,Refitter.Core.RefitGeneratorSettings)
-  fullName: Refitter.Core.RefitPipeline.Create(NSwag.OpenApiDocument, Refitter.Core.RefitGeneratorSettings)
-  nameWithType: RefitPipeline.Create(OpenApiDocument, RefitGeneratorSettings)
-- uid: Refitter.Core.RefitPipeline.Create*
-  name: Create
-  href: api/Refitter.Core.RefitPipeline.html#Refitter_Core_RefitPipeline_Create_
-  commentId: Overload:Refitter.Core.RefitPipeline.Create
-  isSpec: "True"
-  fullName: Refitter.Core.RefitPipeline.Create
-  nameWithType: RefitPipeline.Create
-- uid: Refitter.Core.RefitPipeline.CreateAsync(Refitter.Core.RefitGeneratorSettings)
-  name: CreateAsync(RefitGeneratorSettings)
-  href: api/Refitter.Core.RefitPipeline.html#Refitter_Core_RefitPipeline_CreateAsync_Refitter_Core_RefitGeneratorSettings_
-  commentId: M:Refitter.Core.RefitPipeline.CreateAsync(Refitter.Core.RefitGeneratorSettings)
-  fullName: Refitter.Core.RefitPipeline.CreateAsync(Refitter.Core.RefitGeneratorSettings)
-  nameWithType: RefitPipeline.CreateAsync(RefitGeneratorSettings)
-- uid: Refitter.Core.RefitPipeline.CreateAsync*
-  name: CreateAsync
-  href: api/Refitter.Core.RefitPipeline.html#Refitter_Core_RefitPipeline_CreateAsync_
-  commentId: Overload:Refitter.Core.RefitPipeline.CreateAsync
-  isSpec: "True"
-  fullName: Refitter.Core.RefitPipeline.CreateAsync
-  nameWithType: RefitPipeline.CreateAsync
-- uid: Refitter.Core.RefitSchemaCleaner
-  name: RefitSchemaCleaner
-  href: api/Refitter.Core.RefitSchemaCleaner.html
-  commentId: T:Refitter.Core.RefitSchemaCleaner
-  fullName: Refitter.Core.RefitSchemaCleaner
-  nameWithType: RefitSchemaCleaner
-- uid: Refitter.Core.RefitSchemaCleaner.Clean(NSwag.OpenApiDocument,System.Boolean,System.String[],System.Boolean)
-  name: Clean(OpenApiDocument, bool, string[], bool)
-  href: api/Refitter.Core.RefitSchemaCleaner.html#Refitter_Core_RefitSchemaCleaner_Clean_NSwag_OpenApiDocument_System_Boolean_System_String___System_Boolean_
-  commentId: M:Refitter.Core.RefitSchemaCleaner.Clean(NSwag.OpenApiDocument,System.Boolean,System.String[],System.Boolean)
-  name.vb: Clean(OpenApiDocument, Boolean, String(), Boolean)
-  fullName: Refitter.Core.RefitSchemaCleaner.Clean(NSwag.OpenApiDocument, bool, string[], bool)
-  fullName.vb: Refitter.Core.RefitSchemaCleaner.Clean(NSwag.OpenApiDocument, Boolean, String(), Boolean)
-  nameWithType: RefitSchemaCleaner.Clean(OpenApiDocument, bool, string[], bool)
-  nameWithType.vb: RefitSchemaCleaner.Clean(OpenApiDocument, Boolean, String(), Boolean)
-- uid: Refitter.Core.RefitSchemaCleaner.Clean*
-  name: Clean
-  href: api/Refitter.Core.RefitSchemaCleaner.html#Refitter_Core_RefitSchemaCleaner_Clean_
-  commentId: Overload:Refitter.Core.RefitSchemaCleaner.Clean
-  isSpec: "True"
-  fullName: Refitter.Core.RefitSchemaCleaner.Clean
-  nameWithType: RefitSchemaCleaner.Clean
 - uid: Refitter.Core.RefitterSettingsLoader
   name: RefitterSettingsLoader
   href: api/Refitter.Core.RefitterSettingsLoader.html

@@ -183,12 +183,6 @@ authentication headers, and AOT compilation support.</p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="Refitter.Core.RefitCodeGenerator.html">RefitCodeGenerator</a></dt>
-      <dd><p>Generates Refit client and interface code from an OpenAPI document.
-Handles both single-file and multi-file output modes.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
       <dt><a class="xref" href="Refitter.Core.RefitDocumentFilter.html">RefitDocumentFilter</a></dt>
       <dd><p>Filters an OpenAPI document by tags and path patterns.
 Each filter operation returns a new document without mutating the input.</p>
@@ -196,25 +190,12 @@ Each filter operation returns a new document without mutating the input.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Refitter.Core.RefitGenerator.html">RefitGenerator</a></dt>
-      <dd><p>Generates Refit clients and interfaces based on an OpenAPI specification.
-This is a thin facade that delegates to <a class="xref" href="Refitter.Core.RefitPipeline.html">RefitPipeline</a> and <a class="xref" href="Refitter.Core.RefitCodeGenerator.html">RefitCodeGenerator</a>.</p>
+      <dd><p>Generates Refit clients and interfaces based on an OpenAPI specification.</p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Refitter.Core.RefitGeneratorSettings.html">RefitGeneratorSettings</a></dt>
       <dd><p>Provide settings for Refit generator.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="Refitter.Core.RefitPipeline.html">RefitPipeline</a></dt>
-      <dd><p>Orchestrates the code generation pipeline: load -&gt; filter -&gt; clean -&gt; generate.
-Replaces the document mutation logic that was previously inside <a class="xref" href="Refitter.Core.RefitGenerator.html#Refitter_Core_RefitGenerator_Create_NSwag_OpenApiDocument_Refitter_Core_RefitGeneratorSettings_">Create(OpenApiDocument, RefitGeneratorSettings)</a>.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="Refitter.Core.RefitSchemaCleaner.html">RefitSchemaCleaner</a></dt>
-      <dd><p>Cleans an OpenAPI document by removing unreferenced schemas.
-Wraps <a class="xref" href="Refitter.Core.SchemaCleaner.html">SchemaCleaner</a> and returns a new document without mutating the input.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -251,21 +232,6 @@ This serializer is configured to be case-insensitive.</p>
     <dl class="jumplist">
       <dt><a class="xref" href="Refitter.Core.XmlDocumentationGenerator.html">XmlDocumentationGenerator</a></dt>
       <dd><p>Generator class for creating XML documentation.</p>
-</dd>
-    </dl>
-    <h3 id="interfaces">
-Interfaces
-</h3>
-    <dl class="jumplist">
-      <dt><a class="xref" href="Refitter.Core.IRefitCodeGenerator.html">IRefitCodeGenerator</a></dt>
-      <dd><p>Generates Refit client code from a cleaned OpenAPI document.
-Produces single-file or multi-file output.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="Refitter.Core.IRefitSchemaCleaner.html">IRefitSchemaCleaner</a></dt>
-      <dd><p>Cleans an OpenAPI document by removing unreferenced schemas.
-Returns a new document without mutating the input.</p>
 </dd>
     </dl>
     <h3 id="enums">
