@@ -155,11 +155,47 @@ keeps filesystem APIs out of the analyzer assembly and preserves incremental-gen
 </h2>
 
 
+  <a id="Refitter_Core_RefitterSettingsLoader_ApplyDefaults_" data-uid="Refitter.Core.RefitterSettingsLoader.ApplyDefaults*"></a>
+
+  <h3 id="Refitter_Core_RefitterSettingsLoader_ApplyDefaults_System_String_Refitter_Core_RefitGeneratorSettings_" data-uid="Refitter.Core.RefitterSettingsLoader.ApplyDefaults(System.String,Refitter.Core.RefitGeneratorSettings)">
+  ApplyDefaults(string, RefitGeneratorSettings)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/RefitterSettingsLoader.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Applies default values to settings that are not explicitly set in a settings file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ApplyDefaults(string settingsFilePath, RefitGeneratorSettings refitGeneratorSettings)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>settingsFilePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The path to the settings file.</p>
+</dd>
+    <dt><code>refitGeneratorSettings</code> <a class="xref" href="Refitter.Core.RefitGeneratorSettings.html">RefitGeneratorSettings</a></dt>
+    <dd><p>The settings to apply defaults to.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="Refitter_Core_RefitterSettingsLoader_IsUrl_" data-uid="Refitter.Core.RefitterSettingsLoader.IsUrl*"></a>
 
   <h3 id="Refitter_Core_RefitterSettingsLoader_IsUrl_System_String_" data-uid="Refitter.Core.RefitterSettingsLoader.IsUrl(System.String)">
   IsUrl(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/RefitterSettingsLoader.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/RefitterSettingsLoader.cs/#L87"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether the specified path is an absolute HTTP or HTTPS URL.</p>

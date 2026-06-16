@@ -1694,6 +1694,111 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.OutputConfig.OutputFolder
   nameWithType: OutputConfig.OutputFolder
+- uid: Refitter.Core.OutputPlanner
+  name: OutputPlanner
+  href: api/Refitter.Core.OutputPlanner.html
+  commentId: T:Refitter.Core.OutputPlanner
+  fullName: Refitter.Core.OutputPlanner
+  nameWithType: OutputPlanner
+- uid: Refitter.Core.OutputPlanner.DefaultOutputPath
+  name: DefaultOutputPath
+  href: api/Refitter.Core.OutputPlanner.html#Refitter_Core_OutputPlanner_DefaultOutputPath
+  commentId: F:Refitter.Core.OutputPlanner.DefaultOutputPath
+  fullName: Refitter.Core.OutputPlanner.DefaultOutputPath
+  nameWithType: OutputPlanner.DefaultOutputPath
+- uid: Refitter.Core.OutputPlanner.GetContractsOutputPath(System.String,Refitter.Core.RefitGeneratorSettings,Refitter.Core.GeneratedCode)
+  name: GetContractsOutputPath(string?, RefitGeneratorSettings, GeneratedCode)
+  href: api/Refitter.Core.OutputPlanner.html#Refitter_Core_OutputPlanner_GetContractsOutputPath_System_String_Refitter_Core_RefitGeneratorSettings_Refitter_Core_GeneratedCode_
+  commentId: M:Refitter.Core.OutputPlanner.GetContractsOutputPath(System.String,Refitter.Core.RefitGeneratorSettings,Refitter.Core.GeneratedCode)
+  name.vb: GetContractsOutputPath(String, RefitGeneratorSettings, GeneratedCode)
+  fullName: Refitter.Core.OutputPlanner.GetContractsOutputPath(string?, Refitter.Core.RefitGeneratorSettings, Refitter.Core.GeneratedCode)
+  fullName.vb: Refitter.Core.OutputPlanner.GetContractsOutputPath(String, Refitter.Core.RefitGeneratorSettings, Refitter.Core.GeneratedCode)
+  nameWithType: OutputPlanner.GetContractsOutputPath(string?, RefitGeneratorSettings, GeneratedCode)
+  nameWithType.vb: OutputPlanner.GetContractsOutputPath(String, RefitGeneratorSettings, GeneratedCode)
+- uid: Refitter.Core.OutputPlanner.GetContractsOutputPath*
+  name: GetContractsOutputPath
+  href: api/Refitter.Core.OutputPlanner.html#Refitter_Core_OutputPlanner_GetContractsOutputPath_
+  commentId: Overload:Refitter.Core.OutputPlanner.GetContractsOutputPath
+  isSpec: "True"
+  fullName: Refitter.Core.OutputPlanner.GetContractsOutputPath
+  nameWithType: OutputPlanner.GetContractsOutputPath
+- uid: Refitter.Core.OutputPlanner.GetMultiFileOutputPath(System.String,System.String,Refitter.Core.RefitGeneratorSettings,Refitter.Core.GeneratedCode)
+  name: GetMultiFileOutputPath(string?, string?, RefitGeneratorSettings, GeneratedCode)
+  href: api/Refitter.Core.OutputPlanner.html#Refitter_Core_OutputPlanner_GetMultiFileOutputPath_System_String_System_String_Refitter_Core_RefitGeneratorSettings_Refitter_Core_GeneratedCode_
+  commentId: M:Refitter.Core.OutputPlanner.GetMultiFileOutputPath(System.String,System.String,Refitter.Core.RefitGeneratorSettings,Refitter.Core.GeneratedCode)
+  name.vb: GetMultiFileOutputPath(String, String, RefitGeneratorSettings, GeneratedCode)
+  fullName: Refitter.Core.OutputPlanner.GetMultiFileOutputPath(string?, string?, Refitter.Core.RefitGeneratorSettings, Refitter.Core.GeneratedCode)
+  fullName.vb: Refitter.Core.OutputPlanner.GetMultiFileOutputPath(String, String, Refitter.Core.RefitGeneratorSettings, Refitter.Core.GeneratedCode)
+  nameWithType: OutputPlanner.GetMultiFileOutputPath(string?, string?, RefitGeneratorSettings, GeneratedCode)
+  nameWithType.vb: OutputPlanner.GetMultiFileOutputPath(String, String, RefitGeneratorSettings, GeneratedCode)
+- uid: Refitter.Core.OutputPlanner.GetMultiFileOutputPath*
+  name: GetMultiFileOutputPath
+  href: api/Refitter.Core.OutputPlanner.html#Refitter_Core_OutputPlanner_GetMultiFileOutputPath_
+  commentId: Overload:Refitter.Core.OutputPlanner.GetMultiFileOutputPath
+  isSpec: "True"
+  fullName: Refitter.Core.OutputPlanner.GetMultiFileOutputPath
+  nameWithType: OutputPlanner.GetMultiFileOutputPath
+- uid: Refitter.Core.OutputPlanner.GetSingleFileOutputPath(System.String,System.String,Refitter.Core.RefitGeneratorSettings)
+  name: GetSingleFileOutputPath(string?, string?, RefitGeneratorSettings)
+  href: api/Refitter.Core.OutputPlanner.html#Refitter_Core_OutputPlanner_GetSingleFileOutputPath_System_String_System_String_Refitter_Core_RefitGeneratorSettings_
+  commentId: M:Refitter.Core.OutputPlanner.GetSingleFileOutputPath(System.String,System.String,Refitter.Core.RefitGeneratorSettings)
+  name.vb: GetSingleFileOutputPath(String, String, RefitGeneratorSettings)
+  fullName: Refitter.Core.OutputPlanner.GetSingleFileOutputPath(string?, string?, Refitter.Core.RefitGeneratorSettings)
+  fullName.vb: Refitter.Core.OutputPlanner.GetSingleFileOutputPath(String, String, Refitter.Core.RefitGeneratorSettings)
+  nameWithType: OutputPlanner.GetSingleFileOutputPath(string?, string?, RefitGeneratorSettings)
+  nameWithType.vb: OutputPlanner.GetSingleFileOutputPath(String, String, RefitGeneratorSettings)
+- uid: Refitter.Core.OutputPlanner.GetSingleFileOutputPath*
+  name: GetSingleFileOutputPath
+  href: api/Refitter.Core.OutputPlanner.html#Refitter_Core_OutputPlanner_GetSingleFileOutputPath_
+  commentId: Overload:Refitter.Core.OutputPlanner.GetSingleFileOutputPath
+  isSpec: "True"
+  fullName: Refitter.Core.OutputPlanner.GetSingleFileOutputPath
+  nameWithType: OutputPlanner.GetSingleFileOutputPath
+- uid: Refitter.Core.OutputPlanner.PlanMultipleFiles(System.String,System.String,Refitter.Core.RefitGeneratorSettings,Refitter.Core.GeneratorOutput)
+  name: PlanMultipleFiles(string?, string?, RefitGeneratorSettings, GeneratorOutput)
+  href: api/Refitter.Core.OutputPlanner.html#Refitter_Core_OutputPlanner_PlanMultipleFiles_System_String_System_String_Refitter_Core_RefitGeneratorSettings_Refitter_Core_GeneratorOutput_
+  commentId: M:Refitter.Core.OutputPlanner.PlanMultipleFiles(System.String,System.String,Refitter.Core.RefitGeneratorSettings,Refitter.Core.GeneratorOutput)
+  name.vb: PlanMultipleFiles(String, String, RefitGeneratorSettings, GeneratorOutput)
+  fullName: Refitter.Core.OutputPlanner.PlanMultipleFiles(string?, string?, Refitter.Core.RefitGeneratorSettings, Refitter.Core.GeneratorOutput)
+  fullName.vb: Refitter.Core.OutputPlanner.PlanMultipleFiles(String, String, Refitter.Core.RefitGeneratorSettings, Refitter.Core.GeneratorOutput)
+  nameWithType: OutputPlanner.PlanMultipleFiles(string?, string?, RefitGeneratorSettings, GeneratorOutput)
+  nameWithType.vb: OutputPlanner.PlanMultipleFiles(String, String, RefitGeneratorSettings, GeneratorOutput)
+- uid: Refitter.Core.OutputPlanner.PlanMultipleFiles*
+  name: PlanMultipleFiles
+  href: api/Refitter.Core.OutputPlanner.html#Refitter_Core_OutputPlanner_PlanMultipleFiles_
+  commentId: Overload:Refitter.Core.OutputPlanner.PlanMultipleFiles
+  isSpec: "True"
+  fullName: Refitter.Core.OutputPlanner.PlanMultipleFiles
+  nameWithType: OutputPlanner.PlanMultipleFiles
+- uid: Refitter.Core.OutputPlanner.PlanSingleFile(System.String,System.String,Refitter.Core.RefitGeneratorSettings,System.String)
+  name: PlanSingleFile(string?, string?, RefitGeneratorSettings, string)
+  href: api/Refitter.Core.OutputPlanner.html#Refitter_Core_OutputPlanner_PlanSingleFile_System_String_System_String_Refitter_Core_RefitGeneratorSettings_System_String_
+  commentId: M:Refitter.Core.OutputPlanner.PlanSingleFile(System.String,System.String,Refitter.Core.RefitGeneratorSettings,System.String)
+  name.vb: PlanSingleFile(String, String, RefitGeneratorSettings, String)
+  fullName: Refitter.Core.OutputPlanner.PlanSingleFile(string?, string?, Refitter.Core.RefitGeneratorSettings, string)
+  fullName.vb: Refitter.Core.OutputPlanner.PlanSingleFile(String, String, Refitter.Core.RefitGeneratorSettings, String)
+  nameWithType: OutputPlanner.PlanSingleFile(string?, string?, RefitGeneratorSettings, string)
+  nameWithType.vb: OutputPlanner.PlanSingleFile(String, String, RefitGeneratorSettings, String)
+- uid: Refitter.Core.OutputPlanner.PlanSingleFile*
+  name: PlanSingleFile
+  href: api/Refitter.Core.OutputPlanner.html#Refitter_Core_OutputPlanner_PlanSingleFile_
+  commentId: Overload:Refitter.Core.OutputPlanner.PlanSingleFile
+  isSpec: "True"
+  fullName: Refitter.Core.OutputPlanner.PlanSingleFile
+  nameWithType: OutputPlanner.PlanSingleFile
+- uid: Refitter.Core.OutputPlanner.ShouldRerouteToContractsFolder(Refitter.Core.RefitGeneratorSettings,Refitter.Core.GeneratedCode)
+  name: ShouldRerouteToContractsFolder(RefitGeneratorSettings, GeneratedCode)
+  href: api/Refitter.Core.OutputPlanner.html#Refitter_Core_OutputPlanner_ShouldRerouteToContractsFolder_Refitter_Core_RefitGeneratorSettings_Refitter_Core_GeneratedCode_
+  commentId: M:Refitter.Core.OutputPlanner.ShouldRerouteToContractsFolder(Refitter.Core.RefitGeneratorSettings,Refitter.Core.GeneratedCode)
+  fullName: Refitter.Core.OutputPlanner.ShouldRerouteToContractsFolder(Refitter.Core.RefitGeneratorSettings, Refitter.Core.GeneratedCode)
+  nameWithType: OutputPlanner.ShouldRerouteToContractsFolder(RefitGeneratorSettings, GeneratedCode)
+- uid: Refitter.Core.OutputPlanner.ShouldRerouteToContractsFolder*
+  name: ShouldRerouteToContractsFolder
+  href: api/Refitter.Core.OutputPlanner.html#Refitter_Core_OutputPlanner_ShouldRerouteToContractsFolder_
+  commentId: Overload:Refitter.Core.OutputPlanner.ShouldRerouteToContractsFolder
+  isSpec: "True"
+  fullName: Refitter.Core.OutputPlanner.ShouldRerouteToContractsFolder
+  nameWithType: OutputPlanner.ShouldRerouteToContractsFolder
 - uid: Refitter.Core.PackageConstants
   name: PackageConstants
   href: api/Refitter.Core.PackageConstants.html
@@ -1820,6 +1925,57 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.ParameterConfig.UseIsoDateFormat
   nameWithType: ParameterConfig.UseIsoDateFormat
+- uid: Refitter.Core.PlannedFile
+  name: PlannedFile
+  href: api/Refitter.Core.PlannedFile.html
+  commentId: T:Refitter.Core.PlannedFile
+  fullName: Refitter.Core.PlannedFile
+  nameWithType: PlannedFile
+- uid: Refitter.Core.PlannedFile.#ctor(System.String,System.String)
+  name: PlannedFile(string, string)
+  href: api/Refitter.Core.PlannedFile.html#Refitter_Core_PlannedFile__ctor_System_String_System_String_
+  commentId: M:Refitter.Core.PlannedFile.#ctor(System.String,System.String)
+  name.vb: New(String, String)
+  fullName: Refitter.Core.PlannedFile.PlannedFile(string, string)
+  fullName.vb: Refitter.Core.PlannedFile.New(String, String)
+  nameWithType: PlannedFile.PlannedFile(string, string)
+  nameWithType.vb: PlannedFile.New(String, String)
+- uid: Refitter.Core.PlannedFile.#ctor*
+  name: PlannedFile
+  href: api/Refitter.Core.PlannedFile.html#Refitter_Core_PlannedFile__ctor_
+  commentId: Overload:Refitter.Core.PlannedFile.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Refitter.Core.PlannedFile.PlannedFile
+  fullName.vb: Refitter.Core.PlannedFile.New
+  nameWithType: PlannedFile.PlannedFile
+  nameWithType.vb: PlannedFile.New
+- uid: Refitter.Core.PlannedFile.Content
+  name: Content
+  href: api/Refitter.Core.PlannedFile.html#Refitter_Core_PlannedFile_Content
+  commentId: P:Refitter.Core.PlannedFile.Content
+  fullName: Refitter.Core.PlannedFile.Content
+  nameWithType: PlannedFile.Content
+- uid: Refitter.Core.PlannedFile.Content*
+  name: Content
+  href: api/Refitter.Core.PlannedFile.html#Refitter_Core_PlannedFile_Content_
+  commentId: Overload:Refitter.Core.PlannedFile.Content
+  isSpec: "True"
+  fullName: Refitter.Core.PlannedFile.Content
+  nameWithType: PlannedFile.Content
+- uid: Refitter.Core.PlannedFile.Path
+  name: Path
+  href: api/Refitter.Core.PlannedFile.html#Refitter_Core_PlannedFile_Path
+  commentId: P:Refitter.Core.PlannedFile.Path
+  fullName: Refitter.Core.PlannedFile.Path
+  nameWithType: PlannedFile.Path
+- uid: Refitter.Core.PlannedFile.Path*
+  name: Path
+  href: api/Refitter.Core.PlannedFile.html#Refitter_Core_PlannedFile_Path_
+  commentId: Overload:Refitter.Core.PlannedFile.Path
+  isSpec: "True"
+  fullName: Refitter.Core.PlannedFile.Path
+  nameWithType: PlannedFile.Path
 - uid: Refitter.Core.PropertyNamingPolicy
   name: PropertyNamingPolicy
   href: api/Refitter.Core.PropertyNamingPolicy.html
@@ -2653,6 +2809,22 @@ references:
   commentId: T:Refitter.Core.RefitterSettingsLoader
   fullName: Refitter.Core.RefitterSettingsLoader
   nameWithType: RefitterSettingsLoader
+- uid: Refitter.Core.RefitterSettingsLoader.ApplyDefaults(System.String,Refitter.Core.RefitGeneratorSettings)
+  name: ApplyDefaults(string, RefitGeneratorSettings)
+  href: api/Refitter.Core.RefitterSettingsLoader.html#Refitter_Core_RefitterSettingsLoader_ApplyDefaults_System_String_Refitter_Core_RefitGeneratorSettings_
+  commentId: M:Refitter.Core.RefitterSettingsLoader.ApplyDefaults(System.String,Refitter.Core.RefitGeneratorSettings)
+  name.vb: ApplyDefaults(String, RefitGeneratorSettings)
+  fullName: Refitter.Core.RefitterSettingsLoader.ApplyDefaults(string, Refitter.Core.RefitGeneratorSettings)
+  fullName.vb: Refitter.Core.RefitterSettingsLoader.ApplyDefaults(String, Refitter.Core.RefitGeneratorSettings)
+  nameWithType: RefitterSettingsLoader.ApplyDefaults(string, RefitGeneratorSettings)
+  nameWithType.vb: RefitterSettingsLoader.ApplyDefaults(String, RefitGeneratorSettings)
+- uid: Refitter.Core.RefitterSettingsLoader.ApplyDefaults*
+  name: ApplyDefaults
+  href: api/Refitter.Core.RefitterSettingsLoader.html#Refitter_Core_RefitterSettingsLoader_ApplyDefaults_
+  commentId: Overload:Refitter.Core.RefitterSettingsLoader.ApplyDefaults
+  isSpec: "True"
+  fullName: Refitter.Core.RefitterSettingsLoader.ApplyDefaults
+  nameWithType: RefitterSettingsLoader.ApplyDefaults
 - uid: Refitter.Core.RefitterSettingsLoader.IsUrl(System.String)
   name: IsUrl(string)
   href: api/Refitter.Core.RefitterSettingsLoader.html#Refitter_Core_RefitterSettingsLoader_IsUrl_System_String_
@@ -3043,6 +3215,349 @@ references:
   commentId: F:Refitter.Core.TypenameConstants.RefitInterfaces
   fullName: Refitter.Core.TypenameConstants.RefitInterfaces
   nameWithType: TypenameConstants.RefitInterfaces
+- uid: Refitter.Core.Validation
+  name: Refitter.Core.Validation
+  href: api/Refitter.Core.Validation.html
+  commentId: N:Refitter.Core.Validation
+  fullName: Refitter.Core.Validation
+  nameWithType: Refitter.Core.Validation
+- uid: Refitter.Core.Validation.OpenApiStats
+  name: OpenApiStats
+  href: api/Refitter.Core.Validation.OpenApiStats.html
+  commentId: T:Refitter.Core.Validation.OpenApiStats
+  fullName: Refitter.Core.Validation.OpenApiStats
+  nameWithType: OpenApiStats
+- uid: Refitter.Core.Validation.OpenApiStats.CallbackCount
+  name: CallbackCount
+  href: api/Refitter.Core.Validation.OpenApiStats.html#Refitter_Core_Validation_OpenApiStats_CallbackCount
+  commentId: P:Refitter.Core.Validation.OpenApiStats.CallbackCount
+  fullName: Refitter.Core.Validation.OpenApiStats.CallbackCount
+  nameWithType: OpenApiStats.CallbackCount
+- uid: Refitter.Core.Validation.OpenApiStats.CallbackCount*
+  name: CallbackCount
+  href: api/Refitter.Core.Validation.OpenApiStats.html#Refitter_Core_Validation_OpenApiStats_CallbackCount_
+  commentId: Overload:Refitter.Core.Validation.OpenApiStats.CallbackCount
+  isSpec: "True"
+  fullName: Refitter.Core.Validation.OpenApiStats.CallbackCount
+  nameWithType: OpenApiStats.CallbackCount
+- uid: Refitter.Core.Validation.OpenApiStats.HeaderCount
+  name: HeaderCount
+  href: api/Refitter.Core.Validation.OpenApiStats.html#Refitter_Core_Validation_OpenApiStats_HeaderCount
+  commentId: P:Refitter.Core.Validation.OpenApiStats.HeaderCount
+  fullName: Refitter.Core.Validation.OpenApiStats.HeaderCount
+  nameWithType: OpenApiStats.HeaderCount
+- uid: Refitter.Core.Validation.OpenApiStats.HeaderCount*
+  name: HeaderCount
+  href: api/Refitter.Core.Validation.OpenApiStats.html#Refitter_Core_Validation_OpenApiStats_HeaderCount_
+  commentId: Overload:Refitter.Core.Validation.OpenApiStats.HeaderCount
+  isSpec: "True"
+  fullName: Refitter.Core.Validation.OpenApiStats.HeaderCount
+  nameWithType: OpenApiStats.HeaderCount
+- uid: Refitter.Core.Validation.OpenApiStats.LinkCount
+  name: LinkCount
+  href: api/Refitter.Core.Validation.OpenApiStats.html#Refitter_Core_Validation_OpenApiStats_LinkCount
+  commentId: P:Refitter.Core.Validation.OpenApiStats.LinkCount
+  fullName: Refitter.Core.Validation.OpenApiStats.LinkCount
+  nameWithType: OpenApiStats.LinkCount
+- uid: Refitter.Core.Validation.OpenApiStats.LinkCount*
+  name: LinkCount
+  href: api/Refitter.Core.Validation.OpenApiStats.html#Refitter_Core_Validation_OpenApiStats_LinkCount_
+  commentId: Overload:Refitter.Core.Validation.OpenApiStats.LinkCount
+  isSpec: "True"
+  fullName: Refitter.Core.Validation.OpenApiStats.LinkCount
+  nameWithType: OpenApiStats.LinkCount
+- uid: Refitter.Core.Validation.OpenApiStats.OperationCount
+  name: OperationCount
+  href: api/Refitter.Core.Validation.OpenApiStats.html#Refitter_Core_Validation_OpenApiStats_OperationCount
+  commentId: P:Refitter.Core.Validation.OpenApiStats.OperationCount
+  fullName: Refitter.Core.Validation.OpenApiStats.OperationCount
+  nameWithType: OpenApiStats.OperationCount
+- uid: Refitter.Core.Validation.OpenApiStats.OperationCount*
+  name: OperationCount
+  href: api/Refitter.Core.Validation.OpenApiStats.html#Refitter_Core_Validation_OpenApiStats_OperationCount_
+  commentId: Overload:Refitter.Core.Validation.OpenApiStats.OperationCount
+  isSpec: "True"
+  fullName: Refitter.Core.Validation.OpenApiStats.OperationCount
+  nameWithType: OpenApiStats.OperationCount
+- uid: Refitter.Core.Validation.OpenApiStats.ParameterCount
+  name: ParameterCount
+  href: api/Refitter.Core.Validation.OpenApiStats.html#Refitter_Core_Validation_OpenApiStats_ParameterCount
+  commentId: P:Refitter.Core.Validation.OpenApiStats.ParameterCount
+  fullName: Refitter.Core.Validation.OpenApiStats.ParameterCount
+  nameWithType: OpenApiStats.ParameterCount
+- uid: Refitter.Core.Validation.OpenApiStats.ParameterCount*
+  name: ParameterCount
+  href: api/Refitter.Core.Validation.OpenApiStats.html#Refitter_Core_Validation_OpenApiStats_ParameterCount_
+  commentId: Overload:Refitter.Core.Validation.OpenApiStats.ParameterCount
+  isSpec: "True"
+  fullName: Refitter.Core.Validation.OpenApiStats.ParameterCount
+  nameWithType: OpenApiStats.ParameterCount
+- uid: Refitter.Core.Validation.OpenApiStats.PathItemCount
+  name: PathItemCount
+  href: api/Refitter.Core.Validation.OpenApiStats.html#Refitter_Core_Validation_OpenApiStats_PathItemCount
+  commentId: P:Refitter.Core.Validation.OpenApiStats.PathItemCount
+  fullName: Refitter.Core.Validation.OpenApiStats.PathItemCount
+  nameWithType: OpenApiStats.PathItemCount
+- uid: Refitter.Core.Validation.OpenApiStats.PathItemCount*
+  name: PathItemCount
+  href: api/Refitter.Core.Validation.OpenApiStats.html#Refitter_Core_Validation_OpenApiStats_PathItemCount_
+  commentId: Overload:Refitter.Core.Validation.OpenApiStats.PathItemCount
+  isSpec: "True"
+  fullName: Refitter.Core.Validation.OpenApiStats.PathItemCount
+  nameWithType: OpenApiStats.PathItemCount
+- uid: Refitter.Core.Validation.OpenApiStats.RequestBodyCount
+  name: RequestBodyCount
+  href: api/Refitter.Core.Validation.OpenApiStats.html#Refitter_Core_Validation_OpenApiStats_RequestBodyCount
+  commentId: P:Refitter.Core.Validation.OpenApiStats.RequestBodyCount
+  fullName: Refitter.Core.Validation.OpenApiStats.RequestBodyCount
+  nameWithType: OpenApiStats.RequestBodyCount
+- uid: Refitter.Core.Validation.OpenApiStats.RequestBodyCount*
+  name: RequestBodyCount
+  href: api/Refitter.Core.Validation.OpenApiStats.html#Refitter_Core_Validation_OpenApiStats_RequestBodyCount_
+  commentId: Overload:Refitter.Core.Validation.OpenApiStats.RequestBodyCount
+  isSpec: "True"
+  fullName: Refitter.Core.Validation.OpenApiStats.RequestBodyCount
+  nameWithType: OpenApiStats.RequestBodyCount
+- uid: Refitter.Core.Validation.OpenApiStats.ResponseCount
+  name: ResponseCount
+  href: api/Refitter.Core.Validation.OpenApiStats.html#Refitter_Core_Validation_OpenApiStats_ResponseCount
+  commentId: P:Refitter.Core.Validation.OpenApiStats.ResponseCount
+  fullName: Refitter.Core.Validation.OpenApiStats.ResponseCount
+  nameWithType: OpenApiStats.ResponseCount
+- uid: Refitter.Core.Validation.OpenApiStats.ResponseCount*
+  name: ResponseCount
+  href: api/Refitter.Core.Validation.OpenApiStats.html#Refitter_Core_Validation_OpenApiStats_ResponseCount_
+  commentId: Overload:Refitter.Core.Validation.OpenApiStats.ResponseCount
+  isSpec: "True"
+  fullName: Refitter.Core.Validation.OpenApiStats.ResponseCount
+  nameWithType: OpenApiStats.ResponseCount
+- uid: Refitter.Core.Validation.OpenApiStats.SchemaCount
+  name: SchemaCount
+  href: api/Refitter.Core.Validation.OpenApiStats.html#Refitter_Core_Validation_OpenApiStats_SchemaCount
+  commentId: P:Refitter.Core.Validation.OpenApiStats.SchemaCount
+  fullName: Refitter.Core.Validation.OpenApiStats.SchemaCount
+  nameWithType: OpenApiStats.SchemaCount
+- uid: Refitter.Core.Validation.OpenApiStats.SchemaCount*
+  name: SchemaCount
+  href: api/Refitter.Core.Validation.OpenApiStats.html#Refitter_Core_Validation_OpenApiStats_SchemaCount_
+  commentId: Overload:Refitter.Core.Validation.OpenApiStats.SchemaCount
+  isSpec: "True"
+  fullName: Refitter.Core.Validation.OpenApiStats.SchemaCount
+  nameWithType: OpenApiStats.SchemaCount
+- uid: Refitter.Core.Validation.OpenApiStats.ToString
+  name: ToString()
+  href: api/Refitter.Core.Validation.OpenApiStats.html#Refitter_Core_Validation_OpenApiStats_ToString
+  commentId: M:Refitter.Core.Validation.OpenApiStats.ToString
+  fullName: Refitter.Core.Validation.OpenApiStats.ToString()
+  nameWithType: OpenApiStats.ToString()
+- uid: Refitter.Core.Validation.OpenApiStats.ToString*
+  name: ToString
+  href: api/Refitter.Core.Validation.OpenApiStats.html#Refitter_Core_Validation_OpenApiStats_ToString_
+  commentId: Overload:Refitter.Core.Validation.OpenApiStats.ToString
+  isSpec: "True"
+  fullName: Refitter.Core.Validation.OpenApiStats.ToString
+  nameWithType: OpenApiStats.ToString
+- uid: Refitter.Core.Validation.OpenApiStats.Visit(Microsoft.OpenApi.IOpenApiCallback)
+  name: Visit(IOpenApiCallback)
+  href: api/Refitter.Core.Validation.OpenApiStats.html#Refitter_Core_Validation_OpenApiStats_Visit_Microsoft_OpenApi_IOpenApiCallback_
+  commentId: M:Refitter.Core.Validation.OpenApiStats.Visit(Microsoft.OpenApi.IOpenApiCallback)
+  fullName: Refitter.Core.Validation.OpenApiStats.Visit(Microsoft.OpenApi.IOpenApiCallback)
+  nameWithType: OpenApiStats.Visit(IOpenApiCallback)
+- uid: Refitter.Core.Validation.OpenApiStats.Visit(Microsoft.OpenApi.IOpenApiLink)
+  name: Visit(IOpenApiLink)
+  href: api/Refitter.Core.Validation.OpenApiStats.html#Refitter_Core_Validation_OpenApiStats_Visit_Microsoft_OpenApi_IOpenApiLink_
+  commentId: M:Refitter.Core.Validation.OpenApiStats.Visit(Microsoft.OpenApi.IOpenApiLink)
+  fullName: Refitter.Core.Validation.OpenApiStats.Visit(Microsoft.OpenApi.IOpenApiLink)
+  nameWithType: OpenApiStats.Visit(IOpenApiLink)
+- uid: Refitter.Core.Validation.OpenApiStats.Visit(Microsoft.OpenApi.IOpenApiParameter)
+  name: Visit(IOpenApiParameter)
+  href: api/Refitter.Core.Validation.OpenApiStats.html#Refitter_Core_Validation_OpenApiStats_Visit_Microsoft_OpenApi_IOpenApiParameter_
+  commentId: M:Refitter.Core.Validation.OpenApiStats.Visit(Microsoft.OpenApi.IOpenApiParameter)
+  fullName: Refitter.Core.Validation.OpenApiStats.Visit(Microsoft.OpenApi.IOpenApiParameter)
+  nameWithType: OpenApiStats.Visit(IOpenApiParameter)
+- uid: Refitter.Core.Validation.OpenApiStats.Visit(Microsoft.OpenApi.IOpenApiPathItem)
+  name: Visit(IOpenApiPathItem)
+  href: api/Refitter.Core.Validation.OpenApiStats.html#Refitter_Core_Validation_OpenApiStats_Visit_Microsoft_OpenApi_IOpenApiPathItem_
+  commentId: M:Refitter.Core.Validation.OpenApiStats.Visit(Microsoft.OpenApi.IOpenApiPathItem)
+  fullName: Refitter.Core.Validation.OpenApiStats.Visit(Microsoft.OpenApi.IOpenApiPathItem)
+  nameWithType: OpenApiStats.Visit(IOpenApiPathItem)
+- uid: Refitter.Core.Validation.OpenApiStats.Visit(Microsoft.OpenApi.IOpenApiRequestBody)
+  name: Visit(IOpenApiRequestBody)
+  href: api/Refitter.Core.Validation.OpenApiStats.html#Refitter_Core_Validation_OpenApiStats_Visit_Microsoft_OpenApi_IOpenApiRequestBody_
+  commentId: M:Refitter.Core.Validation.OpenApiStats.Visit(Microsoft.OpenApi.IOpenApiRequestBody)
+  fullName: Refitter.Core.Validation.OpenApiStats.Visit(Microsoft.OpenApi.IOpenApiRequestBody)
+  nameWithType: OpenApiStats.Visit(IOpenApiRequestBody)
+- uid: Refitter.Core.Validation.OpenApiStats.Visit(Microsoft.OpenApi.IOpenApiSchema)
+  name: Visit(IOpenApiSchema)
+  href: api/Refitter.Core.Validation.OpenApiStats.html#Refitter_Core_Validation_OpenApiStats_Visit_Microsoft_OpenApi_IOpenApiSchema_
+  commentId: M:Refitter.Core.Validation.OpenApiStats.Visit(Microsoft.OpenApi.IOpenApiSchema)
+  fullName: Refitter.Core.Validation.OpenApiStats.Visit(Microsoft.OpenApi.IOpenApiSchema)
+  nameWithType: OpenApiStats.Visit(IOpenApiSchema)
+- uid: Refitter.Core.Validation.OpenApiStats.Visit(Microsoft.OpenApi.OpenApiOperation)
+  name: Visit(OpenApiOperation)
+  href: api/Refitter.Core.Validation.OpenApiStats.html#Refitter_Core_Validation_OpenApiStats_Visit_Microsoft_OpenApi_OpenApiOperation_
+  commentId: M:Refitter.Core.Validation.OpenApiStats.Visit(Microsoft.OpenApi.OpenApiOperation)
+  fullName: Refitter.Core.Validation.OpenApiStats.Visit(Microsoft.OpenApi.OpenApiOperation)
+  nameWithType: OpenApiStats.Visit(OpenApiOperation)
+- uid: Refitter.Core.Validation.OpenApiStats.Visit(Microsoft.OpenApi.OpenApiResponses)
+  name: Visit(OpenApiResponses)
+  href: api/Refitter.Core.Validation.OpenApiStats.html#Refitter_Core_Validation_OpenApiStats_Visit_Microsoft_OpenApi_OpenApiResponses_
+  commentId: M:Refitter.Core.Validation.OpenApiStats.Visit(Microsoft.OpenApi.OpenApiResponses)
+  fullName: Refitter.Core.Validation.OpenApiStats.Visit(Microsoft.OpenApi.OpenApiResponses)
+  nameWithType: OpenApiStats.Visit(OpenApiResponses)
+- uid: Refitter.Core.Validation.OpenApiStats.Visit(System.Collections.Generic.IDictionary{System.String,Microsoft.OpenApi.IOpenApiHeader})
+  name: Visit(IDictionary<string, IOpenApiHeader>)
+  href: api/Refitter.Core.Validation.OpenApiStats.html#Refitter_Core_Validation_OpenApiStats_Visit_System_Collections_Generic_IDictionary_System_String_Microsoft_OpenApi_IOpenApiHeader__
+  commentId: M:Refitter.Core.Validation.OpenApiStats.Visit(System.Collections.Generic.IDictionary{System.String,Microsoft.OpenApi.IOpenApiHeader})
+  name.vb: Visit(IDictionary(Of String, IOpenApiHeader))
+  fullName: Refitter.Core.Validation.OpenApiStats.Visit(System.Collections.Generic.IDictionary<string, Microsoft.OpenApi.IOpenApiHeader>)
+  fullName.vb: Refitter.Core.Validation.OpenApiStats.Visit(System.Collections.Generic.IDictionary(Of String, Microsoft.OpenApi.IOpenApiHeader))
+  nameWithType: OpenApiStats.Visit(IDictionary<string, IOpenApiHeader>)
+  nameWithType.vb: OpenApiStats.Visit(IDictionary(Of String, IOpenApiHeader))
+- uid: Refitter.Core.Validation.OpenApiStats.Visit*
+  name: Visit
+  href: api/Refitter.Core.Validation.OpenApiStats.html#Refitter_Core_Validation_OpenApiStats_Visit_
+  commentId: Overload:Refitter.Core.Validation.OpenApiStats.Visit
+  isSpec: "True"
+  fullName: Refitter.Core.Validation.OpenApiStats.Visit
+  nameWithType: OpenApiStats.Visit
+- uid: Refitter.Core.Validation.OpenApiValidationException
+  name: OpenApiValidationException
+  href: api/Refitter.Core.Validation.OpenApiValidationException.html
+  commentId: T:Refitter.Core.Validation.OpenApiValidationException
+  fullName: Refitter.Core.Validation.OpenApiValidationException
+  nameWithType: OpenApiValidationException
+- uid: Refitter.Core.Validation.OpenApiValidationException.#ctor(Refitter.Core.Validation.OpenApiValidationResult)
+  name: OpenApiValidationException(OpenApiValidationResult)
+  href: api/Refitter.Core.Validation.OpenApiValidationException.html#Refitter_Core_Validation_OpenApiValidationException__ctor_Refitter_Core_Validation_OpenApiValidationResult_
+  commentId: M:Refitter.Core.Validation.OpenApiValidationException.#ctor(Refitter.Core.Validation.OpenApiValidationResult)
+  name.vb: New(OpenApiValidationResult)
+  fullName: Refitter.Core.Validation.OpenApiValidationException.OpenApiValidationException(Refitter.Core.Validation.OpenApiValidationResult)
+  fullName.vb: Refitter.Core.Validation.OpenApiValidationException.New(Refitter.Core.Validation.OpenApiValidationResult)
+  nameWithType: OpenApiValidationException.OpenApiValidationException(OpenApiValidationResult)
+  nameWithType.vb: OpenApiValidationException.New(OpenApiValidationResult)
+- uid: Refitter.Core.Validation.OpenApiValidationException.#ctor*
+  name: OpenApiValidationException
+  href: api/Refitter.Core.Validation.OpenApiValidationException.html#Refitter_Core_Validation_OpenApiValidationException__ctor_
+  commentId: Overload:Refitter.Core.Validation.OpenApiValidationException.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Refitter.Core.Validation.OpenApiValidationException.OpenApiValidationException
+  fullName.vb: Refitter.Core.Validation.OpenApiValidationException.New
+  nameWithType: OpenApiValidationException.OpenApiValidationException
+  nameWithType.vb: OpenApiValidationException.New
+- uid: Refitter.Core.Validation.OpenApiValidationException.ValidationResult
+  name: ValidationResult
+  href: api/Refitter.Core.Validation.OpenApiValidationException.html#Refitter_Core_Validation_OpenApiValidationException_ValidationResult
+  commentId: P:Refitter.Core.Validation.OpenApiValidationException.ValidationResult
+  fullName: Refitter.Core.Validation.OpenApiValidationException.ValidationResult
+  nameWithType: OpenApiValidationException.ValidationResult
+- uid: Refitter.Core.Validation.OpenApiValidationException.ValidationResult*
+  name: ValidationResult
+  href: api/Refitter.Core.Validation.OpenApiValidationException.html#Refitter_Core_Validation_OpenApiValidationException_ValidationResult_
+  commentId: Overload:Refitter.Core.Validation.OpenApiValidationException.ValidationResult
+  isSpec: "True"
+  fullName: Refitter.Core.Validation.OpenApiValidationException.ValidationResult
+  nameWithType: OpenApiValidationException.ValidationResult
+- uid: Refitter.Core.Validation.OpenApiValidationResult
+  name: OpenApiValidationResult
+  href: api/Refitter.Core.Validation.OpenApiValidationResult.html
+  commentId: T:Refitter.Core.Validation.OpenApiValidationResult
+  fullName: Refitter.Core.Validation.OpenApiValidationResult
+  nameWithType: OpenApiValidationResult
+- uid: Refitter.Core.Validation.OpenApiValidationResult.#ctor(Microsoft.OpenApi.Reader.OpenApiDiagnostic,Refitter.Core.Validation.OpenApiStats)
+  name: OpenApiValidationResult(OpenApiDiagnostic, OpenApiStats)
+  href: api/Refitter.Core.Validation.OpenApiValidationResult.html#Refitter_Core_Validation_OpenApiValidationResult__ctor_Microsoft_OpenApi_Reader_OpenApiDiagnostic_Refitter_Core_Validation_OpenApiStats_
+  commentId: M:Refitter.Core.Validation.OpenApiValidationResult.#ctor(Microsoft.OpenApi.Reader.OpenApiDiagnostic,Refitter.Core.Validation.OpenApiStats)
+  name.vb: New(OpenApiDiagnostic, OpenApiStats)
+  fullName: Refitter.Core.Validation.OpenApiValidationResult.OpenApiValidationResult(Microsoft.OpenApi.Reader.OpenApiDiagnostic, Refitter.Core.Validation.OpenApiStats)
+  fullName.vb: Refitter.Core.Validation.OpenApiValidationResult.New(Microsoft.OpenApi.Reader.OpenApiDiagnostic, Refitter.Core.Validation.OpenApiStats)
+  nameWithType: OpenApiValidationResult.OpenApiValidationResult(OpenApiDiagnostic, OpenApiStats)
+  nameWithType.vb: OpenApiValidationResult.New(OpenApiDiagnostic, OpenApiStats)
+- uid: Refitter.Core.Validation.OpenApiValidationResult.#ctor*
+  name: OpenApiValidationResult
+  href: api/Refitter.Core.Validation.OpenApiValidationResult.html#Refitter_Core_Validation_OpenApiValidationResult__ctor_
+  commentId: Overload:Refitter.Core.Validation.OpenApiValidationResult.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Refitter.Core.Validation.OpenApiValidationResult.OpenApiValidationResult
+  fullName.vb: Refitter.Core.Validation.OpenApiValidationResult.New
+  nameWithType: OpenApiValidationResult.OpenApiValidationResult
+  nameWithType.vb: OpenApiValidationResult.New
+- uid: Refitter.Core.Validation.OpenApiValidationResult.Diagnostics
+  name: Diagnostics
+  href: api/Refitter.Core.Validation.OpenApiValidationResult.html#Refitter_Core_Validation_OpenApiValidationResult_Diagnostics
+  commentId: P:Refitter.Core.Validation.OpenApiValidationResult.Diagnostics
+  fullName: Refitter.Core.Validation.OpenApiValidationResult.Diagnostics
+  nameWithType: OpenApiValidationResult.Diagnostics
+- uid: Refitter.Core.Validation.OpenApiValidationResult.Diagnostics*
+  name: Diagnostics
+  href: api/Refitter.Core.Validation.OpenApiValidationResult.html#Refitter_Core_Validation_OpenApiValidationResult_Diagnostics_
+  commentId: Overload:Refitter.Core.Validation.OpenApiValidationResult.Diagnostics
+  isSpec: "True"
+  fullName: Refitter.Core.Validation.OpenApiValidationResult.Diagnostics
+  nameWithType: OpenApiValidationResult.Diagnostics
+- uid: Refitter.Core.Validation.OpenApiValidationResult.IsValid
+  name: IsValid
+  href: api/Refitter.Core.Validation.OpenApiValidationResult.html#Refitter_Core_Validation_OpenApiValidationResult_IsValid
+  commentId: P:Refitter.Core.Validation.OpenApiValidationResult.IsValid
+  fullName: Refitter.Core.Validation.OpenApiValidationResult.IsValid
+  nameWithType: OpenApiValidationResult.IsValid
+- uid: Refitter.Core.Validation.OpenApiValidationResult.IsValid*
+  name: IsValid
+  href: api/Refitter.Core.Validation.OpenApiValidationResult.html#Refitter_Core_Validation_OpenApiValidationResult_IsValid_
+  commentId: Overload:Refitter.Core.Validation.OpenApiValidationResult.IsValid
+  isSpec: "True"
+  fullName: Refitter.Core.Validation.OpenApiValidationResult.IsValid
+  nameWithType: OpenApiValidationResult.IsValid
+- uid: Refitter.Core.Validation.OpenApiValidationResult.Statistics
+  name: Statistics
+  href: api/Refitter.Core.Validation.OpenApiValidationResult.html#Refitter_Core_Validation_OpenApiValidationResult_Statistics
+  commentId: P:Refitter.Core.Validation.OpenApiValidationResult.Statistics
+  fullName: Refitter.Core.Validation.OpenApiValidationResult.Statistics
+  nameWithType: OpenApiValidationResult.Statistics
+- uid: Refitter.Core.Validation.OpenApiValidationResult.Statistics*
+  name: Statistics
+  href: api/Refitter.Core.Validation.OpenApiValidationResult.html#Refitter_Core_Validation_OpenApiValidationResult_Statistics_
+  commentId: Overload:Refitter.Core.Validation.OpenApiValidationResult.Statistics
+  isSpec: "True"
+  fullName: Refitter.Core.Validation.OpenApiValidationResult.Statistics
+  nameWithType: OpenApiValidationResult.Statistics
+- uid: Refitter.Core.Validation.OpenApiValidationResult.ThrowIfInvalid
+  name: ThrowIfInvalid()
+  href: api/Refitter.Core.Validation.OpenApiValidationResult.html#Refitter_Core_Validation_OpenApiValidationResult_ThrowIfInvalid
+  commentId: M:Refitter.Core.Validation.OpenApiValidationResult.ThrowIfInvalid
+  fullName: Refitter.Core.Validation.OpenApiValidationResult.ThrowIfInvalid()
+  nameWithType: OpenApiValidationResult.ThrowIfInvalid()
+- uid: Refitter.Core.Validation.OpenApiValidationResult.ThrowIfInvalid*
+  name: ThrowIfInvalid
+  href: api/Refitter.Core.Validation.OpenApiValidationResult.html#Refitter_Core_Validation_OpenApiValidationResult_ThrowIfInvalid_
+  commentId: Overload:Refitter.Core.Validation.OpenApiValidationResult.ThrowIfInvalid
+  isSpec: "True"
+  fullName: Refitter.Core.Validation.OpenApiValidationResult.ThrowIfInvalid
+  nameWithType: OpenApiValidationResult.ThrowIfInvalid
+- uid: Refitter.Core.Validation.OpenApiValidator
+  name: OpenApiValidator
+  href: api/Refitter.Core.Validation.OpenApiValidator.html
+  commentId: T:Refitter.Core.Validation.OpenApiValidator
+  fullName: Refitter.Core.Validation.OpenApiValidator
+  nameWithType: OpenApiValidator
+- uid: Refitter.Core.Validation.OpenApiValidator.Validate(System.String)
+  name: Validate(string)
+  href: api/Refitter.Core.Validation.OpenApiValidator.html#Refitter_Core_Validation_OpenApiValidator_Validate_System_String_
+  commentId: M:Refitter.Core.Validation.OpenApiValidator.Validate(System.String)
+  name.vb: Validate(String)
+  fullName: Refitter.Core.Validation.OpenApiValidator.Validate(string)
+  fullName.vb: Refitter.Core.Validation.OpenApiValidator.Validate(String)
+  nameWithType: OpenApiValidator.Validate(string)
+  nameWithType.vb: OpenApiValidator.Validate(String)
+- uid: Refitter.Core.Validation.OpenApiValidator.Validate*
+  name: Validate
+  href: api/Refitter.Core.Validation.OpenApiValidator.html#Refitter_Core_Validation_OpenApiValidator_Validate_
+  commentId: Overload:Refitter.Core.Validation.OpenApiValidator.Validate
+  isSpec: "True"
+  fullName: Refitter.Core.Validation.OpenApiValidator.Validate
+  nameWithType: OpenApiValidator.Validate
 - uid: Refitter.Core.XmlDocumentationGenerator
   name: XmlDocumentationGenerator
   href: api/Refitter.Core.XmlDocumentationGenerator.html

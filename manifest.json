@@ -326,6 +326,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.OutputPlanner.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.OutputPlanner.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.OutputPlanner",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Refitter.Core.PackageConstants.yml",
       "output": {
         ".html": {
@@ -351,6 +365,20 @@
       "IsMRef": true,
       "Title": "Refitter.Core.ParameterConfig",
       "Summary": "<p sourcefile=\"api/Refitter.Core.ParameterConfig.yml\" sourcestartlinenumber=\"1\">Configuration for method parameter code generation options.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.PlannedFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.PlannedFile.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.PlannedFile",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -547,6 +575,76 @@
       "IsMRef": true,
       "Title": "Refitter.Core.TypenameConstants",
       "Summary": "<p sourcefile=\"api/Refitter.Core.TypenameConstants.yml\" sourcestartlinenumber=\"1\">Constants for type names used in code generation.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.Validation.OpenApiStats.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.Validation.OpenApiStats.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.Validation.OpenApiStats",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.Validation.OpenApiValidationException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.Validation.OpenApiValidationException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.Validation.OpenApiValidationException",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.Validation.OpenApiValidationResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.Validation.OpenApiValidationResult.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.Validation.OpenApiValidationResult",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.Validation.OpenApiValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.Validation.OpenApiValidator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.Validation.OpenApiValidator",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.Validation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.Validation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.Validation",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
