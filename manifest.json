@@ -238,7 +238,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Refitter.Core.OpenApiDocumentFactory",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/Refitter.Core.OpenApiDocumentFactory.yml\" sourcestartlinenumber=\"1\">Creates instances of <xref href=\"NSwag.OpenApiDocument\" data-throw-if-not-resolved=\"false\"></xref> from file paths or URLs.\nSupports loading single documents or merging multiple documents into one.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -266,7 +266,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Refitter.Core.OutputPlanner",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/Refitter.Core.OutputPlanner.yml\" sourcestartlinenumber=\"1\">Plans the output file paths for generated Refit code.\nSupports single-file and multi-file output modes, CLI and settings-file driven generation,\nand optional rerouting of contracts to a separate output folder.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -294,7 +294,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Refitter.Core.PlannedFile",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/Refitter.Core.PlannedFile.yml\" sourcestartlinenumber=\"1\">Represents a planned output file with its relative path and generated content.</p>\n"
     },
     {
       "type": "ManagedReference",

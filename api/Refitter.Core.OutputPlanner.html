@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class OutputPlanner ">
       
-      
+      <meta name="description" content="Plans the output file paths for generated Refit code. Supports single-file and multi-file output modes, CLI and settings-file driven generation, and optional rerouting of contracts to a separate output folder.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -85,7 +85,7 @@
 
 
   <h1 id="Refitter_Core_OutputPlanner" data-uid="Refitter.Core.OutputPlanner" class="text-break">
-Class OutputPlanner  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/OutputPlanner.cs/#L5"><i class="bi bi-code-slash"></i></a>
+Class OutputPlanner  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/OutputPlanner.cs/#L15"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -93,7 +93,10 @@ Class OutputPlanner  <a class="header-action link-secondary" title="View source"
   <dl><dt>Assembly</dt><dd>Refitter.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>Plans the output file paths for generated Refit code.
+Supports single-file and multi-file output modes, CLI and settings-file driven generation,
+and optional rerouting of contracts to a separate output folder.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -151,10 +154,11 @@ Class OutputPlanner  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Refitter_Core_OutputPlanner_DefaultOutputPath" data-uid="Refitter.Core.OutputPlanner.DefaultOutputPath">
   DefaultOutputPath
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/OutputPlanner.cs/#L7"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/OutputPlanner.cs/#L20"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The default output file name used when no explicit output path is specified.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -186,10 +190,12 @@ Class OutputPlanner  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Refitter_Core_OutputPlanner_GetContractsOutputPath_System_String_Refitter_Core_RefitGeneratorSettings_Refitter_Core_GeneratedCode_" data-uid="Refitter.Core.OutputPlanner.GetContractsOutputPath(System.String,Refitter.Core.RefitGeneratorSettings,Refitter.Core.GeneratedCode)">
   GetContractsOutputPath(string?, RefitGeneratorSettings, GeneratedCode)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/OutputPlanner.cs/#L109"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/OutputPlanner.cs/#L172"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Resolves the output path for a contracts file, placing it in the configured contracts output folder
+relative to the settings file location.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -199,17 +205,21 @@ Class OutputPlanner  <a class="header-action link-secondary" title="View source"
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>settingsFilePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>The path to the settings file, or <code>null</code> for direct CLI generation.</p>
+</dd>
     <dt><code>refitGeneratorSettings</code> <a class="xref" href="Refitter.Core.RefitGeneratorSettings.html">RefitGeneratorSettings</a></dt>
-    <dd></dd>
+    <dd><p>The Refit generator settings.</p>
+</dd>
     <dt><code>outputFile</code> <a class="xref" href="Refitter.Core.GeneratedCode.html">GeneratedCode</a></dt>
-    <dd></dd>
+    <dd><p>The generated contracts code file.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>The resolved contracts output file path.</p>
+</dd>
   </dl>
 
 
@@ -226,10 +236,12 @@ Class OutputPlanner  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Refitter_Core_OutputPlanner_GetMultiFileOutputPath_System_String_System_String_Refitter_Core_RefitGeneratorSettings_Refitter_Core_GeneratedCode_" data-uid="Refitter.Core.OutputPlanner.GetMultiFileOutputPath(System.String,System.String,Refitter.Core.RefitGeneratorSettings,Refitter.Core.GeneratedCode)">
   GetMultiFileOutputPath(string?, string?, RefitGeneratorSettings, GeneratedCode)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/OutputPlanner.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/OutputPlanner.cs/#L120"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Resolves the output path for a single file in multi-file generation mode,
+accounting for settings file location, CLI overrides, and configured output folder.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -239,19 +251,24 @@ Class OutputPlanner  <a class="header-action link-secondary" title="View source"
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>settingsFilePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>The path to the settings file, or <code>null</code> for direct CLI generation.</p>
+</dd>
     <dt><code>cliOutputPath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>The output path specified via CLI, or <code>null</code>.</p>
+</dd>
     <dt><code>refitGeneratorSettings</code> <a class="xref" href="Refitter.Core.RefitGeneratorSettings.html">RefitGeneratorSettings</a></dt>
-    <dd></dd>
+    <dd><p>The Refit generator settings.</p>
+</dd>
     <dt><code>outputFile</code> <a class="xref" href="Refitter.Core.GeneratedCode.html">GeneratedCode</a></dt>
-    <dd></dd>
+    <dd><p>The generated code file to produce a path for.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>The resolved output file path.</p>
+</dd>
   </dl>
 
 
@@ -268,10 +285,12 @@ Class OutputPlanner  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Refitter_Core_OutputPlanner_GetSingleFileOutputPath_System_String_System_String_Refitter_Core_RefitGeneratorSettings_" data-uid="Refitter.Core.OutputPlanner.GetSingleFileOutputPath(System.String,System.String,Refitter.Core.RefitGeneratorSettings)">
   GetSingleFileOutputPath(string?, string?, RefitGeneratorSettings)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/OutputPlanner.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/OutputPlanner.cs/#L73"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Resolves the output path for single-file generation, accounting for settings file location,
+CLI overrides, and configured output folder/filename in the settings.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -281,17 +300,21 @@ Class OutputPlanner  <a class="header-action link-secondary" title="View source"
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>settingsFilePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>The path to the settings file, or <code>null</code> for direct CLI generation.</p>
+</dd>
     <dt><code>cliOutputPath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>The output path specified via CLI, or <code>null</code>.</p>
+</dd>
     <dt><code>refitGeneratorSettings</code> <a class="xref" href="Refitter.Core.RefitGeneratorSettings.html">RefitGeneratorSettings</a></dt>
-    <dd></dd>
+    <dd><p>The Refit generator settings.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>The resolved output file path.</p>
+</dd>
   </dl>
 
 
@@ -308,10 +331,12 @@ Class OutputPlanner  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Refitter_Core_OutputPlanner_PlanMultipleFiles_System_String_System_String_Refitter_Core_RefitGeneratorSettings_Refitter_Core_GeneratorOutput_" data-uid="Refitter.Core.OutputPlanner.PlanMultipleFiles(System.String,System.String,Refitter.Core.RefitGeneratorSettings,Refitter.Core.GeneratorOutput)">
   PlanMultipleFiles(string?, string?, RefitGeneratorSettings, GeneratorOutput)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/OutputPlanner.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/OutputPlanner.cs/#L46"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Plans multiple output files, determining each file's path based on the generation mode
+and whether the file should be rerouted to the contracts output folder.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -321,19 +346,24 @@ Class OutputPlanner  <a class="header-action link-secondary" title="View source"
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>settingsFilePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>The path to the settings file, or <code>null</code> for direct CLI generation.</p>
+</dd>
     <dt><code>cliOutputPath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>The output path specified via CLI, or <code>null</code>.</p>
+</dd>
     <dt><code>refitGeneratorSettings</code> <a class="xref" href="Refitter.Core.RefitGeneratorSettings.html">RefitGeneratorSettings</a></dt>
-    <dd></dd>
+    <dd><p>The Refit generator settings.</p>
+</dd>
     <dt><code>generatorOutput</code> <a class="xref" href="Refitter.Core.GeneratorOutput.html">GeneratorOutput</a></dt>
-    <dd></dd>
+    <dd><p>The generator output containing multiple files.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Refitter.Core.PlannedFile.html">PlannedFile</a>&gt;</dt>
-    <dd></dd>
+    <dd><p>A read-only list of <a class="xref" href="Refitter.Core.PlannedFile.html">PlannedFile</a> with resolved output paths and content.</p>
+</dd>
   </dl>
 
 
@@ -350,10 +380,11 @@ Class OutputPlanner  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Refitter_Core_OutputPlanner_PlanSingleFile_System_String_System_String_Refitter_Core_RefitGeneratorSettings_System_String_" data-uid="Refitter.Core.OutputPlanner.PlanSingleFile(System.String,System.String,Refitter.Core.RefitGeneratorSettings,System.String)">
   PlanSingleFile(string?, string?, RefitGeneratorSettings, string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/OutputPlanner.cs/#L9"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/OutputPlanner.cs/#L30"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Plans a single output file, determining its path based on the generation mode.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -363,19 +394,24 @@ Class OutputPlanner  <a class="header-action link-secondary" title="View source"
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>settingsFilePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>The path to the settings file, or <code>null</code> for direct CLI generation.</p>
+</dd>
     <dt><code>cliOutputPath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>The output path specified via CLI, or <code>null</code>.</p>
+</dd>
     <dt><code>refitGeneratorSettings</code> <a class="xref" href="Refitter.Core.RefitGeneratorSettings.html">RefitGeneratorSettings</a></dt>
-    <dd></dd>
+    <dd><p>The Refit generator settings.</p>
+</dd>
     <dt><code>code</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>The generated code content.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Refitter.Core.PlannedFile.html">PlannedFile</a></dt>
-    <dd></dd>
+    <dd><p>A <a class="xref" href="Refitter.Core.PlannedFile.html">PlannedFile</a> with the resolved output path and content.</p>
+</dd>
   </dl>
 
 
@@ -392,10 +428,13 @@ Class OutputPlanner  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Refitter_Core_OutputPlanner_ShouldRerouteToContractsFolder_Refitter_Core_RefitGeneratorSettings_Refitter_Core_GeneratedCode_" data-uid="Refitter.Core.OutputPlanner.ShouldRerouteToContractsFolder(Refitter.Core.RefitGeneratorSettings,Refitter.Core.GeneratedCode)">
   ShouldRerouteToContractsFolder(RefitGeneratorSettings, GeneratedCode)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/OutputPlanner.cs/#L102"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/OutputPlanner.cs/#L157"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Determines whether the specified output file should be rerouted to the contracts output folder.
+Rerouting occurs when <a class="xref" href="Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_ContractsOutputFolder">ContractsOutputFolder</a> is set to a
+non-default value and the file is the contracts file.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -405,15 +444,18 @@ Class OutputPlanner  <a class="header-action link-secondary" title="View source"
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>refitGeneratorSettings</code> <a class="xref" href="Refitter.Core.RefitGeneratorSettings.html">RefitGeneratorSettings</a></dt>
-    <dd></dd>
+    <dd><p>The Refit generator settings.</p>
+</dd>
     <dt><code>outputFile</code> <a class="xref" href="Refitter.Core.GeneratedCode.html">GeneratedCode</a></dt>
-    <dd></dd>
+    <dd><p>The generated code file to evaluate.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd><p><code>true</code> if the file should be rerouted to the contracts folder; otherwise, <code>false</code>.</p>
+</dd>
   </dl>
 
 
@@ -430,7 +472,7 @@ Class OutputPlanner  <a class="header-action link-secondary" title="View source"
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/OutputPlanner.cs/#L5" class="edit-link">Edit this page</a>
+          <a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/OutputPlanner.cs/#L15" class="edit-link">Edit this page</a>
         </div>
 
 
