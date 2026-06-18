@@ -1105,24 +1105,24 @@ references:
   commentId: T:Refitter.Core.OpenApiDocumentFactory
   fullName: Refitter.Core.OpenApiDocumentFactory
   nameWithType: OpenApiDocumentFactory
-- uid: Refitter.Core.OpenApiDocumentFactory.CreateAsync(System.Collections.Generic.IEnumerable{System.String})
-  name: CreateAsync(IEnumerable<string>)
-  href: api/Refitter.Core.OpenApiDocumentFactory.html#Refitter_Core_OpenApiDocumentFactory_CreateAsync_System_Collections_Generic_IEnumerable_System_String__
-  commentId: M:Refitter.Core.OpenApiDocumentFactory.CreateAsync(System.Collections.Generic.IEnumerable{System.String})
-  name.vb: CreateAsync(IEnumerable(Of String))
-  fullName: Refitter.Core.OpenApiDocumentFactory.CreateAsync(System.Collections.Generic.IEnumerable<string>)
-  fullName.vb: Refitter.Core.OpenApiDocumentFactory.CreateAsync(System.Collections.Generic.IEnumerable(Of String))
-  nameWithType: OpenApiDocumentFactory.CreateAsync(IEnumerable<string>)
-  nameWithType.vb: OpenApiDocumentFactory.CreateAsync(IEnumerable(Of String))
-- uid: Refitter.Core.OpenApiDocumentFactory.CreateAsync(System.String)
-  name: CreateAsync(string)
-  href: api/Refitter.Core.OpenApiDocumentFactory.html#Refitter_Core_OpenApiDocumentFactory_CreateAsync_System_String_
-  commentId: M:Refitter.Core.OpenApiDocumentFactory.CreateAsync(System.String)
-  name.vb: CreateAsync(String)
-  fullName: Refitter.Core.OpenApiDocumentFactory.CreateAsync(string)
-  fullName.vb: Refitter.Core.OpenApiDocumentFactory.CreateAsync(String)
-  nameWithType: OpenApiDocumentFactory.CreateAsync(string)
-  nameWithType.vb: OpenApiDocumentFactory.CreateAsync(String)
+- uid: Refitter.Core.OpenApiDocumentFactory.CreateAsync(System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)
+  name: CreateAsync(IEnumerable<string>, CancellationToken)
+  href: api/Refitter.Core.OpenApiDocumentFactory.html#Refitter_Core_OpenApiDocumentFactory_CreateAsync_System_Collections_Generic_IEnumerable_System_String__System_Threading_CancellationToken_
+  commentId: M:Refitter.Core.OpenApiDocumentFactory.CreateAsync(System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)
+  name.vb: CreateAsync(IEnumerable(Of String), CancellationToken)
+  fullName: Refitter.Core.OpenApiDocumentFactory.CreateAsync(System.Collections.Generic.IEnumerable<string>, System.Threading.CancellationToken)
+  fullName.vb: Refitter.Core.OpenApiDocumentFactory.CreateAsync(System.Collections.Generic.IEnumerable(Of String), System.Threading.CancellationToken)
+  nameWithType: OpenApiDocumentFactory.CreateAsync(IEnumerable<string>, CancellationToken)
+  nameWithType.vb: OpenApiDocumentFactory.CreateAsync(IEnumerable(Of String), CancellationToken)
+- uid: Refitter.Core.OpenApiDocumentFactory.CreateAsync(System.String,System.Threading.CancellationToken)
+  name: CreateAsync(string, CancellationToken)
+  href: api/Refitter.Core.OpenApiDocumentFactory.html#Refitter_Core_OpenApiDocumentFactory_CreateAsync_System_String_System_Threading_CancellationToken_
+  commentId: M:Refitter.Core.OpenApiDocumentFactory.CreateAsync(System.String,System.Threading.CancellationToken)
+  name.vb: CreateAsync(String, CancellationToken)
+  fullName: Refitter.Core.OpenApiDocumentFactory.CreateAsync(string, System.Threading.CancellationToken)
+  fullName.vb: Refitter.Core.OpenApiDocumentFactory.CreateAsync(String, System.Threading.CancellationToken)
+  nameWithType: OpenApiDocumentFactory.CreateAsync(string, CancellationToken)
+  nameWithType.vb: OpenApiDocumentFactory.CreateAsync(String, CancellationToken)
 - uid: Refitter.Core.OpenApiDocumentFactory.CreateAsync*
   name: CreateAsync
   href: api/Refitter.Core.OpenApiDocumentFactory.html#Refitter_Core_OpenApiDocumentFactory_CreateAsync_
@@ -1463,12 +1463,12 @@ references:
   fullName.vb: Refitter.Core.RefitGenerator.New
   nameWithType: RefitGenerator.RefitGenerator
   nameWithType.vb: RefitGenerator.New
-- uid: Refitter.Core.RefitGenerator.CreateAsync(Refitter.Core.RefitGeneratorSettings)
-  name: CreateAsync(RefitGeneratorSettings)
-  href: api/Refitter.Core.RefitGenerator.html#Refitter_Core_RefitGenerator_CreateAsync_Refitter_Core_RefitGeneratorSettings_
-  commentId: M:Refitter.Core.RefitGenerator.CreateAsync(Refitter.Core.RefitGeneratorSettings)
-  fullName: Refitter.Core.RefitGenerator.CreateAsync(Refitter.Core.RefitGeneratorSettings)
-  nameWithType: RefitGenerator.CreateAsync(RefitGeneratorSettings)
+- uid: Refitter.Core.RefitGenerator.CreateAsync(Refitter.Core.RefitGeneratorSettings,System.Threading.CancellationToken)
+  name: CreateAsync(RefitGeneratorSettings, CancellationToken)
+  href: api/Refitter.Core.RefitGenerator.html#Refitter_Core_RefitGenerator_CreateAsync_Refitter_Core_RefitGeneratorSettings_System_Threading_CancellationToken_
+  commentId: M:Refitter.Core.RefitGenerator.CreateAsync(Refitter.Core.RefitGeneratorSettings,System.Threading.CancellationToken)
+  fullName: Refitter.Core.RefitGenerator.CreateAsync(Refitter.Core.RefitGeneratorSettings, System.Threading.CancellationToken)
+  nameWithType: RefitGenerator.CreateAsync(RefitGeneratorSettings, CancellationToken)
 - uid: Refitter.Core.RefitGenerator.CreateAsync*
   name: CreateAsync
   href: api/Refitter.Core.RefitGenerator.html#Refitter_Core_RefitGenerator_CreateAsync_
@@ -2845,15 +2845,15 @@ references:
   commentId: T:Refitter.Core.Validation.OpenApiValidator
   fullName: Refitter.Core.Validation.OpenApiValidator
   nameWithType: OpenApiValidator
-- uid: Refitter.Core.Validation.OpenApiValidator.Validate(System.String)
-  name: Validate(string)
-  href: api/Refitter.Core.Validation.OpenApiValidator.html#Refitter_Core_Validation_OpenApiValidator_Validate_System_String_
-  commentId: M:Refitter.Core.Validation.OpenApiValidator.Validate(System.String)
-  name.vb: Validate(String)
-  fullName: Refitter.Core.Validation.OpenApiValidator.Validate(string)
-  fullName.vb: Refitter.Core.Validation.OpenApiValidator.Validate(String)
-  nameWithType: OpenApiValidator.Validate(string)
-  nameWithType.vb: OpenApiValidator.Validate(String)
+- uid: Refitter.Core.Validation.OpenApiValidator.Validate(System.String,System.Threading.CancellationToken)
+  name: Validate(string, CancellationToken)
+  href: api/Refitter.Core.Validation.OpenApiValidator.html#Refitter_Core_Validation_OpenApiValidator_Validate_System_String_System_Threading_CancellationToken_
+  commentId: M:Refitter.Core.Validation.OpenApiValidator.Validate(System.String,System.Threading.CancellationToken)
+  name.vb: Validate(String, CancellationToken)
+  fullName: Refitter.Core.Validation.OpenApiValidator.Validate(string, System.Threading.CancellationToken)
+  fullName.vb: Refitter.Core.Validation.OpenApiValidator.Validate(String, System.Threading.CancellationToken)
+  nameWithType: OpenApiValidator.Validate(string, CancellationToken)
+  nameWithType.vb: OpenApiValidator.Validate(String, CancellationToken)
 - uid: Refitter.Core.Validation.OpenApiValidator.Validate*
   name: Validate
   href: api/Refitter.Core.Validation.OpenApiValidator.html#Refitter_Core_Validation_OpenApiValidator_Validate_

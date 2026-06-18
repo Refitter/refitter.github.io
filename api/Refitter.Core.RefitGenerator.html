@@ -85,7 +85,7 @@
 
 
   <h1 id="Refitter_Core_RefitGenerator" data-uid="Refitter.Core.RefitGenerator" class="text-break">
-Class RefitGenerator  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/RefitGenerator.cs/#L8"><i class="bi bi-code-slash"></i></a>
+Class RefitGenerator  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/RefitGenerator.cs/#L9"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -153,7 +153,7 @@ Class RefitGenerator  <a class="header-action link-secondary" title="View source
 
   <h3 id="Refitter_Core_RefitGenerator__ctor_Refitter_Core_RefitGeneratorSettings_NSwag_OpenApiDocument_" data-uid="Refitter.Core.RefitGenerator.#ctor(Refitter.Core.RefitGeneratorSettings,NSwag.OpenApiDocument)">
   RefitGenerator(RefitGeneratorSettings, OpenApiDocument)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/RefitGenerator.cs/#L8"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/RefitGenerator.cs/#L9"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generates Refit clients and interfaces based on an OpenAPI specification.</p>
@@ -191,7 +191,7 @@ Class RefitGenerator  <a class="header-action link-secondary" title="View source
 
   <h3 id="Refitter_Core_RefitGenerator_OpenApiDocument" data-uid="Refitter.Core.RefitGenerator.OpenApiDocument">
   OpenApiDocument
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/RefitGenerator.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/RefitGenerator.cs/#L17"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>OpenAPI specifications used to generate Refit clients and interfaces.
@@ -226,9 +226,9 @@ This is the filtered/cleaned document after pipeline processing.</p>
 
   <a id="Refitter_Core_RefitGenerator_CreateAsync_" data-uid="Refitter.Core.RefitGenerator.CreateAsync*"></a>
 
-  <h3 id="Refitter_Core_RefitGenerator_CreateAsync_Refitter_Core_RefitGeneratorSettings_" data-uid="Refitter.Core.RefitGenerator.CreateAsync(Refitter.Core.RefitGeneratorSettings)">
-  CreateAsync(RefitGeneratorSettings)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/RefitGenerator.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Refitter_Core_RefitGenerator_CreateAsync_Refitter_Core_RefitGeneratorSettings_System_Threading_CancellationToken_" data-uid="Refitter.Core.RefitGenerator.CreateAsync(Refitter.Core.RefitGeneratorSettings,System.Threading.CancellationToken)">
+  CreateAsync(RefitGeneratorSettings, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/RefitGenerator.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new instance of the <a class="xref" href="Refitter.Core.RefitGenerator.html">RefitGenerator</a> class asynchronously
@@ -237,12 +237,14 @@ by loading the document from settings, then filtering and cleaning it.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;RefitGenerator&gt; CreateAsync(RefitGeneratorSettings settings)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;RefitGenerator&gt; CreateAsync(RefitGeneratorSettings settings, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>settings</code> <a class="xref" href="Refitter.Core.RefitGeneratorSettings.html">RefitGeneratorSettings</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
     <dd></dd>
   </dl>
 
@@ -266,7 +268,7 @@ by loading the document from settings, then filtering and cleaning it.</p>
 
   <h3 id="Refitter_Core_RefitGenerator_Generate" data-uid="Refitter.Core.RefitGenerator.Generate">
   Generate()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/RefitGenerator.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/RefitGenerator.cs/#L87"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generates Refit clients and interfaces based on an OpenAPI specification and returns the generated code as a string.</p>
@@ -299,7 +301,7 @@ by loading the document from settings, then filtering and cleaning it.</p>
 
   <h3 id="Refitter_Core_RefitGenerator_GenerateMultipleFiles" data-uid="Refitter.Core.RefitGenerator.GenerateMultipleFiles">
   GenerateMultipleFiles()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/RefitGenerator.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/RefitGenerator.cs/#L93"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generates multiple files containing Refit interfaces and contracts.</p>
@@ -332,7 +334,7 @@ by loading the document from settings, then filtering and cleaning it.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/RefitGenerator.cs/#L8" class="edit-link">Edit this page</a>
+          <a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/RefitGenerator.cs/#L9" class="edit-link">Edit this page</a>
         </div>
 
 
