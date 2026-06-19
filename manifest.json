@@ -4,6 +4,20 @@
   "files": [
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.ApizrPackages.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.ApizrPackages.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.ApizrPackages",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.ApizrPackages.yml\" sourcestartlinenumber=\"1\">Enumeration of available Apizr packages.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Refitter.Core.ApizrSettings.yml",
       "output": {
         ".html": {
@@ -378,7 +392,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Refitter.Core.SchemaCleaner",
-      "Summary": "<p sourcefile=\"api/Refitter.Core.SchemaCleaner.yml\" sourcestartlinenumber=\"1\">Cleans up OpenAPI schema by removing unreferenced schemas and handling inheritance hierarchies.</p>\n"
+      "Summary": "<p sourcefile=\"api/Refitter.Core.SchemaCleaner.yml\" sourcestartlinenumber=\"1\">Cleans up the OpenAPI schema by removing unreferenced schemas and handling inheritance hierarchies.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -393,34 +407,6 @@
       "IsMRef": true,
       "Title": "Refitter.Core.Serializer",
       "Summary": "<p sourcefile=\"api/Refitter.Core.Serializer.yml\" sourcestartlinenumber=\"1\">Provides methods for serializing and deserializing objects to and from JSON.\nThis serializer is configured to be case-insensitive.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Refitter.Core.Settings.ApizrPackages.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Refitter.Core.Settings.ApizrPackages.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Refitter.Core.Settings.ApizrPackages",
-      "Summary": "<p sourcefile=\"api/Refitter.Core.Settings.ApizrPackages.yml\" sourcestartlinenumber=\"1\">Enumeration of available Apizr packages.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Refitter.Core.Settings.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Refitter.Core.Settings.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Refitter.Core.Settings",
-      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -476,7 +462,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Refitter.Core.Validation.OpenApiStats",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/Refitter.Core.Validation.OpenApiStats.yml\" sourcestartlinenumber=\"1\">Walks an OpenAPI document and collects counts of its elements.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -490,7 +476,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Refitter.Core.Validation.OpenApiValidationException",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/Refitter.Core.Validation.OpenApiValidationException.yml\" sourcestartlinenumber=\"1\">Exception thrown when OpenAPI validation fails.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -504,7 +490,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Refitter.Core.Validation.OpenApiValidationResult",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/Refitter.Core.Validation.OpenApiValidationResult.yml\" sourcestartlinenumber=\"1\">Represents the result of an OpenAPI document validation.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -518,7 +504,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Refitter.Core.Validation.OpenApiValidator",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/Refitter.Core.Validation.OpenApiValidator.yml\" sourcestartlinenumber=\"1\">Validates an OpenAPI specification file and collects statistics about its contents.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -533,6 +519,20 @@
       "IsMRef": true,
       "Title": "Refitter.Core.Validation",
       "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.VersionHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.VersionHelper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.VersionHelper",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.VersionHelper.yml\" sourcestartlinenumber=\"1\">Helper class to retrieve the version of the Refitter library.</p>\n"
     },
     {
       "type": "ManagedReference",
