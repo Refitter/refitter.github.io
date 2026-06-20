@@ -284,6 +284,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.IValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.IValidator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.IValidator",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.IValidator.yml\" sourcestartlinenumber=\"1\">Validates an OpenAPI specification file and returns validation diagnostics and statistics.\nEach distribution form (CLI, MSBuild, Source Generator) can provide its own adapter.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Refitter.Core.IntegerType.yml",
       "output": {
         ".html": {
@@ -480,6 +494,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.RefitterRunner.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.RefitterRunner.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.RefitterRunner",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.RefitterRunner.yml\" sourcestartlinenumber=\"1\">Encapsulates the shared generation workflow across all distribution forms (CLI, MSBuild, Source Generator).\nHandles generator creation, code generation, output planning, validation, warning detection, and file writing.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Refitter.Core.RefitterSettingsLoader.yml",
       "output": {
         ".html": {
@@ -491,6 +519,34 @@
       "IsMRef": true,
       "Title": "Refitter.Core.RefitterSettingsLoader",
       "Summary": "<p sourcefile=\"api/Refitter.Core.RefitterSettingsLoader.yml\" sourcestartlinenumber=\"1\">Loads <xref href=\"Refitter.Core.RefitGeneratorSettings\" data-throw-if-not-resolved=\"false\"></xref> from the contents of a <code>.refitter</code> settings file.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.RunResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.RunResult.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.RunResult",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.RunResult.yml\" sourcestartlinenumber=\"1\">Represents the result of a <xref href=\"Refitter.Core.RefitterRunner.RunAsync(Refitter.Core.RefitGeneratorSettings%2cRefitter.Core.IFileWriter%2cRefitter.Core.IValidator%2cSystem.String%2cSystem.String%2cSystem.Threading.CancellationToken)\" data-throw-if-not-resolved=\"false\"></xref> invocation.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.RunnerDiagnostic.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.RunnerDiagnostic.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.RunnerDiagnostic",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.RunnerDiagnostic.yml\" sourcestartlinenumber=\"1\">Represents a diagnostic message from a generation run, such as a validation error or warning.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -634,6 +690,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.Validation.OpenApiValidatorAdapter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.Validation.OpenApiValidatorAdapter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.Validation.OpenApiValidatorAdapter",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.Validation.OpenApiValidatorAdapter.yml\" sourcestartlinenumber=\"1\">Adapts the static <xref href=\"Refitter.Core.Validation.OpenApiValidator\" data-throw-if-not-resolved=\"false\"></xref> to the <xref href=\"Refitter.Core.IValidator\" data-throw-if-not-resolved=\"false\"></xref> interface.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Refitter.Core.Validation.yml",
       "output": {
         ".html": {
@@ -659,6 +729,20 @@
       "IsMRef": true,
       "Title": "Refitter.Core.VersionHelper",
       "Summary": "<p sourcefile=\"api/Refitter.Core.VersionHelper.yml\" sourcestartlinenumber=\"1\">Helper class to retrieve the version of the Refitter library.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.Warning.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.Warning.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.Warning",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.Warning.yml\" sourcestartlinenumber=\"1\">Represents a user-facing configuration warning message.</p>\n"
     },
     {
       "type": "ManagedReference",

@@ -1625,6 +1625,28 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.ISchemaConfiguration.TrimUnusedSchema
   nameWithType: ISchemaConfiguration.TrimUnusedSchema
+- uid: Refitter.Core.IValidator
+  name: IValidator
+  href: api/Refitter.Core.IValidator.html
+  commentId: T:Refitter.Core.IValidator
+  fullName: Refitter.Core.IValidator
+  nameWithType: IValidator
+- uid: Refitter.Core.IValidator.ValidateAsync(System.String,System.Threading.CancellationToken)
+  name: ValidateAsync(string, CancellationToken)
+  href: api/Refitter.Core.IValidator.html#Refitter_Core_IValidator_ValidateAsync_System_String_System_Threading_CancellationToken_
+  commentId: M:Refitter.Core.IValidator.ValidateAsync(System.String,System.Threading.CancellationToken)
+  name.vb: ValidateAsync(String, CancellationToken)
+  fullName: Refitter.Core.IValidator.ValidateAsync(string, System.Threading.CancellationToken)
+  fullName.vb: Refitter.Core.IValidator.ValidateAsync(String, System.Threading.CancellationToken)
+  nameWithType: IValidator.ValidateAsync(string, CancellationToken)
+  nameWithType.vb: IValidator.ValidateAsync(String, CancellationToken)
+- uid: Refitter.Core.IValidator.ValidateAsync*
+  name: ValidateAsync
+  href: api/Refitter.Core.IValidator.html#Refitter_Core_IValidator_ValidateAsync_
+  commentId: Overload:Refitter.Core.IValidator.ValidateAsync
+  isSpec: "True"
+  fullName: Refitter.Core.IValidator.ValidateAsync
+  nameWithType: IValidator.ValidateAsync
 - uid: Refitter.Core.IntegerType
   name: IntegerType
   href: api/Refitter.Core.IntegerType.html
@@ -2861,6 +2883,28 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.RefitGeneratorSettings.UsePolymorphicSerialization
   nameWithType: RefitGeneratorSettings.UsePolymorphicSerialization
+- uid: Refitter.Core.RefitterRunner
+  name: RefitterRunner
+  href: api/Refitter.Core.RefitterRunner.html
+  commentId: T:Refitter.Core.RefitterRunner
+  fullName: Refitter.Core.RefitterRunner
+  nameWithType: RefitterRunner
+- uid: Refitter.Core.RefitterRunner.RunAsync(Refitter.Core.RefitGeneratorSettings,Refitter.Core.IFileWriter,Refitter.Core.IValidator,System.String,System.String,System.Threading.CancellationToken)
+  name: RunAsync(RefitGeneratorSettings, IFileWriter?, IValidator?, string?, string?, CancellationToken)
+  href: api/Refitter.Core.RefitterRunner.html#Refitter_Core_RefitterRunner_RunAsync_Refitter_Core_RefitGeneratorSettings_Refitter_Core_IFileWriter_Refitter_Core_IValidator_System_String_System_String_System_Threading_CancellationToken_
+  commentId: M:Refitter.Core.RefitterRunner.RunAsync(Refitter.Core.RefitGeneratorSettings,Refitter.Core.IFileWriter,Refitter.Core.IValidator,System.String,System.String,System.Threading.CancellationToken)
+  name.vb: RunAsync(RefitGeneratorSettings, IFileWriter, IValidator, String, String, CancellationToken)
+  fullName: Refitter.Core.RefitterRunner.RunAsync(Refitter.Core.RefitGeneratorSettings, Refitter.Core.IFileWriter?, Refitter.Core.IValidator?, string?, string?, System.Threading.CancellationToken)
+  fullName.vb: Refitter.Core.RefitterRunner.RunAsync(Refitter.Core.RefitGeneratorSettings, Refitter.Core.IFileWriter, Refitter.Core.IValidator, String, String, System.Threading.CancellationToken)
+  nameWithType: RefitterRunner.RunAsync(RefitGeneratorSettings, IFileWriter?, IValidator?, string?, string?, CancellationToken)
+  nameWithType.vb: RefitterRunner.RunAsync(RefitGeneratorSettings, IFileWriter, IValidator, String, String, CancellationToken)
+- uid: Refitter.Core.RefitterRunner.RunAsync*
+  name: RunAsync
+  href: api/Refitter.Core.RefitterRunner.html#Refitter_Core_RefitterRunner_RunAsync_
+  commentId: Overload:Refitter.Core.RefitterRunner.RunAsync
+  isSpec: "True"
+  fullName: Refitter.Core.RefitterRunner.RunAsync
+  nameWithType: RefitterRunner.RunAsync
 - uid: Refitter.Core.RefitterSettingsLoader
   name: RefitterSettingsLoader
   href: api/Refitter.Core.RefitterSettingsLoader.html
@@ -2931,6 +2975,160 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.RefitterSettingsLoader.ResolveRelativeSpecPaths
   nameWithType: RefitterSettingsLoader.ResolveRelativeSpecPaths
+- uid: Refitter.Core.RunResult
+  name: RunResult
+  href: api/Refitter.Core.RunResult.html
+  commentId: T:Refitter.Core.RunResult
+  fullName: Refitter.Core.RunResult
+  nameWithType: RunResult
+- uid: Refitter.Core.RunResult.#ctor(System.Collections.Generic.IReadOnlyList{Refitter.Core.PlannedFile},System.Collections.Generic.IReadOnlyList{Refitter.Core.Warning},System.Collections.Generic.IReadOnlyList{Refitter.Core.RunnerDiagnostic},System.TimeSpan,System.Int32,System.Exception)
+  name: RunResult(IReadOnlyList<PlannedFile>, IReadOnlyList<Warning>, IReadOnlyList<RunnerDiagnostic>, TimeSpan, int, Exception?)
+  href: api/Refitter.Core.RunResult.html#Refitter_Core_RunResult__ctor_System_Collections_Generic_IReadOnlyList_Refitter_Core_PlannedFile__System_Collections_Generic_IReadOnlyList_Refitter_Core_Warning__System_Collections_Generic_IReadOnlyList_Refitter_Core_RunnerDiagnostic__System_TimeSpan_System_Int32_System_Exception_
+  commentId: M:Refitter.Core.RunResult.#ctor(System.Collections.Generic.IReadOnlyList{Refitter.Core.PlannedFile},System.Collections.Generic.IReadOnlyList{Refitter.Core.Warning},System.Collections.Generic.IReadOnlyList{Refitter.Core.RunnerDiagnostic},System.TimeSpan,System.Int32,System.Exception)
+  name.vb: New(IReadOnlyList(Of PlannedFile), IReadOnlyList(Of Warning), IReadOnlyList(Of RunnerDiagnostic), TimeSpan, Integer, Exception)
+  fullName: Refitter.Core.RunResult.RunResult(System.Collections.Generic.IReadOnlyList<Refitter.Core.PlannedFile>, System.Collections.Generic.IReadOnlyList<Refitter.Core.Warning>, System.Collections.Generic.IReadOnlyList<Refitter.Core.RunnerDiagnostic>, System.TimeSpan, int, System.Exception?)
+  fullName.vb: Refitter.Core.RunResult.New(System.Collections.Generic.IReadOnlyList(Of Refitter.Core.PlannedFile), System.Collections.Generic.IReadOnlyList(Of Refitter.Core.Warning), System.Collections.Generic.IReadOnlyList(Of Refitter.Core.RunnerDiagnostic), System.TimeSpan, Integer, System.Exception)
+  nameWithType: RunResult.RunResult(IReadOnlyList<PlannedFile>, IReadOnlyList<Warning>, IReadOnlyList<RunnerDiagnostic>, TimeSpan, int, Exception?)
+  nameWithType.vb: RunResult.New(IReadOnlyList(Of PlannedFile), IReadOnlyList(Of Warning), IReadOnlyList(Of RunnerDiagnostic), TimeSpan, Integer, Exception)
+- uid: Refitter.Core.RunResult.#ctor*
+  name: RunResult
+  href: api/Refitter.Core.RunResult.html#Refitter_Core_RunResult__ctor_
+  commentId: Overload:Refitter.Core.RunResult.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Refitter.Core.RunResult.RunResult
+  fullName.vb: Refitter.Core.RunResult.New
+  nameWithType: RunResult.RunResult
+  nameWithType.vb: RunResult.New
+- uid: Refitter.Core.RunResult.Diagnostics
+  name: Diagnostics
+  href: api/Refitter.Core.RunResult.html#Refitter_Core_RunResult_Diagnostics
+  commentId: P:Refitter.Core.RunResult.Diagnostics
+  fullName: Refitter.Core.RunResult.Diagnostics
+  nameWithType: RunResult.Diagnostics
+- uid: Refitter.Core.RunResult.Diagnostics*
+  name: Diagnostics
+  href: api/Refitter.Core.RunResult.html#Refitter_Core_RunResult_Diagnostics_
+  commentId: Overload:Refitter.Core.RunResult.Diagnostics
+  isSpec: "True"
+  fullName: Refitter.Core.RunResult.Diagnostics
+  nameWithType: RunResult.Diagnostics
+- uid: Refitter.Core.RunResult.Elapsed
+  name: Elapsed
+  href: api/Refitter.Core.RunResult.html#Refitter_Core_RunResult_Elapsed
+  commentId: P:Refitter.Core.RunResult.Elapsed
+  fullName: Refitter.Core.RunResult.Elapsed
+  nameWithType: RunResult.Elapsed
+- uid: Refitter.Core.RunResult.Elapsed*
+  name: Elapsed
+  href: api/Refitter.Core.RunResult.html#Refitter_Core_RunResult_Elapsed_
+  commentId: Overload:Refitter.Core.RunResult.Elapsed
+  isSpec: "True"
+  fullName: Refitter.Core.RunResult.Elapsed
+  nameWithType: RunResult.Elapsed
+- uid: Refitter.Core.RunResult.Exception
+  name: Exception
+  href: api/Refitter.Core.RunResult.html#Refitter_Core_RunResult_Exception
+  commentId: P:Refitter.Core.RunResult.Exception
+  fullName: Refitter.Core.RunResult.Exception
+  nameWithType: RunResult.Exception
+- uid: Refitter.Core.RunResult.Exception*
+  name: Exception
+  href: api/Refitter.Core.RunResult.html#Refitter_Core_RunResult_Exception_
+  commentId: Overload:Refitter.Core.RunResult.Exception
+  isSpec: "True"
+  fullName: Refitter.Core.RunResult.Exception
+  nameWithType: RunResult.Exception
+- uid: Refitter.Core.RunResult.ExitCode
+  name: ExitCode
+  href: api/Refitter.Core.RunResult.html#Refitter_Core_RunResult_ExitCode
+  commentId: P:Refitter.Core.RunResult.ExitCode
+  fullName: Refitter.Core.RunResult.ExitCode
+  nameWithType: RunResult.ExitCode
+- uid: Refitter.Core.RunResult.ExitCode*
+  name: ExitCode
+  href: api/Refitter.Core.RunResult.html#Refitter_Core_RunResult_ExitCode_
+  commentId: Overload:Refitter.Core.RunResult.ExitCode
+  isSpec: "True"
+  fullName: Refitter.Core.RunResult.ExitCode
+  nameWithType: RunResult.ExitCode
+- uid: Refitter.Core.RunResult.GeneratedFiles
+  name: GeneratedFiles
+  href: api/Refitter.Core.RunResult.html#Refitter_Core_RunResult_GeneratedFiles
+  commentId: P:Refitter.Core.RunResult.GeneratedFiles
+  fullName: Refitter.Core.RunResult.GeneratedFiles
+  nameWithType: RunResult.GeneratedFiles
+- uid: Refitter.Core.RunResult.GeneratedFiles*
+  name: GeneratedFiles
+  href: api/Refitter.Core.RunResult.html#Refitter_Core_RunResult_GeneratedFiles_
+  commentId: Overload:Refitter.Core.RunResult.GeneratedFiles
+  isSpec: "True"
+  fullName: Refitter.Core.RunResult.GeneratedFiles
+  nameWithType: RunResult.GeneratedFiles
+- uid: Refitter.Core.RunResult.Warnings
+  name: Warnings
+  href: api/Refitter.Core.RunResult.html#Refitter_Core_RunResult_Warnings
+  commentId: P:Refitter.Core.RunResult.Warnings
+  fullName: Refitter.Core.RunResult.Warnings
+  nameWithType: RunResult.Warnings
+- uid: Refitter.Core.RunResult.Warnings*
+  name: Warnings
+  href: api/Refitter.Core.RunResult.html#Refitter_Core_RunResult_Warnings_
+  commentId: Overload:Refitter.Core.RunResult.Warnings
+  isSpec: "True"
+  fullName: Refitter.Core.RunResult.Warnings
+  nameWithType: RunResult.Warnings
+- uid: Refitter.Core.RunnerDiagnostic
+  name: RunnerDiagnostic
+  href: api/Refitter.Core.RunnerDiagnostic.html
+  commentId: T:Refitter.Core.RunnerDiagnostic
+  fullName: Refitter.Core.RunnerDiagnostic
+  nameWithType: RunnerDiagnostic
+- uid: Refitter.Core.RunnerDiagnostic.#ctor(System.String,System.Boolean)
+  name: RunnerDiagnostic(string, bool)
+  href: api/Refitter.Core.RunnerDiagnostic.html#Refitter_Core_RunnerDiagnostic__ctor_System_String_System_Boolean_
+  commentId: M:Refitter.Core.RunnerDiagnostic.#ctor(System.String,System.Boolean)
+  name.vb: New(String, Boolean)
+  fullName: Refitter.Core.RunnerDiagnostic.RunnerDiagnostic(string, bool)
+  fullName.vb: Refitter.Core.RunnerDiagnostic.New(String, Boolean)
+  nameWithType: RunnerDiagnostic.RunnerDiagnostic(string, bool)
+  nameWithType.vb: RunnerDiagnostic.New(String, Boolean)
+- uid: Refitter.Core.RunnerDiagnostic.#ctor*
+  name: RunnerDiagnostic
+  href: api/Refitter.Core.RunnerDiagnostic.html#Refitter_Core_RunnerDiagnostic__ctor_
+  commentId: Overload:Refitter.Core.RunnerDiagnostic.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Refitter.Core.RunnerDiagnostic.RunnerDiagnostic
+  fullName.vb: Refitter.Core.RunnerDiagnostic.New
+  nameWithType: RunnerDiagnostic.RunnerDiagnostic
+  nameWithType.vb: RunnerDiagnostic.New
+- uid: Refitter.Core.RunnerDiagnostic.IsError
+  name: IsError
+  href: api/Refitter.Core.RunnerDiagnostic.html#Refitter_Core_RunnerDiagnostic_IsError
+  commentId: P:Refitter.Core.RunnerDiagnostic.IsError
+  fullName: Refitter.Core.RunnerDiagnostic.IsError
+  nameWithType: RunnerDiagnostic.IsError
+- uid: Refitter.Core.RunnerDiagnostic.IsError*
+  name: IsError
+  href: api/Refitter.Core.RunnerDiagnostic.html#Refitter_Core_RunnerDiagnostic_IsError_
+  commentId: Overload:Refitter.Core.RunnerDiagnostic.IsError
+  isSpec: "True"
+  fullName: Refitter.Core.RunnerDiagnostic.IsError
+  nameWithType: RunnerDiagnostic.IsError
+- uid: Refitter.Core.RunnerDiagnostic.Message
+  name: Message
+  href: api/Refitter.Core.RunnerDiagnostic.html#Refitter_Core_RunnerDiagnostic_Message
+  commentId: P:Refitter.Core.RunnerDiagnostic.Message
+  fullName: Refitter.Core.RunnerDiagnostic.Message
+  nameWithType: RunnerDiagnostic.Message
+- uid: Refitter.Core.RunnerDiagnostic.Message*
+  name: Message
+  href: api/Refitter.Core.RunnerDiagnostic.html#Refitter_Core_RunnerDiagnostic_Message_
+  commentId: Overload:Refitter.Core.RunnerDiagnostic.Message
+  isSpec: "True"
+  fullName: Refitter.Core.RunnerDiagnostic.Message
+  nameWithType: RunnerDiagnostic.Message
 - uid: Refitter.Core.SchemaCleaner
   name: SchemaCleaner
   href: api/Refitter.Core.SchemaCleaner.html
@@ -3442,6 +3640,28 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.Validation.OpenApiValidator.Validate
   nameWithType: OpenApiValidator.Validate
+- uid: Refitter.Core.Validation.OpenApiValidatorAdapter
+  name: OpenApiValidatorAdapter
+  href: api/Refitter.Core.Validation.OpenApiValidatorAdapter.html
+  commentId: T:Refitter.Core.Validation.OpenApiValidatorAdapter
+  fullName: Refitter.Core.Validation.OpenApiValidatorAdapter
+  nameWithType: OpenApiValidatorAdapter
+- uid: Refitter.Core.Validation.OpenApiValidatorAdapter.ValidateAsync(System.String,System.Threading.CancellationToken)
+  name: ValidateAsync(string, CancellationToken)
+  href: api/Refitter.Core.Validation.OpenApiValidatorAdapter.html#Refitter_Core_Validation_OpenApiValidatorAdapter_ValidateAsync_System_String_System_Threading_CancellationToken_
+  commentId: M:Refitter.Core.Validation.OpenApiValidatorAdapter.ValidateAsync(System.String,System.Threading.CancellationToken)
+  name.vb: ValidateAsync(String, CancellationToken)
+  fullName: Refitter.Core.Validation.OpenApiValidatorAdapter.ValidateAsync(string, System.Threading.CancellationToken)
+  fullName.vb: Refitter.Core.Validation.OpenApiValidatorAdapter.ValidateAsync(String, System.Threading.CancellationToken)
+  nameWithType: OpenApiValidatorAdapter.ValidateAsync(string, CancellationToken)
+  nameWithType.vb: OpenApiValidatorAdapter.ValidateAsync(String, CancellationToken)
+- uid: Refitter.Core.Validation.OpenApiValidatorAdapter.ValidateAsync*
+  name: ValidateAsync
+  href: api/Refitter.Core.Validation.OpenApiValidatorAdapter.html#Refitter_Core_Validation_OpenApiValidatorAdapter_ValidateAsync_
+  commentId: Overload:Refitter.Core.Validation.OpenApiValidatorAdapter.ValidateAsync
+  isSpec: "True"
+  fullName: Refitter.Core.Validation.OpenApiValidatorAdapter.ValidateAsync
+  nameWithType: OpenApiValidatorAdapter.ValidateAsync
 - uid: Refitter.Core.VersionHelper
   name: VersionHelper
   href: api/Refitter.Core.VersionHelper.html
@@ -3461,6 +3681,57 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.VersionHelper.GetVersion
   nameWithType: VersionHelper.GetVersion
+- uid: Refitter.Core.Warning
+  name: Warning
+  href: api/Refitter.Core.Warning.html
+  commentId: T:Refitter.Core.Warning
+  fullName: Refitter.Core.Warning
+  nameWithType: Warning
+- uid: Refitter.Core.Warning.#ctor(System.String,System.String)
+  name: Warning(string, string)
+  href: api/Refitter.Core.Warning.html#Refitter_Core_Warning__ctor_System_String_System_String_
+  commentId: M:Refitter.Core.Warning.#ctor(System.String,System.String)
+  name.vb: New(String, String)
+  fullName: Refitter.Core.Warning.Warning(string, string)
+  fullName.vb: Refitter.Core.Warning.New(String, String)
+  nameWithType: Warning.Warning(string, string)
+  nameWithType.vb: Warning.New(String, String)
+- uid: Refitter.Core.Warning.#ctor*
+  name: Warning
+  href: api/Refitter.Core.Warning.html#Refitter_Core_Warning__ctor_
+  commentId: Overload:Refitter.Core.Warning.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Refitter.Core.Warning.Warning
+  fullName.vb: Refitter.Core.Warning.New
+  nameWithType: Warning.Warning
+  nameWithType.vb: Warning.New
+- uid: Refitter.Core.Warning.Description
+  name: Description
+  href: api/Refitter.Core.Warning.html#Refitter_Core_Warning_Description
+  commentId: P:Refitter.Core.Warning.Description
+  fullName: Refitter.Core.Warning.Description
+  nameWithType: Warning.Description
+- uid: Refitter.Core.Warning.Description*
+  name: Description
+  href: api/Refitter.Core.Warning.html#Refitter_Core_Warning_Description_
+  commentId: Overload:Refitter.Core.Warning.Description
+  isSpec: "True"
+  fullName: Refitter.Core.Warning.Description
+  nameWithType: Warning.Description
+- uid: Refitter.Core.Warning.Title
+  name: Title
+  href: api/Refitter.Core.Warning.html#Refitter_Core_Warning_Title
+  commentId: P:Refitter.Core.Warning.Title
+  fullName: Refitter.Core.Warning.Title
+  nameWithType: Warning.Title
+- uid: Refitter.Core.Warning.Title*
+  name: Title
+  href: api/Refitter.Core.Warning.html#Refitter_Core_Warning_Title_
+  commentId: Overload:Refitter.Core.Warning.Title
+  isSpec: "True"
+  fullName: Refitter.Core.Warning.Title
+  nameWithType: Warning.Title
 - uid: Refitter.Core.XmlDocumentationGenerator
   name: XmlDocumentationGenerator
   href: api/Refitter.Core.XmlDocumentationGenerator.html

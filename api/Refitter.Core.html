@@ -187,8 +187,24 @@ Each filter operation returns a new document without mutating the input.</p>
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Refitter.Core.RefitterRunner.html">RefitterRunner</a></dt>
+      <dd><p>Encapsulates the shared generation workflow across all distribution forms (CLI, MSBuild, Source Generator).
+Handles generator creation, code generation, output planning, validation, warning detection, and file writing.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Refitter.Core.RefitterSettingsLoader.html">RefitterSettingsLoader</a></dt>
       <dd><p>Loads <a class="xref" href="Refitter.Core.RefitGeneratorSettings.html">RefitGeneratorSettings</a> from the contents of a <code>.refitter</code> settings file.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Refitter.Core.RunResult.html">RunResult</a></dt>
+      <dd><p>Represents the result of a <a class="xref" href="Refitter.Core.RefitterRunner.html#Refitter_Core_RefitterRunner_RunAsync_Refitter_Core_RefitGeneratorSettings_Refitter_Core_IFileWriter_Refitter_Core_IValidator_System_String_System_String_System_Threading_CancellationToken_">RunAsync(RefitGeneratorSettings, IFileWriter?, IValidator?, string?, string?, CancellationToken)</a> invocation.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Refitter.Core.RunnerDiagnostic.html">RunnerDiagnostic</a></dt>
+      <dd><p>Represents a diagnostic message from a generation run, such as a validation error or warning.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -217,6 +233,11 @@ avoiding unnecessary disk writes during incremental / design-time builds.</p>
     <dl class="jumplist">
       <dt><a class="xref" href="Refitter.Core.VersionHelper.html">VersionHelper</a></dt>
       <dd><p>Helper class to retrieve the version of the Refitter library.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Refitter.Core.Warning.html">Warning</a></dt>
+      <dd><p>Represents a user-facing configuration warning message.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -263,6 +284,12 @@ Pure logic — no I/O.</p>
     <dl class="jumplist">
       <dt><a class="xref" href="Refitter.Core.ISchemaConfiguration.html">ISchemaConfiguration</a></dt>
       <dd><p>Configuration for schema processing and cleaning.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Refitter.Core.IValidator.html">IValidator</a></dt>
+      <dd><p>Validates an OpenAPI specification file and returns validation diagnostics and statistics.
+Each distribution form (CLI, MSBuild, Source Generator) can provide its own adapter.</p>
 </dd>
     </dl>
     <h3 id="enums">
