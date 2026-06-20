@@ -188,8 +188,8 @@ and optional rerouting of contracts to a separate output folder.</p>
 
   <a id="Refitter_Core_OutputPlanner_GetContractsOutputPath_" data-uid="Refitter.Core.OutputPlanner.GetContractsOutputPath*"></a>
 
-  <h3 id="Refitter_Core_OutputPlanner_GetContractsOutputPath_System_String_Refitter_Core_RefitGeneratorSettings_Refitter_Core_GeneratedCode_" data-uid="Refitter.Core.OutputPlanner.GetContractsOutputPath(System.String,Refitter.Core.RefitGeneratorSettings,Refitter.Core.GeneratedCode)">
-  GetContractsOutputPath(string?, RefitGeneratorSettings, GeneratedCode)
+  <h3 id="Refitter_Core_OutputPlanner_GetContractsOutputPath_System_String_Refitter_Core_IOutputConfiguration_Refitter_Core_GeneratedCode_" data-uid="Refitter.Core.OutputPlanner.GetContractsOutputPath(System.String,Refitter.Core.IOutputConfiguration,Refitter.Core.GeneratedCode)">
+  GetContractsOutputPath(string?, IOutputConfiguration, GeneratedCode)
   <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Pipeline/OutputPlanner.cs/#L170"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -199,7 +199,7 @@ relative to the settings file location.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string GetContractsOutputPath(string? settingsFilePath, RefitGeneratorSettings refitGeneratorSettings, GeneratedCode outputFile)</code></pre>
+    <pre><code class="lang-csharp hljs">public static string GetContractsOutputPath(string? settingsFilePath, IOutputConfiguration outputConfiguration, GeneratedCode outputFile)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -207,8 +207,8 @@ relative to the settings file location.</p>
     <dt><code>settingsFilePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>The path to the settings file, or <code>null</code> for direct CLI generation.</p>
 </dd>
-    <dt><code>refitGeneratorSettings</code> <a class="xref" href="Refitter.Core.RefitGeneratorSettings.html">RefitGeneratorSettings</a></dt>
-    <dd><p>The Refit generator settings.</p>
+    <dt><code>outputConfiguration</code> <a class="xref" href="Refitter.Core.IOutputConfiguration.html">IOutputConfiguration</a></dt>
+    <dd><p>The output configuration.</p>
 </dd>
     <dt><code>outputFile</code> <a class="xref" href="Refitter.Core.GeneratedCode.html">GeneratedCode</a></dt>
     <dd><p>The generated contracts code file.</p>
@@ -234,8 +234,8 @@ relative to the settings file location.</p>
 
   <a id="Refitter_Core_OutputPlanner_GetMultiFileOutputPath_" data-uid="Refitter.Core.OutputPlanner.GetMultiFileOutputPath*"></a>
 
-  <h3 id="Refitter_Core_OutputPlanner_GetMultiFileOutputPath_System_String_System_String_Refitter_Core_RefitGeneratorSettings_Refitter_Core_GeneratedCode_" data-uid="Refitter.Core.OutputPlanner.GetMultiFileOutputPath(System.String,System.String,Refitter.Core.RefitGeneratorSettings,Refitter.Core.GeneratedCode)">
-  GetMultiFileOutputPath(string?, string?, RefitGeneratorSettings, GeneratedCode)
+  <h3 id="Refitter_Core_OutputPlanner_GetMultiFileOutputPath_System_String_System_String_Refitter_Core_IOutputConfiguration_Refitter_Core_GeneratedCode_" data-uid="Refitter.Core.OutputPlanner.GetMultiFileOutputPath(System.String,System.String,Refitter.Core.IOutputConfiguration,Refitter.Core.GeneratedCode)">
+  GetMultiFileOutputPath(string?, string?, IOutputConfiguration, GeneratedCode)
   <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Pipeline/OutputPlanner.cs/#L119"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -245,7 +245,7 @@ accounting for settings file location, CLI overrides, and configured output fold
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string GetMultiFileOutputPath(string? settingsFilePath, string? cliOutputPath, RefitGeneratorSettings refitGeneratorSettings, GeneratedCode outputFile)</code></pre>
+    <pre><code class="lang-csharp hljs">public static string GetMultiFileOutputPath(string? settingsFilePath, string? cliOutputPath, IOutputConfiguration outputConfiguration, GeneratedCode outputFile)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -256,8 +256,8 @@ accounting for settings file location, CLI overrides, and configured output fold
     <dt><code>cliOutputPath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>The output path specified via CLI, or <code>null</code>.</p>
 </dd>
-    <dt><code>refitGeneratorSettings</code> <a class="xref" href="Refitter.Core.RefitGeneratorSettings.html">RefitGeneratorSettings</a></dt>
-    <dd><p>The Refit generator settings.</p>
+    <dt><code>outputConfiguration</code> <a class="xref" href="Refitter.Core.IOutputConfiguration.html">IOutputConfiguration</a></dt>
+    <dd><p>The output configuration.</p>
 </dd>
     <dt><code>outputFile</code> <a class="xref" href="Refitter.Core.GeneratedCode.html">GeneratedCode</a></dt>
     <dd><p>The generated code file to produce a path for.</p>
@@ -283,8 +283,8 @@ accounting for settings file location, CLI overrides, and configured output fold
 
   <a id="Refitter_Core_OutputPlanner_GetSingleFileOutputPath_" data-uid="Refitter.Core.OutputPlanner.GetSingleFileOutputPath*"></a>
 
-  <h3 id="Refitter_Core_OutputPlanner_GetSingleFileOutputPath_System_String_System_String_Refitter_Core_RefitGeneratorSettings_" data-uid="Refitter.Core.OutputPlanner.GetSingleFileOutputPath(System.String,System.String,Refitter.Core.RefitGeneratorSettings)">
-  GetSingleFileOutputPath(string?, string?, RefitGeneratorSettings)
+  <h3 id="Refitter_Core_OutputPlanner_GetSingleFileOutputPath_System_String_System_String_Refitter_Core_IOutputConfiguration_" data-uid="Refitter.Core.OutputPlanner.GetSingleFileOutputPath(System.String,System.String,Refitter.Core.IOutputConfiguration)">
+  GetSingleFileOutputPath(string?, string?, IOutputConfiguration)
   <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Pipeline/OutputPlanner.cs/#L73"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -294,7 +294,7 @@ CLI overrides, and configured output folder/filename in the settings.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string GetSingleFileOutputPath(string? settingsFilePath, string? cliOutputPath, RefitGeneratorSettings refitGeneratorSettings)</code></pre>
+    <pre><code class="lang-csharp hljs">public static string GetSingleFileOutputPath(string? settingsFilePath, string? cliOutputPath, IOutputConfiguration outputConfiguration)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -305,8 +305,8 @@ CLI overrides, and configured output folder/filename in the settings.</p>
     <dt><code>cliOutputPath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>The output path specified via CLI, or <code>null</code>.</p>
 </dd>
-    <dt><code>refitGeneratorSettings</code> <a class="xref" href="Refitter.Core.RefitGeneratorSettings.html">RefitGeneratorSettings</a></dt>
-    <dd><p>The Refit generator settings.</p>
+    <dt><code>outputConfiguration</code> <a class="xref" href="Refitter.Core.IOutputConfiguration.html">IOutputConfiguration</a></dt>
+    <dd><p>The output configuration.</p>
 </dd>
   </dl>
 
@@ -329,8 +329,8 @@ CLI overrides, and configured output folder/filename in the settings.</p>
 
   <a id="Refitter_Core_OutputPlanner_PlanMultipleFiles_" data-uid="Refitter.Core.OutputPlanner.PlanMultipleFiles*"></a>
 
-  <h3 id="Refitter_Core_OutputPlanner_PlanMultipleFiles_System_String_System_String_Refitter_Core_RefitGeneratorSettings_Refitter_Core_GeneratorOutput_" data-uid="Refitter.Core.OutputPlanner.PlanMultipleFiles(System.String,System.String,Refitter.Core.RefitGeneratorSettings,Refitter.Core.GeneratorOutput)">
-  PlanMultipleFiles(string?, string?, RefitGeneratorSettings, GeneratorOutput)
+  <h3 id="Refitter_Core_OutputPlanner_PlanMultipleFiles_System_String_System_String_Refitter_Core_IOutputConfiguration_Refitter_Core_GeneratorOutput_" data-uid="Refitter.Core.OutputPlanner.PlanMultipleFiles(System.String,System.String,Refitter.Core.IOutputConfiguration,Refitter.Core.GeneratorOutput)">
+  PlanMultipleFiles(string?, string?, IOutputConfiguration, GeneratorOutput)
   <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Pipeline/OutputPlanner.cs/#L46"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -340,7 +340,7 @@ and whether the file should be rerouted to the contracts output folder.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;PlannedFile&gt; PlanMultipleFiles(string? settingsFilePath, string? cliOutputPath, RefitGeneratorSettings refitGeneratorSettings, GeneratorOutput generatorOutput)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;PlannedFile&gt; PlanMultipleFiles(string? settingsFilePath, string? cliOutputPath, IOutputConfiguration outputConfiguration, GeneratorOutput generatorOutput)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -351,8 +351,8 @@ and whether the file should be rerouted to the contracts output folder.</p>
     <dt><code>cliOutputPath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>The output path specified via CLI, or <code>null</code>.</p>
 </dd>
-    <dt><code>refitGeneratorSettings</code> <a class="xref" href="Refitter.Core.RefitGeneratorSettings.html">RefitGeneratorSettings</a></dt>
-    <dd><p>The Refit generator settings.</p>
+    <dt><code>outputConfiguration</code> <a class="xref" href="Refitter.Core.IOutputConfiguration.html">IOutputConfiguration</a></dt>
+    <dd><p>The output configuration.</p>
 </dd>
     <dt><code>generatorOutput</code> <a class="xref" href="Refitter.Core.GeneratorOutput.html">GeneratorOutput</a></dt>
     <dd><p>The generator output containing multiple files.</p>
@@ -378,8 +378,8 @@ and whether the file should be rerouted to the contracts output folder.</p>
 
   <a id="Refitter_Core_OutputPlanner_PlanSingleFile_" data-uid="Refitter.Core.OutputPlanner.PlanSingleFile*"></a>
 
-  <h3 id="Refitter_Core_OutputPlanner_PlanSingleFile_System_String_System_String_Refitter_Core_RefitGeneratorSettings_System_String_" data-uid="Refitter.Core.OutputPlanner.PlanSingleFile(System.String,System.String,Refitter.Core.RefitGeneratorSettings,System.String)">
-  PlanSingleFile(string?, string?, RefitGeneratorSettings, string)
+  <h3 id="Refitter_Core_OutputPlanner_PlanSingleFile_System_String_System_String_Refitter_Core_IOutputConfiguration_System_String_" data-uid="Refitter.Core.OutputPlanner.PlanSingleFile(System.String,System.String,Refitter.Core.IOutputConfiguration,System.String)">
+  PlanSingleFile(string?, string?, IOutputConfiguration, string)
   <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Pipeline/OutputPlanner.cs/#L30"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -388,7 +388,7 @@ and whether the file should be rerouted to the contracts output folder.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static PlannedFile PlanSingleFile(string? settingsFilePath, string? cliOutputPath, RefitGeneratorSettings refitGeneratorSettings, string code)</code></pre>
+    <pre><code class="lang-csharp hljs">public static PlannedFile PlanSingleFile(string? settingsFilePath, string? cliOutputPath, IOutputConfiguration outputConfiguration, string code)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -399,8 +399,8 @@ and whether the file should be rerouted to the contracts output folder.</p>
     <dt><code>cliOutputPath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>The output path specified via CLI, or <code>null</code>.</p>
 </dd>
-    <dt><code>refitGeneratorSettings</code> <a class="xref" href="Refitter.Core.RefitGeneratorSettings.html">RefitGeneratorSettings</a></dt>
-    <dd><p>The Refit generator settings.</p>
+    <dt><code>outputConfiguration</code> <a class="xref" href="Refitter.Core.IOutputConfiguration.html">IOutputConfiguration</a></dt>
+    <dd><p>The output configuration.</p>
 </dd>
     <dt><code>code</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>The generated code content.</p>
@@ -426,25 +426,25 @@ and whether the file should be rerouted to the contracts output folder.</p>
 
   <a id="Refitter_Core_OutputPlanner_ShouldRerouteToContractsFolder_" data-uid="Refitter.Core.OutputPlanner.ShouldRerouteToContractsFolder*"></a>
 
-  <h3 id="Refitter_Core_OutputPlanner_ShouldRerouteToContractsFolder_Refitter_Core_RefitGeneratorSettings_Refitter_Core_GeneratedCode_" data-uid="Refitter.Core.OutputPlanner.ShouldRerouteToContractsFolder(Refitter.Core.RefitGeneratorSettings,Refitter.Core.GeneratedCode)">
-  ShouldRerouteToContractsFolder(RefitGeneratorSettings, GeneratedCode)
+  <h3 id="Refitter_Core_OutputPlanner_ShouldRerouteToContractsFolder_Refitter_Core_IOutputConfiguration_Refitter_Core_GeneratedCode_" data-uid="Refitter.Core.OutputPlanner.ShouldRerouteToContractsFolder(Refitter.Core.IOutputConfiguration,Refitter.Core.GeneratedCode)">
+  ShouldRerouteToContractsFolder(IOutputConfiguration, GeneratedCode)
   <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Pipeline/OutputPlanner.cs/#L155"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether the specified output file should be rerouted to the contracts output folder.
-Rerouting occurs when <a class="xref" href="Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_ContractsOutputFolder">ContractsOutputFolder</a> is set to a
-non-default value and the file is the contract's file.</p>
+Rerouting occurs when <a class="xref" href="Refitter.Core.IOutputConfiguration.html#Refitter_Core_IOutputConfiguration_ContractsOutputFolder">ContractsOutputFolder</a> differs from
+the primary <a class="xref" href="Refitter.Core.IOutputConfiguration.html#Refitter_Core_IOutputConfiguration_OutputFolder">OutputFolder</a> and the file is the contract's file.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool ShouldRerouteToContractsFolder(RefitGeneratorSettings refitGeneratorSettings, GeneratedCode outputFile)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool ShouldRerouteToContractsFolder(IOutputConfiguration outputConfiguration, GeneratedCode outputFile)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>refitGeneratorSettings</code> <a class="xref" href="Refitter.Core.RefitGeneratorSettings.html">RefitGeneratorSettings</a></dt>
-    <dd><p>The Refit generator settings.</p>
+    <dt><code>outputConfiguration</code> <a class="xref" href="Refitter.Core.IOutputConfiguration.html">IOutputConfiguration</a></dt>
+    <dd><p>The output configuration.</p>
 </dd>
     <dt><code>outputFile</code> <a class="xref" href="Refitter.Core.GeneratedCode.html">GeneratedCode</a></dt>
     <dd><p>The generated code file to evaluate.</p>

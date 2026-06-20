@@ -1073,6 +1073,517 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.GeneratorOutput.Files
   nameWithType: GeneratorOutput.Files
+- uid: Refitter.Core.ICodeGenerationConfiguration
+  name: ICodeGenerationConfiguration
+  href: api/Refitter.Core.ICodeGenerationConfiguration.html
+  commentId: T:Refitter.Core.ICodeGenerationConfiguration
+  fullName: Refitter.Core.ICodeGenerationConfiguration
+  nameWithType: ICodeGenerationConfiguration
+- uid: Refitter.Core.ICodeGenerationConfiguration.CodeGeneratorSettings
+  name: CodeGeneratorSettings
+  href: api/Refitter.Core.ICodeGenerationConfiguration.html#Refitter_Core_ICodeGenerationConfiguration_CodeGeneratorSettings
+  commentId: P:Refitter.Core.ICodeGenerationConfiguration.CodeGeneratorSettings
+  fullName: Refitter.Core.ICodeGenerationConfiguration.CodeGeneratorSettings
+  nameWithType: ICodeGenerationConfiguration.CodeGeneratorSettings
+- uid: Refitter.Core.ICodeGenerationConfiguration.CodeGeneratorSettings*
+  name: CodeGeneratorSettings
+  href: api/Refitter.Core.ICodeGenerationConfiguration.html#Refitter_Core_ICodeGenerationConfiguration_CodeGeneratorSettings_
+  commentId: Overload:Refitter.Core.ICodeGenerationConfiguration.CodeGeneratorSettings
+  isSpec: "True"
+  fullName: Refitter.Core.ICodeGenerationConfiguration.CodeGeneratorSettings
+  nameWithType: ICodeGenerationConfiguration.CodeGeneratorSettings
+- uid: Refitter.Core.ICodeGenerationConfiguration.CustomTemplateDirectory
+  name: CustomTemplateDirectory
+  href: api/Refitter.Core.ICodeGenerationConfiguration.html#Refitter_Core_ICodeGenerationConfiguration_CustomTemplateDirectory
+  commentId: P:Refitter.Core.ICodeGenerationConfiguration.CustomTemplateDirectory
+  fullName: Refitter.Core.ICodeGenerationConfiguration.CustomTemplateDirectory
+  nameWithType: ICodeGenerationConfiguration.CustomTemplateDirectory
+- uid: Refitter.Core.ICodeGenerationConfiguration.CustomTemplateDirectory*
+  name: CustomTemplateDirectory
+  href: api/Refitter.Core.ICodeGenerationConfiguration.html#Refitter_Core_ICodeGenerationConfiguration_CustomTemplateDirectory_
+  commentId: Overload:Refitter.Core.ICodeGenerationConfiguration.CustomTemplateDirectory
+  isSpec: "True"
+  fullName: Refitter.Core.ICodeGenerationConfiguration.CustomTemplateDirectory
+  nameWithType: ICodeGenerationConfiguration.CustomTemplateDirectory
+- uid: Refitter.Core.ICodeGenerationConfiguration.GenerateClients
+  name: GenerateClients
+  href: api/Refitter.Core.ICodeGenerationConfiguration.html#Refitter_Core_ICodeGenerationConfiguration_GenerateClients
+  commentId: P:Refitter.Core.ICodeGenerationConfiguration.GenerateClients
+  fullName: Refitter.Core.ICodeGenerationConfiguration.GenerateClients
+  nameWithType: ICodeGenerationConfiguration.GenerateClients
+- uid: Refitter.Core.ICodeGenerationConfiguration.GenerateClients*
+  name: GenerateClients
+  href: api/Refitter.Core.ICodeGenerationConfiguration.html#Refitter_Core_ICodeGenerationConfiguration_GenerateClients_
+  commentId: Overload:Refitter.Core.ICodeGenerationConfiguration.GenerateClients
+  isSpec: "True"
+  fullName: Refitter.Core.ICodeGenerationConfiguration.GenerateClients
+  nameWithType: ICodeGenerationConfiguration.GenerateClients
+- uid: Refitter.Core.ICodeGenerationConfiguration.GenerateContracts
+  name: GenerateContracts
+  href: api/Refitter.Core.ICodeGenerationConfiguration.html#Refitter_Core_ICodeGenerationConfiguration_GenerateContracts
+  commentId: P:Refitter.Core.ICodeGenerationConfiguration.GenerateContracts
+  fullName: Refitter.Core.ICodeGenerationConfiguration.GenerateContracts
+  nameWithType: ICodeGenerationConfiguration.GenerateContracts
+- uid: Refitter.Core.ICodeGenerationConfiguration.GenerateContracts*
+  name: GenerateContracts
+  href: api/Refitter.Core.ICodeGenerationConfiguration.html#Refitter_Core_ICodeGenerationConfiguration_GenerateContracts_
+  commentId: Overload:Refitter.Core.ICodeGenerationConfiguration.GenerateContracts
+  isSpec: "True"
+  fullName: Refitter.Core.ICodeGenerationConfiguration.GenerateContracts
+  nameWithType: ICodeGenerationConfiguration.GenerateContracts
+- uid: Refitter.Core.ICodeGenerationConfiguration.GenerateJsonSerializerContext
+  name: GenerateJsonSerializerContext
+  href: api/Refitter.Core.ICodeGenerationConfiguration.html#Refitter_Core_ICodeGenerationConfiguration_GenerateJsonSerializerContext
+  commentId: P:Refitter.Core.ICodeGenerationConfiguration.GenerateJsonSerializerContext
+  fullName: Refitter.Core.ICodeGenerationConfiguration.GenerateJsonSerializerContext
+  nameWithType: ICodeGenerationConfiguration.GenerateJsonSerializerContext
+- uid: Refitter.Core.ICodeGenerationConfiguration.GenerateJsonSerializerContext*
+  name: GenerateJsonSerializerContext
+  href: api/Refitter.Core.ICodeGenerationConfiguration.html#Refitter_Core_ICodeGenerationConfiguration_GenerateJsonSerializerContext_
+  commentId: Overload:Refitter.Core.ICodeGenerationConfiguration.GenerateJsonSerializerContext
+  isSpec: "True"
+  fullName: Refitter.Core.ICodeGenerationConfiguration.GenerateJsonSerializerContext
+  nameWithType: ICodeGenerationConfiguration.GenerateJsonSerializerContext
+- uid: Refitter.Core.ICodeGenerationConfiguration.GenerateStatusCodeComments
+  name: GenerateStatusCodeComments
+  href: api/Refitter.Core.ICodeGenerationConfiguration.html#Refitter_Core_ICodeGenerationConfiguration_GenerateStatusCodeComments
+  commentId: P:Refitter.Core.ICodeGenerationConfiguration.GenerateStatusCodeComments
+  fullName: Refitter.Core.ICodeGenerationConfiguration.GenerateStatusCodeComments
+  nameWithType: ICodeGenerationConfiguration.GenerateStatusCodeComments
+- uid: Refitter.Core.ICodeGenerationConfiguration.GenerateStatusCodeComments*
+  name: GenerateStatusCodeComments
+  href: api/Refitter.Core.ICodeGenerationConfiguration.html#Refitter_Core_ICodeGenerationConfiguration_GenerateStatusCodeComments_
+  commentId: Overload:Refitter.Core.ICodeGenerationConfiguration.GenerateStatusCodeComments
+  isSpec: "True"
+  fullName: Refitter.Core.ICodeGenerationConfiguration.GenerateStatusCodeComments
+  nameWithType: ICodeGenerationConfiguration.GenerateStatusCodeComments
+- uid: Refitter.Core.ICodeGenerationConfiguration.GenerateXmlDocCodeComments
+  name: GenerateXmlDocCodeComments
+  href: api/Refitter.Core.ICodeGenerationConfiguration.html#Refitter_Core_ICodeGenerationConfiguration_GenerateXmlDocCodeComments
+  commentId: P:Refitter.Core.ICodeGenerationConfiguration.GenerateXmlDocCodeComments
+  fullName: Refitter.Core.ICodeGenerationConfiguration.GenerateXmlDocCodeComments
+  nameWithType: ICodeGenerationConfiguration.GenerateXmlDocCodeComments
+- uid: Refitter.Core.ICodeGenerationConfiguration.GenerateXmlDocCodeComments*
+  name: GenerateXmlDocCodeComments
+  href: api/Refitter.Core.ICodeGenerationConfiguration.html#Refitter_Core_ICodeGenerationConfiguration_GenerateXmlDocCodeComments_
+  commentId: Overload:Refitter.Core.ICodeGenerationConfiguration.GenerateXmlDocCodeComments
+  isSpec: "True"
+  fullName: Refitter.Core.ICodeGenerationConfiguration.GenerateXmlDocCodeComments
+  nameWithType: ICodeGenerationConfiguration.GenerateXmlDocCodeComments
+- uid: Refitter.Core.ICodeGenerationConfiguration.ImmutableRecords
+  name: ImmutableRecords
+  href: api/Refitter.Core.ICodeGenerationConfiguration.html#Refitter_Core_ICodeGenerationConfiguration_ImmutableRecords
+  commentId: P:Refitter.Core.ICodeGenerationConfiguration.ImmutableRecords
+  fullName: Refitter.Core.ICodeGenerationConfiguration.ImmutableRecords
+  nameWithType: ICodeGenerationConfiguration.ImmutableRecords
+- uid: Refitter.Core.ICodeGenerationConfiguration.ImmutableRecords*
+  name: ImmutableRecords
+  href: api/Refitter.Core.ICodeGenerationConfiguration.html#Refitter_Core_ICodeGenerationConfiguration_ImmutableRecords_
+  commentId: Overload:Refitter.Core.ICodeGenerationConfiguration.ImmutableRecords
+  isSpec: "True"
+  fullName: Refitter.Core.ICodeGenerationConfiguration.ImmutableRecords
+  nameWithType: ICodeGenerationConfiguration.ImmutableRecords
+- uid: Refitter.Core.ICodeGenerationConfiguration.ParameterNameGenerator
+  name: ParameterNameGenerator
+  href: api/Refitter.Core.ICodeGenerationConfiguration.html#Refitter_Core_ICodeGenerationConfiguration_ParameterNameGenerator
+  commentId: P:Refitter.Core.ICodeGenerationConfiguration.ParameterNameGenerator
+  fullName: Refitter.Core.ICodeGenerationConfiguration.ParameterNameGenerator
+  nameWithType: ICodeGenerationConfiguration.ParameterNameGenerator
+- uid: Refitter.Core.ICodeGenerationConfiguration.ParameterNameGenerator*
+  name: ParameterNameGenerator
+  href: api/Refitter.Core.ICodeGenerationConfiguration.html#Refitter_Core_ICodeGenerationConfiguration_ParameterNameGenerator_
+  commentId: Overload:Refitter.Core.ICodeGenerationConfiguration.ParameterNameGenerator
+  isSpec: "True"
+  fullName: Refitter.Core.ICodeGenerationConfiguration.ParameterNameGenerator
+  nameWithType: ICodeGenerationConfiguration.ParameterNameGenerator
+- uid: Refitter.Core.ICodeGenerationConfiguration.ResponseTypeOverride
+  name: ResponseTypeOverride
+  href: api/Refitter.Core.ICodeGenerationConfiguration.html#Refitter_Core_ICodeGenerationConfiguration_ResponseTypeOverride
+  commentId: P:Refitter.Core.ICodeGenerationConfiguration.ResponseTypeOverride
+  fullName: Refitter.Core.ICodeGenerationConfiguration.ResponseTypeOverride
+  nameWithType: ICodeGenerationConfiguration.ResponseTypeOverride
+- uid: Refitter.Core.ICodeGenerationConfiguration.ResponseTypeOverride*
+  name: ResponseTypeOverride
+  href: api/Refitter.Core.ICodeGenerationConfiguration.html#Refitter_Core_ICodeGenerationConfiguration_ResponseTypeOverride_
+  commentId: Overload:Refitter.Core.ICodeGenerationConfiguration.ResponseTypeOverride
+  isSpec: "True"
+  fullName: Refitter.Core.ICodeGenerationConfiguration.ResponseTypeOverride
+  nameWithType: ICodeGenerationConfiguration.ResponseTypeOverride
+- uid: Refitter.Core.ICodeGenerationConfiguration.ReturnIApiResponse
+  name: ReturnIApiResponse
+  href: api/Refitter.Core.ICodeGenerationConfiguration.html#Refitter_Core_ICodeGenerationConfiguration_ReturnIApiResponse
+  commentId: P:Refitter.Core.ICodeGenerationConfiguration.ReturnIApiResponse
+  fullName: Refitter.Core.ICodeGenerationConfiguration.ReturnIApiResponse
+  nameWithType: ICodeGenerationConfiguration.ReturnIApiResponse
+- uid: Refitter.Core.ICodeGenerationConfiguration.ReturnIApiResponse*
+  name: ReturnIApiResponse
+  href: api/Refitter.Core.ICodeGenerationConfiguration.html#Refitter_Core_ICodeGenerationConfiguration_ReturnIApiResponse_
+  commentId: Overload:Refitter.Core.ICodeGenerationConfiguration.ReturnIApiResponse
+  isSpec: "True"
+  fullName: Refitter.Core.ICodeGenerationConfiguration.ReturnIApiResponse
+  nameWithType: ICodeGenerationConfiguration.ReturnIApiResponse
+- uid: Refitter.Core.ICodeGenerationConfiguration.ReturnIObservable
+  name: ReturnIObservable
+  href: api/Refitter.Core.ICodeGenerationConfiguration.html#Refitter_Core_ICodeGenerationConfiguration_ReturnIObservable
+  commentId: P:Refitter.Core.ICodeGenerationConfiguration.ReturnIObservable
+  fullName: Refitter.Core.ICodeGenerationConfiguration.ReturnIObservable
+  nameWithType: ICodeGenerationConfiguration.ReturnIObservable
+- uid: Refitter.Core.ICodeGenerationConfiguration.ReturnIObservable*
+  name: ReturnIObservable
+  href: api/Refitter.Core.ICodeGenerationConfiguration.html#Refitter_Core_ICodeGenerationConfiguration_ReturnIObservable_
+  commentId: Overload:Refitter.Core.ICodeGenerationConfiguration.ReturnIObservable
+  isSpec: "True"
+  fullName: Refitter.Core.ICodeGenerationConfiguration.ReturnIObservable
+  nameWithType: ICodeGenerationConfiguration.ReturnIObservable
+- uid: Refitter.Core.ICodeGenerationConfiguration.TypeAccessibility
+  name: TypeAccessibility
+  href: api/Refitter.Core.ICodeGenerationConfiguration.html#Refitter_Core_ICodeGenerationConfiguration_TypeAccessibility
+  commentId: P:Refitter.Core.ICodeGenerationConfiguration.TypeAccessibility
+  fullName: Refitter.Core.ICodeGenerationConfiguration.TypeAccessibility
+  nameWithType: ICodeGenerationConfiguration.TypeAccessibility
+- uid: Refitter.Core.ICodeGenerationConfiguration.TypeAccessibility*
+  name: TypeAccessibility
+  href: api/Refitter.Core.ICodeGenerationConfiguration.html#Refitter_Core_ICodeGenerationConfiguration_TypeAccessibility_
+  commentId: Overload:Refitter.Core.ICodeGenerationConfiguration.TypeAccessibility
+  isSpec: "True"
+  fullName: Refitter.Core.ICodeGenerationConfiguration.TypeAccessibility
+  nameWithType: ICodeGenerationConfiguration.TypeAccessibility
+- uid: Refitter.Core.ICodeGenerationConfiguration.UseCancellationTokens
+  name: UseCancellationTokens
+  href: api/Refitter.Core.ICodeGenerationConfiguration.html#Refitter_Core_ICodeGenerationConfiguration_UseCancellationTokens
+  commentId: P:Refitter.Core.ICodeGenerationConfiguration.UseCancellationTokens
+  fullName: Refitter.Core.ICodeGenerationConfiguration.UseCancellationTokens
+  nameWithType: ICodeGenerationConfiguration.UseCancellationTokens
+- uid: Refitter.Core.ICodeGenerationConfiguration.UseCancellationTokens*
+  name: UseCancellationTokens
+  href: api/Refitter.Core.ICodeGenerationConfiguration.html#Refitter_Core_ICodeGenerationConfiguration_UseCancellationTokens_
+  commentId: Overload:Refitter.Core.ICodeGenerationConfiguration.UseCancellationTokens
+  isSpec: "True"
+  fullName: Refitter.Core.ICodeGenerationConfiguration.UseCancellationTokens
+  nameWithType: ICodeGenerationConfiguration.UseCancellationTokens
+- uid: Refitter.Core.ICodeGenerationConfiguration.UsePolymorphicSerialization
+  name: UsePolymorphicSerialization
+  href: api/Refitter.Core.ICodeGenerationConfiguration.html#Refitter_Core_ICodeGenerationConfiguration_UsePolymorphicSerialization
+  commentId: P:Refitter.Core.ICodeGenerationConfiguration.UsePolymorphicSerialization
+  fullName: Refitter.Core.ICodeGenerationConfiguration.UsePolymorphicSerialization
+  nameWithType: ICodeGenerationConfiguration.UsePolymorphicSerialization
+- uid: Refitter.Core.ICodeGenerationConfiguration.UsePolymorphicSerialization*
+  name: UsePolymorphicSerialization
+  href: api/Refitter.Core.ICodeGenerationConfiguration.html#Refitter_Core_ICodeGenerationConfiguration_UsePolymorphicSerialization_
+  commentId: Overload:Refitter.Core.ICodeGenerationConfiguration.UsePolymorphicSerialization
+  isSpec: "True"
+  fullName: Refitter.Core.ICodeGenerationConfiguration.UsePolymorphicSerialization
+  nameWithType: ICodeGenerationConfiguration.UsePolymorphicSerialization
+- uid: Refitter.Core.INamingConfiguration
+  name: INamingConfiguration
+  href: api/Refitter.Core.INamingConfiguration.html
+  commentId: T:Refitter.Core.INamingConfiguration
+  fullName: Refitter.Core.INamingConfiguration
+  nameWithType: INamingConfiguration
+- uid: Refitter.Core.INamingConfiguration.AdditionalNamespaces
+  name: AdditionalNamespaces
+  href: api/Refitter.Core.INamingConfiguration.html#Refitter_Core_INamingConfiguration_AdditionalNamespaces
+  commentId: P:Refitter.Core.INamingConfiguration.AdditionalNamespaces
+  fullName: Refitter.Core.INamingConfiguration.AdditionalNamespaces
+  nameWithType: INamingConfiguration.AdditionalNamespaces
+- uid: Refitter.Core.INamingConfiguration.AdditionalNamespaces*
+  name: AdditionalNamespaces
+  href: api/Refitter.Core.INamingConfiguration.html#Refitter_Core_INamingConfiguration_AdditionalNamespaces_
+  commentId: Overload:Refitter.Core.INamingConfiguration.AdditionalNamespaces
+  isSpec: "True"
+  fullName: Refitter.Core.INamingConfiguration.AdditionalNamespaces
+  nameWithType: INamingConfiguration.AdditionalNamespaces
+- uid: Refitter.Core.INamingConfiguration.ContractTypeSuffix
+  name: ContractTypeSuffix
+  href: api/Refitter.Core.INamingConfiguration.html#Refitter_Core_INamingConfiguration_ContractTypeSuffix
+  commentId: P:Refitter.Core.INamingConfiguration.ContractTypeSuffix
+  fullName: Refitter.Core.INamingConfiguration.ContractTypeSuffix
+  nameWithType: INamingConfiguration.ContractTypeSuffix
+- uid: Refitter.Core.INamingConfiguration.ContractTypeSuffix*
+  name: ContractTypeSuffix
+  href: api/Refitter.Core.INamingConfiguration.html#Refitter_Core_INamingConfiguration_ContractTypeSuffix_
+  commentId: Overload:Refitter.Core.INamingConfiguration.ContractTypeSuffix
+  isSpec: "True"
+  fullName: Refitter.Core.INamingConfiguration.ContractTypeSuffix
+  nameWithType: INamingConfiguration.ContractTypeSuffix
+- uid: Refitter.Core.INamingConfiguration.ContractsNamespace
+  name: ContractsNamespace
+  href: api/Refitter.Core.INamingConfiguration.html#Refitter_Core_INamingConfiguration_ContractsNamespace
+  commentId: P:Refitter.Core.INamingConfiguration.ContractsNamespace
+  fullName: Refitter.Core.INamingConfiguration.ContractsNamespace
+  nameWithType: INamingConfiguration.ContractsNamespace
+- uid: Refitter.Core.INamingConfiguration.ContractsNamespace*
+  name: ContractsNamespace
+  href: api/Refitter.Core.INamingConfiguration.html#Refitter_Core_INamingConfiguration_ContractsNamespace_
+  commentId: Overload:Refitter.Core.INamingConfiguration.ContractsNamespace
+  isSpec: "True"
+  fullName: Refitter.Core.INamingConfiguration.ContractsNamespace
+  nameWithType: INamingConfiguration.ContractsNamespace
+- uid: Refitter.Core.INamingConfiguration.ExcludeNamespaces
+  name: ExcludeNamespaces
+  href: api/Refitter.Core.INamingConfiguration.html#Refitter_Core_INamingConfiguration_ExcludeNamespaces
+  commentId: P:Refitter.Core.INamingConfiguration.ExcludeNamespaces
+  fullName: Refitter.Core.INamingConfiguration.ExcludeNamespaces
+  nameWithType: INamingConfiguration.ExcludeNamespaces
+- uid: Refitter.Core.INamingConfiguration.ExcludeNamespaces*
+  name: ExcludeNamespaces
+  href: api/Refitter.Core.INamingConfiguration.html#Refitter_Core_INamingConfiguration_ExcludeNamespaces_
+  commentId: Overload:Refitter.Core.INamingConfiguration.ExcludeNamespaces
+  isSpec: "True"
+  fullName: Refitter.Core.INamingConfiguration.ExcludeNamespaces
+  nameWithType: INamingConfiguration.ExcludeNamespaces
+- uid: Refitter.Core.INamingConfiguration.Namespace
+  name: Namespace
+  href: api/Refitter.Core.INamingConfiguration.html#Refitter_Core_INamingConfiguration_Namespace
+  commentId: P:Refitter.Core.INamingConfiguration.Namespace
+  fullName: Refitter.Core.INamingConfiguration.Namespace
+  nameWithType: INamingConfiguration.Namespace
+- uid: Refitter.Core.INamingConfiguration.Namespace*
+  name: Namespace
+  href: api/Refitter.Core.INamingConfiguration.html#Refitter_Core_INamingConfiguration_Namespace_
+  commentId: Overload:Refitter.Core.INamingConfiguration.Namespace
+  isSpec: "True"
+  fullName: Refitter.Core.INamingConfiguration.Namespace
+  nameWithType: INamingConfiguration.Namespace
+- uid: Refitter.Core.INamingConfiguration.Naming
+  name: Naming
+  href: api/Refitter.Core.INamingConfiguration.html#Refitter_Core_INamingConfiguration_Naming
+  commentId: P:Refitter.Core.INamingConfiguration.Naming
+  fullName: Refitter.Core.INamingConfiguration.Naming
+  nameWithType: INamingConfiguration.Naming
+- uid: Refitter.Core.INamingConfiguration.Naming*
+  name: Naming
+  href: api/Refitter.Core.INamingConfiguration.html#Refitter_Core_INamingConfiguration_Naming_
+  commentId: Overload:Refitter.Core.INamingConfiguration.Naming
+  isSpec: "True"
+  fullName: Refitter.Core.INamingConfiguration.Naming
+  nameWithType: INamingConfiguration.Naming
+- uid: Refitter.Core.INamingConfiguration.PropertyNamingPolicy
+  name: PropertyNamingPolicy
+  href: api/Refitter.Core.INamingConfiguration.html#Refitter_Core_INamingConfiguration_PropertyNamingPolicy
+  commentId: P:Refitter.Core.INamingConfiguration.PropertyNamingPolicy
+  fullName: Refitter.Core.INamingConfiguration.PropertyNamingPolicy
+  nameWithType: INamingConfiguration.PropertyNamingPolicy
+- uid: Refitter.Core.INamingConfiguration.PropertyNamingPolicy*
+  name: PropertyNamingPolicy
+  href: api/Refitter.Core.INamingConfiguration.html#Refitter_Core_INamingConfiguration_PropertyNamingPolicy_
+  commentId: Overload:Refitter.Core.INamingConfiguration.PropertyNamingPolicy
+  isSpec: "True"
+  fullName: Refitter.Core.INamingConfiguration.PropertyNamingPolicy
+  nameWithType: INamingConfiguration.PropertyNamingPolicy
+- uid: Refitter.Core.IOutputConfiguration
+  name: IOutputConfiguration
+  href: api/Refitter.Core.IOutputConfiguration.html
+  commentId: T:Refitter.Core.IOutputConfiguration
+  fullName: Refitter.Core.IOutputConfiguration
+  nameWithType: IOutputConfiguration
+- uid: Refitter.Core.IOutputConfiguration.AddAutoGeneratedHeader
+  name: AddAutoGeneratedHeader
+  href: api/Refitter.Core.IOutputConfiguration.html#Refitter_Core_IOutputConfiguration_AddAutoGeneratedHeader
+  commentId: P:Refitter.Core.IOutputConfiguration.AddAutoGeneratedHeader
+  fullName: Refitter.Core.IOutputConfiguration.AddAutoGeneratedHeader
+  nameWithType: IOutputConfiguration.AddAutoGeneratedHeader
+- uid: Refitter.Core.IOutputConfiguration.AddAutoGeneratedHeader*
+  name: AddAutoGeneratedHeader
+  href: api/Refitter.Core.IOutputConfiguration.html#Refitter_Core_IOutputConfiguration_AddAutoGeneratedHeader_
+  commentId: Overload:Refitter.Core.IOutputConfiguration.AddAutoGeneratedHeader
+  isSpec: "True"
+  fullName: Refitter.Core.IOutputConfiguration.AddAutoGeneratedHeader
+  nameWithType: IOutputConfiguration.AddAutoGeneratedHeader
+- uid: Refitter.Core.IOutputConfiguration.ContractsOutputFolder
+  name: ContractsOutputFolder
+  href: api/Refitter.Core.IOutputConfiguration.html#Refitter_Core_IOutputConfiguration_ContractsOutputFolder
+  commentId: P:Refitter.Core.IOutputConfiguration.ContractsOutputFolder
+  fullName: Refitter.Core.IOutputConfiguration.ContractsOutputFolder
+  nameWithType: IOutputConfiguration.ContractsOutputFolder
+- uid: Refitter.Core.IOutputConfiguration.ContractsOutputFolder*
+  name: ContractsOutputFolder
+  href: api/Refitter.Core.IOutputConfiguration.html#Refitter_Core_IOutputConfiguration_ContractsOutputFolder_
+  commentId: Overload:Refitter.Core.IOutputConfiguration.ContractsOutputFolder
+  isSpec: "True"
+  fullName: Refitter.Core.IOutputConfiguration.ContractsOutputFolder
+  nameWithType: IOutputConfiguration.ContractsOutputFolder
+- uid: Refitter.Core.IOutputConfiguration.GenerateMultipleFiles
+  name: GenerateMultipleFiles
+  href: api/Refitter.Core.IOutputConfiguration.html#Refitter_Core_IOutputConfiguration_GenerateMultipleFiles
+  commentId: P:Refitter.Core.IOutputConfiguration.GenerateMultipleFiles
+  fullName: Refitter.Core.IOutputConfiguration.GenerateMultipleFiles
+  nameWithType: IOutputConfiguration.GenerateMultipleFiles
+- uid: Refitter.Core.IOutputConfiguration.GenerateMultipleFiles*
+  name: GenerateMultipleFiles
+  href: api/Refitter.Core.IOutputConfiguration.html#Refitter_Core_IOutputConfiguration_GenerateMultipleFiles_
+  commentId: Overload:Refitter.Core.IOutputConfiguration.GenerateMultipleFiles
+  isSpec: "True"
+  fullName: Refitter.Core.IOutputConfiguration.GenerateMultipleFiles
+  nameWithType: IOutputConfiguration.GenerateMultipleFiles
+- uid: Refitter.Core.IOutputConfiguration.OutputFilename
+  name: OutputFilename
+  href: api/Refitter.Core.IOutputConfiguration.html#Refitter_Core_IOutputConfiguration_OutputFilename
+  commentId: P:Refitter.Core.IOutputConfiguration.OutputFilename
+  fullName: Refitter.Core.IOutputConfiguration.OutputFilename
+  nameWithType: IOutputConfiguration.OutputFilename
+- uid: Refitter.Core.IOutputConfiguration.OutputFilename*
+  name: OutputFilename
+  href: api/Refitter.Core.IOutputConfiguration.html#Refitter_Core_IOutputConfiguration_OutputFilename_
+  commentId: Overload:Refitter.Core.IOutputConfiguration.OutputFilename
+  isSpec: "True"
+  fullName: Refitter.Core.IOutputConfiguration.OutputFilename
+  nameWithType: IOutputConfiguration.OutputFilename
+- uid: Refitter.Core.IOutputConfiguration.OutputFolder
+  name: OutputFolder
+  href: api/Refitter.Core.IOutputConfiguration.html#Refitter_Core_IOutputConfiguration_OutputFolder
+  commentId: P:Refitter.Core.IOutputConfiguration.OutputFolder
+  fullName: Refitter.Core.IOutputConfiguration.OutputFolder
+  nameWithType: IOutputConfiguration.OutputFolder
+- uid: Refitter.Core.IOutputConfiguration.OutputFolder*
+  name: OutputFolder
+  href: api/Refitter.Core.IOutputConfiguration.html#Refitter_Core_IOutputConfiguration_OutputFolder_
+  commentId: Overload:Refitter.Core.IOutputConfiguration.OutputFolder
+  isSpec: "True"
+  fullName: Refitter.Core.IOutputConfiguration.OutputFolder
+  nameWithType: IOutputConfiguration.OutputFolder
+- uid: Refitter.Core.IPartitioningConfiguration
+  name: IPartitioningConfiguration
+  href: api/Refitter.Core.IPartitioningConfiguration.html
+  commentId: T:Refitter.Core.IPartitioningConfiguration
+  fullName: Refitter.Core.IPartitioningConfiguration
+  nameWithType: IPartitioningConfiguration
+- uid: Refitter.Core.IPartitioningConfiguration.GenerateDeprecatedOperations
+  name: GenerateDeprecatedOperations
+  href: api/Refitter.Core.IPartitioningConfiguration.html#Refitter_Core_IPartitioningConfiguration_GenerateDeprecatedOperations
+  commentId: P:Refitter.Core.IPartitioningConfiguration.GenerateDeprecatedOperations
+  fullName: Refitter.Core.IPartitioningConfiguration.GenerateDeprecatedOperations
+  nameWithType: IPartitioningConfiguration.GenerateDeprecatedOperations
+- uid: Refitter.Core.IPartitioningConfiguration.GenerateDeprecatedOperations*
+  name: GenerateDeprecatedOperations
+  href: api/Refitter.Core.IPartitioningConfiguration.html#Refitter_Core_IPartitioningConfiguration_GenerateDeprecatedOperations_
+  commentId: Overload:Refitter.Core.IPartitioningConfiguration.GenerateDeprecatedOperations
+  isSpec: "True"
+  fullName: Refitter.Core.IPartitioningConfiguration.GenerateDeprecatedOperations
+  nameWithType: IPartitioningConfiguration.GenerateDeprecatedOperations
+- uid: Refitter.Core.IPartitioningConfiguration.IncludePathMatches
+  name: IncludePathMatches
+  href: api/Refitter.Core.IPartitioningConfiguration.html#Refitter_Core_IPartitioningConfiguration_IncludePathMatches
+  commentId: P:Refitter.Core.IPartitioningConfiguration.IncludePathMatches
+  fullName: Refitter.Core.IPartitioningConfiguration.IncludePathMatches
+  nameWithType: IPartitioningConfiguration.IncludePathMatches
+- uid: Refitter.Core.IPartitioningConfiguration.IncludePathMatches*
+  name: IncludePathMatches
+  href: api/Refitter.Core.IPartitioningConfiguration.html#Refitter_Core_IPartitioningConfiguration_IncludePathMatches_
+  commentId: Overload:Refitter.Core.IPartitioningConfiguration.IncludePathMatches
+  isSpec: "True"
+  fullName: Refitter.Core.IPartitioningConfiguration.IncludePathMatches
+  nameWithType: IPartitioningConfiguration.IncludePathMatches
+- uid: Refitter.Core.IPartitioningConfiguration.IncludeTags
+  name: IncludeTags
+  href: api/Refitter.Core.IPartitioningConfiguration.html#Refitter_Core_IPartitioningConfiguration_IncludeTags
+  commentId: P:Refitter.Core.IPartitioningConfiguration.IncludeTags
+  fullName: Refitter.Core.IPartitioningConfiguration.IncludeTags
+  nameWithType: IPartitioningConfiguration.IncludeTags
+- uid: Refitter.Core.IPartitioningConfiguration.IncludeTags*
+  name: IncludeTags
+  href: api/Refitter.Core.IPartitioningConfiguration.html#Refitter_Core_IPartitioningConfiguration_IncludeTags_
+  commentId: Overload:Refitter.Core.IPartitioningConfiguration.IncludeTags
+  isSpec: "True"
+  fullName: Refitter.Core.IPartitioningConfiguration.IncludeTags
+  nameWithType: IPartitioningConfiguration.IncludeTags
+- uid: Refitter.Core.IPartitioningConfiguration.MultipleInterfaces
+  name: MultipleInterfaces
+  href: api/Refitter.Core.IPartitioningConfiguration.html#Refitter_Core_IPartitioningConfiguration_MultipleInterfaces
+  commentId: P:Refitter.Core.IPartitioningConfiguration.MultipleInterfaces
+  fullName: Refitter.Core.IPartitioningConfiguration.MultipleInterfaces
+  nameWithType: IPartitioningConfiguration.MultipleInterfaces
+- uid: Refitter.Core.IPartitioningConfiguration.MultipleInterfaces*
+  name: MultipleInterfaces
+  href: api/Refitter.Core.IPartitioningConfiguration.html#Refitter_Core_IPartitioningConfiguration_MultipleInterfaces_
+  commentId: Overload:Refitter.Core.IPartitioningConfiguration.MultipleInterfaces
+  isSpec: "True"
+  fullName: Refitter.Core.IPartitioningConfiguration.MultipleInterfaces
+  nameWithType: IPartitioningConfiguration.MultipleInterfaces
+- uid: Refitter.Core.IPartitioningConfiguration.OperationNameGenerator
+  name: OperationNameGenerator
+  href: api/Refitter.Core.IPartitioningConfiguration.html#Refitter_Core_IPartitioningConfiguration_OperationNameGenerator
+  commentId: P:Refitter.Core.IPartitioningConfiguration.OperationNameGenerator
+  fullName: Refitter.Core.IPartitioningConfiguration.OperationNameGenerator
+  nameWithType: IPartitioningConfiguration.OperationNameGenerator
+- uid: Refitter.Core.IPartitioningConfiguration.OperationNameGenerator*
+  name: OperationNameGenerator
+  href: api/Refitter.Core.IPartitioningConfiguration.html#Refitter_Core_IPartitioningConfiguration_OperationNameGenerator_
+  commentId: Overload:Refitter.Core.IPartitioningConfiguration.OperationNameGenerator
+  isSpec: "True"
+  fullName: Refitter.Core.IPartitioningConfiguration.OperationNameGenerator
+  nameWithType: IPartitioningConfiguration.OperationNameGenerator
+- uid: Refitter.Core.IPartitioningConfiguration.OperationNameTemplate
+  name: OperationNameTemplate
+  href: api/Refitter.Core.IPartitioningConfiguration.html#Refitter_Core_IPartitioningConfiguration_OperationNameTemplate
+  commentId: P:Refitter.Core.IPartitioningConfiguration.OperationNameTemplate
+  fullName: Refitter.Core.IPartitioningConfiguration.OperationNameTemplate
+  nameWithType: IPartitioningConfiguration.OperationNameTemplate
+- uid: Refitter.Core.IPartitioningConfiguration.OperationNameTemplate*
+  name: OperationNameTemplate
+  href: api/Refitter.Core.IPartitioningConfiguration.html#Refitter_Core_IPartitioningConfiguration_OperationNameTemplate_
+  commentId: Overload:Refitter.Core.IPartitioningConfiguration.OperationNameTemplate
+  isSpec: "True"
+  fullName: Refitter.Core.IPartitioningConfiguration.OperationNameTemplate
+  nameWithType: IPartitioningConfiguration.OperationNameTemplate
+- uid: Refitter.Core.ISchemaConfiguration
+  name: ISchemaConfiguration
+  href: api/Refitter.Core.ISchemaConfiguration.html
+  commentId: T:Refitter.Core.ISchemaConfiguration
+  fullName: Refitter.Core.ISchemaConfiguration
+  nameWithType: ISchemaConfiguration
+- uid: Refitter.Core.ISchemaConfiguration.GenerateDefaultAdditionalProperties
+  name: GenerateDefaultAdditionalProperties
+  href: api/Refitter.Core.ISchemaConfiguration.html#Refitter_Core_ISchemaConfiguration_GenerateDefaultAdditionalProperties
+  commentId: P:Refitter.Core.ISchemaConfiguration.GenerateDefaultAdditionalProperties
+  fullName: Refitter.Core.ISchemaConfiguration.GenerateDefaultAdditionalProperties
+  nameWithType: ISchemaConfiguration.GenerateDefaultAdditionalProperties
+- uid: Refitter.Core.ISchemaConfiguration.GenerateDefaultAdditionalProperties*
+  name: GenerateDefaultAdditionalProperties
+  href: api/Refitter.Core.ISchemaConfiguration.html#Refitter_Core_ISchemaConfiguration_GenerateDefaultAdditionalProperties_
+  commentId: Overload:Refitter.Core.ISchemaConfiguration.GenerateDefaultAdditionalProperties
+  isSpec: "True"
+  fullName: Refitter.Core.ISchemaConfiguration.GenerateDefaultAdditionalProperties
+  nameWithType: ISchemaConfiguration.GenerateDefaultAdditionalProperties
+- uid: Refitter.Core.ISchemaConfiguration.IncludeInheritanceHierarchy
+  name: IncludeInheritanceHierarchy
+  href: api/Refitter.Core.ISchemaConfiguration.html#Refitter_Core_ISchemaConfiguration_IncludeInheritanceHierarchy
+  commentId: P:Refitter.Core.ISchemaConfiguration.IncludeInheritanceHierarchy
+  fullName: Refitter.Core.ISchemaConfiguration.IncludeInheritanceHierarchy
+  nameWithType: ISchemaConfiguration.IncludeInheritanceHierarchy
+- uid: Refitter.Core.ISchemaConfiguration.IncludeInheritanceHierarchy*
+  name: IncludeInheritanceHierarchy
+  href: api/Refitter.Core.ISchemaConfiguration.html#Refitter_Core_ISchemaConfiguration_IncludeInheritanceHierarchy_
+  commentId: Overload:Refitter.Core.ISchemaConfiguration.IncludeInheritanceHierarchy
+  isSpec: "True"
+  fullName: Refitter.Core.ISchemaConfiguration.IncludeInheritanceHierarchy
+  nameWithType: ISchemaConfiguration.IncludeInheritanceHierarchy
+- uid: Refitter.Core.ISchemaConfiguration.KeepSchemaPatterns
+  name: KeepSchemaPatterns
+  href: api/Refitter.Core.ISchemaConfiguration.html#Refitter_Core_ISchemaConfiguration_KeepSchemaPatterns
+  commentId: P:Refitter.Core.ISchemaConfiguration.KeepSchemaPatterns
+  fullName: Refitter.Core.ISchemaConfiguration.KeepSchemaPatterns
+  nameWithType: ISchemaConfiguration.KeepSchemaPatterns
+- uid: Refitter.Core.ISchemaConfiguration.KeepSchemaPatterns*
+  name: KeepSchemaPatterns
+  href: api/Refitter.Core.ISchemaConfiguration.html#Refitter_Core_ISchemaConfiguration_KeepSchemaPatterns_
+  commentId: Overload:Refitter.Core.ISchemaConfiguration.KeepSchemaPatterns
+  isSpec: "True"
+  fullName: Refitter.Core.ISchemaConfiguration.KeepSchemaPatterns
+  nameWithType: ISchemaConfiguration.KeepSchemaPatterns
+- uid: Refitter.Core.ISchemaConfiguration.TrimUnusedSchema
+  name: TrimUnusedSchema
+  href: api/Refitter.Core.ISchemaConfiguration.html#Refitter_Core_ISchemaConfiguration_TrimUnusedSchema
+  commentId: P:Refitter.Core.ISchemaConfiguration.TrimUnusedSchema
+  fullName: Refitter.Core.ISchemaConfiguration.TrimUnusedSchema
+  nameWithType: ISchemaConfiguration.TrimUnusedSchema
+- uid: Refitter.Core.ISchemaConfiguration.TrimUnusedSchema*
+  name: TrimUnusedSchema
+  href: api/Refitter.Core.ISchemaConfiguration.html#Refitter_Core_ISchemaConfiguration_TrimUnusedSchema_
+  commentId: Overload:Refitter.Core.ISchemaConfiguration.TrimUnusedSchema
+  isSpec: "True"
+  fullName: Refitter.Core.ISchemaConfiguration.TrimUnusedSchema
+  nameWithType: ISchemaConfiguration.TrimUnusedSchema
 - uid: Refitter.Core.IntegerType
   name: IntegerType
   href: api/Refitter.Core.IntegerType.html
@@ -1274,15 +1785,15 @@ references:
   commentId: F:Refitter.Core.OutputPlanner.DefaultOutputPath
   fullName: Refitter.Core.OutputPlanner.DefaultOutputPath
   nameWithType: OutputPlanner.DefaultOutputPath
-- uid: Refitter.Core.OutputPlanner.GetContractsOutputPath(System.String,Refitter.Core.RefitGeneratorSettings,Refitter.Core.GeneratedCode)
-  name: GetContractsOutputPath(string?, RefitGeneratorSettings, GeneratedCode)
-  href: api/Refitter.Core.OutputPlanner.html#Refitter_Core_OutputPlanner_GetContractsOutputPath_System_String_Refitter_Core_RefitGeneratorSettings_Refitter_Core_GeneratedCode_
-  commentId: M:Refitter.Core.OutputPlanner.GetContractsOutputPath(System.String,Refitter.Core.RefitGeneratorSettings,Refitter.Core.GeneratedCode)
-  name.vb: GetContractsOutputPath(String, RefitGeneratorSettings, GeneratedCode)
-  fullName: Refitter.Core.OutputPlanner.GetContractsOutputPath(string?, Refitter.Core.RefitGeneratorSettings, Refitter.Core.GeneratedCode)
-  fullName.vb: Refitter.Core.OutputPlanner.GetContractsOutputPath(String, Refitter.Core.RefitGeneratorSettings, Refitter.Core.GeneratedCode)
-  nameWithType: OutputPlanner.GetContractsOutputPath(string?, RefitGeneratorSettings, GeneratedCode)
-  nameWithType.vb: OutputPlanner.GetContractsOutputPath(String, RefitGeneratorSettings, GeneratedCode)
+- uid: Refitter.Core.OutputPlanner.GetContractsOutputPath(System.String,Refitter.Core.IOutputConfiguration,Refitter.Core.GeneratedCode)
+  name: GetContractsOutputPath(string?, IOutputConfiguration, GeneratedCode)
+  href: api/Refitter.Core.OutputPlanner.html#Refitter_Core_OutputPlanner_GetContractsOutputPath_System_String_Refitter_Core_IOutputConfiguration_Refitter_Core_GeneratedCode_
+  commentId: M:Refitter.Core.OutputPlanner.GetContractsOutputPath(System.String,Refitter.Core.IOutputConfiguration,Refitter.Core.GeneratedCode)
+  name.vb: GetContractsOutputPath(String, IOutputConfiguration, GeneratedCode)
+  fullName: Refitter.Core.OutputPlanner.GetContractsOutputPath(string?, Refitter.Core.IOutputConfiguration, Refitter.Core.GeneratedCode)
+  fullName.vb: Refitter.Core.OutputPlanner.GetContractsOutputPath(String, Refitter.Core.IOutputConfiguration, Refitter.Core.GeneratedCode)
+  nameWithType: OutputPlanner.GetContractsOutputPath(string?, IOutputConfiguration, GeneratedCode)
+  nameWithType.vb: OutputPlanner.GetContractsOutputPath(String, IOutputConfiguration, GeneratedCode)
 - uid: Refitter.Core.OutputPlanner.GetContractsOutputPath*
   name: GetContractsOutputPath
   href: api/Refitter.Core.OutputPlanner.html#Refitter_Core_OutputPlanner_GetContractsOutputPath_
@@ -1290,15 +1801,15 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.OutputPlanner.GetContractsOutputPath
   nameWithType: OutputPlanner.GetContractsOutputPath
-- uid: Refitter.Core.OutputPlanner.GetMultiFileOutputPath(System.String,System.String,Refitter.Core.RefitGeneratorSettings,Refitter.Core.GeneratedCode)
-  name: GetMultiFileOutputPath(string?, string?, RefitGeneratorSettings, GeneratedCode)
-  href: api/Refitter.Core.OutputPlanner.html#Refitter_Core_OutputPlanner_GetMultiFileOutputPath_System_String_System_String_Refitter_Core_RefitGeneratorSettings_Refitter_Core_GeneratedCode_
-  commentId: M:Refitter.Core.OutputPlanner.GetMultiFileOutputPath(System.String,System.String,Refitter.Core.RefitGeneratorSettings,Refitter.Core.GeneratedCode)
-  name.vb: GetMultiFileOutputPath(String, String, RefitGeneratorSettings, GeneratedCode)
-  fullName: Refitter.Core.OutputPlanner.GetMultiFileOutputPath(string?, string?, Refitter.Core.RefitGeneratorSettings, Refitter.Core.GeneratedCode)
-  fullName.vb: Refitter.Core.OutputPlanner.GetMultiFileOutputPath(String, String, Refitter.Core.RefitGeneratorSettings, Refitter.Core.GeneratedCode)
-  nameWithType: OutputPlanner.GetMultiFileOutputPath(string?, string?, RefitGeneratorSettings, GeneratedCode)
-  nameWithType.vb: OutputPlanner.GetMultiFileOutputPath(String, String, RefitGeneratorSettings, GeneratedCode)
+- uid: Refitter.Core.OutputPlanner.GetMultiFileOutputPath(System.String,System.String,Refitter.Core.IOutputConfiguration,Refitter.Core.GeneratedCode)
+  name: GetMultiFileOutputPath(string?, string?, IOutputConfiguration, GeneratedCode)
+  href: api/Refitter.Core.OutputPlanner.html#Refitter_Core_OutputPlanner_GetMultiFileOutputPath_System_String_System_String_Refitter_Core_IOutputConfiguration_Refitter_Core_GeneratedCode_
+  commentId: M:Refitter.Core.OutputPlanner.GetMultiFileOutputPath(System.String,System.String,Refitter.Core.IOutputConfiguration,Refitter.Core.GeneratedCode)
+  name.vb: GetMultiFileOutputPath(String, String, IOutputConfiguration, GeneratedCode)
+  fullName: Refitter.Core.OutputPlanner.GetMultiFileOutputPath(string?, string?, Refitter.Core.IOutputConfiguration, Refitter.Core.GeneratedCode)
+  fullName.vb: Refitter.Core.OutputPlanner.GetMultiFileOutputPath(String, String, Refitter.Core.IOutputConfiguration, Refitter.Core.GeneratedCode)
+  nameWithType: OutputPlanner.GetMultiFileOutputPath(string?, string?, IOutputConfiguration, GeneratedCode)
+  nameWithType.vb: OutputPlanner.GetMultiFileOutputPath(String, String, IOutputConfiguration, GeneratedCode)
 - uid: Refitter.Core.OutputPlanner.GetMultiFileOutputPath*
   name: GetMultiFileOutputPath
   href: api/Refitter.Core.OutputPlanner.html#Refitter_Core_OutputPlanner_GetMultiFileOutputPath_
@@ -1306,15 +1817,15 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.OutputPlanner.GetMultiFileOutputPath
   nameWithType: OutputPlanner.GetMultiFileOutputPath
-- uid: Refitter.Core.OutputPlanner.GetSingleFileOutputPath(System.String,System.String,Refitter.Core.RefitGeneratorSettings)
-  name: GetSingleFileOutputPath(string?, string?, RefitGeneratorSettings)
-  href: api/Refitter.Core.OutputPlanner.html#Refitter_Core_OutputPlanner_GetSingleFileOutputPath_System_String_System_String_Refitter_Core_RefitGeneratorSettings_
-  commentId: M:Refitter.Core.OutputPlanner.GetSingleFileOutputPath(System.String,System.String,Refitter.Core.RefitGeneratorSettings)
-  name.vb: GetSingleFileOutputPath(String, String, RefitGeneratorSettings)
-  fullName: Refitter.Core.OutputPlanner.GetSingleFileOutputPath(string?, string?, Refitter.Core.RefitGeneratorSettings)
-  fullName.vb: Refitter.Core.OutputPlanner.GetSingleFileOutputPath(String, String, Refitter.Core.RefitGeneratorSettings)
-  nameWithType: OutputPlanner.GetSingleFileOutputPath(string?, string?, RefitGeneratorSettings)
-  nameWithType.vb: OutputPlanner.GetSingleFileOutputPath(String, String, RefitGeneratorSettings)
+- uid: Refitter.Core.OutputPlanner.GetSingleFileOutputPath(System.String,System.String,Refitter.Core.IOutputConfiguration)
+  name: GetSingleFileOutputPath(string?, string?, IOutputConfiguration)
+  href: api/Refitter.Core.OutputPlanner.html#Refitter_Core_OutputPlanner_GetSingleFileOutputPath_System_String_System_String_Refitter_Core_IOutputConfiguration_
+  commentId: M:Refitter.Core.OutputPlanner.GetSingleFileOutputPath(System.String,System.String,Refitter.Core.IOutputConfiguration)
+  name.vb: GetSingleFileOutputPath(String, String, IOutputConfiguration)
+  fullName: Refitter.Core.OutputPlanner.GetSingleFileOutputPath(string?, string?, Refitter.Core.IOutputConfiguration)
+  fullName.vb: Refitter.Core.OutputPlanner.GetSingleFileOutputPath(String, String, Refitter.Core.IOutputConfiguration)
+  nameWithType: OutputPlanner.GetSingleFileOutputPath(string?, string?, IOutputConfiguration)
+  nameWithType.vb: OutputPlanner.GetSingleFileOutputPath(String, String, IOutputConfiguration)
 - uid: Refitter.Core.OutputPlanner.GetSingleFileOutputPath*
   name: GetSingleFileOutputPath
   href: api/Refitter.Core.OutputPlanner.html#Refitter_Core_OutputPlanner_GetSingleFileOutputPath_
@@ -1322,15 +1833,15 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.OutputPlanner.GetSingleFileOutputPath
   nameWithType: OutputPlanner.GetSingleFileOutputPath
-- uid: Refitter.Core.OutputPlanner.PlanMultipleFiles(System.String,System.String,Refitter.Core.RefitGeneratorSettings,Refitter.Core.GeneratorOutput)
-  name: PlanMultipleFiles(string?, string?, RefitGeneratorSettings, GeneratorOutput)
-  href: api/Refitter.Core.OutputPlanner.html#Refitter_Core_OutputPlanner_PlanMultipleFiles_System_String_System_String_Refitter_Core_RefitGeneratorSettings_Refitter_Core_GeneratorOutput_
-  commentId: M:Refitter.Core.OutputPlanner.PlanMultipleFiles(System.String,System.String,Refitter.Core.RefitGeneratorSettings,Refitter.Core.GeneratorOutput)
-  name.vb: PlanMultipleFiles(String, String, RefitGeneratorSettings, GeneratorOutput)
-  fullName: Refitter.Core.OutputPlanner.PlanMultipleFiles(string?, string?, Refitter.Core.RefitGeneratorSettings, Refitter.Core.GeneratorOutput)
-  fullName.vb: Refitter.Core.OutputPlanner.PlanMultipleFiles(String, String, Refitter.Core.RefitGeneratorSettings, Refitter.Core.GeneratorOutput)
-  nameWithType: OutputPlanner.PlanMultipleFiles(string?, string?, RefitGeneratorSettings, GeneratorOutput)
-  nameWithType.vb: OutputPlanner.PlanMultipleFiles(String, String, RefitGeneratorSettings, GeneratorOutput)
+- uid: Refitter.Core.OutputPlanner.PlanMultipleFiles(System.String,System.String,Refitter.Core.IOutputConfiguration,Refitter.Core.GeneratorOutput)
+  name: PlanMultipleFiles(string?, string?, IOutputConfiguration, GeneratorOutput)
+  href: api/Refitter.Core.OutputPlanner.html#Refitter_Core_OutputPlanner_PlanMultipleFiles_System_String_System_String_Refitter_Core_IOutputConfiguration_Refitter_Core_GeneratorOutput_
+  commentId: M:Refitter.Core.OutputPlanner.PlanMultipleFiles(System.String,System.String,Refitter.Core.IOutputConfiguration,Refitter.Core.GeneratorOutput)
+  name.vb: PlanMultipleFiles(String, String, IOutputConfiguration, GeneratorOutput)
+  fullName: Refitter.Core.OutputPlanner.PlanMultipleFiles(string?, string?, Refitter.Core.IOutputConfiguration, Refitter.Core.GeneratorOutput)
+  fullName.vb: Refitter.Core.OutputPlanner.PlanMultipleFiles(String, String, Refitter.Core.IOutputConfiguration, Refitter.Core.GeneratorOutput)
+  nameWithType: OutputPlanner.PlanMultipleFiles(string?, string?, IOutputConfiguration, GeneratorOutput)
+  nameWithType.vb: OutputPlanner.PlanMultipleFiles(String, String, IOutputConfiguration, GeneratorOutput)
 - uid: Refitter.Core.OutputPlanner.PlanMultipleFiles*
   name: PlanMultipleFiles
   href: api/Refitter.Core.OutputPlanner.html#Refitter_Core_OutputPlanner_PlanMultipleFiles_
@@ -1338,15 +1849,15 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.OutputPlanner.PlanMultipleFiles
   nameWithType: OutputPlanner.PlanMultipleFiles
-- uid: Refitter.Core.OutputPlanner.PlanSingleFile(System.String,System.String,Refitter.Core.RefitGeneratorSettings,System.String)
-  name: PlanSingleFile(string?, string?, RefitGeneratorSettings, string)
-  href: api/Refitter.Core.OutputPlanner.html#Refitter_Core_OutputPlanner_PlanSingleFile_System_String_System_String_Refitter_Core_RefitGeneratorSettings_System_String_
-  commentId: M:Refitter.Core.OutputPlanner.PlanSingleFile(System.String,System.String,Refitter.Core.RefitGeneratorSettings,System.String)
-  name.vb: PlanSingleFile(String, String, RefitGeneratorSettings, String)
-  fullName: Refitter.Core.OutputPlanner.PlanSingleFile(string?, string?, Refitter.Core.RefitGeneratorSettings, string)
-  fullName.vb: Refitter.Core.OutputPlanner.PlanSingleFile(String, String, Refitter.Core.RefitGeneratorSettings, String)
-  nameWithType: OutputPlanner.PlanSingleFile(string?, string?, RefitGeneratorSettings, string)
-  nameWithType.vb: OutputPlanner.PlanSingleFile(String, String, RefitGeneratorSettings, String)
+- uid: Refitter.Core.OutputPlanner.PlanSingleFile(System.String,System.String,Refitter.Core.IOutputConfiguration,System.String)
+  name: PlanSingleFile(string?, string?, IOutputConfiguration, string)
+  href: api/Refitter.Core.OutputPlanner.html#Refitter_Core_OutputPlanner_PlanSingleFile_System_String_System_String_Refitter_Core_IOutputConfiguration_System_String_
+  commentId: M:Refitter.Core.OutputPlanner.PlanSingleFile(System.String,System.String,Refitter.Core.IOutputConfiguration,System.String)
+  name.vb: PlanSingleFile(String, String, IOutputConfiguration, String)
+  fullName: Refitter.Core.OutputPlanner.PlanSingleFile(string?, string?, Refitter.Core.IOutputConfiguration, string)
+  fullName.vb: Refitter.Core.OutputPlanner.PlanSingleFile(String, String, Refitter.Core.IOutputConfiguration, String)
+  nameWithType: OutputPlanner.PlanSingleFile(string?, string?, IOutputConfiguration, string)
+  nameWithType.vb: OutputPlanner.PlanSingleFile(String, String, IOutputConfiguration, String)
 - uid: Refitter.Core.OutputPlanner.PlanSingleFile*
   name: PlanSingleFile
   href: api/Refitter.Core.OutputPlanner.html#Refitter_Core_OutputPlanner_PlanSingleFile_
@@ -1354,12 +1865,12 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.OutputPlanner.PlanSingleFile
   nameWithType: OutputPlanner.PlanSingleFile
-- uid: Refitter.Core.OutputPlanner.ShouldRerouteToContractsFolder(Refitter.Core.RefitGeneratorSettings,Refitter.Core.GeneratedCode)
-  name: ShouldRerouteToContractsFolder(RefitGeneratorSettings, GeneratedCode)
-  href: api/Refitter.Core.OutputPlanner.html#Refitter_Core_OutputPlanner_ShouldRerouteToContractsFolder_Refitter_Core_RefitGeneratorSettings_Refitter_Core_GeneratedCode_
-  commentId: M:Refitter.Core.OutputPlanner.ShouldRerouteToContractsFolder(Refitter.Core.RefitGeneratorSettings,Refitter.Core.GeneratedCode)
-  fullName: Refitter.Core.OutputPlanner.ShouldRerouteToContractsFolder(Refitter.Core.RefitGeneratorSettings, Refitter.Core.GeneratedCode)
-  nameWithType: OutputPlanner.ShouldRerouteToContractsFolder(RefitGeneratorSettings, GeneratedCode)
+- uid: Refitter.Core.OutputPlanner.ShouldRerouteToContractsFolder(Refitter.Core.IOutputConfiguration,Refitter.Core.GeneratedCode)
+  name: ShouldRerouteToContractsFolder(IOutputConfiguration, GeneratedCode)
+  href: api/Refitter.Core.OutputPlanner.html#Refitter_Core_OutputPlanner_ShouldRerouteToContractsFolder_Refitter_Core_IOutputConfiguration_Refitter_Core_GeneratedCode_
+  commentId: M:Refitter.Core.OutputPlanner.ShouldRerouteToContractsFolder(Refitter.Core.IOutputConfiguration,Refitter.Core.GeneratedCode)
+  fullName: Refitter.Core.OutputPlanner.ShouldRerouteToContractsFolder(Refitter.Core.IOutputConfiguration, Refitter.Core.GeneratedCode)
+  nameWithType: OutputPlanner.ShouldRerouteToContractsFolder(IOutputConfiguration, GeneratedCode)
 - uid: Refitter.Core.OutputPlanner.ShouldRerouteToContractsFolder*
   name: ShouldRerouteToContractsFolder
   href: api/Refitter.Core.OutputPlanner.html#Refitter_Core_OutputPlanner_ShouldRerouteToContractsFolder_

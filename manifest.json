@@ -186,6 +186,76 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.ICodeGenerationConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.ICodeGenerationConfiguration.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.ICodeGenerationConfiguration",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.ICodeGenerationConfiguration.yml\" sourcestartlinenumber=\"1\">Configuration for code generation behavior.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.INamingConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.INamingConfiguration.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.INamingConfiguration",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.INamingConfiguration.yml\" sourcestartlinenumber=\"1\">Configuration for naming conventions of generated code elements.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.IOutputConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.IOutputConfiguration.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.IOutputConfiguration",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.IOutputConfiguration.yml\" sourcestartlinenumber=\"1\">Configuration for where generated output files are placed.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.IPartitioningConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.IPartitioningConfiguration.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.IPartitioningConfiguration",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.IPartitioningConfiguration.yml\" sourcestartlinenumber=\"1\">Configuration for how operations are partitioned into Refit interfaces.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.ISchemaConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.ISchemaConfiguration.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.ISchemaConfiguration",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.ISchemaConfiguration.yml\" sourcestartlinenumber=\"1\">Configuration for schema processing and cleaning.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Refitter.Core.IntegerType.yml",
       "output": {
         ".html": {

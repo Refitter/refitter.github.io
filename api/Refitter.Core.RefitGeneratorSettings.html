@@ -99,7 +99,7 @@ Class RefitGeneratorSettings  <a class="header-action link-secondary" title="Vie
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[ExcludeFromCodeCoverage]
-public class RefitGeneratorSettings</code></pre>
+public class RefitGeneratorSettings : IOutputConfiguration, INamingConfiguration, IPartitioningConfiguration, ICodeGenerationConfiguration, ISchemaConfiguration</code></pre>
   </div>
 
 
@@ -113,6 +113,16 @@ public class RefitGeneratorSettings</code></pre>
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Refitter.Core.IOutputConfiguration.html">IOutputConfiguration</a></div>
+      <div><a class="xref" href="Refitter.Core.INamingConfiguration.html">INamingConfiguration</a></div>
+      <div><a class="xref" href="Refitter.Core.IPartitioningConfiguration.html">IPartitioningConfiguration</a></div>
+      <div><a class="xref" href="Refitter.Core.ICodeGenerationConfiguration.html">ICodeGenerationConfiguration</a></div>
+      <div><a class="xref" href="Refitter.Core.ISchemaConfiguration.html">ISchemaConfiguration</a></div>
+    </dd>
+  </dl>
 
 
   <dl class="typelist inheritedMembers">
