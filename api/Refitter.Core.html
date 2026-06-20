@@ -156,6 +156,11 @@ and optional rerouting of contracts to a separate output folder.</p>
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Refitter.Core.OutputPlannerAdapter.html">OutputPlannerAdapter</a></dt>
+      <dd><p>Adapts the static <a class="xref" href="Refitter.Core.OutputPlanner.html">OutputPlanner</a> methods to the <a class="xref" href="Refitter.Core.IOutputPlanner.html">IOutputPlanner</a> interface.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Refitter.Core.PackageConstants.html">PackageConstants</a></dt>
       <dd><p>Constants for package and library names.</p>
 </dd>
@@ -198,6 +203,13 @@ This serializer is configured to be case-insensitive.</p>
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Refitter.Core.SourceGeneratorFileWriter.html">SourceGeneratorFileWriter</a></dt>
+      <dd><p>Writes planned files to disk with content-equality checking.
+Skips writing when the file already exists with identical content,
+avoiding unnecessary disk writes during incremental / design-time builds.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Refitter.Core.TypenameConstants.html">TypenameConstants</a></dt>
       <dd><p>Constants for type names used in code generation.</p>
 </dd>
@@ -221,6 +233,13 @@ Interfaces
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Refitter.Core.IFileWriter.html">IFileWriter</a></dt>
+      <dd><p>Writes a <a class="xref" href="Refitter.Core.PlannedFile.html">PlannedFile</a> to disk, creating directories as needed.
+Each distribution form (CLI, MSBuild, Source Generator) provides its own adapter
+that integrates with its own reporting/progress pipeline.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Refitter.Core.INamingConfiguration.html">INamingConfiguration</a></dt>
       <dd><p>Configuration for naming conventions of generated code elements.</p>
 </dd>
@@ -228,6 +247,12 @@ Interfaces
     <dl class="jumplist">
       <dt><a class="xref" href="Refitter.Core.IOutputConfiguration.html">IOutputConfiguration</a></dt>
       <dd><p>Configuration for where generated output files are placed.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Refitter.Core.IOutputPlanner.html">IOutputPlanner</a></dt>
+      <dd><p>Resolves a <a class="xref" href="Refitter.Core.GeneratorOutput.html">GeneratorOutput</a> into a list of <a class="xref" href="Refitter.Core.PlannedFile.html">PlannedFile</a> instances.
+Pure logic — no I/O.</p>
 </dd>
     </dl>
     <dl class="jumplist">

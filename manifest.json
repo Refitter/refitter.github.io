@@ -200,6 +200,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.IFileWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.IFileWriter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.IFileWriter",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.IFileWriter.yml\" sourcestartlinenumber=\"1\">Writes a <xref href=\"Refitter.Core.PlannedFile\" data-throw-if-not-resolved=\"false\"></xref> to disk, creating directories as needed.\nEach distribution form (CLI, MSBuild, Source Generator) provides its own adapter\nthat integrates with its own reporting/progress pipeline.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Refitter.Core.INamingConfiguration.yml",
       "output": {
         ".html": {
@@ -225,6 +239,20 @@
       "IsMRef": true,
       "Title": "Refitter.Core.IOutputConfiguration",
       "Summary": "<p sourcefile=\"api/Refitter.Core.IOutputConfiguration.yml\" sourcestartlinenumber=\"1\">Configuration for where generated output files are placed.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.IOutputPlanner.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.IOutputPlanner.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.IOutputPlanner",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.IOutputPlanner.yml\" sourcestartlinenumber=\"1\">Resolves a <xref href=\"Refitter.Core.GeneratorOutput\" data-throw-if-not-resolved=\"false\"></xref> into a list of <xref href=\"Refitter.Core.PlannedFile\" data-throw-if-not-resolved=\"false\"></xref> instances.\nPure logic — no I/O.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -354,6 +382,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.OutputPlannerAdapter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.OutputPlannerAdapter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.OutputPlannerAdapter",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.OutputPlannerAdapter.yml\" sourcestartlinenumber=\"1\">Adapts the static <xref href=\"Refitter.Core.OutputPlanner\" data-throw-if-not-resolved=\"false\"></xref> methods to the <xref href=\"Refitter.Core.IOutputPlanner\" data-throw-if-not-resolved=\"false\"></xref> interface.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Refitter.Core.PackageConstants.yml",
       "output": {
         ".html": {
@@ -477,6 +519,20 @@
       "IsMRef": true,
       "Title": "Refitter.Core.Serializer",
       "Summary": "<p sourcefile=\"api/Refitter.Core.Serializer.yml\" sourcestartlinenumber=\"1\">Provides methods for serializing and deserializing objects to and from JSON.\nThis serializer is configured to be case-insensitive.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.SourceGeneratorFileWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.SourceGeneratorFileWriter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.SourceGeneratorFileWriter",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.SourceGeneratorFileWriter.yml\" sourcestartlinenumber=\"1\">Writes planned files to disk with content-equality checking.\nSkips writing when the file already exists with identical content,\navoiding unnecessary disk writes during incremental / design-time builds.</p>\n"
     },
     {
       "type": "ManagedReference",

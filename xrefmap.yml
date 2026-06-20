@@ -1274,6 +1274,25 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.ICodeGenerationConfiguration.UsePolymorphicSerialization
   nameWithType: ICodeGenerationConfiguration.UsePolymorphicSerialization
+- uid: Refitter.Core.IFileWriter
+  name: IFileWriter
+  href: api/Refitter.Core.IFileWriter.html
+  commentId: T:Refitter.Core.IFileWriter
+  fullName: Refitter.Core.IFileWriter
+  nameWithType: IFileWriter
+- uid: Refitter.Core.IFileWriter.WriteAsync(Refitter.Core.PlannedFile,System.Threading.CancellationToken)
+  name: WriteAsync(PlannedFile, CancellationToken)
+  href: api/Refitter.Core.IFileWriter.html#Refitter_Core_IFileWriter_WriteAsync_Refitter_Core_PlannedFile_System_Threading_CancellationToken_
+  commentId: M:Refitter.Core.IFileWriter.WriteAsync(Refitter.Core.PlannedFile,System.Threading.CancellationToken)
+  fullName: Refitter.Core.IFileWriter.WriteAsync(Refitter.Core.PlannedFile, System.Threading.CancellationToken)
+  nameWithType: IFileWriter.WriteAsync(PlannedFile, CancellationToken)
+- uid: Refitter.Core.IFileWriter.WriteAsync*
+  name: WriteAsync
+  href: api/Refitter.Core.IFileWriter.html#Refitter_Core_IFileWriter_WriteAsync_
+  commentId: Overload:Refitter.Core.IFileWriter.WriteAsync
+  isSpec: "True"
+  fullName: Refitter.Core.IFileWriter.WriteAsync
+  nameWithType: IFileWriter.WriteAsync
 - uid: Refitter.Core.INamingConfiguration
   name: INamingConfiguration
   href: api/Refitter.Core.INamingConfiguration.html
@@ -1442,6 +1461,28 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.IOutputConfiguration.OutputFolder
   nameWithType: IOutputConfiguration.OutputFolder
+- uid: Refitter.Core.IOutputPlanner
+  name: IOutputPlanner
+  href: api/Refitter.Core.IOutputPlanner.html
+  commentId: T:Refitter.Core.IOutputPlanner
+  fullName: Refitter.Core.IOutputPlanner
+  nameWithType: IOutputPlanner
+- uid: Refitter.Core.IOutputPlanner.Plan(Refitter.Core.GeneratorOutput,Refitter.Core.IOutputConfiguration,System.String,System.String)
+  name: Plan(GeneratorOutput, IOutputConfiguration, string?, string?)
+  href: api/Refitter.Core.IOutputPlanner.html#Refitter_Core_IOutputPlanner_Plan_Refitter_Core_GeneratorOutput_Refitter_Core_IOutputConfiguration_System_String_System_String_
+  commentId: M:Refitter.Core.IOutputPlanner.Plan(Refitter.Core.GeneratorOutput,Refitter.Core.IOutputConfiguration,System.String,System.String)
+  name.vb: Plan(GeneratorOutput, IOutputConfiguration, String, String)
+  fullName: Refitter.Core.IOutputPlanner.Plan(Refitter.Core.GeneratorOutput, Refitter.Core.IOutputConfiguration, string?, string?)
+  fullName.vb: Refitter.Core.IOutputPlanner.Plan(Refitter.Core.GeneratorOutput, Refitter.Core.IOutputConfiguration, String, String)
+  nameWithType: IOutputPlanner.Plan(GeneratorOutput, IOutputConfiguration, string?, string?)
+  nameWithType.vb: IOutputPlanner.Plan(GeneratorOutput, IOutputConfiguration, String, String)
+- uid: Refitter.Core.IOutputPlanner.Plan*
+  name: Plan
+  href: api/Refitter.Core.IOutputPlanner.html#Refitter_Core_IOutputPlanner_Plan_
+  commentId: Overload:Refitter.Core.IOutputPlanner.Plan
+  isSpec: "True"
+  fullName: Refitter.Core.IOutputPlanner.Plan
+  nameWithType: IOutputPlanner.Plan
 - uid: Refitter.Core.IPartitioningConfiguration
   name: IPartitioningConfiguration
   href: api/Refitter.Core.IPartitioningConfiguration.html
@@ -1878,6 +1919,28 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.OutputPlanner.ShouldRerouteToContractsFolder
   nameWithType: OutputPlanner.ShouldRerouteToContractsFolder
+- uid: Refitter.Core.OutputPlannerAdapter
+  name: OutputPlannerAdapter
+  href: api/Refitter.Core.OutputPlannerAdapter.html
+  commentId: T:Refitter.Core.OutputPlannerAdapter
+  fullName: Refitter.Core.OutputPlannerAdapter
+  nameWithType: OutputPlannerAdapter
+- uid: Refitter.Core.OutputPlannerAdapter.Plan(Refitter.Core.GeneratorOutput,Refitter.Core.IOutputConfiguration,System.String,System.String)
+  name: Plan(GeneratorOutput, IOutputConfiguration, string?, string?)
+  href: api/Refitter.Core.OutputPlannerAdapter.html#Refitter_Core_OutputPlannerAdapter_Plan_Refitter_Core_GeneratorOutput_Refitter_Core_IOutputConfiguration_System_String_System_String_
+  commentId: M:Refitter.Core.OutputPlannerAdapter.Plan(Refitter.Core.GeneratorOutput,Refitter.Core.IOutputConfiguration,System.String,System.String)
+  name.vb: Plan(GeneratorOutput, IOutputConfiguration, String, String)
+  fullName: Refitter.Core.OutputPlannerAdapter.Plan(Refitter.Core.GeneratorOutput, Refitter.Core.IOutputConfiguration, string?, string?)
+  fullName.vb: Refitter.Core.OutputPlannerAdapter.Plan(Refitter.Core.GeneratorOutput, Refitter.Core.IOutputConfiguration, String, String)
+  nameWithType: OutputPlannerAdapter.Plan(GeneratorOutput, IOutputConfiguration, string?, string?)
+  nameWithType.vb: OutputPlannerAdapter.Plan(GeneratorOutput, IOutputConfiguration, String, String)
+- uid: Refitter.Core.OutputPlannerAdapter.Plan*
+  name: Plan
+  href: api/Refitter.Core.OutputPlannerAdapter.html#Refitter_Core_OutputPlannerAdapter_Plan_
+  commentId: Overload:Refitter.Core.OutputPlannerAdapter.Plan
+  isSpec: "True"
+  fullName: Refitter.Core.OutputPlannerAdapter.Plan
+  nameWithType: OutputPlannerAdapter.Plan
 - uid: Refitter.Core.PackageConstants
   name: PackageConstants
   href: api/Refitter.Core.PackageConstants.html
@@ -2957,6 +3020,25 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.Serializer.Serialize
   nameWithType: Serializer.Serialize
+- uid: Refitter.Core.SourceGeneratorFileWriter
+  name: SourceGeneratorFileWriter
+  href: api/Refitter.Core.SourceGeneratorFileWriter.html
+  commentId: T:Refitter.Core.SourceGeneratorFileWriter
+  fullName: Refitter.Core.SourceGeneratorFileWriter
+  nameWithType: SourceGeneratorFileWriter
+- uid: Refitter.Core.SourceGeneratorFileWriter.WriteAsync(Refitter.Core.PlannedFile,System.Threading.CancellationToken)
+  name: WriteAsync(PlannedFile, CancellationToken)
+  href: api/Refitter.Core.SourceGeneratorFileWriter.html#Refitter_Core_SourceGeneratorFileWriter_WriteAsync_Refitter_Core_PlannedFile_System_Threading_CancellationToken_
+  commentId: M:Refitter.Core.SourceGeneratorFileWriter.WriteAsync(Refitter.Core.PlannedFile,System.Threading.CancellationToken)
+  fullName: Refitter.Core.SourceGeneratorFileWriter.WriteAsync(Refitter.Core.PlannedFile, System.Threading.CancellationToken)
+  nameWithType: SourceGeneratorFileWriter.WriteAsync(PlannedFile, CancellationToken)
+- uid: Refitter.Core.SourceGeneratorFileWriter.WriteAsync*
+  name: WriteAsync
+  href: api/Refitter.Core.SourceGeneratorFileWriter.html#Refitter_Core_SourceGeneratorFileWriter_WriteAsync_
+  commentId: Overload:Refitter.Core.SourceGeneratorFileWriter.WriteAsync
+  isSpec: "True"
+  fullName: Refitter.Core.SourceGeneratorFileWriter.WriteAsync
+  nameWithType: SourceGeneratorFileWriter.WriteAsync
 - uid: Refitter.Core.TransientErrorHandler
   name: TransientErrorHandler
   href: api/Refitter.Core.TransientErrorHandler.html
