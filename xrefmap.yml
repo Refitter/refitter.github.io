@@ -905,6 +905,19 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.DependencyInjectionSettings.UsePolly
   nameWithType: DependencyInjectionSettings.UsePolly
+- uid: Refitter.Core.DependencyInjectionSettings.UseWindowsAuthentication
+  name: UseWindowsAuthentication
+  href: api/Refitter.Core.DependencyInjectionSettings.html#Refitter_Core_DependencyInjectionSettings_UseWindowsAuthentication
+  commentId: P:Refitter.Core.DependencyInjectionSettings.UseWindowsAuthentication
+  fullName: Refitter.Core.DependencyInjectionSettings.UseWindowsAuthentication
+  nameWithType: DependencyInjectionSettings.UseWindowsAuthentication
+- uid: Refitter.Core.DependencyInjectionSettings.UseWindowsAuthentication*
+  name: UseWindowsAuthentication
+  href: api/Refitter.Core.DependencyInjectionSettings.html#Refitter_Core_DependencyInjectionSettings_UseWindowsAuthentication_
+  commentId: Overload:Refitter.Core.DependencyInjectionSettings.UseWindowsAuthentication
+  isSpec: "True"
+  fullName: Refitter.Core.DependencyInjectionSettings.UseWindowsAuthentication
+  nameWithType: DependencyInjectionSettings.UseWindowsAuthentication
 - uid: Refitter.Core.DotNetTypeConstants
   name: DotNetTypeConstants
   href: api/Refitter.Core.DotNetTypeConstants.html

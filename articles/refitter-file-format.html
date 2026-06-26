@@ -155,6 +155,7 @@
         &quot;TelemetryMessageHandler&quot;
     ],
     &quot;usePolly&quot;: true, // DEPRECATED - Use &quot;transientErrorHandler&quot;: &quot;None|Polly|HttpResilience&quot; instead
+    &quot;useWindowsAuthentication&quot;: true, // Optional. Default=false
     &quot;transientErrorHandler&quot;: &quot;HttpResilience&quot;, // Optional. Set this to configure transient error handling with a retry policy that uses a jittered backoff. May be one of None, Polly, HttpResilience
     &quot;maxRetryCount&quot;: 3, // Optional. Default=6
     &quot;firstBackoffRetryInSeconds&quot;: 0.5 // Optional. Default=1.0
@@ -264,7 +265,7 @@
 <li><code>useDynamicQuerystringParameters</code>: Set to <code>true</code> to wrap multiple query parameters into a single complex one. Default is <code>false</code> (no wrapping). See <a href="https://github.com/reactiveui/refit?tab=readme-ov-file#dynamic-querystring-parameters">https://github.com/reactiveui/refit?tab=readme-ov-file#dynamic-querystring-parameters</a> for more information.</li>
 <li><code>usePolymorphicSerialization</code>: Set to <code>true</code> to use <code>System.Text.Json</code> polymorphic serialization.</li>
 <li><code>generateMultipleFiles</code>: Set to <code>true</code> to generate multiple files. This is automatically set to <code>true</code> when <code>ContractsOutputFolder</code> is specified. Refit interface(s) are written to a file called <code>RefitInterfaces.cs</code>, Contracts are written to a file called <code>Contracts.cs</code>, and Dependency Injection is written to a file called <code>DependencyInjection.cs</code></li>
-<li><code>dependencyInjectionSettings</code> - Setting this will generated extension methods to <code>IServiceCollection</code> for configuring Refit clients
+<li><code>dependencyInjectionSettings</code> - Setting this will generated extension methods to <code>IServiceCollection</code> for configuring Refit clients, including optional Windows Authentication support
 <ul>
 <li><code>baseUrl</code> - Used as the HttpClient base address. Leave this blank to manually set the base URL</li>
 <li><code>httpMessageHandlers</code> - A collection of <code>HttpMessageHandler</code> that is added to the HttpClient pipeline</li>
