@@ -193,7 +193,7 @@ refitter ./swagger.json --output ./GeneratedClient.cs --namespace &quot;MyApi&qu
 <hr>
 <h2 id="silent-behavioral-change-openapi-parser-upgrade">Silent Behavioral Change: OpenAPI Parser Upgrade</h2>
 <h3 id="summary-2">Summary</h3>
-<p>Refitter v2.0.0 upgrades the OpenAPI parser from <strong>Microsoft.OpenApi.Readers 1.x to 3.x</strong> (<code>OasReader 3.5.0.19</code>). This is a <strong>major version upgrade</strong> with materially different schema interpretation.</p>
+<p>Refitter v2.0.0 upgrades the OpenAPI parser from <strong>Microsoft.OpenApi.Readers 1.x to 3.x</strong> (<code>OasReader 3.7.0.20</code>). This is a <strong>major version upgrade</strong> with materially different schema interpretation.</p>
 <h3 id="impact-2">Impact</h3>
 <p>Users upgrading from v1.7.3 may see <strong>different generated C# code</strong> even without changing their OpenAPI specifications. This is not a breaking change in the Refitter API, but a <strong>behavioral change in code generation</strong> caused by the parser upgrade. The branch proves the parser changed and documents how to migrate; it does <strong>not</strong> prove full 1.7.3-vs-v2.0 behavioral equivalence across a broad real-world corpus.</p>
 <h3 id="what-changed-in-the-parser">What Changed in the Parser</h3>
