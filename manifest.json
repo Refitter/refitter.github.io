@@ -452,6 +452,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.ReferenceResolutionException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.ReferenceResolutionException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.ReferenceResolutionException",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.ReferenceResolutionException.yml\" sourcestartlinenumber=\"1\">Thrown when an OpenAPI document contains a <code>$ref</code> that Refitter refuses to resolve, such as a\nremote reference (when remote references are disabled) or a local reference that escapes the input\ndocument's directory tree.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Refitter.Core.RefitDocumentFilter.yml",
       "output": {
         ".html": {

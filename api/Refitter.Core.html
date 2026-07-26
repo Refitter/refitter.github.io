@@ -171,6 +171,13 @@ and optional rerouting of contracts to a separate output folder.</p>
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Refitter.Core.ReferenceResolutionException.html">ReferenceResolutionException</a></dt>
+      <dd><p>Thrown when an OpenAPI document contains a <code>$ref</code> that Refitter refuses to resolve, such as a
+remote reference (when remote references are disabled) or a local reference that escapes the input
+document's directory tree.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Refitter.Core.RefitDocumentFilter.html">RefitDocumentFilter</a></dt>
       <dd><p>Filters an OpenAPI document by tags and path patterns.
 Each filter operation returns a new document without mutating the input.</p>

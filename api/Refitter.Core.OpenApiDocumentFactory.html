@@ -85,7 +85,7 @@
 
 
   <h1 id="Refitter_Core_OpenApiDocumentFactory" data-uid="Refitter.Core.OpenApiDocumentFactory" class="text-break">
-Class OpenApiDocumentFactory  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Document/OpenApiDocumentFactory.cs/#L9"><i class="bi bi-code-slash"></i></a>
+Class OpenApiDocumentFactory  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Document/OpenApiDocumentFactory.cs/#L11"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -152,9 +152,9 @@ Supports loading single documents or merging multiple documents into one.</p>
 
   <a id="Refitter_Core_OpenApiDocumentFactory_CreateAsync_" data-uid="Refitter.Core.OpenApiDocumentFactory.CreateAsync*"></a>
 
-  <h3 id="Refitter_Core_OpenApiDocumentFactory_CreateAsync_System_Collections_Generic_IEnumerable_System_String__System_Threading_CancellationToken_" data-uid="Refitter.Core.OpenApiDocumentFactory.CreateAsync(System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)">
-  CreateAsync(IEnumerable&lt;string&gt;, CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Document/OpenApiDocumentFactory.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Refitter_Core_OpenApiDocumentFactory_CreateAsync_System_Collections_Generic_IEnumerable_System_String__System_Boolean_System_Threading_CancellationToken_" data-uid="Refitter.Core.OpenApiDocumentFactory.CreateAsync(System.Collections.Generic.IEnumerable{System.String},System.Boolean,System.Threading.CancellationToken)">
+  CreateAsync(IEnumerable&lt;string&gt;, bool, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Document/OpenApiDocumentFactory.cs/#L26"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a merged <span class="xref">NSwag.OpenApiDocument</span> from multiple paths or URLs.
@@ -163,13 +163,16 @@ The first document serves as the base; paths and schemas from subsequent documen
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;OpenApiDocument&gt; CreateAsync(IEnumerable&lt;string&gt; openApiPaths, CancellationToken cancellationToken = default)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;OpenApiDocument&gt; CreateAsync(IEnumerable&lt;string&gt; openApiPaths, bool allowRemoteReferences = false, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>openApiPaths</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
     <dd><p>The paths or URLs to the OpenAPI specifications.</p>
+</dd>
+    <dt><code>allowRemoteReferences</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>When false, remote and out-of-tree <code>$ref</code> references are rejected.</p>
 </dd>
     <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
     <dd><p>The cancellation token.</p>
@@ -204,9 +207,9 @@ The first document serves as the base; paths and schemas from subsequent documen
 
   <a id="Refitter_Core_OpenApiDocumentFactory_CreateAsync_" data-uid="Refitter.Core.OpenApiDocumentFactory.CreateAsync*"></a>
 
-  <h3 id="Refitter_Core_OpenApiDocumentFactory_CreateAsync_System_String_System_Threading_CancellationToken_" data-uid="Refitter.Core.OpenApiDocumentFactory.CreateAsync(System.String,System.Threading.CancellationToken)">
-  CreateAsync(string, CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Document/OpenApiDocumentFactory.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Refitter_Core_OpenApiDocumentFactory_CreateAsync_System_String_System_Boolean_System_Threading_CancellationToken_" data-uid="Refitter.Core.OpenApiDocumentFactory.CreateAsync(System.String,System.Boolean,System.Threading.CancellationToken)">
+  CreateAsync(string, bool, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Document/OpenApiDocumentFactory.cs/#L98"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new instance of the <span class="xref">NSwag.OpenApiDocument</span> class asynchronously.</p>
@@ -214,7 +217,52 @@ The first document serves as the base; paths and schemas from subsequent documen
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;OpenApiDocument&gt; CreateAsync(string openApiPath, CancellationToken cancellationToken = default)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;OpenApiDocument&gt; CreateAsync(string openApiPath, bool allowRemoteReferences = false, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>openApiPath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The path or URL to the OpenAPI specification.</p>
+</dd>
+    <dt><code>allowRemoteReferences</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>When false, remote and out-of-tree <code>$ref</code> references are rejected.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<span class="xref">OpenApiDocument</span>&gt;</dt>
+    <dd><p>A new instance of the <span class="xref">NSwag.OpenApiDocument</span> class.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Refitter_Core_OpenApiDocumentFactory_CreateAsync_" data-uid="Refitter.Core.OpenApiDocumentFactory.CreateAsync*"></a>
+
+  <h3 id="Refitter_Core_OpenApiDocumentFactory_CreateAsync_System_String_System_Threading_CancellationToken_" data-uid="Refitter.Core.OpenApiDocumentFactory.CreateAsync(System.String,System.Threading.CancellationToken)">
+  CreateAsync(string, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Document/OpenApiDocumentFactory.cs/#L86"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new instance of the <span class="xref">NSwag.OpenApiDocument</span> class asynchronously.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;OpenApiDocument&gt; CreateAsync(string openApiPath, CancellationToken cancellationToken)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -248,7 +296,7 @@ The first document serves as the base; paths and schemas from subsequent documen
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Document/OpenApiDocumentFactory.cs/#L9" class="edit-link">Edit this page</a>
+          <a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Document/OpenApiDocumentFactory.cs/#L11" class="edit-link">Edit this page</a>
         </div>
 
 

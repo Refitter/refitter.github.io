@@ -1644,15 +1644,15 @@ references:
   commentId: T:Refitter.Core.IValidator
   fullName: Refitter.Core.IValidator
   nameWithType: IValidator
-- uid: Refitter.Core.IValidator.ValidateAsync(System.String,System.Threading.CancellationToken)
-  name: ValidateAsync(string, CancellationToken)
-  href: api/Refitter.Core.IValidator.html#Refitter_Core_IValidator_ValidateAsync_System_String_System_Threading_CancellationToken_
-  commentId: M:Refitter.Core.IValidator.ValidateAsync(System.String,System.Threading.CancellationToken)
-  name.vb: ValidateAsync(String, CancellationToken)
-  fullName: Refitter.Core.IValidator.ValidateAsync(string, System.Threading.CancellationToken)
-  fullName.vb: Refitter.Core.IValidator.ValidateAsync(String, System.Threading.CancellationToken)
-  nameWithType: IValidator.ValidateAsync(string, CancellationToken)
-  nameWithType.vb: IValidator.ValidateAsync(String, CancellationToken)
+- uid: Refitter.Core.IValidator.ValidateAsync(System.String,System.Boolean,System.Threading.CancellationToken)
+  name: ValidateAsync(string, bool, CancellationToken)
+  href: api/Refitter.Core.IValidator.html#Refitter_Core_IValidator_ValidateAsync_System_String_System_Boolean_System_Threading_CancellationToken_
+  commentId: M:Refitter.Core.IValidator.ValidateAsync(System.String,System.Boolean,System.Threading.CancellationToken)
+  name.vb: ValidateAsync(String, Boolean, CancellationToken)
+  fullName: Refitter.Core.IValidator.ValidateAsync(string, bool, System.Threading.CancellationToken)
+  fullName.vb: Refitter.Core.IValidator.ValidateAsync(String, Boolean, System.Threading.CancellationToken)
+  nameWithType: IValidator.ValidateAsync(string, bool, CancellationToken)
+  nameWithType.vb: IValidator.ValidateAsync(String, Boolean, CancellationToken)
 - uid: Refitter.Core.IValidator.ValidateAsync*
   name: ValidateAsync
   href: api/Refitter.Core.IValidator.html#Refitter_Core_IValidator_ValidateAsync_
@@ -1770,15 +1770,24 @@ references:
   commentId: T:Refitter.Core.OpenApiDocumentFactory
   fullName: Refitter.Core.OpenApiDocumentFactory
   nameWithType: OpenApiDocumentFactory
-- uid: Refitter.Core.OpenApiDocumentFactory.CreateAsync(System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)
-  name: CreateAsync(IEnumerable<string>, CancellationToken)
-  href: api/Refitter.Core.OpenApiDocumentFactory.html#Refitter_Core_OpenApiDocumentFactory_CreateAsync_System_Collections_Generic_IEnumerable_System_String__System_Threading_CancellationToken_
-  commentId: M:Refitter.Core.OpenApiDocumentFactory.CreateAsync(System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)
-  name.vb: CreateAsync(IEnumerable(Of String), CancellationToken)
-  fullName: Refitter.Core.OpenApiDocumentFactory.CreateAsync(System.Collections.Generic.IEnumerable<string>, System.Threading.CancellationToken)
-  fullName.vb: Refitter.Core.OpenApiDocumentFactory.CreateAsync(System.Collections.Generic.IEnumerable(Of String), System.Threading.CancellationToken)
-  nameWithType: OpenApiDocumentFactory.CreateAsync(IEnumerable<string>, CancellationToken)
-  nameWithType.vb: OpenApiDocumentFactory.CreateAsync(IEnumerable(Of String), CancellationToken)
+- uid: Refitter.Core.OpenApiDocumentFactory.CreateAsync(System.Collections.Generic.IEnumerable{System.String},System.Boolean,System.Threading.CancellationToken)
+  name: CreateAsync(IEnumerable<string>, bool, CancellationToken)
+  href: api/Refitter.Core.OpenApiDocumentFactory.html#Refitter_Core_OpenApiDocumentFactory_CreateAsync_System_Collections_Generic_IEnumerable_System_String__System_Boolean_System_Threading_CancellationToken_
+  commentId: M:Refitter.Core.OpenApiDocumentFactory.CreateAsync(System.Collections.Generic.IEnumerable{System.String},System.Boolean,System.Threading.CancellationToken)
+  name.vb: CreateAsync(IEnumerable(Of String), Boolean, CancellationToken)
+  fullName: Refitter.Core.OpenApiDocumentFactory.CreateAsync(System.Collections.Generic.IEnumerable<string>, bool, System.Threading.CancellationToken)
+  fullName.vb: Refitter.Core.OpenApiDocumentFactory.CreateAsync(System.Collections.Generic.IEnumerable(Of String), Boolean, System.Threading.CancellationToken)
+  nameWithType: OpenApiDocumentFactory.CreateAsync(IEnumerable<string>, bool, CancellationToken)
+  nameWithType.vb: OpenApiDocumentFactory.CreateAsync(IEnumerable(Of String), Boolean, CancellationToken)
+- uid: Refitter.Core.OpenApiDocumentFactory.CreateAsync(System.String,System.Boolean,System.Threading.CancellationToken)
+  name: CreateAsync(string, bool, CancellationToken)
+  href: api/Refitter.Core.OpenApiDocumentFactory.html#Refitter_Core_OpenApiDocumentFactory_CreateAsync_System_String_System_Boolean_System_Threading_CancellationToken_
+  commentId: M:Refitter.Core.OpenApiDocumentFactory.CreateAsync(System.String,System.Boolean,System.Threading.CancellationToken)
+  name.vb: CreateAsync(String, Boolean, CancellationToken)
+  fullName: Refitter.Core.OpenApiDocumentFactory.CreateAsync(string, bool, System.Threading.CancellationToken)
+  fullName.vb: Refitter.Core.OpenApiDocumentFactory.CreateAsync(String, Boolean, System.Threading.CancellationToken)
+  nameWithType: OpenApiDocumentFactory.CreateAsync(string, bool, CancellationToken)
+  nameWithType.vb: OpenApiDocumentFactory.CreateAsync(String, Boolean, CancellationToken)
 - uid: Refitter.Core.OpenApiDocumentFactory.CreateAsync(System.String,System.Threading.CancellationToken)
   name: CreateAsync(string, CancellationToken)
   href: api/Refitter.Core.OpenApiDocumentFactory.html#Refitter_Core_OpenApiDocumentFactory_CreateAsync_System_String_System_Threading_CancellationToken_
@@ -2087,6 +2096,40 @@ references:
   commentId: F:Refitter.Core.PropertyNamingPolicy.PreserveOriginal
   fullName: Refitter.Core.PropertyNamingPolicy.PreserveOriginal
   nameWithType: PropertyNamingPolicy.PreserveOriginal
+- uid: Refitter.Core.ReferenceResolutionException
+  name: ReferenceResolutionException
+  href: api/Refitter.Core.ReferenceResolutionException.html
+  commentId: T:Refitter.Core.ReferenceResolutionException
+  fullName: Refitter.Core.ReferenceResolutionException
+  nameWithType: ReferenceResolutionException
+- uid: Refitter.Core.ReferenceResolutionException.#ctor(System.String)
+  name: ReferenceResolutionException(string)
+  href: api/Refitter.Core.ReferenceResolutionException.html#Refitter_Core_ReferenceResolutionException__ctor_System_String_
+  commentId: M:Refitter.Core.ReferenceResolutionException.#ctor(System.String)
+  name.vb: New(String)
+  fullName: Refitter.Core.ReferenceResolutionException.ReferenceResolutionException(string)
+  fullName.vb: Refitter.Core.ReferenceResolutionException.New(String)
+  nameWithType: ReferenceResolutionException.ReferenceResolutionException(string)
+  nameWithType.vb: ReferenceResolutionException.New(String)
+- uid: Refitter.Core.ReferenceResolutionException.#ctor(System.String,System.Exception)
+  name: ReferenceResolutionException(string, Exception)
+  href: api/Refitter.Core.ReferenceResolutionException.html#Refitter_Core_ReferenceResolutionException__ctor_System_String_System_Exception_
+  commentId: M:Refitter.Core.ReferenceResolutionException.#ctor(System.String,System.Exception)
+  name.vb: New(String, Exception)
+  fullName: Refitter.Core.ReferenceResolutionException.ReferenceResolutionException(string, System.Exception)
+  fullName.vb: Refitter.Core.ReferenceResolutionException.New(String, System.Exception)
+  nameWithType: ReferenceResolutionException.ReferenceResolutionException(string, Exception)
+  nameWithType.vb: ReferenceResolutionException.New(String, Exception)
+- uid: Refitter.Core.ReferenceResolutionException.#ctor*
+  name: ReferenceResolutionException
+  href: api/Refitter.Core.ReferenceResolutionException.html#Refitter_Core_ReferenceResolutionException__ctor_
+  commentId: Overload:Refitter.Core.ReferenceResolutionException.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Refitter.Core.ReferenceResolutionException.ReferenceResolutionException
+  fullName.vb: Refitter.Core.ReferenceResolutionException.New
+  nameWithType: ReferenceResolutionException.ReferenceResolutionException
+  nameWithType.vb: ReferenceResolutionException.New
 - uid: Refitter.Core.RefitDocumentFilter
   name: RefitDocumentFilter
   href: api/Refitter.Core.RefitDocumentFilter.html
@@ -2260,6 +2303,19 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.RefitGeneratorSettings.AdditionalNamespaces
   nameWithType: RefitGeneratorSettings.AdditionalNamespaces
+- uid: Refitter.Core.RefitGeneratorSettings.AllowRemoteReferences
+  name: AllowRemoteReferences
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_AllowRemoteReferences
+  commentId: P:Refitter.Core.RefitGeneratorSettings.AllowRemoteReferences
+  fullName: Refitter.Core.RefitGeneratorSettings.AllowRemoteReferences
+  nameWithType: RefitGeneratorSettings.AllowRemoteReferences
+- uid: Refitter.Core.RefitGeneratorSettings.AllowRemoteReferences*
+  name: AllowRemoteReferences
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_AllowRemoteReferences_
+  commentId: Overload:Refitter.Core.RefitGeneratorSettings.AllowRemoteReferences
+  isSpec: "True"
+  fullName: Refitter.Core.RefitGeneratorSettings.AllowRemoteReferences
+  nameWithType: RefitGeneratorSettings.AllowRemoteReferences
 - uid: Refitter.Core.RefitGeneratorSettings.ApizrSettings
   name: ApizrSettings
   href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_ApizrSettings
@@ -3637,15 +3693,15 @@ references:
   commentId: T:Refitter.Core.Validation.OpenApiValidator
   fullName: Refitter.Core.Validation.OpenApiValidator
   nameWithType: OpenApiValidator
-- uid: Refitter.Core.Validation.OpenApiValidator.Validate(System.String,System.Threading.CancellationToken)
-  name: Validate(string, CancellationToken)
-  href: api/Refitter.Core.Validation.OpenApiValidator.html#Refitter_Core_Validation_OpenApiValidator_Validate_System_String_System_Threading_CancellationToken_
-  commentId: M:Refitter.Core.Validation.OpenApiValidator.Validate(System.String,System.Threading.CancellationToken)
-  name.vb: Validate(String, CancellationToken)
-  fullName: Refitter.Core.Validation.OpenApiValidator.Validate(string, System.Threading.CancellationToken)
-  fullName.vb: Refitter.Core.Validation.OpenApiValidator.Validate(String, System.Threading.CancellationToken)
-  nameWithType: OpenApiValidator.Validate(string, CancellationToken)
-  nameWithType.vb: OpenApiValidator.Validate(String, CancellationToken)
+- uid: Refitter.Core.Validation.OpenApiValidator.Validate(System.String,System.Boolean,System.Threading.CancellationToken)
+  name: Validate(string, bool, CancellationToken)
+  href: api/Refitter.Core.Validation.OpenApiValidator.html#Refitter_Core_Validation_OpenApiValidator_Validate_System_String_System_Boolean_System_Threading_CancellationToken_
+  commentId: M:Refitter.Core.Validation.OpenApiValidator.Validate(System.String,System.Boolean,System.Threading.CancellationToken)
+  name.vb: Validate(String, Boolean, CancellationToken)
+  fullName: Refitter.Core.Validation.OpenApiValidator.Validate(string, bool, System.Threading.CancellationToken)
+  fullName.vb: Refitter.Core.Validation.OpenApiValidator.Validate(String, Boolean, System.Threading.CancellationToken)
+  nameWithType: OpenApiValidator.Validate(string, bool, CancellationToken)
+  nameWithType.vb: OpenApiValidator.Validate(String, Boolean, CancellationToken)
 - uid: Refitter.Core.Validation.OpenApiValidator.Validate*
   name: Validate
   href: api/Refitter.Core.Validation.OpenApiValidator.html#Refitter_Core_Validation_OpenApiValidator_Validate_
@@ -3659,15 +3715,15 @@ references:
   commentId: T:Refitter.Core.Validation.OpenApiValidatorAdapter
   fullName: Refitter.Core.Validation.OpenApiValidatorAdapter
   nameWithType: OpenApiValidatorAdapter
-- uid: Refitter.Core.Validation.OpenApiValidatorAdapter.ValidateAsync(System.String,System.Threading.CancellationToken)
-  name: ValidateAsync(string, CancellationToken)
-  href: api/Refitter.Core.Validation.OpenApiValidatorAdapter.html#Refitter_Core_Validation_OpenApiValidatorAdapter_ValidateAsync_System_String_System_Threading_CancellationToken_
-  commentId: M:Refitter.Core.Validation.OpenApiValidatorAdapter.ValidateAsync(System.String,System.Threading.CancellationToken)
-  name.vb: ValidateAsync(String, CancellationToken)
-  fullName: Refitter.Core.Validation.OpenApiValidatorAdapter.ValidateAsync(string, System.Threading.CancellationToken)
-  fullName.vb: Refitter.Core.Validation.OpenApiValidatorAdapter.ValidateAsync(String, System.Threading.CancellationToken)
-  nameWithType: OpenApiValidatorAdapter.ValidateAsync(string, CancellationToken)
-  nameWithType.vb: OpenApiValidatorAdapter.ValidateAsync(String, CancellationToken)
+- uid: Refitter.Core.Validation.OpenApiValidatorAdapter.ValidateAsync(System.String,System.Boolean,System.Threading.CancellationToken)
+  name: ValidateAsync(string, bool, CancellationToken)
+  href: api/Refitter.Core.Validation.OpenApiValidatorAdapter.html#Refitter_Core_Validation_OpenApiValidatorAdapter_ValidateAsync_System_String_System_Boolean_System_Threading_CancellationToken_
+  commentId: M:Refitter.Core.Validation.OpenApiValidatorAdapter.ValidateAsync(System.String,System.Boolean,System.Threading.CancellationToken)
+  name.vb: ValidateAsync(String, Boolean, CancellationToken)
+  fullName: Refitter.Core.Validation.OpenApiValidatorAdapter.ValidateAsync(string, bool, System.Threading.CancellationToken)
+  fullName.vb: Refitter.Core.Validation.OpenApiValidatorAdapter.ValidateAsync(String, Boolean, System.Threading.CancellationToken)
+  nameWithType: OpenApiValidatorAdapter.ValidateAsync(string, bool, CancellationToken)
+  nameWithType.vb: OpenApiValidatorAdapter.ValidateAsync(String, Boolean, CancellationToken)
 - uid: Refitter.Core.Validation.OpenApiValidatorAdapter.ValidateAsync*
   name: ValidateAsync
   href: api/Refitter.Core.Validation.OpenApiValidatorAdapter.html#Refitter_Core_Validation_OpenApiValidatorAdapter_ValidateAsync_

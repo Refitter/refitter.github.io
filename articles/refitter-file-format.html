@@ -142,6 +142,7 @@
     &quot;^Person.+&quot;
   ],
   &quot;generateDefaultAdditionalProperties&quot;: true, // Optional. default=true
+  &quot;allowRemoteReferences&quot;: false, // Optional. Default=false. When true, remote http/https $ref references inside the document are resolved
   &quot;operationNameGenerator&quot;: &quot;Default&quot;, // Optional. May be one of Default, MultipleClientsFromOperationId, MultipleClientsFromPathSegments, MultipleClientsFromFirstTagAndOperationId, MultipleClientsFromFirstTagAndOperationName, MultipleClientsFromFirstTagAndPathSegments, SingleClientFromOperationId, SingleClientFromPathSegments
   &quot;immutableRecords&quot;: false,
   &quot;useDynamicQuerystringParameters&quot;: false, // Optional. Default=false
@@ -260,6 +261,7 @@
 <li><code>keepSchemaPatterns</code>: A collection of regular expressions to force to keep matching schema. This is used together with <code>trimUnusedSchema</code></li>
 <li><code>includeInheritanceHierarchy</code>: Set to true to keep all possible type-instances of inheritance/union types. If this is false only directly referenced types will be kept. This works in conjunction with <code>trimUnusedSchema</code></li>
 <li><code>generateDefaultAdditionalProperties</code>: Set to <code>false</code> to skip default additional properties. Default is <code>true</code></li>
+<li><code>allowRemoteReferences</code>: When <code>true</code>, remote (<code>http</code>/<code>https</code>) <code>$ref</code> references inside the document are resolved. Disabled by default to prevent generation-time SSRF and remote file inclusion. Local <code>$ref</code> references are always confined to the input document's directory tree. Default is <code>false</code></li>
 <li><code>operationNameGenerator</code>: The NSwag <code>IOperationNameGenerator</code> implementation to use. See <a href="https://refitter.github.io/api/Refitter.Core.OperationNameGeneratorTypes.html">https://refitter.github.io/api/Refitter.Core.OperationNameGeneratorTypes.html</a></li>
 <li><code>immutableRecords</code>: Set to <code>true</code> to generate contracts as immutable records instead of classes. Default is <code>false</code></li>
 <li><code>useDynamicQuerystringParameters</code>: Set to <code>true</code> to wrap multiple query parameters into a single complex one. Default is <code>false</code> (no wrapping). See <a href="https://github.com/reactiveui/refit?tab=readme-ov-file#dynamic-querystring-parameters">https://github.com/reactiveui/refit?tab=readme-ov-file#dynamic-querystring-parameters</a> for more information.</li>
@@ -492,6 +494,10 @@
         &quot;generateDefaultAdditionalProperties&quot;: {
             &quot;type&quot;: &quot;boolean&quot;,
             &quot;description&quot;: &quot;Indicates whether to generate default additional properties.&quot;
+        },
+        &quot;allowRemoteReferences&quot;: {
+            &quot;type&quot;: &quot;boolean&quot;,
+            &quot;description&quot;: &quot;When true, remote (http/https) $ref references inside the document are resolved. Disabled by default to prevent generation-time SSRF and remote file inclusion. Local $ref references are always confined to the input document's directory tree.&quot;
         },
         &quot;operationNameGenerator&quot;: {
             &quot;type&quot;: &quot;string&quot;,
