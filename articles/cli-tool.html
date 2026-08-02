@@ -200,10 +200,22 @@ OPTIONS:
         --integer-type                           int             The .NET type to use for OpenAPI integer types without a format specifier. Common values: 'int' (default), 'long'
         --json-library-version                                     JSON library version for System.Text.Json (default: 8.0). When set to 9.0 or higher, enables .NET 9+ JsonStringEnumMemberName support for custom enum value names. Cannot be used with a settings file that also specifies a non-default value
         --custom-template-directory                              Custom directory with NSwag fluid templates for code generation. Default is null which uses the default NSwag templates. See &lt;https://github.com/RicoSuter/NSwag/wiki/Templates&gt;
+        --telemetry-source                                       Report the telemetry source of this invocation. Used internally by the MSBuild integration.
+        --telemetry-file-count                                   Report the total number of settings files in the current workload. Used internally by the MSBuild integration.
+        --telemetry-runtime                                      Report the bundled runtime selected for this invocation. Used internally by the MSBuild integration.
 </code></pre>
 <h2 id="cli-tool-output-example">CLI Tool Output Example</h2>
 <p>Here's what the console output looks like when running the Refitter CLI tool:</p>
 <p><img src="https://raw.githubusercontent.com/christianhelle/refitter/refs/heads/main/images/console-output.png" alt="Console Output"></p>
+<h2 id="telemetry">Telemetry</h2>
+<p>Refitter collects anonymous usage telemetry and error reports to improve the tool. Telemetry can be disabled with <code>--no-logging</code>.</p>
+<p>The following options are advanced/internal and are used by the MSBuild integration to tag telemetry with provenance:</p>
+<ul>
+<li><code>--telemetry-source &lt;value&gt;</code> — reports the source of the invocation, e.g. <code>msbuild</code>. When set to <code>msbuild</code> (case-insensitive) a dedicated <code>msbuild-invocation</code> event is emitted.</li>
+<li><code>--telemetry-file-count &lt;n&gt;</code> — reports the total number of settings files in the current workload.</li>
+<li><code>--telemetry-runtime &lt;tfm&gt;</code> — reports the bundled runtime selected for this invocation, e.g. <code>net9.0</code>.</li>
+</ul>
+<p>These values are self-reported and advisory because they are user-controlled CLI options: <code>--telemetry-source=msbuild</code> indicates the caller claims an MSBuild origin, not that one is proven. A caller that requires reliable attribution should hand off provenance through a protected, non-user-controlled channel instead of relying on these flags.</p>
 <h2 id="basic-usage">Basic Usage</h2>
 <p>To generate code from an OpenAPI specifications file, run the following:</p>
 <pre><code class="lang-shell">refitter [path to OpenAPI spec file] --namespace &quot;[Your.Namespace.Of.Choice.GeneratedCode]&quot;
