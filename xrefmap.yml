@@ -2874,6 +2874,19 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.RefitGeneratorSettings.SecurityScheme
   nameWithType: RefitGeneratorSettings.SecurityScheme
+- uid: Refitter.Core.RefitGeneratorSettings.Silent
+  name: Silent
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_Silent
+  commentId: P:Refitter.Core.RefitGeneratorSettings.Silent
+  fullName: Refitter.Core.RefitGeneratorSettings.Silent
+  nameWithType: RefitGeneratorSettings.Silent
+- uid: Refitter.Core.RefitGeneratorSettings.Silent*
+  name: Silent
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_Silent_
+  commentId: Overload:Refitter.Core.RefitGeneratorSettings.Silent
+  isSpec: "True"
+  fullName: Refitter.Core.RefitGeneratorSettings.Silent
+  nameWithType: RefitGeneratorSettings.Silent
 - uid: Refitter.Core.RefitGeneratorSettings.TrimUnusedSchema
   name: TrimUnusedSchema
   href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_TrimUnusedSchema
