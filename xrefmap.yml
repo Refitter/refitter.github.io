@@ -3862,15 +3862,15 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentationByTag
   nameWithType: XmlDocumentationGenerator.AppendInterfaceDocumentationByTag
-- uid: Refitter.Core.XmlDocumentationGenerator.AppendMethodDocumentation(NSwag.CodeGeneration.CSharp.Models.CSharpOperationModel,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Text.StringBuilder)
-  name: AppendMethodDocumentation(CSharpOperationModel, bool, bool, bool, bool, StringBuilder)
-  href: api/Refitter.Core.XmlDocumentationGenerator.html#Refitter_Core_XmlDocumentationGenerator_AppendMethodDocumentation_NSwag_CodeGeneration_CSharp_Models_CSharpOperationModel_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Text_StringBuilder_
-  commentId: M:Refitter.Core.XmlDocumentationGenerator.AppendMethodDocumentation(NSwag.CodeGeneration.CSharp.Models.CSharpOperationModel,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Text.StringBuilder)
-  name.vb: AppendMethodDocumentation(CSharpOperationModel, Boolean, Boolean, Boolean, Boolean, StringBuilder)
-  fullName: Refitter.Core.XmlDocumentationGenerator.AppendMethodDocumentation(NSwag.CodeGeneration.CSharp.Models.CSharpOperationModel, bool, bool, bool, bool, System.Text.StringBuilder)
-  fullName.vb: Refitter.Core.XmlDocumentationGenerator.AppendMethodDocumentation(NSwag.CodeGeneration.CSharp.Models.CSharpOperationModel, Boolean, Boolean, Boolean, Boolean, System.Text.StringBuilder)
-  nameWithType: XmlDocumentationGenerator.AppendMethodDocumentation(CSharpOperationModel, bool, bool, bool, bool, StringBuilder)
-  nameWithType.vb: XmlDocumentationGenerator.AppendMethodDocumentation(CSharpOperationModel, Boolean, Boolean, Boolean, Boolean, StringBuilder)
+- uid: Refitter.Core.XmlDocumentationGenerator.AppendMethodDocumentation(NSwag.CodeGeneration.CSharp.Models.CSharpOperationModel,System.Collections.Generic.IReadOnlyList{System.String},System.Boolean,System.Text.StringBuilder,System.String)
+  name: AppendMethodDocumentation(CSharpOperationModel, IReadOnlyList<string>, bool, StringBuilder, string?)
+  href: api/Refitter.Core.XmlDocumentationGenerator.html#Refitter_Core_XmlDocumentationGenerator_AppendMethodDocumentation_NSwag_CodeGeneration_CSharp_Models_CSharpOperationModel_System_Collections_Generic_IReadOnlyList_System_String__System_Boolean_System_Text_StringBuilder_System_String_
+  commentId: M:Refitter.Core.XmlDocumentationGenerator.AppendMethodDocumentation(NSwag.CodeGeneration.CSharp.Models.CSharpOperationModel,System.Collections.Generic.IReadOnlyList{System.String},System.Boolean,System.Text.StringBuilder,System.String)
+  name.vb: AppendMethodDocumentation(CSharpOperationModel, IReadOnlyList(Of String), Boolean, StringBuilder, String)
+  fullName: Refitter.Core.XmlDocumentationGenerator.AppendMethodDocumentation(NSwag.CodeGeneration.CSharp.Models.CSharpOperationModel, System.Collections.Generic.IReadOnlyList<string>, bool, System.Text.StringBuilder, string?)
+  fullName.vb: Refitter.Core.XmlDocumentationGenerator.AppendMethodDocumentation(NSwag.CodeGeneration.CSharp.Models.CSharpOperationModel, System.Collections.Generic.IReadOnlyList(Of String), Boolean, System.Text.StringBuilder, String)
+  nameWithType: XmlDocumentationGenerator.AppendMethodDocumentation(CSharpOperationModel, IReadOnlyList<string>, bool, StringBuilder, string?)
+  nameWithType.vb: XmlDocumentationGenerator.AppendMethodDocumentation(CSharpOperationModel, IReadOnlyList(Of String), Boolean, StringBuilder, String)
 - uid: Refitter.Core.XmlDocumentationGenerator.AppendMethodDocumentation*
   name: AppendMethodDocumentation
   href: api/Refitter.Core.XmlDocumentationGenerator.html#Refitter_Core_XmlDocumentationGenerator_AppendMethodDocumentation_
