@@ -210,7 +210,7 @@
       &quot;ExcludedTypeFoo&quot;,
       &quot;ExcludedTypeBar&quot;
     ],
-    &quot;customTemplateDirectory&quot;: &quot;./path/to/directory/&quot; //Optional. See &lt;https://github.com/RicoSuter/NSwag/wiki/Templates&gt;
+    &quot;customTemplateDirectory&quot;: &quot;./path/to/directory/&quot; //Optional
     &quot;jsonLibraryVersion&quot;: 8.0 // Optional. Default=8.0. JSON library version for System.Text.Json. When set to 9.0 or higher, enables .NET 9+ JsonStringEnumMemberName support for custom enum value names
   }
 }
@@ -266,7 +266,7 @@
 <li><code>generateDefaultAdditionalProperties</code>: Set to <code>false</code> to skip default additional properties. Default is <code>true</code></li>
 <li><code>allowRemoteReferences</code>: When <code>true</code>, remote (<code>http</code>/<code>https</code>) <code>$ref</code> references inside the document are resolved. Disabled by default to prevent generation-time SSRF and remote file inclusion. Local <code>$ref</code> references are always confined to the input document's directory tree. Default is <code>false</code></li>
 <li><code>silent</code>: Set to <code>true</code> to suppress all console output when running the CLI tool. Errors are still reported through the exit code. Default is <code>false</code></li>
-<li><code>operationNameGenerator</code>: The NSwag <code>IOperationNameGenerator</code> implementation to use. See <a href="https://refitter.github.io/api/Refitter.Core.OperationNameGeneratorTypes.html">https://refitter.github.io/api/Refitter.Core.OperationNameGeneratorTypes.html</a></li>
+<li><code>operationNameGenerator</code>: The strategy used to name operations and to group them into interfaces. See <a href="https://refitter.github.io/api/Refitter.Core.OperationNameGeneratorTypes.html">https://refitter.github.io/api/Refitter.Core.OperationNameGeneratorTypes.html</a></li>
 <li><code>immutableRecords</code>: Set to <code>true</code> to generate contracts as immutable records instead of classes. Default is <code>false</code></li>
 <li><code>useDynamicQuerystringParameters</code>: Set to <code>true</code> to wrap multiple query parameters into a single complex one. Default is <code>false</code> (no wrapping). See <a href="https://github.com/reactiveui/refit?tab=readme-ov-file#dynamic-querystring-parameters">https://github.com/reactiveui/refit?tab=readme-ov-file#dynamic-querystring-parameters</a> for more information.</li>
 <li><code>usePolymorphicSerialization</code>: Set to <code>true</code> to use <code>System.Text.Json</code> polymorphic serialization.</li>
@@ -293,7 +293,7 @@
 <li><code>withFileTransfer</code> - Tells if Apizr should handle file transfer</li>
 </ul>
 </li>
-<li><code>codeGeneratorSettings</code> - Setting this allows customization of the NSwag generated types and contracts
+<li><code>codeGeneratorSettings</code> - Setting this allows customization of the generated types and contracts
 <ul>
 <li><code>requiredPropertiesMustBeDefined</code> - Default is true,</li>
 <li><code>generateDataAnnotations</code> - Default is true,</li>

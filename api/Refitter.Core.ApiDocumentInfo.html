@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class RefitDocumentFilter </title>
+      <title>Class ApiDocumentInfo </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class RefitDocumentFilter ">
+      <meta name="title" content="Class ApiDocumentInfo ">
       
-      <meta name="description" content="Filters an OpenAPI document by tags and path patterns. Each filter operation returns a new document without mutating the input.">
+      <meta name="description" content="Describes the OpenAPI document that code is generated from, after filtering and schema trimming.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       
       
       
-      <meta name="docfx:docurl" content="https://github.com/christianhelle/refitter/new/main/apiSpec/new?filename=Refitter_Core_RefitDocumentFilter.md&amp;value=---%0Auid%3A%20Refitter.Core.RefitDocumentFilter%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/christianhelle/refitter/new/main/apiSpec/new?filename=Refitter_Core_ApiDocumentInfo.md&amp;value=---%0Auid%3A%20Refitter.Core.ApiDocumentInfo%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -80,12 +80,12 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Refitter.Core.RefitDocumentFilter">
+        <article data-uid="Refitter.Core.ApiDocumentInfo">
 
 
 
-  <h1 id="Refitter_Core_RefitDocumentFilter" data-uid="Refitter.Core.RefitDocumentFilter" class="text-break">
-Class RefitDocumentFilter  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Document/RefitDocumentFilter.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  <h1 id="Refitter_Core_ApiDocumentInfo" data-uid="Refitter.Core.ApiDocumentInfo" class="text-break">
+Class ApiDocumentInfo  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Pipeline/ApiDocumentInfo.cs/#L7"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -93,13 +93,12 @@ Class RefitDocumentFilter  <a class="header-action link-secondary" title="View s
   <dl><dt>Assembly</dt><dd>Refitter.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Filters an OpenAPI document by tags and path patterns.
-Each filter operation returns a new document without mutating the input.</p>
+  <div class="markdown summary"><p>Describes the OpenAPI document that code is generated from, after filtering and schema trimming.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class RefitDocumentFilter</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ApiDocumentInfo</code></pre>
   </div>
 
 
@@ -109,7 +108,7 @@ Each filter operation returns a new document without mutating the input.</p>
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">RefitDocumentFilter</span></div>
+      <div><span class="xref">ApiDocumentInfo</span></div>
     </dd>
   </dl>
 
@@ -131,9 +130,6 @@ Each filter operation returns a new document without mutating the input.</p>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
@@ -146,41 +142,33 @@ Each filter operation returns a new document without mutating the input.</p>
 
 
 
-  <h2 class="section" id="methods">Methods
+  <h2 class="section" id="properties">Properties
 </h2>
 
 
-  <a id="Refitter_Core_RefitDocumentFilter_FilterByPath_" data-uid="Refitter.Core.RefitDocumentFilter.FilterByPath*"></a>
+  <a id="Refitter_Core_ApiDocumentInfo_Paths_" data-uid="Refitter.Core.ApiDocumentInfo.Paths*"></a>
 
-  <h3 id="Refitter_Core_RefitDocumentFilter_FilterByPath_NSwag_OpenApiDocument_System_String___" data-uid="Refitter.Core.RefitDocumentFilter.FilterByPath(NSwag.OpenApiDocument,System.String[])">
-  FilterByPath(OpenApiDocument, string[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Document/RefitDocumentFilter.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Refitter_Core_ApiDocumentInfo_Paths" data-uid="Refitter.Core.ApiDocumentInfo.Paths">
+  Paths
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Pipeline/ApiDocumentInfo.cs/#L24"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Removes paths from the document that do not match any of the specified regular expressions.
-Returns a new document; the original is not modified.</p>
+  <div class="markdown level1 summary"><p>Gets the paths that code is generated for.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static OpenApiDocument FilterByPath(OpenApiDocument document, string[] includePathMatches)</code></pre>
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;string&gt; Paths { get; }</code></pre>
   </div>
 
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>document</code> <span class="xref">OpenApiDocument</span></dt>
-    <dd><p>The OpenAPI document to filter.</p>
-</dd>
-    <dt><code>includePathMatches</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
-    <dd><p>Regular expressions to match paths against. When empty, all paths are kept.</p>
-</dd>
-  </dl>
 
-  <h4 class="section">Returns</h4>
+
+
+
+  <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><span class="xref">OpenApiDocument</span></dt>
-    <dd><p>A new OpenAPI document with only matching paths.</p>
-</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
   </dl>
 
 
@@ -190,44 +178,94 @@ Returns a new document; the original is not modified.</p>
 
 
 
+  <a id="Refitter_Core_ApiDocumentInfo_SchemaNames_" data-uid="Refitter.Core.ApiDocumentInfo.SchemaNames*"></a>
 
-
-
-  <a id="Refitter_Core_RefitDocumentFilter_FilterByTags_" data-uid="Refitter.Core.RefitDocumentFilter.FilterByTags*"></a>
-
-  <h3 id="Refitter_Core_RefitDocumentFilter_FilterByTags_NSwag_OpenApiDocument_System_String___" data-uid="Refitter.Core.RefitDocumentFilter.FilterByTags(NSwag.OpenApiDocument,System.String[])">
-  FilterByTags(OpenApiDocument, string[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Document/RefitDocumentFilter.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Refitter_Core_ApiDocumentInfo_SchemaNames" data-uid="Refitter.Core.ApiDocumentInfo.SchemaNames">
+  SchemaNames
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Pipeline/ApiDocumentInfo.cs/#L27"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Removes operations from the document that do not match any of the specified tags.
-Returns a new document; the original is not modified.</p>
+  <div class="markdown level1 summary"><p>Gets the names of the schemas that contracts are generated for.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static OpenApiDocument FilterByTags(OpenApiDocument document, string[] includeTags)</code></pre>
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;string&gt; SchemaNames { get; }</code></pre>
   </div>
 
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>document</code> <span class="xref">OpenApiDocument</span></dt>
-    <dd><p>The OpenAPI document to filter.</p>
-</dd>
-    <dt><code>includeTags</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
-    <dd><p>Tags to include. When empty, all operations are kept.</p>
-</dd>
-  </dl>
 
-  <h4 class="section">Returns</h4>
+
+
+
+  <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><span class="xref">OpenApiDocument</span></dt>
-    <dd><p>A new OpenAPI document with only matching operations.</p>
-</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
   </dl>
 
 
 
+
+
+
+
+
+  <a id="Refitter_Core_ApiDocumentInfo_Title_" data-uid="Refitter.Core.ApiDocumentInfo.Title*"></a>
+
+  <h3 id="Refitter_Core_ApiDocumentInfo_Title" data-uid="Refitter.Core.ApiDocumentInfo.Title">
+  Title
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Pipeline/ApiDocumentInfo.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the title of the API.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Title { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Refitter_Core_ApiDocumentInfo_Version_" data-uid="Refitter.Core.ApiDocumentInfo.Version*"></a>
+
+  <h3 id="Refitter_Core_ApiDocumentInfo_Version" data-uid="Refitter.Core.ApiDocumentInfo.Version">
+  Version
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Pipeline/ApiDocumentInfo.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the version of the API.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Version { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -240,7 +278,7 @@ Returns a new document; the original is not modified.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Document/RefitDocumentFilter.cs/#L11" class="edit-link">Edit this page</a>
+          <a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Pipeline/ApiDocumentInfo.cs/#L7" class="edit-link">Edit this page</a>
         </div>
 
 

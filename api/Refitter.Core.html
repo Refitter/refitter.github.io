@@ -91,6 +91,11 @@
 Classes
 </h3>
     <dl class="jumplist">
+      <dt><a class="xref" href="Refitter.Core.ApiDocumentInfo.html">ApiDocumentInfo</a></dt>
+      <dd><p>Describes the OpenAPI document that code is generated from, after filtering and schema trimming.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Refitter.Core.ApizrSettings.html">ApizrSettings</a></dt>
       <dd><p>Describing how Apizr should be configured.
 Here are only the common configurations.</p>
@@ -143,12 +148,6 @@ This can be used to configure the HttpClient pipeline with additional handlers</
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="Refitter.Core.OpenApiDocumentFactory.html">OpenApiDocumentFactory</a></dt>
-      <dd><p>Creates instances of <span class="xref">NSwag.OpenApiDocument</span> from file paths or URLs.
-Supports loading single documents or merging multiple documents into one.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
       <dt><a class="xref" href="Refitter.Core.OutputPlanner.html">OutputPlanner</a></dt>
       <dd><p>Plans the output file paths for generated Refit code.
 Supports single-file and multi-file output modes, CLI and settings-file driven generation,
@@ -166,8 +165,18 @@ and optional rerouting of contracts to a separate output folder.</p>
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Refitter.Core.ParameterNameContext.html">ParameterNameContext</a></dt>
+      <dd><p>Describes an operation parameter that needs a C# parameter name.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Refitter.Core.PlannedFile.html">PlannedFile</a></dt>
       <dd><p>Represents a planned output file with its relative path and generated content.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Refitter.Core.PropertyNameContext.html">PropertyNameContext</a></dt>
+      <dd><p>Describes a schema property that needs a C# property name.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -175,12 +184,6 @@ and optional rerouting of contracts to a separate output folder.</p>
       <dd><p>Thrown when an OpenAPI document contains a <code>$ref</code> that Refitter refuses to resolve, such as a
 remote reference (when remote references are disabled) or a local reference that escapes the input
 document's directory tree.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="Refitter.Core.RefitDocumentFilter.html">RefitDocumentFilter</a></dt>
-      <dd><p>Filters an OpenAPI document by tags and path patterns.
-Each filter operation returns a new document without mutating the input.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -215,11 +218,6 @@ Handles generator creation, code generation, output planning, validation, warnin
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="Refitter.Core.SchemaCleaner.html">SchemaCleaner</a></dt>
-      <dd><p>Cleans up the OpenAPI schema by removing unreferenced schemas and handling inheritance hierarchies.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
       <dt><a class="xref" href="Refitter.Core.Serializer.html">Serializer</a></dt>
       <dd><p>Provides methods for serializing and deserializing objects to and from JSON.
 This serializer is configured to be case-insensitive.</p>
@@ -245,11 +243,6 @@ avoiding unnecessary disk writes during incremental / design-time builds.</p>
     <dl class="jumplist">
       <dt><a class="xref" href="Refitter.Core.Warning.html">Warning</a></dt>
       <dd><p>Represents a user-facing configuration warning message.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="Refitter.Core.XmlDocumentationGenerator.html">XmlDocumentationGenerator</a></dt>
-      <dd><p>Generator class for creating XML documentation.</p>
 </dd>
     </dl>
     <h3 id="interfaces">
@@ -284,8 +277,18 @@ Pure logic — no I/O.</p>
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Refitter.Core.IParameterNameProvider.html">IParameterNameProvider</a></dt>
+      <dd><p>Provides the C# parameter names of generated Refit interface methods.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Refitter.Core.IPartitioningConfiguration.html">IPartitioningConfiguration</a></dt>
       <dd><p>Configuration for how operations are partitioned into Refit interfaces.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Refitter.Core.IPropertyNameProvider.html">IPropertyNameProvider</a></dt>
+      <dd><p>Provides the C# property names of generated contract types.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -340,7 +343,12 @@ without a format specifier</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Refitter.Core.OperationNameGeneratorTypes.html">OperationNameGeneratorTypes</a></dt>
-      <dd><p>The NSwag IOperationNameGenerator implementation to use</p>
+      <dd><p>The strategy used to name operations and to group them into interfaces</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Refitter.Core.ParameterSource.html">ParameterSource</a></dt>
+      <dd><p>Where an operation parameter is sent in the HTTP request.</p>
 </dd>
     </dl>
     <dl class="jumplist">

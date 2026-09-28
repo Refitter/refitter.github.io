@@ -7,6 +7,64 @@ references:
   commentId: N:Refitter.Core
   fullName: Refitter.Core
   nameWithType: Refitter.Core
+- uid: Refitter.Core.ApiDocumentInfo
+  name: ApiDocumentInfo
+  href: api/Refitter.Core.ApiDocumentInfo.html
+  commentId: T:Refitter.Core.ApiDocumentInfo
+  fullName: Refitter.Core.ApiDocumentInfo
+  nameWithType: ApiDocumentInfo
+- uid: Refitter.Core.ApiDocumentInfo.Paths
+  name: Paths
+  href: api/Refitter.Core.ApiDocumentInfo.html#Refitter_Core_ApiDocumentInfo_Paths
+  commentId: P:Refitter.Core.ApiDocumentInfo.Paths
+  fullName: Refitter.Core.ApiDocumentInfo.Paths
+  nameWithType: ApiDocumentInfo.Paths
+- uid: Refitter.Core.ApiDocumentInfo.Paths*
+  name: Paths
+  href: api/Refitter.Core.ApiDocumentInfo.html#Refitter_Core_ApiDocumentInfo_Paths_
+  commentId: Overload:Refitter.Core.ApiDocumentInfo.Paths
+  isSpec: "True"
+  fullName: Refitter.Core.ApiDocumentInfo.Paths
+  nameWithType: ApiDocumentInfo.Paths
+- uid: Refitter.Core.ApiDocumentInfo.SchemaNames
+  name: SchemaNames
+  href: api/Refitter.Core.ApiDocumentInfo.html#Refitter_Core_ApiDocumentInfo_SchemaNames
+  commentId: P:Refitter.Core.ApiDocumentInfo.SchemaNames
+  fullName: Refitter.Core.ApiDocumentInfo.SchemaNames
+  nameWithType: ApiDocumentInfo.SchemaNames
+- uid: Refitter.Core.ApiDocumentInfo.SchemaNames*
+  name: SchemaNames
+  href: api/Refitter.Core.ApiDocumentInfo.html#Refitter_Core_ApiDocumentInfo_SchemaNames_
+  commentId: Overload:Refitter.Core.ApiDocumentInfo.SchemaNames
+  isSpec: "True"
+  fullName: Refitter.Core.ApiDocumentInfo.SchemaNames
+  nameWithType: ApiDocumentInfo.SchemaNames
+- uid: Refitter.Core.ApiDocumentInfo.Title
+  name: Title
+  href: api/Refitter.Core.ApiDocumentInfo.html#Refitter_Core_ApiDocumentInfo_Title
+  commentId: P:Refitter.Core.ApiDocumentInfo.Title
+  fullName: Refitter.Core.ApiDocumentInfo.Title
+  nameWithType: ApiDocumentInfo.Title
+- uid: Refitter.Core.ApiDocumentInfo.Title*
+  name: Title
+  href: api/Refitter.Core.ApiDocumentInfo.html#Refitter_Core_ApiDocumentInfo_Title_
+  commentId: Overload:Refitter.Core.ApiDocumentInfo.Title
+  isSpec: "True"
+  fullName: Refitter.Core.ApiDocumentInfo.Title
+  nameWithType: ApiDocumentInfo.Title
+- uid: Refitter.Core.ApiDocumentInfo.Version
+  name: Version
+  href: api/Refitter.Core.ApiDocumentInfo.html#Refitter_Core_ApiDocumentInfo_Version
+  commentId: P:Refitter.Core.ApiDocumentInfo.Version
+  fullName: Refitter.Core.ApiDocumentInfo.Version
+  nameWithType: ApiDocumentInfo.Version
+- uid: Refitter.Core.ApiDocumentInfo.Version*
+  name: Version
+  href: api/Refitter.Core.ApiDocumentInfo.html#Refitter_Core_ApiDocumentInfo_Version_
+  commentId: Overload:Refitter.Core.ApiDocumentInfo.Version
+  isSpec: "True"
+  fullName: Refitter.Core.ApiDocumentInfo.Version
+  nameWithType: ApiDocumentInfo.Version
 - uid: Refitter.Core.ApizrPackages
   name: ApizrPackages
   href: api/Refitter.Core.ApizrPackages.html
@@ -306,19 +364,6 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.CodeGeneratorSettings.ArrayType
   nameWithType: CodeGeneratorSettings.ArrayType
-- uid: Refitter.Core.CodeGeneratorSettings.CustomTemplateDirectory
-  name: CustomTemplateDirectory
-  href: api/Refitter.Core.CodeGeneratorSettings.html#Refitter_Core_CodeGeneratorSettings_CustomTemplateDirectory
-  commentId: P:Refitter.Core.CodeGeneratorSettings.CustomTemplateDirectory
-  fullName: Refitter.Core.CodeGeneratorSettings.CustomTemplateDirectory
-  nameWithType: CodeGeneratorSettings.CustomTemplateDirectory
-- uid: Refitter.Core.CodeGeneratorSettings.CustomTemplateDirectory*
-  name: CustomTemplateDirectory
-  href: api/Refitter.Core.CodeGeneratorSettings.html#Refitter_Core_CodeGeneratorSettings_CustomTemplateDirectory_
-  commentId: Overload:Refitter.Core.CodeGeneratorSettings.CustomTemplateDirectory
-  isSpec: "True"
-  fullName: Refitter.Core.CodeGeneratorSettings.CustomTemplateDirectory
-  nameWithType: CodeGeneratorSettings.CustomTemplateDirectory
 - uid: Refitter.Core.CodeGeneratorSettings.DateFormat
   name: DateFormat
   href: api/Refitter.Core.CodeGeneratorSettings.html#Refitter_Core_CodeGeneratorSettings_DateFormat
@@ -670,19 +715,19 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.CodeGeneratorSettings.JsonSerializerSettingsTransformationMethod
   nameWithType: CodeGeneratorSettings.JsonSerializerSettingsTransformationMethod
-- uid: Refitter.Core.CodeGeneratorSettings.PropertyNameGenerator
-  name: PropertyNameGenerator
-  href: api/Refitter.Core.CodeGeneratorSettings.html#Refitter_Core_CodeGeneratorSettings_PropertyNameGenerator
-  commentId: P:Refitter.Core.CodeGeneratorSettings.PropertyNameGenerator
-  fullName: Refitter.Core.CodeGeneratorSettings.PropertyNameGenerator
-  nameWithType: CodeGeneratorSettings.PropertyNameGenerator
-- uid: Refitter.Core.CodeGeneratorSettings.PropertyNameGenerator*
-  name: PropertyNameGenerator
-  href: api/Refitter.Core.CodeGeneratorSettings.html#Refitter_Core_CodeGeneratorSettings_PropertyNameGenerator_
-  commentId: Overload:Refitter.Core.CodeGeneratorSettings.PropertyNameGenerator
+- uid: Refitter.Core.CodeGeneratorSettings.PropertyNameProvider
+  name: PropertyNameProvider
+  href: api/Refitter.Core.CodeGeneratorSettings.html#Refitter_Core_CodeGeneratorSettings_PropertyNameProvider
+  commentId: P:Refitter.Core.CodeGeneratorSettings.PropertyNameProvider
+  fullName: Refitter.Core.CodeGeneratorSettings.PropertyNameProvider
+  nameWithType: CodeGeneratorSettings.PropertyNameProvider
+- uid: Refitter.Core.CodeGeneratorSettings.PropertyNameProvider*
+  name: PropertyNameProvider
+  href: api/Refitter.Core.CodeGeneratorSettings.html#Refitter_Core_CodeGeneratorSettings_PropertyNameProvider_
+  commentId: Overload:Refitter.Core.CodeGeneratorSettings.PropertyNameProvider
   isSpec: "True"
-  fullName: Refitter.Core.CodeGeneratorSettings.PropertyNameGenerator
-  nameWithType: CodeGeneratorSettings.PropertyNameGenerator
+  fullName: Refitter.Core.CodeGeneratorSettings.PropertyNameProvider
+  nameWithType: CodeGeneratorSettings.PropertyNameProvider
 - uid: Refitter.Core.CodeGeneratorSettings.PropertySetterAccessModifier
   name: PropertySetterAccessModifier
   href: api/Refitter.Core.CodeGeneratorSettings.html#Refitter_Core_CodeGeneratorSettings_PropertySetterAccessModifier
@@ -1196,19 +1241,19 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.ICodeGenerationConfiguration.ImmutableRecords
   nameWithType: ICodeGenerationConfiguration.ImmutableRecords
-- uid: Refitter.Core.ICodeGenerationConfiguration.ParameterNameGenerator
-  name: ParameterNameGenerator
-  href: api/Refitter.Core.ICodeGenerationConfiguration.html#Refitter_Core_ICodeGenerationConfiguration_ParameterNameGenerator
-  commentId: P:Refitter.Core.ICodeGenerationConfiguration.ParameterNameGenerator
-  fullName: Refitter.Core.ICodeGenerationConfiguration.ParameterNameGenerator
-  nameWithType: ICodeGenerationConfiguration.ParameterNameGenerator
-- uid: Refitter.Core.ICodeGenerationConfiguration.ParameterNameGenerator*
-  name: ParameterNameGenerator
-  href: api/Refitter.Core.ICodeGenerationConfiguration.html#Refitter_Core_ICodeGenerationConfiguration_ParameterNameGenerator_
-  commentId: Overload:Refitter.Core.ICodeGenerationConfiguration.ParameterNameGenerator
+- uid: Refitter.Core.ICodeGenerationConfiguration.ParameterNameProvider
+  name: ParameterNameProvider
+  href: api/Refitter.Core.ICodeGenerationConfiguration.html#Refitter_Core_ICodeGenerationConfiguration_ParameterNameProvider
+  commentId: P:Refitter.Core.ICodeGenerationConfiguration.ParameterNameProvider
+  fullName: Refitter.Core.ICodeGenerationConfiguration.ParameterNameProvider
+  nameWithType: ICodeGenerationConfiguration.ParameterNameProvider
+- uid: Refitter.Core.ICodeGenerationConfiguration.ParameterNameProvider*
+  name: ParameterNameProvider
+  href: api/Refitter.Core.ICodeGenerationConfiguration.html#Refitter_Core_ICodeGenerationConfiguration_ParameterNameProvider_
+  commentId: Overload:Refitter.Core.ICodeGenerationConfiguration.ParameterNameProvider
   isSpec: "True"
-  fullName: Refitter.Core.ICodeGenerationConfiguration.ParameterNameGenerator
-  nameWithType: ICodeGenerationConfiguration.ParameterNameGenerator
+  fullName: Refitter.Core.ICodeGenerationConfiguration.ParameterNameProvider
+  nameWithType: ICodeGenerationConfiguration.ParameterNameProvider
 - uid: Refitter.Core.ICodeGenerationConfiguration.ResponseTypeOverride
   name: ResponseTypeOverride
   href: api/Refitter.Core.ICodeGenerationConfiguration.html#Refitter_Core_ICodeGenerationConfiguration_ResponseTypeOverride
@@ -1496,6 +1541,25 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.IOutputPlanner.Plan
   nameWithType: IOutputPlanner.Plan
+- uid: Refitter.Core.IParameterNameProvider
+  name: IParameterNameProvider
+  href: api/Refitter.Core.IParameterNameProvider.html
+  commentId: T:Refitter.Core.IParameterNameProvider
+  fullName: Refitter.Core.IParameterNameProvider
+  nameWithType: IParameterNameProvider
+- uid: Refitter.Core.IParameterNameProvider.GetParameterName(Refitter.Core.ParameterNameContext)
+  name: GetParameterName(ParameterNameContext)
+  href: api/Refitter.Core.IParameterNameProvider.html#Refitter_Core_IParameterNameProvider_GetParameterName_Refitter_Core_ParameterNameContext_
+  commentId: M:Refitter.Core.IParameterNameProvider.GetParameterName(Refitter.Core.ParameterNameContext)
+  fullName: Refitter.Core.IParameterNameProvider.GetParameterName(Refitter.Core.ParameterNameContext)
+  nameWithType: IParameterNameProvider.GetParameterName(ParameterNameContext)
+- uid: Refitter.Core.IParameterNameProvider.GetParameterName*
+  name: GetParameterName
+  href: api/Refitter.Core.IParameterNameProvider.html#Refitter_Core_IParameterNameProvider_GetParameterName_
+  commentId: Overload:Refitter.Core.IParameterNameProvider.GetParameterName
+  isSpec: "True"
+  fullName: Refitter.Core.IParameterNameProvider.GetParameterName
+  nameWithType: IParameterNameProvider.GetParameterName
 - uid: Refitter.Core.IPartitioningConfiguration
   name: IPartitioningConfiguration
   href: api/Refitter.Core.IPartitioningConfiguration.html
@@ -1580,6 +1644,25 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.IPartitioningConfiguration.OperationNameTemplate
   nameWithType: IPartitioningConfiguration.OperationNameTemplate
+- uid: Refitter.Core.IPropertyNameProvider
+  name: IPropertyNameProvider
+  href: api/Refitter.Core.IPropertyNameProvider.html
+  commentId: T:Refitter.Core.IPropertyNameProvider
+  fullName: Refitter.Core.IPropertyNameProvider
+  nameWithType: IPropertyNameProvider
+- uid: Refitter.Core.IPropertyNameProvider.GetPropertyName(Refitter.Core.PropertyNameContext)
+  name: GetPropertyName(PropertyNameContext)
+  href: api/Refitter.Core.IPropertyNameProvider.html#Refitter_Core_IPropertyNameProvider_GetPropertyName_Refitter_Core_PropertyNameContext_
+  commentId: M:Refitter.Core.IPropertyNameProvider.GetPropertyName(Refitter.Core.PropertyNameContext)
+  fullName: Refitter.Core.IPropertyNameProvider.GetPropertyName(Refitter.Core.PropertyNameContext)
+  nameWithType: IPropertyNameProvider.GetPropertyName(PropertyNameContext)
+- uid: Refitter.Core.IPropertyNameProvider.GetPropertyName*
+  name: GetPropertyName
+  href: api/Refitter.Core.IPropertyNameProvider.html#Refitter_Core_IPropertyNameProvider_GetPropertyName_
+  commentId: Overload:Refitter.Core.IPropertyNameProvider.GetPropertyName
+  isSpec: "True"
+  fullName: Refitter.Core.IPropertyNameProvider.GetPropertyName
+  nameWithType: IPropertyNameProvider.GetPropertyName
 - uid: Refitter.Core.ISchemaConfiguration
   name: ISchemaConfiguration
   href: api/Refitter.Core.ISchemaConfiguration.html
@@ -1764,46 +1847,6 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.NamingSettings.UseOpenApiTitle
   nameWithType: NamingSettings.UseOpenApiTitle
-- uid: Refitter.Core.OpenApiDocumentFactory
-  name: OpenApiDocumentFactory
-  href: api/Refitter.Core.OpenApiDocumentFactory.html
-  commentId: T:Refitter.Core.OpenApiDocumentFactory
-  fullName: Refitter.Core.OpenApiDocumentFactory
-  nameWithType: OpenApiDocumentFactory
-- uid: Refitter.Core.OpenApiDocumentFactory.CreateAsync(System.Collections.Generic.IEnumerable{System.String},System.Boolean,System.Threading.CancellationToken)
-  name: CreateAsync(IEnumerable<string>, bool, CancellationToken)
-  href: api/Refitter.Core.OpenApiDocumentFactory.html#Refitter_Core_OpenApiDocumentFactory_CreateAsync_System_Collections_Generic_IEnumerable_System_String__System_Boolean_System_Threading_CancellationToken_
-  commentId: M:Refitter.Core.OpenApiDocumentFactory.CreateAsync(System.Collections.Generic.IEnumerable{System.String},System.Boolean,System.Threading.CancellationToken)
-  name.vb: CreateAsync(IEnumerable(Of String), Boolean, CancellationToken)
-  fullName: Refitter.Core.OpenApiDocumentFactory.CreateAsync(System.Collections.Generic.IEnumerable<string>, bool, System.Threading.CancellationToken)
-  fullName.vb: Refitter.Core.OpenApiDocumentFactory.CreateAsync(System.Collections.Generic.IEnumerable(Of String), Boolean, System.Threading.CancellationToken)
-  nameWithType: OpenApiDocumentFactory.CreateAsync(IEnumerable<string>, bool, CancellationToken)
-  nameWithType.vb: OpenApiDocumentFactory.CreateAsync(IEnumerable(Of String), Boolean, CancellationToken)
-- uid: Refitter.Core.OpenApiDocumentFactory.CreateAsync(System.String,System.Boolean,System.Threading.CancellationToken)
-  name: CreateAsync(string, bool, CancellationToken)
-  href: api/Refitter.Core.OpenApiDocumentFactory.html#Refitter_Core_OpenApiDocumentFactory_CreateAsync_System_String_System_Boolean_System_Threading_CancellationToken_
-  commentId: M:Refitter.Core.OpenApiDocumentFactory.CreateAsync(System.String,System.Boolean,System.Threading.CancellationToken)
-  name.vb: CreateAsync(String, Boolean, CancellationToken)
-  fullName: Refitter.Core.OpenApiDocumentFactory.CreateAsync(string, bool, System.Threading.CancellationToken)
-  fullName.vb: Refitter.Core.OpenApiDocumentFactory.CreateAsync(String, Boolean, System.Threading.CancellationToken)
-  nameWithType: OpenApiDocumentFactory.CreateAsync(string, bool, CancellationToken)
-  nameWithType.vb: OpenApiDocumentFactory.CreateAsync(String, Boolean, CancellationToken)
-- uid: Refitter.Core.OpenApiDocumentFactory.CreateAsync(System.String,System.Threading.CancellationToken)
-  name: CreateAsync(string, CancellationToken)
-  href: api/Refitter.Core.OpenApiDocumentFactory.html#Refitter_Core_OpenApiDocumentFactory_CreateAsync_System_String_System_Threading_CancellationToken_
-  commentId: M:Refitter.Core.OpenApiDocumentFactory.CreateAsync(System.String,System.Threading.CancellationToken)
-  name.vb: CreateAsync(String, CancellationToken)
-  fullName: Refitter.Core.OpenApiDocumentFactory.CreateAsync(string, System.Threading.CancellationToken)
-  fullName.vb: Refitter.Core.OpenApiDocumentFactory.CreateAsync(String, System.Threading.CancellationToken)
-  nameWithType: OpenApiDocumentFactory.CreateAsync(string, CancellationToken)
-  nameWithType.vb: OpenApiDocumentFactory.CreateAsync(String, CancellationToken)
-- uid: Refitter.Core.OpenApiDocumentFactory.CreateAsync*
-  name: CreateAsync
-  href: api/Refitter.Core.OpenApiDocumentFactory.html#Refitter_Core_OpenApiDocumentFactory_CreateAsync_
-  commentId: Overload:Refitter.Core.OpenApiDocumentFactory.CreateAsync
-  isSpec: "True"
-  fullName: Refitter.Core.OpenApiDocumentFactory.CreateAsync
-  nameWithType: OpenApiDocumentFactory.CreateAsync
 - uid: Refitter.Core.OperationNameGeneratorTypes
   name: OperationNameGeneratorTypes
   href: api/Refitter.Core.OperationNameGeneratorTypes.html
@@ -2027,6 +2070,131 @@ references:
   commentId: F:Refitter.Core.PackageConstants.Polly
   fullName: Refitter.Core.PackageConstants.Polly
   nameWithType: PackageConstants.Polly
+- uid: Refitter.Core.ParameterNameContext
+  name: ParameterNameContext
+  href: api/Refitter.Core.ParameterNameContext.html
+  commentId: T:Refitter.Core.ParameterNameContext
+  fullName: Refitter.Core.ParameterNameContext
+  nameWithType: ParameterNameContext
+- uid: Refitter.Core.ParameterNameContext.#ctor(System.String,Refitter.Core.ParameterSource,System.Boolean,System.Collections.Generic.IReadOnlyList{System.String})
+  name: ParameterNameContext(string, ParameterSource, bool, IReadOnlyList<string>)
+  href: api/Refitter.Core.ParameterNameContext.html#Refitter_Core_ParameterNameContext__ctor_System_String_Refitter_Core_ParameterSource_System_Boolean_System_Collections_Generic_IReadOnlyList_System_String__
+  commentId: M:Refitter.Core.ParameterNameContext.#ctor(System.String,Refitter.Core.ParameterSource,System.Boolean,System.Collections.Generic.IReadOnlyList{System.String})
+  name.vb: New(String, ParameterSource, Boolean, IReadOnlyList(Of String))
+  fullName: Refitter.Core.ParameterNameContext.ParameterNameContext(string, Refitter.Core.ParameterSource, bool, System.Collections.Generic.IReadOnlyList<string>)
+  fullName.vb: Refitter.Core.ParameterNameContext.New(String, Refitter.Core.ParameterSource, Boolean, System.Collections.Generic.IReadOnlyList(Of String))
+  nameWithType: ParameterNameContext.ParameterNameContext(string, ParameterSource, bool, IReadOnlyList<string>)
+  nameWithType.vb: ParameterNameContext.New(String, ParameterSource, Boolean, IReadOnlyList(Of String))
+- uid: Refitter.Core.ParameterNameContext.#ctor*
+  name: ParameterNameContext
+  href: api/Refitter.Core.ParameterNameContext.html#Refitter_Core_ParameterNameContext__ctor_
+  commentId: Overload:Refitter.Core.ParameterNameContext.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Refitter.Core.ParameterNameContext.ParameterNameContext
+  fullName.vb: Refitter.Core.ParameterNameContext.New
+  nameWithType: ParameterNameContext.ParameterNameContext
+  nameWithType.vb: ParameterNameContext.New
+- uid: Refitter.Core.ParameterNameContext.AllParameterNames
+  name: AllParameterNames
+  href: api/Refitter.Core.ParameterNameContext.html#Refitter_Core_ParameterNameContext_AllParameterNames
+  commentId: P:Refitter.Core.ParameterNameContext.AllParameterNames
+  fullName: Refitter.Core.ParameterNameContext.AllParameterNames
+  nameWithType: ParameterNameContext.AllParameterNames
+- uid: Refitter.Core.ParameterNameContext.AllParameterNames*
+  name: AllParameterNames
+  href: api/Refitter.Core.ParameterNameContext.html#Refitter_Core_ParameterNameContext_AllParameterNames_
+  commentId: Overload:Refitter.Core.ParameterNameContext.AllParameterNames
+  isSpec: "True"
+  fullName: Refitter.Core.ParameterNameContext.AllParameterNames
+  nameWithType: ParameterNameContext.AllParameterNames
+- uid: Refitter.Core.ParameterNameContext.IsRequired
+  name: IsRequired
+  href: api/Refitter.Core.ParameterNameContext.html#Refitter_Core_ParameterNameContext_IsRequired
+  commentId: P:Refitter.Core.ParameterNameContext.IsRequired
+  fullName: Refitter.Core.ParameterNameContext.IsRequired
+  nameWithType: ParameterNameContext.IsRequired
+- uid: Refitter.Core.ParameterNameContext.IsRequired*
+  name: IsRequired
+  href: api/Refitter.Core.ParameterNameContext.html#Refitter_Core_ParameterNameContext_IsRequired_
+  commentId: Overload:Refitter.Core.ParameterNameContext.IsRequired
+  isSpec: "True"
+  fullName: Refitter.Core.ParameterNameContext.IsRequired
+  nameWithType: ParameterNameContext.IsRequired
+- uid: Refitter.Core.ParameterNameContext.Name
+  name: Name
+  href: api/Refitter.Core.ParameterNameContext.html#Refitter_Core_ParameterNameContext_Name
+  commentId: P:Refitter.Core.ParameterNameContext.Name
+  fullName: Refitter.Core.ParameterNameContext.Name
+  nameWithType: ParameterNameContext.Name
+- uid: Refitter.Core.ParameterNameContext.Name*
+  name: Name
+  href: api/Refitter.Core.ParameterNameContext.html#Refitter_Core_ParameterNameContext_Name_
+  commentId: Overload:Refitter.Core.ParameterNameContext.Name
+  isSpec: "True"
+  fullName: Refitter.Core.ParameterNameContext.Name
+  nameWithType: ParameterNameContext.Name
+- uid: Refitter.Core.ParameterNameContext.Source
+  name: Source
+  href: api/Refitter.Core.ParameterNameContext.html#Refitter_Core_ParameterNameContext_Source
+  commentId: P:Refitter.Core.ParameterNameContext.Source
+  fullName: Refitter.Core.ParameterNameContext.Source
+  nameWithType: ParameterNameContext.Source
+- uid: Refitter.Core.ParameterNameContext.Source*
+  name: Source
+  href: api/Refitter.Core.ParameterNameContext.html#Refitter_Core_ParameterNameContext_Source_
+  commentId: Overload:Refitter.Core.ParameterNameContext.Source
+  isSpec: "True"
+  fullName: Refitter.Core.ParameterNameContext.Source
+  nameWithType: ParameterNameContext.Source
+- uid: Refitter.Core.ParameterSource
+  name: ParameterSource
+  href: api/Refitter.Core.ParameterSource.html
+  commentId: T:Refitter.Core.ParameterSource
+  fullName: Refitter.Core.ParameterSource
+  nameWithType: ParameterSource
+- uid: Refitter.Core.ParameterSource.Body
+  name: Body
+  href: api/Refitter.Core.ParameterSource.html#Refitter_Core_ParameterSource_Body
+  commentId: F:Refitter.Core.ParameterSource.Body
+  fullName: Refitter.Core.ParameterSource.Body
+  nameWithType: ParameterSource.Body
+- uid: Refitter.Core.ParameterSource.Cookie
+  name: Cookie
+  href: api/Refitter.Core.ParameterSource.html#Refitter_Core_ParameterSource_Cookie
+  commentId: F:Refitter.Core.ParameterSource.Cookie
+  fullName: Refitter.Core.ParameterSource.Cookie
+  nameWithType: ParameterSource.Cookie
+- uid: Refitter.Core.ParameterSource.Form
+  name: Form
+  href: api/Refitter.Core.ParameterSource.html#Refitter_Core_ParameterSource_Form
+  commentId: F:Refitter.Core.ParameterSource.Form
+  fullName: Refitter.Core.ParameterSource.Form
+  nameWithType: ParameterSource.Form
+- uid: Refitter.Core.ParameterSource.Header
+  name: Header
+  href: api/Refitter.Core.ParameterSource.html#Refitter_Core_ParameterSource_Header
+  commentId: F:Refitter.Core.ParameterSource.Header
+  fullName: Refitter.Core.ParameterSource.Header
+  nameWithType: ParameterSource.Header
+- uid: Refitter.Core.ParameterSource.Other
+  name: Other
+  href: api/Refitter.Core.ParameterSource.html#Refitter_Core_ParameterSource_Other
+  commentId: F:Refitter.Core.ParameterSource.Other
+  fullName: Refitter.Core.ParameterSource.Other
+  nameWithType: ParameterSource.Other
+- uid: Refitter.Core.ParameterSource.Path
+  name: Path
+  href: api/Refitter.Core.ParameterSource.html#Refitter_Core_ParameterSource_Path
+  commentId: F:Refitter.Core.ParameterSource.Path
+  fullName: Refitter.Core.ParameterSource.Path
+  nameWithType: ParameterSource.Path
+- uid: Refitter.Core.ParameterSource.Query
+  name: Query
+  href: api/Refitter.Core.ParameterSource.html#Refitter_Core_ParameterSource_Query
+  commentId: F:Refitter.Core.ParameterSource.Query
+  fullName: Refitter.Core.ParameterSource.Query
+  nameWithType: ParameterSource.Query
 - uid: Refitter.Core.PlannedFile
   name: PlannedFile
   href: api/Refitter.Core.PlannedFile.html
@@ -2078,6 +2246,57 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.PlannedFile.Path
   nameWithType: PlannedFile.Path
+- uid: Refitter.Core.PropertyNameContext
+  name: PropertyNameContext
+  href: api/Refitter.Core.PropertyNameContext.html
+  commentId: T:Refitter.Core.PropertyNameContext
+  fullName: Refitter.Core.PropertyNameContext
+  nameWithType: PropertyNameContext
+- uid: Refitter.Core.PropertyNameContext.#ctor(System.String,System.Boolean)
+  name: PropertyNameContext(string, bool)
+  href: api/Refitter.Core.PropertyNameContext.html#Refitter_Core_PropertyNameContext__ctor_System_String_System_Boolean_
+  commentId: M:Refitter.Core.PropertyNameContext.#ctor(System.String,System.Boolean)
+  name.vb: New(String, Boolean)
+  fullName: Refitter.Core.PropertyNameContext.PropertyNameContext(string, bool)
+  fullName.vb: Refitter.Core.PropertyNameContext.New(String, Boolean)
+  nameWithType: PropertyNameContext.PropertyNameContext(string, bool)
+  nameWithType.vb: PropertyNameContext.New(String, Boolean)
+- uid: Refitter.Core.PropertyNameContext.#ctor*
+  name: PropertyNameContext
+  href: api/Refitter.Core.PropertyNameContext.html#Refitter_Core_PropertyNameContext__ctor_
+  commentId: Overload:Refitter.Core.PropertyNameContext.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Refitter.Core.PropertyNameContext.PropertyNameContext
+  fullName.vb: Refitter.Core.PropertyNameContext.New
+  nameWithType: PropertyNameContext.PropertyNameContext
+  nameWithType.vb: PropertyNameContext.New
+- uid: Refitter.Core.PropertyNameContext.IsRequired
+  name: IsRequired
+  href: api/Refitter.Core.PropertyNameContext.html#Refitter_Core_PropertyNameContext_IsRequired
+  commentId: P:Refitter.Core.PropertyNameContext.IsRequired
+  fullName: Refitter.Core.PropertyNameContext.IsRequired
+  nameWithType: PropertyNameContext.IsRequired
+- uid: Refitter.Core.PropertyNameContext.IsRequired*
+  name: IsRequired
+  href: api/Refitter.Core.PropertyNameContext.html#Refitter_Core_PropertyNameContext_IsRequired_
+  commentId: Overload:Refitter.Core.PropertyNameContext.IsRequired
+  isSpec: "True"
+  fullName: Refitter.Core.PropertyNameContext.IsRequired
+  nameWithType: PropertyNameContext.IsRequired
+- uid: Refitter.Core.PropertyNameContext.Name
+  name: Name
+  href: api/Refitter.Core.PropertyNameContext.html#Refitter_Core_PropertyNameContext_Name
+  commentId: P:Refitter.Core.PropertyNameContext.Name
+  fullName: Refitter.Core.PropertyNameContext.Name
+  nameWithType: PropertyNameContext.Name
+- uid: Refitter.Core.PropertyNameContext.Name*
+  name: Name
+  href: api/Refitter.Core.PropertyNameContext.html#Refitter_Core_PropertyNameContext_Name_
+  commentId: Overload:Refitter.Core.PropertyNameContext.Name
+  isSpec: "True"
+  fullName: Refitter.Core.PropertyNameContext.Name
+  nameWithType: PropertyNameContext.Name
 - uid: Refitter.Core.PropertyNamingPolicy
   name: PropertyNamingPolicy
   href: api/Refitter.Core.PropertyNamingPolicy.html
@@ -2130,69 +2349,12 @@ references:
   fullName.vb: Refitter.Core.ReferenceResolutionException.New
   nameWithType: ReferenceResolutionException.ReferenceResolutionException
   nameWithType.vb: ReferenceResolutionException.New
-- uid: Refitter.Core.RefitDocumentFilter
-  name: RefitDocumentFilter
-  href: api/Refitter.Core.RefitDocumentFilter.html
-  commentId: T:Refitter.Core.RefitDocumentFilter
-  fullName: Refitter.Core.RefitDocumentFilter
-  nameWithType: RefitDocumentFilter
-- uid: Refitter.Core.RefitDocumentFilter.FilterByPath(NSwag.OpenApiDocument,System.String[])
-  name: FilterByPath(OpenApiDocument, string[])
-  href: api/Refitter.Core.RefitDocumentFilter.html#Refitter_Core_RefitDocumentFilter_FilterByPath_NSwag_OpenApiDocument_System_String___
-  commentId: M:Refitter.Core.RefitDocumentFilter.FilterByPath(NSwag.OpenApiDocument,System.String[])
-  name.vb: FilterByPath(OpenApiDocument, String())
-  fullName: Refitter.Core.RefitDocumentFilter.FilterByPath(NSwag.OpenApiDocument, string[])
-  fullName.vb: Refitter.Core.RefitDocumentFilter.FilterByPath(NSwag.OpenApiDocument, String())
-  nameWithType: RefitDocumentFilter.FilterByPath(OpenApiDocument, string[])
-  nameWithType.vb: RefitDocumentFilter.FilterByPath(OpenApiDocument, String())
-- uid: Refitter.Core.RefitDocumentFilter.FilterByPath*
-  name: FilterByPath
-  href: api/Refitter.Core.RefitDocumentFilter.html#Refitter_Core_RefitDocumentFilter_FilterByPath_
-  commentId: Overload:Refitter.Core.RefitDocumentFilter.FilterByPath
-  isSpec: "True"
-  fullName: Refitter.Core.RefitDocumentFilter.FilterByPath
-  nameWithType: RefitDocumentFilter.FilterByPath
-- uid: Refitter.Core.RefitDocumentFilter.FilterByTags(NSwag.OpenApiDocument,System.String[])
-  name: FilterByTags(OpenApiDocument, string[])
-  href: api/Refitter.Core.RefitDocumentFilter.html#Refitter_Core_RefitDocumentFilter_FilterByTags_NSwag_OpenApiDocument_System_String___
-  commentId: M:Refitter.Core.RefitDocumentFilter.FilterByTags(NSwag.OpenApiDocument,System.String[])
-  name.vb: FilterByTags(OpenApiDocument, String())
-  fullName: Refitter.Core.RefitDocumentFilter.FilterByTags(NSwag.OpenApiDocument, string[])
-  fullName.vb: Refitter.Core.RefitDocumentFilter.FilterByTags(NSwag.OpenApiDocument, String())
-  nameWithType: RefitDocumentFilter.FilterByTags(OpenApiDocument, string[])
-  nameWithType.vb: RefitDocumentFilter.FilterByTags(OpenApiDocument, String())
-- uid: Refitter.Core.RefitDocumentFilter.FilterByTags*
-  name: FilterByTags
-  href: api/Refitter.Core.RefitDocumentFilter.html#Refitter_Core_RefitDocumentFilter_FilterByTags_
-  commentId: Overload:Refitter.Core.RefitDocumentFilter.FilterByTags
-  isSpec: "True"
-  fullName: Refitter.Core.RefitDocumentFilter.FilterByTags
-  nameWithType: RefitDocumentFilter.FilterByTags
 - uid: Refitter.Core.RefitGenerator
   name: RefitGenerator
   href: api/Refitter.Core.RefitGenerator.html
   commentId: T:Refitter.Core.RefitGenerator
   fullName: Refitter.Core.RefitGenerator
   nameWithType: RefitGenerator
-- uid: Refitter.Core.RefitGenerator.#ctor(Refitter.Core.RefitGeneratorSettings,NSwag.OpenApiDocument)
-  name: RefitGenerator(RefitGeneratorSettings, OpenApiDocument)
-  href: api/Refitter.Core.RefitGenerator.html#Refitter_Core_RefitGenerator__ctor_Refitter_Core_RefitGeneratorSettings_NSwag_OpenApiDocument_
-  commentId: M:Refitter.Core.RefitGenerator.#ctor(Refitter.Core.RefitGeneratorSettings,NSwag.OpenApiDocument)
-  name.vb: New(RefitGeneratorSettings, OpenApiDocument)
-  fullName: Refitter.Core.RefitGenerator.RefitGenerator(Refitter.Core.RefitGeneratorSettings, NSwag.OpenApiDocument)
-  fullName.vb: Refitter.Core.RefitGenerator.New(Refitter.Core.RefitGeneratorSettings, NSwag.OpenApiDocument)
-  nameWithType: RefitGenerator.RefitGenerator(RefitGeneratorSettings, OpenApiDocument)
-  nameWithType.vb: RefitGenerator.New(RefitGeneratorSettings, OpenApiDocument)
-- uid: Refitter.Core.RefitGenerator.#ctor*
-  name: RefitGenerator
-  href: api/Refitter.Core.RefitGenerator.html#Refitter_Core_RefitGenerator__ctor_
-  commentId: Overload:Refitter.Core.RefitGenerator.#ctor
-  isSpec: "True"
-  name.vb: New
-  fullName: Refitter.Core.RefitGenerator.RefitGenerator
-  fullName.vb: Refitter.Core.RefitGenerator.New
-  nameWithType: RefitGenerator.RefitGenerator
-  nameWithType.vb: RefitGenerator.New
 - uid: Refitter.Core.RefitGenerator.CreateAsync(Refitter.Core.RefitGeneratorSettings,System.Threading.CancellationToken)
   name: CreateAsync(RefitGeneratorSettings, CancellationToken)
   href: api/Refitter.Core.RefitGenerator.html#Refitter_Core_RefitGenerator_CreateAsync_Refitter_Core_RefitGeneratorSettings_System_Threading_CancellationToken_
@@ -2206,6 +2368,19 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.RefitGenerator.CreateAsync
   nameWithType: RefitGenerator.CreateAsync
+- uid: Refitter.Core.RefitGenerator.DocumentInfo
+  name: DocumentInfo
+  href: api/Refitter.Core.RefitGenerator.html#Refitter_Core_RefitGenerator_DocumentInfo
+  commentId: P:Refitter.Core.RefitGenerator.DocumentInfo
+  fullName: Refitter.Core.RefitGenerator.DocumentInfo
+  nameWithType: RefitGenerator.DocumentInfo
+- uid: Refitter.Core.RefitGenerator.DocumentInfo*
+  name: DocumentInfo
+  href: api/Refitter.Core.RefitGenerator.html#Refitter_Core_RefitGenerator_DocumentInfo_
+  commentId: Overload:Refitter.Core.RefitGenerator.DocumentInfo
+  isSpec: "True"
+  fullName: Refitter.Core.RefitGenerator.DocumentInfo
+  nameWithType: RefitGenerator.DocumentInfo
 - uid: Refitter.Core.RefitGenerator.Generate
   name: Generate()
   href: api/Refitter.Core.RefitGenerator.html#Refitter_Core_RefitGenerator_Generate
@@ -2232,19 +2407,6 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.RefitGenerator.GenerateMultipleFiles
   nameWithType: RefitGenerator.GenerateMultipleFiles
-- uid: Refitter.Core.RefitGenerator.OpenApiDocument
-  name: OpenApiDocument
-  href: api/Refitter.Core.RefitGenerator.html#Refitter_Core_RefitGenerator_OpenApiDocument
-  commentId: P:Refitter.Core.RefitGenerator.OpenApiDocument
-  fullName: Refitter.Core.RefitGenerator.OpenApiDocument
-  nameWithType: RefitGenerator.OpenApiDocument
-- uid: Refitter.Core.RefitGenerator.OpenApiDocument*
-  name: OpenApiDocument
-  href: api/Refitter.Core.RefitGenerator.html#Refitter_Core_RefitGenerator_OpenApiDocument_
-  commentId: Overload:Refitter.Core.RefitGenerator.OpenApiDocument
-  isSpec: "True"
-  fullName: Refitter.Core.RefitGenerator.OpenApiDocument
-  nameWithType: RefitGenerator.OpenApiDocument
 - uid: Refitter.Core.RefitGeneratorSettings
   name: RefitGeneratorSettings
   href: api/Refitter.Core.RefitGeneratorSettings.html
@@ -2796,19 +2958,19 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.RefitGeneratorSettings.OutputFolder
   nameWithType: RefitGeneratorSettings.OutputFolder
-- uid: Refitter.Core.RefitGeneratorSettings.ParameterNameGenerator
-  name: ParameterNameGenerator
-  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_ParameterNameGenerator
-  commentId: P:Refitter.Core.RefitGeneratorSettings.ParameterNameGenerator
-  fullName: Refitter.Core.RefitGeneratorSettings.ParameterNameGenerator
-  nameWithType: RefitGeneratorSettings.ParameterNameGenerator
-- uid: Refitter.Core.RefitGeneratorSettings.ParameterNameGenerator*
-  name: ParameterNameGenerator
-  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_ParameterNameGenerator_
-  commentId: Overload:Refitter.Core.RefitGeneratorSettings.ParameterNameGenerator
+- uid: Refitter.Core.RefitGeneratorSettings.ParameterNameProvider
+  name: ParameterNameProvider
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_ParameterNameProvider
+  commentId: P:Refitter.Core.RefitGeneratorSettings.ParameterNameProvider
+  fullName: Refitter.Core.RefitGeneratorSettings.ParameterNameProvider
+  nameWithType: RefitGeneratorSettings.ParameterNameProvider
+- uid: Refitter.Core.RefitGeneratorSettings.ParameterNameProvider*
+  name: ParameterNameProvider
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_ParameterNameProvider_
+  commentId: Overload:Refitter.Core.RefitGeneratorSettings.ParameterNameProvider
   isSpec: "True"
-  fullName: Refitter.Core.RefitGeneratorSettings.ParameterNameGenerator
-  nameWithType: RefitGeneratorSettings.ParameterNameGenerator
+  fullName: Refitter.Core.RefitGeneratorSettings.ParameterNameProvider
+  nameWithType: RefitGeneratorSettings.ParameterNameProvider
 - uid: Refitter.Core.RefitGeneratorSettings.PropertyNamingPolicy
   name: PropertyNamingPolicy
   href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_PropertyNamingPolicy
@@ -3224,57 +3386,6 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.RunnerDiagnostic.Message
   nameWithType: RunnerDiagnostic.Message
-- uid: Refitter.Core.SchemaCleaner
-  name: SchemaCleaner
-  href: api/Refitter.Core.SchemaCleaner.html
-  commentId: T:Refitter.Core.SchemaCleaner
-  fullName: Refitter.Core.SchemaCleaner
-  nameWithType: SchemaCleaner
-- uid: Refitter.Core.SchemaCleaner.#ctor(NSwag.OpenApiDocument,System.String[])
-  name: SchemaCleaner(OpenApiDocument, string[])
-  href: api/Refitter.Core.SchemaCleaner.html#Refitter_Core_SchemaCleaner__ctor_NSwag_OpenApiDocument_System_String___
-  commentId: M:Refitter.Core.SchemaCleaner.#ctor(NSwag.OpenApiDocument,System.String[])
-  name.vb: New(OpenApiDocument, String())
-  fullName: Refitter.Core.SchemaCleaner.SchemaCleaner(NSwag.OpenApiDocument, string[])
-  fullName.vb: Refitter.Core.SchemaCleaner.New(NSwag.OpenApiDocument, String())
-  nameWithType: SchemaCleaner.SchemaCleaner(OpenApiDocument, string[])
-  nameWithType.vb: SchemaCleaner.New(OpenApiDocument, String())
-- uid: Refitter.Core.SchemaCleaner.#ctor*
-  name: SchemaCleaner
-  href: api/Refitter.Core.SchemaCleaner.html#Refitter_Core_SchemaCleaner__ctor_
-  commentId: Overload:Refitter.Core.SchemaCleaner.#ctor
-  isSpec: "True"
-  name.vb: New
-  fullName: Refitter.Core.SchemaCleaner.SchemaCleaner
-  fullName.vb: Refitter.Core.SchemaCleaner.New
-  nameWithType: SchemaCleaner.SchemaCleaner
-  nameWithType.vb: SchemaCleaner.New
-- uid: Refitter.Core.SchemaCleaner.IncludeInheritanceHierarchy
-  name: IncludeInheritanceHierarchy
-  href: api/Refitter.Core.SchemaCleaner.html#Refitter_Core_SchemaCleaner_IncludeInheritanceHierarchy
-  commentId: P:Refitter.Core.SchemaCleaner.IncludeInheritanceHierarchy
-  fullName: Refitter.Core.SchemaCleaner.IncludeInheritanceHierarchy
-  nameWithType: SchemaCleaner.IncludeInheritanceHierarchy
-- uid: Refitter.Core.SchemaCleaner.IncludeInheritanceHierarchy*
-  name: IncludeInheritanceHierarchy
-  href: api/Refitter.Core.SchemaCleaner.html#Refitter_Core_SchemaCleaner_IncludeInheritanceHierarchy_
-  commentId: Overload:Refitter.Core.SchemaCleaner.IncludeInheritanceHierarchy
-  isSpec: "True"
-  fullName: Refitter.Core.SchemaCleaner.IncludeInheritanceHierarchy
-  nameWithType: SchemaCleaner.IncludeInheritanceHierarchy
-- uid: Refitter.Core.SchemaCleaner.RemoveUnreferencedSchema
-  name: RemoveUnreferencedSchema()
-  href: api/Refitter.Core.SchemaCleaner.html#Refitter_Core_SchemaCleaner_RemoveUnreferencedSchema
-  commentId: M:Refitter.Core.SchemaCleaner.RemoveUnreferencedSchema
-  fullName: Refitter.Core.SchemaCleaner.RemoveUnreferencedSchema()
-  nameWithType: SchemaCleaner.RemoveUnreferencedSchema()
-- uid: Refitter.Core.SchemaCleaner.RemoveUnreferencedSchema*
-  name: RemoveUnreferencedSchema
-  href: api/Refitter.Core.SchemaCleaner.html#Refitter_Core_SchemaCleaner_RemoveUnreferencedSchema_
-  commentId: Overload:Refitter.Core.SchemaCleaner.RemoveUnreferencedSchema
-  isSpec: "True"
-  fullName: Refitter.Core.SchemaCleaner.RemoveUnreferencedSchema
-  nameWithType: SchemaCleaner.RemoveUnreferencedSchema
 - uid: Refitter.Core.Serializer
   name: Serializer
   href: api/Refitter.Core.Serializer.html
@@ -3827,67 +3938,3 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.Warning.Title
   nameWithType: Warning.Title
-- uid: Refitter.Core.XmlDocumentationGenerator
-  name: XmlDocumentationGenerator
-  href: api/Refitter.Core.XmlDocumentationGenerator.html
-  commentId: T:Refitter.Core.XmlDocumentationGenerator
-  fullName: Refitter.Core.XmlDocumentationGenerator
-  nameWithType: XmlDocumentationGenerator
-- uid: Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentationByEndpoint(NSwag.OpenApiOperation,System.Text.StringBuilder)
-  name: AppendInterfaceDocumentationByEndpoint(OpenApiOperation, StringBuilder)
-  href: api/Refitter.Core.XmlDocumentationGenerator.html#Refitter_Core_XmlDocumentationGenerator_AppendInterfaceDocumentationByEndpoint_NSwag_OpenApiOperation_System_Text_StringBuilder_
-  commentId: M:Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentationByEndpoint(NSwag.OpenApiOperation,System.Text.StringBuilder)
-  fullName: Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentationByEndpoint(NSwag.OpenApiOperation, System.Text.StringBuilder)
-  nameWithType: XmlDocumentationGenerator.AppendInterfaceDocumentationByEndpoint(OpenApiOperation, StringBuilder)
-- uid: Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentationByEndpoint*
-  name: AppendInterfaceDocumentationByEndpoint
-  href: api/Refitter.Core.XmlDocumentationGenerator.html#Refitter_Core_XmlDocumentationGenerator_AppendInterfaceDocumentationByEndpoint_
-  commentId: Overload:Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentationByEndpoint
-  isSpec: "True"
-  fullName: Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentationByEndpoint
-  nameWithType: XmlDocumentationGenerator.AppendInterfaceDocumentationByEndpoint
-- uid: Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentationByTag(NSwag.OpenApiDocument,System.String,System.Text.StringBuilder)
-  name: AppendInterfaceDocumentationByTag(OpenApiDocument, string, StringBuilder)
-  href: api/Refitter.Core.XmlDocumentationGenerator.html#Refitter_Core_XmlDocumentationGenerator_AppendInterfaceDocumentationByTag_NSwag_OpenApiDocument_System_String_System_Text_StringBuilder_
-  commentId: M:Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentationByTag(NSwag.OpenApiDocument,System.String,System.Text.StringBuilder)
-  name.vb: AppendInterfaceDocumentationByTag(OpenApiDocument, String, StringBuilder)
-  fullName: Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentationByTag(NSwag.OpenApiDocument, string, System.Text.StringBuilder)
-  fullName.vb: Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentationByTag(NSwag.OpenApiDocument, String, System.Text.StringBuilder)
-  nameWithType: XmlDocumentationGenerator.AppendInterfaceDocumentationByTag(OpenApiDocument, string, StringBuilder)
-  nameWithType.vb: XmlDocumentationGenerator.AppendInterfaceDocumentationByTag(OpenApiDocument, String, StringBuilder)
-- uid: Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentationByTag*
-  name: AppendInterfaceDocumentationByTag
-  href: api/Refitter.Core.XmlDocumentationGenerator.html#Refitter_Core_XmlDocumentationGenerator_AppendInterfaceDocumentationByTag_
-  commentId: Overload:Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentationByTag
-  isSpec: "True"
-  fullName: Refitter.Core.XmlDocumentationGenerator.AppendInterfaceDocumentationByTag
-  nameWithType: XmlDocumentationGenerator.AppendInterfaceDocumentationByTag
-- uid: Refitter.Core.XmlDocumentationGenerator.AppendMethodDocumentation(NSwag.CodeGeneration.CSharp.Models.CSharpOperationModel,System.Collections.Generic.IReadOnlyList{System.String},System.Boolean,System.Text.StringBuilder,System.String)
-  name: AppendMethodDocumentation(CSharpOperationModel, IReadOnlyList<string>, bool, StringBuilder, string?)
-  href: api/Refitter.Core.XmlDocumentationGenerator.html#Refitter_Core_XmlDocumentationGenerator_AppendMethodDocumentation_NSwag_CodeGeneration_CSharp_Models_CSharpOperationModel_System_Collections_Generic_IReadOnlyList_System_String__System_Boolean_System_Text_StringBuilder_System_String_
-  commentId: M:Refitter.Core.XmlDocumentationGenerator.AppendMethodDocumentation(NSwag.CodeGeneration.CSharp.Models.CSharpOperationModel,System.Collections.Generic.IReadOnlyList{System.String},System.Boolean,System.Text.StringBuilder,System.String)
-  name.vb: AppendMethodDocumentation(CSharpOperationModel, IReadOnlyList(Of String), Boolean, StringBuilder, String)
-  fullName: Refitter.Core.XmlDocumentationGenerator.AppendMethodDocumentation(NSwag.CodeGeneration.CSharp.Models.CSharpOperationModel, System.Collections.Generic.IReadOnlyList<string>, bool, System.Text.StringBuilder, string?)
-  fullName.vb: Refitter.Core.XmlDocumentationGenerator.AppendMethodDocumentation(NSwag.CodeGeneration.CSharp.Models.CSharpOperationModel, System.Collections.Generic.IReadOnlyList(Of String), Boolean, System.Text.StringBuilder, String)
-  nameWithType: XmlDocumentationGenerator.AppendMethodDocumentation(CSharpOperationModel, IReadOnlyList<string>, bool, StringBuilder, string?)
-  nameWithType.vb: XmlDocumentationGenerator.AppendMethodDocumentation(CSharpOperationModel, IReadOnlyList(Of String), Boolean, StringBuilder, String)
-- uid: Refitter.Core.XmlDocumentationGenerator.AppendMethodDocumentation*
-  name: AppendMethodDocumentation
-  href: api/Refitter.Core.XmlDocumentationGenerator.html#Refitter_Core_XmlDocumentationGenerator_AppendMethodDocumentation_
-  commentId: Overload:Refitter.Core.XmlDocumentationGenerator.AppendMethodDocumentation
-  isSpec: "True"
-  fullName: Refitter.Core.XmlDocumentationGenerator.AppendMethodDocumentation
-  nameWithType: XmlDocumentationGenerator.AppendMethodDocumentation
-- uid: Refitter.Core.XmlDocumentationGenerator.AppendSingleInterfaceDocumentation(NSwag.OpenApiDocument,System.Text.StringBuilder)
-  name: AppendSingleInterfaceDocumentation(OpenApiDocument, StringBuilder)
-  href: api/Refitter.Core.XmlDocumentationGenerator.html#Refitter_Core_XmlDocumentationGenerator_AppendSingleInterfaceDocumentation_NSwag_OpenApiDocument_System_Text_StringBuilder_
-  commentId: M:Refitter.Core.XmlDocumentationGenerator.AppendSingleInterfaceDocumentation(NSwag.OpenApiDocument,System.Text.StringBuilder)
-  fullName: Refitter.Core.XmlDocumentationGenerator.AppendSingleInterfaceDocumentation(NSwag.OpenApiDocument, System.Text.StringBuilder)
-  nameWithType: XmlDocumentationGenerator.AppendSingleInterfaceDocumentation(OpenApiDocument, StringBuilder)
-- uid: Refitter.Core.XmlDocumentationGenerator.AppendSingleInterfaceDocumentation*
-  name: AppendSingleInterfaceDocumentation
-  href: api/Refitter.Core.XmlDocumentationGenerator.html#Refitter_Core_XmlDocumentationGenerator_AppendSingleInterfaceDocumentation_
-  commentId: Overload:Refitter.Core.XmlDocumentationGenerator.AppendSingleInterfaceDocumentation
-  isSpec: "True"
-  fullName: Refitter.Core.XmlDocumentationGenerator.AppendSingleInterfaceDocumentation
-  nameWithType: XmlDocumentationGenerator.AppendSingleInterfaceDocumentation
