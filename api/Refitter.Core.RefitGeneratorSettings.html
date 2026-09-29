@@ -461,7 +461,7 @@ public AuthenticationHeaderStyle AuthenticationHeaderStyle { get; set; }</code><
   <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L290"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets the settings describing how to generate contract types</p>
+  <div class="markdown level1 summary"><p>Gets or sets the settings describing how to generate types using NSwag</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -623,8 +623,8 @@ public CollectionFormat CollectionFormat { get; set; }</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L432"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets a directory path which contains Liquid templates for the generated contracts. If null or empty,
-uses the built-in templates.</p>
+  <div class="markdown level1 summary"><p>Gets or sets a directory path which contains liquid templates for NSwag. If null or empty, uses default
+templates.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1409,7 +1409,7 @@ public string[]? OpenApiPaths { get; set; }</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L334"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The strategy used to name operations and to group them into interfaces</p>
+  <div class="markdown level1 summary"><p>The NSwag IOperationNameGenerator implementation to use</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1566,20 +1566,20 @@ For the Source Generator, this is the name of the generated class and the defaul
 
 
 
-  <a id="Refitter_Core_RefitGeneratorSettings_ParameterNameProvider_" data-uid="Refitter.Core.RefitGeneratorSettings.ParameterNameProvider*"></a>
+  <a id="Refitter_Core_RefitGeneratorSettings_ParameterNameGenerator_" data-uid="Refitter.Core.RefitGeneratorSettings.ParameterNameGenerator*"></a>
 
-  <h3 id="Refitter_Core_RefitGeneratorSettings_ParameterNameProvider" data-uid="Refitter.Core.RefitGeneratorSettings.ParameterNameProvider">
-  ParameterNameProvider
+  <h3 id="Refitter_Core_RefitGeneratorSettings_ParameterNameGenerator" data-uid="Refitter.Core.RefitGeneratorSettings.ParameterNameGenerator">
+  ParameterNameGenerator
   <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L410"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets a custom <a class="xref" href="Refitter.Core.IParameterNameProvider.html">IParameterNameProvider</a> that names the parameters of generated interface methods.</p>
+  <div class="markdown level1 summary"><p>Gets or sets the parameter name generator for customizing parameter names.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[JsonIgnore]
-public IParameterNameProvider? ParameterNameProvider { get; set; }</code></pre>
+public IParameterNameGenerator? ParameterNameGenerator { get; set; }</code></pre>
   </div>
 
 
@@ -1588,7 +1588,7 @@ public IParameterNameProvider? ParameterNameProvider { get; set; }</code></pre>
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Refitter.Core.IParameterNameProvider.html">IParameterNameProvider</a></dt>
+    <dt><span class="xref">IParameterNameGenerator</span></dt>
     <dd></dd>
   </dl>
 
@@ -2003,7 +2003,7 @@ in ISO 8601 standard date format using delimiters (for example: 2023-06-15)</p>
 
   <div class="markdown level1 summary"><p>Set to <code>true</code> to use System.Text.Json polymorphic serialization. Default is <code>false</code>
 Gets a value indicating whether to use System.Text.Json polymorphic serialization
-Replaces JsonInheritanceConverter attributes with System.Text.Json JsonPolymorphicAttributes.
+Replaces NSwag JsonInheritanceConverter attributes with System.Text.Json JsonPolymorphicAttributes.
 To have the native support of inheritance (de)serialization and fallback to base types when
 payloads with (yet) unknown types are offered by newer versions of an API
 See <a href="https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/polymorphism">https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/polymorphism</a> for more information</p>

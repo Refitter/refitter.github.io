@@ -5,20 +5,6 @@
   "files": [
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Refitter.Core.ApiDocumentInfo.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Refitter.Core.ApiDocumentInfo.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Refitter.Core.ApiDocumentInfo",
-      "Summary": "<p sourcefile=\"api/Refitter.Core.ApiDocumentInfo.yml\" sourcestartlinenumber=\"1\">Describes the OpenAPI document that code is generated from, after filtering and schema trimming.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Refitter.Core.ApizrPackages.yml",
       "output": {
         ".html": {
@@ -271,20 +257,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Refitter.Core.IParameterNameProvider.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Refitter.Core.IParameterNameProvider.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Refitter.Core.IParameterNameProvider",
-      "Summary": "<p sourcefile=\"api/Refitter.Core.IParameterNameProvider.yml\" sourcestartlinenumber=\"1\">Provides the C# parameter names of generated Refit interface methods.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Refitter.Core.IPartitioningConfiguration.yml",
       "output": {
         ".html": {
@@ -296,20 +268,6 @@
       "IsMRef": true,
       "Title": "Refitter.Core.IPartitioningConfiguration",
       "Summary": "<p sourcefile=\"api/Refitter.Core.IPartitioningConfiguration.yml\" sourcestartlinenumber=\"1\">Configuration for how operations are partitioned into Refit interfaces.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Refitter.Core.IPropertyNameProvider.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Refitter.Core.IPropertyNameProvider.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Refitter.Core.IPropertyNameProvider",
-      "Summary": "<p sourcefile=\"api/Refitter.Core.IPropertyNameProvider.yml\" sourcestartlinenumber=\"1\">Provides the C# property names of generated contract types.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -397,6 +355,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.OpenApiDocumentFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.OpenApiDocumentFactory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.OpenApiDocumentFactory",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.OpenApiDocumentFactory.yml\" sourcestartlinenumber=\"1\">Creates instances of <xref href=\"NSwag.OpenApiDocument\" data-throw-if-not-resolved=\"false\"></xref> from file paths or URLs.\nSupports loading single documents or merging multiple documents into one.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Refitter.Core.OperationNameGeneratorTypes.yml",
       "output": {
         ".html": {
@@ -407,7 +379,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Refitter.Core.OperationNameGeneratorTypes",
-      "Summary": "<p sourcefile=\"api/Refitter.Core.OperationNameGeneratorTypes.yml\" sourcestartlinenumber=\"1\">The strategy used to name operations and to group them into interfaces</p>\n"
+      "Summary": "<p sourcefile=\"api/Refitter.Core.OperationNameGeneratorTypes.yml\" sourcestartlinenumber=\"1\">The NSwag IOperationNameGenerator implementation to use</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -453,34 +425,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Refitter.Core.ParameterNameContext.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Refitter.Core.ParameterNameContext.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Refitter.Core.ParameterNameContext",
-      "Summary": "<p sourcefile=\"api/Refitter.Core.ParameterNameContext.yml\" sourcestartlinenumber=\"1\">Describes an operation parameter that needs a C# parameter name.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Refitter.Core.ParameterSource.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Refitter.Core.ParameterSource.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Refitter.Core.ParameterSource",
-      "Summary": "<p sourcefile=\"api/Refitter.Core.ParameterSource.yml\" sourcestartlinenumber=\"1\">Where an operation parameter is sent in the HTTP request.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Refitter.Core.PlannedFile.yml",
       "output": {
         ".html": {
@@ -492,20 +436,6 @@
       "IsMRef": true,
       "Title": "Refitter.Core.PlannedFile",
       "Summary": "<p sourcefile=\"api/Refitter.Core.PlannedFile.yml\" sourcestartlinenumber=\"1\">Represents a planned output file with its relative path and generated content.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Refitter.Core.PropertyNameContext.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Refitter.Core.PropertyNameContext.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Refitter.Core.PropertyNameContext",
-      "Summary": "<p sourcefile=\"api/Refitter.Core.PropertyNameContext.yml\" sourcestartlinenumber=\"1\">Describes a schema property that needs a C# property name.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -534,6 +464,20 @@
       "IsMRef": true,
       "Title": "Refitter.Core.ReferenceResolutionException",
       "Summary": "<p sourcefile=\"api/Refitter.Core.ReferenceResolutionException.yml\" sourcestartlinenumber=\"1\">Thrown when an OpenAPI document contains a <code>$ref</code> that Refitter refuses to resolve, such as a\nremote reference (when remote references are disabled) or a local reference that escapes the input\ndocument's directory tree.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.RefitDocumentFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.RefitDocumentFilter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.RefitDocumentFilter",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.RefitDocumentFilter.yml\" sourcestartlinenumber=\"1\">Filters an OpenAPI document by tags and path patterns.\nEach filter operation returns a new document without mutating the input.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -618,6 +562,20 @@
       "IsMRef": true,
       "Title": "Refitter.Core.RunnerDiagnostic",
       "Summary": "<p sourcefile=\"api/Refitter.Core.RunnerDiagnostic.yml\" sourcestartlinenumber=\"1\">Represents a diagnostic message from a generation run, such as a validation error or warning.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.SchemaCleaner.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.SchemaCleaner.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.SchemaCleaner",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.SchemaCleaner.yml\" sourcestartlinenumber=\"1\">Cleans up the OpenAPI schema by removing unreferenced schemas and handling inheritance hierarchies.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -800,6 +758,20 @@
       "IsMRef": true,
       "Title": "Refitter.Core.Warning",
       "Summary": "<p sourcefile=\"api/Refitter.Core.Warning.yml\" sourcestartlinenumber=\"1\">Represents a user-facing configuration warning message.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.XmlDocumentationGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.XmlDocumentationGenerator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.XmlDocumentationGenerator",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.XmlDocumentationGenerator.yml\" sourcestartlinenumber=\"1\">Generator class for creating XML documentation.</p>\n"
     },
     {
       "type": "ManagedReference",
