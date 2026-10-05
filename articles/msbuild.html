@@ -129,7 +129,8 @@
     &lt;RefitterGenerateTask ProjectFileDirectory=&quot;$(MSBuildProjectDirectory)&quot;
                           DisableLogging=&quot;$(RefitterNoLogging)&quot;
                           SkipValidation=&quot;$(RefitterSkipValidation)&quot;
-                          IncludePatterns=&quot;$(RefitterIncludePatterns)&quot;&gt;
+                          IncludePatterns=&quot;$(RefitterIncludePatterns)&quot;
+                          JsonLibraryVersion=&quot;$(RefitterJsonLibraryVersion)&quot;&gt;
         &lt;Output TaskParameter=&quot;GeneratedFiles&quot; ItemName=&quot;RefitterGeneratedFiles&quot; /&gt;
     &lt;/RefitterGenerateTask&gt;
     &lt;ItemGroup&gt;
@@ -148,6 +149,12 @@
 &lt;/PropertyGroup&gt;
 </code></pre>
 <p>When <code>RefitterAutoScan</code> is <code>false</code>, run <code>dotnet build -t:RefitterGenerate</code> whenever you want MSBuild to regenerate code from <code>.refitter</code> files without re-enabling generation on every normal build. After that explicit generation step, regular <code>dotnet build</code> invocations can reuse the generated <code>.cs</code> files without re-running the Refitter task.</p>
+<p>To keep <code>jsonLibraryVersion</code> in sync with the target framework of the consuming project, set <code>RefitterJsonLibraryVersion</code>. It is passed to Refitter as <code>--json-library-version</code>:</p>
+<pre><code class="lang-xml">&lt;PropertyGroup&gt;
+  &lt;RefitterJsonLibraryVersion&gt;$([MSBuild]::GetTargetFrameworkVersion('$(TargetFramework)'))&lt;/RefitterJsonLibraryVersion&gt;
+&lt;/PropertyGroup&gt;
+</code></pre>
+<p><code>RefitterJsonLibraryVersion</code> must be a version number such as <code>9.0</code>. If the <code>.refitter</code> file sets a non-default <code>codeGeneratorSettings.jsonLibraryVersion</code>, that value takes precedence over a default (<code>8.0</code>) property value. Generation fails only when both the property and the <code>.refitter</code> file specify non-default values, so use only one source. Because <code>8.0</code> is the default, an explicit <code>&quot;jsonLibraryVersion&quot;: 8.0</code> in the <code>.refitter</code> file is treated the same as not setting it, and is overridden by <code>RefitterJsonLibraryVersion</code>. For multi-targeted projects (<code>TargetFrameworks</code>), every target framework writes to the same generated files, so don't derive the value from <code>$(TargetFramework)</code>. Set a fixed value that matches the lowest target framework instead, for example <code>&lt;RefitterJsonLibraryVersion&gt;8.0&lt;/RefitterJsonLibraryVersion&gt;</code> for <code>net8.0;net9.0</code>.</p>
 
 </article>
 
