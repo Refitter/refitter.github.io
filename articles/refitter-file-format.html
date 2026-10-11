@@ -161,7 +161,8 @@
     &quot;useWindowsAuthentication&quot;: true, // Optional. Default=false
     &quot;transientErrorHandler&quot;: &quot;HttpResilience&quot;, // Optional. Set this to configure transient error handling with a retry policy that uses a jittered backoff. May be one of None, Polly, HttpResilience
     &quot;maxRetryCount&quot;: 3, // Optional. Default=6
-    &quot;firstBackoffRetryInSeconds&quot;: 0.5 // Optional. Default=1.0
+    &quot;firstBackoffRetryInSeconds&quot;: 0.5, // Optional. Default=1.0
+    &quot;useGeneratedRefitClient&quot;: true // Optional. Use the source-generated AddRefitGeneratedClient instead of AddRefitClient. Requires Refit 12.1.0+ (14.0.0+ if the interfaces have query parameters). Default=false
   },
   &quot;apizrSettings&quot;: { // Optional
     &quot;withRequestOptions&quot;: true, // Optional. Default=true
@@ -279,6 +280,7 @@
 <li><code>transientErrorHandler</code>: Set this to configure transient error handling with a retry policy that uses a jittered backoff. See <a href="https://refitter.github.io/api/Refitter.Core.TransientErrorHandler.html">https://refitter.github.io/api/Refitter.Core.TransientErrorHandler.html</a></li>
 <li><code>maxRetryCount</code> - This is the max retry count used in the Polly retry policy. Default is 6</li>
 <li><code>firstBackoffRetryInSeconds</code> - This is the duration of the initial retry backoff. Default is 1 second</li>
+<li><code>useGeneratedRefitClient</code> - Set this to <code>true</code> to register clients with the source-generated <code>AddRefitGeneratedClient</code> instead of the reflection-based <code>AddRefitClient</code>. Requires Refit 12.1.0 or newer, and Refit 14.0.0 or newer if the interfaces have query parameters. This is ignored when Apizr registration is generated. Default is <code>false</code></li>
 </ul>
 </li>
 <li><code>apizrSettings</code> - Setting this will format Refit interface to be managed by Apizr. See <a href="https://www.apizr.net">https://www.apizr.net</a> for more information
@@ -556,6 +558,10 @@
                 &quot;firstBackoffRetryInSeconds&quot;: {
                     &quot;type&quot;: &quot;integer&quot;,
                     &quot;description&quot;: &quot;The first backoff retry in seconds for the dependency injection settings.&quot;
+                },
+                &quot;useGeneratedRefitClient&quot;: {
+                    &quot;type&quot;: &quot;boolean&quot;,
+                    &quot;description&quot;: &quot;Uses the source-generated AddRefitGeneratedClient registration instead of AddRefitClient. Requires Refit 12.1.0 or newer, and Refit 14.0.0 or newer if the interfaces have query parameters. Ignored when Apizr registration is generated.&quot;
                 }
             },
             &quot;description&quot;: &quot;Settings for dependency injection.&quot;

@@ -892,6 +892,19 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.DependencyInjectionSettings.TransientErrorHandler
   nameWithType: DependencyInjectionSettings.TransientErrorHandler
+- uid: Refitter.Core.DependencyInjectionSettings.UseGeneratedRefitClient
+  name: UseGeneratedRefitClient
+  href: api/Refitter.Core.DependencyInjectionSettings.html#Refitter_Core_DependencyInjectionSettings_UseGeneratedRefitClient
+  commentId: P:Refitter.Core.DependencyInjectionSettings.UseGeneratedRefitClient
+  fullName: Refitter.Core.DependencyInjectionSettings.UseGeneratedRefitClient
+  nameWithType: DependencyInjectionSettings.UseGeneratedRefitClient
+- uid: Refitter.Core.DependencyInjectionSettings.UseGeneratedRefitClient*
+  name: UseGeneratedRefitClient
+  href: api/Refitter.Core.DependencyInjectionSettings.html#Refitter_Core_DependencyInjectionSettings_UseGeneratedRefitClient_
+  commentId: Overload:Refitter.Core.DependencyInjectionSettings.UseGeneratedRefitClient
+  isSpec: "True"
+  fullName: Refitter.Core.DependencyInjectionSettings.UseGeneratedRefitClient
+  nameWithType: DependencyInjectionSettings.UseGeneratedRefitClient
 - uid: Refitter.Core.DependencyInjectionSettings.UsePolly
   name: UsePolly
   href: api/Refitter.Core.DependencyInjectionSettings.html#Refitter_Core_DependencyInjectionSettings_UsePolly
