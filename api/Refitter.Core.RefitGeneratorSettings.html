@@ -393,7 +393,7 @@ public bool AllowRemoteReferences { get; set; }</code></pre>
 
   <h3 id="Refitter_Core_RefitGeneratorSettings_ApizrSettings" data-uid="Refitter.Core.RefitGeneratorSettings.ApizrSettings">
   ApizrSettings
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L353"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L367"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Get ot set the settings describing how to configure Apizr</p>
@@ -425,7 +425,7 @@ public bool AllowRemoteReferences { get; set; }</code></pre>
 
   <h3 id="Refitter_Core_RefitGeneratorSettings_AuthenticationHeaderStyle" data-uid="Refitter.Core.RefitGeneratorSettings.AuthenticationHeaderStyle">
   AuthenticationHeaderStyle
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L416"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L430"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets or sets a value indicating whether to generate Security Schema Authentication headers.</p>
@@ -490,7 +490,7 @@ public AuthenticationHeaderStyle AuthenticationHeaderStyle { get; set; }</code><
 
   <h3 id="Refitter_Core_RefitGeneratorSettings_CollectionFormat" data-uid="Refitter.Core.RefitGeneratorSettings.CollectionFormat">
   CollectionFormat
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L424"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L438"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets or sets the collection format to use for array query parameters.
@@ -524,7 +524,7 @@ public CollectionFormat CollectionFormat { get; set; }</code></pre>
 
   <h3 id="Refitter_Core_RefitGeneratorSettings_ContractTypeSuffix" data-uid="Refitter.Core.RefitGeneratorSettings.ContractTypeSuffix">
   ContractTypeSuffix
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L452"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L466"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets or sets a suffix to append to all generated contract type names.</p>
@@ -620,7 +620,7 @@ public CollectionFormat CollectionFormat { get; set; }</code></pre>
 
   <h3 id="Refitter_Core_RefitGeneratorSettings_CustomTemplateDirectory" data-uid="Refitter.Core.RefitGeneratorSettings.CustomTemplateDirectory">
   CustomTemplateDirectory
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L432"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L446"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets or sets a directory path which contains liquid templates for NSwag. If null or empty, uses default
@@ -703,6 +703,40 @@ templates.</p>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Refitter_Core_RefitGeneratorSettings_ForceAdditionalProperties_" data-uid="Refitter.Core.RefitGeneratorSettings.ForceAdditionalProperties*"></a>
+
+  <h3 id="Refitter_Core_RefitGeneratorSettings_ForceAdditionalProperties" data-uid="Refitter.Core.RefitGeneratorSettings.ForceAdditionalProperties">
+  ForceAdditionalProperties
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L349"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set to <code>true</code> to generate additional properties (extension data) on every contract,
+even when the schema sets <code>additionalProperties: false</code>. Schema-valued additional properties are left unchanged.
+This takes precedence over <a class="xref" href="Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_GenerateDefaultAdditionalProperties">GenerateDefaultAdditionalProperties</a>. Default is <code>false</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ForceAdditionalProperties { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd></dd>
   </dl>
 
@@ -877,7 +911,7 @@ templates.</p>
 
   <h3 id="Refitter_Core_RefitGeneratorSettings_GenerateJsonSerializerContext" data-uid="Refitter.Core.RefitGeneratorSettings.GenerateJsonSerializerContext">
   GenerateJsonSerializerContext
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L446"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L460"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets or sets a value indicating whether to generate JsonSerializerContext for AOT compilation support.
@@ -910,7 +944,7 @@ The context is emitted into the contracts namespace and only when contracts are 
 
   <h3 id="Refitter_Core_RefitGeneratorSettings_GenerateMultipleFiles" data-uid="Refitter.Core.RefitGeneratorSettings.GenerateMultipleFiles">
   GenerateMultipleFiles
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L376"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L390"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Set to <code>true</code> to generate multiple files. Default is <code>false</code>
@@ -1076,7 +1110,7 @@ the relevant status codes specified in the OpenAPI document.</p>
 
   <h3 id="Refitter_Core_RefitGeneratorSettings_ImmutableRecords" data-uid="Refitter.Core.RefitGeneratorSettings.ImmutableRecords">
   ImmutableRecords
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L347"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L361"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Set to <code>true</code> to generate contracts as immutable records instead of classes</p>
@@ -1570,7 +1604,7 @@ For the Source Generator, this is the name of the generated class and the defaul
 
   <h3 id="Refitter_Core_RefitGeneratorSettings_ParameterNameGenerator" data-uid="Refitter.Core.RefitGeneratorSettings.ParameterNameGenerator">
   ParameterNameGenerator
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L410"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L424"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets or sets the parameter name generator for customizing parameter names.</p>
@@ -1767,7 +1801,7 @@ and use the normal configured return type instead.</p>
 
   <h3 id="Refitter_Core_RefitGeneratorSettings_SecurityScheme" data-uid="Refitter.Core.RefitGeneratorSettings.SecurityScheme">
   SecurityScheme
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L439"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L453"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets or sets the security scheme name for which to generate authentication headers.
@@ -1800,7 +1834,7 @@ When specified, only endpoints using this security scheme will have authenticati
 
   <h3 id="Refitter_Core_RefitGeneratorSettings_Silent" data-uid="Refitter.Core.RefitGeneratorSettings.Silent">
   Silent
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L458"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L472"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets or sets a value indicating whether the CLI should suppress all console output.</p>
@@ -1932,7 +1966,7 @@ public TypeAccessibility TypeAccessibility { get; set; }</code></pre>
 
   <h3 id="Refitter_Core_RefitGeneratorSettings_UseDynamicQuerystringParameters" data-uid="Refitter.Core.RefitGeneratorSettings.UseDynamicQuerystringParameters">
   UseDynamicQuerystringParameters
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L360"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L374"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Set to <code>true</code> to wrap multiple query parameters into a single complex one. Default is <code>false</code> (no wrapping).
@@ -1998,7 +2032,7 @@ in ISO 8601 standard date format using delimiters (for example: 2023-06-15)</p>
 
   <h3 id="Refitter_Core_RefitGeneratorSettings_UsePolymorphicSerialization" data-uid="Refitter.Core.RefitGeneratorSettings.UsePolymorphicSerialization">
   UsePolymorphicSerialization
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L396"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitGeneratorSettings.cs/#L410"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Set to <code>true</code> to use System.Text.Json polymorphic serialization. Default is <code>false</code>

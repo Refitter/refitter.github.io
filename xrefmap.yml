@@ -1599,6 +1599,19 @@ references:
   commentId: T:Refitter.Core.ISchemaConfiguration
   fullName: Refitter.Core.ISchemaConfiguration
   nameWithType: ISchemaConfiguration
+- uid: Refitter.Core.ISchemaConfiguration.ForceAdditionalProperties
+  name: ForceAdditionalProperties
+  href: api/Refitter.Core.ISchemaConfiguration.html#Refitter_Core_ISchemaConfiguration_ForceAdditionalProperties
+  commentId: P:Refitter.Core.ISchemaConfiguration.ForceAdditionalProperties
+  fullName: Refitter.Core.ISchemaConfiguration.ForceAdditionalProperties
+  nameWithType: ISchemaConfiguration.ForceAdditionalProperties
+- uid: Refitter.Core.ISchemaConfiguration.ForceAdditionalProperties*
+  name: ForceAdditionalProperties
+  href: api/Refitter.Core.ISchemaConfiguration.html#Refitter_Core_ISchemaConfiguration_ForceAdditionalProperties_
+  commentId: Overload:Refitter.Core.ISchemaConfiguration.ForceAdditionalProperties
+  isSpec: "True"
+  fullName: Refitter.Core.ISchemaConfiguration.ForceAdditionalProperties
+  nameWithType: ISchemaConfiguration.ForceAdditionalProperties
 - uid: Refitter.Core.ISchemaConfiguration.GenerateDefaultAdditionalProperties
   name: GenerateDefaultAdditionalProperties
   href: api/Refitter.Core.ISchemaConfiguration.html#Refitter_Core_ISchemaConfiguration_GenerateDefaultAdditionalProperties
@@ -2471,6 +2484,19 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.RefitGeneratorSettings.ExcludeNamespaces
   nameWithType: RefitGeneratorSettings.ExcludeNamespaces
+- uid: Refitter.Core.RefitGeneratorSettings.ForceAdditionalProperties
+  name: ForceAdditionalProperties
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_ForceAdditionalProperties
+  commentId: P:Refitter.Core.RefitGeneratorSettings.ForceAdditionalProperties
+  fullName: Refitter.Core.RefitGeneratorSettings.ForceAdditionalProperties
+  nameWithType: RefitGeneratorSettings.ForceAdditionalProperties
+- uid: Refitter.Core.RefitGeneratorSettings.ForceAdditionalProperties*
+  name: ForceAdditionalProperties
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_ForceAdditionalProperties_
+  commentId: Overload:Refitter.Core.RefitGeneratorSettings.ForceAdditionalProperties
+  isSpec: "True"
+  fullName: Refitter.Core.RefitGeneratorSettings.ForceAdditionalProperties
+  nameWithType: RefitGeneratorSettings.ForceAdditionalProperties
 - uid: Refitter.Core.RefitGeneratorSettings.GenerateClients
   name: GenerateClients
   href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_GenerateClients

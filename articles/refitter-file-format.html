@@ -143,6 +143,7 @@
     &quot;^Person.+&quot;
   ],
   &quot;generateDefaultAdditionalProperties&quot;: true, // Optional. default=true
+  &quot;forceAdditionalProperties&quot;: false, // Optional. default=false
   &quot;allowRemoteReferences&quot;: false, // Optional. Default=false. When true, remote http/https $ref references inside the document are resolved
   &quot;silent&quot;: false, // Optional. Default=false. Suppress all console output when running the CLI tool. Errors are still reported through the exit code
   &quot;operationNameGenerator&quot;: &quot;Default&quot;, // Optional. May be one of Default, MultipleClientsFromOperationId, MultipleClientsFromPathSegments, MultipleClientsFromFirstTagAndOperationId, MultipleClientsFromFirstTagAndOperationName, MultipleClientsFromFirstTagAndPathSegments, SingleClientFromOperationId, SingleClientFromPathSegments
@@ -265,6 +266,7 @@
 <li><code>keepSchemaPatterns</code>: A collection of regular expressions to force to keep matching schema. This is used together with <code>trimUnusedSchema</code></li>
 <li><code>includeInheritanceHierarchy</code>: Set to true to keep all possible type-instances of inheritance/union types. If this is false only directly referenced types will be kept. This works in conjunction with <code>trimUnusedSchema</code></li>
 <li><code>generateDefaultAdditionalProperties</code>: Set to <code>false</code> to skip default additional properties. Default is <code>true</code></li>
+<li><code>forceAdditionalProperties</code>: Set to <code>true</code> to generate additional properties (<code>[JsonExtensionData]</code>) on every contract, even when the schema sets <code>additionalProperties: false</code>. Useful for read-modify-write clients that must round-trip fields unknown to an older spec. Schema-valued additional properties are left unchanged. Takes precedence over <code>generateDefaultAdditionalProperties</code>. Default is <code>false</code></li>
 <li><code>allowRemoteReferences</code>: When <code>true</code>, remote (<code>http</code>/<code>https</code>) <code>$ref</code> references inside the document are resolved. Disabled by default to prevent generation-time SSRF and remote file inclusion. Local <code>$ref</code> references are always confined to the input document's directory tree. Default is <code>false</code></li>
 <li><code>silent</code>: Set to <code>true</code> to suppress all console output when running the CLI tool. Errors are still reported through the exit code. Default is <code>false</code></li>
 <li><code>operationNameGenerator</code>: The NSwag <code>IOperationNameGenerator</code> implementation to use. See <a href="https://refitter.github.io/api/Refitter.Core.OperationNameGeneratorTypes.html">https://refitter.github.io/api/Refitter.Core.OperationNameGeneratorTypes.html</a></li>
@@ -504,6 +506,10 @@
         &quot;generateDefaultAdditionalProperties&quot;: {
             &quot;type&quot;: &quot;boolean&quot;,
             &quot;description&quot;: &quot;Indicates whether to generate default additional properties.&quot;
+        },
+        &quot;forceAdditionalProperties&quot;: {
+            &quot;type&quot;: &quot;boolean&quot;,
+            &quot;description&quot;: &quot;Indicates whether to generate additional properties even when schemas set additionalProperties to false.&quot;
         },
         &quot;allowRemoteReferences&quot;: {
             &quot;type&quot;: &quot;boolean&quot;,
