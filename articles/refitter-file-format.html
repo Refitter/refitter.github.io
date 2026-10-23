@@ -149,6 +149,7 @@
   &quot;operationNameGenerator&quot;: &quot;Default&quot;, // Optional. May be one of Default, MultipleClientsFromOperationId, MultipleClientsFromPathSegments, MultipleClientsFromFirstTagAndOperationId, MultipleClientsFromFirstTagAndOperationName, MultipleClientsFromFirstTagAndPathSegments, SingleClientFromOperationId, SingleClientFromPathSegments
   &quot;immutableRecords&quot;: false,
   &quot;useDynamicQuerystringParameters&quot;: false, // Optional. Default=false
+  &quot;useMultipartFormObject&quot;: false, // Optional. Default=false
   &quot;usePolymorphicSerialization&quot;: true, // Optional. Default=false
   &quot;generateDisposableClients&quot;: true, // Optional. Default=false
   &quot;collectionFormat&quot;: &quot;Multi&quot;, // Optional. Determines the format of collection parameters. Values=Multi|Csv|Ssv|Tsv|Pipes. Default=Multi. Array query parameters that declare an OpenAPI 3 style of form, pipeDelimited or spaceDelimited, or an explicit explode, use the matching format instead; other styles use this setting
@@ -272,6 +273,7 @@
 <li><code>operationNameGenerator</code>: The NSwag <code>IOperationNameGenerator</code> implementation to use. See <a href="https://refitter.github.io/api/Refitter.Core.OperationNameGeneratorTypes.html">https://refitter.github.io/api/Refitter.Core.OperationNameGeneratorTypes.html</a></li>
 <li><code>immutableRecords</code>: Set to <code>true</code> to generate contracts as immutable records instead of classes. Default is <code>false</code></li>
 <li><code>useDynamicQuerystringParameters</code>: Set to <code>true</code> to wrap multiple query parameters into a single complex one. Default is <code>false</code> (no wrapping). See <a href="https://github.com/reactiveui/refit?tab=readme-ov-file#dynamic-querystring-parameters">https://github.com/reactiveui/refit?tab=readme-ov-file#dynamic-querystring-parameters</a> for more information.</li>
+<li><code>useMultipartFormObject</code>: Set to <code>true</code> to wrap the non-file fields of a <code>multipart/form-data</code> request body into a single <code>[FormObject]</code> parameter, so Refit writes each field (including enums) as a plain text part instead of a JSON part. File fields stay as separate <code>StreamPart</code> parameters, and object fields stay as separate parameters sent as JSON parts. Default is <code>false</code> (no wrapping). Requires the <code>Refit.Reflection</code> package and is not supported by <code>AddRefitGeneratedClient</code> or NativeAOT. See <a href="https://www.reactiveui.net/documentation/refit/requests/multipart/#flatten-a-form-object-reflection-only-path">https://www.reactiveui.net/documentation/refit/requests/multipart/#flatten-a-form-object-reflection-only-path</a> for more information.</li>
 <li><code>usePolymorphicSerialization</code>: Set to <code>true</code> to use <code>System.Text.Json</code> polymorphic serialization.</li>
 <li><code>generateMultipleFiles</code>: Set to <code>true</code> to generate multiple files. This is automatically set to <code>true</code> when <code>ContractsOutputFolder</code> is specified. Refit interface(s) are written to a file called <code>RefitInterfaces.cs</code>, Contracts are written to a file called <code>Contracts.cs</code>, and Dependency Injection is written to a file called <code>DependencyInjection.cs</code></li>
 <li><code>dependencyInjectionSettings</code> - Setting this will generated extension methods to <code>IServiceCollection</code> for configuring Refit clients, including optional Windows Authentication support
@@ -530,6 +532,10 @@
         &quot;useDynamicQuerystringParameters&quot;: {
             &quot;type&quot;: &quot;boolean&quot;,
             &quot;description&quot;: &quot;Set to true to wrap multiple query parameters into a single complex one.&quot;
+        },
+        &quot;useMultipartFormObject&quot;: {
+            &quot;type&quot;: &quot;boolean&quot;,
+            &quot;description&quot;: &quot;Set to true to wrap the non-file fields of a multipart/form-data request body into a single [FormObject] parameter. Requires the Refit.Reflection package.&quot;
         },
         &quot;usePolymorphicSerialization&quot;: {
             &quot;type&quot;: &quot;boolean&quot;,

@@ -3004,6 +3004,19 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.RefitGeneratorSettings.UseIsoDateFormat
   nameWithType: RefitGeneratorSettings.UseIsoDateFormat
+- uid: Refitter.Core.RefitGeneratorSettings.UseMultipartFormObject
+  name: UseMultipartFormObject
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_UseMultipartFormObject
+  commentId: P:Refitter.Core.RefitGeneratorSettings.UseMultipartFormObject
+  fullName: Refitter.Core.RefitGeneratorSettings.UseMultipartFormObject
+  nameWithType: RefitGeneratorSettings.UseMultipartFormObject
+- uid: Refitter.Core.RefitGeneratorSettings.UseMultipartFormObject*
+  name: UseMultipartFormObject
+  href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_UseMultipartFormObject_
+  commentId: Overload:Refitter.Core.RefitGeneratorSettings.UseMultipartFormObject
+  isSpec: "True"
+  fullName: Refitter.Core.RefitGeneratorSettings.UseMultipartFormObject
+  nameWithType: RefitGeneratorSettings.UseMultipartFormObject
 - uid: Refitter.Core.RefitGeneratorSettings.UsePolymorphicSerialization
   name: UsePolymorphicSerialization
   href: api/Refitter.Core.RefitGeneratorSettings.html#Refitter_Core_RefitGeneratorSettings_UsePolymorphicSerialization
