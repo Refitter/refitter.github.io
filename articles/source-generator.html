@@ -84,7 +84,7 @@
 
 <h2 id="source-generator">Source Generator</h2>
 <p>Refitter is available as a C# Source Generator that uses the <a href="/api/Refitter.Core.html">Refitter.Core</a> library for generating a REST API Client using the <a href="https://github.com/reactiveui/refit">Refit</a> library. Refitter can generate the Refit interface from OpenAPI specifications. Refitter could format the generated Refit interface to be managed by <a href="https://www.apizr.net">Apizr</a> (v6+) and generate some registration helpers too.</p>
-<p>Starting with v2.0.0, the source generator emits code in-memory through Roslyn <code>AddSource()</code> instead of writing <code>.g.cs</code> files to disk. Use your IDE's generated-files view to inspect the output. If your workflow requires physical generated files for review, commits, or build scripts, use Refitter CLI or Refitter.MSBuild instead.</p>
+<p>The source generator emits code in-memory through Roslyn <code>AddSource()</code> and also generates the Refit implementations for it, so a single build is enough. Use your IDE's generated-files view to inspect the output. If your workflow requires physical generated files for review, commits, or build scripts, use Refitter CLI or Refitter.MSBuild instead.</p>
 <h4 id="installation">Installation</h4>
 <p>The source generator is distributed as a NuGet package and should be installed to the project that will contain the generated code</p>
 <pre><code class="lang-shell">dotnet add package Refitter.SourceGenerator
@@ -94,6 +94,11 @@ dotnet add package Refit
 <h4 id="usage">Usage</h4>
 <p>After installing the package, add one or more <a href="refitter-file-format.html">.refitter</a> files to your project.</p>
 <p><code>Refitter.SourceGenerator</code> automatically includes <code>**/*.refitter</code> as Roslyn <code>AdditionalFiles</code> via its package props, so you do not need to add manual <code>&lt;AdditionalFiles Include=&quot;...&quot; /&gt;</code> entries unless you intentionally override that default behavior.</p>
+<p>The generated code is added to the compilation in memory, together with the Refit implementations, in a single build. Nothing is written to disk and nothing needs to be committed to source control. The <code>outputFolder</code>, <code>outputFilename</code>, and <code>contractsOutputFolder</code> settings don't create files when using the source generator. To inspect the generated code on disk, set <code>&lt;EmitCompilerGeneratedFiles&gt;true&lt;/EmitCompilerGeneratedFiles&gt;</code> in the project file.</p>
+<h4 id="how-it-works-with-the-refit-source-generator">How it works with the Refit source generator</h4>
+<p>Roslyn runs every source generator against the same input, so the Refit source generator can't see the interfaces that Refitter generates. To produce everything in one build, <code>Refitter.SourceGenerator</code> sets <code>DisableRefitSourceGenerator</code> to <code>true</code> for the regular compiler pass and runs the Refit source generator from the project's own <code>Refit</code> package itself, over the project code plus the Refitter output. Hand-written Refit interfaces in the same project are generated as before. Refit analyzer checks that only run while the Refit source generator is enabled, such as <code>RF006</code> (and <code>RefitRequireGeneratedRequests</code>), are still reported.</p>
+<p>For the same reason, when <code>generateJsonSerializerContext</code> is enabled, Refitter also runs the System.Text.Json source generator over the <code>JsonSerializerContext</code> it generates.</p>
+<p>If the project sets <code>DisableRefitSourceGenerator</code> to <code>true</code> itself, for example when using <code>Refit.Reflection</code>, Refitter leaves Refit source generation off and only emits its own code.</p>
 
 </article>
 

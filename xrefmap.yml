@@ -3365,25 +3365,6 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.Serializer.Serialize
   nameWithType: Serializer.Serialize
-- uid: Refitter.Core.SourceGeneratorFileWriter
-  name: SourceGeneratorFileWriter
-  href: api/Refitter.Core.SourceGeneratorFileWriter.html
-  commentId: T:Refitter.Core.SourceGeneratorFileWriter
-  fullName: Refitter.Core.SourceGeneratorFileWriter
-  nameWithType: SourceGeneratorFileWriter
-- uid: Refitter.Core.SourceGeneratorFileWriter.WriteAsync(Refitter.Core.PlannedFile,System.Threading.CancellationToken)
-  name: WriteAsync(PlannedFile, CancellationToken)
-  href: api/Refitter.Core.SourceGeneratorFileWriter.html#Refitter_Core_SourceGeneratorFileWriter_WriteAsync_Refitter_Core_PlannedFile_System_Threading_CancellationToken_
-  commentId: M:Refitter.Core.SourceGeneratorFileWriter.WriteAsync(Refitter.Core.PlannedFile,System.Threading.CancellationToken)
-  fullName: Refitter.Core.SourceGeneratorFileWriter.WriteAsync(Refitter.Core.PlannedFile, System.Threading.CancellationToken)
-  nameWithType: SourceGeneratorFileWriter.WriteAsync(PlannedFile, CancellationToken)
-- uid: Refitter.Core.SourceGeneratorFileWriter.WriteAsync*
-  name: WriteAsync
-  href: api/Refitter.Core.SourceGeneratorFileWriter.html#Refitter_Core_SourceGeneratorFileWriter_WriteAsync_
-  commentId: Overload:Refitter.Core.SourceGeneratorFileWriter.WriteAsync
-  isSpec: "True"
-  fullName: Refitter.Core.SourceGeneratorFileWriter.WriteAsync
-  nameWithType: SourceGeneratorFileWriter.WriteAsync
 - uid: Refitter.Core.TransientErrorHandler
   name: TransientErrorHandler
   href: api/Refitter.Core.TransientErrorHandler.html
