@@ -99,6 +99,15 @@ dotnet add package Refit
 <p>Roslyn runs every source generator against the same input, so the Refit source generator can't see the interfaces that Refitter generates. To produce everything in one build, <code>Refitter.SourceGenerator</code> sets <code>DisableRefitSourceGenerator</code> to <code>true</code> for the regular compiler pass and runs the Refit source generator from the project's own <code>Refit</code> package itself, over the project code plus the Refitter output. Hand-written Refit interfaces in the same project are generated as before. Refit analyzer checks that only run while the Refit source generator is enabled, such as <code>RF006</code> (and <code>RefitRequireGeneratedRequests</code>), are still reported.</p>
 <p>For the same reason, when <code>generateJsonSerializerContext</code> is enabled, Refitter also runs the System.Text.Json source generator over the <code>JsonSerializerContext</code> it generates.</p>
 <p>If the project sets <code>DisableRefitSourceGenerator</code> to <code>true</code> itself, for example when using <code>Refit.Reflection</code>, Refitter leaves Refit source generation off and only emits its own code.</p>
+<h4 id="telemetry">Telemetry</h4>
+<p><code>Refitter.SourceGenerator</code> collects usage telemetry, the same as the Refitter CLI and <code>Refitter.MSBuild</code>. It reports which settings each <code>.refitter</code> file uses and the number of <code>.refitter</code> files in the project, tagged as coming from the source generator, together with a support key. The support key is the same one the Refitter CLI sends: the first 7 characters of a SHA-256 hash of your user name and machine name. Neither name is sent, but the key isn't random, so anyone who knows both names can compute it and match it to your events. Only setting names, boolean and number values, and known enum values (such as <code>multipleInterfaces</code>) are sent. Paths, URLs, namespaces, other text values and comments are redacted and never leave the machine, and settings that Refitter doesn't recognize are only counted, never named.</p>
+<p>The source generator itself never makes network calls. Telemetry is sent by a small MSBuild task in the package that runs after the build. It doesn't run in design-time builds (IDE), only sends when the <code>.refitter</code> files or the package version change (it keeps a stamp file in <code>obj</code>), uses a short timeout, and never fails the build.</p>
+<p>To opt out, add the following to your <code>.csproj</code> file:</p>
+<pre><code class="lang-xml">&lt;PropertyGroup&gt;
+  &lt;RefitterNoLogging&gt;true&lt;/RefitterNoLogging&gt;
+&lt;/PropertyGroup&gt;
+</code></pre>
+<p>Setting the <code>DOTNET_CLI_TELEMETRY_OPTOUT</code> environment variable to <code>1</code> or <code>true</code> also disables it.</p>
 
 </article>
 
