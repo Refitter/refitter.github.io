@@ -99,7 +99,8 @@ Pure logic — no I/O.</p>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IOutputPlanner</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use OutputPlanner.Plan. This interface will be removed in a future version.&quot;)]
+public interface IOutputPlanner</code></pre>
   </div>
 
 
@@ -122,7 +123,7 @@ Pure logic — no I/O.</p>
 
   <h3 id="Refitter_Core_IOutputPlanner_Plan_Refitter_Core_GeneratorOutput_Refitter_Core_IOutputConfiguration_System_String_System_String_" data-uid="Refitter.Core.IOutputPlanner.Plan(Refitter.Core.GeneratorOutput,Refitter.Core.IOutputConfiguration,System.String,System.String)">
   Plan(GeneratorOutput, IOutputConfiguration, string?, string?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Abstractions/IOutputPlanner.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Abstractions/IOutputPlanner.cs/#L22"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Plans the output file paths for the given generator output.</p>

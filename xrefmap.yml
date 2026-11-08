@@ -1944,6 +1944,22 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.OutputPlanner.GetSingleFileOutputPath
   nameWithType: OutputPlanner.GetSingleFileOutputPath
+- uid: Refitter.Core.OutputPlanner.Plan(Refitter.Core.GeneratorOutput,Refitter.Core.IOutputConfiguration,System.String,System.String)
+  name: Plan(GeneratorOutput, IOutputConfiguration, string?, string?)
+  href: api/Refitter.Core.OutputPlanner.html#Refitter_Core_OutputPlanner_Plan_Refitter_Core_GeneratorOutput_Refitter_Core_IOutputConfiguration_System_String_System_String_
+  commentId: M:Refitter.Core.OutputPlanner.Plan(Refitter.Core.GeneratorOutput,Refitter.Core.IOutputConfiguration,System.String,System.String)
+  name.vb: Plan(GeneratorOutput, IOutputConfiguration, String, String)
+  fullName: Refitter.Core.OutputPlanner.Plan(Refitter.Core.GeneratorOutput, Refitter.Core.IOutputConfiguration, string?, string?)
+  fullName.vb: Refitter.Core.OutputPlanner.Plan(Refitter.Core.GeneratorOutput, Refitter.Core.IOutputConfiguration, String, String)
+  nameWithType: OutputPlanner.Plan(GeneratorOutput, IOutputConfiguration, string?, string?)
+  nameWithType.vb: OutputPlanner.Plan(GeneratorOutput, IOutputConfiguration, String, String)
+- uid: Refitter.Core.OutputPlanner.Plan*
+  name: Plan
+  href: api/Refitter.Core.OutputPlanner.html#Refitter_Core_OutputPlanner_Plan_
+  commentId: Overload:Refitter.Core.OutputPlanner.Plan
+  isSpec: "True"
+  fullName: Refitter.Core.OutputPlanner.Plan
+  nameWithType: OutputPlanner.Plan
 - uid: Refitter.Core.OutputPlanner.PlanMultipleFiles(System.String,System.String,Refitter.Core.IOutputConfiguration,Refitter.Core.GeneratorOutput)
   name: PlanMultipleFiles(string?, string?, IOutputConfiguration, GeneratorOutput)
   href: api/Refitter.Core.OutputPlanner.html#Refitter_Core_OutputPlanner_PlanMultipleFiles_System_String_System_String_Refitter_Core_IOutputConfiguration_Refitter_Core_GeneratorOutput_

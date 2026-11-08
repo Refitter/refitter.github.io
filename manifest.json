@@ -407,7 +407,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Refitter.Core.OutputPlannerAdapter",
-      "Summary": "<p sourcefile=\"api/Refitter.Core.OutputPlannerAdapter.yml\" sourcestartlinenumber=\"1\">Adapts the static <xref href=\"Refitter.Core.OutputPlanner\" data-throw-if-not-resolved=\"false\"></xref> methods to the <xref href=\"Refitter.Core.IOutputPlanner\" data-throw-if-not-resolved=\"false\"></xref> interface.</p>\n"
+      "Summary": "<p sourcefile=\"api/Refitter.Core.OutputPlannerAdapter.yml\" sourcestartlinenumber=\"1\">Adapts <xref href=\"Refitter.Core.OutputPlanner.Plan(Refitter.Core.GeneratorOutput%2cRefitter.Core.IOutputConfiguration%2cSystem.String%2cSystem.String)\" data-throw-if-not-resolved=\"false\"></xref> to the <xref href=\"Refitter.Core.IOutputPlanner\" data-throw-if-not-resolved=\"false\"></xref> interface.</p>\n"
     },
     {
       "type": "ManagedReference",

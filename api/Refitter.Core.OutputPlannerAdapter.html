@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class OutputPlannerAdapter ">
       
-      <meta name="description" content="Adapts the static  methods to the  interface.">
+      <meta name="description" content="Adapts  to the  interface.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -93,12 +93,13 @@ Class OutputPlannerAdapter  <a class="header-action link-secondary" title="View 
   <dl><dt>Assembly</dt><dd>Refitter.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Adapts the static <a class="xref" href="Refitter.Core.OutputPlanner.html">OutputPlanner</a> methods to the <a class="xref" href="Refitter.Core.IOutputPlanner.html">IOutputPlanner</a> interface.</p>
+  <div class="markdown summary"><p>Adapts <a class="xref" href="Refitter.Core.OutputPlanner.html#Refitter_Core_OutputPlanner_Plan_Refitter_Core_GeneratorOutput_Refitter_Core_IOutputConfiguration_System_String_System_String_">Plan(GeneratorOutput, IOutputConfiguration, string?, string?)</a> to the <a class="xref" href="Refitter.Core.IOutputPlanner.html">IOutputPlanner</a> interface.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class OutputPlannerAdapter : IOutputPlanner</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use OutputPlanner.Plan. This adapter will be removed in a future version.&quot;)]
+public class OutputPlannerAdapter : IOutputPlanner</code></pre>
   </div>
 
 
@@ -159,7 +160,7 @@ Class OutputPlannerAdapter  <a class="header-action link-secondary" title="View 
 
   <h3 id="Refitter_Core_OutputPlannerAdapter_Plan_Refitter_Core_GeneratorOutput_Refitter_Core_IOutputConfiguration_System_String_System_String_" data-uid="Refitter.Core.OutputPlannerAdapter.Plan(Refitter.Core.GeneratorOutput,Refitter.Core.IOutputConfiguration,System.String,System.String)">
   Plan(GeneratorOutput, IOutputConfiguration, string?, string?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Abstractions/OutputPlannerAdapter.cs/#L9"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Abstractions/OutputPlannerAdapter.cs/#L10"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Plans the output file paths for the given generator output.</p>
