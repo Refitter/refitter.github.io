@@ -565,6 +565,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.RunnerDiagnosticKind.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.RunnerDiagnosticKind.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.RunnerDiagnosticKind",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.RunnerDiagnosticKind.yml\" sourcestartlinenumber=\"1\">Identifies a <xref href=\"Refitter.Core.RunnerDiagnostic\" data-throw-if-not-resolved=\"false\"></xref>, so hosts can react to it without matching its text.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Refitter.Core.SchemaCleaner.yml",
       "output": {
         ".html": {
@@ -744,6 +758,20 @@
       "IsMRef": true,
       "Title": "Refitter.Core.Warning",
       "Summary": "<p sourcefile=\"api/Refitter.Core.Warning.yml\" sourcestartlinenumber=\"1\">Represents a user-facing configuration warning message.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Refitter.Core.WarningKind.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Refitter.Core.WarningKind.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Refitter.Core.WarningKind",
+      "Summary": "<p sourcefile=\"api/Refitter.Core.WarningKind.yml\" sourcestartlinenumber=\"1\">Identifies a configuration <xref href=\"Refitter.Core.Warning\" data-throw-if-not-resolved=\"false\"></xref>, so hosts can react to it without matching its text.</p>\n"
     },
     {
       "type": "ManagedReference",

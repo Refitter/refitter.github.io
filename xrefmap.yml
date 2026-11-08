@@ -3074,6 +3074,22 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.RefitterSettingsLoader.ApplyDefaults
   nameWithType: RefitterSettingsLoader.ApplyDefaults
+- uid: Refitter.Core.RefitterSettingsLoader.GetSettingsDirectory(System.String)
+  name: GetSettingsDirectory(string)
+  href: api/Refitter.Core.RefitterSettingsLoader.html#Refitter_Core_RefitterSettingsLoader_GetSettingsDirectory_System_String_
+  commentId: M:Refitter.Core.RefitterSettingsLoader.GetSettingsDirectory(System.String)
+  name.vb: GetSettingsDirectory(String)
+  fullName: Refitter.Core.RefitterSettingsLoader.GetSettingsDirectory(string)
+  fullName.vb: Refitter.Core.RefitterSettingsLoader.GetSettingsDirectory(String)
+  nameWithType: RefitterSettingsLoader.GetSettingsDirectory(string)
+  nameWithType.vb: RefitterSettingsLoader.GetSettingsDirectory(String)
+- uid: Refitter.Core.RefitterSettingsLoader.GetSettingsDirectory*
+  name: GetSettingsDirectory
+  href: api/Refitter.Core.RefitterSettingsLoader.html#Refitter_Core_RefitterSettingsLoader_GetSettingsDirectory_
+  commentId: Overload:Refitter.Core.RefitterSettingsLoader.GetSettingsDirectory
+  isSpec: "True"
+  fullName: Refitter.Core.RefitterSettingsLoader.GetSettingsDirectory
+  nameWithType: RefitterSettingsLoader.GetSettingsDirectory
 - uid: Refitter.Core.RefitterSettingsLoader.IsUrl(System.String)
   name: IsUrl(string)
   href: api/Refitter.Core.RefitterSettingsLoader.html#Refitter_Core_RefitterSettingsLoader_IsUrl_System_String_
@@ -3106,6 +3122,38 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.RefitterSettingsLoader.Load
   nameWithType: RefitterSettingsLoader.Load
+- uid: Refitter.Core.RefitterSettingsLoader.LoadSettingsFile(System.String,System.String)
+  name: LoadSettingsFile(string, string)
+  href: api/Refitter.Core.RefitterSettingsLoader.html#Refitter_Core_RefitterSettingsLoader_LoadSettingsFile_System_String_System_String_
+  commentId: M:Refitter.Core.RefitterSettingsLoader.LoadSettingsFile(System.String,System.String)
+  name.vb: LoadSettingsFile(String, String)
+  fullName: Refitter.Core.RefitterSettingsLoader.LoadSettingsFile(string, string)
+  fullName.vb: Refitter.Core.RefitterSettingsLoader.LoadSettingsFile(String, String)
+  nameWithType: RefitterSettingsLoader.LoadSettingsFile(string, string)
+  nameWithType.vb: RefitterSettingsLoader.LoadSettingsFile(String, String)
+- uid: Refitter.Core.RefitterSettingsLoader.LoadSettingsFile*
+  name: LoadSettingsFile
+  href: api/Refitter.Core.RefitterSettingsLoader.html#Refitter_Core_RefitterSettingsLoader_LoadSettingsFile_
+  commentId: Overload:Refitter.Core.RefitterSettingsLoader.LoadSettingsFile
+  isSpec: "True"
+  fullName: Refitter.Core.RefitterSettingsLoader.LoadSettingsFile
+  nameWithType: RefitterSettingsLoader.LoadSettingsFile
+- uid: Refitter.Core.RefitterSettingsLoader.PrepareSettings(Refitter.Core.RefitGeneratorSettings,System.String)
+  name: PrepareSettings(RefitGeneratorSettings, string)
+  href: api/Refitter.Core.RefitterSettingsLoader.html#Refitter_Core_RefitterSettingsLoader_PrepareSettings_Refitter_Core_RefitGeneratorSettings_System_String_
+  commentId: M:Refitter.Core.RefitterSettingsLoader.PrepareSettings(Refitter.Core.RefitGeneratorSettings,System.String)
+  name.vb: PrepareSettings(RefitGeneratorSettings, String)
+  fullName: Refitter.Core.RefitterSettingsLoader.PrepareSettings(Refitter.Core.RefitGeneratorSettings, string)
+  fullName.vb: Refitter.Core.RefitterSettingsLoader.PrepareSettings(Refitter.Core.RefitGeneratorSettings, String)
+  nameWithType: RefitterSettingsLoader.PrepareSettings(RefitGeneratorSettings, string)
+  nameWithType.vb: RefitterSettingsLoader.PrepareSettings(RefitGeneratorSettings, String)
+- uid: Refitter.Core.RefitterSettingsLoader.PrepareSettings*
+  name: PrepareSettings
+  href: api/Refitter.Core.RefitterSettingsLoader.html#Refitter_Core_RefitterSettingsLoader_PrepareSettings_
+  commentId: Overload:Refitter.Core.RefitterSettingsLoader.PrepareSettings
+  isSpec: "True"
+  fullName: Refitter.Core.RefitterSettingsLoader.PrepareSettings
+  nameWithType: RefitterSettingsLoader.PrepareSettings
 - uid: Refitter.Core.RefitterSettingsLoader.ResolveRelativeSpecPaths(Refitter.Core.RefitGeneratorSettings,System.String)
   name: ResolveRelativeSpecPaths(RefitGeneratorSettings, string)
   href: api/Refitter.Core.RefitterSettingsLoader.html#Refitter_Core_RefitterSettingsLoader_ResolveRelativeSpecPaths_Refitter_Core_RefitGeneratorSettings_System_String_
@@ -3263,6 +3311,19 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.RunnerDiagnostic.IsError
   nameWithType: RunnerDiagnostic.IsError
+- uid: Refitter.Core.RunnerDiagnostic.Kind
+  name: Kind
+  href: api/Refitter.Core.RunnerDiagnostic.html#Refitter_Core_RunnerDiagnostic_Kind
+  commentId: P:Refitter.Core.RunnerDiagnostic.Kind
+  fullName: Refitter.Core.RunnerDiagnostic.Kind
+  nameWithType: RunnerDiagnostic.Kind
+- uid: Refitter.Core.RunnerDiagnostic.Kind*
+  name: Kind
+  href: api/Refitter.Core.RunnerDiagnostic.html#Refitter_Core_RunnerDiagnostic_Kind_
+  commentId: Overload:Refitter.Core.RunnerDiagnostic.Kind
+  isSpec: "True"
+  fullName: Refitter.Core.RunnerDiagnostic.Kind
+  nameWithType: RunnerDiagnostic.Kind
 - uid: Refitter.Core.RunnerDiagnostic.Message
   name: Message
   href: api/Refitter.Core.RunnerDiagnostic.html#Refitter_Core_RunnerDiagnostic_Message
@@ -3276,6 +3337,24 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.RunnerDiagnostic.Message
   nameWithType: RunnerDiagnostic.Message
+- uid: Refitter.Core.RunnerDiagnosticKind
+  name: RunnerDiagnosticKind
+  href: api/Refitter.Core.RunnerDiagnosticKind.html
+  commentId: T:Refitter.Core.RunnerDiagnosticKind
+  fullName: Refitter.Core.RunnerDiagnosticKind
+  nameWithType: RunnerDiagnosticKind
+- uid: Refitter.Core.RunnerDiagnosticKind.AllPathsFiltered
+  name: AllPathsFiltered
+  href: api/Refitter.Core.RunnerDiagnosticKind.html#Refitter_Core_RunnerDiagnosticKind_AllPathsFiltered
+  commentId: F:Refitter.Core.RunnerDiagnosticKind.AllPathsFiltered
+  fullName: Refitter.Core.RunnerDiagnosticKind.AllPathsFiltered
+  nameWithType: RunnerDiagnosticKind.AllPathsFiltered
+- uid: Refitter.Core.RunnerDiagnosticKind.Other
+  name: Other
+  href: api/Refitter.Core.RunnerDiagnosticKind.html#Refitter_Core_RunnerDiagnosticKind_Other
+  commentId: F:Refitter.Core.RunnerDiagnosticKind.Other
+  fullName: Refitter.Core.RunnerDiagnosticKind.Other
+  nameWithType: RunnerDiagnosticKind.Other
 - uid: Refitter.Core.SchemaCleaner
   name: SchemaCleaner
   href: api/Refitter.Core.SchemaCleaner.html
@@ -3847,6 +3926,19 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.Warning.Description
   nameWithType: Warning.Description
+- uid: Refitter.Core.Warning.Kind
+  name: Kind
+  href: api/Refitter.Core.Warning.html#Refitter_Core_Warning_Kind
+  commentId: P:Refitter.Core.Warning.Kind
+  fullName: Refitter.Core.Warning.Kind
+  nameWithType: Warning.Kind
+- uid: Refitter.Core.Warning.Kind*
+  name: Kind
+  href: api/Refitter.Core.Warning.html#Refitter_Core_Warning_Kind_
+  commentId: Overload:Refitter.Core.Warning.Kind
+  isSpec: "True"
+  fullName: Refitter.Core.Warning.Kind
+  nameWithType: Warning.Kind
 - uid: Refitter.Core.Warning.Title
   name: Title
   href: api/Refitter.Core.Warning.html#Refitter_Core_Warning_Title
@@ -3860,6 +3952,30 @@ references:
   isSpec: "True"
   fullName: Refitter.Core.Warning.Title
   nameWithType: Warning.Title
+- uid: Refitter.Core.WarningKind
+  name: WarningKind
+  href: api/Refitter.Core.WarningKind.html
+  commentId: T:Refitter.Core.WarningKind
+  fullName: Refitter.Core.WarningKind
+  nameWithType: WarningKind
+- uid: Refitter.Core.WarningKind.DateFormatOverride
+  name: DateFormatOverride
+  href: api/Refitter.Core.WarningKind.html#Refitter_Core_WarningKind_DateFormatOverride
+  commentId: F:Refitter.Core.WarningKind.DateFormatOverride
+  fullName: Refitter.Core.WarningKind.DateFormatOverride
+  nameWithType: WarningKind.DateFormatOverride
+- uid: Refitter.Core.WarningKind.DeprecatedSetting
+  name: DeprecatedSetting
+  href: api/Refitter.Core.WarningKind.html#Refitter_Core_WarningKind_DeprecatedSetting
+  commentId: F:Refitter.Core.WarningKind.DeprecatedSetting
+  fullName: Refitter.Core.WarningKind.DeprecatedSetting
+  nameWithType: WarningKind.DeprecatedSetting
+- uid: Refitter.Core.WarningKind.Other
+  name: Other
+  href: api/Refitter.Core.WarningKind.html#Refitter_Core_WarningKind_Other
+  commentId: F:Refitter.Core.WarningKind.Other
+  fullName: Refitter.Core.WarningKind.Other
+  nameWithType: WarningKind.Other
 - uid: Refitter.Core.XmlDocumentationGenerator
   name: XmlDocumentationGenerator
   href: api/Refitter.Core.XmlDocumentationGenerator.html
