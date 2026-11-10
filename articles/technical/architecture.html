@@ -138,7 +138,7 @@
 </tr>
 <tr>
 <td><code>Refitter</code></td>
-<td><code>net8.0;net9.0;net10.0</code></td>
+<td><code>net8.0;net9.0;net10.0;net11.0</code></td>
 <td><code>refitter</code> .NET tool and Docker image</td>
 <td>Command line interface</td>
 </tr>
@@ -156,13 +156,13 @@
 </tr>
 <tr>
 <td><code>Refitter.Tests</code></td>
-<td><code>net10.0</code></td>
+<td><code>net11.0</code></td>
 <td>–</td>
 <td>Unit, scenario and compilation tests</td>
 </tr>
 <tr>
 <td><code>Refitter.SourceGenerator.Tests</code></td>
-<td><code>net8.0;net10.0</code></td>
+<td><code>net8.0;net10.0;net11.0</code></td>
 <td>–</td>
 <td>Source generator integration tests</td>
 </tr>
@@ -170,14 +170,14 @@
 </table>
 <pre><code class="lang-mermaid">flowchart TB
     subgraph Packages[&quot;Shipped packages&quot;]
-        CLI[&quot;refitter&lt;br/&gt;.NET tool / Docker&lt;br/&gt;net8.0 · net9.0 · net10.0&quot;]
+        CLI[&quot;refitter&lt;br/&gt;.NET tool / Docker&lt;br/&gt;net8.0 · net9.0 · net10.0 · net11.0&quot;]
         MSB[&quot;Refitter.MSBuild&lt;br/&gt;MSBuild task&lt;br/&gt;netstandard2.0&quot;]
         SG[&quot;Refitter.SourceGenerator&lt;br/&gt;Roslyn analyzer&lt;br/&gt;netstandard2.0&quot;]
         CORE[&quot;Refitter.Core&lt;br/&gt;netstandard2.0&quot;]
     end
 
     CLI -- &quot;ProjectReference&quot; --&gt; CORE
-    MSB -- &quot;bundles CLI build output&lt;br/&gt;tasks/net8.0 · net9.0 · net10.0&quot; --&gt; CLI
+    MSB -- &quot;bundles CLI build output&lt;br/&gt;tasks/net8.0 · net9.0 · net10.0 · net11.0&quot; --&gt; CLI
     SG -- &quot;compiles Core source files&lt;br/&gt;directly into the analyzer&quot; --&gt; CORE
 
     subgraph Libraries[&quot;Third-party libraries&quot;]

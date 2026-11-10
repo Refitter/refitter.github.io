@@ -91,7 +91,7 @@
     B[&quot;Compilation tests&lt;br/&gt;BuildHelper: dotnet build of generated code&lt;br/&gt;[TestCategory Integration]&quot;]
     R[&quot;Runtime tests&lt;br/&gt;RefitRequestCapture: Roslyn compile + call through Refit&quot;]
     SG[&quot;Source generator tests&lt;br/&gt;real analyzer + targets in a test project&quot;]
-    SM[&quot;Smoke tests&lt;br/&gt;CLI against ~37 real specs × many option sets,&lt;br/&gt;.NET Framework 4.6.2 → .NET 10&quot;]
+    SM[&quot;Smoke tests&lt;br/&gt;CLI against ~37 real specs × many option sets,&lt;br/&gt;.NET Framework 4.6.2 → .NET 11&quot;]
     PK[&quot;Package tests&lt;br/&gt;Refitter.MSBuild nupkg on Windows, Linux, macOS&quot;]
     PR[&quot;Production tests (nightly)&lt;br/&gt;published tool, Docker image, NuGet packages&quot;]
 
@@ -286,7 +286,7 @@ paths:
 <td>With warnings treated as errors, for example to catch obsolete-member warnings from deprecated schemas or malformed XML documentation. Missing-documentation warnings (<code>CS1591</code>, <code>CS1573</code>) are suppressed in the template</td>
 </tr>
 <tr>
-<td><code>BuildCSharpForTargetFramework(&quot;net9.0&quot; / &quot;net10.0&quot;, ...)</code></td>
+<td><code>BuildCSharpForTargetFramework(&quot;net9.0&quot; / &quot;net10.0&quot; / &quot;net11.0&quot;, ...)</code></td>
 <td>Newer target frameworks</td>
 </tr>
 <tr>
@@ -345,7 +345,7 @@ dotnet test --solution src/Refitter.slnx -c Release
 <h3 id="regression-tests">Regression tests</h3>
 <p>Every bug fix comes with a test that fails without the fix. Small fixes add cases to the relevant scenario test; larger ones get a dedicated class in <a href="https://github.com/christianhelle/refitter/tree/main/src/Refitter.Tests/Regression"><code>Regression/</code></a>, named after the issue or symptom (for example <code>ContractSuffixCorruptionTests</code>, <code>MalformedUnicodeEscapeTests</code>, <code>XmlDocEscapingTests</code>). The smoke tests and MSBuild package tests also contain checks named after specific GitHub issues.</p>
 <h2 id="source-generator-tests">Source generator tests</h2>
-<p><code>src/Refitter.SourceGenerator.Tests</code> (targeting <code>net8.0</code> and <code>net10.0</code>) tests the generator the way a consuming project uses it:</p>
+<p><code>src/Refitter.SourceGenerator.Tests</code> (targeting <code>net8.0</code>, <code>net10.0</code> and <code>net11.0</code>) tests the generator the way a consuming project uses it:</p>
 <pre><code class="lang-mermaid">flowchart LR
     subgraph TP[&quot;Refitter.SourceGenerator.Tests.csproj&quot;]
         REF[&quot;ProjectReference Refitter.SourceGenerator&lt;br/&gt;OutputItemType=Analyzer&lt;br/&gt;ReferenceOutputAssembly=false&quot;]
@@ -366,7 +366,7 @@ dotnet test --solution src/Refitter.slnx -c Release
 <h2 id="smoke-tests">Smoke tests</h2>
 <p><a href="https://github.com/christianhelle/refitter/blob/main/test/smoke-tests.sh"><code>test/smoke-tests.sh</code></a> (with a PowerShell equivalent, <code>smoke-tests.ps1</code>) exercises the CLI against real specifications and builds the result against many target frameworks.</p>
 <pre><code class="lang-mermaid">flowchart TD
-    P0[&quot;Publish CLI from source&lt;br/&gt;(or use the published tool / Docker image)&quot;] --&gt; P1[&quot;Restore ConsoleApp solutions&lt;br/&gt;net462, net472, net48, net481, net8.0, net9.0, net10.0&quot;]
+    P0[&quot;Publish CLI from source&lt;br/&gt;(or use the published tool / Docker image)&quot;] --&gt; P1[&quot;Restore ConsoleApp solutions&lt;br/&gt;net462, net472, net48, net481, net8.0, net9.0, net10.0, net11.0&quot;]
     P1 --&gt; P2[&quot;.refitter file scenarios&lt;br/&gt;petstore, Apizr, multiple files,&lt;br/&gt;multiple sources, Mastodon, streaming&quot;]
     P2 --&gt; P3[&quot;CLI option variants × every spec&lt;br/&gt;OpenAPI 2.0 / 3.0 (JSON + YAML) and 3.1&quot;]
     P3 --&gt; P5[&quot;net8.0+ only variants&lt;br/&gt;immutable records, polymorphism, ...&lt;br/&gt;(JsonSerializerContext variants: generated only)&quot;]
@@ -383,7 +383,7 @@ dotnet test --solution src/Refitter.slnx -c Release
 <li><strong>Specifications:</strong> <code>test/OpenAPI</code> contains about 37 specifications across OpenAPI 2.0, 3.0 and 3.1, from small samples (Petstore, Uber, USPTO) to large real-world APIs (Asana, Mastodon, Ingram Micro, e-conomic, LM Studio).</li>
 <li><strong>Option variants:</strong> dozens of CLI option sets (cancellation tokens, internal types, <code>IApiResponse</code>, tag filtering, multiple interfaces, contracts only, interfaces only, and so on) are run against every specification.</li>
 <li><strong>Matrix builds use <code>SmokeTest=true</code></strong>, which excludes generated <code>JsonSerializerCtx*.cs</code> files from compilation, so the <code>JsonSerializerContext</code> variants are only checked for successful generation there. Their compilation is covered by the unit tests in <code>src/Refitter.Tests</code>.</li>
-<li><strong>Target frameworks:</strong> generated code is compiled in console apps for .NET Framework 4.6.2 to 4.8.1 and .NET 8, 9 and 10, which catches language features or APIs that aren't available on older frameworks.</li>
+<li><strong>Target frameworks:</strong> generated code is compiled in console apps for .NET Framework 4.6.2 to 4.8.1 and .NET 8, 9, 10 and 11, which catches language features or APIs that aren't available on older frameworks.</li>
 <li>The same script runs in three modes: from source (<code>pr.yml</code>, <code>smoke-tests.yml</code>, <code>regression-tests.yml</code>), against the published <code>refitter</code> tool (<code>-UseProduction</code>) and against the Docker image (<code>-UseDocker</code>).</li>
 </ul>
 <h2 id="msbuild-package-tests">MSBuild package tests</h2>

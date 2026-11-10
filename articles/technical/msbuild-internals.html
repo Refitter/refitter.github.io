@@ -95,6 +95,7 @@
     TASKS --&gt; T8[&quot;net8.0/&lt;br/&gt;refitter.dll + dependencies&quot;]
     TASKS --&gt; T9[&quot;net9.0/&lt;br/&gt;refitter.dll + dependencies&quot;]
     TASKS --&gt; T10[&quot;net10.0/&lt;br/&gt;refitter.dll + dependencies&quot;]
+    TASKS --&gt; T11[&quot;net11.0/&lt;br/&gt;refitter.dll + dependencies&quot;]
 </code></pre>
 <p><a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.MSBuild/Refitter.MSBuild.csproj"><code>Refitter.MSBuild.csproj</code></a> has no project reference to the CLI. It packs the CLI's existing build output (<code>../Refitter/bin/$(Configuration)/&lt;tfm&gt;/**</code>) into <code>tasks/&lt;tfm&gt;</code>, so the CLI has to be built before the package is packed. The CI workflows do exactly that: build the solution, then <code>dotnet pack --no-build</code>.</p>
 <h2 id="where-it-hooks-into-the-build">Where it hooks into the build</h2>
@@ -182,9 +183,9 @@
 <h3 id="selecting-a-cli-runtime">Selecting a CLI runtime</h3>
 <p>The CLI is a framework-dependent application, so the task has to choose a build that matches a runtime installed on the machine:</p>
 <pre><code class="lang-mermaid">flowchart TD
-    S[&quot;dotnet --list-runtimes&quot;] --&gt; L{&quot;for net10.0, net9.0, net8.0 (newest first):&lt;br/&gt;bundled refitter.dll exists AND&lt;br/&gt;matching Microsoft.NETCore.App installed?&quot;}
+    S[&quot;dotnet --list-runtimes&quot;] --&gt; L{&quot;for net11.0, net10.0, net9.0, net8.0 (newest first):&lt;br/&gt;bundled refitter.dll exists AND&lt;br/&gt;matching Microsoft.NETCore.App installed?&quot;}
     L -- &quot;found&quot; --&gt; USE[&quot;use that build&quot;]
-    L -- &quot;none&quot; --&gt; FB{&quot;fallback: first bundled build that exists&lt;br/&gt;net8.0 → net9.0 → net10.0&quot;}
+    L -- &quot;none&quot; --&gt; FB{&quot;fallback: first bundled build that exists&lt;br/&gt;net8.0 → net9.0 → net10.0 → net11.0&quot;}
     FB -- &quot;found&quot; --&gt; USE
     FB -- &quot;none&quot; --&gt; CO{&quot;refitter.dll next to the task assembly?&quot;}
     CO -- yes --&gt; USE

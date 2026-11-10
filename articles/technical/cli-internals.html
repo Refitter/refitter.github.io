@@ -84,7 +84,7 @@
 <h1 id="cli-tool-internals">CLI Tool Internals</h1>
 
 <p>The <code>refitter</code> .NET tool (<a href="https://github.com/christianhelle/refitter/tree/main/src/Refitter"><code>src/Refitter</code></a>) is a thin host around <a href="core-pipeline.html#refitterrunner"><code>RefitterRunner</code></a>. Its job is to turn command line arguments or a <code>.refitter</code> file into <code>RefitGeneratorSettings</code>, validate them, run the generation, write files, and report what happened. It is also the engine behind <a href="msbuild-internals.html"><code>Refitter.MSBuild</code></a>, which runs it as a child process.</p>
-<p>The CLI targets <code>net8.0</code>, <code>net9.0</code> and <code>net10.0</code> and is published as a .NET tool and as a Docker image.</p>
+<p>The CLI targets <code>net8.0</code>, <code>net9.0</code>, <code>net10.0</code> and <code>net11.0</code> and is published as a .NET tool and as a Docker image.</p>
 <h2 id="end-to-end-flow">End-to-end flow</h2>
 <pre><code class="lang-mermaid">sequenceDiagram
     autonumber
