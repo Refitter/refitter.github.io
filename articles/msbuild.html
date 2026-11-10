@@ -190,6 +190,7 @@
 }
 </code></pre>
 <p>The files only differ in <code>outputFolder</code> and the settings that should change per target framework. Keep <code>outputFolder</code> under <code>obj</code>: the .NET SDK doesn't include files from <code>obj</code> in compilation by default, so each inner build compiles only the file it generated. A folder in the project directory, such as <code>./Generated</code>, is picked up by every inner build from the second build on and causes duplicate type errors.</p>
+<p>For details on how the MSBuild task works internally, see <a href="technical/msbuild-internals.html">MSBuild Task Internals</a>.</p>
 
 </article>
 

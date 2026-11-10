@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>MSBuild Task Internals </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="MSBuild Task Internals ">
+      
+      
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/christianhelle/refitter/blob/main/docs/docfx_project/articles/technical/msbuild-internals.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="msbuild-task-internals">MSBuild Task Internals</h1>
+
+<p><code>Refitter.MSBuild</code> generates code during <code>dotnet build</code> from every <code>.refitter</code> file in a project. Usage is described in <a href="../msbuild.html">MSBuild</a>. This page explains how it works.</p>
+<p>The key design decision: <strong>the MSBuild task does not contain the code generator.</strong> It ships the complete Refitter CLI for several .NET runtimes and starts it as a <code>dotnet</code> child process. That keeps NSwag, Microsoft.OpenApi, Roslyn and their dependencies out of the MSBuild process, where assembly version conflicts with MSBuild's own dependencies (and with other tasks) would otherwise be likely, and it lets the task assembly stay a small <code>netstandard2.0</code> library that loads in both <code>dotnet build</code> and Visual Studio's .NET Framework MSBuild.</p>
+<h2 id="package-layout">Package layout</h2>
+<pre><code class="lang-mermaid">flowchart LR
+    PKG[&quot;Refitter.MSBuild.nupkg&quot;] --&gt; BUILD[&quot;build/&quot;]
+    PKG --&gt; TASKS[&quot;tasks/&quot;]
+    BUILD --&gt; BP[&quot;Refitter.MSBuild.props&quot;]
+    BUILD --&gt; BT[&quot;Refitter.MSBuild.targets&quot;]
+    TASKS --&gt; TNS[&quot;netstandard2.0/&lt;br/&gt;Refitter.MSBuild.dll (the task)&quot;]
+    TASKS --&gt; T8[&quot;net8.0/&lt;br/&gt;refitter.dll + dependencies&quot;]
+    TASKS --&gt; T9[&quot;net9.0/&lt;br/&gt;refitter.dll + dependencies&quot;]
+    TASKS --&gt; T10[&quot;net10.0/&lt;br/&gt;refitter.dll + dependencies&quot;]
+</code></pre>
+<p><a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.MSBuild/Refitter.MSBuild.csproj"><code>Refitter.MSBuild.csproj</code></a> has no project reference to the CLI. It packs the CLI's existing build output (<code>../Refitter/bin/$(Configuration)/&lt;tfm&gt;/**</code>) into <code>tasks/&lt;tfm&gt;</code>, so the CLI has to be built before the package is packed. The CI workflows do exactly that: build the solution, then <code>dotnet pack --no-build</code>.</p>
+<h2 id="where-it-hooks-into-the-build">Where it hooks into the build</h2>
+<pre><code class="lang-mermaid">flowchart TD
+    subgraph Eval[&quot;Evaluation&quot;]
+        P[&quot;Refitter.MSBuild.props&lt;br/&gt;UsingTask RefitterGenerateTask&lt;br/&gt;from tasks/netstandard2.0&quot;]
+        T[&quot;Refitter.MSBuild.targets&lt;br/&gt;RefitterAutoScan defaults to true&quot;]
+    end
+
+    subgraph Exec[&quot;Execution&quot;]
+        B[&quot;... ResolveReferences ...&quot;] --&gt; OB[&quot;_RefitterGenerateOnBuild&lt;br/&gt;BeforeTargets=CoreCompile&lt;br/&gt;Condition: RefitterAutoScan != false&quot;]
+        OB --&gt; RG[&quot;RefitterGenerate target&lt;br/&gt;runs RefitterGenerateTask&quot;]
+        RG --&gt; ITEMS[&quot;RefitterGeneratedFiles items&lt;br/&gt;→ Compile items&quot;]
+        ITEMS --&gt; CC[&quot;CoreCompile&lt;br/&gt;(Refit source generator runs here)&quot;]
+    end
+
+    Eval --&gt; Exec
+</code></pre>
+<p>The <code>RefitterGenerate</code> target can also be run on its own with <code>dotnet build -t:RefitterGenerate</code>, which is how generation still works when <code>RefitterAutoScan</code> is <code>false</code>.</p>
+<p>MSBuild properties map to task parameters:</p>
+<table>
+<thead>
+<tr>
+<th>MSBuild property</th>
+<th>Task parameter</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$(MSBuildProjectDirectory)</code></td>
+<td><code>ProjectFileDirectory</code></td>
+<td>Root folder scanned for <code>.refitter</code> files</td>
+</tr>
+<tr>
+<td><code>RefitterNoLogging</code></td>
+<td><code>DisableLogging</code></td>
+<td>Passes <code>--no-logging</code> to the CLI</td>
+</tr>
+<tr>
+<td><code>RefitterSkipValidation</code></td>
+<td><code>SkipValidation</code></td>
+<td>Passes <code>--skip-validation</code> to the CLI</td>
+</tr>
+<tr>
+<td><code>RefitterIncludePatterns</code></td>
+<td><code>IncludePatterns</code></td>
+<td>Limits which <code>.refitter</code> files are used</td>
+</tr>
+<tr>
+<td><code>RefitterJsonLibraryVersion</code></td>
+<td><code>JsonLibraryVersion</code></td>
+<td>Passes <code>--json-library-version</code> to the CLI</td>
+</tr>
+</tbody>
+</table>
+<p>Because the generated files are added as <code>Compile</code> items before <code>CoreCompile</code>, the regular Refit source generator in the consuming project sees them like any hand-written file. No special handling is needed, unlike in the <a href="source-generator-internals.html#running-refit-and-systemtextjson-generators">source generator</a>.</p>
+<h2 id="what-refittergeneratetask-does">What RefitterGenerateTask does</h2>
+<p><a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.MSBuild/RefitterGenerateTask.cs"><code>RefitterGenerateTask</code></a>:</p>
+<pre><code class="lang-mermaid">sequenceDiagram
+    autonumber
+    participant MSB as MSBuild
+    participant Task as RefitterGenerateTask
+    participant FS as File system
+    participant Dotnet as dotnet (child process)
+
+    MSB-&gt;&gt;Task: Execute()
+    Task-&gt;&gt;FS: find *.refitter under ProjectFileDirectory (recursive)
+    Task-&gt;&gt;Task: FilterFiles(IncludePatterns)
+    Task-&gt;&gt;Dotnet: dotnet --list-runtimes
+    Dotnet--&gt;&gt;Task: installed Microsoft.NETCore.App versions
+    Task-&gt;&gt;Task: ResolveRefitterDll (pick bundled CLI)
+    loop each .refitter file
+        Task-&gt;&gt;Dotnet: dotnet &quot;tasks/netX.0/refitter.dll&quot; --settings-file &quot;file&quot; --simple-output ...
+        Note over Dotnet: working directory = folder of the .refitter file&lt;br/&gt;5 minute timeout
+        Dotnet--&gt;&gt;Task: stdout: GeneratedFile: path (one per file)
+        Dotnet--&gt;&gt;Task: stderr lines → MSBuild errors
+        Dotnet--&gt;&gt;Task: exit code
+        Task-&gt;&gt;Task: ResolveGeneratedFiles (prefix match, file exists, de-duplicate)
+    end
+    Task--&gt;&gt;MSB: GeneratedFiles (ITaskItem[]), success = no file failed
+</code></pre>
+<h3 id="selecting-refitter-files">Selecting .refitter files</h3>
+<p>The task scans the project folder recursively for <code>*.refitter</code>. When <code>RefitterIncludePatterns</code> is set, it is split on <code>;</code> and each entry is compared <strong>case-insensitively and exactly</strong> (not as a glob) to the file name, the path relative to the project folder, or the full path. Slashes are normalized and a leading <code>./</code> is ignored. This is how multi-targeting projects pick a different <code>.refitter</code> file per target framework.</p>
+<h3 id="selecting-a-cli-runtime">Selecting a CLI runtime</h3>
+<p>The CLI is a framework-dependent application, so the task has to choose a build that matches a runtime installed on the machine:</p>
+<pre><code class="lang-mermaid">flowchart TD
+    S[&quot;dotnet --list-runtimes&quot;] --&gt; L{&quot;for net10.0, net9.0, net8.0 (newest first):&lt;br/&gt;bundled refitter.dll exists AND&lt;br/&gt;matching Microsoft.NETCore.App installed?&quot;}
+    L -- &quot;found&quot; --&gt; USE[&quot;use that build&quot;]
+    L -- &quot;none&quot; --&gt; FB{&quot;fallback: first bundled build that exists&lt;br/&gt;net8.0 → net9.0 → net10.0&quot;}
+    FB -- &quot;found&quot; --&gt; USE
+    FB -- &quot;none&quot; --&gt; CO{&quot;refitter.dll next to the task assembly?&quot;}
+    CO -- yes --&gt; USE
+    CO -- no --&gt; ERR[&quot;error: unable to locate a bundled Refitter CLI runtime&quot;]
+</code></pre>
+<p>The chosen runtime is also passed to the CLI as <code>--telemetry-runtime</code>.</p>
+<h3 id="running-the-cli">Running the CLI</h3>
+<p>The command line is:</p>
+<pre><code class="lang-shell">dotnet &quot;&lt;package&gt;/tasks/&lt;tfm&gt;/refitter.dll&quot; --settings-file &quot;&lt;file&gt;.refitter&quot; --simple-output \
+  --telemetry-source msbuild --telemetry-file-count &lt;N&gt; [--telemetry-runtime &lt;tfm&gt;] \
+  [--no-logging] [--skip-validation] [--json-library-version &lt;X&gt;]
+</code></pre>
+<p>The process runs without a shell, in the folder of the <code>.refitter</code> file, with stdout and stderr redirected. It is killed after 5 minutes.</p>
+<h3 id="the-generatedfile-contract">The GeneratedFile contract</h3>
+<p>With <code>--simple-output</code>, the CLI's <a href="cli-internals.html#reporters"><code>SimpleGenerationReporter</code></a> prints one line per written file:</p>
+<pre><code class="lang-text">GeneratedFile: C:\src\MyApp\Generated\Petstore.cs
+</code></pre>
+<p>The task does not try to predict output paths from the <code>.refitter</code> file. It trusts what the CLI reports: lines with the <code>GeneratedFile: </code> prefix whose file exists are collected and de-duplicated (case-insensitively), and become the task's <code>GeneratedFiles</code> output. That way <code>outputFolder</code>, <code>outputFilename</code>, <code>contractsOutputFolder</code> and <code>generateMultipleFiles</code> are always resolved by exactly the same <code>OutputPlanner</code> code as in the CLI.</p>
+<h3 id="error-handling">Error handling</h3>
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Line written to stderr</td>
+<td>Logged as an MSBuild <strong>error</strong></td>
+</tr>
+<tr>
+<td>Non-zero exit code</td>
+<td>That <code>.refitter</code> file fails</td>
+</tr>
+<tr>
+<td>Process exceeds 5 minutes</td>
+<td>Process is killed; that file fails</td>
+</tr>
+<tr>
+<td>Exit code 0 but no <code>GeneratedFile:</code> lines</td>
+<td>Error: Refitter did not report any generated files. This also happens when the <code>.refitter</code> file sets <code>&quot;silent&quot;: true</code>, because the CLI then uses the silent reporter even with <code>--simple-output</code>. Don't use <code>silent</code> with <code>Refitter.MSBuild</code></td>
+</tr>
+<tr>
+<td>Invalid <code>RefitterJsonLibraryVersion</code></td>
+<td>Error before the CLI is started</td>
+</tr>
+<tr>
+<td>No usable CLI runtime found</td>
+<td>Error for each file</td>
+</tr>
+</tbody>
+</table>
+<p>The task keeps processing the remaining files after a failure and returns <code>false</code> at the end if any file failed, so one build shows every problem at once. The CLI's <a href="cli-internals.html#errors-and-exit-codes">exit code mapping</a> makes sure failures are never reported as exit code 0.</p>
+<h2 id="incremental-builds">Incremental builds</h2>
+<p>The <code>RefitterGenerate</code> target has no <code>Inputs</code>/<code>Outputs</code> and no up-to-date check: every build runs the CLI once per <code>.refitter</code> file. Generation is usually fast, and always regenerating avoids stale output when a remote OpenAPI specification changes. If that cost matters, set <code>RefitterAutoScan</code> to <code>false</code> and run <code>dotnet build -t:RefitterGenerate</code> when the specification changes, and also before the first build in any fresh checkout or clean environment (for example on CI), where no generated files exist yet. Note that the <code>Compile</code> items are only added inside the build that runs <code>RefitterGenerate</code>; they don't persist to later builds. With auto-scan off, later normal builds only compile the generated files if the SDK picks them up by default (output in the project folder) or the project includes them explicitly. Output under <code>obj</code>, as recommended for multi-targeting, is not included by default, so add a <code>&lt;Compile Include=&quot;obj/...&quot; /&gt;</code> item for it.</p>
+<h2 id="testability">Testability</h2>
+<p>The task's interactions with the outside world (starting processes, listing runtimes, killing processes, checking whether files exist, and the timeout) are exposed as internal <code>AsyncLocal</code> overrides. The unit tests in <a href="https://github.com/christianhelle/refitter/tree/main/src/Refitter.Tests/MSBuild"><code>src/Refitter.Tests/MSBuild</code></a> use them to test runtime selection, argument building, output parsing, timeouts and error handling without starting <code>dotnet</code>. The real package is tested end-to-end by the <a href="testing.html#msbuild-package-tests">MSBuild package tests</a>.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/christianhelle/refitter/blob/main/docs/docfx_project/articles/technical/msbuild-internals.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Code Generation Pipeline </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Code Generation Pipeline ">
+      
+      
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/christianhelle/refitter/blob/main/docs/docfx_project/articles/technical/core-pipeline.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="code-generation-pipeline">Code Generation Pipeline</h1>
+
+<p>All code generation happens in <code>Refitter.Core</code>. The CLI, the MSBuild task (through the CLI) and the source generator all call the same pipeline. This page follows a <code>RefitGeneratorSettings</code> object from the moment it reaches <a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/RefitterRunner.cs"><code>RefitterRunner</code></a> until generated C# source comes back.</p>
+<h2 id="the-big-picture">The big picture</h2>
+<pre><code class="lang-mermaid">flowchart TD
+    S[&quot;RefitGeneratorSettings&quot;] --&gt; L
+
+    subgraph Create[&quot;RefitGenerator.CreateAsync&quot;]
+        L[&quot;Load OpenAPI document(s)&lt;br/&gt;OpenApiDocumentFactory&quot;] --&gt; F1[&quot;Filter by tags&lt;br/&gt;RefitDocumentFilter.FilterByTags&quot;]
+        F1 --&gt; F2[&quot;Filter by path&lt;br/&gt;RefitDocumentFilter.FilterByPath&quot;]
+        F2 --&gt; T[&quot;Trim unused schemas&lt;br/&gt;SchemaCleaner (optional)&quot;]
+    end
+
+    T --&gt; RP
+
+    subgraph Run[&quot;RefitGenerator.RunPipeline&quot;]
+        RP[&quot;CSharpClientGeneratorFactory&lt;br/&gt;mutators + NSwag settings&quot;] --&gt; GP[&quot;GeneratorPipeline.Run&quot;]
+        GP --&gt; C[&quot;Contracts&lt;br/&gt;NSwag GenerateFile + post-processors&quot;]
+        GP --&gt; J[&quot;JsonSerializerContext&lt;br/&gt;(optional)&quot;]
+        GP --&gt; I[&quot;Refit interfaces&lt;br/&gt;InterfaceGenerator&quot;]
+        GP --&gt; D[&quot;DI / Apizr registration&quot;]
+    end
+
+    C --&gt; FMT
+    J --&gt; FMT
+    I --&gt; FMT
+    D --&gt; FMT
+    FMT{&quot;GenerateMultipleFiles?&quot;}
+    FMT -- no --&gt; SF[&quot;FormatSingleFile&lt;br/&gt;one string&quot;]
+    FMT -- yes --&gt; MF[&quot;FormatMultipleFiles&lt;br/&gt;one GeneratedCode per type&quot;]
+    SF --&gt; OP[&quot;OutputPlanner.Plan&quot;]
+    MF --&gt; OP
+    OP --&gt; PF[&quot;PlannedFile[]&lt;br/&gt;path + content&quot;]
+</code></pre>
+<h2 id="refitterrunner">RefitterRunner</h2>
+<p><a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/RefitterRunner.cs"><code>RefitterRunner.RunAsync</code></a> is the single entry point used by every host. The order of steps matters: code is generated and the output is planned <strong>before</strong> the specification is validated, but files are only written <strong>after</strong> validation succeeds. A spec that fails validation never leaves half-written output behind.</p>
+<pre><code class="lang-mermaid">sequenceDiagram
+    autonumber
+    participant Host as Host (CLI / Source Generator)
+    participant Runner as RefitterRunner
+    participant Gen as RefitGenerator
+    participant Planner as OutputPlanner
+    participant Val as IValidator (optional)
+    participant Writer as IFileWriter (optional)
+
+    Host-&gt;&gt;Runner: RunAsync(settings, writer, validator, settingsFilePath, outputPath)
+    Runner-&gt;&gt;Gen: CreateAsync(settings)
+    Gen--&gt;&gt;Runner: generator (loaded, filtered, trimmed document)
+    alt GenerateMultipleFiles
+        Runner-&gt;&gt;Gen: GenerateMultipleFiles()
+    else single file
+        Runner-&gt;&gt;Gen: Generate()
+        Note over Runner: normalize line endings to CRLF
+    end
+    Gen--&gt;&gt;Runner: GeneratorOutput
+    Runner-&gt;&gt;Planner: Plan(output, settings, settingsFilePath, outputPath)
+    Planner--&gt;&gt;Runner: PlannedFile[]
+    opt validator != null
+        Runner-&gt;&gt;Val: validate every OpenAPI path
+        Val--&gt;&gt;Runner: errors / warnings → RunnerDiagnostic
+        Note over Runner: ThrowIfInvalid()
+    end
+    opt writer != null
+        Runner-&gt;&gt;Writer: WriteAsync(path, content) per planned file
+    end
+    Runner-&gt;&gt;Runner: DetectWarnings (date format override, deprecated usePolly)
+    Runner-&gt;&gt;Runner: DetectPathFilteringDiagnostics (all paths filtered)
+    Runner--&gt;&gt;Host: RunResult(GeneratedFiles, Warnings, Diagnostics, Elapsed, ExitCode)
+</code></pre>
+<p><code>RunAsync</code> catches every exception. On failure it returns an empty file list, appends the exception message as an error <code>RunnerDiagnostic</code>, and sets <code>ExitCode</code> to the exception's <code>HResult</code>. The host decides how to surface that: the CLI prints it and exits with a non-zero code, and the source generator reports <code>REFITTER000</code>.</p>
+<h2 id="loading-the-openapi-document">Loading the OpenAPI document</h2>
+<p>Loading lives in the <a href="https://github.com/christianhelle/refitter/tree/main/src/Refitter.Core/Document"><code>Document</code></a> folder. The result is always a single NSwag <code>OpenApiDocument</code>, regardless of whether the input was one file, a URL, or several specifications.</p>
+<pre><code class="lang-mermaid">flowchart TD
+    IN[&quot;OpenApiPath or OpenApiPaths[]&quot;] --&gt; MULTI{&quot;More than one path?&quot;}
+    MULTI -- yes --&gt; EACH[&quot;Load each document&quot;] --&gt; MERGE[&quot;DocumentMerger.Merge&quot;]
+    MULTI -- no --&gt; KIND
+    EACH -.-&gt; KIND
+    KIND{&quot;http(s) URL?&quot;}
+    KIND -- yes --&gt; HTTP[&quot;HttpClient GET&lt;br/&gt;gzip/deflate, 30s timeout&quot;] --&gt; RG1[&quot;ReferenceGuard.ValidateAsync&quot;] --&gt; PARSE
+    KIND -- no --&gt; RG2[&quot;ReferenceGuard.ValidateAsync&quot;] --&gt; LOADER
+
+    subgraph LOADER[&quot;DocumentLoader strategy chain (first non-null wins)&quot;]
+        direction TB
+        S1[&quot;FileDocumentStrategy&quot;] --&gt; S2[&quot;HttpDocumentStrategy&quot;] --&gt; S3[&quot;OpenApiReaderDocumentStrategy&lt;br/&gt;only when the spec has external refs&quot;]
+    end
+
+    LOADER --&gt; PARSE
+    subgraph PARSE[&quot;OpenApiDocumentParser&quot;]
+        direction TB
+        P1[&quot;YAML → JSON (YamlDotNet)&quot;] --&gt; P2[&quot;OpenApiJsonNormalizer&quot;] --&gt; P3[&quot;NSwag OpenApiDocument.FromJsonAsync&lt;br/&gt;with sanitizing reference resolvers&quot;]
+    end
+    PARSE --&gt; DOC[&quot;OpenApiDocument&quot;]
+    MERGE --&gt; DOC
+</code></pre>
+<h3 id="reference-guard">Reference guard</h3>
+<p>Before a specification is parsed, <a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Document/ReferenceGuard.cs"><code>ReferenceGuard</code></a> scans its <code>$ref</code> values. It enforces two separate rules:</p>
+<ul>
+<li>Remote <code>http(s)</code> references are rejected, to avoid server-side request forgery when Refitter runs on a build server. Setting <code>allowRemoteReferences</code> in the <code>.refitter</code> file allows them.</li>
+<li>Local file references (absolute or <code>../</code>) that resolve outside the input specification's directory tree are always rejected. <code>allowRemoteReferences</code> does not change this; move the referenced files under the specification's directory instead. The check compares normalized paths and does not resolve symbolic links, so a link inside the directory that points elsewhere is followed. Treat it as a guard against accidental or crafted <code>../</code> references, not as complete filesystem confinement.</li>
+</ul>
+<h3 id="loading-strategies">Loading strategies</h3>
+<p><a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Document/DocumentLoader.cs"><code>DocumentLoader</code></a> tries a chain of <code>IDocumentLoadingStrategy</code> implementations:</p>
+<ol>
+<li><code>FileDocumentStrategy</code> parses a local file with NSwag.</li>
+<li><code>HttpDocumentStrategy</code> downloads the document with a <code>refitter/&lt;version&gt;</code> user agent.</li>
+<li><code>OpenApiReaderDocumentStrategy</code> only acts when the specification contains external references. It uses Microsoft.OpenApi's multi-file reader (via OasReader) to inline them into one document, fills in a missing <code>info.title</code> / <code>info.version</code>, serializes the result back in its original OpenAPI version and re-parses it with NSwag.</li>
+</ol>
+<h3 id="normalizing-the-json">Normalizing the JSON</h3>
+<p>NSwag was written for OpenAPI 2.0 and 3.0. <a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Document/OpenApiJsonNormalizer.cs"><code>OpenApiJsonNormalizer</code></a> parses the raw JSON once and rewrites constructs NSwag can't handle before NSwag sees them:</p>
+<pre><code class="lang-mermaid">flowchart LR
+    RAW[&quot;raw JSON&quot;] --&gt; N1[&quot;NumericBoundsSanitizer&lt;br/&gt;clamp min/max to decimal range&quot;]
+    N1 --&gt; N2[&quot;EnumExtensionsSanitizer&lt;br/&gt;object-valued enum extensions → arrays&quot;]
+    N2 --&gt; N3[&quot;ItemSchemaSanitizer&lt;br/&gt;3.1 itemSchema → array schema&quot;]
+    N3 --&gt; N4[&quot;PathItemReferenceInliner&lt;br/&gt;inline 3.1 components/pathItems refs&lt;br/&gt;(root document only)&quot;]
+    N4 --&gt; OUT[&quot;normalized JSON&quot;]
+</code></pre>
+<p>Externally referenced files go through the same normalization, because the parser installs <code>SanitizingJsonReferenceResolver</code> / <code>SanitizingYamlReferenceResolver</code> as NSwag's reference resolvers.</p>
+<h3 id="merging-multiple-specifications">Merging multiple specifications</h3>
+<p>When <code>openApiPaths</code> lists several specifications, <a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Document/DocumentMerger.cs"><code>DocumentMerger</code></a> clones the first document and merges paths, component schemas, definitions and security definitions from the rest. Tags are de-duplicated by name. A key that appears in two documents is only accepted when <a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Document/DocumentEquivalenceComparer.cs"><code>DocumentEquivalenceComparer</code></a> considers both definitions identical; otherwise merging fails fast with an <code>InvalidOperationException</code> instead of silently picking one.</p>
+<h2 id="filtering-and-trimming">Filtering and trimming</h2>
+<p><a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Pipeline/RefitGenerator.cs"><code>RefitGenerator.CreateAsync</code></a> then narrows the document:</p>
+<ul>
+<li><strong><code>RefitDocumentFilter.FilterByTags</code></strong> keeps only operations with one of the <code>includeTags</code>.</li>
+<li><strong><code>RefitDocumentFilter.FilterByPath</code></strong> keeps only paths matching one of the <code>includePathMatches</code> regular expressions (evaluated with a 1 second regex timeout).</li>
+<li><strong><code>SchemaCleaner.RemoveUnreferencedSchema</code></strong> runs when <code>trimUnusedSchema</code> is enabled. <a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Schema/SchemaWalker.cs"><code>SchemaWalker</code></a> collects every schema reachable from the remaining operations, and everything else is removed, except schemas matching <code>keepSchemaPatterns</code>. With <code>includeInheritanceHierarchy</code> disabled, discriminator mappings that point at removed types are pruned too.</li>
+</ul>
+<p>Each filter works on a clone of the document (<code>ToJson()</code> / <code>FromJsonAsync()</code>), so the original is never mutated. If path filtering removes every path, <code>RefitterRunner</code> reports an <code>AllPathsFiltered</code> diagnostic instead of silently producing an empty interface.</p>
+<h2 id="preparing-nswag">Preparing NSwag</h2>
+<p><a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Pipeline/CSharpClientGeneratorFactory.cs"><code>CSharpClientGeneratorFactory</code></a> first runs a fixed chain of document mutators. Each mutator rewrites schemas into a shape NSwag generates good contracts for:</p>
+<pre><code class="lang-mermaid">flowchart LR
+    M1[&quot;DisableAdditionalProperties&quot;] --&gt; M2[&quot;ForceAdditionalProperties&quot;]
+    M2 --&gt; M3[&quot;FlattenPrimitiveAllOf&quot;]
+    M3 --&gt; M4[&quot;OneOfDiscriminatorToAllOf&quot;]
+    M4 --&gt; M5[&quot;InlineOneOfDerivedTypesToBaseType&quot;]
+    M5 --&gt; M6[&quot;FixMissingIntegerTypes&quot;]
+    M6 --&gt; M7[&quot;CustomIntegerType&quot;]
+</code></pre>
+<p>It then builds NSwag's <code>CSharpClientGeneratorSettings</code>. NSwag is used <strong>only for contracts</strong>: <code>GenerateClientClasses</code>, <code>GenerateClientInterfaces</code> and <code>GenerateExceptionClasses</code> are all <code>false</code>, <code>GenerateDtoTypes</code> is <code>true</code>, and the JSON library is System.Text.Json. Refitter also plugs in its own naming components (<code>UniquePropertyNameGenerator</code>, <code>SafeSchemaTypeNameGenerator</code>, <code>UniqueEnumNameGenerator</code>, optionally <code>PreserveOriginalPropertyNameGenerator</code>) and a <code>CustomTemplateFactory</code> that patches NSwag's class template, for example for polymorphic serialization attributes. The <code>codeGeneratorSettings</code> section of the <code>.refitter</code> file is copied onto these settings.</p>
+<p>The result is a <a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/CodeGeneration/CustomCSharpClientGenerator.cs"><code>CustomCSharpClientGenerator</code></a>, a subclass of NSwag's <code>CSharpClientGenerator</code> that exposes NSwag's operation models and type resolver to Refitter.</p>
+<h2 id="generatorpipeline">GeneratorPipeline</h2>
+<p><a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Pipeline/GeneratorPipeline.cs"><code>GeneratorPipeline.Run</code></a> produces the four parts of the output:</p>
+<pre><code class="lang-mermaid">flowchart TD
+    G[&quot;CustomCSharpClientGenerator&quot;] --&gt; GF[&quot;GenerateFile()&lt;br/&gt;NSwag contracts (DTOs, enums)&quot;]
+    GF --&gt; PP1[&quot;Swagger2OptionalReferenceNullabilityNormalizer&lt;br/&gt;(Roslyn rewriter, Swagger 2 + nullable refs)&quot;]
+    PP1 --&gt; PP2[&quot;EnumStringConverterInjector&lt;br/&gt;JsonStringEnumConverter&quot;]
+    PP2 --&gt; CON[&quot;contracts&quot;]
+
+    CON --&gt; JSC{&quot;generateJsonSerializerContext&lt;br/&gt;and generateContracts?&quot;}
+    JSC -- yes --&gt; JSG[&quot;JsonSerializerContextGenerator&lt;br/&gt;(Roslyn)&quot;]
+    JSC -- no --&gt; NOJ[&quot;(none)&quot;]
+
+    IG[&quot;InterfaceGenerator.Generate(partitioning)&quot;] --&gt; IFACES[&quot;interfaces + wrapper types&quot;]
+    IFACES --&gt; OBS[&quot;ObsoleteContractAttributeRemover&lt;br/&gt;(when generating clients)&quot;]
+    CON --&gt; OBS
+
+    IFACES --&gt; DI{&quot;apizrSettings set?&quot;}
+    DI -- yes --&gt; APZ[&quot;ApizrRegistrationGenerator&quot;]
+    DI -- no --&gt; DIG[&quot;DependencyInjectionGenerator&quot;]
+
+    OBS --&gt; RES[&quot;GenerationResult&lt;br/&gt;Contracts · Interfaces · SerializerContext&lt;br/&gt;DependencyInjectionCode · InterfaceNames&quot;]
+    JSG --&gt; RES
+    APZ --&gt; RES
+    DIG --&gt; RES
+</code></pre>
+<h3 id="interface-partitioning">Interface partitioning</h3>
+<p><code>multipleInterfaces</code> decides how operations are grouped into Refit interfaces. Each mode is an <a href="https://github.com/christianhelle/refitter/tree/main/src/Refitter.Core/Partitioning"><code>IInterfacePartitioning</code></a> implementation that returns a group key per operation.</p>
+<pre><code class="lang-mermaid">flowchart LR
+    OPS[&quot;All operations&lt;br/&gt;(TRACE dropped: Refit has no attribute for it)&quot;] --&gt; P{&quot;multipleInterfaces&quot;}
+    P -- &quot;Unset&quot; --&gt; S[&quot;SingleInterfacePartitioning&lt;br/&gt;key: empty&lt;br/&gt;one interface: I{Title}&quot;]
+    P -- &quot;ByEndpoint&quot; --&gt; E[&quot;ByEndpointInterfacePartitioning&lt;br/&gt;key: path#verb&lt;br/&gt;I{OperationName}, method Execute&quot;]
+    P -- &quot;ByTag&quot; --&gt; T[&quot;ByTagInterfacePartitioning&lt;br/&gt;key: first tag (or title)&lt;br/&gt;I{Tag}&quot;]
+</code></pre>
+<p>Interface names are de-duplicated against the generated contract type names (adding an <code>Endpoint</code> or <code>Api</code> suffix where needed), and in multi-interface modes, when <code>generateDeprecatedOperations</code> is <code>false</code>, a group whose operations are all deprecated is skipped.</p>
+<h3 id="generating-a-method">Generating a method</h3>
+<p>For every operation, <a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Generation/InterfaceGenerator.cs"><code>InterfaceGenerator</code></a> asks NSwag for its <code>CSharpOperationModel</code> and then builds the Refit method around it:</p>
+<pre><code class="lang-mermaid">flowchart TD
+    OP[&quot;OpenApiOperation&quot;] --&gt; RT[&quot;ReturnTypeGenerator&lt;br/&gt;Task / Task of T / IApiResponse / IObservable&quot;]
+    OP --&gt; OM[&quot;NSwag CreateOperationModel&quot;]
+    OM --&gt; PLB
+
+    subgraph PLB[&quot;ParameterListBuilder.Build&quot;]
+        direction TB
+        X1[&quot;RouteParameterExtractor&quot;] --&gt; X2[&quot;QueryParameterExtractor&lt;br/&gt;(may emit a dynamic querystring wrapper type)&quot;]
+        X2 --&gt; X3[&quot;BodyParameterExtractor&quot;]
+        X3 --&gt; X4[&quot;HeaderParameterExtractor&quot;]
+        X4 --&gt; X5[&quot;FormParameterExtractor&lt;br/&gt;(may emit a form object wrapper type)&quot;]
+        X5 --&gt; X6[&quot;OptionalParameterReorderer&quot;]
+        X6 --&gt; X7[&quot;append CancellationToken&lt;br/&gt;or Apizr request options&quot;]
+        X7 --&gt; X8[&quot;ParameterNameDeduplicator&quot;]
+        X8 --&gt; X9[&quot;RouteTemplateDisambiguator&quot;]
+    end
+
+    RT --&gt; EMIT
+    PLB --&gt; EMIT
+    OP --&gt; DOCS[&quot;XmlDocumentationGenerator&quot;] --&gt; EMIT
+    OP --&gt; ATTR[&quot;MethodAttributeGenerator&lt;br/&gt;headers, multipart, etc.&quot;] --&gt; EMIT
+    EMIT[&quot;[Verb(path)] ReturnType Name(parameters);&quot;]
+</code></pre>
+<p>When Apizr is enabled together with <code>optionalParameters</code>, an extra overload without the optional parameters is emitted. Wrapper types created for dynamic querystrings and form objects are returned alongside the interfaces as non-interface <code>GeneratedCode</code> entries, so they end up in their own files in multi-file mode.</p>
+<h3 id="dependency-injection-registration">Dependency injection registration</h3>
+<p>When <code>dependencyInjectionSettings</code> is set, <a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Pipeline/DependencyInjectionGenerator.cs"><code>DependencyInjectionGenerator</code></a> emits an <code>IServiceCollection</code> extension method that registers every generated interface:</p>
+<pre><code class="lang-mermaid">flowchart LR
+    R[&quot;AddRefitClient (or AddRefitGeneratedClient)&quot;] --&gt; B[&quot;ConfigureHttpClient&lt;br/&gt;BaseAddress&quot;]
+    B --&gt; H[&quot;AddHttpMessageHandler&lt;br/&gt;for each configured handler&quot;]
+    H --&gt; T{&quot;transientErrorHandler&quot;}
+    T -- &quot;Polly&quot; --&gt; PO[&quot;AddPolicyHandler&lt;br/&gt;WaitAndRetryAsync + DecorrelatedJitterBackoffV2&quot;]
+    T -- &quot;HttpResilience&quot; --&gt; HR[&quot;AddStandardResilienceHandler&lt;br/&gt;HttpRetryStrategyOptions&quot;]
+    T -- &quot;None&quot; --&gt; N[&quot;(nothing)&quot;]
+</code></pre>
+<p>With <code>apizrSettings</code>, <a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Apizr/ApizrRegistrationGenerator.cs"><code>ApizrRegistrationGenerator</code></a> emits either a <code>Configure...ApizrManager(s)</code> extension (DI) or a static <code>Build...ApizrManager(s)</code> method, composed from adapters for caching, mapping, mediation, file transfer, retry, priority and handlers.</p>
+<h2 id="formatting-the-output">Formatting the output</h2>
+<p><code>RefitGenerator</code> formats the <code>GenerationResult</code> in one of two ways.</p>
+<p><strong>Single file</strong> (<code>FormatSingleFile</code>) concatenates, in order: interfaces (if <code>generateClients</code>), contracts (if <code>generateContracts</code>, with namespace prefixes already imported by the interface file removed), the serializer context, and the DI code. The contract type suffix is then applied, and <code>RefitterRunner</code> normalizes line endings to CRLF.</p>
+<p><strong>Multiple files</strong> (<code>FormatMultipleFiles</code>) returns one <code>GeneratedCode</code> per interface or wrapper type, plus <code>Contracts</code>, the serializer context type and <code>DependencyInjection</code>. Every file is named <code>{TypeName}.cs</code>.</p>
+<h2 id="planning-the-output-paths">Planning the output paths</h2>
+<p><a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Pipeline/OutputPlanner.cs"><code>OutputPlanner</code></a> turns generated code into <code>PlannedFile</code> objects. For settings-file runs, paths are resolved against the <code>.refitter</code> file's directory. For direct CLI runs, paths are used as given and may be relative to the current directory: in single-file mode <code>--output</code> is the file path (default <code>Output.cs</code>); in multi-file mode <code>--output</code> is a directory (default the current directory) and each file is written as <code>{TypeName}.cs</code> inside it. The planner only computes paths; whether they are written is up to the host.</p>
+<pre><code class="lang-mermaid">flowchart TD
+    START[&quot;GeneratorOutput&quot;] --&gt; MF{&quot;multiple files?&quot;}
+    MF -- no --&gt; SF{&quot;settings file run?&quot;}
+    SF -- no --&gt; CLI1[&quot;CLI --output value&lt;br/&gt;or Output.cs&quot;]
+    SF -- yes --&gt; SFP[&quot;outputFolder / outputFilename&lt;br/&gt;relative to the .refitter file&quot;]
+    MF -- yes --&gt; EACH[&quot;for each GeneratedCode&quot;]
+    EACH --&gt; CF{&quot;Contracts file and&lt;br/&gt;contractsOutputFolder set and&lt;br/&gt;different from outputFolder?&quot;}
+    CF -- yes --&gt; CPATH[&quot;contractsOutputFolder/Contracts.cs&quot;]
+    CF -- no --&gt; OPATH[&quot;outputFolder (or CLI output dir)/TypeName.cs&quot;]
+</code></pre>
+<p>Setting <code>contractsOutputFolder</code> implies multiple files: <a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitterSettingsLoader.cs"><code>RefitterSettingsLoader.ApplyDefaults</code></a> turns on <code>generateMultipleFiles</code> in that case, and defaults <code>outputFilename</code> to <code>&lt;name of the .refitter file&gt;.cs</code>.</p>
+<h2 id="warnings-and-diagnostics">Warnings and diagnostics</h2>
+<p>After generation, <code>RefitterRunner</code> adds:</p>
+<table>
+<thead>
+<tr>
+<th>Kind</th>
+<th>When</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>WarningKind.DateFormatOverride</code></td>
+<td><code>dateFormat</code> is set but ignored because <code>useIsoDateFormat</code> is enabled</td>
+</tr>
+<tr>
+<td><code>WarningKind.DeprecatedSetting</code></td>
+<td>The deprecated <code>usePolly</code> setting is used</td>
+</tr>
+<tr>
+<td><code>RunnerDiagnosticKind.AllPathsFiltered</code></td>
+<td><code>includePathMatches</code> removed every path from the specification</td>
+</tr>
+<tr>
+<td>Validation diagnostics</td>
+<td>Errors and warnings from the optional <code>IValidator</code></td>
+</tr>
+</tbody>
+</table>
+<p>Hosts decide which of these to surface. On success, the CLI prints the configuration warnings and the all-paths-filtered warning; validation errors and warnings are only printed when validation fails. <code>Refitter.MSBuild</code> inherits that output through the CLI. The source generator reports error diagnostics as <code>REFITTER000</code> and the date-format warning as <code>REFITTER002</code>, but it does <strong>not</strong> report <code>AllPathsFiltered</code>, so a filter that removes every path silently produces an empty interface there.</p>
+<h2 id="validation">Validation</h2>
+<p>Validation is optional and pluggable through <code>IValidator</code>. The CLI's <a href="https://github.com/christianhelle/refitter/tree/main/src/Refitter.Core/Validation"><code>OpenApiValidatorAdapter</code></a> runs the reference guard, loads the specification with Microsoft.OpenApi (independently of NSwag), walks it to collect statistics (paths, operations, schemas and so on, shown by the CLI), and checks strings that end up inside C# attributes. Errors make <code>ThrowIfInvalid()</code> throw an <code>OpenApiValidationException</code> before anything is written.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/christianhelle/refitter/blob/main/docs/docfx_project/articles/technical/core-pipeline.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

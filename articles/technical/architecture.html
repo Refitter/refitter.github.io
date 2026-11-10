@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Architecture Overview </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Architecture Overview ">
+      
+      
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/christianhelle/refitter/blob/main/docs/docfx_project/articles/technical/architecture.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="architecture-overview">Architecture Overview</h1>
+
+<p>This section of the documentation describes how Refitter works internally: how an OpenAPI specification becomes Refit interfaces and contracts, how that differs between the three distribution forms (CLI tool, MSBuild task and C# Source Generator), and how the project is tested to avoid regressions.</p>
+<table>
+<thead>
+<tr>
+<th>Page</th>
+<th>What it covers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="architecture.html">Architecture Overview</a></td>
+<td>Projects, packages, dependencies and the shared generation entry point</td>
+</tr>
+<tr>
+<td><a href="core-pipeline.html">Code Generation Pipeline</a></td>
+<td><code>Refitter.Core</code>: document loading, filtering, NSwag contracts, interface generation, output planning</td>
+</tr>
+<tr>
+<td><a href="cli-internals.html">CLI Tool Internals</a></td>
+<td>Argument parsing, settings validation, reporters, file writing and exit codes</td>
+</tr>
+<tr>
+<td><a href="msbuild-internals.html">MSBuild Task Internals</a></td>
+<td>How <code>Refitter.MSBuild</code> runs the bundled CLI during a build</td>
+</tr>
+<tr>
+<td><a href="source-generator-internals.html">Source Generator Internals</a></td>
+<td>The incremental generator, nested Refit / System.Text.Json generators and diagnostics</td>
+</tr>
+<tr>
+<td><a href="testing.html">Testing and Regression Prevention</a></td>
+<td>Unit, scenario, compilation, smoke, package and nightly production tests</td>
+</tr>
+</tbody>
+</table>
+<h2 id="projects-and-packages">Projects and packages</h2>
+<p>Refitter is a single solution (<code>src/Refitter.slnx</code>) with four shipping projects and two test projects.</p>
+<table>
+<thead>
+<tr>
+<th>Project</th>
+<th>Target framework</th>
+<th>Ships as</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Refitter.Core</code></td>
+<td><code>netstandard2.0</code></td>
+<td><code>Refitter.Core</code> NuGet package</td>
+<td>All code generation logic, built on NSwag</td>
+</tr>
+<tr>
+<td><code>Refitter</code></td>
+<td><code>net8.0;net9.0;net10.0</code></td>
+<td><code>refitter</code> .NET tool and Docker image</td>
+<td>Command line interface</td>
+</tr>
+<tr>
+<td><code>Refitter.MSBuild</code></td>
+<td><code>netstandard2.0</code></td>
+<td><code>Refitter.MSBuild</code> NuGet package</td>
+<td>MSBuild task that runs the bundled CLI before <code>CoreCompile</code></td>
+</tr>
+<tr>
+<td><code>Refitter.SourceGenerator</code></td>
+<td><code>netstandard2.0</code></td>
+<td><code>Refitter.SourceGenerator</code> NuGet package (analyzer)</td>
+<td>Roslyn incremental source generator</td>
+</tr>
+<tr>
+<td><code>Refitter.Tests</code></td>
+<td><code>net10.0</code></td>
+<td>–</td>
+<td>Unit, scenario and compilation tests</td>
+</tr>
+<tr>
+<td><code>Refitter.SourceGenerator.Tests</code></td>
+<td><code>net8.0;net10.0</code></td>
+<td>–</td>
+<td>Source generator integration tests</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-mermaid">flowchart TB
+    subgraph Packages[&quot;Shipped packages&quot;]
+        CLI[&quot;refitter&lt;br/&gt;.NET tool / Docker&lt;br/&gt;net8.0 · net9.0 · net10.0&quot;]
+        MSB[&quot;Refitter.MSBuild&lt;br/&gt;MSBuild task&lt;br/&gt;netstandard2.0&quot;]
+        SG[&quot;Refitter.SourceGenerator&lt;br/&gt;Roslyn analyzer&lt;br/&gt;netstandard2.0&quot;]
+        CORE[&quot;Refitter.Core&lt;br/&gt;netstandard2.0&quot;]
+    end
+
+    CLI -- &quot;ProjectReference&quot; --&gt; CORE
+    MSB -- &quot;bundles CLI build output&lt;br/&gt;tasks/net8.0 · net9.0 · net10.0&quot; --&gt; CLI
+    SG -- &quot;compiles Core source files&lt;br/&gt;directly into the analyzer&quot; --&gt; CORE
+
+    subgraph Libraries[&quot;Third-party libraries&quot;]
+        NSWAG[&quot;NSwag.CodeGeneration.CSharp&lt;br/&gt;NJsonSchema&quot;]
+        MSOAI[&quot;Microsoft.OpenApi&lt;br/&gt;(via OasReader)&quot;]
+        YAML[&quot;YamlDotNet&lt;br/&gt;(via NSwag.Core.Yaml)&quot;]
+        ROSLYN[&quot;Microsoft.CodeAnalysis.CSharp&quot;]
+        SPECTRE[&quot;Spectre.Console&quot;]
+    end
+
+    CORE --&gt; NSWAG
+    CORE --&gt; MSOAI
+    CORE --&gt; YAML
+    CORE --&gt; ROSLYN
+    CLI --&gt; SPECTRE
+</code></pre>
+<p>Two details in this picture are easy to miss:</p>
+<ul>
+<li><strong><code>Refitter.MSBuild</code> does not reference <code>Refitter.Core</code>.</strong> It contains a small MSBuild task and the complete build output of the CLI for each supported runtime. At build time it starts the CLI as a <code>dotnet</code> child process. See <a href="msbuild-internals.html">MSBuild Task Internals</a>.</li>
+<li><strong><code>Refitter.SourceGenerator</code> does not reference the <code>Refitter.Core</code> package either.</strong> Analyzers cannot reliably load arbitrary package dependencies, so the generator project compiles the <code>Refitter.Core</code> source files (<code>&lt;Compile Include=&quot;../Refitter.Core/...&quot; /&gt;</code>) into its own assembly and ships its third-party dependencies inside the analyzer folder. See <a href="source-generator-internals.html">Source Generator Internals</a>.</li>
+</ul>
+<h2 id="one-shared-entry-point">One shared entry point</h2>
+<p>All three distribution forms end up in the same method: <a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/RefitterRunner.cs"><code>RefitterRunner.RunAsync</code></a>. What differs is how settings arrive, whether files are written, and whether the OpenAPI specification is validated.</p>
+<pre><code class="lang-mermaid">flowchart LR
+    subgraph Inputs
+        A1[&quot;CLI arguments&quot;]
+        A2[&quot;.refitter file&quot;]
+    end
+
+    subgraph CLIHost[&quot;refitter CLI&quot;]
+        C1[&quot;SettingsValidator&lt;br/&gt;SettingsMapper&quot;]
+        C2[&quot;GenerationOrchestrator&quot;]
+    end
+
+    subgraph MSBuildHost[&quot;Refitter.MSBuild&quot;]
+        M1[&quot;RefitterGenerateTask&quot;]
+    end
+
+    subgraph SGHost[&quot;Refitter.SourceGenerator&quot;]
+        S1[&quot;RefitterSourceGenerator&quot;]
+    end
+
+    A1 --&gt; C1
+    A2 --&gt; C1
+    A2 --&gt; M1
+    A2 --&gt; S1
+    M1 -- &quot;dotnet refitter.dll&lt;br/&gt;--settings-file --simple-output&quot; --&gt; C1
+    C1 --&gt; C2
+
+    C2 -- &quot;writer: CliFileWriter&lt;br/&gt;validator: OpenApiValidatorAdapter&quot; --&gt; R
+    S1 -- &quot;writer: null&lt;br/&gt;validator: null&quot; --&gt; R
+
+    R[&quot;RefitterRunner.RunAsync&quot;] --&gt; RES[&quot;RunResult&lt;br/&gt;GeneratedFiles · Warnings&lt;br/&gt;Diagnostics · ExitCode&quot;]
+
+    RES -- &quot;files on disk&quot; --&gt; C2
+    RES -- &quot;AddSource()&quot; --&gt; S1
+</code></pre>
+<p><code>RefitterRunner.RunAsync</code> takes a <code>RefitGeneratorSettings</code> object and two optional collaborators:</p>
+<ul>
+<li>an <code>IFileWriter</code>, which the CLI provides (<code>CliFileWriter</code>) and the source generator leaves out, so nothing is written to disk from inside the compiler;</li>
+<li>an <code>IValidator</code>, which the CLI provides unless <code>--skip-validation</code> is set, and the source generator leaves out.</li>
+</ul>
+<p>It always returns a <code>RunResult</code> and never throws. Exceptions are captured as error diagnostics, and <code>ExitCode</code> is set to the exception's <code>HResult</code>.</p>
+<h2 id="comparing-the-three-distribution-forms">Comparing the three distribution forms</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>CLI tool</th>
+<th>MSBuild task</th>
+<th>Source Generator</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Runs</td>
+<td>When you run <code>refitter</code></td>
+<td>Every build, before <code>CoreCompile</code></td>
+<td>Inside the C# compiler, on every compilation (including IDE design-time builds)</td>
+</tr>
+<tr>
+<td>Settings</td>
+<td>CLI arguments or <code>--settings-file</code></td>
+<td>Every <code>*.refitter</code> file under the project folder (optionally filtered by <code>RefitterIncludePatterns</code>)</td>
+<td>Every <code>*.refitter</code> file in <code>AdditionalFiles</code></td>
+</tr>
+<tr>
+<td>Process model</td>
+<td>In-process</td>
+<td>Separate <code>dotnet refitter.dll</code> process per <code>.refitter</code> file</td>
+<td>In the compiler process</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>Files on disk</td>
+<td>Files on disk, added to <code>Compile</code> items</td>
+<td>In-memory syntax trees via <code>AddSource()</code></td>
+</tr>
+<tr>
+<td><code>outputFolder</code> / <code>outputFilename</code></td>
+<td>Honoured</td>
+<td>Honoured</td>
+<td>Only used to derive hint names</td>
+</tr>
+<tr>
+<td>OpenAPI validation</td>
+<td>Yes, unless <code>--skip-validation</code></td>
+<td>Yes, unless <code>RefitterSkipValidation</code> is <code>true</code></td>
+<td>No</td>
+</tr>
+<tr>
+<td>Refit source generator</td>
+<td>Runs normally in the consuming project's build</td>
+<td>Runs normally on the generated files</td>
+<td>Disabled in the regular pass and re-run by Refitter over its own output, unless the project sets <code>DisableRefitSourceGenerator=true</code> itself (then Refit generation stays off)</td>
+</tr>
+<tr>
+<td>Incremental</td>
+<td>No</td>
+<td>No, regenerates on every build</td>
+<td>Roslyn incremental pipeline</td>
+</tr>
+<tr>
+<td>Reports problems as</td>
+<td>Console output and exit code</td>
+<td>MSBuild errors and messages</td>
+<td><code>REFITTER000</code>–<code>REFITTER008</code> compiler diagnostics</td>
+</tr>
+<tr>
+<td>Telemetry</td>
+<td>Analytics in the CLI process</td>
+<td>CLI process, tagged <code>msbuild</code></td>
+<td>A post-build MSBuild task, tagged <code>sourcegenerator</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="library-responsibilities">Library responsibilities</h2>
+<p>Refitter does not parse OpenAPI documents or generate DTOs on its own. It combines several libraries:</p>
+<table>
+<thead>
+<tr>
+<th>Library</th>
+<th>Used for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/RicoSuter/NSwag">NSwag</a> (<code>NSwag.Core.Yaml</code>, <code>NSwag.CodeGeneration.CSharp</code>)</td>
+<td>The <code>OpenApiDocument</code> model, <code>$ref</code> resolution, and generation of the contract (DTO) types. Refitter subclasses <code>CSharpClientGenerator</code> but turns off NSwag's own client generation</td>
+</tr>
+<tr>
+<td><a href="https://github.com/RicoSuter/NJsonSchema">NJsonSchema</a></td>
+<td>JSON schema model, type resolution and the Liquid templates for classes, records and enums</td>
+</tr>
+<tr>
+<td><a href="https://github.com/microsoft/OpenAPI.NET">Microsoft.OpenApi</a> via <a href="https://github.com/christianhelle/oasreader">OasReader</a></td>
+<td>OpenAPI validation, statistics, and reading specifications whose external references must be merged into one document</td>
+</tr>
+<tr>
+<td><a href="https://github.com/aaubry/YamlDotNet">YamlDotNet</a> (via <code>NSwag.Core.Yaml</code>)</td>
+<td>Converting YAML specifications to JSON before NSwag parses them</td>
+</tr>
+<tr>
+<td><a href="https://github.com/dotnet/roslyn">Roslyn</a> (<code>Microsoft.CodeAnalysis.CSharp</code>)</td>
+<td>Rewriting generated contracts and building the <code>JsonSerializerContext</code>, and in the source generator, running the nested Refit and System.Text.Json generators</td>
+</tr>
+<tr>
+<td><a href="https://spectreconsole.net/">Spectre.Console</a></td>
+<td>CLI argument parsing and rich console output</td>
+</tr>
+</tbody>
+</table>
+<p>The Refit interfaces themselves are not produced by NSwag. Refitter writes them with its own <code>InterfaceGenerator</code>, using NSwag's operation and parameter models to resolve types. See <a href="core-pipeline.html">Code Generation Pipeline</a>.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/christianhelle/refitter/blob/main/docs/docfx_project/articles/technical/architecture.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

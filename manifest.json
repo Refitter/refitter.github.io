@@ -895,6 +895,79 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "articles/technical/architecture.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/technical/architecture.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/technical/cli-internals.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/technical/cli-internals.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/technical/core-pipeline.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/technical/core-pipeline.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/technical/msbuild-internals.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/technical/msbuild-internals.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/technical/source-generator-internals.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/technical/source-generator-internals.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/technical/testing.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/technical/testing.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/technical/toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "articles/technical/toc.json"
+        },
+        ".html": {
+          "relative_path": "articles/technical/toc.html"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Toc",
       "source_relative_path": "articles/toc.yml",
       "output": {

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Source Generator Internals </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Source Generator Internals ">
+      
+      
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/christianhelle/refitter/blob/main/docs/docfx_project/articles/technical/source-generator-internals.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="source-generator-internals">Source Generator Internals</h1>
+
+<p><code>Refitter.SourceGenerator</code> runs the Refitter code generator inside the C# compiler. Usage is described in <a href="../source-generator.html">Source Generator</a>. This page explains how it is built, how the incremental pipeline works, and how it cooperates with Refit's own source generator.</p>
+<h2 id="package-and-assembly-layout">Package and assembly layout</h2>
+<p>Roslyn loads analyzers and source generators into the compiler process (and the IDE) with limited support for dependencies. The generator therefore ships as a self-contained analyzer:</p>
+<pre><code class="lang-mermaid">flowchart LR
+    subgraph Source[&quot;Refitter.SourceGenerator project&quot;]
+        GSRC[&quot;RefitterSourceGenerator.cs&lt;br/&gt;HintNames · LoadedGeneratorLocator&lt;br/&gt;RefitGeneratorOptionsProvider · Telemetry&quot;]
+        CSRC[&quot;Refitter.Core source files&lt;br/&gt;(compiled in as source)&quot;]
+    end
+
+    Source --&gt; DLL[&quot;Refitter.SourceGenerator.dll&lt;br/&gt;netstandard2.0&quot;]
+
+    subgraph PKG[&quot;Refitter.SourceGenerator.nupkg&quot;]
+        AN[&quot;analyzers/dotnet/cs/&lt;br/&gt;Refitter.SourceGenerator.dll&lt;br/&gt;+ NSwag, NJsonSchema, OasReader,&lt;br/&gt;Microsoft.OpenApi, YamlDotNet, ...&quot;]
+        BLD[&quot;build/&lt;br/&gt;Refitter.SourceGenerator.props&lt;br/&gt;Refitter.SourceGenerator.targets&quot;]
+    end
+
+    DLL --&gt; AN
+</code></pre>
+<ul>
+<li><code>Refitter.Core</code> is not referenced as a package. Its source files are included folder by folder (<code>&lt;Compile Include=&quot;../Refitter.Core/Pipeline/*.cs&quot; /&gt;</code> and so on), so the generator contains its own copy of the code generator.</li>
+<li>Third-party dependencies are referenced with <code>PrivateAssets=&quot;all&quot;</code> and packed next to the generator in <code>analyzers/dotnet/cs</code> (using H.Generators.Extensions), where the compiler can load them.</li>
+<li><code>Refit</code> is referenced privately. At build time the generator does <strong>not</strong> use its own copy of Refit's generator: it uses the one the consuming project's <code>Refit</code> package already loaded into the compiler. This is why consuming projects must reference <code>Refit</code> directly.</li>
+<li>The package is a development dependency, so it doesn't flow to consumers of your library.</li>
+</ul>
+<h2 id="msbuild-integration">MSBuild integration</h2>
+<p>The package's <code>build</code> files do two small things before the compiler runs:</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.SourceGenerator/Refitter.SourceGenerator.props"><code>Refitter.SourceGenerator.props</code></a></td>
+<td><code>&lt;AdditionalFiles Include=&quot;**/*.refitter&quot; /&gt;</code>, so every <code>.refitter</code> file in the project reaches the generator</td>
+</tr>
+<tr>
+<td><a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.SourceGenerator/Refitter.SourceGenerator.targets"><code>Refitter.SourceGenerator.targets</code></a></td>
+<td>Unless the project already disabled it, sets <code>DisableRefitSourceGenerator=true</code> and <code>RefitterRunsRefitGenerator=true</code> (exposed to the generator as a <code>CompilerVisibleProperty</code>). Also registers the post-build telemetry task</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>DisableRefitSourceGenerator</code> logic lives in a <code>.targets</code> file on purpose: <code>.targets</code> files are imported after the project body, so a project that sets <code>DisableRefitSourceGenerator</code> to <code>true</code> itself (for example when using <code>Refit.Reflection</code>) is detected and left alone.</p>
+<h2 id="the-incremental-pipeline">The incremental pipeline</h2>
+<p><a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.SourceGenerator/RefitterSourceGenerator.cs"><code>RefitterSourceGenerator</code></a> is an <code>IIncrementalGenerator</code>. Roslyn caches every stage, so when an unrelated <code>.cs</code> file changes, the <code>.refitter</code> files are not reprocessed.</p>
+<pre><code class="lang-mermaid">flowchart TD
+    AT[&quot;AdditionalTextsProvider&quot;] --&gt; W[&quot;Where: path ends with .refitter&quot;]
+    W --&gt; COL1[&quot;Collect paths&quot;]
+    COL1 --&gt; EMPTY{&quot;any?&quot;}
+    EMPTY -- no --&gt; D3[&quot;REFITTER003 warning:&lt;br/&gt;no .refitter files found&quot;]
+
+    W --&gt; GC[&quot;Select: GenerateCode(file)&lt;br/&gt;one per .refitter file&quot;]
+
+    subgraph GCD[&quot;GenerateCode&quot;]
+        direction TB
+        R1[&quot;read text&quot;] --&gt; R2[&quot;RefitterSettingsLoader.LoadSettingsFile(json, path)&quot;]
+        R2 --&gt; R3[&quot;RefitterRunner.RunAsync(settings,&lt;br/&gt;writer: null, validator: null)&quot;]
+        R3 --&gt; R4[&quot;GeneratedFiles → GeneratedSource(planned hint, content)&lt;br/&gt;exceptions → diagnostics&quot;]
+    end
+
+    GC --&gt; GCD
+    GCD --&gt; COL2[&quot;Collect all results&quot;]
+    COL2 --&gt; UH[&quot;AssignUniqueHintNames&lt;br/&gt;(sorted by settings path)&quot;]
+    UH --&gt; OUT[&quot;RegisterSourceOutput:&lt;br/&gt;AddSource(hint, code) + REFITTER001&quot;]
+
+    UH --&gt; NEST[&quot;Combine with CompilationProvider,&lt;br/&gt;ParseOptions, AnalyzerConfigOptions&quot;]
+    NEST --&gt; IMPL[&quot;RegisterImplementationSourceOutput:&lt;br/&gt;RunNestedGenerators&quot;]
+</code></pre>
+<p><code>RefitterRunner</code> is called without an <code>IFileWriter</code>, so nothing is written to disk from inside the compiler, and without an <code>IValidator</code>, so the specification is not validated with Microsoft.OpenApi. The <code>outputFolder</code> / <code>outputFilename</code> settings are only used to compute hint names. Use <code>&lt;EmitCompilerGeneratedFiles&gt;true&lt;/EmitCompilerGeneratedFiles&gt;</code> to see the output on disk.</p>
+<h3 id="hint-names">Hint names</h3>
+<p>Roslyn requires every <code>AddSource</code> hint name in a compilation to be unique. <a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.SourceGenerator/HintNames.cs"><code>HintNames</code></a> derives them from the <code>.refitter</code> file name and the planned output file name:</p>
+<pre><code class="lang-mermaid">flowchart LR
+    A[&quot;settings: Petstore.refitter&lt;br/&gt;planned: Contracts.cs&quot;] --&gt; B{&quot;planned name ==&lt;br/&gt;settings name?&quot;}
+    B -- yes --&gt; C[&quot;Petstore&quot;]
+    B -- no --&gt; D[&quot;Petstore.Contracts&quot;]
+    C --&gt; E[&quot;replace characters other than&lt;br/&gt;letters, digits, . _ - with _&quot;]
+    D --&gt; E
+    E --&gt; F[&quot;+ .g.cs&quot;]
+    F --&gt; G{&quot;already used?&lt;br/&gt;(case-insensitive)&quot;}
+    G -- yes --&gt; H[&quot;Petstore.Contracts2.g.cs, 3, ...&quot;]
+    G -- no --&gt; I[&quot;Petstore.Contracts.g.cs&quot;]
+</code></pre>
+<p>Results are sorted by settings file path (ordinal) before names are assigned, so hint names are stable between builds even when two <code>.refitter</code> files in different folders share a name.</p>
+<h2 id="running-refit-and-systemtextjson-generators">Running Refit and System.Text.Json generators</h2>
+<p>Roslyn runs all source generators against the <strong>same input compilation</strong>. Generators don't see each other's output. Without extra work, Refit's source generator would never see the interfaces Refitter adds, so they would get no generated Refit implementations. Likewise the System.Text.Json source generator would not see a generated <code>JsonSerializerContext</code>.</p>
+<p>Refitter solves this by running those generators itself, over an augmented compilation:</p>
+<pre><code class="lang-mermaid">sequenceDiagram
+    autonumber
+    participant Roslyn
+    participant RSG as RefitterSourceGenerator
+    participant Loc as LoadedGeneratorLocator
+    participant STJ as System.Text.Json generator
+    participant RG as Refit generator (InterfaceStubGeneratorV2)
+    participant RA as Refit analyzer
+
+    Roslyn-&gt;&gt;RSG: compilation + Refitter sources + options
+    RSG-&gt;&gt;RSG: parse Refitter sources into syntax trees
+    RSG-&gt;&gt;RSG: augmented = compilation.AddSyntaxTrees(...)
+    opt a generated class has a JsonSerializable attribute
+        RSG-&gt;&gt;Loc: find loaded System.Text.Json generator
+        Loc--&gt;&gt;RSG: JsonSourceGenerator instance
+        RSG-&gt;&gt;STJ: run on augmented compilation
+        STJ--&gt;&gt;RSG: sources for the generated context only
+    end
+    opt build_property.RefitterRunsRefitGenerator == true
+        RSG-&gt;&gt;Loc: find loaded Refit generator
+        Loc--&gt;&gt;RSG: InterfaceStubGeneratorV2 instance
+        RSG-&gt;&gt;RG: CSharpGeneratorDriver.RunGenerators(augmented)&lt;br/&gt;with RefitGeneratorOptionsProvider
+        RG--&gt;&gt;RSG: Refit implementations (hand-written + generated interfaces)
+        RSG-&gt;&gt;RA: run analyzer with real options, then with generator re-enabled
+        RA--&gt;&gt;RSG: report only diagnostics new in the second run (e.g. RF006)
+    end
+    RSG-&gt;&gt;Roslyn: AddSource(&quot;Refit.&quot; + hint / &quot;System.Text.Json.&quot; + hint)
+</code></pre>
+<p>The details that make this work:</p>
+<ul>
+<li><strong>The consumer's Refit generator is disabled</strong> by the package's <code>.targets</code> (<code>DisableRefitSourceGenerator=true</code>), so Refit implementations are not generated twice. Because Refitter's nested run covers the whole augmented compilation, hand-written Refit interfaces in the same project still get implementations.</li>
+<li><strong><a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.SourceGenerator/RefitGeneratorOptionsProvider.cs"><code>RefitGeneratorOptionsProvider</code></a></strong> wraps the project's analyzer config options and answers <code>&quot;false&quot;</code> for <code>build_property.DisableRefitSourceGenerator</code>, re-enabling Refit's generator only inside the nested run.</li>
+<li><strong><a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.SourceGenerator/LoadedGeneratorLocator.cs"><code>LoadedGeneratorLocator</code></a></strong> finds the generator types in assemblies already loaded in the compiler process by the consumer's packages, so the Refit and System.Text.Json versions always match the ones the project references. A shared compiler server can have several versions loaded at once, so it picks the newest loaded version with the same major version as the compilation's reference. If the generator can't be found, <code>REFITTER006</code> / <code>REFITTER008</code> is reported.</li>
+<li><strong>Refit analyzer diagnostics</strong> such as <code>RF006</code> are normally only reported while Refit's generator is enabled. Refitter runs the Refit analyzer twice, with the real options and with the generator re-enabled, and reports only the extra diagnostics from the second run, so nothing is reported twice.</li>
+<li><strong>Diagnostic locations</strong>: diagnostics from nested generators may point into syntax trees that only exist inside the nested run. Those are moved to <code>Location.None</code>, with the original <code>path:line</code> appended to the message.</li>
+</ul>
+<h2 id="diagnostics">Diagnostics</h2>
+<p>All diagnostics use the category <code>Refitter</code>.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Severity</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>REFITTER000</code></td>
+<td>Error</td>
+<td>A <code>.refitter</code> file couldn't be read or deserialized, or generation failed</td>
+</tr>
+<tr>
+<td><code>REFITTER001</code></td>
+<td>Info</td>
+<td>A source file was generated</td>
+</tr>
+<tr>
+<td><code>REFITTER002</code></td>
+<td>Warning</td>
+<td><code>dateFormat</code> is ignored because <code>useIsoDateFormat</code> is enabled</td>
+</tr>
+<tr>
+<td><code>REFITTER003</code></td>
+<td>Warning</td>
+<td>No <code>.refitter</code> files were found</td>
+</tr>
+<tr>
+<td><code>REFITTER004</code></td>
+<td>Info</td>
+<td>A <code>.refitter</code> file was found</td>
+</tr>
+<tr>
+<td><code>REFITTER005</code></td>
+<td>Info</td>
+<td>Contents of a <code>.refitter</code> file</td>
+</tr>
+<tr>
+<td><code>REFITTER006</code></td>
+<td>Warning</td>
+<td>Refit's source generator couldn't be found; add a direct <code>Refit</code> package reference</td>
+</tr>
+<tr>
+<td><code>REFITTER007</code></td>
+<td>Error</td>
+<td>A nested generator or the Refit analyzer threw an exception</td>
+</tr>
+<tr>
+<td><code>REFITTER008</code></td>
+<td>Warning</td>
+<td>The System.Text.Json source generator couldn't be found</td>
+</tr>
+</tbody>
+</table>
+<h2 id="telemetry">Telemetry</h2>
+<p>The source generator never sends telemetry itself. (It can still make network calls: when <code>openApiPath</code> is an <code>http(s)</code> URL, the specification is downloaded during compilation, whether telemetry is enabled or not.) Telemetry is sent by <a href="https://github.com/christianhelle/refitter/tree/main/src/Refitter.SourceGenerator/Telemetry"><code>RefitterTelemetryTask</code></a>, an MSBuild task in the same assembly that runs after <code>Build</code>:</p>
+<pre><code class="lang-mermaid">flowchart TD
+    B[&quot;Build finished&quot;] --&gt; C{&quot;DesignTimeBuild, RefitterNoLogging&lt;br/&gt;or DOTNET_CLI_TELEMETRY_OPTOUT?&quot;}
+    C -- yes --&gt; X[&quot;skip&quot;]
+    C -- no --&gt; FP[&quot;fingerprint = SHA-256 of&lt;br/&gt;package version + .refitter paths and contents&quot;]
+    FP --&gt; ST{&quot;same as stamp file in obj?&quot;}
+    ST -- yes --&gt; X
+    ST -- no --&gt; WS[&quot;write stamp file first&quot;]
+    WS --&gt; SEND[&quot;send sanitized settings events&lt;br/&gt;3 second timeout&quot;]
+    SEND --&gt; DONE[&quot;always succeeds&lt;br/&gt;(ContinueOnError, errors logged at low importance)&quot;]
+</code></pre>
+<p>The stamp is written before sending so machines without network access don't retry on every build.</p>
+<h2 id="how-it-is-tested">How it is tested</h2>
+<p>The source generator has its own test project that references the generator as an analyzer and imports its <code>.targets</code>, so the tests exercise the real package behaviour, including the nested Refit generator. See <a href="testing.html#source-generator-tests">Source generator tests</a>.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/christianhelle/refitter/blob/main/docs/docfx_project/articles/technical/source-generator-internals.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

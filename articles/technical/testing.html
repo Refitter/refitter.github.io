@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Testing and Regression Prevention </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Testing and Regression Prevention ">
+      
+      
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/christianhelle/refitter/blob/main/docs/docfx_project/articles/technical/testing.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="testing-and-regression-prevention">Testing and Regression Prevention</h1>
+
+<p>Refitter turns third-party OpenAPI documents, which vary a lot in quality and style, into C# that has to compile under several target frameworks and work with Refit at runtime. A string comparison of generated output can't prove that. Refitter's tests are therefore layered: fast unit tests, scenario tests that compile the generated code, runtime checks through Refit, tests of the real NuGet packages, smoke tests against real-world specifications, and nightly tests of the published packages.</p>
+<h2 id="the-test-layers">The test layers</h2>
+<pre><code class="lang-mermaid">flowchart BT
+    U[&quot;Unit tests&lt;br/&gt;mutators, planners, parsers, settings, mappers&lt;br/&gt;milliseconds, in-process&quot;]
+    S[&quot;Scenario tests&lt;br/&gt;OpenAPI spec → generate → assert strings&quot;]
+    B[&quot;Compilation tests&lt;br/&gt;BuildHelper: dotnet build of generated code&lt;br/&gt;[TestCategory Integration]&quot;]
+    R[&quot;Runtime tests&lt;br/&gt;RefitRequestCapture: Roslyn compile + call through Refit&quot;]
+    SG[&quot;Source generator tests&lt;br/&gt;real analyzer + targets in a test project&quot;]
+    SM[&quot;Smoke tests&lt;br/&gt;CLI against ~37 real specs × many option sets,&lt;br/&gt;.NET Framework 4.6.2 → .NET 10&quot;]
+    PK[&quot;Package tests&lt;br/&gt;Refitter.MSBuild nupkg on Windows, Linux, macOS&quot;]
+    PR[&quot;Production tests (nightly)&lt;br/&gt;published tool, Docker image, NuGet packages&quot;]
+
+    U --&gt; S --&gt; B --&gt; R --&gt; SG --&gt; SM --&gt; PK --&gt; PR
+</code></pre>
+<p>Lower layers run on every build and give feedback in seconds. Upper layers are slower but test what users actually install.</p>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Where</th>
+<th>When it runs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unit, scenario, compilation, runtime</td>
+<td><code>src/Refitter.Tests</code></td>
+<td>Pull requests and pushes to <code>main</code> that change <code>src/**/*.cs</code>, <code>src/**/*.csproj</code> or <code>build.yml</code></td>
+</tr>
+<tr>
+<td>Source generator</td>
+<td><code>src/Refitter.SourceGenerator.Tests</code></td>
+<td>Same as above. Changes to only <code>.refitter</code> or specification files don't trigger it, so run the tests locally</td>
+</tr>
+<tr>
+<td>Smoke tests</td>
+<td><code>test/smoke-tests.sh</code>, <code>test/ConsoleApp</code></td>
+<td>Pull requests and pushes to <code>main</code> that change generator code; on demand on Windows, Linux and macOS</td>
+</tr>
+<tr>
+<td>MSBuild package</td>
+<td><code>test/MSBuild</code></td>
+<td>Pull requests touching the MSBuild task, on Windows, Linux and macOS</td>
+</tr>
+<tr>
+<td>Production</td>
+<td><code>.github/workflows/production-tests.yml</code></td>
+<td>Nightly, and on demand</td>
+</tr>
+</tbody>
+</table>
+<h2 id="refittertests">Refitter.Tests</h2>
+<p><code>src/Refitter.Tests</code> is the main test project: roughly 330 test files and over 2,500 test methods (many more test cases once <code>[DataRow]</code> expansions are counted).</p>
+<ul>
+<li><strong>Framework:</strong> MSTest v4 on <a href="https://learn.microsoft.com/dotnet/core/testing/microsoft-testing-platform-intro">Microsoft.Testing.Platform</a>. The project is an executable (<code>OutputType=Exe</code>, <code>EnableMSTestRunner=true</code>).</li>
+<li><strong>Assertions:</strong> <a href="https://awesomeassertions.org/">AwesomeAssertions</a> (<code>generatedCode.Should().Contain(...)</code>).</li>
+<li><strong>Parallelism:</strong> <code>[assembly: Parallelize(Scope = ExecutionScope.MethodLevel, Workers = 0)]</code> runs test methods in parallel on every CPU core. Tests that touch global state use <code>[DoNotParallelize]</code>. Every test writes to its own GUID-named temporary folder, so tests don't interfere with each other.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Folder</th>
+<th>Focus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Scenarios/</code></td>
+<td>Feature tests, each with its own inline OpenAPI specification (the largest group, ~180 files)</td>
+</tr>
+<tr>
+<td><code>Regression/</code></td>
+<td>Tests named after the bug they reproduce, for example <code>Issue1190DynamicQueryParamsByTagTests</code></td>
+</tr>
+<tr>
+<td><code>OpenApi/</code></td>
+<td>Document loading, sanitizers, merging, <code>$ref</code> resolution, URL loading</td>
+</tr>
+<tr>
+<td><code>Apizr/</code></td>
+<td>Apizr output and registration</td>
+</tr>
+<tr>
+<td><code>Parameters/</code></td>
+<td>Parameter extraction and ordering</td>
+</tr>
+<tr>
+<td><code>DependencyInjection/</code></td>
+<td>DI registration with handlers, Polly and HttpResilience</td>
+</tr>
+<tr>
+<td><code>SettingsFile/</code></td>
+<td><code>.refitter</code> loading and serialization, consistency with the JSON schema</td>
+</tr>
+<tr>
+<td><code>MSBuild/</code></td>
+<td><code>RefitterGenerateTask</code> with faked processes and runtimes</td>
+</tr>
+<tr>
+<td><code>SourceGenerator/</code></td>
+<td>Hint name generation</td>
+</tr>
+<tr>
+<td>root</td>
+<td>Generators, planners, reporters, CLI command, <code>RefitterRunner</code>, Swagger Petstore end-to-end tests</td>
+</tr>
+</tbody>
+</table>
+<h3 id="anatomy-of-a-scenario-test">Anatomy of a scenario test</h3>
+<p>Every new feature gets a scenario test in the <code>Refitter.Tests.Scenarios</code> namespace. The pattern is always the same: an OpenAPI specification as a <code>const string</code>, a generation step, string assertions, and a compilation check. A simplified version of <a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Tests/Scenarios/ArrayTypeReturnTests.cs"><code>ArrayTypeReturnTests</code></a>:</p>
+<pre><code class="lang-csharp">[TestClass]
+public class ArrayTypeReturnTests
+{
+    private const string OpenApiSpec = @&quot;
+openapi: '3.0.0'
+paths:
+  /jobs:
+    get:
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: 'array'
+                items:
+                  $ref: '#/components/schemas/JobResponse'
+...&quot;;
+
+    [TestMethod]
+    public async Task Returns_IList()
+    {
+        string generatedCode = await GenerateCode();
+        generatedCode.Should().Contain(&quot;IList&lt;JobResponse&gt;&quot;);
+    }
+
+    [TestMethod]
+    [TestCategory(&quot;Integration&quot;)]
+    public async Task Can_Build_Generated_Code()
+    {
+        string generatedCode = await GenerateCode();
+        BuildHelper.BuildCSharp(generatedCode).Should().BeTrue();
+    }
+
+    private static async Task&lt;string&gt; GenerateCode()
+    {
+        var swaggerFile = await SwaggerFileHelper.CreateSwaggerFile(OpenApiSpec);
+        var settings = new RefitGeneratorSettings
+        {
+            OpenApiPath = swaggerFile,
+            CodeGeneratorSettings = new CodeGeneratorSettings { ArrayType = &quot;System.Collections.Generic.IList&quot; }
+        };
+        var sut = await RefitGenerator.CreateAsync(settings);
+        return sut.Generate();
+    }
+}
+</code></pre>
+<pre><code class="lang-mermaid">flowchart LR
+    SPEC[&quot;const string OpenApiSpec&quot;] --&gt; FILE[&quot;SwaggerFileHelper.CreateSwaggerFile&lt;br/&gt;temp .yml / .json&quot;]
+    FILE --&gt; GEN[&quot;RefitGenerator.CreateAsync(settings)&lt;br/&gt;.Generate()&quot;]
+    GEN --&gt; A1[&quot;assert expected code IS generated&quot;]
+    GEN --&gt; A2[&quot;assert replaced code is NOT generated&quot;]
+    GEN --&gt; A3[&quot;BuildHelper.BuildCSharp&lt;br/&gt;[TestCategory Integration]&quot;]
+</code></pre>
+<p>A test that only looks for a string can pass on code that doesn't compile, so the compilation check is required by the project's Definition of Done.</p>
+<h3 id="compiling-generated-code-buildhelper">Compiling generated code: BuildHelper</h3>
+<p><a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Tests/Build/BuildHelper.cs"><code>BuildHelper</code></a> checks that generated code compiles with a real <code>dotnet build</code>, against real package references:</p>
+<pre><code class="lang-mermaid">sequenceDiagram
+    autonumber
+    participant Test
+    participant BH as BuildHelper
+    participant FS as Temp folder (GUID)
+    participant Dotnet as dotnet build
+
+    Test-&gt;&gt;BH: BuildCSharp(generatedCode, ...)
+    BH-&gt;&gt;FS: write Project.csproj (template)
+    BH-&gt;&gt;FS: write Generated_0.cs, Generated_1.cs, ...
+    BH-&gt;&gt;Dotnet: dotnet build (child process)
+    Dotnet--&gt;&gt;BH: exit code, stdout, stderr
+    BH-&gt;&gt;FS: delete folder
+    alt exit code != 0
+        BH--&gt;&gt;Test: throw BuildFailedException (with compiler output)
+    else
+        BH--&gt;&gt;Test: true
+    end
+</code></pre>
+<p>The project template references <code>Refit.HttpClientFactory</code>, <code>System.Text.Json</code>, the <code>Microsoft.Extensions</code> DI, Polly and HTTP resilience packages and the Apizr packages, with XML documentation generation enabled. Variants cover other situations:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Builds</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>BuildCSharp(code)</code></td>
+<td><code>net8.0</code> (the lowest supported modern target)</td>
+</tr>
+<tr>
+<td><code>BuildCSharp(warningsAsErrors: true, ...)</code></td>
+<td>With warnings treated as errors, for example to catch obsolete-member warnings from deprecated schemas or malformed XML documentation. Missing-documentation warnings (<code>CS1591</code>, <code>CS1573</code>) are suppressed in the template</td>
+</tr>
+<tr>
+<td><code>BuildCSharpForTargetFramework(&quot;net9.0&quot; / &quot;net10.0&quot;, ...)</code></td>
+<td>Newer target frameworks</td>
+</tr>
+<tr>
+<td><code>BuildApizrCSharp</code></td>
+<td>Against the Apizr packages</td>
+</tr>
+<tr>
+<td><code>BuildRefit11CSharp</code></td>
+<td>Against an older Refit major version</td>
+</tr>
+<tr>
+<td><code>BuildCSharpWithoutImplicitUsings</code></td>
+<td>With implicit usings disabled, to catch missing <code>using</code> directives</td>
+</tr>
+</tbody>
+</table>
+<p>Because these tests start <code>dotnet build</code>, they are much slower than the rest. The convention is to mark them <code>[TestCategory(&quot;Integration&quot;)]</code>, but not every existing compilation test follows it yet (the real <code>ArrayTypeReturnTests.Can_Build_Generated_Code</code> has no category), so the filtered run is faster but not strictly free of <code>dotnet build</code> calls:</p>
+<pre><code class="lang-shell"># build once
+dotnet build -c Release src/Refitter.slnx
+
+# tests not marked Integration
+dotnet test --filter &quot;TestCategory!=Integration&quot; --solution src/Refitter.slnx -c Release --no-build
+
+# full suite
+dotnet test --solution src/Refitter.slnx -c Release
+</code></pre>
+<h3 id="checking-runtime-behaviour-refitrequestcapture">Checking runtime behaviour: RefitRequestCapture</h3>
+<p>Compiling is not the same as working. Refit validates interfaces when a client is created, and parameter attributes decide the URL, query string, headers and body of the request. <a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Tests/TestUtilities/RefitRequestCapture.cs"><code>RefitRequestCapture</code></a> compiles generated code in memory with Roslyn (optionally running Refit's own source generator over it, to compare the generated-client and reflection code paths), creates a Refit client with a capturing <code>HttpMessageHandler</code>, calls a generated method and returns the <code>HttpRequestMessage</code> Refit produced. Tests then assert on the actual HTTP request.</p>
+<h3 id="other-helpers">Other helpers</h3>
+<table>
+<thead>
+<tr>
+<th>Helper</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Tests/TestUtilities/SwaggerFileHelper.cs"><code>SwaggerFileHelper</code></a></td>
+<td>Writes a specification string to a unique temporary <code>.yml</code> or <code>.json</code> file</td>
+</tr>
+<tr>
+<td><code>TestDirectory</code></td>
+<td>One temporary root per test run under <code>%TEMP%/refitter-tests/</code>, deleted on assembly cleanup</td>
+</tr>
+<tr>
+<td><code>LocalHttpServer</code></td>
+<td>A loopback HTTP server, to test loading specifications from URLs without the internet</td>
+</tr>
+<tr>
+<td><code>EmbeddedResources</code></td>
+<td>Swagger Petstore v2 and v3 variants (JSON and YAML, with different authentication headers, illegal paths and titles) used by <code>[DataRow]</code> tests across every sample</td>
+</tr>
+</tbody>
+</table>
+<h3 id="regression-tests">Regression tests</h3>
+<p>Every bug fix comes with a test that fails without the fix. Small fixes add cases to the relevant scenario test; larger ones get a dedicated class in <a href="https://github.com/christianhelle/refitter/tree/main/src/Refitter.Tests/Regression"><code>Regression/</code></a>, named after the issue or symptom (for example <code>ContractSuffixCorruptionTests</code>, <code>MalformedUnicodeEscapeTests</code>, <code>XmlDocEscapingTests</code>). The smoke tests and MSBuild package tests also contain checks named after specific GitHub issues.</p>
+<h2 id="source-generator-tests">Source generator tests</h2>
+<p><code>src/Refitter.SourceGenerator.Tests</code> (targeting <code>net8.0</code> and <code>net10.0</code>) tests the generator the way a consuming project uses it:</p>
+<pre><code class="lang-mermaid">flowchart LR
+    subgraph TP[&quot;Refitter.SourceGenerator.Tests.csproj&quot;]
+        REF[&quot;ProjectReference Refitter.SourceGenerator&lt;br/&gt;OutputItemType=Analyzer&lt;br/&gt;ReferenceOutputAssembly=false&quot;]
+        IMP[&quot;Import Refitter.SourceGenerator.targets&quot;]
+        AF[&quot;AdditionalFiles/*.refitter&lt;br/&gt;(12 files)&quot;]
+    end
+    AF --&gt; GEN[&quot;Refitter generator&lt;br/&gt;+ nested Refit generator&quot;]
+    REF --&gt; GEN
+    IMP --&gt; GEN
+    GEN --&gt; COMP[&quot;test assembly compiled&lt;br/&gt;with generated code&quot;]
+    COMP --&gt; TESTS[&quot;tests use the generated types&quot;]
+</code></pre>
+<ul>
+<li>The generator is referenced as an analyzer and its <code>.targets</code> file is imported explicitly, because a project reference doesn't import a package's build files. This makes the test build behave like a project consuming the NuGet package, including the <a href="source-generator-internals.html#running-refit-and-systemtextjson-generators">Refit generator handoff</a>.</li>
+<li>The <code>.refitter</code> files cover multiple interfaces (by endpoint and by tag), optional parameters, Polly and HttpResilience, <code>JsonSerializerContext</code>, property naming policies, polymorphic serialization, custom output folders and two settings files with the same name in different folders (for hint name collisions).</li>
+<li>Many checks happen at compile time: if the expected types weren't generated, the test project doesn't build. The tests then check namespaces, Refit HTTP attributes, that Refit's generated implementation (not reflection) is used, DI registration, serialization behaviour, and that the generator never writes files to disk.</li>
+</ul>
+<h2 id="smoke-tests">Smoke tests</h2>
+<p><a href="https://github.com/christianhelle/refitter/blob/main/test/smoke-tests.sh"><code>test/smoke-tests.sh</code></a> (with a PowerShell equivalent, <code>smoke-tests.ps1</code>) exercises the CLI against real specifications and builds the result against many target frameworks.</p>
+<pre><code class="lang-mermaid">flowchart TD
+    P0[&quot;Publish CLI from source&lt;br/&gt;(or use the published tool / Docker image)&quot;] --&gt; P1[&quot;Restore ConsoleApp solutions&lt;br/&gt;net462, net472, net48, net481, net8.0, net9.0, net10.0&quot;]
+    P1 --&gt; P2[&quot;.refitter file scenarios&lt;br/&gt;petstore, Apizr, multiple files,&lt;br/&gt;multiple sources, Mastodon, streaming&quot;]
+    P2 --&gt; P3[&quot;CLI option variants × every spec&lt;br/&gt;OpenAPI 2.0 / 3.0 (JSON + YAML) and 3.1&quot;]
+    P3 --&gt; P5[&quot;net8.0+ only variants&lt;br/&gt;immutable records, polymorphism, ...&lt;br/&gt;(JsonSerializerContext variants: generated only)&quot;]
+    P5 --&gt; P7[&quot;Generate from live petstore3.swagger.io URLs&quot;]
+    P7 --&gt; P8[&quot;Operation name generators&lt;br/&gt;collection formats&lt;br/&gt;option combinations&quot;]
+    P8 --&gt; P11[&quot;Named regressions&lt;br/&gt;e.g. Asana spec, issue #359&quot;]
+
+    P2 -.-&gt; BUILD[&quot;dotnet build of every consumer project&quot;]
+    P3 -.-&gt; BUILD
+    P5 -.-&gt; BUILD
+    P8 -.-&gt; BUILD
+</code></pre>
+<ul>
+<li><strong>Specifications:</strong> <code>test/OpenAPI</code> contains about 37 specifications across OpenAPI 2.0, 3.0 and 3.1, from small samples (Petstore, Uber, USPTO) to large real-world APIs (Asana, Mastodon, Ingram Micro, e-conomic, LM Studio).</li>
+<li><strong>Option variants:</strong> dozens of CLI option sets (cancellation tokens, internal types, <code>IApiResponse</code>, tag filtering, multiple interfaces, contracts only, interfaces only, and so on) are run against every specification.</li>
+<li><strong>Matrix builds use <code>SmokeTest=true</code></strong>, which excludes generated <code>JsonSerializerCtx*.cs</code> files from compilation, so the <code>JsonSerializerContext</code> variants are only checked for successful generation there. Their compilation is covered by the unit tests in <code>src/Refitter.Tests</code>.</li>
+<li><strong>Target frameworks:</strong> generated code is compiled in console apps for .NET Framework 4.6.2 to 4.8.1 and .NET 8, 9 and 10, which catches language features or APIs that aren't available on older frameworks.</li>
+<li>The same script runs in three modes: from source (<code>pr.yml</code>, <code>smoke-tests.yml</code>, <code>regression-tests.yml</code>), against the published <code>refitter</code> tool (<code>-UseProduction</code>) and against the Docker image (<code>-UseDocker</code>).</li>
+</ul>
+<h2 id="msbuild-package-tests">MSBuild package tests</h2>
+<p><a href="https://github.com/christianhelle/refitter/tree/main/test/MSBuild"><code>test/MSBuild</code></a> tests the real <code>Refitter.MSBuild</code> NuGet package on Windows, Linux and macOS:</p>
+<pre><code class="lang-mermaid">sequenceDiagram
+    autonumber
+    participant Script as build.ps1
+    participant NuGet as NuGet cache
+    participant Pack as dotnet pack
+    participant App as test project
+    Script-&gt;&gt;NuGet: remove cached refitter.msbuild
+    Script-&gt;&gt;Pack: pack Refitter.MSBuild from source
+    Script-&gt;&gt;App: dotnet add package (local source)
+    Script-&gt;&gt;App: dotnet run (build runs RefitterGenerateTask)
+    Script-&gt;&gt;Script: assert files in expected folders (issue #998)&lt;br/&gt;assert interfaceName honoured&lt;br/&gt;assert no stray output files
+</code></pre>
+<p>A separate script, <code>test/MSBuild/test-exit-code.ps1</code>, checks that a build with an invalid <code>.refitter</code> file fails (issue #1012). It is run manually and is not part of the <code>msbuild.yml</code> workflow.</p>
+<h2 id="continuous-integration">Continuous integration</h2>
+<pre><code class="lang-mermaid">flowchart LR
+    PR[&quot;Pull request&lt;br/&gt;(src changes)&quot;] --&gt; BUILD[&quot;build.yml&lt;br/&gt;build · pack · fast unit tests · full suite&quot;]
+    PR --&gt; COV[&quot;codecov.yml&lt;br/&gt;coverage → Codecov&quot;]
+    PR --&gt; PRV[&quot;pr.yml&lt;br/&gt;smoke tests from source&quot;]
+    PR --&gt; MSB[&quot;msbuild.yml&lt;br/&gt;package tests on 3 OSes&quot;]
+
+    MAIN[&quot;Push to main&lt;br/&gt;(src changes)&quot;] --&gt; BUILD
+    MAIN --&gt; COV
+    MAIN --&gt; SMOKE[&quot;smoke-tests.yml&quot;]
+    MAIN --&gt; DOCS[&quot;docfx.yml&lt;br/&gt;publish documentation&quot;]
+
+    NIGHT[&quot;Nightly 02:00 UTC&quot;] --&gt; PROD[&quot;production-tests.yml&lt;br/&gt;published tool (3 OSes) · Docker image&lt;br/&gt;Source Generator package (3 OSes)&lt;br/&gt;MSBuild package (3 OSes)&quot;]
+
+    MANUAL[&quot;Manual&quot;] --&gt; REG[&quot;regression-tests.yml&lt;br/&gt;smoke tests on Windows, Linux, macOS&quot;]
+    MANUAL --&gt; PROD
+
+    REL[&quot;Push to release&quot;] --&gt; RELEASE[&quot;release.yml&lt;br/&gt;pack, NuGet, Docker, GitHub release&quot;]
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Workflow</th>
+<th>What it guards against</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/christianhelle/refitter/blob/main/.github/workflows/build.yml"><code>build.yml</code></a></td>
+<td>Build breaks, warnings (treated as errors) and test failures. Runs the fast unit tests first so failures show up quickly, then the full suite</td>
+</tr>
+<tr>
+<td><a href="https://github.com/christianhelle/refitter/blob/main/.github/workflows/codecov.yml"><code>codecov.yml</code></a></td>
+<td>Untested code. Coverage is collected with Microsoft.Testing.Platform and uploaded to Codecov, which flags coverage drops</td>
+</tr>
+<tr>
+<td><a href="https://github.com/christianhelle/refitter/blob/main/.github/workflows/pr.yml"><code>pr.yml</code></a> / <a href="https://github.com/christianhelle/refitter/blob/main/.github/workflows/smoke-tests.yml"><code>smoke-tests.yml</code></a></td>
+<td>Regressions on real-world specifications and older target frameworks</td>
+</tr>
+<tr>
+<td><a href="https://github.com/christianhelle/refitter/blob/main/.github/workflows/regression-tests.yml"><code>regression-tests.yml</code></a></td>
+<td>Platform-specific problems (paths, line endings, process handling) on Windows, Linux and macOS</td>
+</tr>
+<tr>
+<td><a href="https://github.com/christianhelle/refitter/blob/main/.github/workflows/msbuild.yml"><code>msbuild.yml</code></a></td>
+<td>Packaging and build integration problems in <code>Refitter.MSBuild</code></td>
+</tr>
+<tr>
+<td><a href="https://github.com/christianhelle/refitter/blob/main/.github/workflows/production-tests.yml"><code>production-tests.yml</code></a></td>
+<td>Problems in what users actually install: the published tool, Docker image and NuGet packages, including breakage caused by new versions of dependencies or the .NET SDK</td>
+</tr>
+</tbody>
+</table>
+<h2 id="other-safeguards">Other safeguards</h2>
+<ul>
+<li><strong>Warnings are errors.</strong> <code>src/Directory.Build.props</code> enables <code>TreatWarningsAsErrors</code>, nullable reference types and the .NET analyzers for every project. The source generator also enables <code>EnforceExtendedAnalyzerRules</code>.</li>
+<li><strong>Generated code is checked for warnings in unit tests.</strong> <code>BuildCSharp(warningsAsErrors: true)</code> compiles generated code with warnings as errors for features such as deprecated schemas and XML documentation. The smoke tests don't do this: every smoke-test build passes <code>WarningLevel=0</code>, so they only catch compiler errors.</li>
+<li><strong>Static analysis and review.</strong> SonarQube Cloud quality gates and automated code review run on pull requests, followed by review from the maintainer.</li>
+<li><strong>Dependency updates.</strong> Dependabot and Renovate keep NuGet packages, GitHub Actions and dev containers up to date. Each update goes through the full CI pipeline, and the nightly production tests catch breakage caused by new releases of dependencies.</li>
+<li><strong>Definition of Done.</strong> <a href="https://github.com/christianhelle/refitter/blob/main/CONTRIBUTING.md"><code>CONTRIBUTING.md</code></a> requires scenario tests with a compilation check for new features, a failing-without-the-fix regression test for every bug fix, tests for interacting options, new options being off by default, and documentation of new settings in the README, the <a href="../refitter-file-format.html"><code>.refitter</code> file format</a> docs and the JSON schema.</li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/christianhelle/refitter/blob/main/docs/docfx_project/articles/technical/testing.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

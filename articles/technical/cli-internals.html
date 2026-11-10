@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>CLI Tool Internals </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="CLI Tool Internals ">
+      
+      
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/christianhelle/refitter/blob/main/docs/docfx_project/articles/technical/cli-internals.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="cli-tool-internals">CLI Tool Internals</h1>
+
+<p>The <code>refitter</code> .NET tool (<a href="https://github.com/christianhelle/refitter/tree/main/src/Refitter"><code>src/Refitter</code></a>) is a thin host around <a href="core-pipeline.html#refitterrunner"><code>RefitterRunner</code></a>. Its job is to turn command line arguments or a <code>.refitter</code> file into <code>RefitGeneratorSettings</code>, validate them, run the generation, write files, and report what happened. It is also the engine behind <a href="msbuild-internals.html"><code>Refitter.MSBuild</code></a>, which runs it as a child process.</p>
+<p>The CLI targets <code>net8.0</code>, <code>net9.0</code> and <code>net10.0</code> and is published as a .NET tool and as a Docker image.</p>
+<h2 id="end-to-end-flow">End-to-end flow</h2>
+<pre><code class="lang-mermaid">sequenceDiagram
+    autonumber
+    actor User
+    participant Main as Program.Main
+    participant App as Spectre CommandApp
+    participant Cmd as GenerateCommand
+    participant Val as SettingsValidator
+    participant Map as SettingsMapper / RefitterSettingsLoader
+    participant Orc as GenerationOrchestrator
+    participant Run as RefitterRunner
+    participant FW as CliFileWriter
+    participant Rep as IGenerationReporter
+
+    User-&gt;&gt;Main: refitter [spec] [options]
+    Main-&gt;&gt;App: Run(args) (no args → --help)
+    App-&gt;&gt;Cmd: Validate(context, settings)
+    Cmd-&gt;&gt;Val: Validate(settings, out refitSettings)
+    Val--&gt;&gt;Cmd: ValidationResult (+ cached RefitGeneratorSettings)
+    App-&gt;&gt;Cmd: ExecuteAsync(context, settings)
+    alt settings were cached by Validate
+        Cmd-&gt;&gt;Cmd: use cached settings
+    else --settings-file
+        Cmd-&gt;&gt;Map: RefitterSettingsLoader.LoadSettingsFile(json, path)
+    else command line only
+        Cmd-&gt;&gt;Map: SettingsMapper.Map(settings)
+    end
+    Cmd-&gt;&gt;Map: ApplyCliOverrides (settings-file runs only)
+    Cmd-&gt;&gt;Cmd: CreateReporter (Silent / Simple / Rich)
+    Cmd-&gt;&gt;Orc: RunAsync(refitSettings, settings, reporter)
+    Orc-&gt;&gt;Rep: ReportHeader, ReportSupportKey
+    Orc-&gt;&gt;Run: RunAsync(settings, CliFileWriter, OpenApiValidatorAdapter?)
+    Run-&gt;&gt;FW: WriteAsync(path, content) per file
+    FW-&gt;&gt;Rep: ReportFileWritten(path)
+    Run--&gt;&gt;Orc: RunResult
+    alt ExitCode == 0
+        Orc-&gt;&gt;Orc: Analytics.LogFeatureUsage
+        Orc-&gt;&gt;Orc: write .refitter file (command line runs only)
+        Orc-&gt;&gt;Rep: warnings, ReportSuccess, banner
+        Orc--&gt;&gt;User: exit code 0
+    else failure
+        Orc-&gt;&gt;Rep: ReportGenerationFailed + diagnostics + help
+        Orc-&gt;&gt;Orc: Analytics.LogError
+        Orc--&gt;&gt;User: non-zero exit code
+    end
+</code></pre>
+<h2 id="parsing-arguments">Parsing arguments</h2>
+<p><a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter/Program.cs"><code>Program.Main</code></a> creates a <a href="https://spectreconsole.net/cli/">Spectre.Console.Cli</a> <code>CommandApp&lt;GenerateCommand&gt;</code>. Every command line option is a property with a <code>[CommandOption]</code> attribute on <a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter/Settings.cs"><code>Settings</code></a>. Spectre calls <code>GenerateCommand.Validate</code> first and <code>ExecuteAsync</code> only if validation succeeds.</p>
+<h2 id="validating-settings">Validating settings</h2>
+<p><a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter/SettingsValidator.cs"><code>SettingsValidator</code></a> has two paths:</p>
+<pre><code class="lang-mermaid">flowchart TD
+    V[&quot;SettingsValidator.Validate&quot;] --&gt; AH[&quot;check authentication header style&quot;]
+    AH --&gt; ONE{&quot;exactly one of&lt;br/&gt;OpenAPI path / --settings-file?&quot;}
+    ONE -- no --&gt; ERR[&quot;ValidationResult.Error&quot;]
+    ONE -- &quot;--settings-file&quot; --&gt; FILE
+    ONE -- &quot;OpenAPI path&quot; --&gt; CLI
+
+    subgraph FILE[&quot;Settings file path&quot;]
+        direction TB
+        F1[&quot;deserialize .refitter JSON&lt;br/&gt;(friendly message for bad enum values)&quot;] --&gt; F2[&quot;validate file and output settings&quot;]
+        F2 --&gt; F3[&quot;RefitterSettingsLoader.PrepareSettings&lt;br/&gt;apply defaults, resolve relative spec paths&quot;]
+        F3 --&gt; F4[&quot;check every spec file exists&quot;]
+        F4 --&gt; F5[&quot;check JSON library version conflicts&quot;]
+    end
+
+    subgraph CLI[&quot;Command line path&quot;]
+        direction TB
+        C1[&quot;validate multi-file output options&quot;] --&gt; C2[&quot;validate operation name template / URL&quot;]
+    end
+
+    FILE --&gt; OK[&quot;ValidationResult.Success&lt;br/&gt;+ RefitGeneratorSettings cached&quot;]
+    CLI --&gt; OK
+</code></pre>
+<p>The settings produced during validation are cached on the command so <code>ExecuteAsync</code> doesn't parse the file twice.</p>
+<h2 id="building-refitgeneratorsettings">Building RefitGeneratorSettings</h2>
+<p>There are two sources of settings:</p>
+<ul>
+<li><strong>A <code>.refitter</code> file.</strong> <a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Settings/RefitterSettingsLoader.cs"><code>RefitterSettingsLoader</code></a> (in <code>Refitter.Core</code>, shared with the source generator) deserializes the JSON and applies defaults. A positional OpenAPI path can't be combined with <code>--settings-file</code>: validation rejects it, so change the file instead: <code>openApiPath</code>, or <code>openApiPaths</code> if the file lists several specifications (setting both fails validation). For <code>--json-library-version</code>, validation rejects a run where both the CLI and the file set a value other than <code>8.0</code>. Otherwise <a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter/SettingsMapper.cs"><code>SettingsMapper.ApplyCliOverrides</code></a> applies the CLI value when the file's value is <code>8.0</code> (whether set explicitly or by default), and keeps the file's value when only the file sets something else.</li>
+<li><strong>Command line options only.</strong> <code>SettingsMapper.Map</code> uses <a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter/ConventionMapper.cs"><code>ConventionMapper</code></a>, which copies every public property that has the same name and type on both CLI <code>Settings</code> and <code>RefitGeneratorSettings</code> by reflection. Options whose meaning is inverted or combined are mapped explicitly afterwards, for example <code>GenerateContracts = !InterfaceOnly</code>, <code>GenerateClients = !ContractOnly</code>, and <code>GenerateMultipleFiles</code> is turned on by <code>--multiple-files</code> or <code>--contracts-output</code>.</li>
+</ul>
+<p>Because of the convention mapper, a new CLI option that matches an existing <code>RefitGeneratorSettings</code> property by name and type needs no extra mapping code. The <a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Tests/ConventionMapperTests.cs"><code>ConventionMapperTests</code></a> guard this.</p>
+<h2 id="reporters">Reporters</h2>
+<p>All console output goes through <a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter/IGenerationReporter.cs"><code>IGenerationReporter</code></a>. The command picks one implementation per run:</p>
+<pre><code class="lang-mermaid">classDiagram
+    class IGenerationReporter {
+        &lt;&lt;interface&gt;&gt;
+        ReportHeader(version)
+        ReportSupportKey(supportKey)
+        ReportFileWritten(path)
+        ReportSuccess(duration, multipleFiles)
+        ReportGenerationFailed()
+        ReportValidationDiagnostic(error, isError)
+    }
+    class RichGenerationReporter {
+        Spectre.Console markup
+        spinners, tables, panels
+    }
+    class SimpleGenerationReporter {
+        plain text
+        prints GeneratedFile marker lines
+    }
+    class SilentGenerationReporter {
+        no output
+    }
+    IGenerationReporter &lt;|.. RichGenerationReporter : default
+    IGenerationReporter &lt;|.. SimpleGenerationReporter : --simple-output
+    IGenerationReporter &lt;|.. SilentGenerationReporter : --silent
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Reporter</th>
+<th>Selected by</th>
+<th>Used for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>RichGenerationReporter</code></td>
+<td>default</td>
+<td>Interactive use: ASCII-art header, spinners, tables with OpenAPI statistics and generated files, panels for success and errors</td>
+</tr>
+<tr>
+<td><code>SimpleGenerationReporter</code></td>
+<td><code>--simple-output</code></td>
+<td>CI logs and other tools. Prints one <code>GeneratedFile: &lt;full path&gt;</code> line per written file</td>
+</tr>
+<tr>
+<td><code>SilentGenerationReporter</code></td>
+<td><code>--silent</code> or <code>&quot;silent&quot;: true</code> in the <code>.refitter</code> file</td>
+<td>No output at all</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>GeneratedFile:</code> line is a contract with <a href="msbuild-internals.html#the-generatedfile-contract"><code>Refitter.MSBuild</code></a>: the MSBuild task always passes <code>--simple-output</code> and reads those lines to know which files to compile.</p>
+<h2 id="writing-files">Writing files</h2>
+<p><a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter/CliFileWriter.cs"><code>CliFileWriter</code></a> implements <code>IFileWriter</code>. For every <code>PlannedFile</code> from <a href="core-pipeline.html#planning-the-output-paths"><code>OutputPlanner</code></a>, it creates the directory, writes the content and tells the reporter. Writing only starts after validation has succeeded.</p>
+<p>When the CLI was run without <code>--settings-file</code>, <a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter/GenerationOrchestrator.cs"><code>GenerationOrchestrator</code></a> also serializes the effective settings to a <code>.refitter</code> file next to the output, so the same generation can later be repeated with <code>--settings-file</code>, <code>Refitter.MSBuild</code> or <code>Refitter.SourceGenerator</code>.</p>
+<h2 id="errors-and-exit-codes">Errors and exit codes</h2>
+<p><code>RefitterRunner</code> never throws; it returns a <code>RunResult</code> with an exit code. <code>GenerationOrchestrator</code> rethrows a captured exception so it can report it consistently:</p>
+<pre><code class="lang-mermaid">flowchart TD
+    R[&quot;RunResult&quot;] --&gt; E{&quot;ExitCode == 0?&quot;}
+    E -- yes --&gt; OK[&quot;success output&lt;br/&gt;exit 0&quot;]
+    E -- no --&gt; T{&quot;exception type&quot;}
+    T -- &quot;OpenApiValidationException&quot; --&gt; VF[&quot;validation failed&lt;br/&gt;errors + warnings listed&lt;br/&gt;suggest --skip-validation&quot;]
+    T -- &quot;OpenApiUnsupportedSpecVersionException&quot; --&gt; UV[&quot;unsupported OpenAPI version&quot;]
+    T -- &quot;other&quot; --&gt; GE[&quot;exception details&quot;]
+    VF --&gt; SUP[&quot;support help + Analytics.LogError&quot;]
+    UV --&gt; SUP
+    GE --&gt; SUP
+    SUP --&gt; X[&quot;exit ToProcessExitCode(exception)&quot;]
+</code></pre>
+<p><code>ToProcessExitCode</code> returns the exception's <code>HResult</code>, unless its low 8 bits are zero, in which case it returns <code>1</code>. Unix keeps only the low byte of a process exit code, and common HResults such as <code>0x80131500</code> (the default for <code>System.Exception</code>) end in <code>0x00</code>. Without this mapping a failed generation would look like success to shells, CI systems and the MSBuild task.</p>
+<h2 id="telemetry">Telemetry</h2>
+<p>Unless <code>--no-logging</code> is passed, <a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter/Analytics.cs"><code>Analytics</code></a> records which options were used and reports errors. Feature-usage events don't include values for paths, URLs or namespaces. The exceptions are the telemetry options themselves: the <code>--telemetry-source</code> string is added to events as given, and MSBuild invocations also send <code>--telemetry-runtime</code> and the file count. Error reports are different: <code>Analytics.LogError</code> attaches the complete CLI <code>Settings</code> object (including the OpenAPI path, output path and namespace) to the exception sent to Exceptionless and Application Insights, without sanitizing it. Use <code>--no-logging</code> to send nothing. When the CLI is started by <code>Refitter.MSBuild</code>, extra <code>--telemetry-source msbuild</code>, <code>--telemetry-file-count</code> and <code>--telemetry-runtime</code> options tag the events so MSBuild usage can be told apart from direct CLI usage. For feature-usage events, settings files are passed through <code>SettingsSanitizer.Sanitize</code>, which keeps only known setting names and redacts free-text values.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/christianhelle/refitter/blob/main/docs/docfx_project/articles/technical/cli-internals.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
