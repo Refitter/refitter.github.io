@@ -277,7 +277,7 @@
     PLB --&gt; EMIT
     OP --&gt; DOCS[&quot;XmlDocumentationGenerator&quot;] --&gt; EMIT
     OP --&gt; ATTR[&quot;MethodAttributeGenerator&lt;br/&gt;headers, multipart, etc.&quot;] --&gt; EMIT
-    EMIT[&quot;[Verb(path)] ReturnType Name(parameters);&quot;]
+    EMIT[&quot;[Verb(path)] ReturnType Name(parameters);&lt;br/&gt;(QUERY: [QueryMethodAttribute(path)], a generated attribute)&quot;]
 </code></pre>
 <p>When Apizr is enabled together with <code>optionalParameters</code>, an extra overload without the optional parameters is emitted. Wrapper types created for dynamic querystrings and form objects are returned alongside the interfaces as non-interface <code>GeneratedCode</code> entries, so they end up in their own files in multi-file mode.</p>
 <h3 id="dependency-injection-registration">Dependency injection registration</h3>
