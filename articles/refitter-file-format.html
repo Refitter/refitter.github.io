@@ -322,16 +322,16 @@
 <li><code>jsonSerializerSettingsTransformationMethod</code> - Default is null,</li>
 <li><code>generateJsonMethods</code> - Default is false,</li>
 <li><code>enforceFlagEnums</code> - Default is false,</li>
-<li><code>inlineNamedDictionaries</code> - Default is false,</li>
+<li><code>inlineNamedDictionaries</code> - Default is false. When enabled, usages of named dictionary schemas use the dictionary type directly (e.g. <code>IDictionary&lt;string, T&gt;</code>) and the named types are not generated</li>
 <li><code>inlineNamedTuples</code> - Default is true,</li>
-<li><code>inlineNamedArrays</code> - Default is false,</li>
+<li><code>inlineNamedArrays</code> - Default is false. When enabled, usages of named array schemas use the collection type directly (e.g. <code>ICollection&lt;T&gt;</code>) and the named types are not generated</li>
 <li><code>generateOptionalPropertiesAsNullable</code> - Default is false,</li>
 <li><code>generateNullableReferenceTypes</code> - Default is false,</li>
 <li><code>generateNativeRecords</code> - Default is false</li>
 <li><code>generateDefaultValues</code> - Default is true</li>
 <li><code>inlineNamedAny</code> - Default is false</li>
 <li><code>inlineJsonConverters</code> - Default is true. When set to false, enum properties will not have <code>[JsonConverter(typeof(JsonStringEnumConverter))]</code> attributes</li>
-<li><code>excludedTypeNames</code> - Default is empty</li>
+<li><code>excludedTypeNames</code> - Default is empty. Excluded types must be provided by an import or another namespace. When <code>generateNativeRecords</code> or <code>immutableRecords</code> is enabled, an excluded type that a generated contract derives from must itself be a record, since C# records cannot inherit from classes</li>
 <li><code>dateFormat</code> - Default is null</li>
 <li><code>dateTimeFormat</code> - Default is null</li>
 <li><code>jsonLibraryVersion</code> - Default is <code>8.0</code>. JSON library version for System.Text.Json. When set to <code>9.0</code> or higher, enables .NET 9+ <code>JsonStringEnumMemberName</code> support for custom enum value names</li>
