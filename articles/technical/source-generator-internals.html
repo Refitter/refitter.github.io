@@ -263,6 +263,21 @@
 <td>Warning</td>
 <td>The System.Text.Json source generator couldn't be found</td>
 </tr>
+<tr>
+<td><code>REFITTER009</code></td>
+<td>Warning</td>
+<td>The project references Refit 17 without <code>Refit.HttpClientFactory.Reflection</code>, so clients are registered with <code>AddRefitGeneratedClient</code>, but Refitter doesn't run Refit's source generator (<code>DisableRefitSourceGenerator</code> is set, or <code>Refitter.SourceGenerator.targets</code> isn't imported)</td>
+</tr>
+<tr>
+<td><code>REFITTER010</code></td>
+<td>Warning</td>
+<td>The project references Refit 17 without <code>Refit.HttpClientFactory.Reflection</code> and <code>useMultipartFormObject</code> is enabled, but <code>[FormObject]</code> flattening needs Refit's reflection request builder</td>
+</tr>
+<tr>
+<td><code>REFITTER011</code></td>
+<td>Warning</td>
+<td>The project references Refit 17, clients are registered with <code>AddRefitGeneratedClient</code>, and <code>generateJsonSerializerContext</code> or <code>generateContracts</code> is disabled, so Refitter generates no JSON type metadata</td>
+</tr>
 </tbody>
 </table>
 <h2 id="telemetry">Telemetry</h2>
