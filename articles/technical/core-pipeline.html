@@ -170,21 +170,20 @@
     READ --&gt; SET[&quot;DocumentSet&quot;]
     SET --&gt; LOADER
     subgraph LOADER[&quot;DocumentLoader&quot;]
-        direction TB
-        S1[&quot;OpenApiDocumentParser&lt;br/&gt;NSwag, resolving refs from the set only&quot;] -- fails --&gt; S2[&quot;MultiFileDocumentReader&lt;br/&gt;only when the spec has external refs&quot;]
+        S1[&quot;OpenApiDocumentParser&lt;br/&gt;NSwag, resolving refs from the set only&quot;]
     end
     LOADER --&gt; DOC[&quot;OpenApiDocument&quot;]
     MERGE --&gt; DOC
 </code></pre>
 <h3 id="reading-the-document-set">Reading the document set</h3>
-<p><a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Document/OpenApiDocumentReader.cs"><code>OpenApiDocumentReader</code></a> reads the specification and every file it references exactly once into a <a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Document/DocumentSet.cs"><code>DocumentSet</code></a>. Each file is checked as it is read, converted to JSON and normalized. NSwag's reference resolvers then serve files from the set only: a file the reader did not read is rejected, never read from disk or the network, so the file that is parsed is the file that was checked. The one exception is the multi-file fallback described below: OasReader reads the root document and its references from disk itself before its merged result is parsed against the set.</p>
+<p><a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Document/OpenApiDocumentReader.cs"><code>OpenApiDocumentReader</code></a> reads the specification and every file it references exactly once into a <a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Document/DocumentSet.cs"><code>DocumentSet</code></a>. Each file is checked as it is read, converted to JSON and normalized. NSwag's reference resolvers then serve files from the set only: a file the reader did not read is rejected, never read from disk or the network, so the file that is parsed is the file that was checked. Validation reads the same set: Microsoft.OpenApi is given the referenced files from the set, so it does not read the disk or the network either. A run reads the set once and generates and validates from it.</p>
 <p>The reader checks each <code>$ref</code> against two separate rules:</p>
 <ul>
 <li>Remote <code>http(s)</code> references are rejected, to avoid server-side request forgery when Refitter runs on a build server. Setting <code>allowRemoteReferences</code> in the <code>.refitter</code> file allows them.</li>
 <li>Local file references (absolute or <code>../</code>) that resolve outside the input specification's directory tree are always rejected. <code>allowRemoteReferences</code> does not change this; move the referenced files under the specification's directory instead. The check compares normalized paths, and any referenced file that is, or sits below, a symbolic link inside the directory is rejected, because a link can point outside it. The input specification itself, and the directories above it, are not checked.</li>
 </ul>
 <h3 id="loading-a-local-document">Loading a local document</h3>
-<p><a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Document/DocumentLoader.cs"><code>DocumentLoader</code></a> parses a local file with NSwag. When that fails for any reason other than a rejected reference, <a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Document/MultiFileDocumentReader.cs"><code>MultiFileDocumentReader</code></a> reads the document, and returns a result only when it contains external references. It uses Microsoft.OpenApi's multi-file reader (via OasReader) to inline them into one document, fills in a missing <code>info.title</code> / <code>info.version</code>, serializes the result back in its original OpenAPI version and re-parses it with NSwag. If neither reads the document, NSwag's error is reported. A rejected reference is never retried by the multi-file reader.</p>
+<p><a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Document/DocumentLoader.cs"><code>DocumentLoader</code></a> reads a local file into a document set and parses it with NSwag. A rejected reference is reported as it is; any other parse failure is reported as a failure to load the document.</p>
 <p>Remote documents are downloaded by <code>RemoteDocumentDownloader</code>, which rejects responses larger than 50 MB or slower than 30 seconds.</p>
 <h3 id="normalizing-the-json">Normalizing the JSON</h3>
 <p>NSwag was written for OpenAPI 2.0 and 3.0. <a href="https://github.com/christianhelle/refitter/blob/main/src/Refitter.Core/Document/OpenApiJsonNormalizer.cs"><code>OpenApiJsonNormalizer</code></a> parses the raw JSON once and rewrites constructs NSwag can't handle before NSwag sees them:</p>

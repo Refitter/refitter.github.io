@@ -182,7 +182,7 @@
 
     subgraph Libraries[&quot;Third-party libraries&quot;]
         NSWAG[&quot;NSwag.CodeGeneration.CSharp&lt;br/&gt;NJsonSchema&quot;]
-        MSOAI[&quot;Microsoft.OpenApi&lt;br/&gt;(via OasReader)&quot;]
+        MSOAI[&quot;Microsoft.OpenApi&quot;]
         YAML[&quot;YamlDotNet&lt;br/&gt;(via NSwag.Core.Yaml)&quot;]
         ROSLYN[&quot;Microsoft.CodeAnalysis.CSharp&quot;]
         SPECTRE[&quot;Spectre.Console&quot;]
@@ -333,8 +333,8 @@
 <td>JSON schema model, type resolution and the Liquid templates for classes, records and enums</td>
 </tr>
 <tr>
-<td><a href="https://github.com/microsoft/OpenAPI.NET">Microsoft.OpenApi</a> via <a href="https://github.com/christianhelle/oasreader">OasReader</a></td>
-<td>OpenAPI validation, statistics, and reading specifications whose external references must be merged into one document</td>
+<td><a href="https://github.com/microsoft/OpenAPI.NET">Microsoft.OpenApi</a></td>
+<td>OpenAPI validation and statistics, reading the referenced files from the document set</td>
 </tr>
 <tr>
 <td><a href="https://github.com/aaubry/YamlDotNet">YamlDotNet</a> (via <code>NSwag.Core.Yaml</code>)</td>
